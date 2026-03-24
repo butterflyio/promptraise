@@ -133,7 +133,18 @@ export default function AuditForm({ onSuccess }: AuditFormProps) {
               disabled={loading}
             />
           </div>
-          <p className="mt-2 text-xs text-gray-500">Get notified on Telegram when your audit is ready</p>
+          <p className="mt-2 text-xs text-gray-400">
+            Get notified on Telegram when your audit is ready.{' '}
+            <a 
+              href="https://t.me/PromptraiseBot" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="text-blue-400 hover:text-blue-300"
+            >
+              Start @PromptraiseBot
+            </a>{' '}
+            first if you haven't already.
+          </p>
         </div>
 
         {error && (

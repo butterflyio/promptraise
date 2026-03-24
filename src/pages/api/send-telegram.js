@@ -1,4 +1,10 @@
-const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN || '8612303827:AAH_WY9TQePiuxkq4cZ05dYqFoba3wKbrio';
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
+const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
+
+const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
@@ -12,41 +18,47 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing telegram_handle or message' });
     }
 
-    // Get chat ID from username
-    const username = telegram_handle.replace('@', '');
-    
-    // First, try to get updates to find the user's chat ID
-    // In production, you'd store the chat ID when users start the bot
-    // For now, we'll use the Telegram API to send to the username
+    const username = telegram_handle.startsWith('@') 
+      ? telegram_handle 
+      : `@${telegram_handle}`;
+
+    let chatId = null;
+
+    const { data: user } = await supabase
+      .from('telegram_users')
+      .select('chat_id')
+      .eq('username', username)
+      .single();
+
+    if (user?.chat_id) {
+      chatId = user.chat_id;
+    }
+
+    if (!chatId) {
+      return res.status(200).json({
+        success: false,
+        message: 'User has not started the bot',
+        instructions: `Tell the user to message @PromptraiseBot first to enable notifications`
+      });
+    }
+
     const sendMessageUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
-    
-    // Note: To send to a username, the user needs to have started a chat with the bot first
-    // This is a simplified version - in production, you'd:
-    // 1. Have users start the bot with /start
-    // 2. Store their chat_id
-    // 3. Send messages using chat_id
-    
+
     const response = await fetch(sendMessageUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        chat_id: `@${username}`,
+        chat_id: chatId,
         text: message,
-        parse_mode: 'HTML'
-      })
+        parse_mode: 'HTML',
+        disable_web_page_preview: true,
+      }),
     });
 
     const data = await response.json();
 
     if (!data.ok) {
-      // If user hasn't started the bot, return a helpful message
-      if (data.description?.includes('chat not found')) {
-        return res.status(200).json({ 
-          success: false, 
-          message: 'User needs to start the bot first',
-          instructions: 'Tell the user to message @YourBotUsername first to enable notifications'
-        });
-      }
+      console.error('Telegram API error:', data);
       return res.status(500).json({ error: data.description || 'Telegram API error' });
     }
 
