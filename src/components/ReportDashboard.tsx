@@ -16,6 +16,7 @@ import {
 } from 'chart.js';
 import { Bar, Radar, Doughnut } from 'react-chartjs-2';
 import { formatDate, extractDomain } from '@/lib/utils';
+import { generate90DayPlan, generateHighLevelSummary } from '@/lib/generate90DayPlan';
 
 ChartJS.register(
   CategoryScale,
@@ -566,6 +567,129 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
               <p className="text-gray-400">No gap analysis data available for this audit.</p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* 90-Day Improvement Plan Section */}
+      <section id="plan" className="py-20 px-6">
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-black mb-4">YOUR <span className="text-orange-400">90-DAY</span> ACTION PLAN</h2>
+            <p className="text-gray-400 text-lg">Next steps to improve your AI visibility</p>
+          </div>
+
+          {(() => {
+            const auditData = {
+              website_url: audit.website_url,
+              company_name,
+              results
+            };
+            const { phases } = generate90DayPlan(auditData);
+            const { priorityActions, milestones } = generateHighLevelSummary(auditData);
+
+            return (
+              <div className="grid lg:grid-cols-3 gap-8">
+                {/* Summary Card */}
+                <div className="glass-card p-8 border-2 border-orange-500/50">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center">
+                      <span className="text-2xl">📋</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Priority Actions</h3>
+                      <p className="text-gray-400 text-sm">Focus areas for maximum impact</p>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    {priorityActions.map((action, i) => (
+                      <div key={i} className="flex items-start gap-2 text-sm">
+                        <span className="text-orange-400 mt-1">•</span>
+                        <span className="text-gray-300">{action}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Milestones */}
+                <div className="glass-card p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                      <span className="text-2xl">📅</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Key Milestones</h3>
+                      <p className="text-gray-400 text-sm">Your progress checkpoints</p>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    {milestones.map((milestone, i) => (
+                      <div key={i} className="flex items-center gap-4">
+                        <div className={`w-3 h-3 rounded-full ${i === 0 ? 'bg-green-400' : 'bg-gray-600'}`}></div>
+                        <div>
+                          <div className="font-semibold text-white">{milestone.week}</div>
+                          <div className="text-sm text-gray-400">{milestone.target}</div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* Quick Actions */}
+                <div className="glass-card p-8">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-12 h-12 rounded-xl bg-green-500/20 flex items-center justify-center">
+                      <span className="text-2xl">🚀</span>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold">Next Step</h3>
+                      <p className="text-gray-400 text-sm">Start your improvement journey</p>
+                    </div>
+                  </div>
+                  <a
+                    href="https://t.me/zk_uae"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block w-full py-4 px-6 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl font-bold text-center text-white hover:opacity-90 transition"
+                  >
+                    Chat with Us on Telegram
+                  </a>
+                  <p className="text-center text-gray-500 text-sm mt-4">
+                    Questions about the plan? Let's connect.
+                  </p>
+                </div>
+              </div>
+            );
+          })()}
+
+          {/* Phase Breakdown */}
+          {(() => {
+            const auditData = {
+              website_url: audit.website_url,
+              company_name,
+              results
+            };
+            const { phases } = generate90DayPlan(auditData);
+
+            return (
+              <div className="mt-12 grid md:grid-cols-3 gap-6">
+                {phases.map((phase) => (
+                  <div key={phase.phase} className="glass-card p-6 border-t-4 border-orange-500">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-xs font-bold text-orange-400 uppercase">Phase {phase.phase}</span>
+                      <span className="text-xs text-gray-500">Week {phase.weekStart}-{phase.weekEnd}</span>
+                    </div>
+                    <h4 className="text-lg font-bold mb-2">{phase.name}</h4>
+                    <p className="text-gray-400 text-sm mb-4">{phase.focus}</p>
+                    <div className="space-y-2">
+                      {phase.keyActions.map((action, i) => (
+                        <p key={i} className="text-sm text-gray-300">{action}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            );
+          })()}
         </div>
       </section>
 

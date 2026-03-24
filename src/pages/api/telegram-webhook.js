@@ -39,7 +39,7 @@ export default async function handler(req, res) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             chat_id: chatId,
-            text: '👋 Welcome to Promptraise AI Visibility Audit!\n\nYou will receive notifications here when your audit is ready.\n\nTo start an audit, visit: audit.promptraise.com',
+            text: '👋 Welcome to Promptraise!\n\nI will notify you here when your AI Visibility Audit is ready.\n\nTo start an audit, visit: audit.promptraise.com\n\n📩 Questions? Let\'s chat!\nTelegram: @zk_uae',
             parse_mode: 'HTML',
           }),
         });
