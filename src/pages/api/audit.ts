@@ -6,7 +6,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
-
+const INTERNAL_BASE_URL = process.env.INTERNAL_BASE_URL || 'http://localhost:3000';
 function generateAccessCode() {
   return String(Math.floor(10000000 + Math.random() * 90000000));
 }
@@ -283,12 +283,12 @@ export default async function handler(req, res) {
           .eq('id', audit.id);
 
         if (telegram_handle) {
-          await fetch(`${req.headers.origin || 'http://localhost:3000'}/api/send-telegram`, {
+          await fetch(`${INTERNAL_BASE_URL}/api/send-telegram`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               telegram_handle,
-              message: `✅ Your AI Visibility Audit is ready!\n\n🔑 Access Code: ${accessCode}\n📊 View your report at: ${req.headers.origin || 'http://localhost:3000'}/audit/${accessCode}`,
+              message: `✅ Your AI Visibility Audit is ready!\n\n🔑 Access Code: ${accessCode}\n📊 View your report at: ${INTERNAL_BASE_URL}/audit/${accessCode}`,
             }),
           });
         }
