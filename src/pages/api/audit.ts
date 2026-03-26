@@ -93,6 +93,12 @@ async function createQuestion(personaUuid: string, question: string, priority: s
   });
 }
 
+async function getPersonaQuestions(personaUuid: string) {
+  return botseeRequest(`/api/v1/personas/${personaUuid}/questions`, {
+    method: 'GET',
+  });
+}
+
 async function setupWeb3Questions(personaUuids: string[]) {
   const questionsPerPersona = 5;
   const allQuestions = getWeb3Questions(personaUuids.length * questionsPerPersona);
@@ -101,6 +107,15 @@ async function setupWeb3Questions(personaUuids: string[]) {
     const personaUuid = personaUuids[i];
     const personaQuestions = allQuestions.slice(i * questionsPerPersona, (i + 1) * questionsPerPersona);
     
+    // First, delete any existing questions
+    const existingQuestions = await getPersonaQuestions(personaUuid);
+    for (const q of existingQuestions.questions || []) {
+      if (q.uuid) {
+        await deleteQuestion(q.uuid);
+      }
+    }
+    
+    // Then create Web3 questions
     for (const question of personaQuestions) {
       await createQuestion(personaUuid, question);
     }
