@@ -451,7 +451,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
                 <div className="relative">
                   <Doughnut data={donutData} options={donutOptions} />
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className={`text-6xl font-black ${brandVisibility > 0 ? 'text-green-400' : 'text-gray-500'}`}>
+                    <span className={`font-black ${brandVisibility > 0 ? 'text-6xl text-green-400' : 'text-3xl text-gray-600'}`}>
                       {brandVisibility.toFixed(0)}%
                     </span>
                     <span className="text-gray-400 text-sm">visibility</span>
