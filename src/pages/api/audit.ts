@@ -4,6 +4,24 @@ const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
 const INTERNAL_BASE_URL = process.env.INTERNAL_BASE_URL || 'http://localhost:3000';
 
+const WEB3_QUESTIONS_POOL = [
+  "What Web3 gaming platforms let indie developers monetize early with play-to-earn models?",
+  "Best blockchain SDKs for Unity indie developers to add play-to-earn features?",
+  "How to tokenize in-game assets and create player-owned economies without blockchain expertise?",
+  "Top blockchain gaming platforms for indie studios looking for player funding alternatives?",
+  "How do AAA studios and indie devs use Web3 for cross-game asset interoperability?",
+  "Which crypto gaming platforms reward players with tokens for gameplay and engagement?",
+  "What Web3 platforms offer player-to-player NFT trading and asset marketplaces?",
+  "How can blockchain games build loyal player communities with token-gated access?",
+  "Which NFT gaming ecosystems have the most active player economies and marketplaces?",
+  "How do play-to-earn games handle player rewards distribution and tokenomics?",
+  "What are the best GameFi platforms for indie developers in 2024?",
+  "How to integrate wallet connectivity for Web3 games without coding experience?",
+  "Best decentralized gaming networks for listing new blockchain games?",
+  "How do blockchain gaming guilds support indie game developers?",
+  "What Web3 gaming tokens have the strongest communities and ecosystems?",
+];
+
 function getSupabase() {
   const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
   const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
@@ -12,6 +30,11 @@ function getSupabase() {
 
 function generateAccessCode() {
   return String(Math.floor(10000000 + Math.random() * 90000000));
+}
+
+function getWeb3Questions(count: number): string[] {
+  const shuffled = [...WEB3_QUESTIONS_POOL].sort(() => 0.5 - Math.random());
+  return shuffled.slice(0, count);
 }
 
 async function botseeRequest(endpoint: string, options: RequestInit = {}) {
@@ -57,11 +80,31 @@ async function generatePersonas(customerTypeUuid: string, count = 2) {
   });
 }
 
-async function generateQuestions(personaUuid: string, count = 5) {
-  return botseeRequest(`/api/v1/personas/${personaUuid}/questions/generate`, {
-    method: 'POST',
-    body: JSON.stringify({ count }),
+async function deleteQuestion(questionUuid: string) {
+  return botseeRequest(`/api/v1/questions/${questionUuid}`, {
+    method: 'DELETE',
   });
+}
+
+async function createQuestion(personaUuid: string, question: string, priority: string = 'high') {
+  return botseeRequest(`/api/v1/personas/${personaUuid}/questions`, {
+    method: 'POST',
+    body: JSON.stringify({ question, priority }),
+  });
+}
+
+async function setupWeb3Questions(personaUuids: string[]) {
+  const questionsPerPersona = 5;
+  const allQuestions = getWeb3Questions(personaUuids.length * questionsPerPersona);
+  
+  for (let i = 0; i < personaUuids.length; i++) {
+    const personaUuid = personaUuids[i];
+    const personaQuestions = allQuestions.slice(i * questionsPerPersona, (i + 1) * questionsPerPersona);
+    
+    for (const question of personaQuestions) {
+      await createQuestion(personaUuid, question);
+    }
+  }
 }
 
 async function createBotSeeAnalysis(siteUuid: string) {
@@ -265,9 +308,7 @@ export default async function handler(req, res) {
           throw new Error('Failed to generate personas');
         }
 
-        for (const personaUuid of personaUuids) {
-          await generateQuestions(personaUuid, 5);
-        }
+        await setupWeb3Questions(personaUuids);
 
         const analysis = await createBotSeeAnalysis(botseeSiteUuid);
         botseeAnalysisUuid = analysis.analysis?.uuid || analysis.uuid;
