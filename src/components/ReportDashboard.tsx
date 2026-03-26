@@ -348,7 +348,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
             <div className="glass-card p-8">
               <div className="mb-4">
                 <h3 className="text-xl font-bold text-white">Confidence Score</h3>
-                <p className="text-gray-500 text-sm">How confident AI is when mentioning</p>
+                <p className="text-gray-500 text-sm">Confidence Logic in your competitive playground by AI</p>
               </div>
               <div className="grid grid-cols-5 gap-4">
                 {competitorList.slice(0, 5).map((comp: any) => (
@@ -738,7 +738,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
             />
           </div>
           <p className="text-gray-500 text-sm mb-4">
-            Powered by BotSee AI Visibility Analysis
+            Powered by Cicada and OxD
           </p>
           <p className="text-gray-600 text-xs">
             Analysis date: {formatDate(audit.created_at)} | Access code: {audit.access_code}

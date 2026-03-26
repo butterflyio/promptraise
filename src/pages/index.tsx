@@ -164,7 +164,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="p-6 border-t border-white/5 text-center">
           <p className="text-gray-500 text-sm">
-            Powered by <a href="https://promptraise.com" className="text-gray-400 hover:text-white">Promptraise</a> & <a href="https://botsee.io" className="text-gray-400 hover:text-white">BotSee</a>
+            Powered by <a href="https://promptraise.com" className="text-gray-400 hover:text-white">Promptraise</a> & <a href="#" className="text-gray-400 hover:text-white">Cicada and OxD</a>
           </p>
         </footer>
       </main>

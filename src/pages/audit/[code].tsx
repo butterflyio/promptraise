@@ -47,11 +47,11 @@ export default function AuditReport() {
     fetchAudit();
 
     const messages = [
-      { msg: 'Creating BotSee site...', delay: 0 },
+      { msg: 'Setting up audit...', delay: 0 },
       { msg: 'Generating customer types...', delay: 2000 },
       { msg: 'Creating personas...', delay: 4000 },
       { msg: 'Generating questions...', delay: 6000 },
-      { msg: 'Running AI analysis (this takes 20-25 mins)...', delay: 8000 },
+      { msg: 'Running AI analysis...', delay: 8000 },
       { msg: 'Processing results...', delay: 28000 },
       { msg: 'Almost done...', delay: 32000 },
       { msg: 'Report ready!', delay: 35000 },
