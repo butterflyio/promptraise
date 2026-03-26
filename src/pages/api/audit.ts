@@ -66,6 +66,8 @@ async function createBotSeeAnalysis(siteUuid: string) {
     method: 'POST',
     body: JSON.stringify({
       site_uuid: siteUuid,
+      scope: 'site',
+      models: ['openai', 'claude', 'gemini'],
     }),
   });
 }
