@@ -346,7 +346,10 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
 
             {/* Circular Progress */}
             <div className="glass-card p-8">
-              <h3 className="text-xl font-bold mb-6 text-white">Coverage Score</h3>
+              <div className="mb-4">
+                <h3 className="text-xl font-bold text-white">Confidence Score</h3>
+                <p className="text-gray-500 text-sm">How confident AI is when mentioning</p>
+              </div>
               <div className="grid grid-cols-5 gap-4">
                 {competitorList.slice(0, 5).map((comp: any) => (
                   <div key={comp.name} className="text-center">
