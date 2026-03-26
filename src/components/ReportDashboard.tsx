@@ -49,6 +49,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
   };
 
   const totalMentions = results.total_mentions || 0;
+  const responsesAnalyzed = results.responses_analyzed || results.total_mentions || 18;
   
   const ownBrand = competitors.find((c: any) => c.is_own);
   const brandVisibility = ownBrand ? ownBrand.appearance_pct : 0;
@@ -306,19 +307,19 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
               </div>
               <div>
                 <h3 className="text-xl font-bold text-white">Verification Badge</h3>
-                <p className="text-gray-400 text-sm">Cross-checked across all {totalMentions} responses</p>
+                <p className="text-gray-400 text-sm">Cross-checked across all {responsesAnalyzed} responses</p>
               </div>
             </div>
             <div className="bg-black/30 rounded-xl p-6">
               <p className="text-gray-300 mb-4">
                 <strong className={brandVisibility > 0 ? 'text-green-400' : 'text-red-400'}>
                   {brandMentions} mentions
-                </strong> of <strong className="text-white">{companyName}</strong> found across <strong className="text-white">{totalMentions} AI responses</strong> in ChatGPT, Claude, and Gemini.
+                </strong> of <strong className="text-white">{companyName}</strong> found across <strong className="text-white">{responsesAnalyzed} AI responses</strong> in ChatGPT, Claude, and Gemini.
               </p>
               <p className="text-gray-500 text-sm">
                 {brandVisibility > 0 
                   ? `${companyName} is mentioned in ${brandVisibility.toFixed(1)}% of relevant queries.`
-                  : `${companyName} was not found in any of the ${totalMentions} AI responses analyzed.`
+                  : `${companyName} was not found in any of the ${responsesAnalyzed} AI responses analyzed.`
                 }
               </p>
             </div>
@@ -450,10 +451,10 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
                 <div className="relative">
                   <Doughnut data={donutData} options={donutOptions} />
                   <div className="absolute inset-0 flex flex-col items-center justify-center">
-                    <span className={`text-6xl font-black ${brandVisibility > 0 ? 'text-green-400' : 'text-red-400'}`}>
-                      {brandVisibility.toFixed(1)}%
+                    <span className={`text-6xl font-black ${brandVisibility > 0 ? 'text-green-400' : 'text-gray-500'}`}>
+                      {brandVisibility.toFixed(0)}%
                     </span>
-                    <span className="text-gray-400 text-sm">of {totalMentions} mentions</span>
+                    <span className="text-gray-400 text-sm">visibility</span>
                   </div>
                 </div>
               </div>
@@ -483,7 +484,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
                 </div>
                 <div className="text-gray-400 mb-4">mentions found</div>
                 <div className="space-y-2 text-sm text-gray-500">
-                  <div>• Responses analyzed: {totalMentions}</div>
+                  <div>• Responses analyzed: {llm.data.checks}</div>
                   <div>• Top competitors: {llm.data.top_competitors?.length > 0 ? llm.data.top_competitors.slice(0, 3).join(', ') : 'N/A'}</div>
                 </div>
               </div>
@@ -492,7 +493,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
 
           {/* Mentions by LLM Chart */}
           <div className="glass-card p-8">
-            <h3 className="text-xl font-bold mb-6 text-white text-center">{totalMentions} Mentions Breakdown</h3>
+            <h3 className="text-xl font-bold mb-6 text-white text-center">Mentions Breakdown</h3>
             <div style={{ height: 280 }}>
               <Bar data={mentionsByLlmData} options={groupedBarOptions} />
             </div>
