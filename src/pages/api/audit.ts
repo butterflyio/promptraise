@@ -2,7 +2,16 @@ import { createClient } from '@supabase/supabase-js';
 
 const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
-const supabase = createClient(supabaseUrl, supabaseKey);
+
+if (!supabaseUrl || !supabaseKey) {
+  console.error('Missing Supabase configuration:', { 
+    hasUrl: !!supabaseUrl, 
+    hasKey: !!supabaseKey,
+    url: supabaseUrl,
+  });
+}
+
+const supabase = createClient(supabaseUrl || '', supabaseKey || '');
 
 const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
@@ -182,17 +191,26 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Access code required' });
     }
 
-    const { data: audit, error: dbError } = await supabase
-      .from('audits')
-      .select('*')
-      .eq('access_code', code)
-      .single();
+    try {
+      console.log('Fetching audit for code:', code);
+      const { data: audit, error: dbError } = await supabase
+        .from('audits')
+        .select('*')
+        .eq('access_code', code)
+        .single();
 
-    if (dbError) {
-      return res.status(404).json({ error: 'Audit not found' });
+      console.log('Supabase response:', { audit, error: dbError });
+
+      if (dbError) {
+        console.error('Database error:', dbError);
+        return res.status(404).json({ error: 'Audit not found' });
+      }
+
+      return res.status(200).json({ audit });
+    } catch (err: any) {
+      console.error('Unexpected error:', err);
+      return res.status(500).json({ error: 'Internal server error', details: err.message });
     }
-
-    return res.status(200).json({ audit });
   }
 
   if (req.method === 'POST') {
