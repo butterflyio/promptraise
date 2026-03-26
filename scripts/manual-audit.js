@@ -159,9 +159,43 @@ function transformResults(analysisData, competitorsData, keywordsData, sourcesDa
   const competitors = competitorsData?.by_customer_type?.[0]?.competitors || [];
   const keywords = keywordsData?.opportunities || [];
   const sources = sourcesData?.source_opportunities || [];
+  const totalResponses = analysisData?.response_count || 0;
+
+  const llmMap = {
+    'openai-search': 'chatgpt',
+    'claude': 'claude',
+    'gemini': 'gemini',
+  };
+
+  const llmBreakdown = {
+    chatgpt: { mentions: 0, checks: 0, top_competitors: [] },
+    claude: { mentions: 0, checks: 0, top_competitors: [] },
+    gemini: { mentions: 0, checks: 0, top_competitors: [] },
+  };
+
+  competitors.forEach(c => {
+    const providers = c.providers || [];
+    const mentions = c.total_mentions || 0;
+    
+    providers.forEach(p => {
+      const llmKey = llmMap[p];
+      if (llmKey && llmBreakdown[llmKey]) {
+        llmBreakdown[llmKey].mentions += mentions;
+        llmBreakdown[llmKey].checks += 1;
+      }
+    });
+  });
+
+  Object.keys(llmBreakdown).forEach(llm => {
+    llmBreakdown[llm].top_competitors = competitors
+      .filter(c => c.providers?.includes(Object.keys(llmMap).find(k => llmMap[k] === llm)))
+      .sort((a, b) => b.total_mentions - a.total_mentions)
+      .slice(0, 3)
+      .map(c => c.name);
+  });
 
   return {
-    total_mentions: analysisData?.response_count || 0,
+    total_mentions: totalResponses,
     competitors: competitors.slice(0, 10).map((c, i) => ({
       name: c.name || `Competitor ${i + 1}`,
       appearance_pct: c.appearance_percentage || 0,
@@ -176,11 +210,7 @@ function transformResults(analysisData, competitorsData, keywordsData, sourcesDa
       url: s.url || '',
       mentions: s.citation_count || 0,
     })),
-    llm_breakdown: {
-      chatgpt: { mentions: 0, checks: 0, top_competitors: [] },
-      claude: { mentions: 0, checks: 0, top_competitors: [] },
-      gemini: { mentions: 0, checks: 0, top_competitors: [] },
-    },
+    llm_breakdown: llmBreakdown,
     keywords: keywords.slice(0, 10).map(k => ({
       keyword: k.question || 'Unknown',
       frequency: k.total_responses || 0,

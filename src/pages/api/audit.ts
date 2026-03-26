@@ -187,9 +187,46 @@ function transformBotSeeResults(
   const competitors = competitorsData?.by_customer_type?.[0]?.competitors || [];
   const keywords = keywordsData?.opportunities || [];
   const sources = sourcesData?.source_opportunities || [];
+  const totalResponses = analysisData?.response_count || 0;
+
+  const llmMap: Record<string, string> = {
+    'openai-search': 'chatgpt',
+    'claude': 'claude',
+    'gemini': 'gemini',
+  };
+
+  const llmBreakdown = {
+    chatgpt: { mentions: 0, checks: 0, top_competitors: [] as string[] },
+    claude: { mentions: 0, checks: 0, top_competitors: [] as string[] },
+    gemini: { mentions: 0, checks: 0, top_competitors: [] as string[] },
+  };
+
+  competitors.forEach((c: any) => {
+    const providers = c.providers || [];
+    const mentions = c.total_mentions || 0;
+    
+    providers.forEach((p: string) => {
+      const llmKey = llmMap[p];
+      if (llmKey && llmBreakdown[llmKey as keyof typeof llmBreakdown]) {
+        llmBreakdown[llmKey as keyof typeof llmBreakdown].mentions += mentions;
+        llmBreakdown[llmKey as keyof typeof llmBreakdown].checks += 1;
+      }
+    });
+  });
+
+  Object.keys(llmBreakdown).forEach((llm) => {
+    const providerKey = Object.keys(llmMap).find(k => llmMap[k] === llm);
+    if (providerKey) {
+      llmBreakdown[llm as keyof typeof llmBreakdown].top_competitors = competitors
+        .filter((c: any) => c.providers?.includes(providerKey))
+        .sort((a: any, b: any) => b.total_mentions - a.total_mentions)
+        .slice(0, 3)
+        .map((c: any) => c.name);
+    }
+  });
 
   return {
-    total_mentions: analysisData?.response_count || 0,
+    total_mentions: totalResponses,
     competitors: competitors.slice(0, 10).map((c: any, i: number) => ({
       name: c.name || `Competitor ${i + 1}`,
       appearance_pct: c.appearance_percentage || 0,
@@ -204,23 +241,7 @@ function transformBotSeeResults(
       url: s.url || '',
       mentions: s.citation_count || 0,
     })),
-    llm_breakdown: {
-      chatgpt: {
-        mentions: 0,
-        checks: 0,
-        top_competitors: [],
-      },
-      claude: {
-        mentions: 0,
-        checks: 0,
-        top_competitors: [],
-      },
-      gemini: {
-        mentions: 0,
-        checks: 0,
-        top_competitors: [],
-      },
-    },
+    llm_breakdown: llmBreakdown,
     keywords: keywords.slice(0, 10).map((k: any) => ({
       keyword: k.question || 'Unknown',
       frequency: k.total_responses || 0,

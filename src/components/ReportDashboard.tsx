@@ -313,7 +313,7 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
               <p className="text-gray-300 mb-4">
                 <strong className={brandVisibility > 0 ? 'text-green-400' : 'text-red-400'}>
                   {brandMentions} mentions
-                </strong> of <strong className="text-white">{companyName}</strong> found across <strong className="text-white">{totalMentions} competitor checks</strong> in ChatGPT, Claude, and Gemini.
+                </strong> of <strong className="text-white">{companyName}</strong> found across <strong className="text-white">{totalMentions} AI responses</strong> in ChatGPT, Claude, and Gemini.
               </p>
               <p className="text-gray-500 text-sm">
                 {brandVisibility > 0 
@@ -483,8 +483,8 @@ export default function ReportDashboard({ audit }: ReportDashboardProps) {
                 </div>
                 <div className="text-gray-400 mb-4">mentions found</div>
                 <div className="space-y-2 text-sm text-gray-500">
-                  <div>• Total checked: {llm.data.checks || totalMentions} mentions</div>
-                  <div>• Top competitors: {llm.data.top_competitors?.slice(0, 2).join(', ') || 'N/A'}</div>
+                  <div>• Responses analyzed: {totalMentions}</div>
+                  <div>• Top competitors: {llm.data.top_competitors?.length > 0 ? llm.data.top_competitors.slice(0, 3).join(', ') : 'N/A'}</div>
                 </div>
               </div>
             ))}
