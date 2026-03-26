@@ -1,13 +1,15 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
-
-const supabase = createClient(supabaseUrl, supabaseKey);
-
 const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
 const INTERNAL_BASE_URL = process.env.INTERNAL_BASE_URL || 'http://localhost:3000';
+
+function getSupabase() {
+  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  return createClient(supabaseUrl, supabaseKey);
+}
+
 function generateAccessCode() {
   return String(Math.floor(10000000 + Math.random() * 90000000));
 }
@@ -220,7 +222,7 @@ export default async function handler(req, res) {
     try {
       const accessCode = generateAccessCode();
 
-      const { data: audit, error: dbError } = await supabase
+      const { data: audit, error: dbError } = await getSupabase()
         .from('audits')
         .insert({
           access_code: accessCode,
@@ -244,7 +246,7 @@ export default async function handler(req, res) {
         const site = await createBotSeeSite(website_url, company_name);
         botseeSiteUuid = site.site?.uuid || site.uuid;
 
-        await supabase
+        await getSupabase()
           .from('audits')
           .update({ botsee_site_uuid: botseeSiteUuid })
           .eq('id', audit.id);
@@ -270,7 +272,7 @@ export default async function handler(req, res) {
         const analysis = await createBotSeeAnalysis(botseeSiteUuid);
         botseeAnalysisUuid = analysis.analysis?.uuid || analysis.uuid;
 
-        await supabase
+        await getSupabase()
           .from('audits')
           .update({ botsee_analysis_uuid: botseeAnalysisUuid })
           .eq('id', audit.id);
@@ -290,7 +292,7 @@ export default async function handler(req, res) {
           sourcesData
         );
 
-        await supabase
+        await getSupabase()
           .from('audits')
           .update({
             status: 'ready',
@@ -318,7 +320,7 @@ export default async function handler(req, res) {
       } catch (botseeError) {
         console.error('BotSee error:', botseeError);
 
-        await supabase
+        await getSupabase()
           .from('audits')
           .update({ status: 'failed' })
           .eq('id', audit.id);
