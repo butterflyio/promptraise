@@ -1,0 +1,11 @@
+.git
+.idea
+*.py
+*.pyc
+__pycache__
+.venv
+botsee-audit-report/
+analysis-results/
+cicada-audit-report-lite/
+cicada-audit-report-detailed/
+botsee-skill/
