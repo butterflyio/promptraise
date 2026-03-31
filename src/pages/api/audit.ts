@@ -1,8 +1,9 @@
 import { createClient } from '@supabase/supabase-js';
+import { sendTelegramMessage } from '@/lib/telegram';
 
 const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
-const INTERNAL_BASE_URL = process.env.INTERNAL_BASE_URL || 'http://localhost:3000';
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
 const WEB3_QUESTIONS_POOL = [
   "What Web3 gaming platforms let indie developers monetize early with play-to-earn models?",
@@ -378,14 +379,14 @@ export default async function handler(req, res) {
           .eq('id', audit.id);
 
         if (telegram_handle) {
-          await fetch(`${INTERNAL_BASE_URL}/api/send-telegram`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
+          try {
+            await sendTelegramMessage(
               telegram_handle,
-              message: `✅ Your AI Visibility Audit is ready!\n\n🔑 Access Code: ${accessCode}\n📊 View your report at: ${INTERNAL_BASE_URL}/audit/${accessCode}`,
-            }),
-          });
+              `✅ Your AI Visibility Audit is ready!\n\n🔑 Access Code: ${accessCode}\n📊 View your report at: ${BASE_URL}/audit/${accessCode}`
+            );
+          } catch (telegramError) {
+            console.error('Telegram notification error:', telegramError);
+          }
         }
 
         return res.status(200).json({
