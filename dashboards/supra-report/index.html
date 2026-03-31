@@ -1,0 +1,1785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Supra AI Visibility Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --supra-purple: #8b5cf6;
+            --supra-blue: #3b82f6;
+            --supra-cyan: #06b6d4;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --bg-card-hover: #334155;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --border: #334155;
+        }
+
+        [data-theme="light"] {
+            --bg-dark: #f8fafc;
+            --bg-card: #ffffff;
+            --bg-card-hover: #f1f5f9;
+            --text-primary: #0f172a;
+            --text-secondary: #64748b;
+            --border: #e2e8f0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dashboard {
+            max-width: 1600px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-left h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--supra-purple), var(--supra-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.6rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--supra-purple), var(--supra-cyan));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .btn-icon {
+            padding: 0.6rem;
+        }
+
+        /* Hero Score Section */
+        .hero-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .score-gauge {
+            position: relative;
+            width: 180px;
+            height: 180px;
+        }
+
+        .score-gauge svg {
+            transform: rotate(-90deg);
+        }
+
+        .score-gauge-bg {
+            fill: none;
+            stroke: var(--border);
+            stroke-width: 12;
+        }
+
+        .score-gauge-fill {
+            fill: none;
+            stroke: url(#scoreGradient);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+
+        .score-gauge-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .score-gauge-text .score {
+            font-size: 3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--supra-purple), var(--supra-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .score-gauge-text .label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .hero-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .score-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            border-radius: 9999px;
+            color: var(--success);
+            font-size: 0.9rem;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .score-comparison {
+            display: flex;
+            gap: 2rem;
+            padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-item {
+            text-align: center;
+        }
+
+        .comparison-item .value {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+
+        .comparison-item .value.up {
+            color: var(--success);
+        }
+
+        .comparison-item .label {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--supra-purple);
+        }
+
+        .stat-card .label {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-card .value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }
+
+        .stat-card .value.supra {
+            background: linear-gradient(135deg, var(--supra-purple), var(--supra-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-card .sub {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            margin-top: 0.25rem;
+        }
+
+        .type-tabs {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .type-tab {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2rem;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .type-tab:hover {
+            border-color: var(--supra-purple);
+            background: var(--bg-card-hover);
+        }
+
+        .type-tab.active {
+            background: linear-gradient(135deg, var(--supra-purple), var(--supra-cyan));
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .type-tab .icon {
+            font-size: 1.5rem;
+        }
+
+        .type-content {
+            display: none;
+        }
+
+        .type-content.active {
+            display: block;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 320px;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+        }
+
+        .keyword-tag {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .keyword-tag:hover {
+            border-color: var(--supra-purple);
+            transform: translateX(4px);
+        }
+
+        .keyword-tag .text {
+            flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            margin-right: 0.5rem;
+        }
+
+        .keyword-tag .count {
+            background: var(--supra-purple);
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            min-width: 24px;
+            text-align: center;
+        }
+
+        .sources-list {
+            max-height: 320px;
+            overflow-y: auto;
+        }
+
+        .source-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+
+        .source-item:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .source-item:last-child {
+            border-bottom: none;
+        }
+
+        .source-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .source-name {
+            font-weight: 500;
+            font-size: 0.9rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .source-url {
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .source-mentions {
+            background: linear-gradient(135deg, var(--supra-purple), var(--supra-cyan));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            min-width: 45px;
+            text-align: center;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+
+        .tag-own {
+            background: rgba(139, 92, 246, 0.2);
+            color: var(--supra-purple);
+        }
+
+        .tag-competitor {
+            background: rgba(100, 116, 139, 0.2);
+            color: var(--text-secondary);
+        }
+
+        .section-title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .competitor-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .competitor-table th,
+        .competitor-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .competitor-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        .competitor-table tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .competitor-name {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .competitor-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        .bar {
+            height: 10px;
+            background: var(--bg-dark);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 5px;
+            transition: width 0.8s ease;
+        }
+
+        .provider-badges {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+        }
+
+        .provider-badge {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .provider-badge.gemini { background: #e88565; color: white; }
+        .provider-badge.claude { background: #cc785c; color: white; }
+        .provider-badge.openai-search { background: #10a37f; color: white; }
+
+        .rank-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        .rank-1 { background: #fbbf24; color: #000; }
+        .rank-2 { background: #94a3b8; color: #000; }
+        .rank-3 { background: #cd7f32; color: #fff; }
+        .rank-other { background: var(--bg-dark); }
+
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .opportunity-list {
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .opportunity-item {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .opportunity-item:hover {
+            border-color: var(--supra-purple);
+            transform: translateX(4px);
+        }
+
+        .opportunity-badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            margin-right: 0.5rem;
+        }
+
+        .badge-missing { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .badge-low-rank { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+        .badge-link { background: rgba(59, 130, 246, 0.2); color: var(--supra-blue); }
+
+        .competitor-source {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .competitor-source:hover {
+            border-color: var(--supra-purple);
+            transform: translateX(4px);
+        }
+
+        /* Action Recommendations Cards */
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .action-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .action-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .action-card .icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .action-card .icon.content { background: rgba(6, 182, 212, 0.2); }
+        .action-card .icon.links { background: rgba(245, 158, 11, 0.2); }
+        .action-card .icon.wins { background: rgba(16, 185, 129, 0.2); }
+
+        .action-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.75rem;
+        }
+
+        .action-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .action-card ul li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .action-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .action-card ul li::before {
+            content: "→";
+            color: var(--supra-purple);
+            font-weight: bold;
+        }
+
+        /* Competitive Position */
+        .position-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .position-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+
+        .position-card h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .position-card.strengths h3 { color: var(--success); }
+        .position-card.opportunities h3 { color: var(--warning); }
+        .position-card.gaps h3 { color: var(--danger); }
+
+        .position-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .position-list li {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .position-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        /* Gap Table */
+        .gap-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .gap-table th,
+        .gap-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gap-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background: var(--bg-dark);
+        }
+
+        .gap-table tr:hover {
+            background: var(--bg-card-hover);
+        }
+
+        .gap-table .term {
+            font-weight: 600;
+            color: var(--danger);
+        }
+
+        .gap-table .evidence {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+
+        .priority-high { color: var(--danger); font-size: 0.75rem; font-weight: 600; }
+        .priority-medium { color: var(--warning); font-size: 0.75rem; font-weight: 600; }
+        .priority-low { color: var(--success); font-size: 0.75rem; font-weight: 600; }
+
+        /* Segment Tags */
+        .segment-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .segment-section h4 {
+            font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .segment-section.positive h4 { color: var(--success); }
+        .segment-section.negative h4 { color: var(--danger); }
+
+        .segment-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .segment-tag {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            padding: 0.4rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+        }
+
+        .segment-tag.present {
+            border-color: var(--success);
+            color: var(--success);
+        }
+
+        .segment-tag.missing {
+            border-color: var(--danger);
+            color: var(--danger);
+        }
+
+        /* Comparison */
+        .comparison-list {
+            margin-top: 1rem;
+        }
+
+        .comparison-item {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+
+        .comparison-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .comparison-label {
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+
+        .comparison-label.homepage { color: var(--success); }
+        .comparison-label.ai { color: var(--warning); }
+
+        .comparison-value {
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+        }
+
+        /* Provider Chart */
+        .provider-chart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+
+        .provider-chart {
+            position: relative;
+            height: 200px;
+        }
+
+        .provider-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .provider-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .provider-legend-item .color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        .provider-legend-item .name {
+            flex: 1;
+            font-size: 0.9rem;
+        }
+
+        .provider-legend-item .value {
+            font-weight: 600;
+        }
+
+        /* Footer */
+        .footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .footer-note {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        @media (max-width: 1200px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .action-grid { grid-template-columns: 1fr; }
+            .position-grid { grid-template-columns: 1fr; }
+            .hero-section { grid-template-columns: 1fr; }
+            .provider-chart-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard { padding: 1rem; }
+            .header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+            .grid-2, .grid-3 { grid-template-columns: 1fr; }
+            .keywords-grid { grid-template-columns: 1fr; }
+            .type-tabs { flex-direction: column; }
+            .chart-container { height: 250px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard" id="dashboard">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Supra AI Visibility Report</h1>
+                <p>Site: supra.com | Last updated: <span id="lastUpdated"></span></p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="btn btn-primary" onclick="exportPDF()">
+                    <span>📥</span> Export PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Score Section -->
+        <div class="hero-section">
+            <div class="score-gauge">
+                <svg width="180" height="180" viewBox="0 0 180 180">
+                    <defs>
+                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#8b5cf6"/>
+                            <stop offset="100%" style="stop-color:#06b6d4"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="score-gauge-bg" cx="90" cy="90" r="70"/>
+                    <circle class="score-gauge-fill" id="scoreCircle" cx="90" cy="90" r="70"/>
+                </svg>
+                <div class="score-gauge-text">
+                    <div class="score" id="scoreNumber">0</div>
+                    <div class="label">/ 100</div>
+                </div>
+            </div>
+            <div class="hero-details">
+                <div class="score-status">
+                    <span>⭐</span>
+                    <span>Strong Performer</span>
+                    <span class="trend up">↑ +23 vs Industry Avg</span>
+                </div>
+                <div class="score-comparison">
+                    <div class="comparison-item">
+                        <div class="value up">+23</div>
+                        <div class="label">vs Industry Avg (48)</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="value" style="color: var(--supra-purple);">71</div>
+                        <div class="label">Your Score</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="value" style="color: var(--text-secondary);">48</div>
+                        <div class="label">Industry Avg</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Total Responses</div>
+                <div class="value">60</div>
+                <div class="sub">30 per customer type</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Competitors Tracked</div>
+                <div class="value">108</div>
+                <div class="sub">Across all segments</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Enterprise DeFi Rank</div>
+                <div class="value supra">#2</div>
+                <div class="sub">53% appearance | Rank 1.3</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Protocol Builders Rank</div>
+                <div class="value supra">#1</div>
+                <div class="sub">50% appearance | Rank 1.0</div>
+            </div>
+        </div>
+
+        <!-- Segment Tabs -->
+        <div class="type-tabs">
+            <button class="type-tab active" onclick="showType('enterprise')">
+                <span>Enterprise DeFi Developers</span>
+            </button>
+            <button class="type-tab" onclick="showType('protocol')">
+                <span>Independent Protocol Builders</span>
+            </button>
+        </div>
+
+        <!-- Enterprise Content -->
+        <div id="enterprise" class="type-content active">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice</div>
+                        <span class="tag tag-competitor">Top 10 Competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="enterpriseSovChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank</div>
+                        <span class="tag tag-competitor">Lower is Better</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="enterpriseRankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-title">Top Competitors - Enterprise DeFi Developers</div>
+                <table class="competitor-table">
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Appearance</th>
+                            <th>Avg Rank</th>
+                            <th>Providers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="enterpriseTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Protocol Content -->
+        <div id="protocol" class="type-content">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice</div>
+                        <span class="tag tag-competitor">Top 10 Competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="protocolSovChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank</div>
+                        <span class="tag tag-competitor">Lower is Better</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="protocolRankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-title">Top Competitors - Independent Protocol Builders</div>
+                <table class="competitor-table">
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Appearance</th>
+                            <th>Avg Rank</th>
+                            <th>Providers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="protocolTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- Keywords & Provider Chart -->
+        <div class="grid-3" style="margin-top: 2rem;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Top Keywords by Frequency</div>
+                </div>
+                <div class="keywords-grid" id="keywordsList"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">AI Provider Coverage</div>
+                </div>
+                <div class="keywords-grid" id="keywordsList"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">📈 AI Provider Coverage</div>
+                </div>
+                <div class="provider-chart-container">
+                    <div class="provider-chart">
+                        <canvas id="providerChart"></canvas>
+                    </div>
+                    <div class="provider-legend">
+                        <div class="provider-legend-item">
+                            <div class="color" style="background: #cc785c;"></div>
+                            <div class="name">Claude</div>
+                            <div class="value">35%</div>
+                        </div>
+                        <div class="provider-legend-item">
+                            <div class="color" style="background: #e88565;"></div>
+                            <div class="name">Gemini</div>
+                            <div class="value">40%</div>
+                        </div>
+                        <div class="provider-legend-item">
+                            <div class="color" style="background: #10a37f;"></div>
+                            <div class="name">OpenAI</div>
+                            <div class="value">25%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        <div class="card" style="margin-top: 2rem;">
+            <div class="card-header">
+                <div class="card-title">Top Sources Referenced</div>
+            </div>
+            <div class="sources-list" id="sourcesList"></div>
+        </div>
+
+        <!-- Opportunities -->
+        <h2 class="section-title">Opportunities</h2>
+        <div class="opportunity-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Keyword Opportunities</div>
+                    <span class="tag tag-competitor">Where Supra Ranks Poorly</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    Queries where Supra is missing or ranks poorly
+                </p>
+                <div class="opportunity-list" id="keywordOpportunities"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Source Opportunities</div>
+                    <span class="tag tag-competitor">Link-Building Targets</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    Competitor domains AI cites - pursue backlinks
+                </p>
+                <div id="sourceOpportunities"></div>
+            </div>
+        </div>
+
+        <!-- Terminology Gap Analysis -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-title">Terminology Gap Analysis</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Comparing supra.com homepage language against AI search engine terminology to identify content gaps.
+            </p>
+            <table class="gap-table">
+                <thead>
+                    <tr>
+                        <th>Missing Term</th>
+                        <th>Evidence</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td class="term">"institutional DeFi"</td><td class="evidence">5 queries ask about institutional use cases</td><td><span class="priority-high">HIGH</span></td></tr>
+                    <tr><td class="term">"dORA" (Distributed Oracle Agreement)</td><td class="evidence">AI uses this term; homepage uses "oracle feeds"</td><td><span class="priority-high">HIGH</span></td></tr>
+                    <tr><td class="term">"audit trails"</td><td class="evidence">4 queries mention audit/compliance requirements</td><td><span class="priority-high">HIGH</span></td></tr>
+                    <tr><td class="term">"bridge risk" / "bridgeless"</td><td class="evidence">Homepage doesn't emphasize "bridgeless" benefit</td><td><span class="priority-medium">MEDIUM</span></td></tr>
+                    <tr><td class="term">"compliance" / "regulatory"</td><td class="evidence">0 mentions on homepage; institutional queries need this</td><td><span class="priority-medium">MEDIUM</span></td></tr>
+                    <tr><td class="term">"KYC/AML"</td><td class="evidence">Enterprise queries expect compliance features</td><td><span class="priority-medium">MEDIUM</span></td></tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Audience & Terminology Comparison -->
+        <div class="grid-2" style="margin-bottom: 2rem;">
+            <div class="card">
+                <div class="card-title">Audience Segments</div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                    Comparing addressed vs missing audience segments based on AI query analysis:
+                </p>
+                
+                <!-- Addressed Section -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <h4 style="color: var(--success); font-size: 1rem;">Currently Addressed (4)</h4>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Developers</div>
+                            <div style="font-size: 0.75rem; color: var(--success);">High engagement</div>
+                        </div>
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Protocol Builders</div>
+                            <div style="font-size: 0.75rem; color: var(--success);">Supra ranks #1</div>
+                        </div>
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">DeFi Traders</div>
+                            <div style="font-size: 0.75rem; color: var(--success);">Active queries</div>
+                        </div>
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">dApp Builders</div>
+                            <div style="font-size: 0.75rem; color: var(--success);">Ecosystem growth</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Missing Section -->
+                <div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem;">
+                        <h4 style="color: var(--danger); font-size: 1rem;">Opportunity Gap (4)</h4>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                        <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Institutional Traders</div>
+                            <div style="font-size: 0.75rem; color: var(--danger);">5 queries need this</div>
+                        </div>
+                        <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Compliance Officers</div>
+                            <div style="font-size: 0.75rem; color: var(--danger);">Audit trail focus</div>
+                        </div>
+                        <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Banks / TradFi</div>
+                            <div style="font-size: 0.75rem; color: var(--danger);">Enterprise segment</div>
+                        </div>
+                        <div style="background: rgba(239, 68, 68, 0.1); border: 1px solid rgba(239, 68, 68, 0.3); padding: 1rem; border-radius: 0.75rem; text-align: center;">
+                            <div style="font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem;">Auditors</div>
+                            <div style="font-size: 0.75rem; color: var(--danger);">4 queries need this</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Language Gap: Homepage vs AI Engines</div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                    Comparing how supra.com describes itself vs. how AI engines actually reference it:
+                </p>
+                
+                <!-- Comparison Row 1 -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem;">
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--success); text-transform: uppercase;">supra.com says</div>
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--warning); text-transform: uppercase;">AI engines use</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem;">
+                            <div style="font-weight: 600; color: var(--success); margin-bottom: 0.5rem;">"vertical integration"</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Internal framing, not SEO-optimized</div>
+                        </div>
+                        <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 1rem; border-radius: 0.75rem;">
+                            <div style="font-weight: 600; color: var(--warning); margin-bottom: 0.5rem;">"single unified SDK"</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">"one stack", "end-to-end"</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comparison Row 2 -->
+                <div style="margin-bottom: 1.5rem;">
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem;">
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--success); text-transform: uppercase;">supra.com says</div>
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--warning); text-transform: uppercase;">AI engines use</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem;">
+                            <div style="font-weight: 600; color: var(--success); margin-bottom: 0.5rem;">"system-level automation"</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Technical term, unclear value</div>
+                        </div>
+                        <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 1rem; border-radius: 0.75rem;">
+                            <div style="font-weight: 600; color: var(--warning); margin-bottom: 0.5rem;">"zero-block delay"</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">"enshrined automation", "native execution"</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Comparison Row 3 -->
+                <div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-bottom: 0.5rem;">
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--success); text-transform: uppercase;">supra.com says</div>
+                        <div style="font-size: 0.75rem; font-weight: 600; color: var(--warning); text-transform: uppercase;">AI engines use</div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div style="background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 1rem; border-radius: 0.75rem;">
+                            <div style="font-weight: 600; color: var(--success); margin-bottom: 0.5rem;">"Sub-second Consensus Finality"</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">Focuses on speed only</div>
+                        </div>
+                        <div style="background: rgba(245, 158, 11, 0.1); border: 1px solid rgba(245, 158, 11, 0.3); padding: 1rem; border-radius: 0.75rem;">
+                            <div style="font-weight: 600; color: var(--warning); margin-bottom: 0.5rem;">"deterministic execution"</div>
+                            <div style="font-size: 0.8rem; color: var(--text-secondary);">"audit-ready", "formally verified"</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Supra's Competitive Position -->
+        <h2 class="section-title">Supra's Competitive Position</h2>
+        <div class="position-grid">
+            <div class="position-card strengths">
+                <h3>Strengths</h3>
+                <ul class="position-list">
+                    <li>Ranks #1 for Protocol Builders segment</li>
+                    <li>Highest confidence (88-90%) across AI providers</li>
+                    <li>Best rank 1.0 in Protocol Builders segment</li>
+                    <li>Owns top sources (AutoFi Whitepaper, docs.supra.com)</li>
+                </ul>
+            </div>
+            <div class="position-card opportunities">
+                <h3>Opportunities</h3>
+                <ul class="position-list">
+                    <li>Chainlink leads Enterprise segment (70% vs 53%)</li>
+                    <li>Need more mentions in compliance/regulatory queries</li>
+                    <li>Expand presence in Axelar, LayerZero competitive space</li>
+                    <li>Build more content around MultiVM differentiation</li>
+                </ul>
+            </div>
+            <div class="position-card gaps">
+                <h3>Gaps</h3>
+                <ul class="position-list">
+                    <li>Missing from 47% of Enterprise DeFi queries</li>
+                    <li>Ranks 4.3 avg for Axelar mentions</li>
+                    <li>Lower visibility in Gemini vs other providers</li>
+                    <li>Need more whitepaper citations for technical credibility</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Content & Action Recommendations -->
+        <h2 class="section-title">Content & Action Recommendations</h2>
+        <div class="action-grid">
+            <div class="action-card">
+                <div class="action-card-header" style="margin-bottom: 1rem;">
+                    <div style="width: 4px; height: 100%; background: var(--supra-cyan); border-radius: 2px; position: absolute; left: 0; top: 0; bottom: 0;"></div>
+                    <h3>Content Priorities</h3>
+                </div>
+                <ul>
+                    <li>Create "Supra vs Chainlink CCIP for institutional DeFi" comparison</li>
+                    <li>Publish audit trail documentation with compliance focus</li>
+                    <li>Build latency benchmarks: HyperNova vs LayerZero</li>
+                    <li>Create Moonshot Consensus verification explainer</li>
+                    <li>Develop MultiVM migration guides from Ethereum/Aptos</li>
+                </ul>
+            </div>
+            <div class="action-card">
+                <div class="action-card-header" style="margin-bottom: 1rem;">
+                    <div style="width: 4px; height: 100%; background: var(--warning); border-radius: 2px; position: absolute; left: 0; top: 0; bottom: 0;"></div>
+                    <h3>Link-Building Priorities</h3>
+                </div>
+                <ul>
+                    <li>Target chain.link and docs.chain.link (Chainlink #1 competitor)</li>
+                    <li>Pursue links from gelato.network documentation</li>
+                    <li>Guest posts on api3.org and pyth.network blogs</li>
+                    <li>Contribute to layerzero.network ecosystem</li>
+                    <li>Submit to DeFi aggregator comparison pages</li>
+                </ul>
+            </div>
+            <div class="action-card">
+                <div class="action-card-header" style="margin-bottom: 1rem;">
+                    <div style="width: 4px; height: 100%; background: var(--success); border-radius: 2px; position: absolute; left: 0; top: 0; bottom: 0;"></div>
+                    <h3>Quick Wins</h3>
+                </div>
+                <ul>
+                    <li>Capitalize on #1 rank for Protocol Builders with dev content</li>
+                    <li>Reinforce technical credibility with high confidence scores</li>
+                    <li>Continue publishing technical docs (AutoFi Whitepaper #1 source)</li>
+                    <li>Target "cross-chain automation" queries where Supra wins</li>
+                    <li>Create "vs" comparison pages against top 5 competitors</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-note">
+                For client delivery, share this dashboard live via Netlify at <strong>report.promptraise.com</strong> for best fidelity; PDF export remains a fallback for offline sharing.
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p>Generated in full confidentiality by <strong style="color: var(--supra-purple);">www.promptraise.com</strong></p>
+                <p style="color: var(--text-secondary);">Analysis ID: ad2aca2a-3dec-4834-a7f8-4adaafc60d4e</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Theme Toggle
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '☀️';
+            }
+        }
+
+        // Export PDF
+        function exportPDF() {
+            const btn = event.target.closest('.btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>⏳</span> Generating...';
+            btn.disabled = true;
+            
+            const element = document.getElementById('dashboard');
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'supra-ai-visibility-report.pdf',
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { 
+                    scale: 2, 
+                    useCORS: true,
+                    letterRendering: true,
+                    logging: false
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '<span>✅</span> Downloaded!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            }).catch(err => {
+                btn.innerHTML = '<span>❌</span> Failed';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+                console.error('PDF export error:', err);
+            });
+        }
+
+        // Update timestamp
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit'
+        });
+
+        // Animated Score Counter
+        function animateScore(target) {
+            const scoreEl = document.getElementById('scoreNumber');
+            const circle = document.getElementById('scoreCircle');
+            const circumference = 2 * Math.PI * 70;
+            let current = 0;
+            const increment = target / 60;
+            const offset = circumference - (target / 100) * circumference;
+
+            function update() {
+                current += increment;
+                if (current < target) {
+                    scoreEl.textContent = Math.round(current);
+                    requestAnimationFrame(update);
+                } else {
+                    scoreEl.textContent = target;
+                }
+            }
+
+            setTimeout(() => {
+                update();
+                circle.style.strokeDashoffset = offset;
+            }, 500);
+        }
+
+        // Show Type Tab
+        function showType(type) {
+            document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.type-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(type).classList.add('active');
+            event.target.closest('.type-tab').classList.add('active');
+        }
+
+        // Data
+        const enterpriseData = {
+            labels: ['Chainlink', 'Supra', 'Gelato', 'Axelar', 'LayerZero Labs', 'Wormhole', 'Pyth Network', 'Fireblocks', 'Aptos Labs', 'Ava Labs'],
+            appearance: [70, 53.3, 46.7, 36.7, 30, 26.7, 26.7, 16.7, 16.7, 13.3],
+            ranks: [2.0, 1.3, 3.7, 4.3, 2.8, 6.1, 4.5, 5.4, 4.0, 2.8],
+            competitors: [
+                { name: 'Chainlink', appearance: 70, rank: 2.0, providers: ['gemini', 'claude', 'openai-search'] },
+                { name: 'Supra', appearance: 53.3, rank: 1.3, providers: ['gemini', 'claude', 'openai-search'], isOwn: true },
+                { name: 'Gelato Network', appearance: 46.7, rank: 3.7, providers: ['gemini', 'claude'] },
+                { name: 'Axelar', appearance: 36.7, rank: 4.3, providers: ['gemini', 'openai-search', 'claude'] },
+                { name: 'LayerZero Labs', appearance: 30, rank: 2.8, providers: ['gemini', 'openai-search', 'claude'] },
+                { name: 'Wormhole', appearance: 26.7, rank: 6.1, providers: ['gemini', 'claude'] },
+                { name: 'Pyth Network', appearance: 26.7, rank: 4.5, providers: ['gemini', 'claude'] },
+                { name: 'Fireblocks', appearance: 16.7, rank: 5.4, providers: ['claude', 'openai-search'] },
+                { name: 'Aptos Labs', appearance: 16.7, rank: 4.0, providers: ['gemini', 'claude'] },
+                { name: 'Ava Labs', appearance: 13.3, rank: 2.8, providers: ['gemini'] }
+            ]
+        };
+
+        const protocolData = {
+            labels: ['Supra', 'Chainlink', 'Movement Labs', 'Pyth Network', 'Gelato Network', 'Switchboard', 'LayerZero Labs', 'Aptos Labs', 'Mango Network', 'Tenderly'],
+            appearance: [50, 46.7, 26.7, 26.7, 20, 13.3, 13.3, 13.3, 10, 10],
+            ranks: [1.0, 2.9, 2.3, 3.8, 2.5, 4.3, 4.8, 3.5, 2.7, 3.7],
+            competitors: [
+                { name: 'Supra', appearance: 50, rank: 1.0, providers: ['gemini', 'claude', 'openai-search'], isOwn: true },
+                { name: 'Chainlink', appearance: 46.7, rank: 2.9, providers: ['claude', 'openai-search', 'gemini'] },
+                { name: 'Movement Labs', appearance: 26.7, rank: 2.3, providers: ['gemini', 'claude'] },
+                { name: 'Pyth Network', appearance: 26.7, rank: 3.8, providers: ['claude', 'openai-search', 'gemini'] },
+                { name: 'Gelato Network', appearance: 20, rank: 2.5, providers: ['gemini', 'claude'] },
+                { name: 'Switchboard', appearance: 13.3, rank: 4.3, providers: ['claude', 'openai-search', 'gemini'] },
+                { name: 'LayerZero Labs', appearance: 13.3, rank: 4.8, providers: ['openai-search', 'claude', 'gemini'] },
+                { name: 'Aptos Labs', appearance: 13.3, rank: 3.5, providers: ['gemini', 'claude', 'openai-search'] },
+                { name: 'Mango Network', appearance: 10, rank: 2.7, providers: ['gemini'] },
+                { name: 'Tenderly', appearance: 10, rank: 3.7, providers: ['gemini', 'openai-search', 'claude'] }
+            ]
+        };
+
+        const keywords = [
+            { text: 'Supra HyperNova vs LayerZero vs Chainlink CCIP latency for arbitrage', count: 2 },
+            { text: 'Supra DORA oracle price movement automation', count: 1 },
+            { text: 'Supra vertically integrated oracle automation vs Chainlink CCIP Gelato', count: 1 },
+            { text: 'Supra dORA and VRF for AutoFi developers', count: 1 },
+            { text: 'Lumio vs Supra MultiVM features', count: 1 },
+            { text: 'Supra Move vs Aptos Move migration guide', count: 1 },
+            { text: 'Supra vs Chainlink Automation for institutional DeFi compliance', count: 1 },
+            { text: 'Cross-chain automation platforms for institutional DeFi arbitrage', count: 1 }
+        ];
+
+        const sources = [
+            { name: 'Supra Official Website', url: 'https://supra.com', mentions: 9 },
+            { name: 'Supra AutoFi Whitepaper', url: 'https://supra.com/documents/Supra-AutoFi-Whitepaper.pdf', mentions: 9 },
+            { name: 'chain.link', url: 'https://chain.link', mentions: 5 },
+            { name: 'SupraTech Whitepaper', url: 'https://supra.com/documents/SupraTech-Whitepaper.pdf', mentions: 5 },
+            { name: 'AutoFi Page', url: 'https://supra.com/autofi/', mentions: 4 },
+            { name: 'gelato.network', url: 'https://gelato.network', mentions: 4 }
+        ];
+
+        const keywordOpportunities = [
+            { text: 'Supra vs Chainlink CCIP latency arbitrage execution', type: 'low-rank' },
+            { text: 'Supra Moonshot consensus deterministic automation audit trails', type: 'missing' },
+            { text: 'Supra automation audit trails institutional compliance', type: 'missing' },
+            { text: 'Cross-chain automation platforms for institutional DeFi arbitrage', type: 'low-rank' },
+            { text: 'Supra vs Gelato vs Chainlink automation auditability', type: 'low-rank' },
+            { text: 'Formally verified blockchain consensus for trading execution', type: 'missing' }
+        ];
+
+        const sourceOpportunities = [
+            { domain: 'chain.link', name: 'Chainlink Official', type: 'competitor' },
+            { domain: 'gelato.network', name: 'Gelato Network', type: 'competitor' },
+            { domain: 'layerzero.network', name: 'LayerZero Labs', type: 'competitor' },
+            { domain: 'axelar.network', name: 'Axelar Network', type: 'competitor' },
+            { domain: 'pyth.network', name: 'Pyth Network', type: 'competitor' },
+            { domain: 'api3.org', name: 'API3', type: 'competitor' }
+        ];
+
+        // Render Functions
+        function getColorClass(name) {
+            const lower = name.toLowerCase();
+            if (lower.includes('chainlink')) return '#2ae5c5';
+            if (lower.includes('gelato')) return '#00D4AA';
+            if (lower.includes('axel')) return '#8b5cf6';
+            if (lower.includes('layerzero')) return '#eab308';
+            if (lower.includes('pyth')) return '#f97316';
+            if (lower.includes('movement')) return '#ec4899';
+            if (lower.includes('wormhole')) return '#7c3aed';
+            return '#64748b';
+        }
+
+        function renderTable(data, elementId) {
+            const tbody = document.getElementById(elementId);
+            tbody.innerHTML = data.competitors.map(c => `
+                <tr>
+                    <td>
+                        <div class="competitor-name">
+                            <div class="competitor-logo" style="background: ${c.isOwn ? 'linear-gradient(135deg, var(--supra-purple), var(--supra-cyan))' : 'var(--bg-dark)'}">
+                                ${c.name.charAt(0)}
+                            </div>
+                            <div>
+                                ${c.name}
+                                ${c.isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="bar" style="width: 100px;">
+                                <div class="bar-fill" style="width: ${c.appearance}%; background: ${c.isOwn ? 'linear-gradient(90deg, var(--supra-purple), var(--supra-cyan))' : getColorClass(c.name)}"></div>
+                            </div>
+                            <span style="min-width: 45px;">${c.appearance}%</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="rank-badge ${c.rank <= 1 ? 'rank-1' : c.rank <= 2 ? 'rank-2' : c.rank <= 3 ? 'rank-3' : 'rank-other'}">
+                            ${c.rank.toFixed(1)}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="provider-badges">
+                            ${c.providers.map(p => `<span class="provider-badge ${p}">${p.replace('-search', '')}</span>`).join('')}
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderKeywords() {
+            const container = document.getElementById('keywordsList');
+            container.innerHTML = keywords.map(k => `
+                <div class="keyword-tag">
+                    <span class="text" title="${k.text}">${k.text.length > 35 ? k.text.substring(0, 35) + '...' : k.text}</span>
+                    <span class="count">${k.count}x</span>
+                </div>
+            `).join('');
+        }
+
+        function renderSources() {
+            const container = document.getElementById('sourcesList');
+            container.innerHTML = sources.map(s => `
+                <div class="source-item">
+                    <div class="source-info">
+                        <div class="source-name">${s.name}</div>
+                        <div class="source-url">${s.url}</div>
+                    </div>
+                    <div class="source-mentions">${s.mentions}x</div>
+                </div>
+            `).join('');
+        }
+
+        function renderKeywordOpportunities() {
+            const container = document.getElementById('keywordOpportunities');
+            container.innerHTML = keywordOpportunities.map(k => `
+                <div class="opportunity-item">
+                    <span class="opportunity-badge ${k.type === 'missing' ? 'badge-missing' : 'badge-low-rank'}">
+                        ${k.type === 'missing' ? 'Missing' : 'Rank > 3'}
+                    </span>
+                    ${k.text.length > 50 ? k.text.substring(0, 50) + '...' : k.text}
+                </div>
+            `).join('');
+        }
+
+        function renderSourceOpportunities() {
+            const container = document.getElementById('sourceOpportunities');
+            container.innerHTML = sourceOpportunities.map(s => `
+                <div class="competitor-source">
+                    <div>
+                        <div style="font-weight: 500;">${s.name}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${s.domain}</div>
+                    </div>
+                    <span class="opportunity-badge badge-link">${s.type}</span>
+                </div>
+            `).join('');
+        }
+
+        function initCharts() {
+            const commonOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: { ticks: { color: '#94a3b8', font: { size: 10 } }, grid: { color: '#334155' } },
+                    y: { ticks: { color: '#94a3b8' }, grid: { color: '#334155' } }
+                }
+            };
+
+            new Chart(document.getElementById('enterpriseSovChart'), {
+                type: 'bar',
+                data: {
+                    labels: enterpriseData.labels,
+                    datasets: [{
+                        data: enterpriseData.appearance,
+                        backgroundColor: enterpriseData.competitors.map(c => 
+                            c.isOwn ? 'rgba(139, 92, 246, 0.8)' : 'rgba(100, 116, 139, 0.6)'
+                        ),
+                        borderRadius: 4
+                    }]
+                },
+                options: { ...commonOptions, indexAxis: 'y' }
+            });
+
+            new Chart(document.getElementById('enterpriseRankChart'), {
+                type: 'bar',
+                data: {
+                    labels: enterpriseData.labels,
+                    datasets: [{
+                        data: enterpriseData.ranks,
+                        backgroundColor: enterpriseData.ranks.map(r => 
+                            r <= 2 ? 'rgba(16, 185, 129, 0.8)' : r <= 4 ? 'rgba(245, 158, 11, 0.8)' : 'rgba(239, 68, 68, 0.8)'
+                        ),
+                        borderRadius: 4
+                    }]
+                },
+                options: commonOptions
+            });
+
+            new Chart(document.getElementById('protocolSovChart'), {
+                type: 'bar',
+                data: {
+                    labels: protocolData.labels,
+                    datasets: [{
+                        data: protocolData.appearance,
+                        backgroundColor: protocolData.competitors.map(c => 
+                            c.isOwn ? 'rgba(139, 92, 246, 0.8)' : 'rgba(100, 116, 139, 0.6)'
+                        ),
+                        borderRadius: 4
+                    }]
+                },
+                options: { ...commonOptions, indexAxis: 'y' }
+            });
+
+            new Chart(document.getElementById('protocolRankChart'), {
+                type: 'bar',
+                data: {
+                    labels: protocolData.labels,
+                    datasets: [{
+                        data: protocolData.ranks,
+                        backgroundColor: protocolData.ranks.map(r => 
+                            r <= 2 ? 'rgba(16, 185, 129, 0.8)' : r <= 4 ? 'rgba(245, 158, 11, 0.8)' : 'rgba(239, 68, 68, 0.8)'
+                        ),
+                        borderRadius: 4
+                    }]
+                },
+                options: commonOptions
+            });
+
+            new Chart(document.getElementById('providerChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: ['Claude', 'Gemini', 'OpenAI'],
+                    datasets: [{
+                        data: [35, 40, 25],
+                        backgroundColor: ['#cc785c', '#e88565', '#10a37f'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: {
+                        legend: { display: false }
+                    }
+                }
+            });
+        }
+
+        // Initialize
+        renderTable(enterpriseData, 'enterpriseTable');
+        renderTable(protocolData, 'protocolTable');
+        initCharts();
+        renderKeywords();
+        renderSources();
+        renderKeywordOpportunities();
+        renderSourceOpportunities();
+        animateScore(71);
+    </script>
+</body>
+</html>
