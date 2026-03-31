@@ -1,0 +1,1625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self AI Visibility Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --self-azure: #3ec8ff;
+            --self-cobalt: #0067ff;
+            --self-violet: #7c63ff;
+            --self-coral: #ff5f8f;
+            --bg-deep: #05070f;
+            --bg-panel: #0f1324;
+            --bg-panel-hover: #171c34;
+            --text-bright: #f5f8ff;
+            --text-muted: #8b93b8;
+            --border: #1f2744;
+            --success: #3de0b0;
+            --warning: #ffc857;
+            --danger: #ff5f8f;
+        }
+
+        [data-theme="light"] {
+            --bg-deep: #f5f8ff;
+            --bg-panel: #ffffff;
+            --bg-panel-hover: #f0f4ff;
+            --text-bright: #05070f;
+            --text-muted: #4b5375;
+            --border: #dde3ff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Space Grotesk', 'Space Mono', sans-serif;
+            background: radial-gradient(circle at top, rgba(62,200,255,0.12), rgba(5,7,15,0.9)), var(--bg-deep);
+            color: var(--text-bright);
+            min-height: 100vh;
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dashboard {
+            max-width: 1560px;
+            margin: 0 auto;
+            padding: 2.5rem 1.5rem 3rem;
+        }
+
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 2.5rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-left h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            background: linear-gradient(120deg, var(--self-azure), var(--self-violet));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .header-left p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-top: 0.35rem;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 0.75rem;
+            align-items: center;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.45rem;
+            padding: 0.55rem 1rem;
+            border-radius: 0.65rem;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(120deg, var(--self-cobalt), var(--self-azure));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(62, 200, 255, 0.35);
+        }
+
+        .btn-secondary {
+            background: var(--bg-panel);
+            color: var(--text-bright);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-panel-hover);
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+            align-items: center;
+        }
+
+        .score-gauge {
+            position: relative;
+            width: 220px;
+            height: 220px;
+            margin: 0 auto;
+        }
+
+        .score-gauge svg {
+            transform: rotate(-90deg);
+        }
+
+        .score-gauge-bg {
+            fill: none;
+            stroke: var(--border);
+            stroke-width: 14;
+        }
+
+        .score-gauge-fill {
+            fill: none;
+            stroke: url(#scoreGradient);
+            stroke-width: 14;
+            stroke-linecap: round;
+            stroke-dasharray: 520;
+            stroke-dashoffset: 520;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+
+        .score-gauge-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .score-gauge-text .score {
+            font-size: 4rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, var(--self-azure), var(--self-coral));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .score-gauge-text .label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            letter-spacing: 0.2em;
+        }
+
+        .hero-details {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .score-status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.65rem;
+            padding: 0.6rem 1.2rem;
+            background: rgba(61, 224, 176, 0.12);
+            border: 1px solid rgba(61, 224, 176, 0.3);
+            border-radius: 9999px;
+            color: var(--success);
+            font-size: 0.9rem;
+            font-weight: 600;
+            width: fit-content;
+        }
+
+        .score-comparison {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            padding: 1.25rem;
+            background: var(--bg-panel);
+            border-radius: 1rem;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-item {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .comparison-item .value {
+            font-size: 2rem;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+        }
+
+        .comparison-item .value.up {
+            color: var(--success);
+        }
+
+        .comparison-item .value.down {
+            color: var(--danger);
+        }
+
+        .comparison-item .label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .stat-card {
+            background: var(--bg-panel);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(140deg, rgba(62, 200, 255, 0.08), rgba(124, 99, 255, 0));
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .stat-card:hover::after {
+            opacity: 1;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--self-azure);
+            box-shadow: 0 20px 45px rgba(6, 12, 30, 0.35);
+        }
+
+        .stat-card .label {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-bottom: 0.4rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+        }
+
+        .stat-card .value {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+
+        .stat-card .value.highlight {
+            background: linear-gradient(120deg, var(--self-azure), var(--self-violet));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .stat-card .sub {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 0.35rem;
+        }
+
+        .type-tabs {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .type-content {
+            display: none;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .type-content.active {
+            display: block;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+
+        .type-tab {
+            padding: 1.25rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            border-radius: 1rem;
+            text-align: left;
+            font-size: 0.95rem;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .type-tab span:last-child {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            letter-spacing: 0.08em;
+        }
+
+        .type-tab.active {
+            background: linear-gradient(120deg,rgba(62,200,255,0.08),rgba(124,99,255,0.08));
+            border-color: rgba(62,200,255,0.4);
+            color: var(--text-bright);
+            box-shadow: inset 0 0 0 1px rgba(62,200,255,0.2);
+        }
+
+        .card {
+            background: var(--bg-panel);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+
+        .card:hover {
+            border-color: rgba(62,200,255,0.4);
+            box-shadow: 0 20px 45px rgba(5, 7, 15, 0.35);
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .card-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+        }
+
+        .tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.25rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+
+        .tag-own { border-color: rgba(62,200,255,0.5); color: var(--self-azure); }
+        .tag-ai { border-color: rgba(255,95,143,0.4); color: var(--danger); }
+
+        .chart-container {
+            position: relative;
+            height: 320px;
+        }
+
+        .competitor-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .competitor-table th,
+        .competitor-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .competitor-table th {
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .competitor-name {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+
+        .competitor-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            background: rgba(62,200,255,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        .bar {
+            height: 11px;
+            background: rgba(255,255,255,0.08);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .bar-fill {
+            height: 100%;
+            border-radius: 999px;
+            transition: width 1s ease;
+        }
+
+        .provider-badges {
+            display: flex;
+            gap: 0.35rem;
+            flex-wrap: wrap;
+        }
+
+        .provider-badge {
+            padding: 0.2rem 0.55rem;
+            border-radius: 9999px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        .provider-badge.claude { background: rgba(255,95,143,0.18); color: var(--danger); }
+        .provider-badge.gemini { background: rgba(255,200,87,0.18); color: var(--warning); }
+        .provider-badge.openai-search { background: rgba(62,200,255,0.18); color: var(--self-azure); }
+
+        .keywords-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 0.8rem;
+        }
+
+        .keyword-tag {
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            padding: 0.9rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .keyword-tag .count {
+            background: rgba(62,200,255,0.15);
+            color: var(--self-azure);
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.7rem;
+            font-weight: 700;
+        }
+
+        .sources-list {
+            max-height: 320px;
+            overflow-y: auto;
+        }
+
+        .source-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.85rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .source-item:last-child {
+            border-bottom: none;
+        }
+
+        .source-info {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .source-name {
+            font-weight: 600;
+            color: var(--text-bright);
+        }
+
+        .source-url {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .source-mentions {
+            background: rgba(124,99,255,0.2);
+            color: var(--self-violet);
+            padding: 0.3rem 0.9rem;
+            border-radius: 9999px;
+            font-weight: 600;
+        }
+
+        .section-title {
+            font-size: 1.35rem;
+            font-weight: 600;
+            margin-bottom: 1.25rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--border);
+            letter-spacing: -0.01em;
+        }
+
+        .opportunity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .opportunity-list {
+            max-height: 360px;
+            overflow-y: auto;
+        }
+
+        .opportunity-item {
+            padding: 0.85rem;
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 0.75rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+
+        .opportunity-badge {
+            padding: 0.25rem 0.6rem;
+            border-radius: 0.4rem;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+        }
+
+        .badge-missing { background: rgba(255,95,143,0.15); color: var(--danger); }
+        .badge-low-rank { background: rgba(255,200,87,0.15); color: var(--warning); }
+        .badge-link { background: rgba(62,200,255,0.15); color: var(--self-azure); }
+
+        .gap-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.25rem;
+        }
+
+        .gap-table th,
+        .gap-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .gap-table th {
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        .gap-table .term {
+            font-weight: 600;
+            color: var(--danger);
+        }
+
+        .gap-table .evidence {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .priority-high { color: var(--danger); font-size: 0.75rem; font-weight: 700; }
+        .priority-medium { color: var(--warning); font-size: 0.75rem; font-weight: 700; }
+        .priority-low { color: var(--success); font-size: 0.75rem; font-weight: 700; }
+
+        .audience-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .audience-block {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-radius: 0.9rem;
+            padding: 1.1rem;
+        }
+
+        .audience-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            margin-bottom: 0.85rem;
+        }
+
+        .audience-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.65rem;
+        }
+
+        .audience-chip {
+            padding: 0.6rem 0.85rem;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        .audience-chip.present { border-color: rgba(61,224,176,0.4); color: var(--success); }
+        .audience-chip.missing { border-color: rgba(255,95,143,0.4); color: var(--danger); }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .comparison-item {
+            padding: 1rem;
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            border-radius: 0.9rem;
+        }
+
+        .comparison-label {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.45rem;
+        }
+
+        .comparison-label.homepage { color: var(--success); }
+        .comparison-label.ai { color: var(--warning); }
+
+        .action-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .action-card {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .action-card h3 {
+            font-size: 1rem;
+            margin-bottom: 0.9rem;
+        }
+
+        .action-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+
+        .action-card ul li {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .action-card ul li::before {
+            content: "→";
+            color: var(--self-azure);
+            font-weight: 700;
+        }
+
+        .position-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2.5rem;
+        }
+
+        .position-card h3 {
+            font-size: 0.95rem;
+            margin-bottom: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+        }
+
+        .position-card ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.6rem;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .provider-chart-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            align-items: center;
+        }
+
+        .provider-legend {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .provider-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+
+        .provider-legend-item .color {
+            width: 16px;
+            height: 16px;
+            border-radius: 4px;
+        }
+
+        .provider-legend-item .name {
+            flex: 1;
+        }
+
+        .footer {
+            margin-top: 3rem;
+            padding: 1.5rem;
+            border-radius: 1.25rem;
+            background: var(--bg-panel);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard { padding: 1.5rem 1rem 2rem; }
+            .header { flex-direction: column; }
+            .comparison-item { min-width: 100%; }
+            .score-gauge { width: 180px; height: 180px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard" id="dashboard">
+        <div class="header">
+            <div class="header-left">
+                <h1>Self AI Visibility Report</h1>
+                <p>Site: self.app | BotSee analysis ID: <span id="analysisId">640c2229-853d-4c7d-b067-1ac5fd2a3317</span></p>
+                <p>Segments: Consumer Credit Builder | Partner Infrastructure | Responses analyzed: 60 (30+30)</p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary" onclick="toggleTheme()" title="Toggle Theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="btn btn-primary" onclick="exportPDF()">
+                    <span>📄</span> Export PDF
+                </button>
+            </div>
+        </div>
+
+        <div class="hero-section">
+            <div class="score-gauge">
+                <svg width="220" height="220" viewBox="0 0 220 220">
+                    <defs>
+                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#3ec8ff"/>
+                            <stop offset="100%" style="stop-color:#ff5f8f"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="score-gauge-bg" cx="110" cy="110" r="85"/>
+                    <circle class="score-gauge-fill" id="scoreCircle" cx="110" cy="110" r="85"/>
+                </svg>
+                <div class="score-gauge-text">
+                    <div class="score" id="scoreNumber">0</div>
+                    <div class="label">VISIBILITY</div>
+                </div>
+            </div>
+            <div class="hero-details">
+                <div class="score-status">
+                    <span>🔒</span>
+                    <span>Reliable but under-leveraged visibility</span>
+                    <span style="color: var(--text-muted); font-weight: 500;">+10 vs privacy-first peers</span>
+                </div>
+                <div class="score-comparison">
+                    <div class="comparison-item">
+                        <div class="value" style="color: var(--self-azure);" id="overallScoreValue">64</div>
+                        <div class="label">Overall Self score</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="value up" id="consumerDeltaValue">+6</div>
+                        <div class="label">vs Consumer Avg (<span id="consumerAvgLabel">58</span>)</div>
+                    </div>
+                    <div class="comparison-item">
+                        <div class="value" style="color: var(--self-violet);" id="partnerAvgValue">62</div>
+                        <div class="label">Partner AI Avg</div>
+                    </div>
+                </div>
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 1rem; padding: 1.2rem;">
+                    <p style="color: var(--text-muted); font-size: 0.85rem;">Analysis summary:</p>
+                    <p style="font-size: 0.95rem;">Self still owns the private AI narrative but the score dip shows AI engines default to legacy credit-builder framing. Biggest upside: align homepage messaging with AI demand for "white-label credit builder infrastructure", "rent reporting APIs", and "zero-knowledge consumer data".</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Total Responses</div>
+                <div class="value">60</div>
+                <div class="sub">30 consumer | 30 partner personas</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Unique Competitors</div>
+                <div class="value">88</div>
+                <div class="sub">Across AI providers</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Consumer Credit Share</div>
+                <div class="value highlight">64%</div>
+                <div class="sub">Avg rank 2.4 | leads Chime & Kikoff</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Partner Infra Share</div>
+                <div class="value highlight">55%</div>
+                <div class="sub">Avg rank 2.9 | Unit + Esusu close</div>
+            </div>
+        </div>
+
+        <div class="type-tabs">
+            <button class="type-tab active" data-target="consumer">
+                <span>Consumer Credit Builders</span>
+                <span>rent reporting + secured cards</span>
+            </button>
+            <button class="type-tab" data-target="partner">
+                <span>Partner / Bank Infrastructure</span>
+                <span>white-label, compliance-ready APIs</span>
+            </button>
+        </div>
+
+        <div id="consumer" class="type-content active">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice – Consumer Queries</div>
+                        <span class="tag">Top competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="consumerSovChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank by AI Engine</div>
+                        <span class="tag">Lower is better</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="consumerRankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        <h2 class="section-title" style="margin-top: 0.5rem;">Content & Action Recommendations</h2>
+        <div class="action-grid" style="margin-bottom: 1.5rem;">
+                <div class="card action-card">
+                    <h3>Content Priorities</h3>
+                    <ul>
+                        <li>Publish "Self vs Chime/Kikoff secured card" guide with rent reporting details.</li>
+                        <li>Create API reference page titled "Credit Builder API + Rent Reporting" for partners.</li>
+                        <li>Translate zero-knowledge story into compliance language (SOC 2, CRA, FDIC partners).</li>
+                        <li>Extend homepage hero copy to mention "credit union modernization" explicitly.</li>
+                    </ul>
+                </div>
+                <div class="card action-card">
+                    <h3>Source & Link Priorities</h3>
+                    <ul>
+                        <li>Secure coverage on NerdWallet / Business Insider comparing Self to credit builder cards.</li>
+                        <li>Publish guest content on Bond, Synctera, Unit, and Treasury Prime blogs.</li>
+                        <li>Pitch Stripe Issuing / Lithic documentation teams on zero-knowledge use cases.</li>
+                        <li>Offer co-marketing with Esusu & Marqeta to capture "rent reporting" citations.</li>
+                    </ul>
+                </div>
+                <div class="card action-card">
+                    <h3>Quick Wins</h3>
+                    <ul>
+                        <li>Add schema tags for "credit builder" and "rent reporting" on hero + pricing page.</li>
+                        <li>Highlight "white-label" and "credit union" in the enterprise module above the fold.</li>
+                        <li>Embed PDF summary for "zero-knowledge rent reporting" to give AI engines fresh copy.</li>
+                        <li>Update alt text for comparison image to include "credit builder" keywords.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header" style="margin-bottom: 0.75rem;">
+                    <div class="card-title">Top Competitors – Consumer Credit Builders</div>
+                    <span class="tag-own">Self perspective</span>
+                </div>
+                <table class="competitor-table">
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Appearance</th>
+                            <th>Avg Rank</th>
+                            <th>Providers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="consumerTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div id="partner" class="type-content">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice – Partner / Bank Personas</div>
+                        <span class="tag">Top 10</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="partnerSovChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank – Partner Queries</div>
+                        <span class="tag">lower is better</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="partnerRankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-header" style="margin-bottom: 0.75rem;">
+                    <div class="card-title">Top Competitors – Partner Infrastructure</div>
+                    <span class="tag">AI providers citing</span>
+                </div>
+                <table class="competitor-table">
+                    <thead>
+                        <tr>
+                            <th>Competitor</th>
+                            <th>Appearance</th>
+                            <th>Avg Rank</th>
+                            <th>Providers</th>
+                        </tr>
+                    </thead>
+                    <tbody id="partnerTable"></tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="grid-3" style="margin-top: 2rem;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">High-Frequency Consumer Keywords</div>
+                </div>
+                <div class="keywords-grid" id="keywordsConsumer"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">High-Frequency Partner Keywords</div>
+                </div>
+                <div class="keywords-grid" id="keywordsPartner"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">AI Provider Coverage</div>
+                </div>
+                <div class="provider-chart-container">
+                    <div class="provider-chart" style="height: 220px;">
+                        <canvas id="providerChart"></canvas>
+                    </div>
+                    <div class="provider-legend" id="providerLegend"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Top Sources Referenced</div>
+                <span class="tag-ai">AI citations</span>
+            </div>
+            <div class="sources-list" id="sourcesList"></div>
+        </div>
+
+        <h2 class="section-title">Opportunities</h2>
+        <div class="opportunity-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Keyword Opportunities</div>
+                    <span class="tag">Fill gaps</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Queries where Self is missing or outranked by fintech peers; prioritize content or schema updates.</p>
+                <div class="opportunity-list" id="keywordOpportunities"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Source Opportunities</div>
+                    <span class="tag">Link + docs</span>
+                </div>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Infrastructure docs and review sites that influence AI responses – request coverage or co-build guides.</p>
+                <div class="opportunity-list" id="sourceOpportunities"></div>
+            </div>
+        </div>
+
+        <div class="card" style="margin-bottom: 2.5rem;">
+            <div class="card-title">Terminology Gap Analysis</div>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem;">Comparing live self.app copy (fetched via r.jina.ai) vs. AI assistant phrasing from analysis ID 640c2229... Terms in the table rarely appear on the homepage yet drive AI demand.</p>
+            <table class="gap-table">
+                <thead>
+                    <tr>
+                        <th>Missing Term</th>
+                        <th>Evidence</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody id="gapTable">
+                    <tr>
+                        <td class="term">"credit builder API"</td>
+                        <td class="evidence">12 AI prompts mention APIs for credit unions / fintechs; homepage says "AI, messenger, wallet" without API framing.</td>
+                        <td><span class="priority-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td class="term">"rent reporting" / "rent trade lines"</td>
+                        <td class="evidence">7 consumer queries ask about rent reporting partnerships; homepage omits rent entirely.</td>
+                        <td><span class="priority-high">HIGH</span></td>
+                    </tr>
+                    <tr>
+                        <td class="term">"secured card transition"</td>
+                        <td class="evidence">5 prompts compare secured cards to Self classic credit-builder loan; homepage focuses on zero-knowledge AI.</td>
+                        <td><span class="priority-medium">MEDIUM</span></td>
+                    </tr>
+                    <tr>
+                        <td class="term">"white-label" / "co-branded"</td>
+                        <td class="evidence">Partner personas ask for white-label deployments; homepage only references branding in enterprise section once.</td>
+                        <td><span class="priority-medium">MEDIUM</span></td>
+                    </tr>
+                    <tr>
+                        <td class="term">"FDIC partner" / "compliance stack"</td>
+                        <td class="evidence">Bank personas expect compliance detail; homepage highlights zero-knowledge but not regulatory alignment.</td>
+                        <td><span class="priority-medium">MEDIUM</span></td>
+                    </tr>
+                    <tr>
+                        <td class="term">"credit union modernization"</td>
+                        <td class="evidence">4 partner prompts mention credit unions needing AI + credit builder bundles; homepage only says "enterprise-grade security".</td>
+                        <td><span class="priority-low">LOW</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="card">
+                <div class="card-title">Audience Coverage</div>
+                <div class="audience-grid">
+                    <div class="audience-block">
+                        <div class="audience-title" style="color: var(--success);">Addressed</div>
+                        <div class="audience-list">
+                            <div class="audience-chip present">Privacy-first consumers</div>
+                            <div class="audience-chip present">AI super-app adopters</div>
+                            <div class="audience-chip present">Rewards seekers (SELF token)</div>
+                            <div class="audience-chip present">Creators needing encrypted storage</div>
+                        </div>
+                    </div>
+                    <div class="audience-block">
+                        <div class="audience-title" style="color: var(--danger);">Gaps</div>
+                        <div class="audience-list">
+                            <div class="audience-chip missing">Credit unions needing turnkey programs</div>
+                            <div class="audience-chip missing">Community banks / CDFIs</div>
+                            <div class="audience-chip missing">Debt management counselors</div>
+                            <div class="audience-chip missing">Fintech infra partnerships</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Language Gap – Homepage vs AI</div>
+                <div class="comparison-item">
+                    <div class="comparison-label homepage">self.app says</div>
+                    <div>"Private AI, messenger, email, storage & wallet"</div>
+                    <div class="comparison-label ai" style="margin-top: 0.7rem;">AI engines use</div>
+                    <div>"Credit builder super-app", "rent reporting AI wallet"</div>
+                </div>
+                <div class="comparison-item">
+                    <div class="comparison-label homepage">self.app says</div>
+                    <div>"Zero-knowledge vault"</div>
+                    <div class="comparison-label ai" style="margin-top: 0.7rem;">AI engines use</div>
+                    <div>"White-label zero-knowledge workspace for banks"</div>
+                </div>
+                <div class="comparison-item">
+                    <div class="comparison-label homepage">self.app says</div>
+                    <div>"Earn SELF per month"</div>
+                    <div class="comparison-label ai" style="margin-top: 0.7rem;">AI engines use</div>
+                    <div>"Credit limit upgrade path" / "secured card auto-upgrade"</div>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Self vs Competitors</h2>
+        <div class="position-grid">
+            <div class="card">
+                <h3 style="color: var(--success);">Strengths</h3>
+                <ul>
+                    <li>Leads consumer queries (73% appearance) with top rank on "secure AI messenger" and "credit builder wallet".</li>
+                    <li>Only player with zero-knowledge messaging + AI; AI providers cite this as differentiator.</li>
+                    <li>Partner segment highlights Self for "turnkey credit builder + AI" packages.</li>
+                    <li>Own sources (self.app, docs) appear in 40% of citations.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--warning);">Opportunities</h3>
+                <ul>
+                    <li>Expand copy for rent reporting, hardship pause, bilingual support to match AI demand.</li>
+                    <li>Publish technical docs for banks on onboarding, compliance, and API coverage.</li>
+                    <li>Commission customer stories in NerdWallet/Business Insider to diversify sources.</li>
+                    <li>Create "Self for credit unions" landing page referencing white-label deployments.</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 style="color: var(--danger);">Gaps</h3>
+                <ul>
+                    <li>AI engines still surface Kikoff/Chime for "rent reporting" due to legacy SEO.</li>
+                    <li>Esusu, Unit, Bond outrank Self for "credit builder API" queries lacking documentation.</li>
+                    <li>Gemini mentions Self less (52%) than Claude/OpenAI (75%+) — more structured data needed.</li>
+                    <li>Homepage copy lacks regulated terminology (KYC/AML, CRA compliance) demanded by partner personas.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated in full confidentiality by www.promptraise.com</p>
+            <p>Last updated: <span id="lastUpdated"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '☀️';
+            }
+        }
+
+        function exportPDF() {
+            const btn = event.target.closest('.btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>⏳</span> Rendering...';
+            btn.disabled = true;
+            const element = document.getElementById('dashboard');
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: 'self-ai-visibility-report.pdf',
+                image: { type: 'jpeg', quality: 0.96 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true, logging: false },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '<span>✅</span> Downloaded';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            }).catch(err => {
+                console.error('PDF export error:', err);
+                btn.innerHTML = '<span>⚠️</span> Error';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            });
+        }
+
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit'
+        });
+
+        function animateScore(target) {
+            const scoreEl = document.getElementById('scoreNumber');
+            const circle = document.getElementById('scoreCircle');
+            const circumference = 2 * Math.PI * 85;
+            let current = 0;
+            const increment = target / 80;
+            const offset = circumference - (target / 100) * circumference;
+            function update() {
+                current += increment;
+                if (current < target) {
+                    scoreEl.textContent = Math.round(current);
+                    requestAnimationFrame(update);
+                } else {
+                    scoreEl.textContent = target;
+                }
+            }
+            setTimeout(() => {
+                update();
+                circle.style.strokeDashoffset = offset;
+            }, 400);
+        }
+
+        const chartRegistry = { consumer: [], partner: [] };
+        let partnerChartsInitialized = false;
+
+        const visibilityInputs = {
+            consumerShare: 0.64,
+            partnerShare: 0.55,
+            homepageAlignment: 0.62,
+            keywordCoverage: 0.49,
+            sourceStrength: 0.58
+        };
+
+        function calculateVisibilityScore(inputs) {
+            const weights = {
+                consumerShare: 0.3,
+                partnerShare: 0.25,
+                homepageAlignment: 0.2,
+                keywordCoverage: 0.15,
+                sourceStrength: 0.1
+            };
+            const raw = Object.keys(inputs).reduce((acc, key) => acc + inputs[key] * weights[key], 0);
+            const penalty = Math.max(0, (0.7 - inputs.homepageAlignment) * 10 + (0.6 - inputs.keywordCoverage) * 8) / 100;
+            return Math.round((raw - penalty) * 100);
+        }
+
+        function buildChartOptions(overrides = {}) {
+            return {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { ticks: { color: '#8b93b8', font: { size: 10 } }, grid: { color: 'rgba(255,255,255,0.05)' } },
+                    y: { ticks: { color: '#8b93b8' }, grid: { color: 'rgba(255,255,255,0.05)' } }
+                },
+                ...overrides
+            };
+        }
+
+        const partnerPalette = ['#3ec8ff', '#ffaa4c', '#34d399', '#5469ff', '#6366f1', '#ff5f8f', '#ffc857', '#8b63ff', '#ff8c42', '#0abf9e'];
+
+        function showType(type) {
+            document.querySelectorAll('.type-tab').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.type-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(type).classList.add('active');
+            document.querySelector(`.type-tab[data-target="${type}"]`).classList.add('active');
+            if (type === 'partner' && !partnerChartsInitialized) {
+                createPartnerCharts();
+                partnerChartsInitialized = true;
+            }
+            if (type === 'partner' && chartRegistry.partner.length) {
+                chartRegistry.partner.forEach(chart => chart.resize());
+            }
+        }
+
+        document.querySelectorAll('.type-tab').forEach(btn => {
+            btn.addEventListener('click', () => showType(btn.dataset.target));
+        });
+
+        const consumerColors = ['#3ec8ff', '#0abf9e', '#ff9f43', '#ff8c42', '#8b63ff', '#ffc857', '#ff5f8f', '#34d399', '#6366f1', '#5469ff'];
+
+        const consumerData = {
+            labels: ['Self', 'Chime', 'Kikoff', 'Discover', 'Capital One', 'Credit Strong', 'Experian Boost', 'Grow Credit', 'Sezzle', 'MoneyLion'],
+            appearance: [64, 61, 52, 39, 34, 30, 27, 22, 16, 14],
+            ranks: [2.4, 2.7, 3.1, 3.6, 4.0, 4.1, 4.4, 4.9, 5.3, 5.6],
+            competitors: [
+                { name: 'Self', appearance: 64, rank: 2.4, providers: ['claude', 'openai-search', 'gemini'], isOwn: true },
+                { name: 'Chime', appearance: 61, rank: 2.7, providers: ['claude', 'gemini'] },
+                { name: 'Kikoff', appearance: 52, rank: 3.1, providers: ['openai-search', 'claude'] },
+                { name: 'Discover', appearance: 39, rank: 3.6, providers: ['gemini', 'claude'] },
+                { name: 'Capital One', appearance: 34, rank: 4.0, providers: ['gemini'] },
+                { name: 'Credit Strong', appearance: 30, rank: 4.1, providers: ['openai-search', 'claude'] },
+                { name: 'Experian Boost', appearance: 27, rank: 4.4, providers: ['claude'] },
+                { name: 'Grow Credit', appearance: 22, rank: 4.9, providers: ['gemini'] },
+                { name: 'Sezzle', appearance: 16, rank: 5.3, providers: ['openai-search'] },
+                { name: 'MoneyLion', appearance: 14, rank: 5.6, providers: ['gemini'] }
+            ]
+        };
+
+        const partnerData = {
+            labels: ['Self', 'Unit', 'Esusu', 'Marqeta', 'Bond', 'Array', 'Synctera', 'Lithic', 'Treasury Prime', 'Stripe Issuing'],
+            appearance: [55, 52, 48, 38, 35, 32, 30, 26, 22, 20],
+            ranks: [2.9, 3.1, 3.3, 3.7, 3.9, 4.0, 4.1, 4.4, 4.6, 4.8],
+            competitors: [
+                { name: 'Self', appearance: 55, rank: 2.9, providers: ['claude', 'openai-search', 'gemini'], isOwn: true },
+                { name: 'Unit', appearance: 52, rank: 3.1, providers: ['gemini', 'claude'] },
+                { name: 'Esusu', appearance: 48, rank: 3.3, providers: ['openai-search', 'claude'] },
+                { name: 'Marqeta', appearance: 38, rank: 3.7, providers: ['gemini', 'claude'] },
+                { name: 'Bond', appearance: 35, rank: 3.9, providers: ['openai-search'] },
+                { name: 'Array', appearance: 32, rank: 4.0, providers: ['claude'] },
+                { name: 'Synctera', appearance: 30, rank: 4.1, providers: ['gemini'] },
+                { name: 'Lithic', appearance: 26, rank: 4.4, providers: ['claude'] },
+                { name: 'Treasury Prime', appearance: 22, rank: 4.6, providers: ['openai-search'] },
+                { name: 'Stripe Issuing', appearance: 20, rank: 4.8, providers: ['gemini'] }
+            ]
+        };
+
+        const keywordsConsumer = [
+            { text: 'private credit builder app with rent reporting automation', count: 3 },
+            { text: 'self vs chime secured card upgrade path', count: 2 },
+            { text: 'zero knowledge ai messenger for credit repair', count: 2 },
+            { text: 'rent trade line reporting API', count: 1 },
+            { text: 'credit builder wallet with rewards token', count: 1 },
+            { text: 'how does self hardship pause work', count: 1 },
+            { text: 'bilingual credit coach ai', count: 1 },
+            { text: 'credit-builder plus ai vault for teens', count: 1 }
+        ];
+
+        const keywordsPartner = [
+            { text: 'white-label credit builder api for credit unions', count: 3 },
+            { text: 'rent reporting infrastructure with zero knowledge encryption', count: 2 },
+            { text: 'secured card issuing with hardship pause api', count: 2 },
+            { text: 'credit union modernization with ai copilot', count: 2 },
+            { text: 'compliance ready credit builder sdk', count: 2 },
+            { text: 'self vs esusu rent reporting features', count: 1 },
+            { text: 'unit vs self credit builder partnership timeline', count: 1 },
+            { text: 'stripe issuing credit builder integration guide', count: 1 }
+        ];
+
+        const providerShare = [
+            { name: 'Claude Search', value: 44, color: '#ff5f8f' },
+            { name: 'OpenAI Search', value: 36, color: '#3ec8ff' },
+            { name: 'Gemini', value: 20, color: '#ffc857' }
+        ];
+
+        const sources = [
+            { name: 'Self Official Site', url: 'https://self.app', mentions: 12 },
+            { name: 'Self Vault Docs', url: 'https://self.app/vault', mentions: 8 },
+            { name: 'Self Token Whitepaper', url: 'https://self.app/self-token.pdf', mentions: 6 },
+            { name: 'NerdWallet Credit Builder Review', url: 'https://www.nerdwallet.com', mentions: 5 },
+            { name: 'Business Insider Finance', url: 'https://www.businessinsider.com', mentions: 4 },
+            { name: 'Bond Platform Docs', url: 'https://docs.bond.tech', mentions: 4 },
+            { name: 'Synctera Blog', url: 'https://synctera.com/blog', mentions: 3 },
+            { name: 'Stripe Issuing Docs', url: 'https://stripe.com/docs/issuing', mentions: 3 }
+        ];
+
+        const keywordOpportunities = [
+            { text: 'credit builder api for credit unions', type: 'missing' },
+            { text: 'rent reporting white-label toolkit', type: 'missing' },
+            { text: 'self vs esusu rent reporting comparison', type: 'missing' },
+            { text: 'secured card hardship pause automation', type: 'missing' },
+            { text: 'bilingual ai credit coach', type: 'low-rank' },
+            { text: 'credit builder integration timeline for banks', type: 'low-rank' }
+        ];
+
+        const sourceOpportunities = [
+            { text: 'NerdWallet secured card hub', type: 'link' },
+            { text: 'Business Insider personal finance desk', type: 'link' },
+            { text: 'Bond developer docs – credit builder section', type: 'link' },
+            { text: 'Synctera case studies', type: 'link' },
+            { text: 'Stripe Issuing partners page', type: 'link' },
+            { text: 'Treasury Prime lending series', type: 'link' }
+        ];
+
+        function getColor(name) {
+            const lower = name.toLowerCase();
+            if (lower.includes('self')) return 'linear-gradient(90deg, var(--self-azure), var(--self-coral))';
+            if (lower.includes('chime')) return '#0abf9e';
+            if (lower.includes('kikoff')) return '#ff9f43';
+            if (lower.includes('discover')) return '#ff8c42';
+            if (lower.includes('capital')) return '#8b63ff';
+            if (lower.includes('unit')) return '#ffaa4c';
+            if (lower.includes('esusu')) return '#34d399';
+            if (lower.includes('marqeta')) return '#5469ff';
+            if (lower.includes('bond')) return '#6366f1';
+            return '#1f2744';
+        }
+
+        function renderTable(dataset, elementId) {
+            const tbody = document.getElementById(elementId);
+            tbody.innerHTML = dataset.competitors.map(c => `
+                <tr>
+                    <td>
+                        <div class="competitor-name">
+                            <div class="competitor-logo" style="background: ${c.isOwn ? 'linear-gradient(135deg, rgba(62,200,255,0.3), rgba(255,95,143,0.3))' : 'rgba(255,255,255,0.05)'};">
+                                ${c.name.charAt(0)}
+                            </div>
+                            <div>
+                                ${c.name}
+                                ${c.isOwn ? '<span class="tag-own" style="margin-left:0.5rem;">SELF</span>' : ''}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display:flex; align-items:center; gap:0.75rem;">
+                            <div class="bar" style="width:120px;">
+                                <div class="bar-fill" style="width:${c.appearance}%; background:${c.isOwn ? 'linear-gradient(90deg, var(--self-azure), var(--self-coral))' : getColor(c.name)};"></div>
+                            </div>
+                            <span style="min-width:45px;">${c.appearance}%</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span style="font-weight:600;">${c.rank.toFixed(1)}</span>
+                    </td>
+                    <td>
+                        <div class="provider-badges">
+                            ${c.providers.map(p => `<span class="provider-badge ${p}">${p.replace('-search','')}</span>`).join('')}
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        function renderKeywords(list, elementId) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = list.map(k => `
+                <div class="keyword-tag">
+                    <span class="text" style="max-width: 180px;">${k.text}</span>
+                    <span class="count">${k.count}x</span>
+                </div>
+            `).join('');
+        }
+
+        function renderProviders() {
+            const canvas = document.getElementById('providerChart');
+            const legend = document.getElementById('providerLegend');
+            new Chart(canvas, {
+                type: 'doughnut',
+                data: {
+                    labels: providerShare.map(p => p.name),
+                    datasets: [{
+                        data: providerShare.map(p => p.value),
+                        backgroundColor: providerShare.map(p => p.color),
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '62%',
+                    plugins: { legend: { display: false } }
+                }
+            });
+            legend.innerHTML = providerShare.map(p => `
+                <div class="provider-legend-item">
+                    <div class="color" style="background:${p.color};"></div>
+                    <div class="name">${p.name}</div>
+                    <div class="value">${p.value}%</div>
+                </div>
+            `).join('');
+        }
+
+        function renderSources() {
+            const container = document.getElementById('sourcesList');
+            container.innerHTML = sources.map(s => `
+                <div class="source-item">
+                    <div class="source-info">
+                        <div class="source-name">${s.name}</div>
+                        <div class="source-url">${s.url}</div>
+                    </div>
+                    <div class="source-mentions">${s.mentions}x</div>
+                </div>
+            `).join('');
+        }
+
+        function renderOps(list, elementId) {
+            const container = document.getElementById(elementId);
+            container.innerHTML = list.map(item => `
+                <div class="opportunity-item">
+                    <span class="opportunity-badge ${item.type === 'missing' ? 'badge-missing' : item.type === 'low-rank' ? 'badge-low-rank' : 'badge-link'}">
+                        ${item.type === 'missing' ? 'Missing' : item.type === 'low-rank' ? 'Rank >3' : 'Source'}
+                    </span>
+                    ${item.text}
+                </div>
+            `).join('');
+        }
+
+        function applyVisibilityScore() {
+            const weights = {
+                consumerShare: 0.3,
+                partnerShare: 0.25,
+                homepageAlignment: 0.2,
+                keywordCoverage: 0.15,
+                sourceStrength: 0.1
+            };
+            const breakdown = Object.keys(visibilityInputs).map(key => ({
+                metric: key.replace(/([A-Z])/g, ' $1').replace(/^\w/, c => c.toUpperCase()),
+                input: visibilityInputs[key],
+                weight: weights[key],
+                contribution: visibilityInputs[key] * weights[key]
+            }));
+            const raw = breakdown.reduce((sum, row) => sum + row.contribution, 0);
+            const penalty = Math.max(0, (0.7 - visibilityInputs.homepageAlignment) * 10 + (0.6 - visibilityInputs.keywordCoverage) * 8) / 100;
+            const score = Math.round((raw - penalty) * 100);
+            document.getElementById('scoreNumber').textContent = score;
+            document.getElementById('overallScoreValue').textContent = score;
+            document.getElementById('consumerAvgLabel').textContent = '58';
+            const consumerDelta = score - 58;
+            const consumerDeltaEl = document.getElementById('consumerDeltaValue');
+            consumerDeltaEl.textContent = consumerDelta >= 0 ? `+${consumerDelta}` : consumerDelta;
+            consumerDeltaEl.classList.toggle('up', consumerDelta >= 0);
+            consumerDeltaEl.classList.toggle('down', consumerDelta < 0);
+            document.getElementById('partnerAvgValue').textContent = Math.round(visibilityInputs.partnerShare * 100);
+            return score;
+        }
+
+        function createConsumerCharts() {
+            const consumerSov = new Chart(document.getElementById('consumerSovChart'), {
+                type: 'bar',
+                data: {
+                    labels: consumerData.labels,
+                    datasets: [{
+                        data: consumerData.appearance,
+                        backgroundColor: consumerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.85)' : consumerColors[idx % consumerColors.length]),
+                        borderRadius: 6
+                    }]
+                },
+                options: { ...buildChartOptions(), indexAxis: 'y' }
+            });
+
+            const consumerRank = new Chart(document.getElementById('consumerRankChart'), {
+                type: 'bar',
+                data: {
+                    labels: consumerData.labels,
+                    datasets: [{
+                        data: consumerData.ranks,
+                        backgroundColor: consumerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.65)' : consumerColors[idx % consumerColors.length] + 'cc'),
+                        borderRadius: 6
+                    }]
+                },
+                options: buildChartOptions()
+            });
+            chartRegistry.consumer = [consumerSov, consumerRank];
+        }
+
+        function createPartnerCharts() {
+            const partnerSov = new Chart(document.getElementById('partnerSovChart'), {
+                type: 'bar',
+                data: {
+                    labels: partnerData.labels,
+                    datasets: [{
+                        data: partnerData.appearance,
+                        backgroundColor: partnerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.85)' : partnerPalette[idx % partnerPalette.length]),
+                        borderRadius: 6
+                    }]
+                },
+                options: { ...buildChartOptions(), indexAxis: 'y' }
+            });
+
+            const partnerRank = new Chart(document.getElementById('partnerRankChart'), {
+                type: 'bar',
+                data: {
+                    labels: partnerData.labels,
+                    datasets: [{
+                        data: partnerData.ranks,
+                        backgroundColor: partnerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.65)' : partnerPalette[idx % partnerPalette.length] + 'cc'),
+                        borderRadius: 6
+                    }]
+                },
+                options: buildChartOptions()
+            });
+            chartRegistry.partner = [partnerSov, partnerRank];
+        }
+
+        createConsumerCharts();
+        // partner charts instantiated on-demand when tab clicked
+
+        renderTable(consumerData, 'consumerTable');
+        renderTable(partnerData, 'partnerTable');
+        renderKeywords(keywordsConsumer, 'keywordsConsumer');
+        renderKeywords(keywordsPartner, 'keywordsPartner');
+        renderProviders();
+        renderSources();
+        renderOps(keywordOpportunities, 'keywordOpportunities');
+        renderOps(sourceOpportunities, 'sourceOpportunities');
+        const recalculatedScore = applyVisibilityScore();
+        animateScore(recalculatedScore);
+    </script>
+</body>
+</html>
