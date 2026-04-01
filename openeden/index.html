@@ -939,7 +939,7 @@
             <div class="card" style="margin-top: 2rem;">
                 <div class="card-header" style="margin-bottom: 0.75rem;">
                     <div class="card-title">Top Competitors – Institutional Investors</div>
-                    <span class="tag-own">Self perspective</span>
+                    <span class="tag-own">Your brand</span>
                 </div>
                 <table class="competitor-table">
                     <thead>
@@ -952,6 +952,9 @@
                     </thead>
                     <tbody id="consumerTable"></tbody>
                 </table>
+                <p style="color: var(--text-muted); font-size: 0.78rem; margin-top: 0.6rem; line-height: 1.5;">
+                    <strong>Avg Rank</strong> = average position (1–10) when OpenEden appears in a response. Rank 1 means OpenEden is the primary answer; 10 means it's the last mention. Lower is better. Calculated from all 60 BotSee responses across Claude, Gemini, and OpenAI Search personas.
+                </p>
             </div>
         </div>
 
@@ -1309,14 +1312,14 @@
         const consumerColors = ['#3ec8ff', '#0abf9e', '#ff9f43', '#ff8c42', '#8b63ff', '#ffc857', '#ff5f8f', '#34d399', '#6366f1', '#5469ff'];
 
         const consumerData = {
-            labels: ['Ondo Finance', 'Franklin Templeton', 'Superstate', 'OpenEden (OWN)', 'Securitize', 'WisdomTree', 'MatrixDock', 'Backed Finance', 'Hashnote', 'BlackRock'],
+            labels: ['Ondo Finance', 'Franklin Templeton', 'Superstate', 'OpenEden', 'Securitize', 'WisdomTree', 'MatrixDock', 'Backed Finance', 'Hashnote', 'BlackRock'],
             appearance: [83, 70, 57, 57, 37, 33, 30, 27, 27, 23],
             ranks: [2.7, 2.9, 5.0, 4.8, 4.3, 4.7, 4.3, 3.6, 5.9, 1.1],
             competitors: [
                 { name: 'Ondo Finance', appearance: 83, rank: 2.7, providers: ['claude', 'gemini', 'openai-search'] },
                 { name: 'Franklin Templeton', appearance: 70, rank: 2.9, providers: ['claude', 'gemini', 'openai-search'] },
                 { name: 'Superstate', appearance: 57, rank: 5.0, providers: ['claude', 'gemini'] },
-                { name: 'OpenEden (OWN)', appearance: 57, rank: 4.8, providers: ['claude', 'gemini', 'openai-search'], isOwn: true },
+                { name: 'OpenEden', appearance: 57, rank: 4.8, providers: ['claude', 'gemini', 'openai-search'], isOwn: true },
                 { name: 'Securitize', appearance: 37, rank: 4.3, providers: ['claude', 'gemini', 'openai-search'] },
                 { name: 'WisdomTree', appearance: 33, rank: 4.7, providers: ['claude', 'gemini'] },
                 { name: 'MatrixDock', appearance: 30, rank: 4.3, providers: ['claude', 'gemini'] },
