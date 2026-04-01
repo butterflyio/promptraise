@@ -399,6 +399,7 @@
 
         .tag-own { border-color: rgba(62,200,255,0.5); color: var(--oe-teal); }
         .tag-ai { border-color: rgba(255,95,143,0.4); color: var(--danger); }
+        .rank-info { cursor: help; border-bottom: 1px dashed var(--text-muted); margin-left: 3px; font-size: 0.8em; vertical-align: super; }
 
         .chart-container {
             position: relative;
@@ -817,9 +818,9 @@
             <div class="score-gauge">
                 <svg width="220" height="220" viewBox="0 0 220 220">
                     <defs>
-                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#3ec8ff"/>
-                            <stop offset="100%" style="stop-color:#ff5f8f"/>
+                        <linearGradient id="scoreGradient" x1="0" y1="0" x2="220" y2="0" gradientUnits="userSpaceOnUse">
+                            <stop offset="0" style="stop-color:#3ec8ff"/>
+                            <stop offset="100" style="stop-color:#ffc857"/>
                         </linearGradient>
                     </defs>
                     <circle class="score-gauge-bg" cx="110" cy="110" r="85"/>
@@ -832,9 +833,9 @@
             </div>
             <div class="hero-details">
                 <div class="score-status">
-                    <span>🔒</span>
-                    <span>Reliable but under-leveraged visibility</span>
-                    <span style="color: var(--text-muted); font-weight: 500;">+10 vs privacy-first peers</span>
+                    <span>📊</span>
+                    <span>Competitive visibility with room to grow</span>
+                    <span style="color: var(--text-muted); font-weight: 500;">+1 vs institutional avg</span>
                 </div>
                 <div class="score-comparison">
                     <div class="comparison-item">
@@ -846,7 +847,7 @@
                 </div>
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 1rem; padding: 1.2rem;">
                     <p style="color: var(--text-muted); font-size: 0.85rem;">Analysis summary:</p>
-                    <p style="font-size: 0.95rem;">Self still owns the private AI narrative but the score dip shows AI engines default to legacy credit-builder framing. Biggest upside: align homepage messaging with AI demand for "white-label credit builder infrastructure", "rent reporting APIs", and "zero-knowledge consumer data".</p>
+                    <p style="font-size: 0.95rem;">OpenEden holds strong position in DeFi-native queries (70%) but trails Ondo across institutional channels (57% vs 83%). AI engines frequently cite competing protocols like Ondo, Superstate, and Franklin Templeton alongside OpenEden — indicating the category narrative is being shaped by others. Key opportunity: improve homepage copy for "institutional yield" and "DeFi treasury" terms to close the rank gap.</p>
                 </div>
             </div>
         </div>
@@ -855,7 +856,7 @@
             <div class="stat-card">
                 <div class="label">Total Responses</div>
                 <div class="value">60</div>
-                <div class="sub">30 consumer | 30 partner personas</div>
+                <div class="sub">30 institutional | 30 DeFi-native personas</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
@@ -864,24 +865,24 @@
             </div>
             <div class="stat-card">
                 <div class="label">Institutional Share</div>
-                <div class="value highlight">64%</div>
-                <div class="sub">Avg rank 2.4 | leads Chime & Kikoff</div>
+                <div class="value highlight">57%</div>
+                <div class="sub">Avg rank 4.8 | Ondo leads at 83%</div>
             </div>
             <div class="stat-card">
                 <div class="label">DeFi-Native Share</div>
-                <div class="value highlight">55%</div>
-                <div class="sub">Avg rank 2.9 | Unit + Esusu close</div>
+                <div class="value highlight">70%</div>
+                <div class="sub">Avg rank 4.6 | Ondo leads at 100%</div>
             </div>
         </div>
 
         <div class="type-tabs">
             <button class="type-tab active" data-target="consumer">
                 <span>Institutional Investors</span>
-                <span>rent reporting + secured cards</span>
+                <span>tokenized T-bills & RWA yield</span>
             </button>
             <button class="type-tab" data-target="partner">
                 <span>DeFi-Native Traders</span>
-                <span>white-label, compliance-ready APIs</span>
+                <span>DeFi treasury & stablecoin yield</span>
             </button>
         </div>
 
@@ -911,28 +912,28 @@
                 <div class="card action-card">
                     <h3>Content Priorities</h3>
                     <ul>
-                        <li>Publish "Self vs Chime/Kikoff secured card" guide with rent reporting details.</li>
-                        <li>Create API reference page titled "Credit Builder API + Rent Reporting" for partners.</li>
-                        <li>Translate zero-knowledge story into compliance language (SOC 2, CRA, FDIC partners).</li>
-                        <li>Extend homepage hero copy to mention "credit union modernization" explicitly.</li>
+                        <li>Publish "OpenEden vs Ondo Finance" yield comparison with TVL and risk metrics.</li>
+                        <li>Create dedicated "DeFi Treasury" landing page targeting institutional DeFi queries.</li>
+                        <li>Add structured data (FAQ, Product schema) for "tokenized T-bills" and "RWA yield" terms.</li>
+                        <li>Extend homepage copy to include "institutional yield", "on-chain money market", and "DeFi treasury" explicitly.</li>
                     </ul>
                 </div>
                 <div class="card action-card">
                     <h3>Source & Link Priorities</h3>
                     <ul>
-                        <li>Secure coverage on NerdWallet / Business Insider comparing Self to credit builder cards.</li>
-                        <li>Publish guest content on Bond, Synctera, Unit, and Treasury Prime blogs.</li>
-                        <li>Pitch Stripe Issuing / Lithic documentation teams on zero-knowledge use cases.</li>
-                        <li>Offer co-marketing with Esusu & Marqeta to capture "rent reporting" citations.</li>
+                        <li>Secure coverage on Messari, CoinDesk, and The Block RWA yield sections.</li>
+                        <li>Publish guest content on DeFiLlama, DefiPulse, and RWA.xyz explaining OpenEden's differentiation.</li>
+                        <li>Pitch GitBook developer docs for DeFi treasury integration guides.</li>
+                        <li>Co-market with Ondo, Superstate, and Franklin Templeton to capture category narrative.</li>
                     </ul>
                 </div>
                 <div class="card action-card">
                     <h3>Quick Wins</h3>
                     <ul>
-                        <li>Add schema tags for "credit builder" and "rent reporting" on hero + pricing page.</li>
-                        <li>Highlight "white-label" and "credit union" in the enterprise module above the fold.</li>
-                        <li>Embed PDF summary for "zero-knowledge rent reporting" to give AI engines fresh copy.</li>
-                        <li>Update alt text for comparison image to include "credit builder" keywords.</li>
+                        <li>Add FAQ schema for "tokenized T-bills", "RWA yield", and "on-chain treasury" on homepage.</li>
+                        <li>Publish smart contract audit report and link from homepage for AI source citations.</li>
+                        <li>Embed live TVL dashboard widget to give AI engines fresh, structured data.</li>
+                        <li>Add "powered by Ondo" and "backed by BlackRock" badges prominently above the fold.</li>
                     </ul>
                 </div>
             </div>
@@ -946,7 +947,7 @@
                         <tr>
                             <th>Competitor</th>
                             <th>Appearance</th>
-                            <th>Avg Rank</th>
+                            <th>Avg Rank <span class="rank-info" title="Average position (1–10) of OpenEden when mentioned by AI. Rank 1 = primary answer; Rank 10 = last mention. Lower is better. Calculated from all 60 BotSee responses across Claude, Gemini, and OpenAI Search.">?</span></th>
                             <th>Providers</th>
                         </tr>
                     </thead>
@@ -989,7 +990,7 @@
                         <tr>
                             <th>Competitor</th>
                             <th>Appearance</th>
-                            <th>Avg Rank</th>
+                            <th>Avg Rank <span class="rank-info" title="Average position (1–10) of OpenEden when mentioned by AI. Rank 1 = primary answer; Rank 10 = last mention. Lower is better. Calculated from all 60 BotSee responses across Claude, Gemini, and OpenAI Search.">?</span></th>
                             <th>Providers</th>
                         </tr>
                     </thead>
@@ -1039,7 +1040,7 @@
                     <div class="card-title">Keyword Opportunities</div>
                     <span class="tag">Fill gaps</span>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Queries where Self is missing or outranked by fintech peers; prioritize content or schema updates.</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Queries where OpenEden is missing or outranked by competitors like Ondo and Superstate; prioritize content or schema updates.</p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
             <div class="card">
@@ -1047,7 +1048,7 @@
                     <div class="card-title">Source Opportunities</div>
                     <span class="tag">Link + docs</span>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Infrastructure docs and review sites that influence AI responses – request coverage or co-build guides.</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">DeFi research platforms, yield trackers, and RWA coverage outlets that influence AI responses — request coverage or co-author guides.</p>
                 <div class="opportunity-list" id="sourceOpportunities"></div>
             </div>
         </div>
@@ -1065,33 +1066,33 @@
                 </thead>
                 <tbody id="gapTable">
                     <tr>
-                        <td class="term">"credit builder API"</td>
-                        <td class="evidence">12 AI prompts mention APIs for credit unions / fintechs; homepage says "AI, messenger, wallet" without API framing.</td>
+                        <td class="term">"institutional yield"</td>
+                        <td class="evidence">15 AI prompts mention "institutional yield" or "institutional DeFi"; homepage focuses on "for everyone" rather than institutional framing.</td>
                         <td><span class="priority-high">HIGH</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"rent reporting" / "rent trade lines"</td>
-                        <td class="evidence">7 consumer queries ask about rent reporting partnerships; homepage omits rent entirely.</td>
+                        <td class="term">"DeFi treasury management"</td>
+                        <td class="evidence">11 prompts from DeFi-native personas ask about treasury yield; homepage mentions yield but not treasury management framing.</td>
                         <td><span class="priority-high">HIGH</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"secured card transition"</td>
-                        <td class="evidence">5 prompts compare secured cards to Self classic credit-builder loan; homepage focuses on zero-knowledge AI.</td>
+                        <td class="term">"tokenized money market"</td>
+                        <td class="evidence">8 prompts compare OpenEden to money market funds; homepage says "US Treasury bills onchain" but misses the money market framing.</td>
                         <td><span class="priority-medium">MEDIUM</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"white-label" / "co-branded"</td>
-                        <td class="evidence">Partner personas ask for white-label deployments; homepage only references branding in enterprise section once.</td>
+                        <td class="term">"RWA on-chain liquidity"</td>
+                        <td class="evidence">7 DeFi queries ask about liquidity and on-chain mechanics; homepage focuses on yield, not liquidity provision.</td>
                         <td><span class="priority-medium">MEDIUM</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"FDIC partner" / "compliance stack"</td>
-                        <td class="evidence">Bank personas expect compliance detail; homepage highlights zero-knowledge but not regulatory alignment.</td>
+                        <td class="term">"smart contract audit"</td>
+                        <td class="evidence">6 prompts mention audit reports as trust signals; no audit badge or link on homepage.</td>
                         <td><span class="priority-medium">MEDIUM</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"credit union modernization"</td>
-                        <td class="evidence">4 partner prompts mention credit unions needing AI + credit builder bundles; homepage only says "enterprise-grade security".</td>
+                        <td class="term">"backed by US Treasuries"</td>
+                        <td class="evidence">5 prompts ask what assets back OpenEden; homepage says "powered by BlackRock and Ondo" but misses the explicit Treasury backing.</td>
                         <td><span class="priority-low">LOW</span></td>
                     </tr>
                 </tbody>
@@ -1429,14 +1430,14 @@
                             </div>
                             <div>
                                 ${c.name}
-                                ${c.isOwn ? '<span class="tag-own" style="margin-left:0.5rem;">OWN</span>' : ''}
+                                
                             </div>
                         </div>
                     </td>
                     <td>
                         <div style="display:flex; align-items:center; gap:0.75rem;">
                             <div class="bar" style="width:120px;">
-                                <div class="bar-fill" style="width:${c.appearance}%; background:${c.isOwn ? 'linear-gradient(90deg, var(--oe-teal), var(--oe-coral))' : getColor(c.name)};"></div>
+                                <div class="bar-fill" style="width:${c.appearance}%; background:${c.isOwn ? 'linear-gradient(90deg, var(--oe-teal), var(--oe-gold))' : getColor(c.name)};"></div>
                             </div>
                             <span style="min-width:45px;">${c.appearance}%</span>
                         </div>
@@ -1537,11 +1538,6 @@
             document.getElementById('scoreNumber').textContent = score;
             document.getElementById('overallScoreValue').textContent = score;
             document.getElementById('consumerAvgLabel').textContent = '45';
-            const consumerDelta = score - 58;
-            const consumerDeltaEl = document.getElementById('consumerDeltaValue');
-            consumerDeltaEl.textContent = consumerDelta >= 0 ? `+${consumerDelta}` : consumerDelta;
-            consumerDeltaEl.classList.toggle('up', consumerDelta >= 0);
-            consumerDeltaEl.classList.toggle('down', consumerDelta < 0);
             document.getElementById('partnerAvgValue').textContent = Math.round(visibilityInputs.partnerShare * 100);
             return score;
         }
