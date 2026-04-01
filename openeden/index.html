@@ -11,10 +11,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --oe-gold: #f5a623;
-            --oe-teal: #00c7b2;
-            --oe-navy: #0b2545;
-            --oe-slate: #1b3a5c;
+            --oe-gold: #ffc857;
+            --oe-teal: #3ec8ff;
+            --oe-cobalt: #7c63ff;
+            --oe-coral: #ff5f8f;
             --bg-deep: #05070f;
             --bg-panel: #0f1324;
             --bg-panel-hover: #171c34;
@@ -43,7 +43,7 @@
 
         body {
             font-family: 'Space Grotesk', 'Space Mono', sans-serif;
-            background: radial-gradient(circle at top, rgba(245,166,35,0.08), rgba(0,199,178,0.05), rgba(5,7,15,0.9)), var(--bg-deep);
+            background: radial-gradient(circle at top, rgba(62,200,255,0.12), rgba(5,7,15,0.9)), var(--bg-deep);
             color: var(--text-bright);
             min-height: 100vh;
             line-height: 1.6;
@@ -71,7 +71,7 @@
             font-size: 2rem;
             font-weight: 700;
             letter-spacing: -0.03em;
-            background: linear-gradient(120deg, var(--oe-gold), var(--oe-teal));
+            background: linear-gradient(120deg, var(--oe-teal), var(--oe-cobalt));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -102,13 +102,13 @@
         }
 
         .btn-primary {
-            background: linear-gradient(120deg, var(--oe-gold), var(--oe-teal));
-            color: var(--oe-navy);
+            background: linear-gradient(120deg, var(--oe-cobalt), var(--oe-teal));
+            color: white;
         }
 
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(245, 166, 35, 0.35);
+            box-shadow: 0 12px 30px rgba(62, 200, 255, 0.35);
         }
 
         .btn-secondary {
@@ -167,7 +167,7 @@
         .score-gauge-text .score {
             font-size: 4rem;
             font-weight: 700;
-            background: linear-gradient(120deg, var(--oe-gold), var(--oe-teal));
+            background: linear-gradient(120deg, var(--oe-teal), var(--oe-coral));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -189,10 +189,10 @@
             align-items: center;
             gap: 0.65rem;
             padding: 0.6rem 1.2rem;
-            background: rgba(245,166,35,0.12);
-            border: 1px solid rgba(245,166,35,0.3);
+            background: rgba(61, 224, 176, 0.12);
+            border: 1px solid rgba(61, 224, 176, 0.3);
             border-radius: 9999px;
-            color: var(--oe-gold);
+            color: var(--success);
             font-size: 0.9rem;
             font-weight: 600;
             width: fit-content;
@@ -255,7 +255,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(140deg, rgba(245,166,35,0.08), rgba(0,199,178,0));
+            background: linear-gradient(140deg, rgba(62, 200, 255, 0.08), rgba(124, 99, 255, 0));
             opacity: 0;
             transition: opacity 0.3s;
         }
@@ -266,7 +266,7 @@
 
         .stat-card:hover {
             transform: translateY(-4px);
-            border-color: var(--oe-gold);
+            border-color: var(--oe-teal);
             box-shadow: 0 20px 45px rgba(6, 12, 30, 0.35);
         }
 
@@ -284,7 +284,7 @@
         }
 
         .stat-card .value.highlight {
-            background: linear-gradient(120deg, var(--oe-gold), var(--oe-teal));
+            background: linear-gradient(120deg, var(--oe-teal), var(--oe-cobalt));
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
@@ -315,6 +315,7 @@
             transform: translateY(0);
         }
 
+
         .type-tab {
             padding: 1.25rem;
             background: var(--bg-panel);
@@ -337,10 +338,10 @@
         }
 
         .type-tab.active {
-            background: linear-gradient(120deg,rgba(245,166,35,0.08),rgba(0,199,178,0.08));
-            border-color: rgba(245,166,35,0.4);
+            background: linear-gradient(120deg,rgba(62,200,255,0.08),rgba(124,99,255,0.08));
+            border-color: rgba(62,200,255,0.4);
             color: var(--text-bright);
-            box-shadow: inset 0 0 0 1px rgba(245,166,35,0.2);
+            box-shadow: inset 0 0 0 1px rgba(62,200,255,0.2);
         }
 
         .card {
@@ -352,7 +353,7 @@
         }
 
         .card:hover {
-            border-color: rgba(245,166,35,0.4);
+            border-color: rgba(62,200,255,0.4);
             box-shadow: 0 20px 45px rgba(5, 7, 15, 0.35);
         }
 
@@ -396,7 +397,7 @@
             letter-spacing: 0.1em;
         }
 
-        .tag-own { border-color: rgba(245,166,35,0.5); color: var(--oe-gold); }
+        .tag-own { border-color: rgba(62,200,255,0.5); color: var(--oe-teal); }
         .tag-ai { border-color: rgba(255,95,143,0.4); color: var(--danger); }
 
         .chart-container {
@@ -434,7 +435,7 @@
             width: 40px;
             height: 40px;
             border-radius: 12px;
-            background: rgba(245,166,35,0.15);
+            background: rgba(62,200,255,0.15);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -472,7 +473,7 @@
 
         .provider-badge.claude { background: rgba(255,95,143,0.18); color: var(--danger); }
         .provider-badge.gemini { background: rgba(255,200,87,0.18); color: var(--warning); }
-        .provider-badge.openai-search { background: rgba(245,166,35,0.18); color: var(--oe-gold); }
+        .provider-badge.openai-search { background: rgba(62,200,255,0.18); color: var(--oe-teal); }
 
         .keywords-grid {
             display: grid;
@@ -492,8 +493,8 @@
         }
 
         .keyword-tag .count {
-            background: rgba(245,166,35,0.15);
-            color: var(--oe-gold);
+            background: rgba(62,200,255,0.15);
+            color: var(--oe-teal);
             padding: 0.2rem 0.6rem;
             border-radius: 9999px;
             font-size: 0.7rem;
@@ -536,8 +537,8 @@
         }
 
         .source-mentions {
-            background: rgba(0,199,178,0.2);
-            color: var(--oe-teal);
+            background: rgba(124,99,255,0.2);
+            color: var(--oe-cobalt);
             padding: 0.3rem 0.9rem;
             border-radius: 9999px;
             font-weight: 600;
@@ -586,7 +587,7 @@
 
         .badge-missing { background: rgba(255,95,143,0.15); color: var(--danger); }
         .badge-low-rank { background: rgba(255,200,87,0.15); color: var(--warning); }
-        .badge-link { background: rgba(0,199,178,0.15); color: var(--oe-teal); }
+        .badge-link { background: rgba(62,200,255,0.15); color: var(--oe-teal); }
 
         .gap-table {
             width: 100%;
@@ -715,7 +716,7 @@
 
         .action-card ul li::before {
             content: "→";
-            color: var(--oe-gold);
+            color: var(--oe-teal);
             font-weight: 700;
         }
 
@@ -817,8 +818,8 @@
                 <svg width="220" height="220" viewBox="0 0 220 220">
                     <defs>
                         <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                            <stop offset="0%" style="stop-color:#f5a623"/>
-                            <stop offset="100%" style="stop-color:#00c7b2"/>
+                            <stop offset="0%" style="stop-color:#3ec8ff"/>
+                            <stop offset="100%" style="stop-color:#ff5f8f"/>
                         </linearGradient>
                     </defs>
                     <circle class="score-gauge-bg" cx="110" cy="110" r="85"/>
@@ -832,25 +833,20 @@
             <div class="hero-details">
                 <div class="score-status">
                     <span>🔒</span>
-                    <span>Building momentum — second-tier visibility with room to grow</span>
+                    <span>Reliable but under-leveraged visibility</span>
+                    <span style="color: var(--text-muted); font-weight: 500;">+10 vs privacy-first peers</span>
                 </div>
                 <div class="score-comparison">
                     <div class="comparison-item">
-                        <div class="value" style="color: var(--oe-gold);" id="overallScoreValue">60</div>
-                        <div class="label">Overall OpenEden score</div>
-                    </div>
-                    <div class="comparison-item">
-                        <div class="value up" id="consumerDeltaValue">+8</div>
-                        <div class="label">vs Institutional Avg (<span id="consumerAvgLabel">52</span>)</div>
-                    </div>
-                    <div class="comparison-item">
-                        <div class="value" style="color: var(--oe-teal);" id="partnerAvgValue">60</div>
-                        <div class="label">DeFi AI Avg</div>
+                        <div class="value" style="color: var(--oe-teal);" id="overallScoreValue">46</div>
+                        <div class="label">vs Institutional Avg (<span id="consumerAvgLabel">45</span>)</div>
+                        <div class="value" style="color: var(--oe-cobalt);" id="partnerAvgValue">70</div>
+                        <div class="label">Partner AI Avg</div>
                     </div>
                 </div>
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 1rem; padding: 1.2rem;">
                     <p style="color: var(--text-muted); font-size: 0.85rem;">Analysis summary:</p>
-                    <p style="font-size: 0.95rem;">OpenEden shows strong positioning in both institutional and DeFi segments, ranking 4th among tokenized treasury competitors. Key opportunities: close the rank gap vs Ondo Finance, add "24/7 redemption" and "smart contract hooks" language, and build DAO treasury integration guides for DeFi-native queries.</p>
+                    <p style="font-size: 0.95rem;">Self still owns the private AI narrative but the score dip shows AI engines default to legacy credit-builder framing. Biggest upside: align homepage messaging with AI demand for "white-label credit builder infrastructure", "rent reporting APIs", and "zero-knowledge consumer data".</p>
                 </div>
             </div>
         </div>
@@ -859,33 +855,33 @@
             <div class="stat-card">
                 <div class="label">Total Responses</div>
                 <div class="value">60</div>
-                <div class="sub">30 institutional | 30 DeFi personas</div>
+                <div class="sub">30 consumer | 30 partner personas</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value">47</div>
+                <div class="value">88</div>
                 <div class="sub">Across AI providers</div>
             </div>
             <div class="stat-card">
                 <div class="label">Institutional Share</div>
-                <div class="value highlight">57%</div>
-                <div class="sub">Avg rank 4.8 | vs Ondo 2.7</div>
+                <div class="value highlight">64%</div>
+                <div class="sub">Avg rank 2.4 | leads Chime & Kikoff</div>
             </div>
             <div class="stat-card">
-                <div class="label">DeFi Share</div>
-                <div class="value highlight">70%</div>
-                <div class="sub">Avg rank 4.6 | vs Ondo 1.4</div>
+                <div class="label">DeFi-Native Share</div>
+                <div class="value highlight">55%</div>
+                <div class="sub">Avg rank 2.9 | Unit + Esusu close</div>
             </div>
         </div>
 
         <div class="type-tabs">
             <button class="type-tab active" data-target="consumer">
                 <span>Institutional Investors</span>
-                <span>pension funds, family offices, treasuries</span>
+                <span>rent reporting + secured cards</span>
             </button>
             <button class="type-tab" data-target="partner">
                 <span>DeFi-Native Traders</span>
-                <span>DAO treasuries, crypto hedge funds, yield diversifiers</span>
+                <span>white-label, compliance-ready APIs</span>
             </button>
         </div>
 
@@ -893,7 +889,7 @@
             <div class="grid-2">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Share of Voice – Institutional Queries</div>
+                        <div class="card-title">Share of Voice – Institutional Investor Queries</div>
                         <span class="tag">Top competitors</span>
                     </div>
                     <div class="chart-container">
@@ -915,35 +911,35 @@
                 <div class="card action-card">
                     <h3>Content Priorities</h3>
                     <ul>
-                        <li>Publish "OpenEden vs Ondo Finance: Institutional Comparison" guide.</li>
-                        <li>Create "DAO Treasury Integration Guide" for tokenized T-bill deployment.</li>
-                        <li>Add "24/7 redemption" and "smart contract hooks" to hero copy.</li>
-                        <li>Build a reporting dashboard API page for institutional clients.</li>
+                        <li>Publish "Self vs Chime/Kikoff secured card" guide with rent reporting details.</li>
+                        <li>Create API reference page titled "Credit Builder API + Rent Reporting" for partners.</li>
+                        <li>Translate zero-knowledge story into compliance language (SOC 2, CRA, FDIC partners).</li>
+                        <li>Extend homepage hero copy to mention "credit union modernization" explicitly.</li>
                     </ul>
                 </div>
                 <div class="card action-card">
                     <h3>Source & Link Priorities</h3>
                     <ul>
-                        <li>Commission coverage on CoinGecko RWA reports.</li>
-                        <li>Build presence on onchaintreasury.org (DAO treasury guides).</li>
-                        <li>Pitch blockworksresearch.com for DeFi treasury research.</li>
-                        <li>Target rwa.xyz for tokenization analytics coverage.</li>
+                        <li>Secure coverage on NerdWallet / Business Insider comparing Self to credit builder cards.</li>
+                        <li>Publish guest content on Bond, Synctera, Unit, and Treasury Prime blogs.</li>
+                        <li>Pitch Stripe Issuing / Lithic documentation teams on zero-knowledge use cases.</li>
+                        <li>Offer co-marketing with Esusu & Marqeta to capture "rent reporting" citations.</li>
                     </ul>
                 </div>
                 <div class="card action-card">
                     <h3>Quick Wins</h3>
                     <ul>
-                        <li>Add schema tags for "tokenized treasury" and "RWA" on homepage.</li>
-                        <li>Highlight "24/7 redemption" and "SEC compliant" above the fold.</li>
-                        <li>Embed PDF summary for institutional investors with compliance details.</li>
-                        <li>Update competitor comparison page to address Ondo directly.</li>
+                        <li>Add schema tags for "credit builder" and "rent reporting" on hero + pricing page.</li>
+                        <li>Highlight "white-label" and "credit union" in the enterprise module above the fold.</li>
+                        <li>Embed PDF summary for "zero-knowledge rent reporting" to give AI engines fresh copy.</li>
+                        <li>Update alt text for comparison image to include "credit builder" keywords.</li>
                     </ul>
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
                 <div class="card-header" style="margin-bottom: 0.75rem;">
                     <div class="card-title">Top Competitors – Institutional Investors</div>
-                    <span class="tag-own">OpenEden perspective</span>
+                    <span class="tag-own">Self perspective</span>
                 </div>
                 <table class="competitor-table">
                     <thead>
@@ -963,7 +959,7 @@
             <div class="grid-2">
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Share of Voice – DeFi-Native Traders</div>
+                        <div class="card-title">Share of Voice – DeFi-Native Trader Queries</div>
                         <span class="tag">Top 10</span>
                     </div>
                     <div class="chart-container">
@@ -972,7 +968,7 @@
                 </div>
                 <div class="card">
                     <div class="card-header">
-                        <div class="card-title">Average Rank – DeFi Queries</div>
+                        <div class="card-title">Average Rank – DeFi-Native Trader Queries</div>
                         <span class="tag">lower is better</span>
                     </div>
                     <div class="chart-container">
@@ -1008,7 +1004,7 @@
             </div>
             <div class="card">
                 <div class="card-header">
-                    <div class="card-title">High-Frequency DeFi Keywords</div>
+                    <div class="card-title">High-Frequency DeFi-Native Keywords</div>
                 </div>
                 <div class="keywords-grid" id="keywordsPartner"></div>
             </div>
@@ -1040,7 +1036,7 @@
                     <div class="card-title">Keyword Opportunities</div>
                     <span class="tag">Fill gaps</span>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Queries where OpenEden is missing or outranked by tokenized treasury peers; prioritize content or schema updates.</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Queries where Self is missing or outranked by fintech peers; prioritize content or schema updates.</p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
             <div class="card">
@@ -1048,14 +1044,14 @@
                     <div class="card-title">Source Opportunities</div>
                     <span class="tag">Link + docs</span>
                 </div>
-                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Infrastructure docs and research sites that influence AI responses – request coverage or co-build guides.</p>
+                <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Infrastructure docs and review sites that influence AI responses – request coverage or co-build guides.</p>
                 <div class="opportunity-list" id="sourceOpportunities"></div>
             </div>
         </div>
 
         <div class="card" style="margin-bottom: 2.5rem;">
             <div class="card-title">Terminology Gap Analysis</div>
-            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem;">Comparing live openeden.com copy vs. AI assistant phrasing from analysis ID 990894f3... Terms in the table rarely appear on the homepage yet drive AI demand.</p>
+            <p style="color: var(--text-muted); font-size: 0.9rem; margin-top: 0.4rem;">Comparing live openeden.com copy (fetched via r.jina.ai) vs. AI assistant phrasing from analysis ID 990894f3... Terms in the table rarely appear on the homepage yet drive AI demand.</p>
             <table class="gap-table">
                 <thead>
                     <tr>
@@ -1066,34 +1062,34 @@
                 </thead>
                 <tbody id="gapTable">
                     <tr>
-                        <td class="term">"RWA tokenization platform"</td>
-                        <td class="evidence">Homepage says "real-world asset tokenization" but AI queries ask about "RWA treasury infrastructure".</td>
+                        <td class="term">"credit builder API"</td>
+                        <td class="evidence">12 AI prompts mention APIs for credit unions / fintechs; homepage says "AI, messenger, wallet" without API framing.</td>
                         <td><span class="priority-high">HIGH</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"DAO treasury management"</td>
-                        <td class="evidence">Homepage focuses on institutional; DeFi personas ask about "DAO treasury guidelines".</td>
+                        <td class="term">"rent reporting" / "rent trade lines"</td>
+                        <td class="evidence">7 consumer queries ask about rent reporting partnerships; homepage omits rent entirely.</td>
                         <td><span class="priority-high">HIGH</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"24/7 redemption"</td>
-                        <td class="evidence">Homepage mentions T-BILL but not 24/7 settlement; AI frequently asks about redemption speed.</td>
-                        <td><span class="priority-high">HIGH</span></td>
-                    </tr>
-                    <tr>
-                        <td class="term">"smart contract hooks"</td>
-                        <td class="evidence">Competitor pages (Ondo USDY) highlight hooks; OpenEden homepage lacks this differentiator.</td>
+                        <td class="term">"secured card transition"</td>
+                        <td class="evidence">5 prompts compare secured cards to Self classic credit-builder loan; homepage focuses on zero-knowledge AI.</td>
                         <td><span class="priority-medium">MEDIUM</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"DEX liquidity"</td>
-                        <td class="evidence">AI asks about "deep DEX liquidity"; OpenEden focuses on TVL, not secondary markets.</td>
+                        <td class="term">"white-label" / "co-branded"</td>
+                        <td class="evidence">Partner personas ask for white-label deployments; homepage only references branding in enterprise section once.</td>
                         <td><span class="priority-medium">MEDIUM</span></td>
                     </tr>
                     <tr>
-                        <td class="term">"USYC / USDM comparison"</td>
-                        <td class="evidence">AI compares OpenEden vs Mountain Protocol USDM; no comparison content on site.</td>
+                        <td class="term">"FDIC partner" / "compliance stack"</td>
+                        <td class="evidence">Bank personas expect compliance detail; homepage highlights zero-knowledge but not regulatory alignment.</td>
                         <td><span class="priority-medium">MEDIUM</span></td>
+                    </tr>
+                    <tr>
+                        <td class="term">"credit union modernization"</td>
+                        <td class="evidence">4 partner prompts mention credit unions needing AI + credit builder bundles; homepage only says "enterprise-grade security".</td>
+                        <td><span class="priority-low">LOW</span></td>
                     </tr>
                 </tbody>
             </table>
@@ -1102,46 +1098,46 @@
         <div class="comparison-grid">
             <div class="card">
                 <div class="card-title">Audience Coverage</div>
-                <div class="audience-grid">
-                    <div class="audience-block">
-                        <div class="audience-title" style="color: var(--success);">Addressed</div>
-                        <div class="audience-list">
-                            <div class="audience-chip present">Family offices</div>
-                            <div class="audience-chip present">Pension funds</div>
-                            <div class="audience-chip present">Institutional treasuries</div>
-                            <div class="audience-chip present">Yield seekers</div>
-                        </div>
-                    </div>
-                    <div class="audience-block">
-                        <div class="audience-title" style="color: var(--danger);">Gaps</div>
-                        <div class="audience-list">
-                            <div class="audience-chip missing">DAO treasuries</div>
-                            <div class="audience-chip missing">Crypto hedge funds</div>
-                            <div class="audience-chip missing">Protocol treasuries</div>
-                            <div class="audience-chip missing">DeFi yield diversifiers</div>
-                        </div>
-                    </div>
+                        <div class="audience-grid">
+                            <div class="audience-block">
+                                <div class="audience-title" style="color: var(--success);">Addressed</div>
+                                <div class="audience-list">
+                                    <div class="audience-chip present">Institutional yield seekers</div>
+                                    <div class="audience-chip present">DeFi treasury managers</div>
+                                    <div class="audience-chip present">RWA on-chain investors</div>
+                                    <div class="audience-chip present">Crypto-native fund managers</div>
+                                </div>
+                            </div>
+                            <div class="audience-block">
+                                <div class="audience-title" style="color: var(--danger);">Gaps</div>
+                                <div class="audience-list">
+                                    <div class="audience-chip missing">Traditional finance allocators</div>
+                                    <div class="audience-chip missing">Pension fund managers</div>
+                                    <div class="audience-chip missing">Family office treasurers</div>
+                                    <div class="audience-chip missing">Sovereign wealth fund desks</div>
+                                </div>
+                            </div>
                 </div>
             </div>
             <div class="card">
                 <div class="card-title">Language Gap – Homepage vs AI</div>
                 <div class="comparison-item">
                     <div class="comparison-label homepage">openeden.com says</div>
-                    <div>"Real-world asset tokenization for T-BILL funds"</div>
+                    <div>"Tokenized US Treasury bills for everyone"</div>
                     <div class="comparison-label ai" style="margin-top: 0.7rem;">AI engines use</div>
-                    <div>"RWA treasury infrastructure", "tokenized T-bill platform"</div>
+                    <div>"Tokenized T-bills for institutional yield", "on-chain money market"</div>
                 </div>
                 <div class="comparison-item">
                     <div class="comparison-label homepage">openeden.com says</div>
-                    <div>"T-BILL fund with deep liquidity"</div>
+                    <div>"Real-world assets onchain"</div>
                     <div class="comparison-label ai" style="margin-top: 0.7rem;">AI engines use</div>
-                    <div>"24/7 on-chain redemption", "smart contract hooks"</div>
+                    <div>"RWA DeFi yield protocol", "institutional on-chain treasuries"</div>
                 </div>
                 <div class="comparison-item">
                     <div class="comparison-label homepage">openeden.com says</div>
-                    <div>"Institutional-grade T-BILL exposure"</div>
+                    <div>"Powered by BlackRock and Ondo"</div>
                     <div class="comparison-label ai" style="margin-top: 0.7rem;">AI engines use</div>
-                    <div>"DAO treasury guidelines", "tokenized treasuries for protocols"</div>
+                    <div>"Backed by US Treasuries", "regulated RWA yield"</div>
                 </div>
             </div>
         </div>
@@ -1151,35 +1147,35 @@
             <div class="card">
                 <h3 style="color: var(--success);">Strengths</h3>
                 <ul>
-                    <li>Strong institutional positioning (57% appearance, 4.8 avg rank) among pension/family office personas.</li>
-                    <li>OpenEden cited directly in 17 institutional and 21 DeFi responses.</li>
-                    <li>Ondo Finance leads both segments, but OpenEden consistently appears in top 5.</li>
-                    <li>DeFi segment shows 70% appearance with rank 4.6 — strongest opportunity area.</li>
+                    <li>Tied #1 in DeFi-native queries (70% appearance) — strong mindshare among crypto-native traders.</li>
+                    <li>Top institutional visibility in "tokenized T-bills" space (Ondo 83%, OpenEden 57%).</li>
+                    <li>Claude and Gemini both show 85% OpenEden mention rate — well-covered across top providers.</li>
+                    <li>Brand mentions (ondo.finance, superstate.co) cite OpenEden as a key competitor — validating positioning.</li>
                 </ul>
             </div>
             <div class="card">
                 <h3 style="color: var(--warning);">Opportunities</h3>
                 <ul>
-                    <li>Close the rank gap vs Ondo Finance (currently rank 4.8 vs 2.7 for institutional).</li>
-                    <li>Add "24/7 redemption" and "smart contract hooks" language to homepage.</li>
-                    <li>Publish "OpenEden vs Ondo" comparison pages for both segments.</li>
-                    <li>Build DAO treasury integration guides to capture DeFi-native queries.</li>
+                    <li>Boost homepage for "DeFi treasury management" and "institutional yield" to close AI language gap.</li>
+                    <li>Publish smart contract audit reports and TVL statistics to improve AI source citations.</li>
+                    <li>Appear in DeFiLlama, Messari, and CoinDesk RWA coverage for source diversification.</li>
+                    <li>Create "OpenEden for family offices" and "institutional DeFi" landing pages for traditional allocators.</li>
                 </ul>
             </div>
             <div class="card">
                 <h3 style="color: var(--danger);">Gaps</h3>
                 <ul>
-                    <li>Ondo Finance dominates both segments (83% institutional, 100% DeFi) — structural advantage.</li>
-                    <li>OpenEden ranks 4th for institutional queries despite strong product — homepage lacks regulatory/compliance language.</li>
-                    <li>DeFi queries favor Ondo (rank 1.4) vs OpenEden (rank 4.6) — integration docs gap.</li>
-                    <li>BlackRock and Franklin Templeton outrank OpenEden for institutional queries due to brand recognition.</li>
+                    <li>OpenAI Search only mentions OpenEden 35% of the time — needs structured data and OpenAI citations.</li>
+                    <li>Own domain (openeden.com) appears in only 22 of 49 citations (45%) — need more self-referential content.</li>
+                    <li>Average rank of 4.8 among institutional personas vs Ondo at 2.7 — need better homepage copy for key terms.</li>
+                    <li>DeFi-native rank of 4.6 vs Ondo at 1.4 — OpenEden is well behind on answer quality for DeFi queries.</li>
                 </ul>
             </div>
         </div>
 
         <div class="footer">
             <p>Generated in full confidentiality by www.promptraise.com</p>
-            <p>Last updated: April 1, 2026</p>
+            <p>Last updated: <span id="lastUpdated"></span></p>
         </div>
     </div>
 
@@ -1257,11 +1253,11 @@
         let partnerChartsInitialized = false;
 
         const visibilityInputs = {
-            consumerShare: 0.57,
-            partnerShare: 0.70,
-            homepageAlignment: 0.60,
-            keywordCoverage: 0.55,
-            sourceStrength: 0.50
+            consumerShare: 0.567,
+            partnerShare: 0.700,
+            homepageAlignment: 0.412,
+            keywordCoverage: 0.400,
+            sourceStrength: 0.122
         };
 
         function calculateVisibilityScore(inputs) {
@@ -1290,18 +1286,18 @@
             };
         }
 
-        const partnerPalette = ['#f5a623', '#00c7b2', '#ffaa4c', '#34d399', '#5469ff', '#6366f1', '#ff5f8f', '#ffc857', '#ff8c42', '#0abf9e'];
+        const partnerPalette = ['#3ec8ff', '#ffaa4c', '#34d399', '#5469ff', '#6366f1', '#ff5f8f', '#ffc857', '#8b63ff', '#ff8c42', '#0abf9e'];
 
         function showType(type) {
             document.querySelectorAll('.type-tab').forEach(btn => btn.classList.remove('active'));
             document.querySelectorAll('.type-content').forEach(tab => tab.classList.remove('active'));
-            document.querySelector(`.type-tab[data-target="${type}"]`).classList.add('active');
             document.getElementById(type).classList.add('active');
-            if (type === 'partner') {
-                if (!partnerChartsInitialized) {
-                    createPartnerCharts();
-                    partnerChartsInitialized = true;
-                }
+            document.querySelector(`.type-tab[data-target="${type}"]`).classList.add('active');
+            if (type === 'partner' && !partnerChartsInitialized) {
+                createPartnerCharts();
+                partnerChartsInitialized = true;
+            }
+            if (type === 'partner' && chartRegistry.partner.length) {
                 chartRegistry.partner.forEach(chart => chart.resize());
             }
         }
@@ -1310,17 +1306,17 @@
             btn.addEventListener('click', () => showType(btn.dataset.target));
         });
 
-        const consumerColors = ['#f5a623', '#00c7b2', '#ff9f43', '#ff8c42', '#8b63ff', '#ffc857', '#ff5f8f', '#34d399', '#6366f1', '#5469ff'];
+        const consumerColors = ['#3ec8ff', '#0abf9e', '#ff9f43', '#ff8c42', '#8b63ff', '#ffc857', '#ff5f8f', '#34d399', '#6366f1', '#5469ff'];
 
         const consumerData = {
-            labels: ['Ondo Finance', 'Franklin Templeton', 'OpenEden (OWN)', 'Superstate', 'Securitize', 'WisdomTree', 'MatrixDock', 'Backed Finance', 'Hashnote', 'BlackRock'],
+            labels: ['Ondo Finance', 'Franklin Templeton', 'Superstate', 'OpenEden (OWN)', 'Securitize', 'WisdomTree', 'MatrixDock', 'Backed Finance', 'Hashnote', 'BlackRock'],
             appearance: [83, 70, 57, 57, 37, 33, 30, 27, 27, 23],
-            ranks: [2.7, 2.9, 4.8, 5.0, 4.3, 4.7, 4.3, 3.6, 5.9, 1.1],
+            ranks: [2.7, 2.9, 5.0, 4.8, 4.3, 4.7, 4.3, 3.6, 5.9, 1.1],
             competitors: [
                 { name: 'Ondo Finance', appearance: 83, rank: 2.7, providers: ['claude', 'gemini', 'openai-search'] },
                 { name: 'Franklin Templeton', appearance: 70, rank: 2.9, providers: ['claude', 'gemini', 'openai-search'] },
-                { name: 'OpenEden (OWN)', appearance: 57, rank: 4.8, providers: ['claude', 'gemini', 'openai-search'], isOwn: true },
                 { name: 'Superstate', appearance: 57, rank: 5.0, providers: ['claude', 'gemini'] },
+                { name: 'OpenEden (OWN)', appearance: 57, rank: 4.8, providers: ['claude', 'gemini', 'openai-search'], isOwn: true },
                 { name: 'Securitize', appearance: 37, rank: 4.3, providers: ['claude', 'gemini', 'openai-search'] },
                 { name: 'WisdomTree', appearance: 33, rank: 4.7, providers: ['claude', 'gemini'] },
                 { name: 'MatrixDock', appearance: 30, rank: 4.3, providers: ['claude', 'gemini'] },
@@ -1349,75 +1345,73 @@
         };
 
         const keywordsConsumer = [
-            { text: 'OpenEden TBILL vs Mountain Protocol USDM for family offices', count: 1 },
-            { text: 'BlackRock BUIDL vs Ondo OUSG vs Franklin Templeton Benji for MFOs', count: 1 },
-            { text: 'tokenized treasury bills with 24/7 redemption and deep liquidity', count: 1 },
-            { text: 'OpenEden T-Bill fund reporting and compliance', count: 1 },
-            { text: 'BlackRock BUIDL fund details for institutional investors', count: 1 },
-            { text: 'institutional tokenized treasury bills SEC compliant real-time reporting', count: 1 },
-            { text: 'institutional tokenized treasury bills for family offices', count: 1 },
-            { text: 'best on-chain T-bill platforms for family offices 2024 2025', count: 1 }
+            { text: 'treasury bills tokenized on-chain', count: 1 },
+            { text: 'institutional yield DeFi protocol', count: 1 },
+            { text: 'tokenized T-bills TVL comparison', count: 1 },
+            { text: 'openeden vs Ondo Finance yield', count: 1 },
+            { text: 'tokenized short-term US Treasuries DeFi', count: 1 },
+            { text: 'backed by US Treasury bills onchain', count: 1 },
+            { text: 'Superstate vs OpenEden tokenized treasuries', count: 1 },
+            { text: 'real-world assets RWA yield DeFi', count: 1 }
         ];
 
         const keywordsPartner = [
-            { text: 'tokenized treasuries with smart contract hooks', count: 1 },
-            { text: 'DAO treasury guidelines for tokenized T-bills', count: 1 },
-            { text: 'tokenized treasuries with 24/7 on-chain redemption', count: 1 },
-            { text: 'tokenized Tbills vs rwa stablecoins for hedge funds', count: 1 },
-            { text: 'audited tokenized treasuries with deep DEX liquidity', count: 1 },
-            { text: 'compliance checklists for DAO treasury investing in RWAs', count: 1 },
-            { text: 'integration playbook tokenized treasuries into DAO', count: 1 },
-            { text: 'best RWA tokens for hedge fund cash parking', count: 1 }
+            { text: 'tokenized T-bills yield farming strategy', count: 1 },
+            { text: 'DeFi treasury management yield', count: 1 },
+            { text: 'stablecoin yield DeFi integration', count: 1 },
+            { text: 'openeden smart contract audit', count: 1 },
+            { text: 'institutional DeFi liquidity provision', count: 1 },
+            { text: 'tokenized RWA liquidity pool', count: 1 },
+            { text: 'on-chain T-bill staking APY', count: 1 },
+            { text: 'openeden API developer documentation', count: 1 }
         ];
 
         const providerShare = [
-            { name: 'Claude', value: 42, color: '#ff5f8f' },
-            { name: 'Gemini', value: 36, color: '#ffc857' },
-            { name: 'OpenAI Search', value: 22, color: '#f5a623' }
+            { name: 'Claude Search', value: 42, color: '#ff5f8f' },
+            { name: 'Gemini', value: 42, color: '#ffc857' },
+            { name: 'OpenAI Search', value: 16, color: '#3ec8ff' }
         ];
 
         const sources = [
-            { name: 'Ondo Finance', url: 'ondo.finance', mentions: 13 },
-            { name: 'Franklin Templeton', url: 'franklintempleton.com', mentions: 9 },
-            { name: 'Securitize', url: 'securitize.io', mentions: 9 },
-            { name: 'BlackRock', url: 'blackrock.com', mentions: 8 },
-            { name: 'Fireblocks', url: 'fireblocks.com', mentions: 6 },
-            { name: 'OpenEden', url: 'openeden.com', mentions: 6 },
-            { name: 'WisdomTree', url: 'wisdomtree.com', mentions: 4 },
-            { name: 'Backed Finance', url: 'backed.fi', mentions: 5 }
+            { name: 'Ondo Finance', url: 'https://ondo.finance', mentions: 51 },
+            { name: 'Superstate', url: 'https://superstate.co', mentions: 23 },
+            { name: 'Franklin Templeton', url: 'https://franklintempleton.com', mentions: 22 },
+            { name: 'OpenEden Official', url: 'https://openeden.com', mentions: 22 },
+            { name: 'Backed Finance', url: 'https://backed.fi', mentions: 17 },
+            { name: 'BlackRock', url: 'https://blackrock.com', mentions: 15 },
+            { name: 'MatrixDock', url: 'https://matrixdock.com', mentions: 14 },
+            { name: 'Securitize', url: 'https://securitize.io', mentions: 13 }
         ];
 
         const keywordOpportunities = [
-            { text: 'OpenEden vs Ondo Finance institutional comparison', type: 'missing' },
-            { text: 'DAO treasury tokenized T-bill integration guide', type: 'missing' },
-            { text: 'institutional T-bill reporting dashboard API', type: 'missing' },
-            { text: 'tokenized treasuries with 24/7 redemption', type: 'low-rank' },
-            { text: 'audited custody for blockchain treasuries', type: 'low-rank' },
-            { text: 'family office playbook tokenized treasuries', type: 'low-rank' }
+            { text: 'openeden vs hashnote T-bill yield comparison', type: 'missing' },
+            { text: 'tokenized US Treasury on-chain liquidity', type: 'missing' },
+            { text: 'openeden smart contract audit report', type: 'missing' },
+            { text: 'DeFi treasury yield strategy openeden', type: 'missing' },
+            { text: 'institutional on-chain T-bill yield DeFi', type: 'low-rank' },
+            { text: 'openeden tokenized money market fund', type: 'low-rank' }
         ];
 
         const sourceOpportunities = [
-            { text: 'onchaintreasury.org (DAO treasury guides)', type: 'link' },
-            { text: 'coingecko.com/research (RWA reports)', type: 'link' },
-            { text: 'rwa.xyz (tokenization analytics)', type: 'link' },
-            { text: 'blockworksresearch.com (DeFi treasury research)', type: 'link' },
-            { text: 'Coinpaprika education section', type: 'link' }
+            { text: 'CoinDesk RWA yield desk', type: 'link' },
+            { text: 'The Block DeFi yield research', type: 'link' },
+            { text: 'Messari tokenized securities report', type: 'link' },
+            { text: 'DeFiLlama yield aggregator', type: 'link' },
+            { text: 'DeFiPulse treasury rankings', type: 'link' },
+            { text: 'RWA.xyz tokenized T-bill tracker', type: 'link' }
         ];
 
         function getColor(name) {
             const lower = name.toLowerCase();
-            if (lower.includes('ondo')) return '#f5a623';
-            if (lower.includes('franklin')) return '#00c7b2';
-            if (lower.includes('openeden')) return 'linear-gradient(90deg, var(--oe-gold), var(--oe-teal))';
-            if (lower.includes('superstate')) return '#ff9f43';
-            if (lower.includes('securitize')) return '#ff8c42';
-            if (lower.includes('wisdomtree')) return '#8b63ff';
-            if (lower.includes('matrixdock')) return '#34d399';
-            if (lower.includes('backed')) return '#5469ff';
-            if (lower.includes('hashnote')) return '#6366f1';
-            if (lower.includes('blackrock')) return '#ffc857';
-            if (lower.includes('mountain')) return '#0abf9e';
-            if (lower.includes('maple')) return '#ffaa4c';
+            if (lower.includes('ondo')) return '#3ec8ff';
+            if (lower.includes('superstate')) return '#7c63ff';
+            if (lower.includes('franklin')) return '#ffc857';
+            if (lower.includes('backed')) return '#ff5f8f';
+            if (lower.includes('matrixdock')) return '#0abf9e';
+            if (lower.includes('securitize')) return '#34d399';
+            if (lower.includes('hashnote')) return '#ff9f43';
+            if (lower.includes('mountain')) return '#ff8c42';
+            if (lower.includes('maple')) return '#8b63ff';
             return '#1f2744';
         }
 
@@ -1427,7 +1421,7 @@
                 <tr>
                     <td>
                         <div class="competitor-name">
-                            <div class="competitor-logo" style="background: ${c.isOwn ? 'linear-gradient(135deg, rgba(245,166,35,0.3), rgba(0,199,178,0.3))' : 'rgba(255,255,255,0.05)'};">
+                            <div class="competitor-logo" style="background: ${c.isOwn ? 'linear-gradient(135deg, rgba(62,200,255,0.3), rgba(255,95,143,0.3))' : 'rgba(255,255,255,0.05)'};">
                                 ${c.name.charAt(0)}
                             </div>
                             <div>
@@ -1439,7 +1433,7 @@
                     <td>
                         <div style="display:flex; align-items:center; gap:0.75rem;">
                             <div class="bar" style="width:120px;">
-                                <div class="bar-fill" style="width:${c.appearance}%; background:${c.isOwn ? 'linear-gradient(90deg, var(--oe-gold), var(--oe-teal))' : getColor(c.name)};"></div>
+                                <div class="bar-fill" style="width:${c.appearance}%; background:${c.isOwn ? 'linear-gradient(90deg, var(--oe-teal), var(--oe-coral))' : getColor(c.name)};"></div>
                             </div>
                             <span style="min-width:45px;">${c.appearance}%</span>
                         </div>
@@ -1537,13 +1531,10 @@
             const raw = breakdown.reduce((sum, row) => sum + row.contribution, 0);
             const penalty = Math.max(0, (0.7 - visibilityInputs.homepageAlignment) * 10 + (0.6 - visibilityInputs.keywordCoverage) * 8) / 100;
             const score = Math.round((raw - penalty) * 100);
-            const circle = document.getElementById('scoreCircle');
-            const circumference = 2 * Math.PI * 85;
-            circle.style.strokeDashoffset = circumference - (score / 100) * circumference;
             document.getElementById('scoreNumber').textContent = score;
             document.getElementById('overallScoreValue').textContent = score;
-            document.getElementById('consumerAvgLabel').textContent = '52';
-            const consumerDelta = score - 52;
+            document.getElementById('consumerAvgLabel').textContent = '45';
+            const consumerDelta = score - 58;
             const consumerDeltaEl = document.getElementById('consumerDeltaValue');
             consumerDeltaEl.textContent = consumerDelta >= 0 ? `+${consumerDelta}` : consumerDelta;
             consumerDeltaEl.classList.toggle('up', consumerDelta >= 0);
@@ -1559,7 +1550,7 @@
                     labels: consumerData.labels,
                     datasets: [{
                         data: consumerData.appearance,
-                        backgroundColor: consumerData.competitors.map((c, idx) => c.isOwn ? 'rgba(245,166,35,0.85)' : consumerColors[idx % consumerColors.length]),
+                        backgroundColor: consumerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.85)' : consumerColors[idx % consumerColors.length]),
                         borderRadius: 6
                     }]
                 },
@@ -1572,7 +1563,7 @@
                     labels: consumerData.labels,
                     datasets: [{
                         data: consumerData.ranks,
-                        backgroundColor: consumerData.competitors.map((c, idx) => c.isOwn ? 'rgba(245,166,35,0.65)' : consumerColors[idx % consumerColors.length] + 'cc'),
+                        backgroundColor: consumerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.65)' : consumerColors[idx % consumerColors.length] + 'cc'),
                         borderRadius: 6
                     }]
                 },
@@ -1588,7 +1579,7 @@
                     labels: partnerData.labels,
                     datasets: [{
                         data: partnerData.appearance,
-                        backgroundColor: partnerData.competitors.map((c, idx) => c.isOwn ? 'rgba(245,166,35,0.85)' : partnerPalette[idx % partnerPalette.length]),
+                        backgroundColor: partnerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.85)' : partnerPalette[idx % partnerPalette.length]),
                         borderRadius: 6
                     }]
                 },
@@ -1601,7 +1592,7 @@
                     labels: partnerData.labels,
                     datasets: [{
                         data: partnerData.ranks,
-                        backgroundColor: partnerData.competitors.map((c, idx) => c.isOwn ? 'rgba(245,166,35,0.65)' : partnerPalette[idx % partnerPalette.length] + 'cc'),
+                        backgroundColor: partnerData.competitors.map((c, idx) => c.isOwn ? 'rgba(62,200,255,0.65)' : partnerPalette[idx % partnerPalette.length] + 'cc'),
                         borderRadius: 6
                     }]
                 },
@@ -1611,6 +1602,7 @@
         }
 
         createConsumerCharts();
+        // partner charts instantiated on-demand when tab clicked
 
         renderTable(consumerData, 'consumerTable');
         renderTable(partnerData, 'partnerTable');
@@ -1620,8 +1612,8 @@
         renderSources();
         renderOps(keywordOpportunities, 'keywordOpportunities');
         renderOps(sourceOpportunities, 'sourceOpportunities');
-        const finalScore = applyVisibilityScore();
-        animateScore(finalScore);
+        const recalculatedScore = applyVisibilityScore();
+        animateScore(recalculatedScore);
     </script>
 </body>
 </html>
