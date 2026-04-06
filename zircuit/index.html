@@ -835,8 +835,8 @@
             <div class="hero-details">
                 <div class="score-status">
                     <span>⚠️</span>
-                    <span>Partial AI visibility — Zircuit cited in 36% of DeFi responses, 27% of conservative</span>
-                    <span style="color: var(--text-muted); font-weight: 500;">Ranked #1 in 50% of responses where cited</span>
+                    <span>Partial AI visibility — Zircuit cited in 37% of DeFi queries, 27% of conservative wealth queries</span>
+                    <span style="color: var(--text-muted); font-weight: 500;">Ranked #1 in 50% of responses when cited</span>
                 </div>
                 <div class="score-comparison">
                     <div class="comparison-item">
@@ -1223,9 +1223,10 @@
             };
             const raw = Object.keys(inputs).reduce((acc, key) => acc + inputs[key] * weights[key], 0);
             const penalty = (inputs.consumerShare > 0 || inputs.partnerShare > 0)
-                ? Math.max(0, (0.7 - inputs.homepageAlignment) * 10 + (0.6 - inputs.keywordCoverage) * 8) / 100
+                ? Math.max(0, (1 - inputs.homepageAlignment) * 10 + (1 - inputs.keywordCoverage) * 8) / 100
                 : 0;
-            return Math.round((raw - penalty) * 100);
+            const score = Math.round((raw - penalty) * 100);
+            return score < 0 ? 0 : score;
         }
 
         function buildChartOptions(overrides = {}) {
@@ -1272,20 +1273,20 @@
                 { name: 'Lido Finance', appearance: 33, rank: 3.5, providers: ['claude', 'gemini', 'openai'] },
                 { name: 'Rocket Pool', appearance: 33, rank: 4.6, providers: ['claude', 'gemini', 'openai'] },
                 { name: 'Coinbase', appearance: 30, rank: 1.4, providers: ['claude', 'gpt'] },
-                { name: 'Zircuit Finance', appearance: 27, rank: 4.6, providers: ['claude', 'gemini', 'openai'], isOwn: true }
+                { name: 'Zircuit (L2 + Finance)', appearance: 27, rank: 4.6, providers: ['claude', 'gemini', 'openai'], isOwn: true }
             ]
         };
 
         const partnerData = {
-            labels: ['EigenLayer', 'Zircuit', 'Aave', 'Renzo Protocol', 'Zircuit Finance'],
+            labels: ['EigenLayer', 'Zircuit (L2 + Finance)', 'Aave', 'Renzo Protocol', 'Pendle'],
             appearance: [37, 37, 27, 27, 23],
-            ranks: [3.1, 2.0, 1.6, 2.6, 1.4],
+            ranks: [3.1, 1.9, 1.6, 2.6, 5.6],
             competitors: [
                 { name: 'EigenLayer', appearance: 37, rank: 3.1, providers: ['claude', 'gemini', 'openai'] },
-                { name: 'Zircuit', appearance: 37, rank: 2.0, providers: ['claude', 'gemini', 'openai'] },
+                { name: 'Zircuit (L2 + Finance)', appearance: 37, rank: 1.9, providers: ['claude', 'gemini', 'openai'], isOwn: true },
                 { name: 'Aave', appearance: 27, rank: 1.6, providers: ['claude', 'gemini', 'openai'] },
                 { name: 'Renzo Protocol', appearance: 27, rank: 2.6, providers: ['claude', 'gemini'] },
-                { name: 'Zircuit Finance', appearance: 23, rank: 1.4, providers: ['claude', 'gemini', 'openai'], isOwn: true }
+                { name: 'Pendle Finance', appearance: 23, rank: 5.6, providers: ['claude', 'gemini'] }
             ]
         };
 
@@ -1467,22 +1468,16 @@
                 keywordCoverage: 0.15,
                 sourceStrength: 0.1
             };
-            const breakdown = Object.keys(visibilityInputs).map(key => ({
-                metric: key.replace(/([A-Z])/g, ' $1').replace(/^\w/, c => c.toUpperCase()),
-                input: visibilityInputs[key],
-                weight: weights[key],
-                contribution: visibilityInputs[key] * weights[key]
-            }));
-            const raw = breakdown.reduce((sum, row) => sum + row.contribution, 0);
+            const raw = Object.keys(visibilityInputs).reduce((acc, key) => acc + visibilityInputs[key] * weights[key], 0);
             const penalty = (visibilityInputs.consumerShare > 0 || visibilityInputs.partnerShare > 0)
-                ? Math.max(0, (0.7 - visibilityInputs.homepageAlignment) * 10 + (0.6 - visibilityInputs.keywordCoverage) * 8) / 100
+                ? Math.max(0, (1 - visibilityInputs.homepageAlignment) * 10 + (1 - visibilityInputs.keywordCoverage) * 8) / 100
                 : 0;
             const score = Math.round((raw - penalty) * 100);
-            document.getElementById('scoreNumber').textContent = score;
-            document.getElementById('overallScoreValue').textContent = score;
+            document.getElementById('scoreNumber').textContent = score < 0 ? 0 : score;
+            document.getElementById('overallScoreValue').textContent = score < 0 ? 0 : score;
             document.getElementById('consumerAvgLabel').textContent = '27';
             document.getElementById('partnerAvgValue').textContent = '37';
-            return score;
+            return score < 0 ? 0 : score;
         }
 
         function createConsumerCharts() {
