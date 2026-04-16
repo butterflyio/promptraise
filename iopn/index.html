@@ -848,7 +848,7 @@
                 </div>
                 <div style="background: rgba(255,255,255,0.03); border: 1px solid var(--border); border-radius: 1rem; padding: 1.2rem;">
                     <p style="color: var(--text-muted); font-size: 0.85rem;">Analysis summary:</p>
-                    <p style="font-size: 0.95rem;">IOPn has partial AI visibility in enterprise/RWA queries (13%, rank #1 when mentioned) but zero visibility in blockchain infrastructure queries (0%). Securitize (40%) dominates RWA tokenization while Alchemy (63%) leads infrastructure. IOPn's "Internet of People" positioning and OPN Chain sovereign infrastructure show promise but compete against established players like Polymesh and Polygon for identity, and Alchemy/QuickNode for developer tooling.</p>
+                    <p style="font-size: 0.95rem;">IOPn has partial AI visibility in ME Enterprise queries (13%, 4/30 responses, rank #1 when mentioned) but zero visibility in Blockchain Developer queries (0%, 0/30 responses). Securitize (40%) dominates ME Enterprise RWA tokenization while Alchemy (63%) leads infrastructure. IOPn's "Internet of People" positioning and OPN Chain sovereign infrastructure show promise but compete against established players like Polymesh for identity and Alchemy/QuickNode for developer tooling.</p>
                 </div>
             </div>
         </div>
@@ -861,11 +861,11 @@
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value">166</div>
-                <div class="sub">Across AI providers</div>
+                <div class="value">169</div>
+                <div class="sub">95 ME Enterprises | 74 Blockchain Devs</div>
             </div>
             <div class="stat-card">
-                <div class="label">Enterprise/RWA Visibility</div>
+                <div class="label">ME Enterprises Visibility</div>
                 <div class="value highlight">13%</div>
                 <div class="sub">4/30 responses — Securitize leads at 40%</div>
             </div>
@@ -1202,7 +1202,7 @@
         let partnerChartsInitialized = false;
 
         const visibilityInputs = {
-            consumerShare: 0.065,
+            consumerShare: 0.133,
             partnerShare: 0,
             homepageAlignment: 0.5,
             keywordCoverage: 0.4,
@@ -1287,19 +1287,19 @@
         };
 
         const keywordsConsumer = [
-            { text: 'IOPn OPN Chain vs Cosmos SDK for sovereign blockchain', count: 3 },
-            { text: 'NeoID digital identity vs Polygon ID for verifiable credentials', count: 3 },
-            { text: 'best blockchain for government RWA tokenization with regulatory compliance', count: 3 },
-            { text: 'IOPn vs Polygon for enterprise blockchain deployment in Middle East', count: 3 },
-            { text: 'OPN Chain EVM compatibility for migrating Ethereum smart contracts', count: 3 }
+            { text: 'IOPn RWA tokenization framework', count: 1 },
+            { text: 'OPN Chain EVM compatibility', count: 1 },
+            { text: 'NeoID digital identity vs Polygon ID', count: 1 },
+            { text: 'best blockchain for government RWA tokenization UAE', count: 1 },
+            { text: 'IOPn OPN Chain vs Cosmos SDK sovereign blockchain', count: 1 }
         ];
 
         const keywordsPartner = [
-            { text: 'best blockchain infrastructure provider for launching DeFi protocol in 2025', count: 3 },
-            { text: 'self-custody wallet SDK for Web3 DApp with gas fee optimization', count: 3 },
-            { text: 'best indexer and subgraph infrastructure for DeFi protocol analytics', count: 3 },
-            { text: 'blockchain RPC provider with lowest latency for DeFi trading on L2', count: 3 },
-            { text: 'gasless transaction API for Web3 DApp user experience', count: 3 }
+            { text: 'best blockchain infrastructure providers for DeFi 2025', count: 1 },
+            { text: 'lowest latency blockchain RPC provider for DeFi trading', count: 1 },
+            { text: 'best RPC providers for Arbitrum Optimism Base', count: 1 },
+            { text: 'Alchemy vs QuickNode vs Infura vs Ankr for Layer 2', count: 1 },
+            { text: 'best indexer and subgraph infrastructure for DeFi', count: 1 }
         ];
 
         const providerShare = [
@@ -1309,14 +1309,14 @@
         ];
 
         const sources = [
-            { name: 'Chainstack', url: 'https://chainstack.com', mentions: 5 },
             { name: 'QuickNode', url: 'https://www.quicknode.com', mentions: 4 },
             { name: 'Alchemy', url: 'https://www.alchemy.com', mentions: 4 },
             { name: 'Infura', url: 'https://infura.io', mentions: 4 },
             { name: 'Blockdaemon', url: 'https://www.blockdaemon.com', mentions: 4 },
             { name: 'Ankr', url: 'https://www.ankr.com', mentions: 4 },
-            { name: 'Securitize', url: 'https://securitize.io', mentions: 3 },
-            { name: 'Tokeny', url: 'https://tokeny.com', mentions: 2 }
+            { name: 'Polymath Network', url: 'https://polymath.network', mentions: 2 },
+            { name: 'Tokeny', url: 'https://tokeny.com', mentions: 2 },
+            { name: 'ConsenSys', url: 'https://consensys.net/quorum', mentions: 2 }
         ];
 
         const keywordOpportunities = [
