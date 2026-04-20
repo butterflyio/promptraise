@@ -739,6 +739,28 @@
             ]
         };
 
+        const summaryBullets = reportData.summaryBullets || [];
+        const providerShare = reportData.providerShare || [];
+        const sources = reportData.sources || [];
+        const keywordOpportunities = reportData.keywordOpportunities || [];
+        const sourceOpportunities = reportData.sourceOpportunities || [];
+        const segments = (reportData.segments || []).map(segment => ({
+            ...segment,
+            description: segment.description || '',
+            appearanceShare: segment.appearanceShare ?? 0,
+            avgRank: segment.avgRank ?? 0,
+            responseCount: segment.responseCount ?? 0,
+            leader: segment.leader || { name: 'N/A', share: 0 },
+            competitors: segment.competitors || [],
+            keywords: segment.keywords || [],
+            recommendations: {
+                content: segment.recommendations?.content || [],
+                sources: segment.recommendations?.sources || [],
+                quickWins: segment.recommendations?.quickWins || []
+            }
+        }));
+
+
         const slugify = (value) => value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
         const chartRegistry = {};
 
@@ -823,21 +845,21 @@
             document.getElementById('reportTitle').textContent = `${reportData.brand} AI Visibility Report`;
             document.getElementById('analysisId').textContent = reportData.analysisId;
             document.getElementById('reportMeta').textContent = `Site: ${reportData.site} | Analysis ID: ${reportData.analysisId}`;
-            const segmentNames = reportData.segments.map(segment => segment.name).join(' | ');
-            const responseCount = reportData.segments.reduce((acc, segment) => acc + segment.responseCount, 0);
+            const segmentNames = segments.map(segment => segment.name).join(' | ');
+            const responseCount = segments.reduce((acc, segment) => acc + segment.responseCount, 0);
             document.getElementById('segmentMeta').textContent = `Segments: ${segmentNames} | Responses analyzed: ${responseCount}`;
 
             const scoreStatus = document.getElementById('scoreStatus');
             scoreStatus.innerHTML = `<span>📊</span><span>${reportData.scoreLabel}</span><span style="color: var(--text-muted); font-weight: 500;">${reportData.scoreDelta}</span>`;
 
             const comparisonContainer = document.getElementById('scoreComparison');
-            comparisonContainer.innerHTML = reportData.segments.map(segment => {
+            comparisonContainer.innerHTML = segments.map(segment => {
                 const share = Math.round(segment.appearanceShare * 100);
                 return `<div class="comparison-item"><div class="value" style="color: var(--brand-primary);">${share}%</div><div class="label">${segment.name} share</div></div>`;
             }).join('');
 
             const summaryList = document.getElementById('summaryList');
-            summaryList.innerHTML = reportData.summaryBullets.map(item => `<li>${item}</li>`).join('');
+            summaryList.innerHTML = summaryBullets.map(item => `<li>${item}</li>`).join('');
             document.getElementById('gapAnalysis').textContent = reportData.gapAnalysis;
         }
 
@@ -846,14 +868,14 @@
                 {
                     label: 'Total Responses',
                     value: reportData.totals.responses,
-                    sub: `${reportData.segments.length} segments`
+                    sub: `${segments.length} segments`
                 },
                 {
                     label: 'Unique Competitors',
                     value: reportData.totals.competitors,
                     sub: 'Across AI providers'
                 },
-                ...reportData.segments.map(segment => ({
+                ...segments.map(segment => ({
                     label: `${segment.name} Share`,
                     value: `${Math.round(segment.appearanceShare * 100)}%`,
                     sub: `Avg rank ${segment.avgRank.toFixed(1)} | ${segment.leader.name} leads at ${Math.round(segment.leader.share * 100)}%`
@@ -874,7 +896,7 @@
             const tabsContainer = document.getElementById('segmentTabs');
             const sectionsContainer = document.getElementById('segmentSections');
 
-            reportData.segments.forEach((segment, index) => {
+            segments.forEach((segment, index) => {
                 const segmentId = segment.id || slugify(segment.name);
                 segment.id = segmentId;
 
@@ -1039,10 +1061,10 @@
             new Chart(canvas, {
                 type: 'doughnut',
                 data: {
-                    labels: reportData.providerShare.map(p => p.name),
+                    labels: providerShare.map(p => p.name),
                     datasets: [{
-                        data: reportData.providerShare.map(p => p.value),
-                        backgroundColor: reportData.providerShare.map(p => p.color),
+                        data: providerShare.map(p => p.value),
+                        backgroundColor: providerShare.map(p => p.color),
                         borderWidth: 0
                     }]
                 },
@@ -1053,7 +1075,7 @@
                     plugins: { legend: { display: false } }
                 }
             });
-            legend.innerHTML = reportData.providerShare.map(p => `
+            legend.innerHTML = providerShare.map(p => `
                 <div class="provider-legend-item">
                     <div class="color" style="background:${p.color};"></div>
                     <div class="name">${p.name}</div>
@@ -1064,7 +1086,7 @@
 
         function renderSources() {
             const container = document.getElementById('sourcesList');
-            container.innerHTML = reportData.sources.map(s => `
+            container.innerHTML = sources.map(s => `
                 <div class="source-item">
                     <div>
                         <div class="source-name">${s.name}</div>
@@ -1095,7 +1117,7 @@
         renderStats();
         renderSegments();
 
-        reportData.segments.forEach(segment => {
+        segments.forEach(segment => {
             renderCompetitorTable(segment);
             renderKeywords(segment);
             renderSegmentCharts(segment);
@@ -1103,8 +1125,8 @@
 
         renderProviderShare();
         renderSources();
-        renderOpportunities(reportData.keywordOpportunities, 'keywordOpportunities');
-        renderOpportunities(reportData.sourceOpportunities, 'sourceOpportunities');
+        renderOpportunities(keywordOpportunities, 'keywordOpportunities');
+        renderOpportunities(sourceOpportunities, 'sourceOpportunities');
         animateScore(reportData.score);
     </script>
 </body>
