@@ -21,22 +21,22 @@ This document outlines the development workflow, deployment process, and best pr
                            ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                      PREVIEW (STAGING)                      │
-│  Vercel Preview                                             │
-│  URL: https://promptraise-[hash].vercel.app                │
+│  Netlify Deploy Preview                                     │
+│  URL: https://<branch>--promptraise.netlify.app             │
 │  Branch: Any PR branch                                      │
-│  Purpose: Team review, QA testing                          │
-│  Auto-created: On every PR/commit                          │
+│  Purpose: Team review, QA testing                           │
+│  Auto-created: On every PR/commit                           │
 └─────────────────────────────────────────────────────────────┘
                            │
                            │ merge to main
                            ▼
 ┌─────────────────────────────────────────────────────────────┐
 │                      PRODUCTION                              │
-│  Vercel Production                                         │
+│  Netlify Production                                         │
 │  URL: audit.promptraise.com                                 │
-│  Branch: main                                              │
-│  Purpose: Live users                                       │
-│  Auto-deploy: On merge to main                            │
+│  Branch: main                                               │
+│  Purpose: Live users                                        │
+│  Auto-deploy: On merge to main                              │
 └─────────────────────────────────────────────────────────────┘
 ```
 
@@ -75,41 +75,41 @@ git push origin feature/my-new-feature
 # - Get approval
 # - Merge to main
 
-# 6. Vercel auto-deploys to production
+# 6. Netlify auto-deploys to production
 ```
 
 ---
 
-## 3. Vercel Setup
+## 3. Netlify Setup
 
 ### 3.1 Preview Deployments
 
-Vercel automatically creates preview deployments for every branch and PR.
+Netlify automatically creates deploy previews for every branch and PR.
 
 | Branch | Preview URL | Purpose |
 |--------|-------------|---------|
-| `feature/social-sharing` | `https://promptraise-[hash].vercel.app` | Testing new feature |
-| `bugfix/telegram` | `https://promptraise-[hash].vercel.app` | Testing bug fix |
-| `main` | `audit.promptraise.com` | Production |
+| `feature/social-sharing` | `https://feature-social-sharing--promptraise.netlify.app` | Testing new feature |
+| `bugfix/telegram` | `https://bugfix-telegram--promptraise.netlify.app` | Testing bug fix |
+| `main` | `https://audit.promptraise.com` | Production |
 
 ### 3.2 Environment Variables
 
 | Variable | Development | Preview | Production |
 |----------|-------------|---------|------------|
-| `NEXT_PUBLIC_SUPABASE_URL` | Local | Vercel | Vercel |
-| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Local | Vercel | Vercel |
-| `SUPABASE_SERVICE_ROLE_KEY` | Local | Vercel | Vercel |
-| `BOTSEE_API_KEY` | Local | Vercel | Vercel |
-| `TELEGRAM_BOT_TOKEN` | Local | Vercel | Vercel |
+| `NEXT_PUBLIC_SUPABASE_URL` | Local | Netlify | Netlify |
+| `NEXT_PUBLIC_SUPABASE_ANON_KEY` | Local | Netlify | Netlify |
+| `SUPABASE_SERVICE_ROLE_KEY` | Local | Netlify | Netlify |
+| `BOTSEE_API_KEY` | Local | Netlify | Netlify |
+| `TELEGRAM_BOT_TOKEN` | Local | Netlify | Netlify |
 
 ### 3.3 Adding Environment Variables
 
-1. Go to Vercel Dashboard → Project → Settings → Environment Variables
+1. Go to Netlify Dashboard → Site → Site settings → Environment variables
 2. Add each variable for:
    - [x] Production
-   - [x] Preview
+   - [x] Deploy Preview
    - [x] Development
-3. For new builds, Vercel auto-injects these values
+3. For new builds, Netlify auto-injects these values
 
 ---
 
@@ -151,9 +151,9 @@ If production breaks after merge:
 git revert HEAD
 git push origin main
 
-# Option 2: Vercel Dashboard
-# 1. Go to Vercel Dashboard → Deployments
-# 2. Find last working deployment
+# Option 2: Netlify Dashboard
+# 1. Go to Netlify Dashboard → Deploys
+# 2. Find last working deploy
 # 3. Click "..." → "Promote to Production"
 ```
 
@@ -173,7 +173,7 @@ git commit -m "Fix: Urgent production issue"
 git push origin hotfix/urgent-fix
 
 # 4. Review and merge immediately
-# Vercel auto-deploys to production
+# Netlify auto-deploys to production
 ```
 
 ---
@@ -183,14 +183,14 @@ git push origin hotfix/urgent-fix
 ### 6.1 Architecture
 
 ```
-Telegram Bot → Cloudflare Worker → Vercel API
+Telegram Bot → Cloudflare Worker → Netlify Functions API
               (Webhook URL)       (audit-promptraise)
 ```
 
 ### 6.2 Setup Steps
 
 1. Create Cloudflare Worker at `telegram.promptraise.com`
-2. Worker forwards to Vercel API endpoint
+2. Worker forwards to Netlify Functions endpoint
 3. Set Telegram webhook:
 ```bash
 curl -X POST "https://api.telegram.org/bot<BOT_TOKEN>/setWebhook" \
@@ -257,7 +257,7 @@ DELETE FROM audits WHERE created_at < NOW() - INTERVAL '90 days';
 
 | Issue | Solution |
 |-------|----------|
-| Preview not updating | Force redeploy in Vercel |
+| Preview not updating | Trigger a new Netlify deploy |
 | Supabase connection fails | Check environment variables |
 | BotSee error | Check API key, site limit |
 | Telegram not working | Verify webhook URL |
@@ -299,7 +299,7 @@ git log --oneline -5
 |----------|-----|
 | Production | https://audit.promptraise.com |
 | GitHub | https://github.com/butterflyio/promptraise |
-| Vercel Dashboard | https://vercel.com/dashboard |
+| Netlify Dashboard | https://app.netlify.com |
 | Supabase Dashboard | https://supabase.com/dashboard |
 | BotSee Dashboard | https://www.botsee.io/dashboard |
 | Telegram Bot | @PromptraiseBot |
