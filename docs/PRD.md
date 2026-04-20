@@ -105,7 +105,7 @@ User clicks report link
 | Database | Supabase (PostgreSQL) |
 | AI Analysis | BotSee API |
 | Notifications | Telegram Bot API |
-| Deployment | Vercel |
+| Deployment | Netlify |
 | DNS/Domain | Cloudflare |
 
 ### 5.2 Database Schema
@@ -250,7 +250,7 @@ TELEGRAM_BOT_TOKEN=xxx
 ### Staging/Preview
 - URL: Auto-generated per PR
 - Branch: Any PR branch
-- Vercel Preview Deployments
+- Netlify Deploy Previews
 
 ### Development
 - URL: `localhost:3000`
@@ -263,7 +263,6 @@ TELEGRAM_BOT_TOKEN=xxx
 | Issue | Status | Notes |
 |-------|--------|-------|
 | BotSee "image input" error | Investigating | May need BotSee support |
-| Vercel Auth Protection | Resolved | Using bypass token for webhook |
 | Telegram webhook isolation | Pending | Cloudflare Worker setup |
 
 ---
