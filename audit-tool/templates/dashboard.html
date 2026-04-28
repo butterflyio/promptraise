@@ -783,7 +783,7 @@
         <div class="card" style="margin-top: 2rem;" id="deepseekSection" style="display:none;">
             <div class="card-header">
                 <div class="card-title">DeepSeek AI Visibility</div>
-                <span class="tag tag-competitor">OpenRouter / DeepSeek</span>
+                <span class="tag tag-competitor">DeepSeek</span>
             </div>
             <div id="deepseekContent"></div>
         </div>
@@ -1402,17 +1402,19 @@
 
             // Top competitors from DeepSeek perspective
             const comps = ds.top_competitors || [];
+            const dsColors = ['#67FF67', '#3D6944', '#C9CDD2', '#f97316', '#67FF67', '#3D6944'];
             if (comps.length) {
                 html += '<div><div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.75rem;">Top Competitors (DeepSeek)</div>';
                 html += '<div style="display: flex; flex-direction: column; gap: 0.5rem;">';
-                for (const c of comps.slice(0, 6)) {
+                for (let i = 0; i < comps.slice(0, 6).length; i++) {
+                    const c = comps[i];
                     const score = c.visibility_score || 0;
-                    const barWidth = Math.min(score, 100);
+                    const barColor = dsColors[i % dsColors.length];
                     html += `
                         <div style="display: flex; align-items: center; gap: 0.75rem;">
                             <div style="flex: 1; min-width: 0;">
                                 <div style="font-size: 0.85rem; font-weight: 500; margin-bottom: 0.25rem;">${c.name}</div>
-                                <div class="bar"><div class="bar-fill" style="width: ${barWidth}%; background: #C9CDD2;"></div></div>
+                                <div class="bar"><div class="bar-fill" style="width: ${Math.min(score, 100)}%; background: ${barColor};"></div></div>
                             </div>
                             <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); min-width: 40px; text-align: right;">${score}</div>
                         </div>
