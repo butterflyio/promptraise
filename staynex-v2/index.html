@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{SITE_NAME}} AI Visibility Report</title>
+    <title>Staynex AI Visibility Report</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
@@ -600,8 +600,8 @@
         <!-- Header -->
         <div class="header">
             <div class="header-left">
-                <h1>{{SITE_NAME}} AI Visibility Report</h1>
-                <p>Site: {{SITE_DOMAIN}} | Last updated: <span id="lastUpdated"></span></p>
+                <h1>Staynex AI Visibility Report</h1>
+                <p>Site: staynex.vip | Last updated: <span id="lastUpdated"></span></p>
             </div>
             <div class="header-actions">
                 <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
@@ -634,7 +634,7 @@
             <div class="hero-details">
                 <div class="score-status">
                     <span>⚠️</span>
-                    <span>{{SCORE_STATUS}}</span>
+                    <span>Very Low AI Visibility</span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -644,28 +644,28 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="label">Total Responses</div>
-                <div class="value">{{TOTAL_RESPONSES}}</div>
-                <div class="sub">{{RESPONSES_PER_TYPE}} per customer type</div>
+                <div class="value">60</div>
+                <div class="sub">30 per customer type</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value">{{UNIQUE_COMPETITORS}}</div>
+                <div class="value">67</div>
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label">{{SITE_NAME}} Appearance</div>
-                <div class="value brand">{{OWN_APPEARANCE_PCT}}%</div>
-                <div class="sub">{{OWN_APPEARANCE_NOTE}}</div>
+                <div class="label">Staynex Appearance</div>
+                <div class="value brand">6.7%</div>
+                <div class="sub">Site mentioned in 6.7% of responses</div>
             </div>
         </div>
 
         <!-- Segment Tabs -->
         <div class="type-tabs">
             <button class="type-tab active" onclick="showType('type1')">
-                <span>{{CUSTOMER_TYPE_1_NAME}}</span>
+                <span>Crypto-Native Digital Nomads</span>
             </button>
             <button class="type-tab" onclick="showType('type2')">
-                <span>{{CUSTOMER_TYPE_2_NAME}}</span>
+                <span>Budget-Conscious Family Travelers</span>
             </button>
         </div>
 
@@ -691,7 +691,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — {{CUSTOMER_TYPE_1_NAME}}</div>
+                <div class="card-title">Top Competitors — Crypto-Native Digital Nomads</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -734,7 +734,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — {{CUSTOMER_TYPE_2_NAME}}</div>
+                <div class="card-title">Top Competitors — Budget-Conscious Family Travelers</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -793,10 +793,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Keyword Opportunities</div>
-                    <span class="tag tag-competitor">Where {{SITE_NAME}} Ranks Poorly</span>
+                    <span class="tag tag-competitor">Where Staynex Ranks Poorly</span>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
-                    Queries where {{SITE_NAME}} is missing or ranks poorly
+                    Queries where Staynex is missing or ranks poorly
                 </p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
@@ -816,7 +816,7 @@
         <div class="card" style="margin-bottom: 2rem;">
             <div class="card-title">Terminology Gap Analysis</div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                Keywords and terms where {{SITE_NAME}} is missing from AI responses.
+                Keywords and terms where Staynex is missing from AI responses.
             </p>
             <table class="gap-table">
                 <thead>
@@ -857,7 +857,7 @@
         </div>
 
         <!-- Competitive Position -->
-        <h2 class="section-title">{{SITE_NAME}}'s Competitive Position</h2>
+        <h2 class="section-title">Staynex's Competitive Position</h2>
         <div class="position-grid">
             <div class="position-card strengths">
                 <h3>Strengths</h3>
@@ -903,14 +903,14 @@
         <div class="footer">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
-                <p style="color: var(--text-secondary);">Analysis ID: {{ANALYSIS_ID}}</p>
+                <p style="color: var(--text-secondary);">Analysis ID: 5b08288f-f375-4113-b204-863556a14ab8</p>
             </div>
         </div>
     </div>
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = {{DASHBOARD_DATA_JSON}};
+        const DASHBOARD_DATA = {"site":{"name":"Staynex","url":"https://staynex.vip","domain":"staynex.vip","slug":"staynex-v2","analysis_id":"5b08288f-f375-4113-b204-863556a14ab8","site_uuid":"c73a64b1-8118-45e7-b170-e43e7056c793","generated_at":"April 28, 2026"},"summary":{"score":16,"score_status":"Very Low AI Visibility","total_responses":60,"responses_per_type":30,"unique_competitors":67,"own_mentioned":true,"own_appearance_pct":6.7,"own_appearance_note":"Site mentioned in 6.7% of responses","hero_comparison":[{"value":"6.7%","label":"Staynex Visibility","trend":"down"},{"value":"70.0%","label":"Travala (Leader)","trend":""},{"value":"56.7%","label":"LockTrip (#2)","trend":""}]},"customer_types":[{"name":"Crypto-Native Digital Nomads","uuid":"638982e3-c58b-41bf-9b5c-6328c725c55f","competitors":[{"name":"Travala","appearance":70.0,"rank":1.6,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://www.travala.com"},{"name":"LockTrip","appearance":56.7,"rank":3.4,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://locktrip.com"},{"name":"CheapAir","appearance":33.3,"rank":5.4,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://www.cheapair.com"},{"name":"Hopper","appearance":26.7,"rank":2.5,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.hopper.com"},{"name":"Destinia","appearance":26.7,"rank":5.0,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://destinia.com"},{"name":"Travala.com","appearance":26.7,"rank":1.3,"providers":["gemini"],"isOwn":false,"url":"https://www.travala.com"},{"name":"XcelTrip","appearance":23.3,"rank":4.7,"providers":["gemini","openai-search"],"isOwn":false,"url":"https://www.xceltrip.com"},{"name":"Booking.com","appearance":20.0,"rank":5.2,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.booking.com"},{"name":"Dtravel","appearance":20.0,"rank":3.5,"providers":["gemini"],"isOwn":false,"url":"https://www.dtravel.com"},{"name":"Alternative Airlines","appearance":16.7,"rank":4.0,"providers":["claude","gemini","openai-search"],"isOwn":false,"url":"https://www.alternativeairlines.com"}],"total_responses":30,"provider_order_summary":{"gemini":0,"claude":1,"openai-search":2},"has_distinct_competitor_data":false,"data_note":null},{"name":"Budget-Conscious Family Travelers","uuid":"78e11225-bc7f-4376-9775-814620c58981","competitors":[{"name":"Travala","appearance":70.0,"rank":1.6,"providers":["openai-search","claude","gemini"],"isOwn":false,"url":"https://www.travala.com/en-US/"},{"name":"LockTrip","appearance":56.7,"rank":3.4,"providers":["openai-search","gemini","claude"],"isOwn":false,"url":"https://locktrip.com/page/book-hotels-with-crypto"},{"name":"CheapAir","appearance":33.3,"rank":5.4,"providers":["openai-search","gemini","claude"],"isOwn":false,"url":"https://www.cheapair.com"},{"name":"Hopper","appearance":26.7,"rank":2.5,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.hopper.com"},{"name":"Destinia","appearance":26.7,"rank":5.0,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://destinia.com"},{"name":"Travala.com","appearance":26.7,"rank":1.3,"providers":["gemini"],"isOwn":false,"url":"https://www.travala.com"},{"name":"XcelTrip","appearance":23.3,"rank":4.7,"providers":["openai-search","gemini"],"isOwn":false,"url":"https://xceltrip.com/"},{"name":"Booking.com","appearance":20.0,"rank":5.2,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.booking.com"},{"name":"Dtravel","appearance":20.0,"rank":3.5,"providers":["gemini"],"isOwn":false,"url":"https://www.dtravel.com"},{"name":"Alternative Airlines","appearance":16.7,"rank":4.0,"providers":["openai-search","claude","gemini"],"isOwn":false,"url":"https://www.alternativeairlines.com/cryptocurrencies"}],"total_responses":30,"provider_order_summary":{"openai-search":0,"claude":1,"gemini":2},"has_distinct_competitor_data":false,"data_note":"Share of Voice percentages reflect the same aggregated BotSee analysis for this site. Both customer type tabs display identical competitor rankings because BotSee did not return per-segment appearance data for this analysis. The provider ordering and source URLs differ per segment."}],"keywords":[{"text":"Valor Flights official website","count":1},{"text":"best last minute hotel booking apps for crypto users","count":1},{"text":"best crypto travel booking sites 2024 2025","count":1},{"text":"OneAir travel official website","count":1},{"text":"TravelPerk business travel negotiated rates monthly stays TravelPerk","count":1},{"text":"Travala crypto payments book hotels flights Travala","count":1},{"text":"XcelTrip crypto travel platform features","count":1},{"text":"best apps for last minute hotel bookings HotelTonight Airbnb last minute deals 24 hours","count":1},{"text":"hotel booking app crypto payments instant AI powered last minute","count":1},{"text":"best hotel membership for crypto travelers 60 nights year","count":1},{"text":"Travala accepts crypto hotel bookings no booking fees Travala.com review","count":1},{"text":"Bidroom membership vs traditional OTA pricing for frequent travelers","count":1},{"text":"Travala flights crypto payments accept cryptocurrency flights Travala.com","count":1},{"text":"ASI:One Flights Agent official website","count":1},{"text":"best hotel booking platforms for crypto users no fees","count":1},{"text":"AI powered travel booking tools for last minute trips crypto payment","count":1},{"text":"HotelTonight last minute deals 2026 Airbnb HotelTonight app","count":1},{"text":"Travala vs Alternative Airlines for last minute flights crypto","count":1},{"text":"book hotels with crypto Travala","count":1},{"text":"LockTrip vs Travala vs Dtravel for crypto travel","count":1},{"text":"Selina CoLive vs CitizenM Global Passport for digital nomads","count":1},{"text":"book hotels with cryptocurrency instant payment Travala","count":1},{"text":"AI travel assistant for spontaneous flight booking crypto","count":1},{"text":"Hopper AI hotel booking crypto support","count":1},{"text":"Destinia pay with bitcoin Destinia BitPay 'Destinia accepts bitcoin' 'hotels'","count":1},{"text":"Destinia accept bitcoin hotels BitPay Destinia crypto fees 'no fees'","count":1},{"text":"best last minute hotel booking sites crypto payment","count":1},{"text":"best AI travel assistants for impulsive travelers crypto","count":1},{"text":"AI travel booking tools for spontaneous trips crypto","count":1},{"text":"hotel booking platforms with no last minute price hikes","count":1}],"sources":[{"name":"www.travala.com","url":"https://www.travala.com","mentions":8},{"name":"www.travala.com","url":"https://www.travala.com/en-US/","mentions":5},{"name":"www.hopper.com","url":"https://www.hopper.com","mentions":4},{"name":"Travala Official Website","url":"https://www.travala.com","mentions":4},{"name":"www.cheapair.com","url":"https://www.cheapair.com","mentions":3},{"name":"www.theblueground.com","url":"https://www.theblueground.com","mentions":3},{"name":"Sleap.io | Web3 Hotel Booking  1M+ Hotels & Crypto Payments","url":"https://sleap.io","mentions":3},{"name":"www.techlifeunity.com","url":"https://www.techlifeunity.com/best-last-minute-hotel-apps","mentions":2},{"name":"Priceline Express Deals","url":"https://www.priceline.com/express-deals","mentions":2},{"name":"www.hoteltonight.com","url":"https://www.hoteltonight.com","mentions":2},{"name":"www.bitpay.com","url":"https://www.bitpay.com","mentions":2},{"name":"www.travala.com","url":"https://www.travala.com/payment/nano","mentions":2},{"name":"HotelTonight Official Site","url":"https://www.hoteltonight.com","mentions":2},{"name":"Best Hotel Loyalty Programs 2024","url":"https://thepointsguy.com/guide/best-hotel-loyalty-programs","mentions":2},{"name":"www.coindesk.com","url":"https://www.coindesk.com/business/2025/02/04/trivago-adds-travala-s-hotel-inventory-gaining-crypto-payment-options","mentions":2},{"name":"en.wikipedia.org","url":"https://en.wikipedia.org/wiki/Cheapair","mentions":2},{"name":"Travala - Crypto Travel Booking","url":"https://www.travala.com","mentions":2},{"name":"locktrip.com","url":"https://locktrip.com","mentions":2},{"name":"cointelegraph.com","url":"https://cointelegraph.com/news/travala-trivago-crypto-hotel-bookings","mentions":2},{"name":"Going Premium","url":"https://www.going.com","mentions":1},{"name":"The 7 Best Apps for Finding LastMinute Travel Deals in 2026","url":"https://flylimited.org/best-apps-for-finding-last-minute-travel-deals/","mentions":1},{"name":"www.pallapay.com","url":"https://www.pallapay.com","mentions":1},{"name":"www.cryptotraveler.com","url":"https://www.cryptotraveler.com/","mentions":1},{"name":"Travala vs LockTrip: Which is better for crypto travel?","url":"https://www.bitrates.com/news/editorial/travala-vs-locktrip-which-is-the-best-crypto-travel-booking-site","mentions":1},{"name":"bitget.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENQrt3sDWcpwfvJ3HljIYci-7qOAY3cu2moC7DcbZy2ui6QAX1loP4RsqWVQ1McGmie0XQodsmgOkjcwy4SIh1tsBNvlEwikObLoqQ_13TpAgrj_Yjb53Kk9Pak_yV3u3zUflCT0SsM7pAQaG3tEP6wvwRDefZRctEqJ8qZxqrVh6pSZHKlXvdjjRXJnSljtUjrJjXSuBlcz-wtlHqocpvdVJTyT93RPF2RR0heQ==","mentions":1},{"name":"Extended Stay America  Monthly Rate Hotels","url":"https://www.extendedstayamerica.com/services-programs/monthly-rate-hotels","mentions":1},{"name":"Travel Companies That Accept Crypto Payments","url":"https://coinspaid.com/blog/travel-companies-accepting-crypto/","mentions":1},{"name":"www.skyscanner.net","url":"https://www.skyscanner.net/sc/en-gb/scr/flights/last-minute-deals/","mentions":1},{"name":"AI Tool for Finding Last-Minute Flight Deals","url":"https://travelfika.com/blog/ai-tool-for-finding-last-minute-flight-deals","mentions":1},{"name":"ByHours  book hotels by the hour (Wikipedia)","url":"https://en.wikipedia.org/wiki/ByHours","mentions":1},{"name":"coinspaid.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhwoyX9KRybdL2SdezONGupER4AsTFqe_BQEox1VZ7vHQ6SPy___JMLZNxAmQTQ-W8lw0MBSl9Jaf_yVQOoXkonTzJs8IPU7bx2qFT1L57gTjhxxOHmnmYCVWRtMSIU9sIpNK6BfyOgJNiXWTo4mnVBQ2cEQT1miViTGebR1jwFFJTpAeA7C0=","mentions":1},{"name":"travorio.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3nZJF7AwQf6g-gjIWFcEVChpmf_94u6E5lmclYku6fvq_dNhh3dEcgVCaIuxP95Le1CcnNEk3b7Q-PXt6lxPOQefGDafxCnCxzyf9kIJoYg==","mentions":1},{"name":"Dtravel: Decentralizing the Home Sharing Economy","url":"https://www.dtravel.com/about","mentions":1},{"name":"BitPay  Pay for Travel with Bitcoin: Your Guide to Traveling with Cryptocurrency","url":"https://www.bitpay.com/blog/how-to-travel-on-bitcoin","mentions":1},{"name":"Hopper Official Site","url":"https://www.hopper.com","mentions":1},{"name":"KAYAK Official Site","url":"https://www.kayak.com","mentions":1},{"name":"quora.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsAfl1Ja9jtq0jHD41rApnK1ZSLHAwrIYFWuAPk8p-X50jZzq1k5WEkv5Ty4W-HJnLP8pGD7I9OknvZzRFK09Uw3QpH4rjAcDgJQbtaCfDVWUkXNzhRX2wUqAH-3oI1bisEGtMxI1nxkkYMuehOU60_9qiyAM-afMYHuQCtjel_pYWbwWWysH3301c","mentions":1},{"name":"travelwith2ofus.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETIQBd0KCJ31bCEoJC0veg8v5z9k7Q6ebhZ4FeiggaRkVyDhftGrQ6Zg4NIO-ikMH_51vXe_6kjCbvhiXQzc9xTe8yZfgcKGmgv4mwBI5KIrX5ukeI_zWSKL4u1SW7pgtYQMCgHN7VI-C9j7oadTU12MknXhIe-VL32HsjfUdGzBqe-1Hdbl8LYRpj_Er6gqg4d0a2kT6sw9eOeoqKNxz2","mentions":1},{"name":"help.travala.com","url":"https://help.travala.com/hc/en-us/articles/27244479669657-How-do-I-select-the-cryptocurrency-payment-option-during-the-booking-process","mentions":1},{"name":"Pallapay  Accept Crypto Payments in Hotels (Pallapay industries page)","url":"https://www.pallapay.com/industries/hotels","mentions":1},{"name":"localsinsider.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcGNbF6MxXAmRqZ9oX4V46M9hxGlBnXo6WLT-rSnbOqv4B9MrNb1_WKUm55U7RKyk916dk3zUnxzcFCWI0ZAFVaB2LSXg3h7r2fpTjf2Vfmm9RA8ViLzd8WELyVcYN2oIaTsx1AE9xXyTkye-N0_L_ITJLSOMhtU_cJF3a6P9aahDQDwkOdQ==","mentions":1},{"name":"travala.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVO3so4-cvcmZsFtVbLYK4ah3ZBge5-6GvsNV7yJ86rnPyGh3cVcOI7Q11ydTtAdAhYmsHKMc1jlWUAgracgedHP8bCO04mwcR4-VlcJazcTfXRupT5JbVGA==","mentions":1},{"name":"chainwire.org","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_3AWCnhH3y1J5An6GcNMEtHLqVQCx_QLcMTLCjytRvNvi7Cn1n1fVHQJxgFsHnO1RxCp_e1EvNlzJ5tprzY4mdfN6oWwMf44YClC8PzH1nVgNCpMm4PMkdfszRvadkTRLu5bcU8o469hZUHAwO1NvxpNU8nuC96ecd5iTQsVasP9gN2dglLUMEcUMFx8sZNDr8uEl4ZFofukAxn1Bb5rFw6iah1XPH72CG4VNzVZn6i14BBHG","mentions":1},{"name":"www.bitpay.com","url":"https://www.bitpay.com/directory/bitpaytravel","mentions":1},{"name":"Hopper (Wikipedia overview of features)","url":"https://en.wikipedia.org/wiki/Hopper_%28company%29","mentions":1},{"name":"Top 10 Travel Websites That Accept Cryptocurrency Payments in 2026","url":"https://nowpayments.io","mentions":1},{"name":"trip1.com","url":"https://trip1.com/","mentions":1},{"name":"travorio.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0PTZo8R1NZzT4iuWQCrXnxHvGa-NhidqEFfQoI5x7CBoyZ21i_LyGRcLhygkXDm2d1iKU-8n2V-j9i9dNNl5rIw2MZIpdYEqVD9vbBorfDw==","mentions":1},{"name":"Marriott Bonvoy Elite Status Benefits","url":"https://www.marriott.com/loyalty/member-benefits/elite.mi","mentions":1},{"name":"Travala - Book Hotels with Nano (payment details page)","url":"https://www.travala.com/payment/nano","mentions":1}],"keyword_opportunities":[{"text":"How do I book hotels cheaper when I'm moving between cities every few months?","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"hotel booking that takes crypto","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"best hotel membership for frequent travelers who stay 60+ nights a year","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"I'm spending way too much on hotel booking fees across multiple cities. What's a better option than Booking.com?","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"best hotel booking without fees","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"How do I book hotels last minute without getting completely ripped off on price?","type":"missing","persona":"Last-Minute-Spontaneous-Sofia"},{"text":"I need to book a flight tomorrow but don't want to spend 3 hours comparing prices. What's the fastest way?","type":"missing","persona":"Last-Minute-Spontaneous-Sofia"},{"text":"hotel app that takes crypto payments instantly","type":"missing","persona":"Last-Minute-Spontaneous-Sofia"},{"text":"best hotel booking without crazy last minute fees","type":"low_rank","persona":"Last-Minute-Spontaneous-Sofia"}],"source_opportunities":[{"name":"www.travala.com","domain":"www.travala.com","type":"competitor","mentions":8},{"name":"www.hopper.com","domain":"www.hopper.com","type":"competitor","mentions":4},{"name":"www.theblueground.com","domain":"www.theblueground.com","type":"competitor","mentions":3},{"name":"www.cheapair.com","domain":"www.cheapair.com","type":"competitor","mentions":3},{"name":"Sleap.io | Web3 Hotel Booking  1M+ Hotels & Crypto Payments","domain":"sleap.io","type":"competitor","mentions":3},{"name":"en.wikipedia.org","domain":"en.wikipedia.org","type":"competitor","mentions":2},{"name":"www.hoteltonight.com","domain":"www.hoteltonight.com","type":"competitor","mentions":2},{"name":"www.techlifeunity.com","domain":"www.techlifeunity.com","type":"competitor","mentions":2},{"name":"Priceline Express Deals","domain":"www.priceline.com","type":"competitor","mentions":2},{"name":"www.coindesk.com","domain":"www.coindesk.com","type":"competitor","mentions":2},{"name":"locktrip.com","domain":"locktrip.com","type":"competitor","mentions":2},{"name":"cointelegraph.com","domain":"cointelegraph.com","type":"competitor","mentions":2},{"name":"Best Hotel Loyalty Programs 2024","domain":"thepointsguy.com","type":"competitor","mentions":2},{"name":"www.bitpay.com","domain":"www.bitpay.com","type":"competitor","mentions":2},{"name":"Going Premium","domain":"www.going.com","type":"competitor","mentions":1}],"provider_coverage":{"gemini":35,"claude":30,"openai":35},"insights":{"terminology_gap":[{"term":"Web3 Social Travel","evidence":"No consistent AI recognition of this combined term","priority":"HIGH"},{"term":"Real-World Asset (RWA) Integration","evidence":"Limited understanding in AI travel queries","priority":"HIGH"},{"term":"Zero-markup Pricing","evidence":"Not standardized in AI travel comparisons","priority":"MEDIUM"},{"term":"Hybrid Payments","evidence":"Inconsistent AI interpretation","priority":"MEDIUM"},{"term":"JetSet VIP Pass","evidence":"No direct AI search visibility","priority":"HIGH"},{"term":"Travel Economy","evidence":"Minimal contextual understanding","priority":"MEDIUM"}],"language_gap":[{"site_says":"Web3 & AI Infused Social Travel Membership","site_context":"Platform positioning as tech-forward ecosystem","ai_uses":"Crypto travel booking platform","ai_context":"Transactional interpretation"},{"site_says":"Turn spend into ownership","site_context":"Value proposition of membership","ai_uses":"Travel rewards program","ai_context":"Traditional loyalty framework"},{"site_says":"Revolutionizing travel and hospitality","site_context":"Disruptive technology narrative","ai_uses":"Alternative travel booking service","ai_context":"Incremental innovation perception"}],"audience_segments":{"addressed":[{"name":"Crypto Travelers","note":"Primary target with crypto payment options"},{"name":"Digital Nomads","note":"AI-powered travel planning appealing"},{"name":"Frequent Travelers","note":"Scalable membership model"},{"name":"Business Partners","note":"Supplier and distributor integration"}],"opportunity_gap":[{"name":"Budget Family Travelers","note":"Only 33% visibility in AI searches"},{"name":"Last-Minute Bookers","note":"26.7% competitor coverage"},{"name":"Business Travel Market","note":"20% current penetration"},{"name":"International Corporate Travelers","note":"Limited AI recognition"}]},"position":{"strengths":["Zero commission model for hotels","AI-powered personalized travel planning","Hybrid crypto/traditional payment support","Global partnership ecosystem"],"opportunities":["Expand AI travel agent capabilities","Deepen crypto travel market positioning","Create more granular membership tiers","Develop targeted content for underserved segments"],"gaps":["Limited AI search engine visibility","Unclear value prop for traditional travelers","Minimal competitive differentiation narrative","Weak educational content about Web3 travel"]},"action_items":{"content_priorities":["Create comprehensive 'Web3 Travel Guide'","Develop RWA integration case studies","Produce AI travel planning tutorial content","Build segment-specific comparison pages","Generate crypto traveler success stories"],"link_building":["Partner with crypto influencer review sites","Guest post on digital nomad platforms","Create backlinks from travel tech blogs","Engage Web3 community forums","Develop cross-promotional content with partners"],"quick_wins":["Optimize homepage for AI search terms","Refine meta descriptions with key phrases","Update competitive comparison language","Enhance technical SEO for AI crawlability","Implement structured data for travel offerings"]}}};
 
         // ============ THEME ============
         function toggleTheme() {
