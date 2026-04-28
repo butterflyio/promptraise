@@ -15,6 +15,7 @@ import json
 import os
 import re
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 from urllib.parse import urlparse
@@ -509,7 +510,6 @@ def stage_run_analysis(client: BotSeeClient, site_uuid: str,
     # Poll for completion
     log("  Polling for completion...")
     for attempt in range(30):
-        import time
         time.sleep(10)
         analyses = client.list_analyses(site_uuid, limit=1)
         status = None
