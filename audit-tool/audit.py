@@ -358,6 +358,13 @@ def stage_fetch_botsee_results(client: BotSeeClient, analysis_id: str, state: St
     log("  → sources")
     results["sources"] = client.results_sources(analysis_id)
 
+    log("  → responses (for keyword extraction)")
+    try:
+        results["responses"] = client.results_responses(analysis_id)
+    except BotSeeError as e:
+        log(f"  ! responses failed: {e}")
+        results["responses"] = {}
+
     log("  → keyword opportunities")
     try:
         results["keyword_opportunities"] = client.results_keyword_opportunities(analysis_id)
@@ -404,6 +411,86 @@ def stage_generate_insights(generator: InsightsGenerator, context: dict,
     state.set("insights", insights)
     log("  ✓ Insights generated")
     return insights
+
+
+def stage_extract_keywords_from_responses(botsee_results: dict,
+                                          generator: InsightsGenerator,
+                                          state: StateManager) -> list:
+    """Extract keywords from raw BotSee responses when results-keywords is empty.
+
+    BotSee sometimes returns empty keywords (e.g. single-model analysis).
+    We extract them from the raw response_text using Claude Haiku.
+    """
+    keywords = transform_keywords(botsee_results.get("keywords", {}))
+    if keywords:
+        log("  Keywords found via BotSee")
+        return keywords
+
+    if state.is_complete("extract_keywords"):
+        log("  ✓ Skipping extract_keywords (already complete)")
+        return state.get("extracted_keywords", [])
+
+    raw = botsee_results.get("responses", [])
+    if isinstance(raw, dict):
+        raw_responses = raw.get("responses", [])
+    elif isinstance(raw, list):
+        raw_responses = raw
+    else:
+        raw_responses = []
+    if not raw_responses:
+        log("  ! No raw responses to extract keywords from")
+        state.mark_complete("extract_keywords", [])
+        return []
+
+    log("  Extracting keywords from raw responses via Claude Haiku...")
+    response_texts = []
+    for r in raw_responses[:10]:
+        text = r.get("response_text", "") if isinstance(r, dict) else str(r)
+        if text and len(text) > 100:
+            response_texts.append(text[:2000])
+
+    if not response_texts:
+        log("  ! No usable response texts")
+        state.mark_complete("extract_keywords", [])
+        return []
+
+    combined = "\n\n---\n\n".join(response_texts[:8])
+
+    system = "You are a keyword extraction assistant. Extract the most important keywords and phrases that appear in these AI search responses. Return a JSON array of objects with {text, count} shape."
+    user = f"""Extract the top 20 keywords/phrases that appear across these AI search responses. Focus on:
+- Platform/brand names mentioned
+- Product categories (staking, lending, DeFi, etc.)
+- Use cases (passive income, trading, etc.)
+- Geographic or demographic terms
+
+Return ONLY a JSON array like: [{{"text": "keyword phrase", "count": 5}}, ...]
+Do not include the site being audited's own name.
+
+Responses:
+{combined[:6000]}
+"""
+
+    try:
+        result = generator._call_openrouter(system, user, max_tokens=1024)
+        import re, json as json_mod
+        result = result.strip()
+        if result.startswith("```"):
+            result = re.sub(r"^```(?:json)?\s*", "", result)
+            result = re.sub(r"\s*```\s*$", "", result)
+        extracted = json_mod.loads(result)
+        if isinstance(extracted, list):
+            keywords = [{"text": k["text"] if isinstance(k, dict) else str(k),
+                        "count": k["count"] if isinstance(k, dict) else 1} for k in extracted]
+            keywords = [k for k in keywords if k["text"]]
+            log(f"  ✓ Extracted {len(keywords)} keywords from responses")
+            state.mark_complete("extract_keywords", keywords)
+            state.set("extracted_keywords", keywords)
+            return keywords
+    except Exception as e:
+        log(f"  ! Keyword extraction failed: {e}")
+
+    state.mark_complete("extract_keywords", [])
+    return []
 
 
 def stage_create_site(client: BotSeeClient, domain: str, state: StateManager,
@@ -939,6 +1026,11 @@ def run_full_audit(args):
 
     # Stage 6: Fetch BotSee results
     results = stage_fetch_botsee_results(botsee, analysis_id, state)
+
+    # Stage 6b: Extract keywords from raw responses if BotSee returned empty
+    extracted = stage_extract_keywords_from_responses(results, generator, state)
+    if extracted and not results.get("keywords"):
+        results["keywords"] = extracted
 
     # Stage 7: DeepSeek analysis
     competitors_payload = results.get("competitors", {})
