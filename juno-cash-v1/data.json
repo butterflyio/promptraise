@@ -79,21 +79,7 @@
           "isOwn": false
         },
         {
-          "name": "Railgun",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
           "name": "PIVX",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Horizen",
           "appearance": 0,
           "rank": 0,
           "providers": [],
@@ -107,7 +93,21 @@
           "isOwn": false
         },
         {
+          "name": "Railgun",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
           "name": "Firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Horizen",
           "appearance": 0,
           "rank": 0,
           "providers": [],
@@ -115,10 +115,7 @@
         }
       ],
       "total_responses": 20,
-      "provider_order_summary": {
-        "deepseek": 10,
-        "claude": 10
-      },
+      "provider_order_summary": {},
       "has_distinct_competitor_data": true,
       "data_note": null
     },
@@ -152,13 +149,6 @@
           "isOwn": false
         },
         {
-          "name": "Railgun",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
           "name": "PIVX",
           "appearance": 0,
           "rank": 0,
@@ -166,14 +156,28 @@
           "isOwn": false
         },
         {
-          "name": "Horizen",
+          "name": "Beam",
           "appearance": 0,
           "rank": 0,
           "providers": [],
           "isOwn": false
         },
         {
-          "name": "Beam",
+          "name": "Railgun",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Horizen",
           "appearance": 0,
           "rank": 0,
           "providers": [],
@@ -188,25 +192,104 @@
             "claude"
           ],
           "isOwn": false
-        },
-        {
-          "name": "Firo",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
         }
       ],
       "total_responses": 20,
-      "provider_order_summary": {
-        "deepseek": 10,
-        "claude": 10
-      },
+      "provider_order_summary": {},
       "has_distinct_competitor_data": true,
       "data_note": null
     }
   ],
-  "keywords": [],
+  "keywords": [
+    {
+      "text": "privacy",
+      "count": 26
+    },
+    {
+      "text": "zero-knowledge",
+      "count": 12
+    },
+    {
+      "text": "stealth address",
+      "count": 11
+    },
+    {
+      "text": "ring signatures",
+      "count": 9
+    },
+    {
+      "text": "staking",
+      "count": 8
+    },
+    {
+      "text": "private",
+      "count": 7
+    },
+    {
+      "text": "governance",
+      "count": 7
+    },
+    {
+      "text": "monero",
+      "count": 6
+    },
+    {
+      "text": "zcash",
+      "count": 6
+    },
+    {
+      "text": "encrypted",
+      "count": 4
+    },
+    {
+      "text": "defi",
+      "count": 4
+    },
+    {
+      "text": "zk",
+      "count": 3
+    },
+    {
+      "text": "view key",
+      "count": 3
+    },
+    {
+      "text": "shielded",
+      "count": 3
+    },
+    {
+      "text": "anonymous",
+      "count": 2
+    },
+    {
+      "text": "mixer",
+      "count": 1
+    },
+    {
+      "text": "tumbler",
+      "count": 1
+    },
+    {
+      "text": "mandatory",
+      "count": 1
+    },
+    {
+      "text": "onion routing",
+      "count": 1
+    },
+    {
+      "text": "cpu mining",
+      "count": 1
+    },
+    {
+      "text": "pseudonymous",
+      "count": 1
+    },
+    {
+      "text": "surveillance",
+      "count": 1
+    }
+  ],
   "sources": [
     {
       "name": "cointelegraph.com",
@@ -224,7 +307,108 @@
       "mentions": 1
     }
   ],
-  "keyword_opportunities": [],
+  "keyword_opportunities": [
+    {
+      "text": "How can I prevent my income and spending patterns from being publicly visible?",
+      "type": "missing",
+      "persona": "Independent Professional"
+    },
+    {
+      "text": "What mechanisms exist to selectively reveal transaction details only to trusted parties?",
+      "type": "missing",
+      "persona": "Independent Professional"
+    },
+    {
+      "text": "Can I maintain complete anonymity while still having a transparent accounting option?",
+      "type": "missing",
+      "persona": "Independent Professional"
+    },
+    {
+      "text": "How does this platform prevent third-party tracking of my financial movements?",
+      "type": "missing",
+      "persona": "Independent Professional"
+    },
+    {
+      "text": "What protections exist against potential data breaches or unauthorized information exposure?",
+      "type": "missing",
+      "persona": "Independent Professional"
+    },
+    {
+      "text": "How does mandatory privacy differ from optional privacy models?",
+      "type": "missing",
+      "persona": "Digital Rights Advocate"
+    },
+    {
+      "text": "What technical measures prevent transaction metadata from being intercepted?",
+      "type": "missing",
+      "persona": "Digital Rights Advocate"
+    },
+    {
+      "text": "Can government agencies or corporations trace my financial activities?",
+      "type": "missing",
+      "persona": "Digital Rights Advocate"
+    },
+    {
+      "text": "What economic incentives support maintaining user privacy infrastructure?",
+      "type": "missing",
+      "persona": "Digital Rights Advocate"
+    },
+    {
+      "text": "How are transaction validations performed without compromising personal information?",
+      "type": "missing",
+      "persona": "Digital Rights Advocate"
+    },
+    {
+      "text": "What hardware requirements are needed to participate in network validation?",
+      "type": "missing",
+      "persona": "Technical Miner"
+    },
+    {
+      "text": "How does CPU-based mining prevent centralization by specialized equipment manufacturers?",
+      "type": "missing",
+      "persona": "Technical Miner"
+    },
+    {
+      "text": "What are the current rewards for contributing computational resources?",
+      "type": "missing",
+      "persona": "Technical Miner"
+    },
+    {
+      "text": "Can I run a validation node from my personal computer?",
+      "type": "missing",
+      "persona": "Technical Miner"
+    },
+    {
+      "text": "How are mining rewards distributed across network participants?",
+      "type": "missing",
+      "persona": "Technical Miner"
+    },
+    {
+      "text": "What monetary policy governs total supply generation?",
+      "type": "missing",
+      "persona": "Economic Libertarian"
+    },
+    {
+      "text": "How are new units introduced into circulation?",
+      "type": "missing",
+      "persona": "Economic Libertarian"
+    },
+    {
+      "text": "What mechanisms prevent unexpected monetary inflation?",
+      "type": "missing",
+      "persona": "Economic Libertarian"
+    },
+    {
+      "text": "How transparent is the overall economic model?",
+      "type": "missing",
+      "persona": "Economic Libertarian"
+    },
+    {
+      "text": "What long-term economic guarantees exist for network participants?",
+      "type": "missing",
+      "persona": "Economic Libertarian"
+    }
+  ],
   "source_opportunities": [
     {
       "name": "cointelegraph.com",
