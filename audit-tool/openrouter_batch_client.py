@@ -46,12 +46,49 @@ GENERIC_CRYPTO_TERMS = [
 ALIAS_MAP = {
     "monero": ["monero", "xmr", "the monero network", "monero (xmr)", "monero's"],
     "zcash": ["zcash", "zec", "the zcash network", "z.cash", "zec's"],
-    "worldcoin": ["worldcoin", "world coin", "wld", "worldid", "world coin's"],
+    "worldcoin": ["worldcoin", "world coin", "wld", "worldid", "world coin's", "worldcoin's"],
     "railgun": ["railgun", "rail gun", "railgun dao", "railgun's"],
     "aztec": ["aztec", "aztec network", "aztec protocol"],
     "tornado cash": ["tornado cash", "tornadocash", "tornado", "tornado cash's"],
     "ethereum": ["ethereum", "eth", "the ethereum network", "ethereum's"],
     "bitcoin": ["bitcoin", "btc", "the bitcoin network", "bitcoin's"],
+    "beam": ["beam", "beam privacy", "beam coin", "beam's"],
+    "dash": ["dash", "dash coin", "digital cash", "dash's"],
+    "grin": ["grin", "grin coin", "grin's", "mimblewimble"],
+    "pirate": ["pirate", "pirate chain", "arrr", "pirate's"],
+    "firo": ["firo", "zcoin", "firo's"],
+    "coingecko": ["coingecko"],
+    "coinbase": ["coinbase"],
+    "kraken": ["kraken"],
+    "localmonero": ["localmonero"],
+    "binance": ["binance"],
+    "circle": ["circle"],
+    "mimex": ["mimex"],
+    "fixedfloat": ["fixedfloat"],
+    "changehero": ["changehero"],
+    "exchangily": ["exchangily"],
+    "coinswitch": ["coinswitch"],
+    "changelly": ["changelly"],
+    "sideshift": ["sideshift"],
+    "stealthex": ["stealthex"],
+    "godex": ["godex"],
+    "velox": ["velox"],
+    "secret": ["secret", "secret network"],
+    "bytecoin": ["bytecoin", "bcn"],
+    "turtlecoin": ["turtlecoin"],
+    "pivx": ["pivx"],
+    "dinero": ["dinero"],
+    "parrot": ["parrot", "parrot exchange"],
+    "veil": ["veil", "veil currency"],
+    "tomb": ["tomb", "tomb finance"],
+    "saffron": ["saffron", "saffron finance"],
+    "swers": ["swers"],
+    "cloakcoin": ["cloakcoin"],
+    "deeponion": ["deeponion"],
+    "incogcoin": ["incogcoin"],
+    "macall": ["macall"],
+    "bitcloud": ["bitcloud"],
+    "verge": ["verge", "xvg", "verge currency"],
 }
 
 CANONICAL_NAMES = {}
@@ -188,6 +225,68 @@ class OpenRouterBatchClient:
         ]
         return self._call_with_json_retry(model, messages, max_tokens=1024)
 
+    def _extract_competitors_from_text(self, text: str, brand_variant: str,
+                                      seed_competitors: set = None) -> list:
+        text_lower = text.lower()
+        competitors = []
+        found = set()
+        seed = seed_competitors or set()
+
+        for canonical, aliases in ALIAS_MAP.items():
+            if canonical in ("bitcoin", "ethereum"):
+                continue
+            for alias in aliases:
+                if len(alias) < 3:
+                    continue
+                if alias in text_lower and canonical not in found:
+                    found.add(canonical)
+                    competitors.append(canonical)
+                    break
+
+        for comp_name in seed:
+            if comp_name in found or comp_name in ("bitcoin", "ethereum", brand_variant):
+                continue
+            if len(comp_name) < 3:
+                continue
+            if comp_name in text_lower:
+                found.add(comp_name)
+                competitors.append(comp_name)
+
+        return competitors
+
+    def _extract_sources_from_text(self, text: str) -> list:
+        domains = set()
+        url_pattern = re.compile(r'https?://([a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}(?:/[^\s]*)?)')
+        for match in url_pattern.finditer(text):
+            domain = match.group(1).lower().strip()
+            if domain and len(domain) > 3 and domain not in ("github.com", "twitter.com", "x.com"):
+                domains.add(domain)
+        if not domains:
+            word_pattern = re.compile(r'\b([a-zA-Z0-9][a-zA-Z0-9-]*\.(?:com|org|net|io|xyz|info|co))\b')
+            for match in word_pattern.finditer(text):
+                domain = match.group(1).lower()
+                if domain not in ("github.com", "twitter.com"):
+                    domains.add(domain)
+        return list(domains)
+
+    def _check_brand_in_text(self, text: str, brand_variant: str) -> tuple:
+        text_lower = text.lower()
+        variants = [brand_variant, brand_variant.replace("-", ""), brand_variant.replace("-", " ")]
+        variants = [v for v in variants if len(v) > 3]
+
+        mentioned = brand_variant in text_lower or any(v in text_lower for v in variants)
+
+        rank = None
+        if mentioned:
+            lines = text.split('\n')
+            for i, line in enumerate(lines[:20]):
+                line_lower = line.lower()
+                if any(v in line_lower for v in [brand_variant] + variants):
+                    rank = i + 1
+                    break
+
+        return mentioned, rank
+
     def generate_ct_personas_questions(self, site_name: str, site_url: str,
                                       homepage_text: str) -> dict:
         messages = [
@@ -233,7 +332,7 @@ class OpenRouterBatchClient:
                     {"role": "user", "content": q},
                 ]
                 raw = self._call(model, messages, max_tokens=1024)
-                time.sleep(0.25)
+                time.sleep(0.2)
                 all_responses.append({
                     "question": q,
                     "model": model,
@@ -289,9 +388,9 @@ class OpenRouterBatchClient:
 
     def _categorize_question(self, q: str) -> str:
         q_lower = q.lower()
-        if "compare" in q_lower:
+        if "compare" in q_lower or "vs" in q_lower or "versus" in q_lower:
             return "comparison"
-        elif "how does" in q_lower or "vs" in q_lower or "versus" in q_lower:
+        elif "how does" in q_lower:
             return "comparison"
         elif "what are the best" in q_lower or "recommend" in q_lower:
             return "recommendation"
@@ -302,59 +401,19 @@ class OpenRouterBatchClient:
         else:
             return "general"
 
-    def _extract_brands_from_raw(self, text: str, brand_name: str) -> dict:
-        """Extract competitors, sources, brand mention from raw response text via regex heuristics."""
-        text_lower = text.lower()
-        brand_variant = brand_name.lower().replace(" ", "").replace(".", "")
-        brand_mentioned = brand_variant in text_lower or brand_name.lower() in text_lower
-
-        competitors = []
-        for canonical, aliases in ALIAS_MAP.items():
-            for alias in aliases:
-                if alias in text_lower:
-                    competitors.append(canonical)
-                    break
-
-        for alt_name in ["monero", "zcash", "worldcoin", "railgun", "aztec", "tornado cash"]:
-            if alt_name in text_lower and alt_name not in competitors:
-                competitors.append(alt_name)
-
-        sources = re.findall(r'(?:https?://)?([a-zA-Z0-9][-a-zA-Z0-9]*\.[a-zA-Z]{2,}(?:/[^\s]*)?)', text)
-
-        brand_rank = None
-        if brand_mentioned:
-            lines = text.split('\n')
-            for i, line in enumerate(lines[:10]):
-                if brand_variant in line.lower() or brand_name.lower() in line.lower():
-                    brand_rank = i + 1
-                    break
-
-        return {
-            "competitors": list(set(competitors)),
-            "sources": list(set(sources)),
-            "brand_mentioned": brand_mentioned,
-            "brand_rank": brand_rank,
-        }
-
-    def _parse_brand_rank(self, text: str, brand_variant: str) -> int:
-        """Try to extract brand rank (1-indexed position) from response text."""
-        text_lower = text.lower()
-        if brand_variant not in text_lower and brand_variant.replace("-", " ") not in text_lower:
-            return None
-        rank = 1
-        for line in text.split('\n')[:15]:
-            line_lower = line.lower()
-            if any(x in line_lower for x in ["first", "#1", "1.", "top", "primary", "best"]):
-                if brand_variant in line_lower or brand_variant.replace("-", " ") in line_lower:
-                    return rank
-            rank += 1
-        return 1
-
     def full_batch_query(self, brand_name: str, ct_persona_questions: list,
-                         models: list = None) -> dict:
+                         models: list = None,
+                         use_structured_extraction: bool = False,
+                         competitor_seed: list = None) -> dict:
         models = models or MODELS
         all_responses = []
         brand_variant = brand_name.lower().replace(" ", "").replace(".", "")
+        seed_set = set()
+        for c in (competitor_seed or []):
+            name = c.get("name") if isinstance(c, dict) else str(c)
+            name_lower = name.lower()
+            if name_lower not in ("bitcoin", "ethereum", brand_variant):
+                seed_set.add(name_lower)
 
         for model in models:
             for ct_item in ct_persona_questions:
@@ -368,15 +427,25 @@ class OpenRouterBatchClient:
                             {"role": "system", "content": SYSTEM_BATCH.format(brand_name=brand_name)},
                             {"role": "user", "content": q},
                         ]
-                        raw = self._call(model, messages, max_tokens=1024)
-                        time.sleep(0.15)
+                        raw = self._call(model, messages, max_tokens=512)
+                        time.sleep(0.05)
 
-                        parsed = self._extract_brands_from_raw(raw, brand_name)
-                        competitors_list = [
-                            c for c in parsed["competitors"]
-                            if c not in ("bitcoin", "ethereum")
-                            and c != brand_variant
-                        ]
+                        if use_structured_extraction:
+                            structured = self._extract_structured(model, raw, brand_name)
+                            competitors_list = []
+                            for c in structured.get("competitors", []):
+                                n = self._normalize_name(c.get("name", ""))
+                                if n not in ("bitcoin", "ethereum") and n != brand_variant:
+                                    competitors_list.append(n)
+                            brand_mentioned = structured.get("brand_mentioned", False)
+                            brand_rank = structured.get("brand_rank")
+                            sources = structured.get("sources", [])
+                        else:
+                            competitors_list = self._extract_competitors_from_text(
+                                raw, brand_variant, seed_set
+                            )
+                            brand_mentioned, brand_rank = self._check_brand_in_text(raw, brand_variant)
+                            sources = self._extract_sources_from_text(raw)
 
                         all_responses.append({
                             "question": q,
@@ -386,22 +455,28 @@ class OpenRouterBatchClient:
                             "model": model,
                             "raw_text": raw,
                             "competitors_mentioned": competitors_list,
-                            "sources_cited": parsed["sources"],
-                            "brand_mentioned": parsed["brand_mentioned"],
-                            "brand_rank": parsed["brand_rank"],
+                            "sources_cited": sources,
+                            "brand_mentioned": brand_mentioned,
+                            "brand_rank": brand_rank,
                         })
 
         return {"responses": all_responses}
 
     def aggregate_competitors(self, batch_result: dict,
                               competitor_list: list,
-                              brand_name: str) -> dict:
+                              brand_name: str,
+                              include_all_discovered: bool = True) -> dict:
         responses = batch_result.get("responses", [])
         total = len(responses)
-        models_count = len(set(r["model"] for r in responses))
-        questions_count = len(set(r["question"] for r in responses))
 
-        name_to_canonical = {r["model"]: r["model"] for r in responses}
+        brand_lower = brand_name.lower().replace(" ", "").replace(".", "")
+
+        seed_names = set()
+        for c in (competitor_list or []):
+            name = c.get("name") if isinstance(c, dict) else str(c)
+            name_lower = name.lower()
+            if name_lower not in ("bitcoin", "ethereum", brand_lower):
+                seed_names.add(name_lower)
 
         mention_buckets = {}
         for resp in responses:
@@ -415,17 +490,10 @@ class OpenRouterBatchClient:
                 mention_buckets[comp]["by_model"][model_key] += 1
                 mention_buckets[comp]["by_question"].add(resp["question"][:50])
 
-        brand_lower = brand_name.lower().replace(" ", "").replace(".", "")
-
-        by_ct = {}
-        for resp in responses:
-            ct = resp.get("ct_name", "Unknown")
-            if ct not in by_ct:
-                by_ct[ct] = {}
-            for comp in resp.get("competitors_mentioned", []):
-                if comp not in by_ct[ct]:
-                    by_ct[ct][comp] = 0
-                by_ct[ct][comp] += 1
+        if include_all_discovered:
+            for seed_name in seed_names:
+                if seed_name not in mention_buckets:
+                    mention_buckets[seed_name] = {"total": 0, "by_model": {}, "by_question": set()}
 
         overall_competitors = {}
         for comp, bucket in mention_buckets.items():
@@ -449,20 +517,30 @@ class OpenRouterBatchClient:
         own_data = overall_competitors.get(brand_lower, {"appearance_percentage": 0, "avg_rank": 0})
         own_mentioned = own_data.get("appearance_percentage", 0) > 0
 
+        by_ct = {}
+        for resp in responses:
+            ct = resp.get("ct_name", "Unknown")
+            if ct not in by_ct:
+                by_ct[ct] = {}
+            for comp in resp.get("competitors_mentioned", []):
+                if comp not in by_ct[ct]:
+                    by_ct[ct][comp] = 0
+                by_ct[ct][comp] += 1
+
         by_customer_type = []
         for ct_name, comps in by_ct.items():
             ct_comps = []
+            seed_in_ct = False
             for comp_name, count in comps.items():
                 if comp_name == brand_lower:
                     continue
                 pct = round((count / total) * 100, 1) if total > 0 else 0
                 providers = []
                 for resp in responses:
-                    if resp["question"][:50] in [r["question"][:50] for r in responses]:
-                        if comp_name in resp.get("competitors_mentioned", []):
-                            mk = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
-                            if mk not in providers:
-                                providers.append(mk)
+                    if comp_name in resp.get("competitors_mentioned", []):
+                        mk = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
+                        if mk not in providers:
+                            providers.append(mk)
                 ct_comps.append({
                     "name": comp_name,
                     "appearance_percentage": pct,
@@ -470,11 +548,23 @@ class OpenRouterBatchClient:
                     "providers": providers,
                     "is_own": False,
                 })
+
+            if include_all_discovered:
+                for seed_name in seed_names:
+                    if seed_name not in [c["name"] for c in ct_comps]:
+                        ct_comps.append({
+                            "name": seed_name,
+                            "appearance_percentage": 0,
+                            "avg_rank": 0,
+                            "providers": [],
+                            "is_own": False,
+                        })
+
             ct_comps.sort(key=lambda c: c.get("appearance_percentage", 0), reverse=True)
             by_customer_type.append({
                 "customer_type_name": ct_name,
                 "competitors": ct_comps,
-                "total_responses": questions_count,
+                "total_responses": len(set(r["question"] for r in responses)),
             })
 
         return {
@@ -490,24 +580,27 @@ class OpenRouterBatchClient:
         responses = batch_result.get("responses", [])
         keyword_counts = {}
 
-        keyword_prompt_phrases = [
+        keyword_phrases = [
             "staking", "passive income", "defi", "yield", "apy", "lending",
             "private", "privacy", "shielded", "anonymous", "mandatory",
             "zero-knowledge", "zk", "orchard", "halo", "randomx", "cpu mining",
-            "fair launch", "no premine", "governance", "stablecoin", "bitcoin",
+            "fair launch", "no premine", "governance", "stablecoin",
             "monero", "zcash", "worldcoin", "railgun", "aztec",
+            "onion routing", "mixer", "coinjoin", "tumbler",
+            "ring signatures", "stealth address", "view key",
+            "indistinguishability", "plausible deniability", "surveillance",
         ]
 
         for resp in responses:
             text = resp.get("raw_text", "").lower()
-            for kw in keyword_prompt_phrases:
+            for kw in keyword_phrases:
                 if kw in text:
                     if kw not in keyword_counts:
                         keyword_counts[kw] = 0
                     keyword_counts[kw] += 1
 
         sorted_kw = sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)
-        return [{"text": k, "count": c} for k, c in sorted_kw if c >= 2]
+        return [{"text": k, "count": c} for k, c in sorted_kw if c >= 1]
 
     def extract_sources(self, batch_result: dict) -> list:
         responses = batch_result.get("responses", [])
@@ -531,7 +624,6 @@ class OpenRouterBatchClient:
     def find_keyword_opportunities(self, batch_result: dict,
                                     brand_name: str) -> list:
         responses = batch_result.get("responses", [])
-        brand_lower = brand_name.lower().replace(" ", "").replace(".", "")
         opportunities = []
 
         for resp in responses:
@@ -540,14 +632,12 @@ class OpenRouterBatchClient:
                     "text": resp.get("question", ""),
                     "type": "missing",
                     "persona": resp.get("persona_name", ""),
-                    "model": resp.get("model", ""),
                 })
             elif resp.get("brand_rank") and resp["brand_rank"] > 3:
                 opportunities.append({
                     "text": resp.get("question", ""),
                     "type": "low_rank",
                     "persona": resp.get("persona_name", ""),
-                    "model": resp.get("model", ""),
                 })
 
         opportunities.sort(key=lambda x: x["type"] == "missing", reverse=True)
@@ -556,14 +646,7 @@ class OpenRouterBatchClient:
     def find_source_opportunities(self, batch_result: dict,
                                    brand_name: str) -> list:
         responses = batch_result.get("responses", [])
-        all_sources = set()
         brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
-
-        for resp in responses:
-            for src in resp.get("sources_cited", []):
-                src_clean = src.lower().strip()
-                if src_clean and src_clean not in ("null", "none"):
-                    all_sources.add(src_clean)
 
         source_counts = {}
         for resp in responses:
