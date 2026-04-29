@@ -1260,7 +1260,9 @@
             function buildSovChart(canvasId, customerType, color) {
                 const labels = customerType.competitors.slice(0, 10).map(c => c.name);
                 const data = customerType.competitors.slice(0, 10).map(c => c.appearance);
-                new Chart(document.getElementById(canvasId), {
+                const canvas = document.getElementById(canvasId);
+                canvas.height = 320;
+                new Chart(canvas, {
                     type: 'bar',
                     data: {
                         labels,
@@ -1284,7 +1286,9 @@
             function buildRankChart(canvasId, customerType) {
                 const labels = customerType.competitors.slice(0, 10).map(c => c.name);
                 const data = customerType.competitors.slice(0, 10).map(c => c.rank);
-                new Chart(document.getElementById(canvasId), {
+                const canvas = document.getElementById(canvasId);
+                canvas.height = 320;
+                new Chart(canvas, {
                     type: 'bar',
                     data: {
                         labels,
