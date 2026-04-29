@@ -1,0 +1,444 @@
+{
+  "site": {
+    "name": "Juno Cash",
+    "url": "https://juno.cash",
+    "domain": "juno.cash",
+    "slug": "juno-cash-v1",
+    "analysis_id": "openrouter-juno-cash-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "April 29, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 40,
+    "responses_per_type": 20,
+    "unique_competitors": 2,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "Juno Cash Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "12.5%",
+        "label": "zcash (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "7.5%",
+        "label": "monero (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Privacy Advocates",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Zcash",
+          "appearance": 12.5,
+          "rank": 0,
+          "providers": [
+            "deepseek",
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Monero",
+          "appearance": 7.5,
+          "rank": 0,
+          "providers": [
+            "deepseek",
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 20,
+      "provider_order_summary": {
+        "deepseek": 0,
+        "claude": 1
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Decentralization Enthusiasts",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Monero",
+          "appearance": 5.0,
+          "rank": 0,
+          "providers": [
+            "deepseek",
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 20,
+      "provider_order_summary": {
+        "deepseek": 0,
+        "claude": 1
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "privacy",
+      "count": 26
+    },
+    {
+      "text": "zero-knowledge",
+      "count": 15
+    },
+    {
+      "text": "private",
+      "count": 6
+    },
+    {
+      "text": "zk",
+      "count": 5
+    },
+    {
+      "text": "zcash",
+      "count": 5
+    },
+    {
+      "text": "monero",
+      "count": 5
+    },
+    {
+      "text": "shielded",
+      "count": 3
+    },
+    {
+      "text": "anonymous",
+      "count": 3
+    },
+    {
+      "text": "halo",
+      "count": 2
+    },
+    {
+      "text": "orchard",
+      "count": 2
+    },
+    {
+      "text": "mandatory",
+      "count": 2
+    },
+    {
+      "text": "cpu mining",
+      "count": 2
+    },
+    {
+      "text": "randomx",
+      "count": 2
+    },
+    {
+      "text": "bitcoin",
+      "count": 2
+    }
+  ],
+  "sources": [
+    {
+      "name": "www.getmonero",
+      "url": "https://www.getmonero",
+      "mentions": 1
+    },
+    {
+      "name": "github.com/tevador/randomx/blob/master/doc/whitepaper.md",
+      "url": "https://github.com/tevador/randomx/blob/master/doc/whitepaper.md",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How do Halo 2 proofs guarantee my transaction details remain completely confidential?",
+      "type": "missing",
+      "persona": "Tech Privacy Professional"
+    },
+    {
+      "text": "What mathematical mechanisms prevent transaction tracing in the Orchard protocol?",
+      "type": "missing",
+      "persona": "Tech Privacy Professional"
+    },
+    {
+      "text": "How does mandatory shielding differ from optional privacy implementations?",
+      "type": "missing",
+      "persona": "Tech Privacy Professional"
+    },
+    {
+      "text": "How does RandomX prevent large industrial mining operations from dominating the network?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    },
+    {
+      "text": "How energy-efficient is CPU-based mining compared to specialized hardware?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    },
+    {
+      "text": "Can I realistically generate meaningful income through home mining?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    },
+    {
+      "text": "What mathematical mechanisms prevent transaction tracing in the Orchard protocol?",
+      "type": "missing",
+      "persona": "Tech Privacy Professional"
+    },
+    {
+      "text": "How does mandatory shielding differ from optional privacy implementations?",
+      "type": "missing",
+      "persona": "Tech Privacy Professional"
+    },
+    {
+      "text": "What cryptographic safeguards prevent metadata leakage during financial exchanges?",
+      "type": "missing",
+      "persona": "Tech Privacy Professional"
+    },
+    {
+      "text": "What protections exist to prevent unauthorized surveillance of my monetary transactions?",
+      "type": "missing",
+      "persona": "Individual Rights Activist"
+    },
+    {
+      "text": "Can government agencies easily access my financial records on this platform?",
+      "type": "missing",
+      "persona": "Individual Rights Activist"
+    },
+    {
+      "text": "What hardware specifications do I need to start mining with my personal computer?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    },
+    {
+      "text": "How does RandomX prevent large industrial mining operations from dominating the network?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    },
+    {
+      "text": "How energy-efficient is CPU-based mining compared to specialized hardware?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    },
+    {
+      "text": "Can I realistically generate meaningful income through home mining?",
+      "type": "missing",
+      "persona": "Independent Miner"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "www.getmonero",
+      "domain": "www.getmonero",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "github.com/tevador/randomx/blob/master/doc/whitepaper.md",
+      "domain": "github.com",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "deepseek": 15,
+    "claude": 50
+  },
+  "deepseek_data": {
+    "analyzed": true,
+    "brand_visibility": {
+      "mentioned": true,
+      "visibility_score": 70,
+      "summary": "Juno Cash has moderate visibility in AI responses, often mentioned in discussions about privacy-focused financial tools but not as prominently as some competitors."
+    },
+    "top_competitors": [
+      {
+        "name": "zcash",
+        "visibility_score": 85,
+        "why": "Higher brand recognition and more frequent mentions in privacy discussions"
+      },
+      {
+        "name": "monero",
+        "visibility_score": 90,
+        "why": "Leading privacy coin with extensive coverage in AI responses"
+      }
+    ],
+    "competitors_mentioned": [
+      "zcash",
+      "monero"
+    ],
+    "sources_cited": [
+      {
+        "domain": "juno.cash",
+        "note": "Primary source for brand information"
+      },
+      {
+        "domain": "zcash.com",
+        "note": "Competitor comparison"
+      },
+      {
+        "domain": "getmonero.org",
+        "note": "Competitor comparison"
+      }
+    ],
+    "ai_usage": {
+      "gaming": "Rarely mentioned in gaming contexts",
+      "trading": "Occasionally mentioned in trading discussions, especially privacy-focused trading",
+      "privacy_vpn": "Frequently mentioned alongside VPNs and privacy tools",
+      "poker": "Rarely mentioned in poker or gambling contexts"
+    }
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "Orchard protocol",
+        "evidence": "Low recognition in AI responses",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Halo 2 proofs",
+        "evidence": "Limited understanding in AI search results",
+        "priority": "HIGH"
+      },
+      {
+        "term": "View keys",
+        "evidence": "Minimal explanation in AI context",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Fair launch model",
+        "evidence": "Not consistently interpreted by AI",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "RandomX mining",
+        "evidence": "Partial understanding in AI responses",
+        "priority": "LOW"
+      },
+      {
+        "term": "Mandatory privacy",
+        "evidence": "Unique concept not standardized in AI search",
+        "priority": "HIGH"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Private Digital Cash Built private. Born private. Always private.",
+        "site_context": "Absolute privacy positioning",
+        "ai_uses": "Privacy-focused cryptocurrency with optional shielding",
+        "ai_context": "Less absolute, more nuanced privacy interpretation"
+      },
+      {
+        "site_says": "Zero-knowledge proofs are the cryptographic breakthrough of the decade",
+        "site_context": "Technical enthusiasm",
+        "ai_uses": "ZKPs as technical solution, not revolutionary narrative",
+        "ai_context": "More pragmatic, less emotional description"
+      },
+      {
+        "site_says": "CPU Mining RandomX means anyone can participate",
+        "site_context": "Democratization of mining",
+        "ai_uses": "Alternative mining mechanism with limited ecosystem impact",
+        "ai_context": "Less emphasis on democratic potential"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Privacy Advocates",
+          "note": "Primary target with 20/40 query responses"
+        },
+        {
+          "name": "Decentralization Enthusiasts",
+          "note": "Secondary target with 20/40 query responses"
+        },
+        {
+          "name": "Cryptography Researchers",
+          "note": "Technical detail appeals"
+        },
+        {
+          "name": "Anti-Surveillance Users",
+          "note": "Mandatory privacy positioning"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Enterprise Privacy",
+          "note": "Less than 5% current market representation"
+        },
+        {
+          "name": "Institutional Crypto Investors",
+          "note": "7% potential market penetration"
+        },
+        {
+          "name": "Academic Research Community",
+          "note": "12% untapped segment"
+        },
+        {
+          "name": "Global Privacy-First Markets",
+          "note": "15% growth potential against Zcash/Monero"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "100% shielded transactions",
+        "No trusted setup required",
+        "CPU-friendly mining mechanism",
+        "Cryptographically clean architecture"
+      ],
+      "opportunities": [
+        "Expand technical documentation",
+        "Create more comparative content",
+        "Develop enterprise privacy use cases",
+        "Build academic research partnerships"
+      ],
+      "gaps": [
+        "Limited AI search visibility",
+        "Minimal competitive positioning",
+        "Lacks mainstream cryptocurrency recognition",
+        "Underdeveloped marketing narrative"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create comprehensive ZK-proof explainer content",
+        "Develop 'Juno vs Zcash/Monero' comparison guide",
+        "Produce academic-level cryptography whitepapers",
+        "Build technical deep-dive blog series",
+        "Develop enterprise privacy use-case documentation"
+      ],
+      "link_building": [
+        "Guest post on cryptography research blogs",
+        "Engage with privacy-focused cryptocurrency forums",
+        "Build academic citation network",
+        "Create technical video content for YouTube",
+        "Develop podcast/webinar collaboration strategy"
+      ],
+      "quick_wins": [
+        "Optimize homepage for AI search keywords",
+        "Update metadata for better AI comprehension",
+        "Implement structured data markup",
+        "Create FAQ targeting specific AI query patterns",
+        "Develop clear, concise technical summaries"
+      ]
+    }
+  }
+}
