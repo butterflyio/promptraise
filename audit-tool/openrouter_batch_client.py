@@ -226,7 +226,7 @@ class OpenRouterBatchClient:
         return self._call_with_json_retry(model, messages, max_tokens=1024)
 
     def _extract_competitors_from_text(self, text: str, brand_variant: str,
-                                      seed_competitors: set = None) -> list:
+                                      seed_competitors: set = None) -> tuple:
         text_lower = text.lower()
         competitors = []
         found = set()
@@ -252,7 +252,23 @@ class OpenRouterBatchClient:
                 found.add(comp_name)
                 competitors.append(comp_name)
 
-        return competitors
+        positions = {}
+        lines = text.split('\n')
+        for canonical in found:
+            aliases = ALIAS_MAP.get(canonical, [canonical])
+            for i, line in enumerate(lines[:20]):
+                line_lower = line.lower()
+                if any(alias in line_lower for alias in aliases):
+                    positions[canonical] = i + 1
+                    break
+        for comp_name in competitors:
+            if comp_name not in positions:
+                for i, line in enumerate(lines[:20]):
+                    if comp_name in line.lower():
+                        positions[comp_name] = i + 1
+                        break
+
+        return competitors, positions
 
     def _extract_sources_from_text(self, text: str) -> list:
         domains = set()
@@ -441,7 +457,7 @@ class OpenRouterBatchClient:
                             brand_rank = structured.get("brand_rank")
                             sources = structured.get("sources", [])
                         else:
-                            competitors_list = self._extract_competitors_from_text(
+                            competitors_list, mention_position = self._extract_competitors_from_text(
                                 raw, brand_variant, seed_set
                             )
                             brand_mentioned, brand_rank = self._check_brand_in_text(raw, brand_variant)
@@ -455,6 +471,7 @@ class OpenRouterBatchClient:
                             "model": model,
                             "raw_text": raw,
                             "competitors_mentioned": competitors_list,
+                            "mention_position": mention_position if not use_structured_extraction else {},
                             "sources_cited": sources,
                             "brand_mentioned": brand_mentioned,
                             "brand_rank": brand_rank,
@@ -482,23 +499,27 @@ class OpenRouterBatchClient:
         for resp in responses:
             for comp in resp.get("competitors_mentioned", []):
                 if comp not in mention_buckets:
-                    mention_buckets[comp] = {"total": 0, "by_model": {}, "by_question": set()}
+                    mention_buckets[comp] = {"total": 0, "by_model": {}, "by_question": set(), "mention_positions": []}
                 mention_buckets[comp]["total"] += 1
                 model_key = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
                 if model_key not in mention_buckets[comp]["by_model"]:
                     mention_buckets[comp]["by_model"][model_key] = 0
                 mention_buckets[comp]["by_model"][model_key] += 1
                 mention_buckets[comp]["by_question"].add(resp["question"][:50])
+                pos = resp.get("mention_position", {}).get(comp)
+                if pos is not None:
+                    mention_buckets[comp]["mention_positions"].append(pos)
 
         if include_all_discovered:
             for seed_name in seed_names:
                 if seed_name not in mention_buckets:
-                    mention_buckets[seed_name] = {"total": 0, "by_model": {}, "by_question": set()}
+                    mention_buckets[seed_name] = {"total": 0, "by_model": {}, "by_question": set(), "mention_positions": []}
 
         overall_competitors = {}
         for comp, bucket in mention_buckets.items():
             appearance_pct = round((bucket["total"] / total) * 100, 1) if total > 0 else 0
-            avg_rank = round(bucket["total"] / len(bucket.get("by_question", [])), 2) if bucket.get("by_question") else 0
+            positions = bucket.get("mention_positions", [])
+            avg_rank = round(sum(positions) / len(positions), 2) if positions else 0
             providers = list(bucket.get("by_model", {}).keys())
             overall_competitors[comp] = {
                 "name": comp,
@@ -524,27 +545,29 @@ class OpenRouterBatchClient:
                 by_ct[ct] = {}
             for comp in resp.get("competitors_mentioned", []):
                 if comp not in by_ct[ct]:
-                    by_ct[ct][comp] = 0
-                by_ct[ct][comp] += 1
+                    by_ct[ct][comp] = {"count": 0, "positions": [], "models": set()}
+                by_ct[ct][comp]["count"] += 1
+                pos = resp.get("mention_position", {}).get(comp)
+                if pos is not None:
+                    by_ct[ct][comp]["positions"].append(pos)
+                model_key = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
+                by_ct[ct][comp]["models"].add(model_key)
 
         by_customer_type = []
         for ct_name, comps in by_ct.items():
             ct_comps = []
-            seed_in_ct = False
-            for comp_name, count in comps.items():
+            for comp_name, data in comps.items():
                 if comp_name == brand_lower:
                     continue
+                count = data["count"]
                 pct = round((count / total) * 100, 1) if total > 0 else 0
-                providers = []
-                for resp in responses:
-                    if comp_name in resp.get("competitors_mentioned", []):
-                        mk = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
-                        if mk not in providers:
-                            providers.append(mk)
+                positions = data["positions"]
+                avg_rank = round(sum(positions) / len(positions), 2) if positions else 0
+                providers = list(data["models"])
                 ct_comps.append({
                     "name": comp_name,
                     "appearance_percentage": pct,
-                    "avg_rank": 0,
+                    "avg_rank": avg_rank,
                     "providers": providers,
                     "is_own": False,
                 })
@@ -552,11 +575,17 @@ class OpenRouterBatchClient:
             if include_all_discovered:
                 for seed_name in seed_names:
                     if seed_name not in [c["name"] for c in ct_comps]:
+                        providers = []
+                        for resp in responses:
+                            if seed_name in resp.get("competitors_mentioned", []):
+                                mk = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
+                                if mk not in providers:
+                                    providers.append(mk)
                         ct_comps.append({
                             "name": seed_name,
                             "appearance_percentage": 0,
                             "avg_rank": 0,
-                            "providers": [],
+                            "providers": providers,
                             "is_own": False,
                         })
 
