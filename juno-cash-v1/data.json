@@ -14,24 +14,24 @@
     "score_status": "Zero AI Visibility",
     "total_responses": 40,
     "responses_per_type": 20,
-    "unique_competitors": 10,
-    "own_mentioned": false,
-    "own_appearance_pct": 0,
-    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "unique_competitors": 9,
+    "own_mentioned": true,
+    "own_appearance_pct": 2.5,
+    "own_appearance_note": "Site mentioned in AI responses",
     "hero_comparison": [
       {
-        "value": "0%",
+        "value": "2.5%",
         "label": "Juno Cash Visibility",
-        "trend": "down"
-      },
-      {
-        "value": "12.5%",
-        "label": "monero (Leader)",
         "trend": ""
       },
       {
-        "value": "12.5%",
-        "label": "zcash (#2)",
+        "value": "15.0%",
+        "label": "Monero",
+        "trend": ""
+      },
+      {
+        "value": "15.0%",
+        "label": "Zcash",
         "trend": ""
       }
     ]
@@ -44,99 +44,80 @@
         {
           "name": "Monero",
           "appearance": 12.5,
-          "rank": 0,
+          "rank": 7.6,
           "providers": [
-            "deepseek",
-            "claude"
+            "claude",
+            "deepseek"
           ],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Zcash",
           "appearance": 12.5,
-          "rank": 0,
+          "rank": 9.2,
           "providers": [
-            "deepseek",
-            "claude"
+            "claude",
+            "deepseek"
           ],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Dash",
           "appearance": 7.5,
-          "rank": 0,
+          "rank": 14.67,
           "providers": [
-            "deepseek",
-            "claude"
+            "claude",
+            "deepseek"
           ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Veil",
-          "appearance": 2.5,
-          "rank": 0,
-          "providers": [
-            "claude"
-          ],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Grin",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Firo",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Beam",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Horizen",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "PIVX",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Railgun",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
+        },
+        {
+          "name": "PIVX",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Horizen",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
         }
       ],
       "total_responses": 20,
       "provider_order_summary": {
-        "deepseek": 0,
-        "claude": 1
+        "deepseek": 10,
+        "claude": 10
       },
       "has_distinct_competitor_data": true,
       "data_note": null
@@ -148,259 +129,125 @@
         {
           "name": "Monero",
           "appearance": 2.5,
-          "rank": 0,
+          "rank": 11.0,
           "providers": [
-            "deepseek",
-            "claude"
+            "deepseek"
           ],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Zcash",
           "appearance": 2.5,
-          "rank": 0,
+          "rank": 15.0,
           "providers": [
-            "deepseek",
-            "claude"
+            "deepseek"
           ],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Grin",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Firo",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Dash",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Beam",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Horizen",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "PIVX",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
         },
         {
           "name": "Railgun",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "isOwn": false
+        },
+        {
+          "name": "PIVX",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Horizen",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Dash",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [
+            "deepseek",
+            "claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false
         }
       ],
       "total_responses": 20,
       "provider_order_summary": {
-        "deepseek": 0,
-        "claude": 1
+        "deepseek": 10,
+        "claude": 10
       },
       "has_distinct_competitor_data": true,
       "data_note": null
     }
   ],
-  "keywords": [
+  "keywords": [],
+  "sources": [
     {
-      "text": "privacy",
-      "count": 29
+      "name": "cointelegraph.com",
+      "url": "https://cointelegraph.com",
+      "mentions": 1
     },
     {
-      "text": "zero-knowledge",
-      "count": 12
+      "name": "decrypt.co",
+      "url": "https://decrypt.co",
+      "mentions": 1
     },
     {
-      "text": "stealth address",
-      "count": 11
-    },
-    {
-      "text": "ring signatures",
-      "count": 9
-    },
-    {
-      "text": "staking",
-      "count": 9
-    },
-    {
-      "text": "private",
-      "count": 7
-    },
-    {
-      "text": "governance",
-      "count": 7
-    },
-    {
-      "text": "monero",
-      "count": 6
-    },
-    {
-      "text": "zcash",
-      "count": 6
-    },
-    {
-      "text": "defi",
-      "count": 4
-    },
-    {
-      "text": "zk",
-      "count": 3
-    },
-    {
-      "text": "view key",
-      "count": 3
-    },
-    {
-      "text": "shielded",
-      "count": 3
-    },
-    {
-      "text": "mandatory",
-      "count": 2
-    },
-    {
-      "text": "anonymous",
-      "count": 2
-    },
-    {
-      "text": "mixer",
-      "count": 1
-    },
-    {
-      "text": "tumbler",
-      "count": 1
-    },
-    {
-      "text": "onion routing",
-      "count": 1
-    },
-    {
-      "text": "cpu mining",
-      "count": 1
-    },
-    {
-      "text": "surveillance",
-      "count": 1
-    },
-    {
-      "text": "yield",
-      "count": 1
+      "name": "github.com",
+      "url": "https://github.com",
+      "mentions": 1
     }
   ],
-  "sources": [],
-  "keyword_opportunities": [
+  "keyword_opportunities": [],
+  "source_opportunities": [
     {
-      "text": "How can I prevent my income and spending patterns from being publicly visible?",
-      "type": "missing",
-      "persona": "Independent Professional"
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 1
     },
     {
-      "text": "What mechanisms exist to selectively reveal transaction details only to trusted parties?",
-      "type": "missing",
-      "persona": "Independent Professional"
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 1
     },
     {
-      "text": "Can I maintain complete anonymity while still having a transparent accounting option?",
-      "type": "missing",
-      "persona": "Independent Professional"
-    },
-    {
-      "text": "How does this platform prevent third-party tracking of my financial movements?",
-      "type": "missing",
-      "persona": "Independent Professional"
-    },
-    {
-      "text": "What protections exist against potential data breaches or unauthorized information exposure?",
-      "type": "missing",
-      "persona": "Independent Professional"
-    },
-    {
-      "text": "How does mandatory privacy differ from optional privacy models?",
-      "type": "missing",
-      "persona": "Digital Rights Advocate"
-    },
-    {
-      "text": "What technical measures prevent transaction metadata from being intercepted?",
-      "type": "missing",
-      "persona": "Digital Rights Advocate"
-    },
-    {
-      "text": "Can government agencies or corporations trace my financial activities?",
-      "type": "missing",
-      "persona": "Digital Rights Advocate"
-    },
-    {
-      "text": "What economic incentives support maintaining user privacy infrastructure?",
-      "type": "missing",
-      "persona": "Digital Rights Advocate"
-    },
-    {
-      "text": "How are transaction validations performed without compromising personal information?",
-      "type": "missing",
-      "persona": "Digital Rights Advocate"
-    },
-    {
-      "text": "What hardware requirements are needed to participate in network validation?",
-      "type": "missing",
-      "persona": "Technical Miner"
-    },
-    {
-      "text": "How does CPU-based mining prevent centralization by specialized equipment manufacturers?",
-      "type": "missing",
-      "persona": "Technical Miner"
-    },
-    {
-      "text": "What are the current rewards for contributing computational resources?",
-      "type": "missing",
-      "persona": "Technical Miner"
-    },
-    {
-      "text": "Can I run a validation node from my personal computer?",
-      "type": "missing",
-      "persona": "Technical Miner"
-    },
-    {
-      "text": "How are mining rewards distributed across network participants?",
-      "type": "missing",
-      "persona": "Technical Miner"
+      "name": "github.com",
+      "domain": "github.com",
+      "type": "competitor",
+      "mentions": 1
     }
   ],
-  "source_opportunities": [],
   "provider_coverage": {
-    "deepseek": 15,
-    "claude": 55
+    "deepseek": 50,
+    "claude": 50
   },
   "deepseek_data": {
     "analyzed": true,
