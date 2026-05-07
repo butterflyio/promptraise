@@ -6,7 +6,7 @@ AI-powered competitive analysis and market positioning audits using multi-model 
 
 ### ICN Global - GPU Bare Metal Infrastructure
 
-**[View ICN Dashboard →](dashboards/icn-global/index.html)**
+**[View ICN Dashboard →](icn-dashboard.html)**
 
 GPU bare metal infrastructure provider for AI workloads. Comprehensive competitive analysis across:
 - **Enterprise AI Integration** segment
