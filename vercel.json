@@ -1,0 +1,11 @@
+{
+  "buildCommand": "echo 'Static files only'",
+  "outputDirectory": "docs",
+  "framework": "static",
+  "rewrites": [
+    {
+      "source": "/:path*",
+      "destination": "/:path*.html"
+    }
+  ]
+}

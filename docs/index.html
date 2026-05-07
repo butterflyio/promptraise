@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PromptRaise - AI Visibility Dashboards</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0F0F0F 0%, #1a1a1a 100%);
+            color: #DEDCD7;
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container { max-width: 1000px; margin: 0 auto; }
+        h1 { 
+            background: linear-gradient(135deg, #67FF67, #3D6944);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 0.5rem;
+            font-size: 3rem;
+        }
+        .subtitle { color: #C9CDD2; margin-bottom: 3rem; font-size: 1.2rem; }
+        .dashboards { display: grid; gap: 2rem; }
+        .dashboard-card {
+            background: #242628;
+            border: 1px solid #3A3C40;
+            border-radius: 12px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+        .dashboard-card:hover {
+            border-color: #67FF67;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(103, 255, 103, 0.1);
+        }
+        .dashboard-card h2 {
+            color: #67FF67;
+            margin-bottom: 0.5rem;
+        }
+        .dashboard-card p { color: #C9CDD2; margin-bottom: 1rem; }
+        .dashboard-card .meta {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.9rem;
+            color: #999;
+        }
+        .badge {
+            background: rgba(103, 255, 103, 0.1);
+            color: #67FF67;
+            padding: 0.25rem 0.75rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        .cta {
+            display: inline-block;
+            background: linear-gradient(135deg, #67FF67, #3D6944);
+            color: #0F0F0F;
+            padding: 0.75rem 1.5rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            font-weight: 600;
+        }
+        .footer { text-align: center; margin-top: 4rem; color: #999; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>PromptRaise</h1>
+        <p class="subtitle">AI Visibility Dashboards & Competitive Intelligence</p>
+        
+        <div class="dashboards">
+            <a href="icn-dashboard.html" class="dashboard-card">
+                <h2>ICN Global</h2>
+                <p>GPU Bare Metal Infrastructure for AI Workloads</p>
+                <div class="meta">
+                    <span class="badge">80 Responses</span>
+                    <span class="badge">4 LLMs</span>
+                    <span class="badge">6 Competitors</span>
+                </div>
+                <div class="cta">View Dashboard →</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>PromptRaise © 2026 | <a href="https://github.com/butterflyio/promptraise" style="color: #67FF67;">GitHub Repository</a></p>
+        </div>
+    </div>
+</body>
+</html>
