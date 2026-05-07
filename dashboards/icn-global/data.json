@@ -1,0 +1,449 @@
+{
+  "site": {
+    "name": "ICN",
+    "url": "https://www.icn.global/",
+    "domain": "www.icn.global",
+    "slug": "icn-global",
+    "analysis_id": "openrouter-icn-global",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 07, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 7,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "ICN Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "7.5%",
+        "label": "dash (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "5.0%",
+        "label": "verge (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Enterprise AI Research",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "dash",
+          "appearance": 7.5,
+          "rank": 12.0,
+          "providers": [
+            "claude",
+            "gemini",
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "verge",
+          "appearance": 5.0,
+          "rank": 14.0,
+          "providers": [
+            "gemini",
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "monero",
+          "appearance": 5.0,
+          "rank": 12.0,
+          "providers": [
+            "gemini",
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "zcash",
+          "appearance": 5.0,
+          "rank": 12.0,
+          "providers": [
+            "gemini",
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pirate",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "railgun",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "claude": 0,
+        "gemini": 1,
+        "deepseek": 2
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Computational Scale-Up Clients",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "dash",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "monero",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pirate",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "zcash",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "railgun",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {},
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "data",
+      "count": 121
+    },
+    {
+      "text": "cloud",
+      "count": 75
+    },
+    {
+      "text": "name",
+      "count": 61
+    },
+    {
+      "text": "response",
+      "count": 56
+    },
+    {
+      "text": "resources",
+      "count": 56
+    },
+    {
+      "text": "privacy",
+      "count": 55
+    },
+    {
+      "text": "network",
+      "count": 54
+    },
+    {
+      "text": "hardware",
+      "count": 52
+    },
+    {
+      "text": "access",
+      "count": 52
+    },
+    {
+      "text": "specific",
+      "count": 44
+    }
+  ],
+  "sources": [
+    {
+      "name": "arxiv.org",
+      "url": "https://arxiv.org",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How quickly can I provision a multi-node GPU cluster for machine learning simulations?",
+      "type": "missing",
+      "persona": "Academic Research Lead"
+    },
+    {
+      "text": "What performance benchmarks can I expect for large-scale neural network training?",
+      "type": "missing",
+      "persona": "Academic Research Lead"
+    },
+    {
+      "text": "What data sovereignty protections are available for sensitive research data?",
+      "type": "missing",
+      "persona": "Academic Research Lead"
+    },
+    {
+      "text": "How does per-hour GPU pricing compare to maintaining on-premises infrastructure?",
+      "type": "missing",
+      "persona": "Academic Research Lead"
+    },
+    {
+      "text": "What global data center regions support seamless multi-region deployment?",
+      "type": "missing",
+      "persona": "Enterprise AI Development Manager"
+    },
+    {
+      "text": "How can I programmatically manage server resources across different teams?",
+      "type": "missing",
+      "persona": "Enterprise AI Development Manager"
+    },
+    {
+      "text": "What are the security protocols for accessing specialized computing environments?",
+      "type": "missing",
+      "persona": "Enterprise AI Development Manager"
+    },
+    {
+      "text": "Can I implement consistent hardware configurations across international offices?",
+      "type": "missing",
+      "persona": "Enterprise AI Development Manager"
+    },
+    {
+      "text": "What monitoring and reporting capabilities exist for resource utilization?",
+      "type": "missing",
+      "persona": "Enterprise AI Development Manager"
+    },
+    {
+      "text": "What's the minimum hardware configuration to prototype a large language model?",
+      "type": "missing",
+      "persona": "Startup Technical Founder"
+    },
+    {
+      "text": "How quickly can I scale compute resources as my product gains traction?",
+      "type": "missing",
+      "persona": "Startup Technical Founder"
+    },
+    {
+      "text": "Are there cost-effective options for experimental AI model development?",
+      "type": "missing",
+      "persona": "Startup Technical Founder"
+    },
+    {
+      "text": "Can I dynamically adjust server capabilities without long-term commitments?",
+      "type": "missing",
+      "persona": "Startup Technical Founder"
+    },
+    {
+      "text": "What NVIDIA hardware generations are currently available for advanced model training?",
+      "type": "missing",
+      "persona": "Machine Learning Engineering Lead"
+    },
+    {
+      "text": "How do I optimize workload distribution across multiple GPU configurations?",
+      "type": "missing",
+      "persona": "Machine Learning Engineering Lead"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "arxiv.org",
+      "domain": "arxiv.org",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "claude": 12,
+    "gemini": 50,
+    "deepseek": 50,
+    "openai": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "GPU Bare Metal",
+        "evidence": "Low recognition in AI search responses",
+        "priority": "HIGH"
+      },
+      {
+        "term": "ICNT Token",
+        "evidence": "No context in AI results",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Enterprise-Grade Infrastructure",
+        "evidence": "Vague placement in AI understanding",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Cloud Transactions",
+        "evidence": "Unclear semantic mapping",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Data Center Network",
+        "evidence": "Weak AI association",
+        "priority": "LOW"
+      },
+      {
+        "term": "Ecosystem ARR",
+        "evidence": "No AI comprehension",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "GPU Bare Metal Infrastructure",
+        "site_context": "Technical offering",
+        "ai_uses": "Cloud GPU Services",
+        "ai_context": "Generic category"
+      },
+      {
+        "site_says": "23k TPS Cloud Transactions",
+        "site_context": "Performance metric",
+        "ai_uses": "Computational Capacity",
+        "ai_context": "Abstracted measurement"
+      },
+      {
+        "site_says": "Global Scalable High-Performance",
+        "site_context": "Marketing language",
+        "ai_uses": "Distributed Computing",
+        "ai_context": "Technical description"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Enterprise AI Research",
+          "note": "Strong technical positioning"
+        },
+        {
+          "name": "Computational Scale-Up Clients",
+          "note": "Direct infrastructure offering"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Startup AI Labs",
+          "note": "7.5% competitor market share"
+        },
+        {
+          "name": "Research Institutions",
+          "note": "5% potential unaddressed market"
+        },
+        {
+          "name": "Blockchain AI Projects",
+          "note": "Emerging 5% segment"
+        },
+        {
+          "name": "Edge Computing Developers",
+          "note": "Minimal current penetration"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "20+ Global Data Center Locations",
+        "Multiple NVIDIA GPU Options",
+        "Enterprise-Grade Infrastructure",
+        "99.9% Uptime Commitment"
+      ],
+      "opportunities": [
+        "Expand Startup AI Lab Partnerships",
+        "Create More Technical Content",
+        "Develop Blockchain AI Use Cases",
+        "Enhance Global Market Messaging"
+      ],
+      "gaps": [
+        "Limited AI Search Visibility",
+        "Weak Competitor Differentiation",
+        "Inconsistent Global Narrative",
+        "Narrow Market Positioning"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create NVIDIA GPU Comparison Whitepaper",
+        "Develop Blockchain Infrastructure Case Studies",
+        "Produce Technical Deep Dive Videos",
+        "Write Comprehensive AI Infrastructure Guide",
+        "Generate Competitive Landscape Analysis"
+      ],
+      "link_building": [
+        "Partner with AI Research Journals",
+        "Guest Post on Technical Platforms",
+        "Engage Technology Influencers",
+        "Sponsor AI/Blockchain Conferences",
+        "Create Collaborative Research Content"
+      ],
+      "quick_wins": [
+        "Update Meta Descriptions for SEO",
+        "Optimize Homepage for AI Keywords",
+        "Implement Schema Markup",
+        "Refresh Customer Testimonials",
+        "Create GPU Cost Comparison Calculator"
+      ]
+    }
+  }
+}

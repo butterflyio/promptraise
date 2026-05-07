@@ -23,6 +23,7 @@ from urllib.parse import urlparse
 from dotenv import load_dotenv
 
 from botsee_client import BotSeeClient, BotSeeError
+from competitor_discovery import run_competitor_discovery, discover_competitors_from_audit_responses
 from dashboard_renderer import DashboardRenderer
 from deepseek_client import DeepSeekClient
 from insights_generator import InsightsGenerator
@@ -1189,18 +1190,48 @@ def run_post_botsee(args):
         print_dry_run(ct_data, site_name, site_url)
         sys.exit(0)
 
+    # Stage 2b: Generate dynamic discovery questions from homepage context
+    discovery_questions = stage_generate_discovery_questions_openrouter(
+        or_client, site_name, site_url, homepage_text, state
+    )
+
+    # Stage 2c: Dynamic competitor discovery (3-layer validation)
+    dynamic_competitors, competitor_aliases_map = stage_discover_competitors_dynamic(
+        or_client, site_name, site_url, homepage_text, state
+    )
+    
+    # If < 3 competitors validated, add fallback discovery questions
+    if len(dynamic_competitors) < 3:
+        log(f"  ⚠ Only {len(dynamic_competitors)} competitors discovered, adding fallback questions...")
+        fallback_questions = [
+            f"Which companies would you consider as main competitors to {site_name}?",
+            f"How does {site_name} compare to other options in this market?",
+            f"What are the top alternatives to {site_name}?",
+        ]
+        discovery_questions.extend(fallback_questions)
+        state.set("discovery_questions", discovery_questions)
+
     # Stage 3: Discovery batch — 5 questions × 4 models
-    discovered_competitors = stage_discovery_batch(or_client, site_name, state)
-    log(f"  Discovered {len(discovered_competitors)} competitors")
+    discovered_competitors = stage_discovery_batch(
+        or_client, site_name, state, discovery_questions=discovery_questions
+    )
+    log(f"  Discovered {len(discovered_competitors)} competitors from discovery batch")
+    
+    # Merge dynamic + discovered competitors (dynamic takes priority)
+    merged_competitors = {**discovered_competitors, **dynamic_competitors}
+    log(f"  Final competitor set: {len(merged_competitors)} unique competitors")
 
     # Stage 4: Full batch query — 20 questions × 4 models
     batch_result = stage_full_batch_query(or_client, site_name, ct_data, state,
-                                          competitor_seed=discovered_competitors)
+                                          competitor_seed=merged_competitors,
+                                          competitor_aliases_map=competitor_aliases_map)
 
     # Stage 5: Aggregate results (competitors + keywords + sources + opportunities)
     aggregated = stage_aggregate_openrouter_results(
-        or_client, batch_result, site_name, discovered_competitors, state
+        or_client, batch_result, site_name, merged_competitors, state,
+        competitor_aliases_map=competitor_aliases_map
     )
+
 
     # Stage 6: Generate insights (DeepSeek analysis removed)
     competitors_payload = aggregated.get("competitors", {})
@@ -1330,8 +1361,77 @@ def stage_generate_ct_personas_openrouter(client: OpenRouterBatchClient,
     return result
 
 
+def stage_generate_discovery_questions_openrouter(client: OpenRouterBatchClient,
+                                                   site_name: str, site_url: str,
+                                                   homepage_text: str,
+                                                   state: StateManager) -> list:
+    """Generate competitor discovery questions dynamically from homepage context."""
+    if state.is_complete("generate_discovery_questions"):
+        log("  ✓ Skipping generate_discovery_questions (already complete)")
+        return state.get("discovery_questions", [])
+
+    log("Generating competitor discovery questions from website context...")
+    questions = client.generate_discovery_questions(site_name, site_url, homepage_text)
+    log(f"  ✓ Generated {len(questions)} discovery questions")
+    state.mark_complete("generate_discovery_questions", questions)
+    state.set("discovery_questions", questions)
+    return questions
+
+
+def stage_discover_competitors_dynamic(client: OpenRouterBatchClient,
+                                       site_name: str, site_url: str,
+                                       homepage_text: str,
+                                       state: StateManager) -> tuple:
+    """
+    Dynamic competitor discovery using 3-layer validation.
+    Layer 1: Web scrape
+    Layer 2: LLM credibility scoring
+    Layer 3: Post-audit response validation (done later)
+    
+    Returns: (competitors_dict, competitor_aliases_map)
+    """
+    if state.is_complete("discover_competitors_dynamic"):
+        log("  ✓ Skipping dynamic competitor discovery (already complete)")
+        competitors = state.get("discovered_competitors_dynamic", {})
+        aliases = state.get("competitor_aliases_map", {})
+        return competitors, aliases
+
+    log("Running dynamic competitor discovery (3-layer validation)...")
+    
+    try:
+        log("  Layer 1: Identifying Tier-1 competitors from website context...")
+        competitors, aliases = run_competitor_discovery(
+            homepage_url=site_url,
+            homepage_text=homepage_text,
+            client_name=site_name,
+            openrouter_client=client,
+            min_competitors=5,
+            max_competitors=10
+        )
+        
+        log(f"  ✓ Discovered {len(competitors)} Tier-1 competitors")
+        for comp_name, comp_data in competitors.items():
+            score = comp_data.get("credibility_score", 0)
+            log(f"    - {comp_name} (credibility: {score}/5)")
+        
+        state.mark_complete("discover_competitors_dynamic", competitors)
+        state.set("discovered_competitors_dynamic", competitors)
+        state.set("competitor_aliases_map", aliases)
+        
+        return competitors, aliases
+    except KeyboardInterrupt:
+        raise
+    except Exception as e:
+        log(f"  ⚠ Dynamic competitor discovery failed: {e}")
+        log(f"  ⚠ Will use simple discovery + audit response fallback")
+        import traceback
+        traceback.print_exc()
+        return {}, {}
+
+
 def stage_discovery_batch(client: OpenRouterBatchClient, brand_name: str,
-                          state: StateManager) -> list:
+                          state: StateManager,
+                          discovery_questions: list = None) -> list:
     """Run 5 discovery questions × 4 models to bootstrap competitor list."""
     if state.is_complete("discovery_batch"):
         log("  ✓ Skipping discovery_batch (already complete)")
@@ -1343,8 +1443,9 @@ def stage_discovery_batch(client: OpenRouterBatchClient, brand_name: str,
         "anthropic/claude-3.5-haiku",
         "google/gemini-2.0-flash-001",
         "openai/gpt-4o-mini",
-    ])
-    competitors = client.extract_competitors_from_discovery(responses, brand_name)
+    ], discovery_questions=discovery_questions)
+    competitors = client.extract_competitors_from_discovery(responses, brand_name,
+                                                         min_mentions=1, min_question_types=1)
     log(f"  ✓ Discovered {len(competitors)} competitors")
 
     state.mark_complete("discovery_batch", competitors)
@@ -1354,8 +1455,9 @@ def stage_discovery_batch(client: OpenRouterBatchClient, brand_name: str,
 
 def stage_full_batch_query(client: OpenRouterBatchClient, brand_name: str,
                           ct_data: dict, state: StateManager,
-                          competitor_seed: list = None) -> dict:
-    """Run 20 audit questions × 1 model (Claude Haiku for speed)."""
+                          competitor_seed: list = None,
+                          competitor_aliases_map: dict = None) -> dict:
+    """Run 20 audit questions × 4 models (80 calls total)."""
     if state.is_complete("full_batch"):
         log("  ✓ Skipping full_batch (already complete)")
         return state.get("batch_result")
@@ -1368,7 +1470,8 @@ def stage_full_batch_query(client: OpenRouterBatchClient, brand_name: str,
         "anthropic/claude-3.5-haiku",
         "google/gemini-2.0-flash-001",
         "openai/gpt-4o-mini",
-    ], use_structured_extraction=False, competitor_seed=comp_seed)
+    ], use_structured_extraction=False, competitor_seed=comp_seed,
+       competitor_aliases_map=competitor_aliases_map)
     log(f"  ✓ Got {len(result.get('responses', []))} responses")
 
     state.mark_complete("full_batch", result)
@@ -1379,7 +1482,8 @@ def stage_full_batch_query(client: OpenRouterBatchClient, brand_name: str,
 def stage_aggregate_openrouter_results(client: OpenRouterBatchClient,
                                         batch_result: dict, brand_name: str,
                                         competitor_list: list,
-                                        state: StateManager) -> dict:
+                                        state: StateManager,
+                                        competitor_aliases_map: dict = None) -> dict:
     """Aggregate batch results into competitors, keywords, sources, opportunities."""
     if state.is_complete("aggregate_openrouter"):
         log("  ✓ Skipping aggregate_openrouter (already complete)")
@@ -1389,7 +1493,8 @@ def stage_aggregate_openrouter_results(client: OpenRouterBatchClient,
 
     competitors_data = client.aggregate_competitors(
         batch_result, competitor_list, brand_name,
-        include_all_discovered=True
+        include_all_discovered=True,
+        competitor_aliases_map=competitor_aliases_map
     )
     keywords = client.extract_keywords(batch_result, brand_name)
     sources = client.extract_sources(batch_result)

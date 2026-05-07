@@ -89,6 +89,19 @@ ALIAS_MAP = {
     "macall": ["macall"],
     "bitcloud": ["bitcloud"],
     "verge": ["verge", "xvg", "verge currency"],
+    # GPU/AI Infrastructure providers
+    "coreweave": ["coreweave", "core weave"],
+    "lambda": ["lambda labs", "lambda"],
+    "vast": ["vast.ai", "vast"],
+    "runpod": ["runpod", "run pod"],
+    "crusoe": ["crusoe", "crusoe energy"],
+    "paperspace": ["paperspace", "paper space"],
+    "modal": ["modal", "modal labs"],
+    "nebius": ["nebius", "nebius ai"],
+    "gpu.ng": ["gpu.ng", "gpung"],
+    "tensordock": ["tensordock", "tensor dock"],
+    "leadersoftech": ["leadersoftech"],
+    "gpucloud": ["gpucloud", "gpu cloud"],
 }
 
 CANONICAL_NAMES = {}
@@ -146,6 +159,43 @@ Rules:
 - Exactly 2 customer types, 2 personas per customer type, 5 questions per persona (20 questions total)
 - Questions must be specific to {site_name}'s category — not generic crypto questions
 - NO generic crypto/blockchain/Web3 terms in any question
+- Return ONLY the JSON object"""
+
+
+DISCOVERY_GENERATION_SYSTEM = """You are an AI visibility analyst specializing in identifying competitors for {site_name}.
+Generate exactly 5 competitor discovery questions for the brand's market category.
+
+Questions must:
+- Be specific to {site_name}'s category (NOT generic crypto/blockchain)
+- Cover different discovery angles: comparison, category awareness, recommendation, new entrants, general awareness
+- Be phrased as real user questions to an AI search engine
+- NOT contain generic terms: crypto, cryptocurrency, blockchain, web3, web2, defi, nft, token, coin, altcoin, memecoin, trading, investing, hodl, whale, altseason
+
+Always respond with valid JSON only. No markdown fences."""
+
+
+DISCOVERY_GENERATION_USER = """Site: {site_name} ({site_url})
+
+Homepage context:
+{homepage_text}
+
+Generate exactly 5 competitor discovery questions for {site_name}'s market category.
+Return a JSON object with this exact shape:
+{{
+  "discovery_questions": [
+    "<question 1>",
+    "<question 2>",
+    "<question 3>",
+    "<question 4>",
+    "<question 5>"
+  ]
+}}
+
+Rules:
+- Exactly 5 questions, no more, no less
+- Each question should discover competitors from a different angle
+- Questions must be specific to the brand's category, not generic
+- NO generic crypto/blockchain/Web3 terms
 - Return ONLY the JSON object"""
 
 
@@ -226,13 +276,17 @@ class OpenRouterBatchClient:
         return self._call_with_json_retry(model, messages, max_tokens=1024)
 
     def _extract_competitors_from_text(self, text: str, brand_variant: str,
-                                      seed_competitors: set = None) -> tuple:
+                                      seed_competitors: set = None,
+                                      competitor_aliases_map: dict = None) -> tuple:
         text_lower = text.lower()
         competitors = []
         found = set()
         seed = seed_competitors or set()
+        
+        # Use provided aliases map, fall back to ALIAS_MAP
+        aliases_map = competitor_aliases_map if competitor_aliases_map else ALIAS_MAP
 
-        for canonical, aliases in ALIAS_MAP.items():
+        for canonical, aliases in aliases_map.items():
             if canonical in ("bitcoin", "ethereum"):
                 continue
             for alias in aliases:
@@ -255,7 +309,7 @@ class OpenRouterBatchClient:
         positions = {}
         lines = text.split('\n')
         for canonical in found:
-            aliases = ALIAS_MAP.get(canonical, [canonical])
+            aliases = aliases_map.get(canonical, [canonical])
             for i, line in enumerate(lines[:20]):
                 line_lower = line.lower()
                 if any(alias in line_lower for alias in aliases):
@@ -335,10 +389,33 @@ class OpenRouterBatchClient:
 
         return {"customer_types": validated_cts}
 
+    def generate_discovery_questions(self, site_name: str, site_url: str,
+                                     homepage_text: str) -> list:
+        messages = [
+            {"role": "system", "content": DISCOVERY_GENERATION_SYSTEM.format(site_name=site_name)},
+            {"role": "user", "content": DISCOVERY_GENERATION_USER.format(
+                site_name=site_name,
+                site_url=site_url,
+                homepage_text=(homepage_text or "(no homepage text)")[:3000],
+            )},
+        ]
+        result = self._call_with_json_retry(
+            "anthropic/claude-3.5-haiku", messages, max_tokens=1024
+        )
+        questions = result.get("discovery_questions", [])
+        if not questions or len(questions) < 5:
+            raise RuntimeError(f"Expected 5 discovery questions, got {len(questions)}")
+        return questions[:5]
+
     def discovery_batch_query(self, brand_name: str,
-                              models: list = None) -> list:
+                              models: list = None,
+                              discovery_questions: list = None) -> list:
         models = models or MODELS
-        questions = [q.format(brand_name=brand_name) for q in DISCOVERY_QUESTIONS]
+        if discovery_questions:
+            formatted = [q.format(brand_name=brand_name) if "{brand_name}" in q else q for q in discovery_questions]
+            questions = formatted
+        else:
+            questions = [q.format(brand_name=brand_name) for q in DISCOVERY_QUESTIONS]
         all_responses = []
 
         for model in models:
@@ -420,7 +497,8 @@ class OpenRouterBatchClient:
     def full_batch_query(self, brand_name: str, ct_persona_questions: list,
                          models: list = None,
                          use_structured_extraction: bool = False,
-                         competitor_seed: list = None) -> dict:
+                         competitor_seed: list = None,
+                         competitor_aliases_map: dict = None) -> dict:
         models = models or MODELS
         all_responses = []
         brand_variant = brand_name.lower().replace(" ", "").replace(".", "")
@@ -458,7 +536,7 @@ class OpenRouterBatchClient:
                             sources = structured.get("sources", [])
                         else:
                             competitors_list, mention_position = self._extract_competitors_from_text(
-                                raw, brand_variant, seed_set
+                                raw, brand_variant, seed_set, competitor_aliases_map=competitor_aliases_map
                             )
                             brand_mentioned, brand_rank = self._check_brand_in_text(raw, brand_variant)
                             sources = self._extract_sources_from_text(raw)
@@ -482,7 +560,8 @@ class OpenRouterBatchClient:
     def aggregate_competitors(self, batch_result: dict,
                               competitor_list: list,
                               brand_name: str,
-                              include_all_discovered: bool = True) -> dict:
+                              include_all_discovered: bool = True,
+                              competitor_aliases_map: dict = None) -> dict:
         responses = batch_result.get("responses", [])
         total = len(responses)
 
@@ -539,8 +618,10 @@ class OpenRouterBatchClient:
         own_mentioned = own_data.get("appearance_percentage", 0) > 0
 
         by_ct = {}
+        ct_response_counts = {}
         for resp in responses:
             ct = resp.get("ct_name", "Unknown")
+            ct_response_counts[ct] = ct_response_counts.get(ct, 0) + 1
             if ct not in by_ct:
                 by_ct[ct] = {}
             for comp in resp.get("competitors_mentioned", []):
@@ -555,12 +636,13 @@ class OpenRouterBatchClient:
 
         by_customer_type = []
         for ct_name, comps in by_ct.items():
+            ct_total = ct_response_counts.get(ct_name, 1)
             ct_comps = []
             for comp_name, data in comps.items():
                 if comp_name == brand_lower:
                     continue
                 count = data["count"]
-                pct = round((count / total) * 100, 1) if total > 0 else 0
+                pct = round((count / ct_total) * 100, 1) if ct_total > 0 else 0
                 positions = data["positions"]
                 avg_rank = round(sum(positions) / len(positions), 2) if positions else 0
                 providers = list(data["models"])
@@ -577,7 +659,7 @@ class OpenRouterBatchClient:
                     if seed_name not in [c["name"] for c in ct_comps]:
                         providers = []
                         for resp in responses:
-                            if seed_name in resp.get("competitors_mentioned", []):
+                            if resp.get("ct_name") == ct_name and seed_name in resp.get("competitors_mentioned", []):
                                 mk = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
                                 if mk not in providers:
                                     providers.append(mk)
@@ -593,7 +675,7 @@ class OpenRouterBatchClient:
             by_customer_type.append({
                 "customer_type_name": ct_name,
                 "competitors": ct_comps,
-                "total_responses": len(set(r["question"] for r in responses)),
+                "total_responses": len(set(r["question"] for r in responses if r.get("ct_name") == ct_name)),
             })
 
         return {
@@ -654,6 +736,7 @@ class OpenRouterBatchClient:
         }
         all_stops = stopwords | brand_words | generic_words
 
+        candidates = {}
         for text in all_texts:
             text_lower = text.lower()
             words = re.findall(r'\b[a-z][a-z0-9]{2,}\b', text_lower)

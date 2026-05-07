@@ -1,0 +1,135 @@
+{
+  "stages": {
+    "scrape_homepage": true,
+    "generate_ct_personas": true
+  },
+  "data": {
+    "site_url": "https://icn.ai",
+    "site_slug": "icn-global",
+    "site_name": "Icn",
+    "homepage_text": "(Failed to fetch homepage: 403 Client Error: Forbidden for url: https://www.atom.com/name/ICN.ai)",
+    "ct_persona_data": {
+      "customer_types": [
+        {
+          "name": "Enterprise AI Integration",
+          "description": "Large organizations seeking advanced artificial intelligence solutions for complex data processing and intelligent system deployment. Focused on scalable, secure AI technologies.",
+          "personas": [
+            {
+              "name": "Technical Decision Maker",
+              "description": "Senior technical executive evaluating cutting-edge AI infrastructure and integration capabilities",
+              "questions": [
+                "How can our machine learning models seamlessly integrate with existing enterprise architecture?",
+                "What performance benchmarks demonstrate Icn's AI computational efficiency?",
+                "Can your platform handle real-time data processing across multiple global data centers?",
+                "What security protocols protect sensitive algorithmic intellectual property?",
+                "How does your system adapt to evolving machine learning requirements?"
+              ]
+            },
+            {
+              "name": "Strategic Innovation Leader",
+              "description": "Business leader exploring transformative AI solutions to gain competitive technological advantages",
+              "questions": [
+                "What unique AI capabilities can differentiate our organizational intelligence?",
+                "How quickly can we implement intelligent automation across departments?",
+                "What case studies prove tangible business outcome improvements?",
+                "Can your platform provide predictive analytics for strategic decision-making?",
+                "How does your solution scale without exponential infrastructure costs?"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Research & Development",
+          "description": "Academic and industrial research teams developing next-generation intelligent systems and computational technologies. Prioritizing advanced algorithmic research.",
+          "personas": [
+            {
+              "name": "Academic Researcher",
+              "description": "University researcher investigating advanced computational intelligence methodologies",
+              "questions": [
+                "What novel algorithmic approaches does your platform support for complex modeling?",
+                "Can researchers access granular computational resources for experimental design?",
+                "How does your system handle multi-dimensional probabilistic modeling?",
+                "What collaborative tools enable cross-institutional research workflows?",
+                "Are there mechanisms for reproducibility and transparent computational experiments?"
+              ]
+            },
+            {
+              "name": "Industrial R&D Engineer",
+              "description": "Technology engineer developing specialized intelligent systems for industrial applications",
+              "questions": [
+                "How adaptable are your computational frameworks for domain-specific modeling?",
+                "What machine learning optimizations reduce computational resource requirements?",
+                "Can your platform simulate complex engineering scenario interactions?",
+                "What developer tools accelerate prototype intelligent system development?",
+                "How quickly can custom intelligent models be trained and deployed?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "stage_data": {
+    "scrape_homepage": "(Failed to fetch homepage: 403 Client Error: Forbidden for url: https://www.atom.com/name/ICN.ai)",
+    "generate_ct_personas": {
+      "customer_types": [
+        {
+          "name": "Enterprise AI Integration",
+          "description": "Large organizations seeking advanced artificial intelligence solutions for complex data processing and intelligent system deployment. Focused on scalable, secure AI technologies.",
+          "personas": [
+            {
+              "name": "Technical Decision Maker",
+              "description": "Senior technical executive evaluating cutting-edge AI infrastructure and integration capabilities",
+              "questions": [
+                "How can our machine learning models seamlessly integrate with existing enterprise architecture?",
+                "What performance benchmarks demonstrate Icn's AI computational efficiency?",
+                "Can your platform handle real-time data processing across multiple global data centers?",
+                "What security protocols protect sensitive algorithmic intellectual property?",
+                "How does your system adapt to evolving machine learning requirements?"
+              ]
+            },
+            {
+              "name": "Strategic Innovation Leader",
+              "description": "Business leader exploring transformative AI solutions to gain competitive technological advantages",
+              "questions": [
+                "What unique AI capabilities can differentiate our organizational intelligence?",
+                "How quickly can we implement intelligent automation across departments?",
+                "What case studies prove tangible business outcome improvements?",
+                "Can your platform provide predictive analytics for strategic decision-making?",
+                "How does your solution scale without exponential infrastructure costs?"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Research & Development",
+          "description": "Academic and industrial research teams developing next-generation intelligent systems and computational technologies. Prioritizing advanced algorithmic research.",
+          "personas": [
+            {
+              "name": "Academic Researcher",
+              "description": "University researcher investigating advanced computational intelligence methodologies",
+              "questions": [
+                "What novel algorithmic approaches does your platform support for complex modeling?",
+                "Can researchers access granular computational resources for experimental design?",
+                "How does your system handle multi-dimensional probabilistic modeling?",
+                "What collaborative tools enable cross-institutional research workflows?",
+                "Are there mechanisms for reproducibility and transparent computational experiments?"
+              ]
+            },
+            {
+              "name": "Industrial R&D Engineer",
+              "description": "Technology engineer developing specialized intelligent systems for industrial applications",
+              "questions": [
+                "How adaptable are your computational frameworks for domain-specific modeling?",
+                "What machine learning optimizations reduce computational resource requirements?",
+                "Can your platform simulate complex engineering scenario interactions?",
+                "What developer tools accelerate prototype intelligent system development?",
+                "How quickly can custom intelligent models be trained and deployed?"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
