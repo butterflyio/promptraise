@@ -1212,23 +1212,36 @@ def run_post_botsee(args):
         state.set("discovery_questions", discovery_questions)
 
     # Stage 3: Discovery batch — 5 questions × 4 models
-    discovered_competitors = stage_discovery_batch(
+    discovered_competitors_list = stage_discovery_batch(
         or_client, site_name, state, discovery_questions=discovery_questions
     )
-    log(f"  Discovered {len(discovered_competitors)} competitors from discovery batch")
+    log(f"  Discovered {len(discovered_competitors_list)} competitors from discovery batch")
     
-    # Merge dynamic + discovered competitors (dynamic takes priority)
-    merged_competitors = {**discovered_competitors, **dynamic_competitors}
-    log(f"  Final competitor set: {len(merged_competitors)} unique competitors")
+    # Convert list to dict format for merging: {"name": {"name": "...", ...}, ...}
+    discovered_competitors_dict = {}
+    for comp in discovered_competitors_list:
+        if isinstance(comp, dict):
+            name = comp.get("name", str(comp)).lower()
+            discovered_competitors_dict[name] = comp
+        else:
+            name = str(comp).lower()
+            discovered_competitors_dict[name] = {"name": name}
+    
+    # Merge dynamic + discovered competitors (dynamic takes priority for aliases)
+    merged_competitors_dict = {**discovered_competitors_dict, **dynamic_competitors}
+    log(f"  Final competitor set: {len(merged_competitors_dict)} unique competitors")
+    
+    # Convert back to list format for full_batch_query and aggregate_competitors
+    merged_competitors_list = list(merged_competitors_dict.values())
 
     # Stage 4: Full batch query — 20 questions × 4 models
     batch_result = stage_full_batch_query(or_client, site_name, ct_data, state,
-                                          competitor_seed=merged_competitors,
+                                          competitor_seed=merged_competitors_list,
                                           competitor_aliases_map=competitor_aliases_map)
 
     # Stage 5: Aggregate results (competitors + keywords + sources + opportunities)
     aggregated = stage_aggregate_openrouter_results(
-        or_client, batch_result, site_name, merged_competitors, state,
+        or_client, batch_result, site_name, merged_competitors_list, state,
         competitor_aliases_map=competitor_aliases_map
     )
 
