@@ -654,22 +654,9 @@ class OpenRouterBatchClient:
                     "is_own": False,
                 })
 
-            if include_all_discovered:
-                for seed_name in seed_names:
-                    if seed_name not in [c["name"] for c in ct_comps]:
-                        providers = []
-                        for resp in responses:
-                            if resp.get("ct_name") == ct_name and seed_name in resp.get("competitors_mentioned", []):
-                                mk = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
-                                if mk not in providers:
-                                    providers.append(mk)
-                        ct_comps.append({
-                            "name": seed_name,
-                            "appearance_percentage": 0,
-                            "avg_rank": 0,
-                            "providers": providers,
-                            "is_own": False,
-                        })
+            # NOTE: Removed include_all_discovered logic for this CT
+            # Only show competitors that were actually mentioned in this CT's responses
+            # This prevents showing 0% for competitors not mentioned in this segment
 
             ct_comps.sort(key=lambda c: c.get("appearance_percentage", 0), reverse=True)
             by_customer_type.append({
@@ -765,6 +752,15 @@ class OpenRouterBatchClient:
         """Extract sources cited across responses. Handles URLs, domains, and bare domain strings."""
         responses = batch_result.get("responses", [])
         source_counts = {}
+        
+        # Blocklist of bogus/generic domains to exclude
+        blocklist = {
+            "example.com", "example.org", "example.net",
+            "test.com", "test.org", "demo.com",
+            "localhost", "127.0.0.1",
+            "google.com", "google.co", "google.de",  # Generic search engines
+            "github.com", "twitter.com", "x.com", "reddit.com",  # Social/dev platforms
+        }
 
         for resp in responses:
             for src in resp.get("sources_cited", []):
@@ -773,7 +769,7 @@ class OpenRouterBatchClient:
                     continue
 
                 domain = self._extract_domain(src)
-                if domain and domain not in ("null", "none"):
+                if domain and domain not in ("null", "none") and domain not in blocklist:
                     source_counts[domain] = source_counts.get(domain, 0) + 1
 
         sorted_sources = sorted(source_counts.items(), key=lambda x: x[1], reverse=True)
@@ -821,51 +817,85 @@ class OpenRouterBatchClient:
 
     def find_source_opportunities(self, batch_result: dict,
                                    brand_name: str) -> list:
-        """Find high-value link building targets.
-
-        Strategy: websites that appear as citation sources in LLM responses
-        represent places where Perptools is being mentioned/referenced.
-        These are real link opportunities because the LLM is citing them
-        as authoritative sources — meaning they're already writing about
-        topics relevant to Perptools.
+        """Find strategic source opportunities for brand visibility.
+        
+        These are high-value placement targets where:
+        1. Competitors are already being cited (indicates active coverage)
+        2. Brand is NOT mentioned (gap to fill)
+        3. Domain is authoritative in the space
         """
         responses = batch_result.get("responses", [])
         brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
-
+        
+        # Track which domains mention competitors but NOT the brand
         domain_mentions = {}
+        brand_mentioned_in = set()
+        
         for resp in responses:
-            for src in resp.get("sources_cited", []):
-                domain = self._extract_domain(src)
-                if not domain or domain in ("null", "none") or brand_domain in domain:
-                    continue
-                if domain not in domain_mentions:
-                    domain_mentions[domain] = {"count": 0, "questions": set()}
-                domain_mentions[domain]["count"] += 1
-                domain_mentions[domain]["questions"].add(resp.get("question", "")[:80])
-
+            has_competitors = len(resp.get("competitors_mentioned", [])) > 0
+            has_brand = resp.get("brand_mentioned", False)
+            sources = resp.get("sources_cited", [])
+            
+            if has_brand:
+                for src in sources:
+                    domain = self._extract_domain(src)
+                    if domain:
+                        brand_mentioned_in.add(domain)
+            
+            if has_competitors and sources:
+                # Track domains that mention competitors
+                for src in sources:
+                    domain = self._extract_domain(src)
+                    if not domain or domain in ("null", "none") or brand_domain in domain:
+                        continue
+                    if domain not in domain_mentions:
+                        domain_mentions[domain] = {
+                            "count": 0,
+                            "competitor_count": 0,
+                            "questions": set(),
+                            "competitors": set()
+                        }
+                    domain_mentions[domain]["count"] += 1
+                    domain_mentions[domain]["competitor_count"] += len(resp.get("competitors_mentioned", []))
+                    domain_mentions[domain]["questions"].add(resp.get("question", "")[:80])
+                    domain_mentions[domain]["competitors"].update(resp.get("competitors_mentioned", []))
+        
+        # Blocklist
+        blocklist = {
+            "example.com", "example.org", "test.com", "localhost",
+            "twitter.com", "x.com", "reddit.com", "github.com",
+        }
+        
         domain_type_map = {
-            "twitter.com": "social",
-            "github.com": "developer",
             "linkedin.com": "social",
             "youtube.com": "video",
             "medium.com": "blog",
-            "reddit.com": "community",
+            "substack.com": "newsletter",
+            "dev.to": "developer",
+            "arxiv.org": "research",
+            "researchgate.net": "research",
         }
-
+        
         opportunities = []
-        for domain, data in sorted(domain_mentions.items(), key=lambda x: -x[1]["count"]):
+        for domain, data in sorted(domain_mentions.items(), key=lambda x: -x[1]["competitor_count"]):
+            # Skip if brand already mentioned here or in blocklist
+            if domain in brand_mentioned_in or domain in blocklist:
+                continue
+            
             category = "publication"
             for pattern, cat in domain_type_map.items():
                 if pattern in domain:
                     category = cat
                     break
-
+            
+            top_competitors = sorted(list(data["competitors"]))[:3]
+            
             opportunities.append({
                 "name": domain,
                 "domain": domain,
                 "type": category,
                 "mentions": data["count"],
-                "reason": f"Cited {data['count']} time(s) in AI-generated responses about {list(data['questions'])[0][:60]}...",
+                "reason": f"Cites {data['competitor_count']} competitor mention(s) ({', '.join(top_competitors)}). {data['count']} response(s) reference this domain.",
             })
-
+        
         return opportunities[:20]
