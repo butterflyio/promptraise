@@ -23,10 +23,10 @@ MODELS = [
 ]
 
 MODEL_DISPLAY_NAMES = {
-    "deepseek/deepseek-chat-v3": "deepseek",
-    "anthropic/claude-3.5-haiku": "claude",
-    "google/gemini-2.0-flash-001": "gemini",
-    "openai/gpt-4o-mini": "openai",
+    "deepseek/deepseek-chat-v3": "DeepSeek",
+    "anthropic/claude-3.5-haiku": "Claude",
+    "google/gemini-2.0-flash-001": "Gemini",
+    "openai/gpt-4o-mini": "OpenAI",
 }
 
 DISCOVERY_QUESTIONS = [
@@ -819,46 +819,58 @@ class OpenRouterBatchClient:
                                    brand_name: str) -> list:
         """Find strategic source opportunities for brand visibility.
         
-        These are high-value placement targets where:
-        1. Competitors are already being cited (indicates active coverage)
-        2. Brand is NOT mentioned (gap to fill)
-        3. Domain is authoritative in the space
+        Strategy: Identify high-authority domains that appear in responses about
+        the topic. These represent platforms where the brand should build visibility
+        through content, partnerships, or mentions. Prioritizes domains that mention
+        competitors (which indicates active coverage of the space).
+        
+        Option A: Show domains citing competitors (prioritize those NOT citing brand)
+                  Fall back to all topic-relevant sources if competitor citations empty
         """
         responses = batch_result.get("responses", [])
         brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
         
-        # Track which domains mention competitors but NOT the brand
-        domain_mentions = {}
-        brand_mentioned_in = set()
+        # Track domains by type: competitor-focused vs general topic
+        competitor_citing = {}  # Domains that mention competitors
+        all_sources = {}        # All domains cited (fallback)
         
         for resp in responses:
+            sources = resp.get("sources_cited", [])
             has_competitors = len(resp.get("competitors_mentioned", [])) > 0
             has_brand = resp.get("brand_mentioned", False)
-            sources = resp.get("sources_cited", [])
             
-            if has_brand:
-                for src in sources:
-                    domain = self._extract_domain(src)
-                    if domain:
-                        brand_mentioned_in.add(domain)
-            
-            if has_competitors and sources:
-                # Track domains that mention competitors
-                for src in sources:
-                    domain = self._extract_domain(src)
-                    if not domain or domain in ("null", "none") or brand_domain in domain:
-                        continue
-                    if domain not in domain_mentions:
-                        domain_mentions[domain] = {
+            for src in sources:
+                domain = self._extract_domain(src)
+                if not domain or domain in ("null", "none") or brand_domain in domain:
+                    continue
+                
+                # Track in general sources
+                if domain not in all_sources:
+                    all_sources[domain] = {
+                        "count": 0,
+                        "competitor_count": 0,
+                        "questions": set(),
+                        "competitors": set(),
+                        "brand_mentioned": False,
+                    }
+                all_sources[domain]["count"] += 1
+                all_sources[domain]["questions"].add(resp.get("question", "")[:80])
+                all_sources[domain]["brand_mentioned"] = all_sources[domain]["brand_mentioned"] or has_brand
+                
+                # Track competitor-citing sources separately
+                if has_competitors:
+                    if domain not in competitor_citing:
+                        competitor_citing[domain] = {
                             "count": 0,
                             "competitor_count": 0,
                             "questions": set(),
-                            "competitors": set()
+                            "competitors": set(),
+                            "brand_mentioned": False,
                         }
-                    domain_mentions[domain]["count"] += 1
-                    domain_mentions[domain]["competitor_count"] += len(resp.get("competitors_mentioned", []))
-                    domain_mentions[domain]["questions"].add(resp.get("question", "")[:80])
-                    domain_mentions[domain]["competitors"].update(resp.get("competitors_mentioned", []))
+                    competitor_citing[domain]["count"] += 1
+                    competitor_citing[domain]["competitor_count"] += len(resp.get("competitors_mentioned", []))
+                    competitor_citing[domain]["competitors"].update(resp.get("competitors_mentioned", []))
+                    competitor_citing[domain]["brand_mentioned"] = competitor_citing[domain]["brand_mentioned"] or has_brand
         
         # Blocklist
         blocklist = {
@@ -877,9 +889,19 @@ class OpenRouterBatchClient:
         }
         
         opportunities = []
-        for domain, data in sorted(domain_mentions.items(), key=lambda x: -x[1]["competitor_count"]):
-            # Skip if brand already mentioned here or in blocklist
-            if domain in brand_mentioned_in or domain in blocklist:
+        
+        # Use competitor-citing sources if available, otherwise use all sources
+        source_pool = competitor_citing if competitor_citing else all_sources
+        
+        # Sort by: priority to sources NOT mentioning brand, then by mention count
+        sorted_domains = sorted(
+            source_pool.items(),
+            key=lambda x: (x[1]["brand_mentioned"], -x[1]["count"])
+        )
+        
+        for domain, data in sorted_domains:
+            # Skip blocklist only
+            if domain in blocklist:
                 continue
             
             category = "publication"
@@ -888,14 +910,23 @@ class OpenRouterBatchClient:
                     category = cat
                     break
             
-            top_competitors = sorted(list(data["competitors"]))[:3]
+            # Build reason text
+            if data["competitor_count"] > 0:
+                top_competitors = sorted(list(data["competitors"]))[:3]
+                reason = f"[COMPETITOR-FOCUS] Cites: {', '.join(top_competitors)}. {data['count']} mention(s)."
+            else:
+                reason = f"[TOPIC-RELEVANT] Referenced {data['count']} time(s) in category discussions."
+            
+            # Add priority indicator
+            priority = "HIGH" if not data["brand_mentioned"] else "ACTIVE"
             
             opportunities.append({
                 "name": domain,
                 "domain": domain,
                 "type": category,
                 "mentions": data["count"],
-                "reason": f"Cites {data['competitor_count']} competitor mention(s) ({', '.join(top_competitors)}). {data['count']} response(s) reference this domain.",
+                "priority": priority,
+                "reason": f"[{priority}] {reason}",
             })
         
         return opportunities[:20]

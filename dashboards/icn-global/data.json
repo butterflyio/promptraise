@@ -1,6 +1,6 @@
 {
   "site": {
-    "name": "Icn",
+    "name": "ICN",
     "url": "https://icn.ai",
     "domain": "icn.ai",
     "slug": "icn-global",
@@ -21,7 +21,7 @@
     "hero_comparison": [
       {
         "value": "0%",
-        "label": "Icn Visibility",
+        "label": "ICN Visibility",
         "trend": ""
       },
       {
@@ -45,7 +45,7 @@
           "appearance_percentage": 5.0,
           "avg_rank": 12.5,
           "providers": [
-            "gemini"
+            "Gemini"
           ],
           "is_own": false
         },
@@ -54,7 +54,7 @@
           "appearance_percentage": 5.0,
           "avg_rank": 12.5,
           "providers": [
-            "gemini"
+            "Gemini"
           ],
           "is_own": false
         }
@@ -69,9 +69,9 @@
           "appearance_percentage": 17.5,
           "avg_rank": 10.67,
           "providers": [
-            "gemini",
-            "openai",
-            "deepseek"
+            "Gemini",
+            "OpenAI",
+            "DeepSeek"
           ],
           "is_own": false
         },
@@ -80,7 +80,7 @@
           "appearance_percentage": 2.5,
           "avg_rank": 0,
           "providers": [
-            "deepseek"
+            "DeepSeek"
           ],
           "is_own": false
         },
@@ -89,7 +89,7 @@
           "appearance_percentage": 2.5,
           "avg_rank": 12.0,
           "providers": [
-            "claude"
+            "Claude"
           ],
           "is_own": false
         },
@@ -98,7 +98,7 @@
           "appearance_percentage": 2.5,
           "avg_rank": 0,
           "providers": [
-            "openai"
+            "OpenAI"
           ],
           "is_own": false
         }
@@ -272,145 +272,170 @@
       "persona": "Chief Innovation Officer"
     }
   ],
-  "source_opportunities": [],
+  "source_opportunities": [
+    {
+      "name": "microsoft",
+      "domain": "microsoft",
+      "type": "publication",
+      "mentions": 1,
+      "priority": "HIGH",
+      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+    },
+    {
+      "name": "cloud.google",
+      "domain": "cloud.google",
+      "type": "publication",
+      "mentions": 1,
+      "priority": "HIGH",
+      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+    },
+    {
+      "name": "aws.amazon",
+      "domain": "aws.amazon",
+      "type": "publication",
+      "mentions": 1,
+      "priority": "HIGH",
+      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+    },
+    {
+      "name": "developer.nvidia",
+      "domain": "developer.nvidia",
+      "type": "publication",
+      "mentions": 1,
+      "priority": "HIGH",
+      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+    }
+  ],
   "provider_coverage": {
-    "deepseek/deepseek-chat-v3": 20,
-    "anthropic/claude-3.5-haiku": 20,
-    "google/gemini-2.0-flash-001": 20,
-    "openai/gpt-4o-mini": 20
+    "DeepSeek": 20,
+    "Claude": 20,
+    "Gemini": 20,
+    "OpenAI": 20
   },
   "insights": {
     "terminology_gap": [
       {
         "term": "ICN",
-        "evidence": "No clear AI recognition for brand acronym",
+        "evidence": "No AI recognition of brand meaning",
         "priority": "HIGH"
       },
       {
         "term": "data privacy systems",
-        "evidence": "Weak mapping to AI search queries",
+        "evidence": "Low context in AI responses",
         "priority": "HIGH"
       },
       {
         "term": "machine learning integration",
-        "evidence": "Limited contextual understanding",
+        "evidence": "Minimal competitive mention",
         "priority": "MEDIUM"
       },
       {
         "term": "enterprise AI solutions",
-        "evidence": "Fragmented competitive positioning",
-        "priority": "HIGH"
-      },
-      {
-        "term": "privacy processing",
-        "evidence": "Lacks precise technical definition",
+        "evidence": "Weak positioning vs competitors",
         "priority": "MEDIUM"
       },
       {
-        "term": "response analysis",
-        "evidence": "Minimal semantic linkage in AI responses",
+        "term": "research innovation platform",
+        "evidence": "Academic segment underrepresented",
+        "priority": "LOW"
+      },
+      {
+        "term": "privacy processing",
+        "evidence": "Unclear technical differentiation",
         "priority": "LOW"
       }
     ],
     "language_gap": [
       {
         "site_says": "Enterprise AI Integration",
-        "site_context": "Broad technical claim",
-        "ai_uses": "Cloud-based solutions",
-        "ai_context": "Platform-specific references"
+        "site_context": "Technical positioning",
+        "ai_uses": "Cloud services",
+        "ai_context": "Generic platform description"
       },
       {
-        "site_says": "Research & Academic Innovation",
-        "site_context": "Academic positioning",
-        "ai_uses": "Research ecosystem",
-        "ai_context": "Vendor-neutral terminology"
+        "site_says": "Advanced Data Protection",
+        "site_context": "Security focus",
+        "ai_uses": "Privacy mechanisms",
+        "ai_context": "Broad compliance perspective"
       },
       {
-        "site_says": "Data Privacy Systems",
-        "site_context": "Compliance focus",
-        "ai_uses": "Machine learning privacy",
-        "ai_context": "Technical implementation details"
+        "site_says": "Machine Learning Systems",
+        "site_context": "Technical depth",
+        "ai_uses": "Learning algorithms",
+        "ai_context": "Functional implementation"
       }
     ],
     "audience_segments": {
       "addressed": [
         {
-          "name": "Enterprise AI Integrators",
-          "note": "10/80 query responses"
+          "name": "Enterprise AI",
+          "note": "10 targeted responses"
         },
         {
-          "name": "Academic Researchers",
-          "note": "10/80 query responses"
-        },
-        {
-          "name": "Privacy Technology Professionals",
-          "note": "Keywords suggest alignment"
-        },
-        {
-          "name": "Machine Learning Engineers",
-          "note": "Technical keyword matches"
+          "name": "Research Institutions",
+          "note": "Academic innovation focus"
         }
       ],
       "opportunity_gap": [
         {
-          "name": "Cloud Services",
-          "note": "17.5% market visibility (via Vast)"
+          "name": "Blockchain Privacy",
+          "note": "Vast 17.5% market share"
         },
         {
-          "name": "Cryptocurrency Privacy",
-          "note": "5.0% visibility (Monero/Zcash)"
+          "name": "Cryptocurrency Security",
+          "note": "Monero/Zcash 5% each"
         },
         {
-          "name": "Decentralized Systems",
-          "note": "2.5% market penetration"
+          "name": "Cloud Infrastructure",
+          "note": "Microsoft/Google/AWS citations"
         },
         {
-          "name": "AI Research Platforms",
-          "note": "Hugging Face competitive presence"
+          "name": "Machine Learning Researchers",
+          "note": "Limited academic visibility"
         }
       ]
     },
     "position": {
       "strengths": [
-        "Privacy-focused AI solutions",
-        "Technical keyword alignment",
-        "Multi-segment market approach",
-        "Research and enterprise dual targeting"
+        "Data privacy expertise",
+        "Enterprise AI integration focus",
+        "Technical systems understanding",
+        "Research-oriented approach"
       ],
       "opportunities": [
-        "Expand cloud service narratives",
-        "Develop more AI integration content",
-        "Create comparative technology resources",
-        "Build academic research positioning"
+        "Expand blockchain privacy positioning",
+        "Develop cloud infrastructure narratives",
+        "Create academic research partnerships",
+        "Enhance machine learning storytelling"
       ],
       "gaps": [
-        "Weak AI search engine visibility",
-        "Limited brand recognition",
-        "Inconsistent competitive positioning",
-        "Minimal technical differentiation"
+        "Weak AI engine recognition",
+        "Limited competitive differentiation",
+        "Unclear brand terminology",
+        "Minimal third-party citations"
       ]
     },
     "action_items": {
       "content_priorities": [
-        "Produce 'Enterprise AI Privacy Guide'",
-        "Create technical white papers on data processing",
-        "Develop machine learning integration case studies",
-        "Build comparative technology analysis content",
-        "Design research ecosystem positioning document"
+        "Create comprehensive 'ICN vs Competitors' whitepaper",
+        "Develop machine learning use case library",
+        "Produce enterprise privacy implementation guides",
+        "Generate blockchain security comparison content",
+        "Build academic research collaboration narratives"
       ],
       "link_building": [
-        "Partner with academic research institutions",
-        "Guest post on cloud computing platforms",
-        "Engage with AI/ML technical forums",
-        "Cross-link with privacy technology sites",
-        "Develop strategic vendor partnerships"
+        "Partner with top ML research institutions",
+        "Guest post on enterprise AI platforms",
+        "Engage blockchain privacy forums",
+        "Develop technical citation strategies",
+        "Create cross-industry expert collaborations"
       ],
       "quick_wins": [
-        "Update metadata for AI search optimization",
-        "Clarify brand acronym positioning",
-        "Refine homepage technical language",
-        "Create schema markup for AI discoverability",
-        "Develop targeted keyword landing pages"
+        "Update homepage with AI-friendly terminology",
+        "Expand keyword targeting for privacy systems",
+        "Optimize metadata for AI search engines",
+        "Create concise technical explainer videos",
+        "Develop targeted segment landing pages"
       ]
     }
   }
