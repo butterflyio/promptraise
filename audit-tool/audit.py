@@ -1344,10 +1344,12 @@ def stage_discovery_batch(client: OpenRouterBatchClient, brand_name: str,
         log("  ✓ Skipping discovery_batch (already complete)")
         return state.get("discovered_competitors", [])
 
-    log("Running discovery batch (5 questions × 2 models)...")
+    log("Running discovery batch (5 questions × 4 models)...")
     responses = client.discovery_batch_query(brand_name, models=[
         "deepseek/deepseek-chat-v3",
         "anthropic/claude-3.5-haiku",
+        "google/gemini-2.0-flash-001",
+        "openai/gpt-4o-mini",
     ])
     competitors = client.extract_competitors_from_discovery(responses, brand_name)
     log(f"  ✓ Discovered {len(competitors)} competitors")
@@ -1365,12 +1367,14 @@ def stage_full_batch_query(client: OpenRouterBatchClient, brand_name: str,
         log("  ✓ Skipping full_batch (already complete)")
         return state.get("batch_result")
 
-    log("Running full batch query (20 questions × 2 models = 40 calls)...")
+    log("Running full batch query (20 questions × 4 models = 80 calls)...")
     ct_list = ct_data.get("customer_types", [])
     comp_seed = competitor_seed or []
     result = client.full_batch_query(brand_name, ct_list, models=[
         "deepseek/deepseek-chat-v3",
         "anthropic/claude-3.5-haiku",
+        "google/gemini-2.0-flash-001",
+        "openai/gpt-4o-mini",
     ], use_structured_extraction=False, competitor_seed=comp_seed)
     log(f"  ✓ Got {len(result.get('responses', []))} responses")
 
