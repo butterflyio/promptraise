@@ -274,36 +274,84 @@
   ],
   "source_opportunities": [
     {
-      "name": "microsoft",
-      "domain": "microsoft",
+      "name": "techcrunch.com",
+      "domain": "techcrunch.com",
       "type": "publication",
-      "mentions": 1,
-      "priority": "HIGH",
-      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
     },
     {
-      "name": "cloud.google",
-      "domain": "cloud.google",
+      "name": "forbes.com",
+      "domain": "forbes.com",
       "type": "publication",
-      "mentions": 1,
-      "priority": "HIGH",
-      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
     },
     {
-      "name": "aws.amazon",
-      "domain": "aws.amazon",
+      "name": "venturebeat.com",
+      "domain": "venturebeat.com",
       "type": "publication",
-      "mentions": 1,
-      "priority": "HIGH",
-      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
     },
     {
-      "name": "developer.nvidia",
-      "domain": "developer.nvidia",
+      "name": "slashgear.com",
+      "domain": "slashgear.com",
       "type": "publication",
-      "mentions": 1,
-      "priority": "HIGH",
-      "reason": "[HIGH] [TOPIC-RELEVANT] Referenced 1 time(s) in category discussions."
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
+    },
+    {
+      "name": "infoq.com",
+      "domain": "infoq.com",
+      "type": "developer",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
+    },
+    {
+      "name": "producthunt.com",
+      "domain": "producthunt.com",
+      "type": "community",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
+    },
+    {
+      "name": "hackernews.com",
+      "domain": "hackernews.com",
+      "type": "community",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
+    },
+    {
+      "name": "news.ycombinator.com",
+      "domain": "news.ycombinator.com",
+      "type": "community",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
+    },
+    {
+      "name": "betanews.com",
+      "domain": "betanews.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
+    },
+    {
+      "name": "siliconangle.com",
+      "domain": "siliconangle.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."
     }
   ],
   "provider_coverage": {
@@ -315,127 +363,135 @@
   "insights": {
     "terminology_gap": [
       {
-        "term": "ICN",
-        "evidence": "No AI recognition of brand meaning",
+        "term": "ICN AI",
+        "evidence": "No mentions in AI search results",
         "priority": "HIGH"
       },
       {
-        "term": "data privacy systems",
-        "evidence": "Low context in AI responses",
-        "priority": "HIGH"
+        "term": "privacy systems",
+        "evidence": "Mentioned but not distinctively explained",
+        "priority": "MEDIUM"
       },
       {
         "term": "machine learning integration",
-        "evidence": "Minimal competitive mention",
+        "evidence": "Generic language used",
+        "priority": "HIGH"
+      },
+      {
+        "term": "data processing framework",
+        "evidence": "Lacks clear technical differentiation",
         "priority": "MEDIUM"
       },
       {
-        "term": "enterprise AI solutions",
-        "evidence": "Weak positioning vs competitors",
-        "priority": "MEDIUM"
+        "term": "enterprise AI solution",
+        "evidence": "Minimal competitive positioning",
+        "priority": "HIGH"
       },
       {
         "term": "research innovation platform",
-        "evidence": "Academic segment underrepresented",
-        "priority": "LOW"
-      },
-      {
-        "term": "privacy processing",
-        "evidence": "Unclear technical differentiation",
-        "priority": "LOW"
+        "evidence": "Weak academic positioning",
+        "priority": "MEDIUM"
       }
     ],
     "language_gap": [
       {
         "site_says": "Enterprise AI Integration",
-        "site_context": "Technical positioning",
-        "ai_uses": "Cloud services",
-        "ai_context": "Generic platform description"
+        "site_context": "Broad marketing statement",
+        "ai_uses": "Specific infrastructure solutions",
+        "ai_context": "Technical precision required"
       },
       {
-        "site_says": "Advanced Data Protection",
-        "site_context": "Security focus",
-        "ai_uses": "Privacy mechanisms",
-        "ai_context": "Broad compliance perspective"
+        "site_says": "Research & Academic Innovation",
+        "site_context": "Generic academic positioning",
+        "ai_uses": "Niche domain-specific platforms",
+        "ai_context": "Specialized ecosystem needed"
       },
       {
-        "site_says": "Machine Learning Systems",
-        "site_context": "Technical depth",
-        "ai_uses": "Learning algorithms",
-        "ai_context": "Functional implementation"
+        "site_says": "Privacy-Focused Systems",
+        "site_context": "Conceptual privacy claim",
+        "ai_uses": "Concrete data protection mechanisms",
+        "ai_context": "Demonstrable security protocols"
       }
     ],
     "audience_segments": {
       "addressed": [
         {
-          "name": "Enterprise AI",
-          "note": "10 targeted responses"
+          "name": "Enterprise AI Teams",
+          "note": "10 response mentions"
         },
         {
-          "name": "Research Institutions",
-          "note": "Academic innovation focus"
+          "name": "Academic Researchers",
+          "note": "10 response mentions"
+        },
+        {
+          "name": "Machine Learning Practitioners",
+          "note": "Keyword alignment"
+        },
+        {
+          "name": "Data Privacy Professionals",
+          "note": "Privacy keywords detected"
         }
       ],
       "opportunity_gap": [
         {
-          "name": "Blockchain Privacy",
-          "note": "Vast 17.5% market share"
+          "name": "Blockchain Innovators",
+          "note": "Vast (17.5%) market visibility"
         },
         {
-          "name": "Cryptocurrency Security",
-          "note": "Monero/Zcash 5% each"
+          "name": "Cryptocurrency Developers",
+          "note": "Monero/Zcash (5.0%) presence"
         },
         {
-          "name": "Cloud Infrastructure",
+          "name": "Cloud Infrastructure Teams",
           "note": "Microsoft/Google/AWS citations"
         },
         {
-          "name": "Machine Learning Researchers",
-          "note": "Limited academic visibility"
+          "name": "GPU Computing Specialists",
+          "note": "NVIDIA developer references"
         }
       ]
     },
     "position": {
       "strengths": [
-        "Data privacy expertise",
-        "Enterprise AI integration focus",
-        "Technical systems understanding",
-        "Research-oriented approach"
+        "Privacy-oriented approach",
+        "Multi-domain keyword relevance",
+        "Enterprise and academic targeting",
+        "Technical language sophistication"
       ],
       "opportunities": [
-        "Expand blockchain privacy positioning",
-        "Develop cloud infrastructure narratives",
-        "Create academic research partnerships",
-        "Enhance machine learning storytelling"
+        "Expand blockchain integration narrative",
+        "Develop specialized research content",
+        "Create comparative technology pages",
+        "Build AI infrastructure thought leadership"
       ],
       "gaps": [
-        "Weak AI engine recognition",
-        "Limited competitive differentiation",
-        "Unclear brand terminology",
-        "Minimal third-party citations"
+        "Lack of competitive differentiation",
+        "Minimal AI engine recognition",
+        "Weak market positioning",
+        "Insufficient technical storytelling"
       ]
     },
     "action_items": {
       "content_priorities": [
-        "Create comprehensive 'ICN vs Competitors' whitepaper",
-        "Develop machine learning use case library",
-        "Produce enterprise privacy implementation guides",
-        "Generate blockchain security comparison content",
-        "Build academic research collaboration narratives"
+        "Develop 'ICN vs Vast' comparative whitepaper",
+        "Create technical deep-dive blog series",
+        "Produce academic research collaboration content",
+        "Design enterprise AI integration case studies",
+        "Write privacy framework explainer guides"
       ],
       "link_building": [
-        "Partner with top ML research institutions",
-        "Guest post on enterprise AI platforms",
-        "Engage blockchain privacy forums",
-        "Develop technical citation strategies",
-        "Create cross-industry expert collaborations"
+        "Partner with blockchain research institutions",
+        "Guest post on machine learning platforms",
+        "Engage with NVIDIA developer communities",
+        "Cross-link with academic technology journals",
+        "Collaborate with cloud infrastructure blogs"
       ],
       "quick_wins": [
-        "Update homepage with AI-friendly terminology",
-        "Expand keyword targeting for privacy systems",
-        "Optimize metadata for AI search engines",
-        "Create concise technical explainer videos",
-        "Develop targeted segment landing pages"
+        "Update metadata for AI search optimization",
+        "Refine keyword targeting strategy",
+        "Implement structured data markup",
+        "Create FAQ targeting specific AI queries",
+        "Develop targeted landing pages for key segments"
       ]
     }
   }

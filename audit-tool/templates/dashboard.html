@@ -1012,43 +1012,53 @@
 
         function renderCompetitorTable(customerType, tableId) {
             const tbody = document.getElementById(tableId);
-            tbody.innerHTML = customerType.competitors.map((c, idx) => `
+            if (!customerType.competitors || customerType.competitors.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: #999; padding: 2rem;">No competitor data</td></tr>';
+                return;
+            }
+            tbody.innerHTML = customerType.competitors.map((c, idx) => {
+                const appearance = c.appearance_percentage || c.appearance || 0;
+                const rank = c.avg_rank || c.rank || 0;
+                const isOwn = c.is_own || c.isOwn || false;
+                const providers = c.providers || [];
+                return `
                 <tr>
                     <td>
                         <div class="competitor-name">
-                            <div class="competitor-logo" style="background: ${c.isOwn
+                            <div class="competitor-logo" style="background: ${isOwn
                                 ? 'linear-gradient(135deg, var(--primary), var(--brand-green))'
                                 : 'var(--bg-dark)'}">
                                 ${(c.name || '?').charAt(0)}
                             </div>
                             <div>
                                 ${c.name}
-                                ${c.isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
+                                ${isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
                             </div>
                         </div>
                     </td>
                     <td>
                         <div style="display: flex; align-items: center; gap: 0.75rem;">
                             <div class="bar" style="width: 100px;">
-                                <div class="bar-fill" style="width: ${c.appearance}%; background: ${c.isOwn
+                                <div class="bar-fill" style="width: ${appearance}%; background: ${isOwn
                                     ? 'linear-gradient(90deg, var(--primary), var(--brand-green))'
                                     : getColorClass(c.name, idx)}"></div>
                             </div>
-                            <span style="min-width: 45px;">${c.appearance}%</span>
+                            <span style="min-width: 45px;">${appearance.toFixed(1)}%</span>
                         </div>
                     </td>
                     <td>
-                        <span class="rank-badge ${c.rank <= 1.5 ? 'rank-1' : c.rank <= 2.5 ? 'rank-2' : c.rank <= 3.5 ? 'rank-3' : 'rank-other'}">
-                            ${Number(c.rank).toFixed(1)}
+                        <span class="rank-badge ${rank <= 1.5 ? 'rank-1' : rank <= 2.5 ? 'rank-2' : rank <= 3.5 ? 'rank-3' : 'rank-other'}">
+                            ${Number(rank).toFixed(1)}
                         </span>
                     </td>
                     <td>
                         <div class="provider-badges">
-                            ${(c.providers || []).map(p => `<span class="provider-badge ${p}">${p.replace('-search', '')}</span>`).join('')}
+                            ${providers.map(p => `<span class="provider-badge ${p.toLowerCase()}">${p.replace('-search', '')}</span>`).join('')}
                         </div>
                     </td>
                 </tr>
-            `).join('');
+            `;
+            }).join('');
         }
 
         // ============ KEYWORDS SLIDER ============
@@ -1249,8 +1259,9 @@
             const type2 = DASHBOARD_DATA.customer_types[1];
 
             function buildSovChart(canvasId, customerType, color) {
+                if (!customerType.competitors || customerType.competitors.length === 0) return;
                 const labels = customerType.competitors.slice(0, 10).map(c => c.name);
-                const data = customerType.competitors.slice(0, 10).map(c => c.appearance);
+                const data = customerType.competitors.slice(0, 10).map(c => c.appearance_percentage || c.appearance || 0);
                 const canvas = document.getElementById(canvasId);
                 canvas.height = 320;
                 new Chart(canvas, {
@@ -1275,8 +1286,9 @@
             }
 
             function buildRankChart(canvasId, customerType) {
+                if (!customerType.competitors || customerType.competitors.length === 0) return;
                 const labels = customerType.competitors.slice(0, 10).map(c => c.name);
-                const data = customerType.competitors.slice(0, 10).map(c => c.rank);
+                const data = customerType.competitors.slice(0, 10).map(c => c.avg_rank || c.rank || 0);
                 const canvas = document.getElementById(canvasId);
                 canvas.height = 320;
                 new Chart(canvas, {
@@ -1311,18 +1323,22 @@
             const providerLabels = Object.keys(providers);
             const providerValues = Object.values(providers);
             const providerColors = {
-                claude: '#3D6944',
-                gemini: '#67FF67',
-                openai: '#C9CDD2',
-                'openai-search': '#C9CDD2',
-                deepseek: '#C9CDD2'
+                'Claude': '#8B7AFF',           // Purple for Claude
+                'DeepSeek': '#1E90FF',        // Blue for DeepSeek
+                'Gemini': '#FFD700',          // Gold/Yellow for Gemini
+                'OpenAI': '#00CED1',          // Teal for OpenAI
+                'claude': '#8B7AFF',
+                'deepseek': '#1E90FF',
+                'gemini': '#FFD700',
+                'openai': '#00CED1',
+                'openai-search': '#00CED1'
             };
-            const bgColors = providerLabels.map(l => providerColors[l] || '#94a3b8');
+            const bgColors = providerLabels.map(l => providerColors[l] || providerColors[l.toLowerCase()] || '#94a3b8');
 
             new Chart(document.getElementById('providerChart'), {
                 type: 'doughnut',
                 data: {
-                    labels: providerLabels.map(l => l.charAt(0).toUpperCase() + l.slice(1)),
+                    labels: providerLabels,
                     datasets: [{ data: providerValues, backgroundColor: bgColors, borderWidth: 0 }]
                 },
                 options: {
@@ -1335,8 +1351,8 @@
             document.getElementById('providerLegend').innerHTML = providerLabels.map((label, i) => `
                 <div class="provider-legend-item">
                     <div class="color" style="background: ${bgColors[i]};"></div>
-                    <div class="name">${label.charAt(0).toUpperCase() + label.slice(1).replace('-search', '')}</div>
-                    <div class="value">${providerValues[i]}%</div>
+                    <div class="name">${label}</div>
+                    <div class="value">${providerValues[i]} responses</div>
                 </div>
             `).join('');
         }

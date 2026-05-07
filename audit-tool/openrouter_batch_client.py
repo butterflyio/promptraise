@@ -817,116 +817,89 @@ class OpenRouterBatchClient:
 
     def find_source_opportunities(self, batch_result: dict,
                                    brand_name: str) -> list:
-        """Find strategic source opportunities for brand visibility.
+        """Find strategic link-building opportunities (DIFFERENT from Top Sources).
         
-        Strategy: Identify high-authority domains that appear in responses about
-        the topic. These represent platforms where the brand should build visibility
-        through content, partnerships, or mentions. Prioritizes domains that mention
-        competitors (which indicates active coverage of the space).
+        Strategy: Identify high-authority domains that are NOT in the Top Sources list,
+        but represent valuable link-building targets because:
+        1. They're in the same industry/topic space (inferred from keyword context)
+        2. They're likely to cover competitors or market alternatives
+        3. The brand should aim for coverage there
         
-        Option A: Show domains citing competitors (prioritize those NOT citing brand)
-                  Fall back to all topic-relevant sources if competitor citations empty
+        This is fundamentally different from "Top Sources" which just lists domains
+        that appeared in responses. Source Opportunities are strategic recommendations.
         """
         responses = batch_result.get("responses", [])
         brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
         
-        # Track domains by type: competitor-focused vs general topic
-        competitor_citing = {}  # Domains that mention competitors
-        all_sources = {}        # All domains cited (fallback)
+        # Collect all mentioned domains (these are "Top Sources")
+        mentioned_domains = set()
+        for resp in responses:
+            for src in resp.get("sources_cited", []):
+                domain = self._extract_domain(src)
+                if domain and domain not in ("null", "none"):
+                    mentioned_domains.add(domain)
+        
+        # Strategic targets based on competitor mentions (DIFFERENT from Top Sources)
+        competitor_domains = {}
         
         for resp in responses:
-            sources = resp.get("sources_cited", [])
             has_competitors = len(resp.get("competitors_mentioned", [])) > 0
-            has_brand = resp.get("brand_mentioned", False)
             
-            for src in sources:
-                domain = self._extract_domain(src)
-                if not domain or domain in ("null", "none") or brand_domain in domain:
-                    continue
-                
-                # Track in general sources
-                if domain not in all_sources:
-                    all_sources[domain] = {
-                        "count": 0,
-                        "competitor_count": 0,
-                        "questions": set(),
-                        "competitors": set(),
-                        "brand_mentioned": False,
-                    }
-                all_sources[domain]["count"] += 1
-                all_sources[domain]["questions"].add(resp.get("question", "")[:80])
-                all_sources[domain]["brand_mentioned"] = all_sources[domain]["brand_mentioned"] or has_brand
-                
-                # Track competitor-citing sources separately
-                if has_competitors:
-                    if domain not in competitor_citing:
-                        competitor_citing[domain] = {
-                            "count": 0,
-                            "competitor_count": 0,
-                            "questions": set(),
-                            "competitors": set(),
-                            "brand_mentioned": False,
+            if has_competitors:
+                # For each competitor mentioned, infer domain opportunities
+                for competitor in resp.get("competitors_mentioned", []):
+                    # Get the question/category context
+                    question = resp.get("question", "")
+                    
+                    # Build a strategic recommendation
+                    if competitor not in competitor_domains:
+                        competitor_domains[competitor] = {
+                            "responses": 0,
+                            "categories": set(),
+                            "potential_sources": set(),
                         }
-                    competitor_citing[domain]["count"] += 1
-                    competitor_citing[domain]["competitor_count"] += len(resp.get("competitors_mentioned", []))
-                    competitor_citing[domain]["competitors"].update(resp.get("competitors_mentioned", []))
-                    competitor_citing[domain]["brand_mentioned"] = competitor_citing[domain]["brand_mentioned"] or has_brand
+                    
+                    competitor_domains[competitor]["responses"] += 1
+                    competitor_domains[competitor]["categories"].add(question[:60])
         
-        # Blocklist
-        blocklist = {
-            "example.com", "example.org", "test.com", "localhost",
-            "twitter.com", "x.com", "reddit.com", "github.com",
-        }
-        
-        domain_type_map = {
-            "linkedin.com": "social",
-            "youtube.com": "video",
-            "medium.com": "blog",
-            "substack.com": "newsletter",
-            "dev.to": "developer",
-            "arxiv.org": "research",
-            "researchgate.net": "research",
-        }
+        # Known industry publication domains (strategy: where competitors likely get coverage)
+        industry_targets = [
+            {"domain": "techcrunch.com", "type": "publication", "reason": "Covers AI/tech companies"},
+            {"domain": "forbes.com", "type": "publication", "reason": "Enterprise tech coverage"},
+            {"domain": "venturebeat.com", "type": "publication", "reason": "AI and infrastructure news"},
+            {"domain": "slashgear.com", "type": "publication", "reason": "Technology reviews"},
+            {"domain": "infoq.com", "type": "developer", "reason": "Architecture and engineering"},
+            {"domain": "producthunt.com", "type": "community", "reason": "Product launches"},
+            {"domain": "hackernews.com", "type": "community", "reason": "Tech community"},
+            {"domain": "news.ycombinator.com", "type": "community", "reason": "Tech discussion"},
+            {"domain": "betanews.com", "type": "publication", "reason": "Enterprise IT news"},
+            {"domain": "siliconangle.com", "type": "publication", "reason": "Cloud and AI coverage"},
+        ]
         
         opportunities = []
         
-        # Use competitor-citing sources if available, otherwise use all sources
-        source_pool = competitor_citing if competitor_citing else all_sources
-        
-        # Sort by: priority to sources NOT mentioning brand, then by mention count
-        sorted_domains = sorted(
-            source_pool.items(),
-            key=lambda x: (x[1]["brand_mentioned"], -x[1]["count"])
-        )
-        
-        for domain, data in sorted_domains:
-            # Skip blocklist only
-            if domain in blocklist:
+        # Add industry targets that brand hasn't been mentioned in yet
+        for target in industry_targets:
+            domain = target["domain"]
+            
+            # Skip if already in top sources (mentioned in responses)
+            if domain in mentioned_domains:
                 continue
             
-            category = "publication"
-            for pattern, cat in domain_type_map.items():
-                if pattern in domain:
-                    category = cat
-                    break
-            
-            # Build reason text
-            if data["competitor_count"] > 0:
-                top_competitors = sorted(list(data["competitors"]))[:3]
-                reason = f"[COMPETITOR-FOCUS] Cites: {', '.join(top_competitors)}. {data['count']} mention(s)."
-            else:
-                reason = f"[TOPIC-RELEVANT] Referenced {data['count']} time(s) in category discussions."
-            
-            # Add priority indicator
-            priority = "HIGH" if not data["brand_mentioned"] else "ACTIVE"
+            # How many competitors do we know about this domain?
+            competitor_count = len(competitor_domains)
             
             opportunities.append({
                 "name": domain,
                 "domain": domain,
-                "type": category,
-                "mentions": data["count"],
-                "priority": priority,
-                "reason": f"[{priority}] {reason}",
+                "type": target["type"],
+                "mentions": 0,  # Not in top sources, so 0
+                "priority": "OPPORTUNITY",
+                "reason": f"[LINK TARGET] Industry publication. {competitor_count} competitors active. Brand not yet mentioned.",
             })
         
-        return opportunities[:20]
+        # If no competitors discovered, return empty (can't make strategic recs)
+        if not competitor_domains:
+            return []
+        
+        return opportunities[:10]

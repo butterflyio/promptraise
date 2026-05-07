@@ -43,12 +43,12 @@ class DashboardRenderer:
 
         # Customer type names
         if len(customer_types) >= 1:
-            replacements["{{CUSTOMER_TYPE_1_NAME}}"] = customer_types[0].get("name", "Customer Type 1")
+            replacements["{{CUSTOMER_TYPE_1_NAME}}"] = customer_types[0].get("customer_type_name", "Customer Type 1")
         else:
             replacements["{{CUSTOMER_TYPE_1_NAME}}"] = "Customer Type 1"
 
         if len(customer_types) >= 2:
-            replacements["{{CUSTOMER_TYPE_2_NAME}}"] = customer_types[1].get("name", "Customer Type 2")
+            replacements["{{CUSTOMER_TYPE_2_NAME}}"] = customer_types[1].get("customer_type_name", "Customer Type 2")
         else:
             replacements["{{CUSTOMER_TYPE_2_NAME}}"] = "Customer Type 2"
 
