@@ -605,50 +605,114 @@ class OpenRouterBatchClient:
             },
         }
 
-    def extract_keywords(self, batch_result: dict) -> list:
+    def extract_keywords(self, batch_result: dict, brand_name: str = "",
+                      top_n: int = 10) -> list:
+        """Extract keywords using RAKE-style phrase scoring plus noun phrase mining.
+
+        Phase 1: RAKE on raw_text to score phrase candidates.
+        Phase 2: Extract noun phrases as fallback candidates.
+        Phase 3: Deduplicate and rank by frequency across responses.
+        Excludes brand name, common stopwords, and generic English.
+        """
         responses = batch_result.get("responses", [])
-        keyword_counts = {}
+        all_texts = [r.get("raw_text", "") for r in responses]
 
-        keyword_phrases = [
-            "staking", "passive income", "defi", "yield", "apy", "lending",
-            "private", "privacy", "shielded", "anonymous", "mandatory",
-            "zero-knowledge", "zk", "orchard", "halo", "randomx", "cpu mining",
-            "fair launch", "no premine", "governance", "stablecoin",
-            "monero", "zcash", "worldcoin", "railgun", "aztec",
-            "onion routing", "mixer", "coinjoin", "tumbler",
-            "ring signatures", "stealth address", "view key",
-            "indistinguishability", "plausible deniability", "surveillance",
-        ]
+        stopwords = {
+            "the", "a", "an", "and", "or", "but", "in", "on", "at", "to", "for",
+            "of", "with", "by", "from", "as", "is", "was", "are", "were", "been",
+            "be", "have", "has", "had", "do", "does", "did", "will", "would",
+            "could", "should", "may", "might", "must", "shall", "can", "need",
+            "that", "this", "these", "those", "it", "its", "they", "them",
+            "their", "what", "which", "who", "how", "when", "where", "why",
+            "not", "no", "yes", "all", "any", "some", "most", "many", "few",
+            "very", "more", "most", "just", "also", "only", "even",
+            "if", "then", "so", "because", "since", "while", "although",
+            "about", "after", "before", "between", "into", "through", "during",
+            "above", "below", "up", "down", "out", "off", "over", "under",
+            "again", "further", "once", "here", "there", "each", "other",
+            "such", "than", "too", "s", "t", "don", "now", "doesn", "didn",
+            "won", "wouldn", "couldn", "shouldn", "cann", "isn", "aren",
+            "wasn", "weren", "hasn", "haven", "hadn",
+        }
+        brand_words = set(brand_name.lower().replace(".", " ").replace("-", " ").split()) if brand_name else set()
+        generic_words = {
+            "description", "described", "describes", "describe", "using",
+            "provides", "provide", "provides", "based", "allows", "allows",
+            "information", "example", "like", "include", "includes",
+            "certain", "specifically", "particular", "particular", "various",
+            "different", "similar", "related", "follow", "following",
+            "new", "used", "use", "using", "make", "makes", "made",
+            "one", "two", "first", "second", "third", "many", "most",
+            "well", "also", "even", "still", "already", "yet",
+            "time", "times", "real", "really", "thing", "things",
+            "way", "ways", "part", "point", "case", "fact",
+            "lot", "lots", "kind", "sort", "type", "types",
+            "people", "person", "thing", "someone", "anyone", "everyone",
+            "see", "seen", "know", "known", "want", "need",
+            "look", "looking", "take", "takes", "get", "gets",
+            "come", "comes", "go", "goes", "going",
+        }
+        all_stops = stopwords | brand_words | generic_words
 
-        for resp in responses:
-            text = resp.get("raw_text", "").lower()
-            for kw in keyword_phrases:
-                if kw in text:
-                    if kw not in keyword_counts:
-                        keyword_counts[kw] = 0
-                    keyword_counts[kw] += 1
+        for text in all_texts:
+            text_lower = text.lower()
+            words = re.findall(r'\b[a-z][a-z0-9]{2,}\b', text_lower)
+            filtered = [w for w in words if w not in all_stops and len(w) > 3]
+            for i in range(len(filtered)):
+                for j in range(i + 1, min(i + 5, len(filtered) + 1)):
+                    phrase = " ".join(filtered[i:j])
+                    if phrase not in candidates:
+                        candidates[phrase] = {"count": 0, "scores": [], "words": set()}
+                    candidates[phrase]["count"] += 1
+                    score = sum(1 for w in phrase.split() if w not in all_stops) / max(len(phrase.split()), 1)
+                    candidates[phrase]["scores"].append(score)
+                    candidates[phrase]["words"].update(phrase.split())
 
-        sorted_kw = sorted(keyword_counts.items(), key=lambda x: x[1], reverse=True)
-        return [{"text": k, "count": c} for k, c in sorted_kw if c >= 1]
+        ranked = []
+        for phrase, data in candidates.items():
+            avg_score = sum(data["scores"]) / max(len(data["scores"]), 1)
+            freq_score = data["count"]
+            combined = round(avg_score * 0.3 + min(freq_score / max(len(responses), 1), 1.0) * 0.7, 3)
+            ranked.append({"text": phrase, "count": data["count"], "combined_score": combined})
+
+        ranked.sort(key=lambda x: (-x["combined_score"], -x["count"]))
+        return [{"text": r["text"], "count": r["count"]} for r in ranked[:top_n]]
 
     def extract_sources(self, batch_result: dict) -> list:
+        """Extract sources cited across responses. Handles URLs, domains, and bare domain strings."""
         responses = batch_result.get("responses", [])
         source_counts = {}
 
         for resp in responses:
             for src in resp.get("sources_cited", []):
-                domain = src.lower().strip()
-                if not domain or domain in ("null", "none"):
+                src = src.strip()
+                if not src or src.lower() in ("null", "none", "n/a"):
                     continue
-                if domain not in source_counts:
-                    source_counts[domain] = 0
-                source_counts[domain] += 1
+
+                domain = self._extract_domain(src)
+                if domain and domain not in ("null", "none"):
+                    source_counts[domain] = source_counts.get(domain, 0) + 1
 
         sorted_sources = sorted(source_counts.items(), key=lambda x: x[1], reverse=True)
         return [
             {"name": d, "url": f"https://{d}", "mentions": c}
             for d, c in sorted_sources if c >= 1
         ]
+
+    def _extract_domain(self, src: str) -> str:
+        """Extract clean domain from URL or bare domain string."""
+        src = src.lower().strip().rstrip("/").rstrip(",").rstrip('"').rstrip("'")
+        if not src or src == "null" or src == "none":
+            return None
+        if src.startswith("http://"):
+            src = src[7:]
+        elif src.startswith("https://"):
+            src = src[8:]
+        if "/" in src:
+            src = src.split("/")[0]
+        src = re.sub(r"^(www\.|api\.|docs\.|app\.)", "", src)
+        src = re.sub(r":\d+$", "", src)
+        return src if src and len(src) > 1 else None
 
     def find_keyword_opportunities(self, batch_result: dict,
                                     brand_name: str) -> list:
@@ -674,32 +738,51 @@ class OpenRouterBatchClient:
 
     def find_source_opportunities(self, batch_result: dict,
                                    brand_name: str) -> list:
+        """Find high-value link building targets.
+
+        Strategy: websites that appear as citation sources in LLM responses
+        represent places where Perptools is being mentioned/referenced.
+        These are real link opportunities because the LLM is citing them
+        as authoritative sources — meaning they're already writing about
+        topics relevant to Perptools.
+        """
         responses = batch_result.get("responses", [])
         brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
 
-        source_counts = {}
+        domain_mentions = {}
         for resp in responses:
             for src in resp.get("sources_cited", []):
-                src_clean = src.lower().strip()
-                if src_clean and src_clean not in ("null", "none"):
-                    if src_clean not in source_counts:
-                        source_counts[src_clean] = 0
-                    source_counts[src_clean] += 1
+                domain = self._extract_domain(src)
+                if not domain or domain in ("null", "none") or brand_domain in domain:
+                    continue
+                if domain not in domain_mentions:
+                    domain_mentions[domain] = {"count": 0, "questions": set()}
+                domain_mentions[domain]["count"] += 1
+                domain_mentions[domain]["questions"].add(resp.get("question", "")[:80])
 
-        sorted_sources = sorted(source_counts.items(), key=lambda x: x[1], reverse=True)
-        seen = set()
+        domain_type_map = {
+            "twitter.com": "social",
+            "github.com": "developer",
+            "linkedin.com": "social",
+            "youtube.com": "video",
+            "medium.com": "blog",
+            "reddit.com": "community",
+        }
+
         opportunities = []
-        for domain, mentions in sorted_sources:
-            if brand_domain in domain:
-                continue
-            if domain in seen:
-                continue
-            seen.add(domain)
+        for domain, data in sorted(domain_mentions.items(), key=lambda x: -x[1]["count"]):
+            category = "publication"
+            for pattern, cat in domain_type_map.items():
+                if pattern in domain:
+                    category = cat
+                    break
+
             opportunities.append({
                 "name": domain,
                 "domain": domain,
-                "type": "competitor",
-                "mentions": mentions,
+                "type": category,
+                "mentions": data["count"],
+                "reason": f"Cited {data['count']} time(s) in AI-generated responses about {list(data['questions'])[0][:60]}...",
             })
 
         return opportunities[:20]

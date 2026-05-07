@@ -284,34 +284,35 @@ def transform_source_opportunities(botsee_opps, limit: int = 15) -> list:
 def compute_provider_coverage(customer_types: list, deepseek_data: dict = None) -> dict:
     """Count provider appearances across all competitors.
 
-    DeepSeek adds a 4th segment to the doughnut. We estimate its share
-    based on whether it mentioned any of the top competitors.
+    For each customer type, count how many competitors each provider mentions.
+    Weight equally across CTs so a provider that appears in one CT gets equal
+    representation to providers appearing in another CT.
     """
-    counts = {}
-    total = 0
+    ct_totals = {}
     for ct in customer_types:
+        ct_counts = {}
         for c in ct.get("competitors", []):
             for p in c.get("providers", []):
                 key = "openai" if p == "openai-search" else p
-                counts[key] = counts.get(key, 0) + 1
-                total += 1
+                ct_counts[key] = ct_counts.get(key, 0) + 1
 
-    if total == 0:
-        base = {"claude": 0, "gemini": 0, "openai": 0}
-    else:
-        base = {k: round((v / total) * 100) for k, v in counts.items()}
+        if ct_counts:
+            total_in_ct = sum(ct_counts.values())
+            for k, v in ct_counts.items():
+                ct_totals[k] = ct_totals.get(k, 0) + (v / total_in_ct)
 
-    # DeepSeek segment: 0 if not analyzed, else estimate from BotSee ratios
-    if deepseek_data and deepseek_data.get("analyzed"):
-        deepseek_competitors = len(deepseek_data.get("competitors_mentioned", []))
-        if deepseek_competitors > 0:
-            base["deepseek"] = 15
-        else:
-            base["deepseek"] = 0
-    else:
-        base["deepseek"] = 0
+    if not ct_totals:
+        return {"claude": 0, "gemini": 0, "deepseek": 0, "openai": 0}
 
-    return base
+    max_val = max(ct_totals.values())
+    scale = 100.0 / max_val if max_val > 0 else 0
+
+    result = {k: round((v / len(customer_types)) * scale) for k, v in ct_totals.items()}
+    for k in ["claude", "gemini", "deepseek", "openai"]:
+        if k not in result:
+            result[k] = 0
+
+    return result
 
 
 def compute_score(own_appearance_pct: float, own_avg_rank: float = None) -> int:
@@ -1390,7 +1391,7 @@ def stage_aggregate_openrouter_results(client: OpenRouterBatchClient,
         batch_result, competitor_list, brand_name,
         include_all_discovered=True
     )
-    keywords = client.extract_keywords(batch_result)
+    keywords = client.extract_keywords(batch_result, brand_name)
     sources = client.extract_sources(batch_result)
     kw_opps = client.find_keyword_opportunities(batch_result, brand_name)
     src_opps = client.find_source_opportunities(batch_result, brand_name)
