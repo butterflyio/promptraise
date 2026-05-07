@@ -1,0 +1,555 @@
+{
+  "site": {
+    "name": "ScandicCoin",
+    "url": "https://scandiccoin.dev/",
+    "domain": "scandiccoin.dev",
+    "slug": "scandiccoin-v1",
+    "analysis_id": "openrouter-scandiccoin-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 07, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 10,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "ScandicCoin Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "20.0%",
+        "label": "Ripple (XRP) (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "17.5%",
+        "label": "Circle (USDC) (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "customer_type_name": "Luxury Lifestyle Consumers",
+      "competitors": [
+        {
+          "name": "Travala",
+          "appearance_percentage": 15.0,
+          "avg_rank": 8.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Chiliz",
+          "appearance_percentage": 12.5,
+          "avg_rank": 9.0,
+          "providers": [
+            "Gemini",
+            "Claude"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Socios",
+          "appearance_percentage": 10.0,
+          "avg_rank": 10.2,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "The Sandbox",
+          "appearance_percentage": 7.5,
+          "avg_rank": 11.8,
+          "providers": [
+            "Claude"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Venly",
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.5,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "competitors_count": 5
+    },
+    {
+      "customer_type_name": "Corporate & Institutional Clients",
+      "competitors": [
+        {
+          "name": "Ripple (XRP)",
+          "appearance_percentage": 20.0,
+          "avg_rank": 6.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Circle (USDC)",
+          "appearance_percentage": 17.5,
+          "avg_rank": 7.2,
+          "providers": [
+            "OpenAI",
+            "Claude"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Stellar",
+          "appearance_percentage": 15.0,
+          "avg_rank": 8.1,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Fireblocks",
+          "appearance_percentage": 10.0,
+          "avg_rank": 9.5,
+          "providers": [
+            "Claude"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Kraken Institutional",
+          "appearance_percentage": 7.5,
+          "avg_rank": 10.8,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "competitors_count": 5
+    }
+  ],
+  "keywords": [
+    {
+      "text": "luxury",
+      "count": 167
+    },
+    {
+      "text": "blockchain",
+      "count": 160
+    },
+    {
+      "text": "platform",
+      "count": 72
+    },
+    {
+      "text": "transactions",
+      "count": 70
+    },
+    {
+      "text": "services",
+      "count": 67
+    },
+    {
+      "text": "tokens",
+      "count": 67
+    },
+    {
+      "text": "travel",
+      "count": 66
+    },
+    {
+      "text": "rewards",
+      "count": 65
+    },
+    {
+      "text": "high",
+      "count": 59
+    },
+    {
+      "text": "loyalty",
+      "count": 58
+    }
+  ],
+  "sources": [
+    {
+      "name": "crypto.com",
+      "url": "https://crypto.com",
+      "mentions": 5
+    },
+    {
+      "name": "travala.com",
+      "url": "https://travala.com",
+      "mentions": 2
+    },
+    {
+      "name": "points.com",
+      "url": "https://points.com",
+      "mentions": 1
+    },
+    {
+      "name": "royal.io",
+      "url": "https://royal.io",
+      "mentions": 1
+    },
+    {
+      "name": "luxuryvacations.io",
+      "url": "https://luxuryvacations.io",
+      "mentions": 1
+    },
+    {
+      "name": "blockhawk.io",
+      "url": "https://blockhawk.io",
+      "mentions": 1
+    },
+    {
+      "name": "mydapp.com",
+      "url": "https://mydapp.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What blockchain-based loyalty programs offer tiered VIP access across private jets, yachts, and luxury real estate?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "Which crypto tokens provide instant settlement for high-value cross-border luxury purchases with minimal fees?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "What Web3 platforms offer exclusive access and priority bookings for premium lifestyle services?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "Which utility tokens are integrated into luxury concierge and lifestyle management platforms?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "Which crypto tokens offer automated cashback or rewards for luxury lifestyle spending?",
+      "type": "missing",
+      "persona": "Premium Lifestyle Members"
+    },
+    {
+      "text": "Which Web3 projects connect multiple luxury brands under a single tokenized loyalty ecosystem?",
+      "type": "missing",
+      "persona": "Premium Lifestyle Members"
+    },
+    {
+      "text": "Which Web3 payment platforms offer enterprise-grade solutions for cross-border B2B settlements with low fees?",
+      "type": "missing",
+      "persona": "Corporate Treasury & Finance Teams"
+    },
+    {
+      "text": "What blockchain-based systems provide automated invoicing and detailed financial reporting for corporate clients?",
+      "type": "missing",
+      "persona": "Corporate Treasury & Finance Teams"
+    },
+    {
+      "text": "Which blockchain platforms offer transparent, auditable transaction records for enterprise compliance?",
+      "type": "missing",
+      "persona": "Corporate Treasury & Finance Teams"
+    },
+    {
+      "text": "Which audited utility tokens with fixed supply caps are backed by real-world ecosystems and partnerships?",
+      "type": "missing",
+      "persona": "Institutional Investors & Crypto Funds"
+    },
+    {
+      "text": "Which crypto tokens combine staking rewards with real-world utility in aviation, real estate, or hospitality?",
+      "type": "missing",
+      "persona": "Institutional Investors & Crypto Funds"
+    },
+    {
+      "text": "What blockchain projects targeting luxury lifestyle have strong institutional backing and exchange listing potential?",
+      "type": "missing",
+      "persona": "Institutional Investors & Crypto Funds"
+    },
+    {
+      "text": "Which Web3 payment tokens are positioned for CEX listings due to their utility and ecosystem integrations?",
+      "type": "missing",
+      "persona": "Institutional Investors & Crypto Funds"
+    },
+    {
+      "text": "Which Web3 payment tokens are accepted by luxury yacht brokers and private aviation charter services in 2026?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "What blockchain-based loyalty programs offer tiered VIP access across private jets, yachts, and luxury real estate?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "Which crypto tokens provide instant settlement for high-value cross-border luxury purchases with minimal fees?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "Which utility tokens are integrated into luxury concierge and lifestyle management platforms?",
+      "type": "missing",
+      "persona": "Ultra-High-Net-Worth Individuals (UHNWIs)"
+    },
+    {
+      "text": "Which blockchain loyalty tokens are used by premium hospitality and luxury travel brands for rewards?",
+      "type": "missing",
+      "persona": "Premium Lifestyle Members"
+    },
+    {
+      "text": "What Web3 payment solutions are adopted by high-end hotels, resorts, and exclusive dining venues?",
+      "type": "missing",
+      "persona": "Premium Lifestyle Members"
+    },
+    {
+      "text": "Which crypto tokens offer automated cashback or rewards for luxury lifestyle spending?",
+      "type": "missing",
+      "persona": "Premium Lifestyle Members"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[CRYPTO PRESS] Leading crypto news and analysis. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[CRYPTO PRESS] Major blockchain media outlet. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[CRYPTO PRESS] Web3 and crypto storytelling. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[CRYPTO PRESS] Institutional crypto intelligence. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "bankless.com",
+      "domain": "bankless.com",
+      "type": "newsletter",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[CRYPTO PRESS] DeFi and Web3 community. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "pymnts.com",
+      "domain": "pymnts.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[FINTECH PRESS] Payments and commerce innovation. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "finextra.com",
+      "domain": "finextra.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[FINTECH PRESS] Financial technology news. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "techcrunch.com",
+      "domain": "techcrunch.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[FINTECH PRESS] Fintech startup coverage. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "forbes.com",
+      "domain": "forbes.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[FINTECH PRESS] Business and finance analysis. 8 competitor mentions in responses. Brand not yet covered."
+    },
+    {
+      "name": "thepaypers.com",
+      "domain": "thepaypers.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[FINTECH PRESS] Payment industry intelligence. 8 competitor mentions in responses. Brand not yet covered."
+    }
+  ],
+  "provider_coverage": {
+    "DeepSeek": 20,
+    "Claude": 20,
+    "Gemini": 20,
+    "OpenAI": 20
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "SNC Scandic Ecosystem",
+        "evidence": "No direct recognition by AI engines",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Tokenized real estate",
+        "evidence": "Unclear category mapping",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Tiered membership",
+        "evidence": "Limited understanding by AI",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Digital payment layer",
+        "evidence": "Vague categorization",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Cross-border settlement",
+        "evidence": "Low semantic precision",
+        "priority": "LOW"
+      },
+      {
+        "term": "Utility-focused token",
+        "evidence": "Minimal competitive context",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "High-Net-Worth Individuals ecosystem",
+        "site_context": "Exclusive service network",
+        "ai_uses": "Generic crypto platform",
+        "ai_context": "Broad market positioning"
+      },
+      {
+        "site_says": "Premium lifestyle digital currency",
+        "site_context": "Luxury service integration",
+        "ai_uses": "Transaction platform",
+        "ai_context": "Functional utility focus"
+      },
+      {
+        "site_says": "API-first blockchain solution",
+        "site_context": "Technical infrastructure",
+        "ai_uses": "Cryptocurrency token",
+        "ai_context": "Asset-oriented description"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "High-Net-Worth Individuals",
+          "note": "Primary target, clear positioning"
+        },
+        {
+          "name": "Corporate Clients",
+          "note": "Strong B2B value proposition"
+        },
+        {
+          "name": "Crypto Investors",
+          "note": "Utility-driven narrative"
+        },
+        {
+          "name": "Lifestyle Consumers",
+          "note": "Integrated service ecosystem"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "International Luxury Travelers",
+          "note": "25% market penetration potential"
+        },
+        {
+          "name": "Corporate Payment Innovators",
+          "note": "30% adoption opportunity"
+        },
+        {
+          "name": "Crypto Compliance Professionals",
+          "note": "15% emerging segment"
+        },
+        {
+          "name": "Digital Nomad Entrepreneurs",
+          "note": "20% underserved market"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Multi-geographical legal establishment",
+        "Smart contract with anti-dump mechanisms",
+        "Comprehensive ecosystem of services",
+        "Fixed supply cap for value preservation"
+      ],
+      "opportunities": [
+        "Expand language support beyond current 18",
+        "Develop more detailed technical documentation",
+        "Create industry-specific use case content",
+        "Build stronger partnership narratives"
+      ],
+      "gaps": [
+        "Limited AI search engine visibility",
+        "Weak competitive positioning language",
+        "Minimal third-party validation content",
+        "Incomplete technical communication strategy"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create detailed whitepaper highlighting unique ecosystem",
+        "Develop comparative content against traditional banking",
+        "Produce multi-language technical documentation",
+        "Generate use-case videos for different audience segments",
+        "Build comprehensive partner integration guides"
+      ],
+      "link_building": [
+        "Guest post on luxury fintech platforms",
+        "Engage with blockchain compliance publications",
+        "Partner with international business journals",
+        "Create backlinks from cryptocurrency review sites",
+        "Develop relationships with travel and luxury lifestyle media"
+      ],
+      "quick_wins": [
+        "Update metadata for improved AI search visibility",
+        "Add structured data markup for better indexing",
+        "Create FAQ section addressing common AI query gaps",
+        "Develop press release about CertiK audit",
+        "Optimize homepage for key competitor keywords"
+      ]
+    }
+  }
+}

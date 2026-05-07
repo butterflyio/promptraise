@@ -819,15 +819,11 @@ class OpenRouterBatchClient:
                                    brand_name: str) -> list:
         """Find strategic link-building opportunities (DIFFERENT from Top Sources).
         
-        Strategy: Identify high-authority domains that are NOT in the Top Sources list,
-        but represent valuable link-building targets because:
-        1. They're in the same industry/topic space (inferred from keyword context)
-        2. They're likely to cover competitors or market alternatives
-        3. The brand should aim for coverage there
+        Strategy: Dynamically infer industry from response content and suggest
+        high-authority publications where competitors get coverage but brand doesn't.
         
-        This is fundamentally different from "Top Sources" which just lists domains
-        that appeared in responses. Source Opportunities are strategic recommendations.
-        """
+        Key improvement: Industry-specific targets based on actual response content,
+        NOT hardcoded generic tech publications."""
         responses = batch_result.get("responses", [])
         brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
         
@@ -839,67 +835,100 @@ class OpenRouterBatchClient:
                 if domain and domain not in ("null", "none"):
                     mentioned_domains.add(domain)
         
-        # Strategic targets based on competitor mentions (DIFFERENT from Top Sources)
-        competitor_domains = {}
+        # Infer industry from response content
+        industry_keywords = {
+            "crypto": ["crypto", "blockchain", "token", "web3", "defi", "nft", "bitcoin", "ethereum", "altcoin", "wallet"],
+            "luxury": ["luxury", "yacht", "jet", "private aviation", "concierge", "vip", "premium", "estate", "lifestyle"],
+            "fintech": ["payment", "settlement", "cross-border", "fiat", "banking", "financial", "treasury", "b2b"],
+            "ai": ["ai", "artificial intelligence", "machine learning", "llm", "gpt", "model", "compute", "gpu"],
+            "travel": ["travel", "hotel", "resort", "hospitality", "booking", "tourism", "vacation"],
+            "real_estate": ["real estate", "property", "tokenized", "mortgage", "housing", "development"],
+        }
         
+        industry_scores = {k: 0 for k in industry_keywords}
         for resp in responses:
-            has_competitors = len(resp.get("competitors_mentioned", [])) > 0
-            
-            if has_competitors:
-                # For each competitor mentioned, infer domain opportunities
-                for competitor in resp.get("competitors_mentioned", []):
-                    # Get the question/category context
-                    question = resp.get("question", "")
-                    
-                    # Build a strategic recommendation
-                    if competitor not in competitor_domains:
-                        competitor_domains[competitor] = {
-                            "responses": 0,
-                            "categories": set(),
-                            "potential_sources": set(),
-                        }
-                    
-                    competitor_domains[competitor]["responses"] += 1
-                    competitor_domains[competitor]["categories"].add(question[:60])
+            text = resp.get("question", "") + " " + resp.get("raw_text", "")
+            text_lower = text.lower()
+            for industry, keywords in industry_keywords.items():
+                for kw in keywords:
+                    if kw in text_lower:
+                        industry_scores[industry] += 1
         
-        # Known industry publication domains (strategy: where competitors likely get coverage)
-        industry_targets = [
-            {"domain": "techcrunch.com", "type": "publication", "reason": "Covers AI/tech companies"},
-            {"domain": "forbes.com", "type": "publication", "reason": "Enterprise tech coverage"},
-            {"domain": "venturebeat.com", "type": "publication", "reason": "AI and infrastructure news"},
-            {"domain": "slashgear.com", "type": "publication", "reason": "Technology reviews"},
-            {"domain": "infoq.com", "type": "developer", "reason": "Architecture and engineering"},
-            {"domain": "producthunt.com", "type": "community", "reason": "Product launches"},
-            {"domain": "hackernews.com", "type": "community", "reason": "Tech community"},
-            {"domain": "news.ycombinator.com", "type": "community", "reason": "Tech discussion"},
-            {"domain": "betanews.com", "type": "publication", "reason": "Enterprise IT news"},
-            {"domain": "siliconangle.com", "type": "publication", "reason": "Cloud and AI coverage"},
-        ]
+        # Determine dominant industries
+        sorted_industries = sorted(industry_scores.items(), key=lambda x: x[1], reverse=True)
+        dominant = [ind for ind, score in sorted_industries if score > 0][:3]
         
+        if not dominant:
+            dominant = ["crypto", "fintech"]  # Default fallback
+        
+        # Industry-specific publication databases
+        industry_publications = {
+            "crypto": [
+                {"domain": "coindesk.com", "type": "publication", "reason": "Leading crypto news and analysis"},
+                {"domain": "cointelegraph.com", "type": "publication", "reason": "Major blockchain media outlet"},
+                {"domain": "decrypt.co", "type": "publication", "reason": "Web3 and crypto storytelling"},
+                {"domain": "theblock.co", "type": "publication", "reason": "Institutional crypto intelligence"},
+                {"domain": "bankless.com", "type": "newsletter", "reason": "DeFi and Web3 community"},
+            ],
+            "luxury": [
+                {"domain": "robbreport.com", "type": "publication", "reason": "Premier luxury lifestyle media"},
+                {"domain": "jetsetmag.com", "type": "publication", "reason": "Private aviation and luxury travel"},
+                {"domain": "yachtingworld.com", "type": "publication", "reason": "Yachting and marine lifestyle"},
+                {"domain": "luxe.digital", "type": "publication", "reason": "Luxury market insights"},
+                {"domain": "businessinsider.com", "type": "publication", "reason": "Business and lifestyle coverage"},
+            ],
+            "fintech": [
+                {"domain": "pymnts.com", "type": "publication", "reason": "Payments and commerce innovation"},
+                {"domain": "finextra.com", "type": "publication", "reason": "Financial technology news"},
+                {"domain": "techcrunch.com", "type": "publication", "reason": "Fintech startup coverage"},
+                {"domain": "forbes.com", "type": "publication", "reason": "Business and finance analysis"},
+                {"domain": "thepaypers.com", "type": "publication", "reason": "Payment industry intelligence"},
+            ],
+            "ai": [
+                {"domain": "techcrunch.com", "type": "publication", "reason": "AI startup coverage"},
+                {"domain": "venturebeat.com", "type": "publication", "reason": "AI and enterprise tech"},
+                {"domain": "syncedreview.com", "type": "publication", "reason": "AI industry analysis"},
+                {"domain": "towardsdatascience.com", "type": "publication", "reason": "ML and AI technical content"},
+                {"domain": "ai-journal.com", "type": "publication", "reason": "AI business news"},
+            ],
+            "travel": [
+                {"domain": "travelandleisure.com", "type": "publication", "reason": "Luxury travel authority"},
+                {"domain": "cntraveler.com", "type": "publication", "reason": "Conde Nast travel media"},
+                {"domain": "skift.com", "type": "publication", "reason": "Travel industry intelligence"},
+                {"domain": "traveldailymedia.com", "type": "publication", "reason": "Travel business news"},
+            ],
+            "real_estate": [
+                {"domain": "realtor.com", "type": "publication", "reason": "Real estate industry news"},
+                {"domain": "housingwire.com", "type": "publication", "reason": "Housing and mortgage news"},
+                {"domain": "inman.com", "type": "publication", "reason": "Real estate technology"},
+            ],
+        }
+        
+        # Build dynamic opportunities from dominant industries
         opportunities = []
+        seen_domains = set()
         
-        # Add industry targets that brand hasn't been mentioned in yet
-        for target in industry_targets:
-            domain = target["domain"]
-            
-            # Skip if already in top sources (mentioned in responses)
-            if domain in mentioned_domains:
-                continue
-            
-            # How many competitors do we know about this domain?
-            competitor_count = len(competitor_domains)
-            
-            opportunities.append({
-                "name": domain,
-                "domain": domain,
-                "type": target["type"],
-                "mentions": 0,  # Not in top sources, so 0
-                "priority": "OPPORTUNITY",
-                "reason": f"[LINK TARGET] Industry publication. {competitor_count} competitors active. Brand not yet mentioned.",
-            })
-        
-        # If no competitors discovered, return empty (can't make strategic recs)
-        if not competitor_domains:
-            return []
+        for industry in dominant:
+            pubs = industry_publications.get(industry, [])
+            for pub in pubs:
+                domain = pub["domain"]
+                if domain in seen_domains or domain in mentioned_domains:
+                    continue
+                seen_domains.add(domain)
+                
+                # Count competitors that would benefit from this domain
+                competitor_count = sum(
+                    1 for resp in responses 
+                    if len(resp.get("competitors_mentioned", [])) > 0
+                )
+                
+                opportunities.append({
+                    "name": domain,
+                    "domain": domain,
+                    "type": pub["type"],
+                    "mentions": 0,
+                    "priority": "OPPORTUNITY",
+                    "reason": f"[{industry.upper()} PRESS] {pub['reason']}. {competitor_count} competitor mentions in responses. Brand not yet covered.",
+                })
         
         return opportunities[:10]
