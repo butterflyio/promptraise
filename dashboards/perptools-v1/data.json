@@ -1,0 +1,496 @@
+{
+  "site": {
+    "name": "PerpTools",
+    "url": "https://perptools.ai",
+    "domain": "perptools.ai",
+    "slug": "perptools-v1",
+    "analysis_id": "openrouter-perptools-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 07, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 60,
+    "responses_per_type": 30,
+    "unique_competitors": 13,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "PerpTools Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "5.0%",
+        "label": "dash (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "1.7%",
+        "label": "kraken (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Professional Derivatives Traders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "dash",
+          "appearance": 5.0,
+          "rank": 6.67,
+          "providers": [
+            "openai",
+            "gemini",
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "kraken",
+          "appearance": 1.7,
+          "rank": 20.0,
+          "providers": [
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance",
+          "appearance": 1.7,
+          "rank": 17.0,
+          "providers": [
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "verge",
+          "appearance": 1.7,
+          "rank": 0,
+          "providers": [
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pirate",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "grin",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pivx",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "monero",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 15,
+      "provider_order_summary": {
+        "openai": 0,
+        "gemini": 1,
+        "deepseek": 2,
+        "claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Performance-Driven Market Participants",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "dash",
+          "appearance": 3.3,
+          "rank": 7.0,
+          "providers": [
+            "claude",
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "secret",
+          "appearance": 1.7,
+          "rank": 16.0,
+          "providers": [
+            "openai"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "verge",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pirate",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "grin",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pivx",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "monero",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "horizen",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 15,
+      "provider_order_summary": {
+        "claude": 0,
+        "deepseek": 1,
+        "openai": 2
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "defi",
+      "count": 14
+    },
+    {
+      "text": "privacy",
+      "count": 9
+    },
+    {
+      "text": "private",
+      "count": 1
+    },
+    {
+      "text": "governance",
+      "count": 1
+    }
+  ],
+  "sources": [
+    {
+      "name": "perptools.notion",
+      "url": "https://perptools.notion",
+      "mentions": 1
+    },
+    {
+      "name": "www.perptools",
+      "url": "https://www.perptools",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How do autonomous agents calculate and limit potential portfolio drawdowns?",
+      "type": "missing",
+      "persona": "Risk Management Specialist"
+    },
+    {
+      "text": "What reporting mechanisms track my strategy's performance and risk metrics?",
+      "type": "missing",
+      "persona": "Risk Management Specialist"
+    },
+    {
+      "text": "What historical performance metrics demonstrate strategy effectiveness?",
+      "type": "missing",
+      "persona": "Performance-Oriented Investor"
+    },
+    {
+      "text": "How transparent are the decision-making processes behind trade executions?",
+      "type": "missing",
+      "persona": "Performance-Oriented Investor"
+    },
+    {
+      "text": "What execution speed can I achieve for entering and exiting positions?",
+      "type": "missing",
+      "persona": "High-Frequency Strategy Architect"
+    },
+    {
+      "text": "How do autonomous agents calculate and limit potential portfolio drawdowns?",
+      "type": "missing",
+      "persona": "Risk Management Specialist"
+    },
+    {
+      "text": "Can I set automatic position scaling based on real-time market conditions?",
+      "type": "missing",
+      "persona": "Risk Management Specialist"
+    },
+    {
+      "text": "How transparent are the risk assessment algorithms during trade execution?",
+      "type": "missing",
+      "persona": "Risk Management Specialist"
+    },
+    {
+      "text": "What reporting mechanisms track my strategy's performance and risk metrics?",
+      "type": "missing",
+      "persona": "Risk Management Specialist"
+    },
+    {
+      "text": "Can I delegate trade execution while retaining full control of my assets?",
+      "type": "missing",
+      "persona": "Time-Constrained Professional"
+    },
+    {
+      "text": "What historical performance metrics demonstrate strategy effectiveness?",
+      "type": "missing",
+      "persona": "Performance-Oriented Investor"
+    },
+    {
+      "text": "How do autonomous agents adapt to changing market dynamics?",
+      "type": "missing",
+      "persona": "Performance-Oriented Investor"
+    },
+    {
+      "text": "How transparent are the decision-making processes behind trade executions?",
+      "type": "missing",
+      "persona": "Performance-Oriented Investor"
+    },
+    {
+      "text": "How do autonomous agents handle unexpected market volatility?",
+      "type": "missing",
+      "persona": "Time-Constrained Professional"
+    },
+    {
+      "text": "What historical performance metrics demonstrate strategy effectiveness?",
+      "type": "missing",
+      "persona": "Performance-Oriented Investor"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "openai": 20,
+    "gemini": 10,
+    "deepseek": 0,
+    "claude": 50
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "AI Arena",
+        "evidence": "No clear AI engine recognition",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Autonomous Agents",
+        "evidence": "Undefined in AI context",
+        "priority": "HIGH"
+      },
+      {
+        "term": "CEX-grade Performance",
+        "evidence": "Limited competitive understanding",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Omnichain Liquidity",
+        "evidence": "Technical term not standardized",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Hands-off Trading",
+        "evidence": "No specific AI matching",
+        "priority": "LOW"
+      },
+      {
+        "term": "Non-custodial Infrastructure",
+        "evidence": "Partial market recognition",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "The Market Never Sleeps",
+        "site_context": "Aggressive positioning",
+        "ai_uses": "Perpetual trading platform",
+        "ai_context": "Neutral description"
+      },
+      {
+        "site_says": "AI-powered Automation",
+        "site_context": "Technical capability",
+        "ai_uses": "Algorithmic trading",
+        "ai_context": "Standard terminology"
+      },
+      {
+        "site_says": "Autonomous Agents",
+        "site_context": "Advanced trading",
+        "ai_uses": "Trading bots",
+        "ai_context": "Basic implementation"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Professional Derivatives Traders",
+          "note": "Primary focus"
+        },
+        {
+          "name": "High-Frequency Traders",
+          "note": "Direct technical targeting"
+        },
+        {
+          "name": "Crypto Natives",
+          "note": "Self-custodial emphasis"
+        },
+        {
+          "name": "Performance-Driven Traders",
+          "note": "Strategic positioning"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "DeFi Researchers",
+          "note": "1.7% market penetration"
+        },
+        {
+          "name": "Privacy-Focused Traders",
+          "note": "Emerging 0% segment"
+        },
+        {
+          "name": "Multi-Chain Participants",
+          "note": "Fragmented 1.7% visibility"
+        },
+        {
+          "name": "Governance Token Holders",
+          "note": "Minimal current representation"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Non-custodial trading infrastructure",
+        "Cross-chain liquidity integration",
+        "AI-driven trading strategy",
+        "Transparent execution model"
+      ],
+      "opportunities": [
+        "Expand AI agent customization",
+        "Develop educational content on autonomous trading",
+        "Create comparative performance dashboards",
+        "Build stronger multi-chain narratives"
+      ],
+      "gaps": [
+        "Limited competitive differentiation",
+        "Unclear AI agent capabilities",
+        "Minimal third-party validation",
+        "Complex technical messaging"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop comprehensive 'AI Trading Explained' whitepaper",
+        "Create competitive comparison against Dash/Kraken/Binance",
+        "Produce case studies of successful autonomous trading",
+        "Develop technical deep-dive content on omnichain infrastructure",
+        "Generate visual explainers of AI agent workflows"
+      ],
+      "link_building": [
+        "Partner with DeFi research platforms",
+        "Guest post on crypto trading publications",
+        "Engage with multi-chain ecosystem influencers",
+        "Create linkable technical documentation",
+        "Develop interactive trading strategy guides"
+      ],
+      "quick_wins": [
+        "Clarify AI agent terminology",
+        "Update homepage with simplified value propositions",
+        "Add competitive performance metrics",
+        "Implement technical SEO improvements",
+        "Create targeted landing pages for each audience segment"
+      ]
+    }
+  }
+}
