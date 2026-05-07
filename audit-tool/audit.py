@@ -801,8 +801,7 @@ def stage_build_data_model(site_info: dict, botsee_results: dict,
         "sources": transform_sources(botsee_results.get("sources", {})),
         "keyword_opportunities": transform_keyword_opportunities(botsee_results.get("keyword_opportunities", {})),
         "source_opportunities": transform_source_opportunities(botsee_results.get("source_opportunities", {})),
-        "provider_coverage": compute_provider_coverage(customer_types, deepseek_data),
-        "deepseek_data": deepseek_data or {},
+        "provider_coverage": compute_provider_coverage(customer_types, None),
         "insights": insights,
     }
 
@@ -1175,7 +1174,6 @@ def run_post_botsee(args):
     try:
         or_client = OpenRouterBatchClient()
         generator = InsightsGenerator()
-        ds_client = DeepSeekClient()
     except RuntimeError as e:
         log(f"ERROR: {e}")
         sys.exit(1)
@@ -1203,13 +1201,7 @@ def run_post_botsee(args):
         or_client, batch_result, site_name, discovered_competitors, state
     )
 
-    # Stage 6: DeepSeek analysis (existing stage)
-    top_competitors = aggregated.get("top_competitors", [])
-    deepseek_data = stage_deepseek_analysis(
-        ds_client, site_name, site_url, top_competitors, state
-    )
-
-    # Stage 7: Generate insights
+    # Stage 6: Generate insights (DeepSeek analysis removed)
     competitors_payload = aggregated.get("competitors", {})
     by_ct = competitors_payload.get("by_customer_type", [])
     overall = competitors_payload.get("overall_summary", {})
@@ -1281,7 +1273,7 @@ def run_post_botsee(args):
         "source_opportunities": aggregated.get("source_opportunities", []),
     }
 
-    data = stage_build_data_model(site_info, botsee_results, insights, deepseek_data)
+    data = stage_build_data_model(site_info, botsee_results, insights, None)
 
     output_dir = DEFAULT_DASHBOARDS_DIR / slug
     output_dir.mkdir(parents=True, exist_ok=True)

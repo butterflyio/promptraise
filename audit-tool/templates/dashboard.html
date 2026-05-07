@@ -779,15 +779,6 @@
             </div>
         </div>
 
-        <!-- DeepSeek Analysis -->
-        <div class="card" style="margin-top: 2rem;" id="deepseekSection" style="display:none;">
-            <div class="card-header">
-                <div class="card-title">DeepSeek AI Visibility</div>
-                <span class="tag tag-competitor">DeepSeek</span>
-            </div>
-            <div id="deepseekContent"></div>
-        </div>
-
         <!-- Sources -->
         <div class="card" style="margin-top: 2rem;">
             <div class="card-header">
@@ -1350,86 +1341,6 @@
             `).join('');
         }
 
-        // ============ DEEPSEEK ============
-        function renderDeepSeek() {
-            const section = document.getElementById('deepseekSection');
-            const container = document.getElementById('deepseekContent');
-            const ds = DASHBOARD_DATA.deepseek_data;
-
-            if (!ds || !ds.analyzed) {
-                section.style.display = 'none';
-                return;
-            }
-
-            section.style.display = 'block';
-
-            let html = '';
-
-            // Brand visibility summary
-            const bv = ds.brand_visibility || {};
-            if (bv && bv.summary) {
-                html += `
-                    <div style="margin-bottom: 1.5rem;">
-                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 0.75rem;">
-                            <div style="font-size: 1.25rem; font-weight: 700; color: var(--primary);">
-                                ${bv.visibility_score || 0}
-                            </div>
-                            <div>
-                                <div style="font-size: 0.75rem; color: var(--text-secondary); text-transform: uppercase;">DeepSeek Visibility Score</div>
-                                <div style="font-size: 0.85rem; color: ${bv.mentioned ? 'var(--success)' : 'var(--danger)'};">
-                                    ${bv.mentioned ? 'Brand mentioned in AI responses' : 'Brand NOT mentioned in AI responses'}
-                                </div>
-                            </div>
-                        </div>
-                        <p style="color: var(--text-secondary); font-size: 0.85rem;">${bv.summary}</p>
-                    </div>
-                `;
-            }
-
-            // AI usage per product category
-            const aiUsage = ds.ai_usage || {};
-            const usageEntries = Object.entries(aiUsage).filter(([k, v]) => v);
-            if (usageEntries.length) {
-                html += '<div style="margin-bottom: 1.5rem;"><div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.5rem;">DeepSeek AI Mentions By Category</div>';
-                html += '<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem;">';
-                for (const [category, text] of usageEntries) {
-                    const catLabel = category.replace('_', ' ').replace(/\b\w/g, l => l.toUpperCase());
-                    html += `
-                        <div style="background: var(--bg-dark); padding: 0.75rem; border-radius: 0.5rem;">
-                            <div style="font-size: 0.7rem; text-transform: uppercase; color: var(--text-secondary); margin-bottom: 0.25rem;">${catLabel}</div>
-                            <div style="font-size: 0.8rem; color: var(--text-primary);">${text}</div>
-                        </div>
-                    `;
-                }
-                html += '</div></div>';
-            }
-
-            // Top competitors from DeepSeek perspective
-            const comps = ds.top_competitors || [];
-            const dsColors = ['#67FF67', '#3D6944', '#C9CDD2', '#f97316', '#67FF67', '#3D6944'];
-            if (comps.length) {
-                html += '<div><div style="font-size: 0.8rem; color: var(--text-secondary); text-transform: uppercase; margin-bottom: 0.75rem;">Top Competitors (DeepSeek)</div>';
-                html += '<div style="display: flex; flex-direction: column; gap: 0.5rem;">';
-                for (let i = 0; i < comps.slice(0, 6).length; i++) {
-                    const c = comps[i];
-                    const score = c.visibility_score || 0;
-                    const barColor = dsColors[i % dsColors.length];
-                    html += `
-                        <div style="display: flex; align-items: center; gap: 0.75rem;">
-                            <div style="flex: 1; min-width: 0;">
-                                <div style="font-size: 0.85rem; font-weight: 500; margin-bottom: 0.25rem;">${c.name}</div>
-                                <div class="bar"><div class="bar-fill" style="width: ${Math.min(score, 100)}%; background: ${barColor};"></div></div>
-                            </div>
-                            <div style="font-size: 0.85rem; font-weight: 600; color: var(--text-secondary); min-width: 40px; text-align: right;">${score}</div>
-                        </div>
-                    `;
-                }
-                html += '</div></div>';
-            }
-
-            container.innerHTML = html || '<p style="color: var(--text-secondary);">No DeepSeek data available.</p>';
-        }
-
         // ============ INIT ============
         // Update timestamp
         document.getElementById('lastUpdated').textContent = new Date().toLocaleString('en-US', {
@@ -1454,7 +1365,6 @@
         renderLanguageGap();
         renderPosition();
         renderActionItems();
-        renderDeepSeek();
 
         // Init charts — briefly activate both tabs so all canvases are visible
         const type1Div = document.getElementById('type1');
