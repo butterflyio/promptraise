@@ -31,7 +31,7 @@
       },
       {
         "value": "5.0%",
-        "label": "monero (#2)",
+        "label": "CoreWeave (#2)",
         "trend": ""
       }
     ]
@@ -41,7 +41,7 @@
       "customer_type_name": "Enterprise AI Integration",
       "competitors": [
         {
-          "name": "monero",
+          "name": "CoreWeave",
           "appearance_percentage": 5.0,
           "avg_rank": 12.5,
           "providers": [
@@ -50,7 +50,7 @@
           "is_own": false
         },
         {
-          "name": "zcash",
+          "name": "Lambda Labs",
           "appearance_percentage": 5.0,
           "avg_rank": 12.5,
           "providers": [
@@ -76,7 +76,7 @@
           "is_own": false
         },
         {
-          "name": "dash",
+          "name": "Paperspace",
           "appearance_percentage": 2.5,
           "avg_rank": 0,
           "providers": [
