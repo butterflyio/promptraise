@@ -110,12 +110,12 @@ Respond in JSON format:
   "reasoning": "Why these are Tier-1 competitors"
 }}"""
 
-    try:
-        response_text = openrouter_client._call(
-            model="deepseek/deepseek-chat",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=500
-        )
+     try:
+         response_text = openrouter_client._call(
+             model="anthropic/claude-3.5-sonnet",
+             messages=[{"role": "user", "content": prompt}],
+             max_tokens=300
+         )
         
         # Extract JSON
         json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
@@ -207,14 +207,14 @@ Respond in JSON:
   "reasoning": "Brief explanation"
 }}"""
 
-    try:
-        response_text = openrouter_client._call(
-            model="deepseek/deepseek-chat",
-            messages=[{"role": "user", "content": prompt}],
-            max_tokens=200
-        )
-        
-        json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+     try:
+         response_text = openrouter_client._call(
+             model="anthropic/claude-3.5-sonnet",
+             messages=[{"role": "user", "content": prompt}],
+             max_tokens=300
+         )
+         
+         json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
         
         if json_match:
             data = json.loads(json_match.group())
@@ -261,7 +261,7 @@ Return JSON:
 
     try:
         response_text = openrouter_client._call(
-            model="deepseek/deepseek-chat",
+            model="anthropic/claude-3.5-sonnet",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
@@ -365,7 +365,7 @@ Return JSON:
 
     try:
         response_text = openrouter_client._call(
-            model="deepseek/deepseek-chat",
+            model="anthropic/claude-3.5-sonnet",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
