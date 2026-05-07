@@ -319,10 +319,10 @@
             font-weight: 600;
             text-transform: uppercase;
         }
-        .provider-badge.gemini { background: #67FF67; color: #0F0F0F; }
-        .provider-badge.claude { background: #3D6944; color: #DEDCD7; }
-        .provider-badge.openai-search, .provider-badge.openai { background: #C9CDD2; color: #0F0F0F; }
-        .provider-badge.deepseek { background: #C9CDD2; color: #0F0F0F; }
+         .provider-badge.gemini { background: #f59e0b; color: #0F0F0F; }
+         .provider-badge.claude { background: #3D6944; color: #DEDCD7; }
+         .provider-badge.openai-search, .provider-badge.openai { background: #ef4444; color: #FFFFFF; }
+         .provider-badge.deepseek { background: #67FF67; color: #0F0F0F; }
 
         .rank-badge {
             display: inline-block;
@@ -1287,8 +1287,19 @@
 
             function buildRankChart(canvasId, customerType) {
                 if (!customerType.competitors || customerType.competitors.length === 0) return;
-                const labels = customerType.competitors.slice(0, 10).map(c => c.name);
-                const data = customerType.competitors.slice(0, 10).map(c => c.avg_rank || c.rank || 0);
+                
+                // Filter: only include competitors with non-zero avg_rank
+                const competitorsWithRank = customerType.competitors
+                    .filter(c => {
+                        const rank = c.avg_rank || c.rank || 0;
+                        return rank > 0;
+                    })
+                    .slice(0, 10);
+                
+                if (competitorsWithRank.length === 0) return; // No data to display
+                
+                const labels = competitorsWithRank.map(c => c.name);
+                const data = competitorsWithRank.map(c => c.avg_rank || c.rank || 0);
                 const canvas = document.getElementById(canvasId);
                 canvas.height = 320;
                 new Chart(canvas, {
@@ -1323,15 +1334,15 @@
             const providerLabels = Object.keys(providers);
             const providerValues = Object.values(providers);
             const providerColors = {
-                'Claude': '#8B7AFF',           // Purple for Claude
-                'DeepSeek': '#1E90FF',        // Blue for DeepSeek
-                'Gemini': '#FFD700',          // Gold/Yellow for Gemini
-                'OpenAI': '#00CED1',          // Teal for OpenAI
-                'claude': '#8B7AFF',
-                'deepseek': '#1E90FF',
-                'gemini': '#FFD700',
-                'openai': '#00CED1',
-                'openai-search': '#00CED1'
+                'Claude': '#3D6944',           // Brand green (dark)
+                'DeepSeek': '#67FF67',        // Brand primary (bright)
+                'Gemini': '#f59e0b',          // Warning/amber
+                'OpenAI': '#ef4444',          // Danger/red
+                'claude': '#3D6944',
+                'deepseek': '#67FF67',
+                'gemini': '#f59e0b',
+                'openai': '#ef4444',
+                'openai-search': '#ef4444'
             };
             const bgColors = providerLabels.map(l => providerColors[l] || providerColors[l.toLowerCase()] || '#94a3b8');
 
