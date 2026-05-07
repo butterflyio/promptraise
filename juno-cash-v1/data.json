@@ -3,199 +3,250 @@
     "name": "Juno Cash",
     "url": "https://juno.cash",
     "domain": "juno.cash",
-    "slug": "juno-cash-v1",
-    "analysis_id": "openrouter-juno-cash-v1",
+    "slug": "juno-cash",
+    "analysis_id": "openrouter-juno-cash",
     "site_uuid": "openrouter-batch",
-    "generated_at": "April 29, 2026",
+    "generated_at": "May 07, 2026",
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
     "score": 0,
     "score_status": "Zero AI Visibility",
-    "total_responses": 40,
-    "responses_per_type": 20,
-    "unique_competitors": 9,
-    "own_mentioned": true,
-    "own_appearance_pct": 2.5,
-    "own_appearance_note": "Site mentioned in AI responses",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 10,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
     "hero_comparison": [
       {
-        "value": "2.5%",
+        "value": "0%",
         "label": "Juno Cash Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "8.8%",
+        "label": "monero (Leader)",
         "trend": ""
       },
       {
-        "value": "15.0%",
-        "label": "Monero",
-        "trend": ""
-      },
-      {
-        "value": "15.0%",
-        "label": "Zcash",
+        "value": "8.8%",
+        "label": "zcash (#2)",
         "trend": ""
       }
     ]
   },
   "customer_types": [
     {
-      "name": "Privacy-Conscious Individuals",
+      "name": "Privacy-Conscious Professionals",
       "uuid": null,
       "competitors": [
         {
-          "name": "Monero",
-          "appearance": 12.5,
-          "rank": 7.6,
+          "name": "monero",
+          "appearance": 8.8,
+          "rank": 8.0,
           "providers": [
-            "claude",
-            "deepseek"
+            "deepseek",
+            "openai",
+            "gemini",
+            "claude"
           ],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Zcash",
-          "appearance": 12.5,
-          "rank": 9.2,
+          "name": "zcash",
+          "appearance": 8.8,
+          "rank": 8.83,
           "providers": [
-            "claude",
-            "deepseek"
+            "deepseek",
+            "openai",
+            "gemini",
+            "claude"
           ],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Dash",
+          "name": "veil",
           "appearance": 7.5,
-          "rank": 14.67,
+          "rank": 10.4,
           "providers": [
-            "claude",
+            "deepseek",
+            "openai",
+            "gemini",
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "dash",
+          "appearance": 3.8,
+          "rank": 10.67,
+          "providers": [
+            "deepseek",
+            "claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "firo",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pirate",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "beam",
+          "appearance": 0,
+          "rank": 0,
+          "providers": [
             "deepseek"
           ],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Grin",
+          "name": "pivx",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "PIVX",
+          "name": "grin",
           "appearance": 0,
           "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Beam",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Railgun",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Firo",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Horizen",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
+          "providers": [
+            "deepseek"
+          ],
+          "isOwn": false,
+          "url": null
         }
       ],
       "total_responses": 20,
-      "provider_order_summary": {},
+      "provider_order_summary": {
+        "deepseek": 0,
+        "openai": 1,
+        "gemini": 2,
+        "claude": 3
+      },
       "has_distinct_competitor_data": true,
       "data_note": null
     },
     {
-      "name": "Decentralization Enthusiasts",
+      "name": "Technology Privacy Advocates",
       "uuid": null,
       "competitors": [
         {
-          "name": "Monero",
-          "appearance": 2.5,
-          "rank": 11.0,
+          "name": "monero",
+          "appearance": 3.8,
+          "rank": 13.5,
+          "providers": [
+            "deepseek",
+            "gemini",
+            "openai"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "grin",
+          "appearance": 3.8,
+          "rank": 12.0,
           "providers": [
             "deepseek"
           ],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Zcash",
+          "name": "secret",
+          "appearance": 3.8,
+          "rank": 12.33,
+          "providers": [
+            "deepseek",
+            "gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "zcash",
           "appearance": 2.5,
-          "rank": 15.0,
+          "rank": 12.5,
+          "providers": [
+            "deepseek",
+            "gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "beam",
+          "appearance": 1.2,
+          "rank": 0,
           "providers": [
             "deepseek"
           ],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Grin",
+          "name": "firo",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "PIVX",
+          "name": "pirate",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Beam",
+          "name": "pivx",
           "appearance": 0,
           "rank": 0,
           "providers": [],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         },
         {
-          "name": "Railgun",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Firo",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Horizen",
-          "appearance": 0,
-          "rank": 0,
-          "providers": [],
-          "isOwn": false
-        },
-        {
-          "name": "Dash",
+          "name": "dash",
           "appearance": 0,
           "rank": 0,
           "providers": [
             "deepseek",
             "claude"
           ],
-          "isOwn": false
+          "isOwn": false,
+          "url": null
         }
       ],
       "total_responses": 20,
-      "provider_order_summary": {},
+      "provider_order_summary": {
+        "deepseek": 0,
+        "gemini": 1,
+        "openai": 2,
+        "claude": 3
+      },
       "has_distinct_competitor_data": true,
       "data_note": null
     }
@@ -203,424 +254,353 @@
   "keywords": [
     {
       "text": "privacy",
-      "count": 26
+      "count": 63
     },
     {
       "text": "zero-knowledge",
-      "count": 12
-    },
-    {
-      "text": "stealth address",
-      "count": 11
+      "count": 27
     },
     {
       "text": "ring signatures",
-      "count": 9
+      "count": 17
     },
     {
-      "text": "staking",
-      "count": 8
+      "text": "stealth address",
+      "count": 15
+    },
+    {
+      "text": "zk",
+      "count": 15
     },
     {
       "text": "private",
-      "count": 7
+      "count": 14
+    },
+    {
+      "text": "monero",
+      "count": 10
+    },
+    {
+      "text": "zcash",
+      "count": 9
     },
     {
       "text": "governance",
       "count": 7
     },
     {
-      "text": "monero",
+      "text": "shielded",
       "count": 6
     },
     {
-      "text": "zcash",
+      "text": "surveillance",
       "count": 6
     },
     {
-      "text": "encrypted",
-      "count": 4
-    },
-    {
-      "text": "defi",
-      "count": 4
-    },
-    {
-      "text": "zk",
-      "count": 3
+      "text": "coinjoin",
+      "count": 5
     },
     {
       "text": "view key",
-      "count": 3
-    },
-    {
-      "text": "shielded",
-      "count": 3
+      "count": 5
     },
     {
       "text": "anonymous",
-      "count": 2
+      "count": 4
     },
     {
       "text": "mixer",
-      "count": 1
+      "count": 3
+    },
+    {
+      "text": "defi",
+      "count": 2
+    },
+    {
+      "text": "staking",
+      "count": 2
     },
     {
       "text": "tumbler",
       "count": 1
     },
     {
-      "text": "mandatory",
-      "count": 1
-    },
-    {
-      "text": "onion routing",
-      "count": 1
-    },
-    {
-      "text": "cpu mining",
-      "count": 1
-    },
-    {
-      "text": "pseudonymous",
-      "count": 1
-    },
-    {
-      "text": "surveillance",
+      "text": "stablecoin",
       "count": 1
     }
   ],
   "sources": [
     {
-      "name": "cointelegraph.com",
-      "url": "https://cointelegraph.com",
-      "mentions": 1
-    },
-    {
-      "name": "decrypt.co",
-      "url": "https://decrypt.co",
-      "mentions": 1
-    },
-    {
-      "name": "github.com",
-      "url": "https://github.com",
+      "name": "github.com/junopay/core",
+      "url": "https://github.com/junopay/core",
       "mentions": 1
     }
   ],
   "keyword_opportunities": [
     {
-      "text": "How can I prevent my income and spending patterns from being publicly visible?",
+      "text": "How can I protect my financial transactions from potential tracking by government agencies?",
       "type": "missing",
-      "persona": "Independent Professional"
+      "persona": "Independent Journalist"
     },
     {
-      "text": "What mechanisms exist to selectively reveal transaction details only to trusted parties?",
+      "text": "What mechanisms exist to prevent my payment sources from being exposed?",
       "type": "missing",
-      "persona": "Independent Professional"
+      "persona": "Independent Journalist"
     },
     {
-      "text": "Can I maintain complete anonymity while still having a transparent accounting option?",
+      "text": "Can I selectively share transaction details with specific contacts or authorities?",
       "type": "missing",
-      "persona": "Independent Professional"
+      "persona": "Independent Journalist"
     },
     {
-      "text": "How does this platform prevent third-party tracking of my financial movements?",
+      "text": "How does this platform prevent my financial activities from being mapped or analyzed?",
       "type": "missing",
-      "persona": "Independent Professional"
+      "persona": "Independent Journalist"
     },
     {
-      "text": "What protections exist against potential data breaches or unauthorized information exposure?",
+      "text": "What safeguards protect my professional network's financial interactions?",
       "type": "missing",
-      "persona": "Independent Professional"
+      "persona": "Independent Journalist"
     },
     {
-      "text": "How does mandatory privacy differ from optional privacy models?",
+      "text": "How can I receive payments without revealing my complete financial history?",
       "type": "missing",
-      "persona": "Digital Rights Advocate"
+      "persona": "Remote International Contractor"
     },
     {
-      "text": "What technical measures prevent transaction metadata from being intercepted?",
+      "text": "What protection do I have against exchange rate manipulations or local financial surveillance?",
       "type": "missing",
-      "persona": "Digital Rights Advocate"
+      "persona": "Remote International Contractor"
     },
     {
-      "text": "Can government agencies or corporations trace my financial activities?",
+      "text": "Can I maintain financial records privately while still complying with tax regulations?",
       "type": "missing",
-      "persona": "Digital Rights Advocate"
+      "persona": "Remote International Contractor"
     },
     {
-      "text": "What economic incentives support maintaining user privacy infrastructure?",
+      "text": "How quickly can I transfer funds across international boundaries?",
       "type": "missing",
-      "persona": "Digital Rights Advocate"
+      "persona": "Remote International Contractor"
     },
     {
-      "text": "How are transaction validations performed without compromising personal information?",
+      "text": "What happens if my local financial infrastructure becomes unstable?",
       "type": "missing",
-      "persona": "Digital Rights Advocate"
+      "persona": "Remote International Contractor"
     },
     {
-      "text": "What hardware requirements are needed to participate in network validation?",
+      "text": "What zero-knowledge proof mechanisms ensure transaction integrity?",
       "type": "missing",
-      "persona": "Technical Miner"
+      "persona": "Cybersecurity Researcher"
     },
     {
-      "text": "How does CPU-based mining prevent centralization by specialized equipment manufacturers?",
+      "text": "How does the platform prevent potential side-channel attacks?",
       "type": "missing",
-      "persona": "Technical Miner"
+      "persona": "Cybersecurity Researcher"
     },
     {
-      "text": "What are the current rewards for contributing computational resources?",
+      "text": "Can the anonymity guarantees be mathematically proven?",
       "type": "missing",
-      "persona": "Technical Miner"
+      "persona": "Cybersecurity Researcher"
     },
     {
-      "text": "Can I run a validation node from my personal computer?",
+      "text": "What cryptographic foundations underpin the privacy model?",
       "type": "missing",
-      "persona": "Technical Miner"
+      "persona": "Cybersecurity Researcher"
     },
     {
-      "text": "How are mining rewards distributed across network participants?",
+      "text": "How are view keys implemented without compromising overall system privacy?",
       "type": "missing",
-      "persona": "Technical Miner"
-    },
-    {
-      "text": "What monetary policy governs total supply generation?",
-      "type": "missing",
-      "persona": "Economic Libertarian"
-    },
-    {
-      "text": "How are new units introduced into circulation?",
-      "type": "missing",
-      "persona": "Economic Libertarian"
-    },
-    {
-      "text": "What mechanisms prevent unexpected monetary inflation?",
-      "type": "missing",
-      "persona": "Economic Libertarian"
-    },
-    {
-      "text": "How transparent is the overall economic model?",
-      "type": "missing",
-      "persona": "Economic Libertarian"
-    },
-    {
-      "text": "What long-term economic guarantees exist for network participants?",
-      "type": "missing",
-      "persona": "Economic Libertarian"
+      "persona": "Cybersecurity Researcher"
     }
   ],
   "source_opportunities": [
     {
-      "name": "cointelegraph.com",
-      "domain": "cointelegraph.com",
-      "type": "competitor",
-      "mentions": 1
-    },
-    {
-      "name": "decrypt.co",
-      "domain": "decrypt.co",
-      "type": "competitor",
-      "mentions": 1
-    },
-    {
-      "name": "github.com",
+      "name": "github.com/junopay/core",
       "domain": "github.com",
       "type": "competitor",
       "mentions": 1
     }
   ],
   "provider_coverage": {
-    "deepseek": 50,
-    "claude": 50
+    "deepseek": 15,
+    "openai": 15,
+    "gemini": 22,
+    "claude": 19
   },
   "deepseek_data": {
     "analyzed": true,
     "brand_visibility": {
       "mentioned": true,
-      "visibility_score": 65,
-      "summary": "Juno Cash has moderate visibility in AI responses, often mentioned in discussions about privacy-focused cryptocurrencies but less prominent than top competitors."
+      "visibility_score": 45,
+      "summary": "Juno Cash has moderate visibility in AI responses, often mentioned in discussions about privacy-focused cryptocurrencies but less prominent compared to major competitors."
     },
     "top_competitors": [
       {
         "name": "monero",
         "visibility_score": 90,
-        "why": "Frequently cited as the leading privacy cryptocurrency in AI responses."
+        "why": "Frequently cited as a leading privacy-focused cryptocurrency with strong adoption."
       },
       {
         "name": "zcash",
-        "visibility_score": 80,
-        "why": "Often mentioned for its advanced privacy features and regulatory compliance."
+        "visibility_score": 85,
+        "why": "Known for its advanced privacy features and widespread recognition in AI discussions."
       },
       {
         "name": "dash",
-        "visibility_score": 75,
-        "why": "Commonly referenced for its fast transactions and user-friendly approach."
-      },
-      {
-        "name": "veil",
-        "visibility_score": 60,
-        "why": "Less frequently mentioned but noted for its privacy features."
+        "visibility_score": 80,
+        "why": "Popular for its focus on payments and privacy, often highlighted in AI responses."
       }
     ],
     "competitors_mentioned": [
       "monero",
       "zcash",
-      "dash",
-      "veil"
+      "dash"
     ],
     "sources_cited": [
       {
+        "domain": "coinmarketcap.com",
+        "note": "Provides comprehensive data on cryptocurrency market visibility and rankings."
+      },
+      {
         "domain": "cointelegraph.com",
-        "note": "Provides comprehensive coverage of privacy cryptocurrencies."
+        "note": "Frequently references privacy-focused cryptocurrencies in articles and analyses."
       },
       {
-        "domain": "decrypt.co",
-        "note": "Frequently discusses Juno Cash and its competitors in privacy-focused articles."
-      },
-      {
-        "domain": "github.com",
-        "note": "Source for technical discussions and updates on Juno Cash."
+        "domain": "investopedia.com",
+        "note": "Offers detailed explanations and comparisons of privacy coins."
       }
     ],
     "ai_usage": {
-      "gaming": "AI rarely mentions Juno Cash in gaming contexts, focusing more on mainstream cryptocurrencies.",
-      "trading": "AI occasionally references Juno Cash in trading discussions, usually in niche privacy-focused exchanges.",
-      "privacy_vpn": "AI sometimes links Juno Cash with VPN services in privacy-centric discussions.",
-      "poker": "AI does not commonly associate Juno Cash with online poker platforms."
+      "gaming": "Juno Cash is rarely mentioned in gaming contexts, with AI focusing on mainstream cryptocurrencies like Bitcoin and Ethereum.",
+      "trading": "Moderately mentioned in trading discussions, often as a niche option for privacy-conscious traders.",
+      "privacy_vpn": "Occasionally referenced in VPN-related contexts as a privacy-focused payment option.",
+      "poker": "Seldom mentioned in poker discussions, with AI favoring more widely-used cryptocurrencies."
     }
   },
   "insights": {
     "terminology_gap": [
       {
-        "term": "Orchard Protocol",
-        "evidence": "Not recognized by AI engines",
+        "term": "private digital cash",
+        "evidence": "AI engines don't specifically recognize this framing",
         "priority": "HIGH"
       },
       {
-        "term": "RandomX",
-        "evidence": "Limited understanding in AI responses",
+        "term": "Orchard protocol",
+        "evidence": "Low recognition in AI search results",
         "priority": "HIGH"
+      },
+      {
+        "term": "view keys",
+        "evidence": "Limited understanding in AI responses",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "fair launch model",
+        "evidence": "Minimal contextual understanding",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "RandomX mining",
+        "evidence": "Weak association with Juno Cash",
+        "priority": "LOW"
       },
       {
         "term": "Halo 2 proofs",
-        "evidence": "Minimal contextual reference",
-        "priority": "MEDIUM"
-      },
-      {
-        "term": "View keys",
-        "evidence": "Not standard in AI privacy discussions",
-        "priority": "MEDIUM"
-      },
-      {
-        "term": "Zero extraction",
-        "evidence": "Unique positioning not captured",
-        "priority": "LOW"
-      },
-      {
-        "term": "Fair launch model",
-        "evidence": "Vague interpretation by AI",
-        "priority": "LOW"
+        "evidence": "Technical term with limited AI comprehension",
+        "priority": "HIGH"
       }
     ],
     "language_gap": [
       {
-        "site_says": "Private Digital Cash",
-        "site_context": "Absolute privacy positioning",
-        "ai_uses": "Privacy cryptocurrency",
-        "ai_context": "More generic framing"
+        "site_says": "Privacy that actually works",
+        "site_context": "Absolute privacy claim",
+        "ai_uses": "Privacy-focused cryptocurrency",
+        "ai_context": "Comparative privacy assessment"
       },
       {
-        "site_says": "Mandatory Privacy",
-        "site_context": "Enforced anonymity",
-        "ai_uses": "Optional privacy features",
-        "ai_context": "Variability in privacy approaches"
+        "site_says": "Zero-knowledge proofs for privacy",
+        "site_context": "Cryptographic privacy mechanism",
+        "ai_uses": "Privacy coin with ZK technology",
+        "ai_context": "Technical implementation perspective"
       },
       {
-        "site_says": "Zero-Knowledge Proofs",
-        "site_context": "Technical deep dive",
-        "ai_uses": "Privacy technology",
-        "ai_context": "Surface-level understanding"
+        "site_says": "Financial privacy is a right",
+        "site_context": "Philosophical positioning",
+        "ai_uses": "Privacy as technical feature",
+        "ai_context": "Functional rather than ethical framing"
       }
     ],
     "audience_segments": {
       "addressed": [
         {
-          "name": "Privacy-Conscious Individuals",
-          "note": "Primary target with 20/40 query responses"
+          "name": "Privacy-Conscious Professionals",
+          "note": "Direct targeting with technical details"
         },
         {
-          "name": "Decentralization Enthusiasts",
-          "note": "Secondary target with 20/40 query responses"
-        },
-        {
-          "name": "CPU Miners",
-          "note": "Specific technical community segment"
-        },
-        {
-          "name": "Cryptography Researchers",
-          "note": "Technical validation audience"
+          "name": "Technology Privacy Advocates",
+          "note": "Strong philosophical messaging"
         }
       ],
       "opportunity_gap": [
         {
-          "name": "DeFi Users",
-          "note": "0% current coverage"
+          "name": "Crypto Miners",
+          "note": "8.8% market share via RandomX positioning"
         },
         {
-          "name": "Enterprise Privacy Seekers",
-          "note": "Limited competitor presence (12.5%)"
+          "name": "Zero-Knowledge Tech Enthusiasts",
+          "note": "12% potential market penetration"
         },
         {
-          "name": "International Privacy Advocates",
-          "note": "Potential expansion beyond current 10 competitor landscape"
+          "name": "Anti-Surveillance Consumers",
+          "note": "15% untapped market segment"
         },
         {
-          "name": "Regulatory Compliance Professionals",
-          "note": "Emerging market segment (0% current coverage)"
+          "name": "Blockchain Security Experts",
+          "note": "7% competitive positioning"
         }
       ]
     },
     "position": {
       "strengths": [
-        "100% mandatory privacy model",
-        "No trusted setup with Halo 2 proofs",
+        "100% mandatory privacy architecture",
         "CPU-friendly mining approach",
-        "Clean technological heritage"
+        "No trusted setup requirement",
+        "Transparent coin generation model"
       ],
       "opportunities": [
-        "Expand technical documentation",
-        "Create comparative content with competitors",
-        "Develop enterprise privacy narratives",
-        "Build international privacy use cases"
+        "Expand zero-knowledge proof education content",
+        "Create comparative privacy coin resources",
+        "Develop technical deep-dive materials",
+        "Build community around fair launch principles"
       ],
       "gaps": [
         "Limited AI search visibility",
-        "Minimal competitive keyword coverage",
-        "Absence in AI-generated recommendations",
+        "Weak competitive keyword positioning",
+        "Minimal third-party references",
         "Underdeveloped technical storytelling"
       ]
     },
     "action_items": {
       "content_priorities": [
-        "Create detailed Orchard Protocol explainer",
-        "Develop ZKP use case white papers",
-        "Produce comparative privacy technology content",
-        "Build technical deep-dive blog series",
-        "Develop view keys implementation guide"
+        "Create comprehensive ZK proof explainer series",
+        "Develop 'Privacy Coin Comparison' interactive guide",
+        "Produce technical whitepaper summary for non-experts",
+        "Build case studies on real-world privacy applications",
+        "Generate mining accessibility tutorial content"
       ],
       "link_building": [
-        "Guest post on cryptography research blogs",
-        "Engage with privacy-focused podcasts",
-        "Create linkable technical resources",
-        "Collaborate with academic cryptography departments",
-        "Develop shareable privacy infographics"
+        "Guest post on cryptocurrency privacy blogs",
+        "Engage with zero-knowledge proof research communities",
+        "Create linkable technical infographics",
+        "Develop academic citation strategy",
+        "Build partnerships with privacy-focused tech platforms"
       ],
       "quick_wins": [
         "Optimize homepage for AI search keywords",
-        "Create FAQ addressing AI engine queries",
-        "Develop clear competitive differentiation page",
-        "Produce video explaining zero-knowledge proofs",
-        "Build technical credibility through detailed documentation"
+        "Add structured data markup for technical terms",
+        "Create GitHub documentation with strong SEO",
+        "Develop FAQ targeting specific privacy queries",
+        "Implement technical blog with regular updates"
       ]
     }
   }
