@@ -88,11 +88,11 @@ Produce a JSON object with this EXACT shape:
 }}
 
 Constraints:
-- terminology_gap: exactly 6 rows. Mix of HIGH and MEDIUM priorities.
-- language_gap: exactly 3 comparison rows.
-- audience_segments.opportunity_gap: 4 items.
-- position.strengths/opportunities/gaps: 4 items each.
-- action_items.content_priorities/link_building/quick_wins: 5 items each.
+- terminology_gap: 4-8 items. Mix of HIGH and MEDIUM priorities. Include only genuinely meaningful gaps.
+- language_gap: 2-4 comparison rows. Include only clear mismatches between site language and AI language.
+- audience_segments.opportunity_gap: 3-5 items.
+- position.strengths/opportunities/gaps: 3-5 items each. Omit sections if there's insufficient evidence.
+- action_items.content_priorities/link_building/quick_wins: 4-6 items each. Focus on highest-impact actions.
 
 Guidelines:
 - Be concrete and site-specific. Reference actual competitor names and percentages.
@@ -123,7 +123,11 @@ class InsightsGenerator:
         self.model = model or os.environ.get("INSIGHTS_MODEL", self.DEFAULT_MODEL)
 
     def scrape_homepage(self, url: str, max_chars: int = 4000) -> str:
-        """Fetch a URL and return cleaned text content."""
+        """Fetch a URL and return cleaned text content.
+
+        Extracts body text, meta descriptions, og tags, title, and JSON-LD
+        to handle JavaScript-heavy sites (Next.js, React, etc.).
+        """
         try:
             headers = {
                 "User-Agent": (
@@ -136,12 +140,43 @@ class InsightsGenerator:
             response.raise_for_status()
             soup = BeautifulSoup(response.text, "html.parser")
 
+            # Extract meta descriptions and Open Graph tags first
+            meta_parts = []
+            title_tag = soup.find("title")
+            if title_tag and title_tag.get_text(strip=True):
+                meta_parts.append(title_tag.get_text(strip=True))
+
+            for meta_name in ["description", "og:description", "og:title", "twitter:description"]:
+                tag = soup.find("meta", attrs={"name": meta_name}) or soup.find("meta", attrs={"property": meta_name})
+                if tag and tag.get("content"):
+                    meta_parts.append(tag["content"])
+
+            # Extract JSON-LD structured data
+            for script in soup.find_all("script", type="application/ld+json"):
+                try:
+                    data = json.loads(script.string)
+                    if isinstance(data, dict):
+                        for key in ["description", "headline", "name", "about"]:
+                            val = data.get(key)
+                            if val and isinstance(val, str):
+                                meta_parts.append(val)
+                except Exception:
+                    pass
+
+            # Clean body text
             for tag in soup(["script", "style", "nav", "footer", "noscript"]):
                 tag.decompose()
 
-            text = soup.get_text(separator=" ", strip=True)
-            text = re.sub(r"\s+", " ", text)
-            return text[:max_chars]
+            body_text = soup.get_text(separator=" ", strip=True)
+            body_text = re.sub(r"\s+", " ", body_text)
+
+            # Combine: meta first (often more descriptive for JS sites), then body
+            combined = " ".join(meta_parts)
+            if body_text and len(body_text) > len(combined):
+                combined = combined + " " + body_text if combined else body_text
+
+            # If still very short, the site is likely JS-rendered; return what we have
+            return combined[:max_chars].strip()
         except Exception as e:
             return f"(Failed to fetch homepage: {e})"
 

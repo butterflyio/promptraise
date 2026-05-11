@@ -14,7 +14,7 @@
     "score_status": "Zero AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
-    "unique_competitors": 11,
+    "unique_competitors": 14,
     "own_mentioned": false,
     "own_appearance_pct": 0,
     "own_appearance_note": "Site NOT mentioned in AI responses",
@@ -30,284 +30,285 @@
         "trend": ""
       },
       {
-        "value": "27.5%",
-        "label": "centrifuge (#2)",
+        "value": "42.5%",
+        "label": "helium (#2)",
         "trend": ""
       }
     ]
   },
   "customer_types": [
     {
-      "customer_type_name": "Web3 Operators & Builders",
+      "name": "Web3 Operators & Builders",
+      "uuid": null,
       "competitors": [
         {
           "name": "realt",
-          "appearance_percentage": 62.5,
-          "avg_rank": 5.79,
+          "appearance": 62.5,
+          "rank": 5.79,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "centrifuge",
-          "appearance_percentage": 27.5,
-          "avg_rank": 7.6,
+          "appearance": 27.5,
+          "rank": 7.6,
           "providers": [
-            "DeepSeek",
             "Claude",
-            "Gemini"
+            "Gemini",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "goldfinch",
-          "appearance_percentage": 15.0,
-          "avg_rank": 8.0,
+          "appearance": 15.0,
+          "rank": 8.0,
           "providers": [
             "Claude",
-            "OpenAI",
-            "Gemini"
+            "Gemini",
+            "OpenAI"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "filecoin",
-          "appearance_percentage": 12.5,
-          "avg_rank": 9.0,
+          "appearance": 12.5,
+          "rank": 9.0,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "helium",
-          "appearance_percentage": 12.5,
-          "avg_rank": 3.4,
+          "appearance": 12.5,
+          "rank": 3.4,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "chainlink",
-          "appearance_percentage": 10.0,
-          "avg_rank": 13.5,
+          "appearance": 10.0,
+          "rank": 13.5,
           "providers": [
-            "DeepSeek",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "render",
-          "appearance_percentage": 7.5,
-          "avg_rank": 7.5,
+          "appearance": 7.5,
+          "rank": 7.5,
           "providers": [
-            "DeepSeek",
             "Claude",
-            "Gemini"
+            "Gemini",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "circle",
-          "appearance_percentage": 7.5,
-          "avg_rank": 6.0,
+          "appearance": 7.5,
+          "rank": 6.0,
           "providers": [
-            "DeepSeek",
             "Claude",
-            "Gemini"
+            "Gemini",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "arweave",
-          "appearance_percentage": 5.0,
-          "avg_rank": 6.0,
+          "appearance": 5.0,
+          "rank": 6.0,
           "providers": [
-            "DeepSeek",
-            "Claude"
+            "Claude",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "binance",
-          "appearance_percentage": 5.0,
-          "avg_rank": 8.0,
+          "appearance": 5.0,
+          "rank": 8.0,
           "providers": [
-            "DeepSeek",
-            "Gemini"
+            "Gemini",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         }
       ],
-      "total_responses": 10
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
     },
     {
-      "customer_type_name": "Crypto-Native Users & Investors",
+      "name": "Crypto-Native Users & Investors",
+      "uuid": null,
       "competitors": [
         {
           "name": "helium",
-          "appearance_percentage": 42.5,
-          "avg_rank": 3.81,
+          "appearance": 42.5,
+          "rank": 3.81,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "filecoin",
-          "appearance_percentage": 25.0,
-          "avg_rank": 8.2,
+          "appearance": 25.0,
+          "rank": 8.2,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "render",
-          "appearance_percentage": 22.5,
-          "avg_rank": 9.0,
+          "appearance": 22.5,
+          "rank": 9.0,
           "providers": [
-            "DeepSeek",
             "Claude",
-            "Gemini"
+            "Gemini",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "coinbase",
-          "appearance_percentage": 17.5,
-          "avg_rank": 5.0,
+          "appearance": 17.5,
+          "rank": 5.0,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "binance",
-          "appearance_percentage": 15.0,
-          "avg_rank": 9.0,
+          "appearance": 15.0,
+          "rank": 9.0,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "realt",
-          "appearance_percentage": 12.5,
-          "avg_rank": 7.4,
+          "appearance": 12.5,
+          "rank": 7.4,
           "providers": [
-            "DeepSeek",
             "Claude",
-            "Gemini"
+            "Gemini",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "chainlink",
-          "appearance_percentage": 12.5,
-          "avg_rank": 6.25,
+          "appearance": 12.5,
+          "rank": 6.25,
           "providers": [
-            "DeepSeek",
             "Claude",
+            "Gemini",
             "OpenAI",
-            "Gemini"
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "dimo",
-          "appearance_percentage": 10.0,
-          "avg_rank": 13.0,
+          "appearance": 10.0,
+          "rank": 13.0,
           "providers": [
-            "DeepSeek",
-            "Claude"
+            "Claude",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "centrifuge",
-          "appearance_percentage": 7.5,
-          "avg_rank": 10.5,
+          "appearance": 7.5,
+          "rank": 10.5,
           "providers": [
-            "DeepSeek",
-            "Claude"
+            "Claude",
+            "DeepSeek"
           ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         },
         {
           "name": "hivemapper",
-          "appearance_percentage": 7.5,
-          "avg_rank": 5.0,
+          "appearance": 7.5,
+          "rank": 5.0,
           "providers": [
-            "DeepSeek",
-            "Gemini"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "dash",
-          "appearance_percentage": 5.0,
-          "avg_rank": 5.0,
-          "providers": [
-            "DeepSeek",
-            "Gemini"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "arweave",
-          "appearance_percentage": 5.0,
-          "avg_rank": 16.0,
-          "providers": [
+            "Gemini",
             "DeepSeek"
           ],
-          "is_own": false
-        },
-        {
-          "name": "goldfinch",
-          "appearance_percentage": 2.5,
-          "avg_rank": 0,
-          "providers": [
-            "DeepSeek"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "circle",
-          "appearance_percentage": 2.5,
-          "avg_rank": 6.0,
-          "providers": [
-            "Gemini"
-          ],
-          "is_own": false
+          "isOwn": false,
+          "url": null
         }
       ],
-      "total_responses": 10
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
     }
   ],
   "keywords": [
@@ -479,253 +480,184 @@
       "text": "Which Web3 projects provide transparent, verifiable revenue from tokenized real-world services?",
       "type": "missing",
       "persona": "Web3 Investors & Yield Seekers"
-    },
-    {
-      "text": "Which Web3 payment solutions offer crypto rewards when using shared services or everyday devices?",
-      "type": "missing",
-      "persona": "Everyday Web3 Users"
-    },
-    {
-      "text": "What tokenized loyalty programs let users earn from the infrastructure they interact with daily?",
-      "type": "missing",
-      "persona": "Everyday Web3 Users"
-    },
-    {
-      "text": "Which crypto apps make it easy to invest in and earn from everyday real-world services?",
-      "type": "missing",
-      "persona": "Everyday Web3 Users"
-    },
-    {
-      "text": "What blockchain ecosystems provide the best rewards for real-world consumer activity?",
-      "type": "missing",
-      "persona": "Everyday Web3 Users"
-    },
-    {
-      "text": "Which Web3 projects let ordinary users earn passive income from real-world shared infrastructure?",
-      "type": "missing",
-      "persona": "Everyday Web3 Users"
     }
   ],
   "source_opportunities": [
     {
       "name": "coindesk.com",
       "domain": "coindesk.com",
-      "type": "publication",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Leading crypto news outlet with strong focus on blockchain tokenization and asset innovation, aligning with ShareX Network's core themes"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "cointelegraph.com",
       "domain": "cointelegraph.com",
-      "type": "publication",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Extensive coverage of blockchain platforms exploring user-driven revenue models and asset tokenization"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "theblock.co",
       "domain": "theblock.co",
-      "type": "research",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Provides deep analytical coverage of blockchain infrastructure and tokenization strategies relevant to ShareX Network's ecosystem"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "decrypt.co",
       "domain": "decrypt.co",
-      "type": "publication",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Focuses on emerging blockchain technologies and platforms that enable users to earn through decentralized networks"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "blockworks.co",
       "domain": "blockworks.co",
-      "type": "research",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Covers institutional blockchain innovations and tokenization trends that align with ShareX Network's value proposition"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "consensys.net/blog",
-      "domain": "consensys.net/blog",
-      "type": "community",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Developer-focused platform exploring blockchain asset management and decentralized economic models"
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "cryptoslate.com",
       "domain": "cryptoslate.com",
-      "type": "publication",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Covers emerging blockchain networks with a focus on user-driven platforms and innovative revenue generation"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "nasdaq.com/crypto",
-      "domain": "nasdaq.com/crypto",
-      "type": "publication",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Institutional financial platform interested in blockchain platforms transforming asset management and tokenization"
+      "domain": "nasdaq.com",
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "messari.io",
       "domain": "messari.io",
-      "type": "research",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Provides deep crypto research and analysis of platforms revolutionizing asset ownership and blockchain economics"
+      "type": "competitor",
+      "mentions": 0
     },
     {
       "name": "coincodex.com",
       "domain": "coincodex.com",
-      "type": "research",
-      "mentions": 0,
-      "priority": "OPPORTUNITY",
-      "reason": "[DYNAMIC] Comprehensive blockchain platform analysis with emphasis on emerging tokenization and revenue generation models"
+      "type": "competitor",
+      "mentions": 0
     }
   ],
   "provider_coverage": {
-    "DeepSeek": 20,
-    "Claude": 20,
-    "Gemini": 20,
-    "OpenAI": 20
+    "Claude": 45,
+    "Gemini": 45,
+    "OpenAI": 26,
+    "DeepSeek": 50,
+    "claude": 0,
+    "gemini": 0,
+    "deepseek": 0,
+    "openai": 0
   },
   "insights": {
     "terminology_gap": [
       {
-        "term": "Deshare Protocol",
-        "evidence": "No standalone recognition in AI results",
-        "priority": "HIGH"
-      },
-      {
-        "term": "RWA NFTs",
-        "evidence": "Minimal context around real-world asset tokenization",
-        "priority": "HIGH"
-      },
-      {
         "term": "PowerPass",
-        "evidence": "Proprietary product not recognized across AI engines",
+        "evidence": "No AI recognition of this specific RWA NFT product",
         "priority": "HIGH"
       },
       {
-        "term": "TreasureX",
-        "evidence": "No contextual understanding of user growth mechanism",
-        "priority": "MEDIUM"
+        "term": "Deshare Protocol",
+        "evidence": "Limited AI understanding of hardware+blockchain integration",
+        "priority": "HIGH"
       },
       {
         "term": "ShareFi",
-        "evidence": "Undefined financial infrastructure concept",
+        "evidence": "No standardized AI recognition of financial infrastructure product",
         "priority": "MEDIUM"
       },
       {
-        "term": "$SHARE token",
-        "evidence": "Limited recognition beyond basic token information",
+        "term": "TreasureX",
+        "evidence": "No AI awareness of user growth mechanism",
         "priority": "MEDIUM"
       }
     ],
     "language_gap": [
       {
         "site_says": "Web3 Consumer and Financial Layer",
-        "site_context": "Technical positioning",
-        "ai_uses": "Blockchain sharing platform",
-        "ai_context": "Generic description"
+        "site_context": "Platform positioning",
+        "ai_uses": "Decentralized asset platform",
+        "ai_context": "More generic description"
       },
       {
-        "site_says": "Verifiable on-chain settlement",
-        "site_context": "Technical transparency",
-        "ai_uses": "Decentralized asset tracking",
-        "ai_context": "Broad mechanism"
-      },
-      {
-        "site_says": "Consumer-grade RWA",
-        "site_context": "Micro-asset tokenization",
-        "ai_uses": "Real-world asset investment",
-        "ai_context": "Institutional perspective"
+        "site_says": "Consumer-grade RWA NFTs",
+        "site_context": "Unique tokenization approach",
+        "ai_uses": "Blockchain asset tokens",
+        "ai_context": "Less granular categorization"
       }
     ],
     "audience_segments": {
       "addressed": [
         {
-          "name": "Sharing Economy Brands",
-          "note": "Direct IoT device integration"
+          "name": "Web3 Operators",
+          "note": "Direct technical targeting"
         },
         {
-          "name": "Web2 Consumers",
-          "note": "Value distribution participation"
-        },
-        {
-          "name": "Crypto-Native Investors",
-          "note": "Real-yield RWA opportunities"
-        },
-        {
-          "name": "Web3 Developers",
-          "note": "Interoperable application ecosystem"
+          "name": "Crypto Investors",
+          "note": "RWA yield focus"
         }
       ],
       "opportunity_gap": [
         {
-          "name": "Enterprise IoT Integrators",
-          "note": "Only 12.5% competitive coverage"
+          "name": "Traditional Sharing Economy Brands",
+          "note": "62.5% competitor overlap with ReALT"
         },
         {
-          "name": "Traditional Fintech Users",
-          "note": "7.5% market penetration"
+          "name": "IoT Hardware Manufacturers",
+          "note": "Limited AI visibility at 27.5%"
         },
         {
-          "name": "Passive Crypto Investors",
-          "note": "Minimal realt competitor crossover (62.5%)"
-        },
-        {
-          "name": "Global Infrastructure Developers",
-          "note": "Low helium/chainlink representation (12.5%)"
+          "name": "Web2 Consumer Converts",
+          "note": "Potential 15% market penetration gap"
         }
       ]
     },
     "position": {
       "strengths": [
-        "Granular on-chain revenue tracking",
-        "Multi-city real-world device deployment",
-        "Consumer-focused RWA tokenization",
-        "Strict token vesting mechanisms"
+        "Granular on-chain revenue settlement",
+        "Real-world device tokenization",
+        "Multi-city IoT deployment",
+        "Transparent token economics"
       ],
       "opportunities": [
-        "Expand enterprise IoT partnerships",
-        "Develop more comprehensive developer documentation",
-        "Create educational content on RWA concepts",
-        "Build targeted marketing for specific geo-markets"
+        "Expand RWA NFT product awareness",
+        "Target more sharing economy verticals",
+        "Develop more consumer-facing educational content",
+        "Highlight unique technical infrastructure"
       ],
       "gaps": [
-        "Limited AI search engine visibility",
-        "Undefined product category positioning",
-        "Minimal third-party validation",
-        "Unclear global scalability narrative"
+        "Limited AI search visibility",
+        "Undefined technical differentiators",
+        "Weak product narrative outside crypto circles",
+        "Underdeveloped competitor positioning"
       ]
     },
     "action_items": {
       "content_priorities": [
-        "Develop comprehensive 'RWA 101' educational series",
-        "Create detailed case studies of existing device deployments",
-        "Produce technical whitepapers explaining Deshare Protocol",
-        "Build competitive landscape comparison content",
-        "Generate developer-focused integration guides"
+        "Create comprehensive RWA NFT explainer series",
+        "Develop 'Deshare Protocol vs Competitors' technical whitepaper",
+        "Produce case studies from existing device deployments",
+        "Generate investor-focused revenue breakdown content",
+        "Build technical deep-dive blog targeting Web3 developers"
       ],
       "link_building": [
-        "Guest post on top crypto/blockchain publications",
-        "Engage with IoT and sharing economy thought leaders",
-        "Participate in Web3 developer conference speaking circuits",
-        "Collaborate with academic blockchain research centers",
-        "Cross-promote with existing deployed brands like PowerNow"
+        "Guest post on top crypto research platforms",
+        "Engage with ReALT and Centrifuge communities",
+        "Build backlinks from IoT and blockchain technical sites",
+        "Create collaborative content with deployment partners",
+        "Develop cross-promotional strategies with cited sources"
       ],
       "quick_wins": [
-        "Optimize metadata for AI search visibility",
-        "Create dedicated landing pages for each product (PowerPass, TreasureX)",
-        "Develop clear, jargon-free product descriptions",
-        "Update token economics visualization",
-        "Implement schema markup for better search understanding"
+        "Update metadata for better AI search recognition",
+        "Clarify product terminology on homepage",
+        "Create simplified product landing pages",
+        "Develop targeted keyword content for each product",
+        "Implement structured data for improved AI understanding"
       ]
     }
   }

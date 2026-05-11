@@ -37,66 +37,10 @@ GENERIC_CRYPTO_TERMS = [
     "trading", "investing", "hodl", "whale", "altseason",
 ]
 
-ALIAS_MAP = {
-    "monero": ["monero", "xmr", "the monero network", "monero (xmr)", "monero's"],
-    "zcash": ["zcash", "zec", "the zcash network", "z.cash", "zec's"],
-    "worldcoin": ["worldcoin", "world coin", "wld", "worldid", "world coin's", "worldcoin's"],
-    "railgun": ["railgun", "rail gun", "railgun dao", "railgun's"],
-    "aztec": ["aztec", "aztec network", "aztec protocol"],
-    "tornado cash": ["tornado cash", "tornadocash", "tornado", "tornado cash's"],
-    "ethereum": ["ethereum", "eth", "the ethereum network", "ethereum's"],
-    "bitcoin": ["bitcoin", "btc", "the bitcoin network", "bitcoin's"],
-    "beam": ["beam", "beam privacy", "beam coin", "beam's"],
-    "dash": ["dash", "dash coin", "digital cash", "dash's"],
-    "grin": ["grin", "grin coin", "grin's", "mimblewimble"],
-    "pirate": ["pirate", "pirate chain", "arrr", "pirate's"],
-    "firo": ["firo", "zcoin", "firo's"],
-    "coingecko": ["coingecko"],
-    "coinbase": ["coinbase"],
-    "kraken": ["kraken"],
-    "localmonero": ["localmonero"],
-    "binance": ["binance"],
-    "circle": ["circle"],
-    "mimex": ["mimex"],
-    "fixedfloat": ["fixedfloat"],
-    "changehero": ["changehero"],
-    "exchangily": ["exchangily"],
-    "coinswitch": ["coinswitch"],
-    "changelly": ["changelly"],
-    "sideshift": ["sideshift"],
-    "stealthex": ["stealthex"],
-    "godex": ["godex"],
-    "velox": ["velox"],
-    "secret": ["secret", "secret network"],
-    "bytecoin": ["bytecoin", "bcn"],
-    "turtlecoin": ["turtlecoin"],
-    "pivx": ["pivx"],
-    "dinero": ["dinero"],
-    "parrot": ["parrot", "parrot exchange"],
-    "veil": ["veil", "veil currency"],
-    "tomb": ["tomb", "tomb finance"],
-    "saffron": ["saffron", "saffron finance"],
-    "swers": ["swers"],
-    "cloakcoin": ["cloakcoin"],
-    "deeponion": ["deeponion"],
-    "incogcoin": ["incogcoin"],
-    "macall": ["macall"],
-    "bitcloud": ["bitcloud"],
-    "verge": ["verge", "xvg", "verge currency"],
-    # GPU/AI Infrastructure providers
-    "coreweave": ["coreweave", "core weave"],
-    "lambda": ["lambda labs", "lambda"],
-    "vast": ["vast.ai", "vast"],
-    "runpod": ["runpod", "run pod"],
-    "crusoe": ["crusoe", "crusoe energy"],
-    "paperspace": ["paperspace", "paper space"],
-    "modal": ["modal", "modal labs"],
-    "nebius": ["nebius", "nebius ai"],
-    "gpu.ng": ["gpu.ng", "gpung"],
-    "tensordock": ["tensordock", "tensor dock"],
-    "leadersoftech": ["leadersoftech"],
-    "gpucloud": ["gpucloud", "gpu cloud"],
-}
+# ALIAS_MAP is now empty — competitor aliases are generated dynamically per audit
+# via competitor_discovery.py's generate_competitor_aliases_llm().
+# This avoids hardcoding project-specific aliases into the core client.
+ALIAS_MAP = {}
 
 CANONICAL_NAMES = {}
 for canonical, aliases in ALIAS_MAP.items():
@@ -111,8 +55,8 @@ Always respond with valid JSON only. No markdown fences, no prose outside the JS
 RESPONSE_SCHEMA_PROMPT = """
 Return a JSON object with this exact shape:
 {{"competitors": [{{"name": "<canonical project name>", "prominence": "HIGH|MEDIUM|LOW", "context": "<1-sentence context>"}}], "sources": ["<domain1>", "<domain2>"], "brand_mentioned": true/false, "brand_rank": null or <number>}}
-Only include competitors that are specific named projects (Monero, Zcash, Railgun, etc). Exclude generic terms like "Bitcoin", "Ethereum", "the network", "a privacy coin" unless they are specifically relevant.
-For sources: extract cited domain names (coindesk.com, monero.com, etc).
+Only include competitors that are specific named projects, companies, or platforms. Exclude generic terms like "the network", "a protocol", "a platform" unless they are specifically relevant.
+For sources: extract cited domain names (e.g., coindesk.com, example.com, etc).
 For brand_mentioned: check if {brand_name} appears anywhere in the response.
 For brand_rank: if brand is mentioned, what position (1 = first, 2 = second, etc)?"""
 
@@ -594,9 +538,9 @@ class OpenRouterBatchClient:
             return "comparison"
         elif "what are the best" in q_lower or "recommend" in q_lower:
             return "recommendation"
-        elif "which" in q_lower or "what privacy coin" in q_lower:
+        elif "which" in q_lower or "what are the top" in q_lower:
             return "category"
-        elif "resistance" in q_lower or "strongest" in q_lower:
+        elif "strongest" in q_lower or "leading" in q_lower:
             return "category"
         else:
             return "general"

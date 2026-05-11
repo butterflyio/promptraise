@@ -31,7 +31,7 @@ def extract_explicit_competitors(homepage_html: str, domain: str = "") -> List[s
     Args:
         homepage_html: Raw HTML content of client homepage
         domain: Client domain for context
-        
+
     Returns:
         List of extracted competitor names
     """
@@ -88,7 +88,7 @@ def identify_tier1_competitors_llm(homepage_text: str, client_name: str, openrou
         homepage_text: Parsed text from client homepage
         client_name: Name of client company
         openrouter_client: OpenRouter API client
-        
+
     Returns:
         Tuple of (competitor list, reasoning)
     """
@@ -110,13 +110,13 @@ Respond in JSON format:
   "reasoning": "Why these are Tier-1 competitors"
 }}"""
 
-     try:
-         response_text = openrouter_client._call(
-             model="anthropic/claude-3.5-sonnet",
-             messages=[{"role": "user", "content": prompt}],
-             max_tokens=300
-         )
-        
+    try:
+        response_text = openrouter_client._call(
+            model="anthropic/claude-3.5-sonnet",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=300
+        )
+
         # Extract JSON
         json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
         if json_match:
@@ -127,7 +127,7 @@ Respond in JSON format:
             return competitors, reasoning
     except Exception as e:
         logger.error(f"Error in LLM competitor identification: {e}")
-    
+
     return [], "LLM identification failed"
 
 
@@ -139,7 +139,7 @@ def validate_competitor_layer1(competitor_name: str, timeout_per_domain: float =
     Args:
         competitor_name: Name of competitor to validate
         timeout_per_domain: Seconds to wait per domain check
-        
+
     Returns:
         True if competitor passes Layer 1 (has web presence)
     """
@@ -186,7 +186,7 @@ def validate_competitor_layer2_llm(
         client_name: Name of client company
         market_segment: Market segment from discovery
         openrouter_client: OpenRouter API client
-        
+
     Returns:
         Tuple of (credibility_score 1-5, reasoning)
     """
@@ -207,15 +207,15 @@ Respond in JSON:
   "reasoning": "Brief explanation"
 }}"""
 
-     try:
-         response_text = openrouter_client._call(
-             model="anthropic/claude-3.5-sonnet",
-             messages=[{"role": "user", "content": prompt}],
-             max_tokens=300
-         )
-         
-         json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
-        
+    try:
+        response_text = openrouter_client._call(
+            model="anthropic/claude-3.5-sonnet",
+            messages=[{"role": "user", "content": prompt}],
+            max_tokens=300
+        )
+
+        json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
+
         if json_match:
             data = json.loads(json_match.group())
             score = float(data.get("score", 0))
@@ -239,7 +239,7 @@ def generate_competitor_aliases_llm(competitor_name: str, openrouter_client) -> 
     Args:
         competitor_name: Name of competitor
         openrouter_client: OpenRouter API client
-        
+
     Returns:
         List of aliases
     """
@@ -265,9 +265,9 @@ Return JSON:
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
-        
+
         json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
-        
+
         if json_match:
             data = json.loads(json_match.group())
             aliases = data.get("aliases", [])
@@ -302,7 +302,7 @@ def validate_competitors_layer3(
         responses: List of LLM responses from audit
         competitors: Dict of competitors with aliases
         min_appearance_threshold: Minimum appearance % to keep (default 0% = remove only if 0%)
-        
+
     Returns:
         Filtered competitors dict
     """
@@ -311,18 +311,18 @@ def validate_competitors_layer3(
     filtered = {}
     for comp_name, comp_data in competitors.items():
         aliases = comp_data.get("aliases", [comp_name])
-        
+
         # Count mentions
         mentions = 0
         for alias in aliases:
             mentions += response_text.count(alias.lower())
-        
+
         # Calculate appearance percentage
         if len(responses) > 0:
             appearance_pct = (mentions / len(responses)) * 100
         else:
             appearance_pct = 0
-        
+
         # Filter: keep if appeared at least once
         if mentions > 0 or min_appearance_threshold == 0:
             comp_data["mention_count"] = mentions
@@ -348,7 +348,7 @@ def discover_competitors_from_audit_responses(
         responses: List of LLM responses from audit
         client_name: Name of client
         openrouter_client: OpenRouter API client
-        
+
     Returns:
         List of discovered competitors
     """
@@ -369,9 +369,9 @@ Return JSON:
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
-        
+
         json_match = re.search(r'\{.*\}', response_text, re.DOTALL)
-        
+
         if json_match:
             data = json.loads(json_match.group())
             competitors = data.get("competitors", [])
@@ -401,7 +401,7 @@ def run_competitor_discovery(
         openrouter_client: OpenRouter API client
         min_competitors: Minimum competitors to return (triggers fallback if needed)
         max_competitors: Maximum competitors to return
-        
+
     Returns:
         Tuple of (competitors dict, competitor_aliases map)
     """

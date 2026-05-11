@@ -317,28 +317,33 @@ def compute_provider_coverage(customer_types: list, deepseek_data: dict = None) 
 
 
 def compute_score(own_appearance_pct: float, own_avg_rank: float = None) -> int:
-    """Simple visibility score 0-100.
+    """AI visibility score 0-100.
 
-    Heavily weighted on appearance. If the site isn't mentioned (0%),
-    score is 0. At 50%+ appearance and rank ≤ 3, score approaches 100.
+    Score is primarily driven by appearance percentage (how often the brand
+    is mentioned across AI responses). A small rank bonus rewards brands
+    that appear in prominent positions.
+
+    Formula:
+      - Base = own_appearance_pct (direct 1:1 mapping)
+      - Rank bonus = up to +15 based on average rank:
+          rank 1.0 → +15, rank 2.0 → +10, rank 3.0 → +5, rank > 3 → +0
+      - Final = min(base + rank_bonus, 100)
     """
     if not own_appearance_pct or own_appearance_pct <= 0:
         return 0
 
-    # Base: appearance % directly contributes up to 70 points
-    appearance_score = min(own_appearance_pct, 70)
+    base_score = own_appearance_pct
 
-    # Rank modifier: up to 30 points for good rank
-    rank_score = 0
+    rank_bonus = 0
     if own_avg_rank and own_avg_rank > 0:
-        if own_avg_rank <= 1.5:
-            rank_score = 30
-        elif own_avg_rank <= 3:
-            rank_score = 20
-        elif own_avg_rank <= 5:
-            rank_score = 10
+        if own_avg_rank <= 1.0:
+            rank_bonus = 15
+        elif own_avg_rank <= 2.0:
+            rank_bonus = 10
+        elif own_avg_rank <= 3.0:
+            rank_bonus = 5
 
-    return min(int(appearance_score + rank_score), 100)
+    return min(int(base_score + rank_bonus), 100)
 
 
 # ---------------- Pipeline stages ----------------
