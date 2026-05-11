@@ -545,14 +545,10 @@
     }
   ],
   "provider_coverage": {
-    "Claude": 45,
-    "Gemini": 45,
-    "OpenAI": 26,
-    "DeepSeek": 50,
-    "claude": 0,
-    "gemini": 0,
-    "deepseek": 0,
-    "openai": 0
+    "claude": 45,
+    "gemini": 45,
+    "openai": 26,
+    "deepseek": 50
   },
   "insights": {
     "terminology_gap": [

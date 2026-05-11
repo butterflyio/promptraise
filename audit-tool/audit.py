@@ -294,7 +294,7 @@ def compute_provider_coverage(customer_types: list, deepseek_data: dict = None) 
         ct_counts = {}
         for c in ct.get("competitors", []):
             for p in c.get("providers", []):
-                key = "openai" if p == "openai-search" else p
+                key = "openai" if p == "openai-search" else p.lower()
                 ct_counts[key] = ct_counts.get(key, 0) + 1
 
         if ct_counts:
