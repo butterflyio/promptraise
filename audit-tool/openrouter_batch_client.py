@@ -815,17 +815,81 @@ class OpenRouterBatchClient:
         opportunities.sort(key=lambda x: x["type"] == "missing", reverse=True)
         return opportunities[:20]
 
+    def _extract_themes_from_responses(self, responses: list) -> list:
+        """Extract dominant themes from response content using keyword frequency analysis."""
+        from collections import Counter
+        import re
+        
+        # Combine all text from questions and raw responses
+        all_text = " ".join([
+            resp.get("question", "") + " " + resp.get("raw_text", "")
+            for resp in responses
+        ]).lower()
+        
+        # Extract meaningful words (exclude common stop words)
+        stop_words = {
+            "the", "and", "for", "are", "but", "not", "you", "all", "can", "had", "her", "was", "one", "our", "out",
+            "day", "get", "has", "him", "his", "how", "man", "new", "now", "old", "see", "two", "way", "who", "boy",
+            "did", "its", "let", "put", "say", "she", "too", "use", "with", "have", "this", "will", "your", "from",
+            "they", "know", "want", "been", "good", "much", "some", "time", "very", "when", "come", "here", "just",
+            "like", "long", "make", "many", "over", "such", "take", "than", "them", "well", "were", "what", "would",
+            "there", "their", "said", "each", "which", "about", "could", "other", "after", "first", "never", "these",
+            "think", "where", "being", "every", "great", "might", "shall", "still", "those", "while", "should", "through",
+            "between", "example", "however", "another", "different", "information", "following", "according",
+            # Response-specific filler words
+            "based", "context", "provided", "following", "response", "answer", "mentioned", "discussed",
+            "according", "sources", "include", "including", "various", "several", "multiple", "available",
+        }
+        
+        # Extract keywords: multi-word phrases and single words
+        # Look for industry-specific compound terms first
+        compound_patterns = [
+            r"real world asset", r"real world assets", r"real-world asset", r"real-world assets",
+            r"decentralized physical infrastructure", r"depin", r"rwa", r"web3", r"tokenization",
+            r"smart contract", r"cross border", r"cross-border", r"passive income", r"yield farming",
+            r"power bank", r"power banks", r"vending machine", r"vending machines",
+            r"iot device", r"iot devices", r"sharing economy", r"luxury service", r"luxury services",
+            r"private aviation", r"private jet", r"yacht brokerage", r"luxury real estate",
+        ]
+        
+        theme_counter = Counter()
+        
+        # Count compound terms
+        for pattern in compound_patterns:
+            matches = len(re.findall(pattern, all_text))
+            if matches > 0:
+                theme_counter[pattern] = matches
+        
+        # Count single words (filtered)
+        words = re.findall(r'\b[a-z]{3,20}\b', all_text)
+        for word in words:
+            if word not in stop_words and not word.isdigit():
+                theme_counter[word] += 1
+        
+        # Return top themes
+        return [theme for theme, count in theme_counter.most_common(15) if count >= 2]
+
     def find_source_opportunities(self, batch_result: dict,
                                    brand_name: str) -> list:
-        """Find strategic link-building opportunities (DIFFERENT from Top Sources).
+        """Find strategic link-building opportunities using hybrid approach.
         
-        Strategy: Dynamically infer industry from response content and suggest
-        high-authority publications where competitors get coverage but brand doesn't.
+        Strategy:
+        1. Extract themes from actual response content (dynamic)
+        2. Use LLM to generate industry-specific publications (unique per audit)
+        3. Cache LLM response to avoid regeneration (cost optimization)
+        4. Filter out domains already in Top Sources
+        5. Validate with competitor citation context
         
-        Key improvement: Industry-specific targets based on actual response content,
-        NOT hardcoded generic tech publications."""
+        This ensures each audit gets UNIQUE, relevant publications based on
+        actual response content rather than hardcoded industry templates."""
+        import hashlib
+        import json as json_mod
+        from pathlib import Path
+        
         responses = batch_result.get("responses", [])
-        brand_domain = brand_name.lower().replace(" ", "").replace(".com", "").replace(".io", "")
+        
+        if not responses:
+            return []
         
         # Collect all mentioned domains (these are "Top Sources")
         mentioned_domains = set()
@@ -835,100 +899,173 @@ class OpenRouterBatchClient:
                 if domain and domain not in ("null", "none"):
                     mentioned_domains.add(domain)
         
-        # Infer industry from response content
-        industry_keywords = {
-            "crypto": ["crypto", "blockchain", "token", "web3", "defi", "nft", "bitcoin", "ethereum", "altcoin", "wallet"],
-            "luxury": ["luxury", "yacht", "jet", "private aviation", "concierge", "vip", "premium", "estate", "lifestyle"],
-            "fintech": ["payment", "settlement", "cross-border", "fiat", "banking", "financial", "treasury", "b2b"],
-            "ai": ["ai", "artificial intelligence", "machine learning", "llm", "gpt", "model", "compute", "gpu"],
-            "travel": ["travel", "hotel", "resort", "hospitality", "booking", "tourism", "vacation"],
-            "real_estate": ["real estate", "property", "tokenized", "mortgage", "housing", "development"],
-        }
+        # Extract dynamic themes from actual response content
+        themes = self._extract_themes_from_responses(responses)
         
-        industry_scores = {k: 0 for k in industry_keywords}
+        if not themes:
+            themes = ["blockchain", "web3", "cryptocurrency"]  # Fallback
+        
+        # Generate cache key from themes + brand + competitor count
+        competitors_mentioned = set()
         for resp in responses:
-            text = resp.get("question", "") + " " + resp.get("raw_text", "")
-            text_lower = text.lower()
-            for industry, keywords in industry_keywords.items():
-                for kw in keywords:
-                    if kw in text_lower:
-                        industry_scores[industry] += 1
+            competitors_mentioned.update(resp.get("competitors_mentioned", []))
         
-        # Determine dominant industries
-        sorted_industries = sorted(industry_scores.items(), key=lambda x: x[1], reverse=True)
-        dominant = [ind for ind, score in sorted_industries if score > 0][:3]
-        
-        if not dominant:
-            dominant = ["crypto", "fintech"]  # Default fallback
-        
-        # Industry-specific publication databases
-        industry_publications = {
-            "crypto": [
-                {"domain": "coindesk.com", "type": "publication", "reason": "Leading crypto news and analysis"},
-                {"domain": "cointelegraph.com", "type": "publication", "reason": "Major blockchain media outlet"},
-                {"domain": "decrypt.co", "type": "publication", "reason": "Web3 and crypto storytelling"},
-                {"domain": "theblock.co", "type": "publication", "reason": "Institutional crypto intelligence"},
-                {"domain": "bankless.com", "type": "newsletter", "reason": "DeFi and Web3 community"},
-            ],
-            "luxury": [
-                {"domain": "robbreport.com", "type": "publication", "reason": "Premier luxury lifestyle media"},
-                {"domain": "jetsetmag.com", "type": "publication", "reason": "Private aviation and luxury travel"},
-                {"domain": "yachtingworld.com", "type": "publication", "reason": "Yachting and marine lifestyle"},
-                {"domain": "luxe.digital", "type": "publication", "reason": "Luxury market insights"},
-                {"domain": "businessinsider.com", "type": "publication", "reason": "Business and lifestyle coverage"},
-            ],
-            "fintech": [
-                {"domain": "pymnts.com", "type": "publication", "reason": "Payments and commerce innovation"},
-                {"domain": "finextra.com", "type": "publication", "reason": "Financial technology news"},
-                {"domain": "techcrunch.com", "type": "publication", "reason": "Fintech startup coverage"},
-                {"domain": "forbes.com", "type": "publication", "reason": "Business and finance analysis"},
-                {"domain": "thepaypers.com", "type": "publication", "reason": "Payment industry intelligence"},
-            ],
-            "ai": [
-                {"domain": "techcrunch.com", "type": "publication", "reason": "AI startup coverage"},
-                {"domain": "venturebeat.com", "type": "publication", "reason": "AI and enterprise tech"},
-                {"domain": "syncedreview.com", "type": "publication", "reason": "AI industry analysis"},
-                {"domain": "towardsdatascience.com", "type": "publication", "reason": "ML and AI technical content"},
-                {"domain": "ai-journal.com", "type": "publication", "reason": "AI business news"},
-            ],
-            "travel": [
-                {"domain": "travelandleisure.com", "type": "publication", "reason": "Luxury travel authority"},
-                {"domain": "cntraveler.com", "type": "publication", "reason": "Conde Nast travel media"},
-                {"domain": "skift.com", "type": "publication", "reason": "Travel industry intelligence"},
-                {"domain": "traveldailymedia.com", "type": "publication", "reason": "Travel business news"},
-            ],
-            "real_estate": [
-                {"domain": "realtor.com", "type": "publication", "reason": "Real estate industry news"},
-                {"domain": "housingwire.com", "type": "publication", "reason": "Housing and mortgage news"},
-                {"domain": "inman.com", "type": "publication", "reason": "Real estate technology"},
-            ],
+        cache_input = {
+            "brand": brand_name,
+            "themes": themes[:10],  # Top 10 themes
+            "competitors": sorted(list(competitors_mentioned))[:10],  # Top 10 competitors
+            "response_count": len(responses),
         }
+        cache_key = hashlib.md5(json_mod.dumps(cache_input, sort_keys=True).encode()).hexdigest()[:16]
         
-        # Build dynamic opportunities from dominant industries
+        # Check cache
+        cache_dir = Path(".cache")
+        cache_dir.mkdir(exist_ok=True)
+        cache_file = cache_dir / f"source_opps_{cache_key}.json"
+        
+        if cache_file.exists():
+            cached = json_mod.loads(cache_file.read_text())
+            # Filter out any that are now in mentioned_domains
+            opportunities = [opp for opp in cached if opp["domain"] not in mentioned_domains]
+            return opportunities[:10]
+        
+        # LLM prompt for dynamic publication generation
+        themes_str = ", ".join(themes[:10])
+        competitors_str = ", ".join(sorted(list(competitors_mentioned))[:10]) if competitors_mentioned else "various projects"
+        
+        prompt = f"""You are a media intelligence analyst. Based on an AI audit response for {brand_name}, suggest 12 strategic link-building targets.
+
+AUDIT CONTEXT:
+- Dominant themes from responses: {themes_str}
+- Key competitors mentioned: {competitors_str}
+- Goal: Find authoritative publications where these competitors get coverage, but {brand_name} doesn't yet
+
+REQUIREMENTS:
+1. Publications must be SPECIFIC to the themes above (not generic tech blogs)
+2. Focus on industry-authoritative sources (not social media)
+3. Include a mix of: news publications, industry research sites, newsletters, developer communities
+4. Each must have a clear, specific reason why {brand_name} should aim for coverage there
+5. Do NOT suggest: social media, forums, job boards, or low-authority blogs
+
+OUTPUT FORMAT - JSON array:
+[
+  {{
+    "domain": "example.com",
+    "type": "publication|research|newsletter|community",
+    "reason": "Specific explanation of why this publication matters for {brand_name} based on the themes"
+  }}
+]
+
+Generate exactly 12 entries."""
+
+        try:
+            llm_response = self._call(
+                model="anthropic/claude-3.5-haiku",
+                messages=[{"role": "user", "content": prompt}],
+                max_tokens=800,
+            )
+            
+            # Extract JSON array from LLM response
+            json_match = re.search(r'\[[\s\S]*?\]', llm_response)
+            if json_match:
+                raw_pubs = json_mod.loads(json_match.group())
+            else:
+                # Fallback: try to parse line by line
+                raw_pubs = []
+                
+        except Exception as e:
+            print(f"⚠ LLM source generation failed: {e}. Using fallback.")
+            raw_pubs = []
+        
+        # Process and filter publications
         opportunities = []
         seen_domains = set()
         
-        for industry in dominant:
-            pubs = industry_publications.get(industry, [])
-            for pub in pubs:
-                domain = pub["domain"]
-                if domain in seen_domains or domain in mentioned_domains:
+        # Add LLM-generated publications first
+        for pub in raw_pubs:
+            if isinstance(pub, dict):
+                domain = pub.get("domain", "").strip().lower()
+                if not domain or domain in seen_domains or domain in mentioned_domains:
+                    continue
+                # Validate domain format (must have dot, not too long)
+                if "." not in domain or len(domain) > 50:
                     continue
                 seen_domains.add(domain)
-                
-                # Count competitors that would benefit from this domain
-                competitor_count = sum(
-                    1 for resp in responses 
-                    if len(resp.get("competitors_mentioned", [])) > 0
-                )
                 
                 opportunities.append({
                     "name": domain,
                     "domain": domain,
-                    "type": pub["type"],
+                    "type": pub.get("type", "publication"),
                     "mentions": 0,
                     "priority": "OPPORTUNITY",
-                    "reason": f"[{industry.upper()} PRESS] {pub['reason']}. {competitor_count} competitor mentions in responses. Brand not yet covered.",
+                    "reason": f"[DYNAMIC] {pub.get('reason', 'Strategic link-building target')}",
                 })
         
-        return opportunities[:10]
+        # If LLM didn't return enough, add competitor-derived suggestions
+        if len(opportunities) < 5:
+            # Extract competitor-cited sources as inspiration
+            competitor_domains = {}
+            for resp in responses:
+                for comp in resp.get("competitors_mentioned", []):
+                    for src in resp.get("sources_cited", []):
+                        domain = self._extract_domain(src)
+                        if domain:
+                            competitor_domains.setdefault(domain, set()).add(comp)
+            
+            # Find similar publications (simplified: same TLD or keyword patterns)
+            for domain, comps in competitor_domains.items():
+                if domain not in seen_domains and domain not in mentioned_domains:
+                    # Create opportunity based on competitor presence
+                    opportunities.append({
+                        "name": domain,
+                        "domain": domain,
+                        "type": "publication",
+                        "mentions": 0,
+                        "priority": "OPPORTUNITY",
+                        "reason": f"[COMPETITOR-CITED] {', '.join(list(comps)[:3])} cited this source. {brand_name} should build presence here.",
+                    })
+                    seen_domains.add(domain)
+                    
+                    if len(opportunities) >= 10:
+                        break
+        
+        # Final fallback if still empty
+        if not opportunities:
+            # Ultra-minimal fallback: just use the themes
+            for theme in themes[:10]:
+                # Generate a plausible domain based on theme (very rough heuristic)
+                if "luxury" in theme or "yacht" in theme or "jet" in theme:
+                    opportunities.append({
+                        "name": "robbreport.com",
+                        "domain": "robbreport.com",
+                        "type": "publication",
+                        "mentions": 0,
+                        "priority": "OPPORTUNITY",
+                        "reason": f"[THEME-DRIVEN] Luxury lifestyle publication relevant to '{theme}' discussions.",
+                    })
+                elif "crypto" in theme or "blockchain" in theme or "web3" in theme:
+                    opportunities.append({
+                        "name": "coindesk.com",
+                        "domain": "coindesk.com",
+                        "type": "publication",
+                        "mentions": 0,
+                        "priority": "OPPORTUNITY",
+                        "reason": f"[THEME-DRIVEN] Leading crypto publication for '{theme}' coverage.",
+                    })
+                elif "payment" in theme or "fiat" in theme or "settlement" in theme:
+                    opportunities.append({
+                        "name": "pymnts.com",
+                        "domain": "pymnts.com",
+                        "type": "publication",
+                        "mentions": 0,
+                        "priority": "OPPORTUNITY",
+                        "reason": f"[THEME-DRIVEN] Payment industry publication for '{theme}' coverage.",
+                    })
+                if len(opportunities) >= 10:
+                    break
+        
+        # Limit to 10 and cache
+        opportunities = opportunities[:10]
+        cache_file.write_text(json_mod.dumps(opportunities, indent=2))
+        
+        return opportunities
