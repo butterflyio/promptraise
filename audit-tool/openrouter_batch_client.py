@@ -29,13 +29,7 @@ MODEL_DISPLAY_NAMES = {
     "openai/gpt-4o-mini": "OpenAI",
 }
 
-DISCOVERY_QUESTIONS = [
-    "What privacy cryptocurrencies are most commonly cited for anonymous peer-to-peer transactions in 2026?",
-    "Which privacy coins use zero-knowledge proofs to hide sender, receiver, and amount on public networks?",
-    "What private cryptocurrency projects have the strongest resistance to chain-analysis and blockchain surveillance?",
-    "How does {brand_name} compare to other privacy-focused digital cash solutions in terms of mandatory shielding and privacy guarantees?",
-    "What privacy coins offer mandatory shielded transactions with no opt-out, and how do their anonymity sets compare?",
-]
+# DISCOVERY_QUESTIONS removed - dynamically generated per project subcategory via _detect_subcategory_and_generate_questions
 
 GENERIC_CRYPTO_TERMS = [
     "cryptocurrency", "blockchain", "web3", "web2",
@@ -110,7 +104,8 @@ for canonical, aliases in ALIAS_MAP.items():
         CANONICAL_NAMES[a.lower()] = canonical
 
 
-SYSTEM_BATCH = """You are an AI search engine responding to user queries about {brand_name} and the privacy cryptocurrency category.
+SYSTEM_BATCH = """You are an AI search engine responding to user queries about {brand_name} in the Web3/Blockchain/Cryptocurrency industry. 
+Be specific about real projects, companies, and platforms. Always mention competitor names when relevant.
 Always respond with valid JSON only. No markdown fences, no prose outside the JSON."""
 
 RESPONSE_SCHEMA_PROMPT = """
@@ -357,6 +352,116 @@ class OpenRouterBatchClient:
 
         return mentioned, rank
 
+    def _detect_subcategory(self, homepage_text: str, site_name: str) -> str:
+        """Detect Web3 project subcategory from homepage text using keyword analysis.
+        
+        Returns one of: depin, rwa, defi, privacy, nft, gaming, infrastructure, 
+        payments, dao, exchange, wallet, layer1, layer2, or generic
+        """
+        text_lower = (homepage_text or site_name or "").lower()
+        
+        subcategory_keywords = {
+            "depin": ["depin", "decentralized physical infrastructure", "iot", "hardware", "device", "sensor", "network infrastructure", "physical", "infrastructure"],
+            "rwa": ["real world asset", "real-world asset", "tokenized asset", "tokenized real estate", "tangible asset", "physical asset", "real estate tokenization", "rwa"],
+            "defi": ["defi", "decentralized finance", "yield farming", "liquidity pool", "amm", "dex", "lending", "borrowing", "staking"],
+            "privacy": ["privacy", "anonymous", "shielded", "zero-knowledge", "zk-proof", "confidential", "private transaction", "hidden"],
+            "nft": ["nft", "non-fungible", "digital collectible", "pfp", "art collection", "mint", "opensea"],
+            "gaming": ["gamefi", "play-to-earn", "p2e", "gaming", "metaverse", "virtual world", "in-game"],
+            "infrastructure": ["oracle", "bridge", "interoperability", "cross-chain", "data availability", "sequencer", "validator"],
+            "payments": ["payment", "remittance", "cross-border payment", "peer-to-peer payment", "stablecoin", "merchant", "pos"],
+            "dao": ["dao", "governance token", "community governance", "voting", "proposal", "treasury"],
+            "exchange": ["exchange", "trading", "spot trading", "futures", "perpetual", "orderbook"],
+            "wallet": ["wallet", "self-custody", "key management", "mpc", "multisig", "hardware wallet"],
+            "layer1": ["layer-1", "layer 1", "l1", "blockchain platform", "smart contract platform", "evm compatible"],
+            "layer2": ["layer-2", "layer 2", "l2", "rollup", "optimistic rollup", "zk rollup", "scaling solution"],
+        }
+        
+        scores = {cat: 0 for cat in subcategory_keywords}
+        for category, keywords in subcategory_keywords.items():
+            for kw in keywords:
+                if kw in text_lower:
+                    scores[category] += 1
+        
+        # Get top 2 categories
+        sorted_scores = sorted(scores.items(), key=lambda x: x[1], reverse=True)
+        
+        if sorted_scores[0][1] == 0:
+            return "generic"
+        
+        # If top 2 are close, return both as hyphenated
+        if sorted_scores[1][1] > 0 and sorted_scores[0][1] <= sorted_scores[1][1] * 2:
+            return f"{sorted_scores[0][0]}-{sorted_scores[1][0]}"
+        
+        return sorted_scores[0][0]
+    
+    def _generate_fallback_discovery_questions(self, brand_name: str, subcategory: str, site_name: str, site_url: str) -> list:
+        """Generate subcategory-specific fallback discovery questions when LLM dynamic generation fails."""
+        
+        base_questions = {
+            "depin": [
+                "Which DePIN projects are leading the tokenization of physical infrastructure and IoT devices in 2026?",
+                "What blockchain platforms connect real-world hardware and sensors to decentralized networks?",
+                "Which projects offer the best rewards for contributing physical infrastructure to Web3 networks?",
+                "How does {brand_name} compare to other DePIN protocols for device onboarding and revenue sharing?",
+                "What are the top IoT and hardware-integrated blockchain projects for consumers and enterprises?",
+            ],
+            "rwa": [
+                "Which platforms are leading real-world asset tokenization for retail investors in 2026?",
+                "What blockchain projects allow fractional ownership of physical assets like real estate and commodities?",
+                "Which RWA protocols offer the best yields from tokenized tangible assets?",
+                "How does {brand_name} compare to other real-world asset tokenization platforms?",
+                "What are the most trusted RWA projects with verified on-chain revenue and asset backing?",
+            ],
+            "defi": [
+                "Which DeFi protocols offer the highest yields and lowest risk for liquidity providers in 2026?",
+                "What decentralized exchanges and AMMs have the best trading volumes and lowest fees?",
+                "Which DeFi lending platforms have the most competitive interest rates?",
+                "How does {brand_name} compare to other DeFi yield farming and staking solutions?",
+                "What are the most innovative DeFi protocols for derivatives and synthetic assets?",
+            ],
+            "privacy": [
+                "Which privacy-focused cryptocurrencies offer the strongest transaction confidentiality in 2026?",
+                "What zero-knowledge proof technologies are most widely adopted for private blockchain transactions?",
+                "Which privacy coins have the best compliance track record while maintaining anonymity?",
+                "How does {brand_name} compare to other privacy-focused digital payment solutions?",
+                "What are the leading privacy-preserving DeFi and payment protocols?",
+            ],
+            "infrastructure": [
+                "Which blockchain infrastructure projects provide the best oracle and interoperability solutions?",
+                "What cross-chain bridges and messaging protocols are most secure and widely adopted?",
+                "Which data availability layers and sequencers power the leading L2 ecosystems?",
+                "How does {brand_name} compare to other Web3 infrastructure providers?",
+                "What are the most critical infrastructure projects for blockchain scalability and connectivity?",
+            ],
+            "payments": [
+                "Which crypto payment solutions offer the lowest fees and fastest settlement for merchants?",
+                "What blockchain payment platforms are most widely adopted for cross-border remittances?",
+                "Which stablecoin and payment integrations work best for e-commerce and retail?",
+                "How does {brand_name} compare to other crypto payment rails and merchant solutions?",
+                "What are the leading Web3 payment platforms for everyday consumer transactions?",
+            ],
+            "gaming": [
+                "Which GameFi projects have the most engaging gameplay and sustainable tokenomics?",
+                "What play-to-earn and metaverse platforms retain users beyond speculative value?",
+                "Which blockchain gaming studios produce the highest quality game experiences?",
+                "How does {brand_name} compare to other Web3 gaming ecosystems?",
+                "What are the most innovative NFT and blockchain integration in traditional gaming?",
+            ],
+            "generic": [
+                "Which Web3 projects in {brand_name}'s category are most frequently recommended by AI assistants?",
+                "What are the leading competitors to {brand_name} in the blockchain and cryptocurrency space?",
+                "Which platforms offer similar services to {brand_name} with stronger market presence?",
+                "What do AI models recommend as alternatives to {brand_name}?",
+                "Which crypto projects are most commonly compared to {brand_name} in user queries?",
+            ],
+        }
+        
+        # Handle compound categories (e.g., "depin-rwa")
+        primary_cat = subcategory.split("-")[0]
+        questions = base_questions.get(primary_cat, base_questions["generic"])
+        
+        return [q.format(brand_name=brand_name) for q in questions]
+
     def generate_ct_personas_questions(self, site_name: str, site_url: str,
                                       homepage_text: str) -> dict:
         messages = [
@@ -415,7 +520,9 @@ class OpenRouterBatchClient:
             formatted = [q.format(brand_name=brand_name) if "{brand_name}" in q else q for q in discovery_questions]
             questions = formatted
         else:
-            questions = [q.format(brand_name=brand_name) for q in DISCOVERY_QUESTIONS]
+            # Generate dynamic discovery questions based on brand context
+            subcategory = self._detect_subcategory("", brand_name)
+            questions = self._generate_fallback_discovery_questions(brand_name, subcategory, brand_name, "")
         all_responses = []
 
         for model in models:
