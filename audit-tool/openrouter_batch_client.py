@@ -18,14 +18,14 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODELS = [
     "deepseek/deepseek-chat-v3",
     "anthropic/claude-3.5-haiku",
-    "google/gemini-2.0-flash-001",
+    # "google/gemini-2.0-flash-001",  # Temporarily disabled — OpenRouter 504 from Google
     "openai/gpt-4o-mini",
 ]
 
 MODEL_DISPLAY_NAMES = {
     "deepseek/deepseek-chat-v3": "DeepSeek",
     "anthropic/claude-3.5-haiku": "Claude",
-    "google/gemini-2.0-flash-001": "Gemini",
+    # "google/gemini-2.0-flash-001": "Gemini",
     "openai/gpt-4o-mini": "OpenAI",
 }
 
@@ -156,9 +156,12 @@ class OpenRouterBatchClient:
             "max_tokens": max_tokens,
             "messages": messages,
         }
+        last_status = None
+        last_error = None
         for attempt in range(4):
             try:
                 resp = requests.post(OPENROUTER_URL, headers=headers, json=payload, timeout=60)
+                last_status = resp.status_code
                 if resp.status_code == 200:
                     break
                 elif resp.status_code in (429, 500, 502, 503):
@@ -167,13 +170,15 @@ class OpenRouterBatchClient:
                     continue
                 else:
                     raise RuntimeError(f"OpenRouter {resp.status_code}: {resp.text[:300]}")
-            except requests.exceptions.Timeout:
+            except (requests.exceptions.Timeout, requests.exceptions.ChunkedEncodingError, requests.exceptions.ConnectionError) as e:
+                last_error = type(e).__name__
                 if attempt == 3:
-                    raise RuntimeError(f"Timeout after 4 retries for {model}")
-                time.sleep((2 ** attempt) * 2)
+                    raise RuntimeError(f"{last_error} after 4 retries for {model} (last status: {last_status})")
+                wait = (2 ** attempt) * 2
+                time.sleep(wait)
                 continue
         else:
-            raise RuntimeError(f"All retries exhausted for {model}")
+            raise RuntimeError(f"All retries exhausted for {model} (last status: {last_status}, last error: {last_error})")
 
         data = resp.json()
         try:

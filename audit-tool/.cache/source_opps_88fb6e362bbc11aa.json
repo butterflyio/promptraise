@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading cryptocurrency news outlet that frequently covers blockchain asset transfer protocols and cross-chain technologies, aligning perfectly with Beyond's core blockchain ecosystem themes"
+  },
+  {
+    "name": "defipulse.com",
+    "domain": "defipulse.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized DeFi analytics platform that tracks blockchain asset protocols, providing critical visibility for Beyond's cross-chain transfer capabilities"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical cryptocurrency publication with strong coverage of Ethereum-based protocols and innovative blockchain asset transfer mechanisms"
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive crypto research platform that provides deep analytical coverage of blockchain infrastructure and cross-chain protocols"
+  },
+  {
+    "name": "blockchain.news",
+    "domain": "blockchain.news",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global blockchain technology news platform with strong focus on emerging protocols and asset transfer innovations"
+  },
+  {
+    "name": "the-block.io",
+    "domain": "the-block.io",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative cryptocurrency research platform that extensively covers blockchain infrastructure, asset protocols, and cross-chain technologies"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] International cryptocurrency news outlet with comprehensive coverage of blockchain asset transfer and protocol innovations"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global cryptocurrency media platform with significant reach in blockchain technology and cross-chain ecosystem reporting"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Ethereum-focused developer community and research platform that explores advanced blockchain asset transfer technologies"
+  },
+  {
+    "name": "chainlink.com/research",
+    "domain": "chainlink.com/research",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Prominent blockchain oracle platform with deep technical research into cross-chain asset transfer protocols and infrastructure"
+  }
+]

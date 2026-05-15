@@ -27,7 +27,7 @@ from competitor_discovery import run_competitor_discovery, discover_competitors_
 from dashboard_renderer import DashboardRenderer
 from deepseek_client import DeepSeekClient
 from insights_generator import InsightsGenerator
-from openrouter_batch_client import OpenRouterBatchClient
+from openrouter_batch_client import OpenRouterBatchClient, MODELS
 from state_manager import StateManager
 
 # ---------------- Constants ----------------
@@ -1456,12 +1456,8 @@ def stage_discovery_batch(client: OpenRouterBatchClient, brand_name: str,
         return state.get("discovered_competitors", [])
 
     log("Running discovery batch (5 questions × 4 models)...")
-    responses = client.discovery_batch_query(brand_name, models=[
-        "deepseek/deepseek-chat-v3",
-        "anthropic/claude-3.5-haiku",
-        "google/gemini-2.0-flash-001",
-        "openai/gpt-4o-mini",
-    ], discovery_questions=discovery_questions)
+    responses = client.discovery_batch_query(brand_name, models=MODELS,
+                                              discovery_questions=discovery_questions)
     competitors = client.extract_competitors_from_discovery(responses, brand_name,
                                                          min_mentions=1, min_question_types=1)
     log(f"  ✓ Discovered {len(competitors)} competitors")
@@ -1483,12 +1479,8 @@ def stage_full_batch_query(client: OpenRouterBatchClient, brand_name: str,
     log("Running full batch query (20 questions × 4 models = 80 calls)...")
     ct_list = ct_data.get("customer_types", [])
     comp_seed = competitor_seed or []
-    result = client.full_batch_query(brand_name, ct_list, models=[
-        "deepseek/deepseek-chat-v3",
-        "anthropic/claude-3.5-haiku",
-        "google/gemini-2.0-flash-001",
-        "openai/gpt-4o-mini",
-    ], use_structured_extraction=False, competitor_seed=comp_seed,
+    result = client.full_batch_query(brand_name, ct_list, models=MODELS,
+                                       use_structured_extraction=False, competitor_seed=comp_seed,
        competitor_aliases_map=competitor_aliases_map)
     log(f"  ✓ Got {len(result.get('responses', []))} responses")
 
