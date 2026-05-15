@@ -1,0 +1,697 @@
+{
+  "site": {
+    "name": "Beyond",
+    "url": "https://beyond.markets/",
+    "domain": "beyond.markets",
+    "slug": "beyond-v1",
+    "analysis_id": "openrouter-beyond-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 15, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 60,
+    "responses_per_type": 30,
+    "unique_competitors": 111,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "Beyond Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "80.0%",
+        "label": "cosmos (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "66.7%",
+        "label": "polkadot (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Digital Asset Professionals",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "cosmos",
+          "appearance": 70.0,
+          "rank": 13.46,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polkadot",
+          "appearance": 66.7,
+          "rank": 8.91,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainlink",
+          "appearance": 53.3,
+          "rank": 13.09,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon",
+          "appearance": 50.0,
+          "rank": 12.67,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance smart chain",
+          "appearance": 33.3,
+          "rank": 11.0,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "avalanche",
+          "appearance": 33.3,
+          "rank": 10.5,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "wormhole",
+          "appearance": 26.7,
+          "rank": 14.67,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solana",
+          "appearance": 20.0,
+          "rank": 14.33,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "optimism",
+          "appearance": 16.7,
+          "rank": 0,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon bridge",
+          "appearance": 16.7,
+          "rank": 15.0,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "OpenAI": 1,
+        "DeepSeek": 2
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Technical Innovation Enthusiasts",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "cosmos",
+          "appearance": 80.0,
+          "rank": 12.28,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainlink",
+          "appearance": 60.0,
+          "rank": 9.57,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polkadot",
+          "appearance": 60.0,
+          "rank": 10.38,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon",
+          "appearance": 50.0,
+          "rank": 11.0,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "avalanche",
+          "appearance": 46.7,
+          "rank": 14.5,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "wormhole",
+          "appearance": 33.3,
+          "rank": 13.67,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance smart chain",
+          "appearance": 26.7,
+          "rank": 12.0,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "axelar",
+          "appearance": 26.7,
+          "rank": 12.0,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "uniswap",
+          "appearance": 23.3,
+          "rank": 13.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "multichain",
+          "appearance": 23.3,
+          "rank": 13.2,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "OpenAI": 1,
+        "DeepSeek": 2
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "name",
+      "count": 203
+    },
+    {
+      "text": "chain",
+      "count": 162
+    },
+    {
+      "text": "cross",
+      "count": 131
+    },
+    {
+      "text": "asset",
+      "count": 119
+    },
+    {
+      "text": "cross chain",
+      "count": 115
+    },
+    {
+      "text": "blockchain",
+      "count": 114
+    },
+    {
+      "text": "assets",
+      "count": 87
+    },
+    {
+      "text": "transfers",
+      "count": 85
+    },
+    {
+      "text": "protocol",
+      "count": 84
+    },
+    {
+      "text": "ethereum",
+      "count": 75
+    }
+  ],
+  "sources": [
+    {
+      "name": "chain.link",
+      "url": "https://chain.link",
+      "mentions": 2
+    },
+    {
+      "name": "polkadot.network",
+      "url": "https://polkadot.network",
+      "mentions": 2
+    },
+    {
+      "name": "wormhole.com",
+      "url": "https://wormhole.com",
+      "mentions": 2
+    },
+    {
+      "name": "ethereum.org",
+      "url": "https://ethereum.org",
+      "mentions": 2
+    },
+    {
+      "name": "cosmos.network",
+      "url": "https://cosmos.network",
+      "mentions": 2
+    },
+    {
+      "name": "tatum.io",
+      "url": "https://tatum.io",
+      "mentions": 1
+    },
+    {
+      "name": "n8n.io",
+      "url": "https://n8n.io",
+      "mentions": 1
+    },
+    {
+      "name": "blockcypher",
+      "url": "https://blockcypher",
+      "mentions": 1
+    },
+    {
+      "name": "metamask",
+      "url": "https://metamask",
+      "mentions": 1
+    },
+    {
+      "name": "gnosis-safe.io",
+      "url": "https://gnosis-safe.io",
+      "mentions": 1
+    },
+    {
+      "name": "unilogin.io",
+      "url": "https://unilogin.io",
+      "mentions": 1
+    },
+    {
+      "name": "zapier.com",
+      "url": "https://zapier.com",
+      "mentions": 1
+    },
+    {
+      "name": "binance",
+      "url": "https://binance",
+      "mentions": 1
+    },
+    {
+      "name": "layerzero.network",
+      "url": "https://layerzero.network",
+      "mentions": 1
+    },
+    {
+      "name": "avax.network",
+      "url": "https://avax.network",
+      "mentions": 1
+    },
+    {
+      "name": "chainbridge.chainsafe",
+      "url": "https://chainbridge.chainsafe",
+      "mentions": 1
+    },
+    {
+      "name": "moralis",
+      "url": "https://moralis",
+      "mentions": 1
+    },
+    {
+      "name": "aave",
+      "url": "https://aave",
+      "mentions": 1
+    },
+    {
+      "name": "chain",
+      "url": "https://chain",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I seamlessly transfer high-value assets between different financial networks without multiple transaction fees?",
+      "type": "missing",
+      "persona": "Enterprise Strategy Manager"
+    },
+    {
+      "text": "Can I maintain full transaction transparency while moving assets across different technological ecosystems?",
+      "type": "missing",
+      "persona": "Enterprise Strategy Manager"
+    },
+    {
+      "text": "What verification processes confirm the integrity of assets during standard conversions?",
+      "type": "missing",
+      "persona": "Enterprise Strategy Manager"
+    },
+    {
+      "text": "How quickly can large-scale asset transfers be executed between disparate financial networks?",
+      "type": "missing",
+      "persona": "Enterprise Strategy Manager"
+    },
+    {
+      "text": "What methodologies track asset liquidity when transferring between different technological standards?",
+      "type": "missing",
+      "persona": "International Finance Researcher"
+    },
+    {
+      "text": "How do cross-platform transfers impact transaction settlement times and cost efficiency?",
+      "type": "missing",
+      "persona": "International Finance Researcher"
+    },
+    {
+      "text": "Can assets maintain their original valuation characteristics when moving between different technological frameworks?",
+      "type": "missing",
+      "persona": "International Finance Researcher"
+    },
+    {
+      "text": "What metrics demonstrate the scalability of multi-standard asset transfers?",
+      "type": "missing",
+      "persona": "International Finance Researcher"
+    },
+    {
+      "text": "How do technological bridges resolve potential standardization conflicts during asset migration?",
+      "type": "missing",
+      "persona": "International Finance Researcher"
+    },
+    {
+      "text": "How can my startup leverage multi-standard asset transfers to reduce financial friction?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What integration capabilities exist for connecting different technological ecosystems?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "Can I programmatically automate asset transfers across multiple platforms?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What developer resources support building applications using cross-platform asset migration?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "How do technological bridges minimize potential transfer risks for emerging digital projects?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What architectural approaches enable seamless asset transfers between different technological frameworks?",
+      "type": "missing",
+      "persona": "Technology Innovator"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "defipulse.com",
+      "domain": "defipulse.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchain.news",
+      "domain": "blockchain.news",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "the-block.io",
+      "domain": "the-block.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptonews.com",
+      "domain": "cryptonews.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net/blog",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "chainlink.com/research",
+      "domain": "chainlink.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "claude": 42,
+    "openai": 42,
+    "deepseek": 50,
+    "gemini": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "Cross-Standard",
+        "evidence": "Unique Beyond concept of standard switching not recognized by AI",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Bitcoin L1 Interoperability",
+        "evidence": "Limited AI understanding of token bridging nuances",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Native Token Migration",
+        "evidence": "AI lacks specific context about Beyond's token transfer mechanism",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Guardian Nodes",
+        "evidence": "Proprietary security concept not standardized in AI knowledge",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "LayerZero Integration",
+        "evidence": "Insufficient AI recognition of specific infrastructure details",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Bitcoin has a $1.4 Trillion market cap, but currently only 0.1% exists as DeFi TVL",
+        "site_context": "Market opportunity framing",
+        "ai_uses": "General blockchain interoperability description",
+        "ai_context": "Missing specific market sizing narrative"
+      },
+      {
+        "site_says": "Bridge in a breeze: Connect > Choose > Submit",
+        "site_context": "Simplified user experience",
+        "ai_uses": "Technical protocol description",
+        "ai_context": "Lacks user-friendly positioning"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Digital Asset Professionals",
+          "note": "Primary target with complex token transfer needs"
+        },
+        {
+          "name": "Technical Innovation Enthusiasts",
+          "note": "Early adopter segment interested in blockchain evolution"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "DeFi Traders",
+          "note": "70% market penetration potential via Cosmos/Polkadot competitors"
+        },
+        {
+          "name": "Cross-Chain Developers",
+          "note": "53% market overlap with Chainlink ecosystem"
+        },
+        {
+          "name": "Bitcoin Maximalists",
+          "note": "Emerging segment with 50% competitive landscape"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Comprehensive cross-chain token bridging",
+        "Multi-standard Bitcoin token support",
+        "Advanced security infrastructure",
+        "LayerZero-powered global connectivity"
+      ],
+      "opportunities": [
+        "Expand DeFi integration partnerships",
+        "Create educational content on token standards",
+        "Develop more user-friendly onboarding materials"
+      ],
+      "gaps": [
+        "Limited AI search visibility",
+        "Unclear technical differentiation from competitors",
+        "Minimal external reference citations"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Produce 'Bitcoin Interoperability Explained' whitepaper",
+        "Create comparison content against Cosmos/Polkadot bridges",
+        "Develop technical deep-dive blog series on cross-standard transfers",
+        "Generate token migration use-case tutorials",
+        "Publish security methodology documentation"
+      ],
+      "link_building": [
+        "Guest post on top blockchain technical publications",
+        "Engage with Ethereum/Bitcoin developer communities",
+        "Secure backlinks from security audit firms",
+        "Collaborate with mentioned protocols like Uniswap/Aave",
+        "Create shareable infographics about token bridging"
+      ],
+      "quick_wins": [
+        "Optimize homepage for AI search keywords",
+        "Update meta descriptions with precise technical language",
+        "Implement structured data for protocol details",
+        "Expand technical terminology glossary",
+        "Create FAQ targeting specific AI search queries"
+      ]
+    }
+  }
+}
