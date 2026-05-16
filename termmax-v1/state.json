@@ -6,9 +6,9 @@
     "discover_competitors_dynamic": true,
     "discovery_batch": true,
     "full_batch": true,
-    "aggregate_openrouter": true,
     "insights": true,
-    "render_dashboard": true
+    "render_dashboard": true,
+    "aggregate_openrouter": true
   },
   "data": {
     "site_url": "https://ts.finance/",
@@ -2133,10 +2133,10 @@
                 "appearance_percentage": 27.5,
                 "avg_rank": 14.38,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2145,10 +2145,10 @@
                 "appearance_percentage": 25.0,
                 "avg_rank": 9.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2157,10 +2157,10 @@
                 "appearance_percentage": 17.5,
                 "avg_rank": 11.2,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2169,9 +2169,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 16.5,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2181,8 +2181,8 @@
                 "avg_rank": 9.75,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2192,8 +2192,8 @@
                 "avg_rank": 16.0,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2203,8 +2203,8 @@
                 "avg_rank": 11.5,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2213,20 +2213,20 @@
                 "appearance_percentage": 7.5,
                 "avg_rank": 15.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
               {
                 "name": "curve finance",
                 "appearance_percentage": 7.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2243,11 +2243,11 @@
               {
                 "name": "curve",
                 "appearance_percentage": 7.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2276,8 +2276,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 19.0,
                 "providers": [
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2286,8 +2286,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 19.0,
                 "providers": [
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -2303,7 +2303,7 @@
               {
                 "name": "theblock",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Claude"
                 ],
@@ -2330,7 +2330,7 @@
               {
                 "name": "yield protocol",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Gemini"
                 ],
@@ -2348,7 +2348,7 @@
               {
                 "name": "blockfi",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -2357,7 +2357,7 @@
               {
                 "name": "coinmarketcap",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -2366,7 +2366,7 @@
               {
                 "name": "the graph",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -2383,10 +2383,10 @@
                 "appearance_percentage": 37.5,
                 "avg_rank": 11.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2395,10 +2395,10 @@
                 "appearance_percentage": 37.5,
                 "avg_rank": 13.58,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2407,10 +2407,10 @@
                 "appearance_percentage": 30.0,
                 "avg_rank": 13.5,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2419,10 +2419,10 @@
                 "appearance_percentage": 22.5,
                 "avg_rank": 11.88,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2431,10 +2431,10 @@
                 "appearance_percentage": 20.0,
                 "avg_rank": 13.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2443,9 +2443,9 @@
                 "appearance_percentage": 17.5,
                 "avg_rank": 14.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2454,10 +2454,10 @@
                 "appearance_percentage": 15.0,
                 "avg_rank": 13.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2466,10 +2466,10 @@
                 "appearance_percentage": 15.0,
                 "avg_rank": 13.75,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2478,9 +2478,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 7.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2489,9 +2489,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 15.75,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2500,9 +2500,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 9.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2511,9 +2511,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 13.8,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2522,10 +2522,10 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 12.25,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2544,8 +2544,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 8.0,
                 "providers": [
-                  "Gemini",
-                  "DeepSeek"
+                  "DeepSeek",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2581,8 +2581,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 10.0,
                 "providers": [
-                  "Gemini",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -2591,15 +2591,15 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 11.0,
                 "providers": [
-                  "Gemini",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
               {
                 "name": "synthetix",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "DeepSeek"
                 ],
@@ -2626,7 +2626,7 @@
               {
                 "name": "uma",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Claude"
                 ],
@@ -2635,7 +2635,7 @@
               {
                 "name": "marinade finance",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Gemini"
                 ],
@@ -2644,7 +2644,7 @@
               {
                 "name": "venus",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Gemini"
                 ],
@@ -2662,7 +2662,7 @@
               {
                 "name": "cryptocompare",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -2673,7 +2673,7 @@
           }
         ],
         "overall_summary": {
-          "total_unique_competitors": 75,
+          "total_unique_competitors": 34,
           "own_company_mentioned": false,
           "total_responses_analyzed": 80
         }
@@ -2836,36 +2836,20 @@
       ],
       "source_opportunities": [
         {
-          "name": "decrypt.co",
-          "domain": "decrypt.co",
+          "name": "defillama.com",
+          "domain": "defillama.com",
+          "type": "research",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Leading DeFi liquidity tracking platform that aligns with TermMax's market positioning around platform liquidity and rate strategies"
+        },
+        {
+          "name": "theblock.co",
+          "domain": "theblock.co",
           "type": "news publication",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Covers emerging DeFi platforms with strong focus on market strategies and liquidity innovations"
-        },
-        {
-          "name": "coindesk.com",
-          "domain": "coindesk.com",
-          "type": "news publication",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] High-authority crypto news site that frequently profiles emerging risk management and interest rate platforms"
-        },
-        {
-          "name": "theblock.xyz",
-          "domain": "theblock.xyz",
-          "type": "research site",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Deep technical analysis of blockchain platforms with emphasis on market infrastructure and protocol descriptions"
-        },
-        {
-          "name": "defipulse.com",
-          "domain": "defipulse.com",
-          "type": "research site",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Tracks DeFi platform metrics, especially around liquidity and market positioning competitive analysis"
+          "reason": "[DYNAMIC] Authoritative crypto research platform with deep coverage of market risk and emerging DeFi platforms like TermMax"
         },
         {
           "name": "bankless.substack.com",
@@ -2873,23 +2857,55 @@
           "type": "newsletter",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Influential DeFi-focused newsletter that examines emerging platforms and their strategic market approaches"
+          "reason": "[DYNAMIC] Influential DeFi newsletter that explores innovative interest rate mechanisms and platform strategies matching TermMax's core themes"
+        },
+        {
+          "name": "decrypt.co",
+          "domain": "decrypt.co",
+          "type": "news publication",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Respected crypto media outlet covering emerging platforms and market descriptions in decentralized finance"
+        },
+        {
+          "name": "coindesk.com",
+          "domain": "coindesk.com",
+          "type": "news publication",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Premier crypto news source with extensive coverage of market risk and emerging financial technology platforms"
         },
         {
           "name": "messari.io",
           "domain": "messari.io",
-          "type": "research site",
+          "type": "research",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Provides comprehensive crypto asset research with deep dives into platform mechanics and market risk assessments"
+          "reason": "[DYNAMIC] Comprehensive crypto research platform that provides deep market analysis and platform descriptions"
         },
         {
-          "name": "cryptonews.com",
-          "domain": "cryptonews.com",
+          "name": "crypto.news",
+          "domain": "crypto.news",
           "type": "news publication",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Covers emerging crypto platforms with specific interest in innovative market rate and liquidity strategies"
+          "reason": "[DYNAMIC] Global crypto news outlet focusing on market dynamics and emerging financial technology platforms"
+        },
+        {
+          "name": "consensys.net",
+          "domain": "consensys.net",
+          "type": "research",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Blockchain research and development platform interested in innovative financial strategies and platform technologies"
+        },
+        {
+          "name": "cryptoslate.com",
+          "domain": "cryptoslate.com",
+          "type": "news publication",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Technology-focused crypto publication covering emerging market platforms and risk strategies"
         },
         {
           "name": "cointelegraph.com",
@@ -2897,23 +2913,7 @@
           "type": "news publication",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Global crypto news platform that profiles innovative blockchain platforms and their market differentiation"
-        },
-        {
-          "name": "consensys.net/blog",
-          "domain": "consensys.net/blog",
-          "type": "developer community",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Technical blog focusing on blockchain infrastructure and platform innovations with high developer credibility"
-        },
-        {
-          "name": "hackernoon.com",
-          "domain": "hackernoon.com",
-          "type": "tech publication",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Technical audience interested in emerging blockchain platforms and their unique market positioning"
+          "reason": "[DYNAMIC] Global crypto media platform with extensive coverage of DeFi platforms, market rates, and liquidity innovations"
         }
       ],
       "top_competitors": [
@@ -5181,10 +5181,10 @@
                 "appearance_percentage": 27.5,
                 "avg_rank": 14.38,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5193,10 +5193,10 @@
                 "appearance_percentage": 25.0,
                 "avg_rank": 9.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5205,10 +5205,10 @@
                 "appearance_percentage": 17.5,
                 "avg_rank": 11.2,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5217,9 +5217,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 16.5,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5229,8 +5229,8 @@
                 "avg_rank": 9.75,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5240,8 +5240,8 @@
                 "avg_rank": 16.0,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5251,8 +5251,8 @@
                 "avg_rank": 11.5,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5261,20 +5261,20 @@
                 "appearance_percentage": 7.5,
                 "avg_rank": 15.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
               {
                 "name": "curve finance",
                 "appearance_percentage": 7.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5291,11 +5291,11 @@
               {
                 "name": "curve",
                 "appearance_percentage": 7.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "DeepSeek",
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5324,8 +5324,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 19.0,
                 "providers": [
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5334,8 +5334,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 19.0,
                 "providers": [
-                  "OpenAI",
-                  "Claude"
+                  "Claude",
+                  "OpenAI"
                 ],
                 "is_own": false
               },
@@ -5351,7 +5351,7 @@
               {
                 "name": "theblock",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Claude"
                 ],
@@ -5378,7 +5378,7 @@
               {
                 "name": "yield protocol",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Gemini"
                 ],
@@ -5396,7 +5396,7 @@
               {
                 "name": "blockfi",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -5405,7 +5405,7 @@
               {
                 "name": "coinmarketcap",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -5414,7 +5414,7 @@
               {
                 "name": "the graph",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -5431,10 +5431,10 @@
                 "appearance_percentage": 37.5,
                 "avg_rank": 11.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5443,10 +5443,10 @@
                 "appearance_percentage": 37.5,
                 "avg_rank": 13.58,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5455,10 +5455,10 @@
                 "appearance_percentage": 30.0,
                 "avg_rank": 13.5,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5467,10 +5467,10 @@
                 "appearance_percentage": 22.5,
                 "avg_rank": 11.88,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5479,10 +5479,10 @@
                 "appearance_percentage": 20.0,
                 "avg_rank": 13.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5491,9 +5491,9 @@
                 "appearance_percentage": 17.5,
                 "avg_rank": 14.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5502,10 +5502,10 @@
                 "appearance_percentage": 15.0,
                 "avg_rank": 13.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5514,10 +5514,10 @@
                 "appearance_percentage": 15.0,
                 "avg_rank": 13.75,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5526,9 +5526,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 7.0,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5537,9 +5537,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 15.75,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5548,9 +5548,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 9.33,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5559,9 +5559,9 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 13.8,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5570,10 +5570,10 @@
                 "appearance_percentage": 12.5,
                 "avg_rank": 12.25,
                 "providers": [
-                  "Gemini",
                   "DeepSeek",
+                  "Claude",
                   "OpenAI",
-                  "Claude"
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5592,8 +5592,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 8.0,
                 "providers": [
-                  "Gemini",
-                  "DeepSeek"
+                  "DeepSeek",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5629,8 +5629,8 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 10.0,
                 "providers": [
-                  "Gemini",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
@@ -5639,15 +5639,15 @@
                 "appearance_percentage": 5.0,
                 "avg_rank": 11.0,
                 "providers": [
-                  "Gemini",
-                  "OpenAI"
+                  "OpenAI",
+                  "Gemini"
                 ],
                 "is_own": false
               },
               {
                 "name": "synthetix",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "DeepSeek"
                 ],
@@ -5674,7 +5674,7 @@
               {
                 "name": "uma",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Claude"
                 ],
@@ -5683,7 +5683,7 @@
               {
                 "name": "marinade finance",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Gemini"
                 ],
@@ -5692,7 +5692,7 @@
               {
                 "name": "venus",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "Gemini"
                 ],
@@ -5710,7 +5710,7 @@
               {
                 "name": "cryptocompare",
                 "appearance_percentage": 2.5,
-                "avg_rank": 0,
+                "avg_rank": null,
                 "providers": [
                   "OpenAI"
                 ],
@@ -5721,7 +5721,7 @@
           }
         ],
         "overall_summary": {
-          "total_unique_competitors": 75,
+          "total_unique_competitors": 34,
           "own_company_mentioned": false,
           "total_responses_analyzed": 80
         }
@@ -5884,36 +5884,20 @@
       ],
       "source_opportunities": [
         {
-          "name": "decrypt.co",
-          "domain": "decrypt.co",
+          "name": "defillama.com",
+          "domain": "defillama.com",
+          "type": "research",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Leading DeFi liquidity tracking platform that aligns with TermMax's market positioning around platform liquidity and rate strategies"
+        },
+        {
+          "name": "theblock.co",
+          "domain": "theblock.co",
           "type": "news publication",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Covers emerging DeFi platforms with strong focus on market strategies and liquidity innovations"
-        },
-        {
-          "name": "coindesk.com",
-          "domain": "coindesk.com",
-          "type": "news publication",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] High-authority crypto news site that frequently profiles emerging risk management and interest rate platforms"
-        },
-        {
-          "name": "theblock.xyz",
-          "domain": "theblock.xyz",
-          "type": "research site",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Deep technical analysis of blockchain platforms with emphasis on market infrastructure and protocol descriptions"
-        },
-        {
-          "name": "defipulse.com",
-          "domain": "defipulse.com",
-          "type": "research site",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Tracks DeFi platform metrics, especially around liquidity and market positioning competitive analysis"
+          "reason": "[DYNAMIC] Authoritative crypto research platform with deep coverage of market risk and emerging DeFi platforms like TermMax"
         },
         {
           "name": "bankless.substack.com",
@@ -5921,23 +5905,55 @@
           "type": "newsletter",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Influential DeFi-focused newsletter that examines emerging platforms and their strategic market approaches"
+          "reason": "[DYNAMIC] Influential DeFi newsletter that explores innovative interest rate mechanisms and platform strategies matching TermMax's core themes"
+        },
+        {
+          "name": "decrypt.co",
+          "domain": "decrypt.co",
+          "type": "news publication",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Respected crypto media outlet covering emerging platforms and market descriptions in decentralized finance"
+        },
+        {
+          "name": "coindesk.com",
+          "domain": "coindesk.com",
+          "type": "news publication",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Premier crypto news source with extensive coverage of market risk and emerging financial technology platforms"
         },
         {
           "name": "messari.io",
           "domain": "messari.io",
-          "type": "research site",
+          "type": "research",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Provides comprehensive crypto asset research with deep dives into platform mechanics and market risk assessments"
+          "reason": "[DYNAMIC] Comprehensive crypto research platform that provides deep market analysis and platform descriptions"
         },
         {
-          "name": "cryptonews.com",
-          "domain": "cryptonews.com",
+          "name": "crypto.news",
+          "domain": "crypto.news",
           "type": "news publication",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Covers emerging crypto platforms with specific interest in innovative market rate and liquidity strategies"
+          "reason": "[DYNAMIC] Global crypto news outlet focusing on market dynamics and emerging financial technology platforms"
+        },
+        {
+          "name": "consensys.net",
+          "domain": "consensys.net",
+          "type": "research",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Blockchain research and development platform interested in innovative financial strategies and platform technologies"
+        },
+        {
+          "name": "cryptoslate.com",
+          "domain": "cryptoslate.com",
+          "type": "news publication",
+          "mentions": 0,
+          "priority": "OPPORTUNITY",
+          "reason": "[DYNAMIC] Technology-focused crypto publication covering emerging market platforms and risk strategies"
         },
         {
           "name": "cointelegraph.com",
@@ -5945,23 +5961,7 @@
           "type": "news publication",
           "mentions": 0,
           "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Global crypto news platform that profiles innovative blockchain platforms and their market differentiation"
-        },
-        {
-          "name": "consensys.net/blog",
-          "domain": "consensys.net/blog",
-          "type": "developer community",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Technical blog focusing on blockchain infrastructure and platform innovations with high developer credibility"
-        },
-        {
-          "name": "hackernoon.com",
-          "domain": "hackernoon.com",
-          "type": "tech publication",
-          "mentions": 0,
-          "priority": "OPPORTUNITY",
-          "reason": "[DYNAMIC] Technical audience interested in emerging blockchain platforms and their unique market positioning"
+          "reason": "[DYNAMIC] Global crypto media platform with extensive coverage of DeFi platforms, market rates, and liquidity innovations"
         }
       ],
       "top_competitors": [

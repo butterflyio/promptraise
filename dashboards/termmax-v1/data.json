@@ -14,7 +14,7 @@
     "score_status": "Zero AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
-    "unique_competitors": 75,
+    "unique_competitors": 34,
     "own_mentioned": false,
     "own_appearance_pct": 0,
     "own_appearance_note": "Site NOT mentioned in AI responses",
@@ -46,10 +46,10 @@
           "appearance": 27.5,
           "rank": 14.38,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -59,10 +59,10 @@
           "appearance": 25.0,
           "rank": 9.33,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -72,10 +72,10 @@
           "appearance": 17.5,
           "rank": 11.2,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -85,9 +85,9 @@
           "appearance": 12.5,
           "rank": 16.5,
           "providers": [
-            "Gemini",
             "DeepSeek",
-            "OpenAI"
+            "OpenAI",
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -98,8 +98,8 @@
           "rank": 9.75,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Claude"
+            "Claude",
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
@@ -110,8 +110,8 @@
           "rank": 16.0,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Claude"
+            "Claude",
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
@@ -122,8 +122,8 @@
           "rank": 11.5,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Claude"
+            "Claude",
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
@@ -133,9 +133,9 @@
           "appearance": 7.5,
           "rank": 15.0,
           "providers": [
-            "Gemini",
             "DeepSeek",
-            "OpenAI"
+            "OpenAI",
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -143,11 +143,11 @@
         {
           "name": "curve finance",
           "appearance": 7.5,
-          "rank": 0,
+          "rank": null,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Claude"
+            "Claude",
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
@@ -166,10 +166,10 @@
       ],
       "total_responses": 10,
       "provider_order_summary": {
-        "Gemini": 0,
-        "DeepSeek": 1,
+        "DeepSeek": 0,
+        "Claude": 1,
         "OpenAI": 2,
-        "Claude": 3
+        "Gemini": 3
       },
       "has_distinct_competitor_data": true,
       "data_note": null
@@ -183,10 +183,10 @@
           "appearance": 37.5,
           "rank": 11.33,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -196,10 +196,10 @@
           "appearance": 37.5,
           "rank": 13.58,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -209,10 +209,10 @@
           "appearance": 30.0,
           "rank": 13.5,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -222,10 +222,10 @@
           "appearance": 22.5,
           "rank": 11.88,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -235,10 +235,10 @@
           "appearance": 20.0,
           "rank": 13.0,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -248,9 +248,9 @@
           "appearance": 17.5,
           "rank": 14.33,
           "providers": [
-            "Gemini",
             "DeepSeek",
-            "OpenAI"
+            "OpenAI",
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -260,10 +260,10 @@
           "appearance": 15.0,
           "rank": 13.0,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -273,10 +273,10 @@
           "appearance": 15.0,
           "rank": 13.75,
           "providers": [
-            "Gemini",
             "DeepSeek",
+            "Claude",
             "OpenAI",
-            "Claude"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -286,9 +286,9 @@
           "appearance": 12.5,
           "rank": 7.0,
           "providers": [
-            "Gemini",
             "DeepSeek",
-            "OpenAI"
+            "OpenAI",
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -298,9 +298,9 @@
           "appearance": 12.5,
           "rank": 15.75,
           "providers": [
-            "Gemini",
             "DeepSeek",
-            "OpenAI"
+            "OpenAI",
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
@@ -308,10 +308,10 @@
       ],
       "total_responses": 10,
       "provider_order_summary": {
-        "Gemini": 0,
-        "DeepSeek": 1,
+        "DeepSeek": 0,
+        "Claude": 1,
         "OpenAI": 2,
-        "Claude": 3
+        "Gemini": 3
       },
       "has_distinct_competitor_data": true,
       "data_note": null
@@ -450,6 +450,24 @@
   ],
   "source_opportunities": [
     {
+      "name": "defillama.com",
+      "domain": "defillama.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "bankless.substack.com",
+      "domain": "bankless.substack.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
       "name": "decrypt.co",
       "domain": "decrypt.co",
       "type": "competitor",
@@ -462,32 +480,26 @@
       "mentions": 0
     },
     {
-      "name": "theblock.xyz",
-      "domain": "theblock.xyz",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
-      "name": "defipulse.com",
-      "domain": "defipulse.com",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
-      "name": "bankless.substack.com",
-      "domain": "bankless.substack.com",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
       "name": "messari.io",
       "domain": "messari.io",
       "type": "competitor",
       "mentions": 0
     },
     {
-      "name": "cryptonews.com",
-      "domain": "cryptonews.com",
+      "name": "crypto.news",
+      "domain": "crypto.news",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
       "type": "competitor",
       "mentions": 0
     },
@@ -496,25 +508,13 @@
       "domain": "cointelegraph.com",
       "type": "competitor",
       "mentions": 0
-    },
-    {
-      "name": "consensys.net/blog",
-      "domain": "consensys.net",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
-      "name": "hackernoon.com",
-      "domain": "hackernoon.com",
-      "type": "competitor",
-      "mentions": 0
     }
   ],
   "provider_coverage": {
-    "gemini": 37,
     "deepseek": 50,
+    "claude": 35,
     "openai": 50,
-    "claude": 35
+    "gemini": 37
   },
   "insights": {
     "terminology_gap": [
