@@ -1047,8 +1047,8 @@
                         </div>
                     </td>
                     <td>
-                        <span class="rank-badge ${rank <= 1.5 ? 'rank-1' : rank <= 2.5 ? 'rank-2' : rank <= 3.5 ? 'rank-3' : 'rank-other'}">
-                            ${Number(rank).toFixed(1)}
+                        <span class="rank-badge ${rankClass}">
+                            ${rankValue}
                         </span>
                     </td>
                     <td>
@@ -1288,18 +1288,18 @@
             function buildRankChart(canvasId, customerType) {
                 if (!customerType.competitors || customerType.competitors.length === 0) return;
                 
-                // Filter: only include competitors with non-zero avg_rank
+                // Filter: only include competitors with actual rank values
                 const competitorsWithRank = customerType.competitors
                     .filter(c => {
-                        const rank = c.avg_rank || c.rank || 0;
-                        return rank > 0;
+                        const rank = c.avg_rank !== undefined ? c.avg_rank : c.rank;
+                        return rank !== undefined && rank !== null && rank > 0;
                     })
                     .slice(0, 10);
                 
                 if (competitorsWithRank.length === 0) return; // No data to display
                 
                 const labels = competitorsWithRank.map(c => c.name);
-                const data = competitorsWithRank.map(c => c.avg_rank || c.rank || 0);
+                const data = competitorsWithRank.map(c => c.avg_rank !== undefined ? c.avg_rank : (c.rank || 0));
                 const canvas = document.getElementById(canvasId);
                 canvas.height = 320;
                 new Chart(canvas, {

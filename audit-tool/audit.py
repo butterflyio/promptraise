@@ -87,7 +87,7 @@ def transform_competitors(botsee_competitors: list, site_own_url: str = None,
         out.append({
             "name": c.get("name"),
             "appearance": c.get("appearance_percentage", 0),
-            "rank": c.get("avg_rank", 0),
+            "rank": c.get("avg_rank") if c.get("avg_rank") is not None else None,
             "providers": c.get("providers", []),
             "isOwn": bool(c.get("is_own", False)),
             "url": c.get("url"),

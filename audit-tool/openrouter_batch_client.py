@@ -220,8 +220,8 @@ class OpenRouterBatchClient:
         return self._call_with_json_retry(model, messages, max_tokens=1024)
 
     def _extract_competitors_from_text(self, text: str, brand_variant: str,
-                                      seed_competitors: set = None,
-                                      competitor_aliases_map: dict = None) -> tuple:
+                                       seed_competitors: set = None,
+                                       competitor_aliases_map: dict = None) -> tuple:
         text_lower = text.lower()
         competitors = []
         found = set()
@@ -252,19 +252,51 @@ class OpenRouterBatchClient:
 
         positions = {}
         lines = text.split('\n')
+        
+        # Phase 1: Try first 20 lines (fast path for structured responses)
         for canonical in found:
+            if canonical in positions:
+                continue
             aliases = aliases_map.get(canonical, [canonical])
             for i, line in enumerate(lines[:20]):
                 line_lower = line.lower()
                 if any(alias in line_lower for alias in aliases):
                     positions[canonical] = i + 1
                     break
+        
         for comp_name in competitors:
-            if comp_name not in positions:
-                for i, line in enumerate(lines[:20]):
-                    if comp_name in line.lower():
-                        positions[comp_name] = i + 1
-                        break
+            if comp_name in positions:
+                continue
+            for i, line in enumerate(lines[:20]):
+                if comp_name in line.lower():
+                    positions[comp_name] = i + 1
+                    break
+
+        # Phase 2: Full-text fallback for anything not found in first 20 lines
+        # Handles long-form responses (JSON blobs, single-paragraph markdown, etc.)
+        WORDS_PER_LINE_ESTIMATE = 15  # Rough estimate for virtual line conversion
+        
+        def _find_word_index(target: str, text_lower: str) -> int:
+            """Find the approximate word index of target in text."""
+            idx = text_lower.find(target)
+            if idx == -1:
+                return None
+            # Count words before this position (space-delimited)
+            return text_lower[:idx].count(' ') + 1
+        
+        for comp in list(competitors):
+            if comp in positions:
+                continue
+            aliases = aliases_map.get(comp, [comp])
+            best_pos = None
+            for alias in aliases:
+                pos = _find_word_index(alias, text_lower)
+                if pos is not None:
+                    if best_pos is None or pos < best_pos:
+                        best_pos = pos
+            if best_pos is not None:
+                # Convert word index to virtual line number for comparability
+                positions[comp] = max(1, round(best_pos / WORDS_PER_LINE_ESTIMATE))
 
         return competitors, positions
 
@@ -293,11 +325,21 @@ class OpenRouterBatchClient:
         rank = None
         if mentioned:
             lines = text.split('\n')
+            # Phase 1: First 20 lines
             for i, line in enumerate(lines[:20]):
                 line_lower = line.lower()
                 if any(v in line_lower for v in [brand_variant] + variants):
                     rank = i + 1
                     break
+            
+            # Phase 2: Full text fallback
+            if rank is None:
+                for v in [brand_variant] + variants:
+                    idx = text_lower.find(v)
+                    if idx != -1:
+                        word_idx = text_lower[:idx].count(' ') + 1
+                        rank = max(1, round(word_idx / 15))
+                        break
 
         return mentioned, rank
 
@@ -654,7 +696,7 @@ class OpenRouterBatchClient:
         for comp, bucket in mention_buckets.items():
             appearance_pct = round((bucket["total"] / total) * 100, 1) if total > 0 else 0
             positions = bucket.get("mention_positions", [])
-            avg_rank = round(sum(positions) / len(positions), 2) if positions else 0
+            avg_rank = round(sum(positions) / len(positions), 2) if positions else None
             providers = list(bucket.get("by_model", {}).keys())
             overall_competitors[comp] = {
                 "name": comp,
@@ -700,7 +742,7 @@ class OpenRouterBatchClient:
                 count = data["count"]
                 pct = round((count / ct_total) * 100, 1) if ct_total > 0 else 0
                 positions = data["positions"]
-                avg_rank = round(sum(positions) / len(positions), 2) if positions else 0
+                avg_rank = round(sum(positions) / len(positions), 2) if positions else None
                 providers = list(data["models"])
                 ct_comps.append({
                     "name": comp_name,
