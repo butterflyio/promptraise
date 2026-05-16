@@ -1018,7 +1018,13 @@
             }
             tbody.innerHTML = customerType.competitors.map((c, idx) => {
                 const appearance = c.appearance_percentage || c.appearance || 0;
-                const rank = c.avg_rank || c.rank || 0;
+                const rank = c.avg_rank !== undefined && c.avg_rank !== null
+                    ? c.avg_rank
+                    : (c.rank !== undefined && c.rank !== null ? c.rank : null);
+                const rankValue = rank !== null ? Number(rank).toFixed(1) : 'N/A';
+                const rankClass = rank !== null
+                    ? (rank <= 1.5 ? 'rank-1' : rank <= 2.5 ? 'rank-2' : rank <= 3.5 ? 'rank-3' : 'rank-other')
+                    : 'rank-other';
                 const isOwn = c.is_own || c.isOwn || false;
                 const providers = c.providers || [];
                 return `
