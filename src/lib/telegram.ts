@@ -38,22 +38,26 @@ export async function sendTelegramMessage(
     };
   }
 
+  if (!BOT_TOKEN) {
+    return { success: false, error: 'Telegram bot token is not configured' };
+  }
+
   const sendMessageUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
   const response = await fetch(sendMessageUrl, {
     method: 'POST',
+    signal: AbortSignal.timeout(15000),
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       chat_id: user.chat_id,
       text: message,
-      parse_mode: 'HTML',
       disable_web_page_preview: true,
     }),
   });
 
   const data = await response.json();
 
-  if (!data.ok) {
+  if (!response.ok || !data.ok) {
     return { success: false, error: data.description || 'Telegram API error' };
   }
 

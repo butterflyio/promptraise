@@ -1,7 +1,13 @@
 import { sendTelegramMessage } from '@/lib/telegram';
 
+const TELEGRAM_HANDLE_PATTERN = /^@?[a-zA-Z0-9_]{4,32}$/;
+const TELEGRAM_MAX_MESSAGE_LENGTH = 4096;
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
+    if (typeof res.setHeader === 'function') {
+      res.setHeader('Allow', 'POST');
+    }
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
@@ -12,7 +18,19 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Missing telegram_handle or message' });
     }
 
-    const result = await sendTelegramMessage(telegram_handle, message);
+    if (typeof telegram_handle !== 'string' || !TELEGRAM_HANDLE_PATTERN.test(telegram_handle)) {
+      return res.status(400).json({ error: 'Invalid telegram_handle format' });
+    }
+
+    if (typeof message !== 'string' || !message.trim()) {
+      return res.status(400).json({ error: 'Message must be a non-empty string' });
+    }
+
+    if (message.length > TELEGRAM_MAX_MESSAGE_LENGTH) {
+      return res.status(400).json({ error: 'Message is too long' });
+    }
+
+    const result = await sendTelegramMessage(telegram_handle.trim(), message.trim());
 
     if (!result.success) {
       if (result.message === 'User has not started the bot') {
