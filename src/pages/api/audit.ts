@@ -62,7 +62,11 @@ function isPrivateOrLocalHost(hostname: string): boolean {
   }
 
   if (ipVersion === 6) {
-    return normalized === '::1' || normalized.startsWith('fc') || normalized.startsWith('fd');
+    return (
+      normalized === '::1' ||
+      /^f[cd][0-9a-f]{2}:/.test(normalized) ||
+      /^fe[89ab][0-9a-f]:/.test(normalized)
+    );
   }
 
   return false;
