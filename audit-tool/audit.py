@@ -1,0 +1,1624 @@
+#!/usr/bin/env python3
+"""AI Visibility Audit Tool - Main CLI.
+
+Phase 1: --migrate-existing mode.
+  Uses an already-completed BotSee analysis (site_uuid + analysis_id) to
+  produce a dashboard via the new reusable template. No new BotSee credits
+  are spent; only Claude API calls for insights.
+
+Phase 2 (coming): full end-to-end audit including site creation, persona/
+question generation, Web3 detection, and DeepSeek via OpenRouter.
+"""
+
+import argparse
+import json
+import os
+import re
+import sys
+import time
+from datetime import datetime
+from pathlib import Path
+from urllib.parse import urlparse
+
+from dotenv import load_dotenv
+
+from botsee_client import BotSeeClient, BotSeeError
+from competitor_discovery import run_competitor_discovery, discover_competitors_from_audit_responses
+from dashboard_renderer import DashboardRenderer
+from deepseek_client import DeepSeekClient
+from insights_generator import InsightsGenerator
+from openrouter_batch_client import OpenRouterBatchClient, MODELS
+from state_manager import StateManager
+
+# ---------------- Constants ----------------
+
+AUDIT_TOOL_DIR = Path(__file__).parent
+REPO_ROOT = AUDIT_TOOL_DIR.parent
+DEFAULT_DASHBOARDS_DIR = REPO_ROOT / "dashboards"
+TEMPLATE_PATH = AUDIT_TOOL_DIR / "templates" / "dashboard.html"
+
+
+# ---------------- Helpers ----------------
+
+def log(msg: str):
+    ts = datetime.now().strftime("%H:%M:%S")
+    print(f"[{ts}] {msg}", flush=True)
+
+
+def slug_from_url(url: str) -> str:
+    """Derive a slug from a URL: staynex.vip -> staynex, foo.bar.co.uk -> foo-bar."""
+    parsed = urlparse(url if "://" in url else f"https://{url}")
+    host = parsed.netloc or parsed.path
+    host = host.lower().strip("/")
+    # Strip common TLDs iteratively
+    parts = host.split(".")
+    # Take the first N parts that aren't TLDs
+    tlds = {"com", "org", "net", "io", "co", "uk", "vip", "app",
+            "dev", "xyz", "ai", "finance", "tech", "site", "online"}
+    # Keep parts up to but not including the TLD chain
+    kept = []
+    for p in parts:
+        if p in tlds and kept:
+            break
+        kept.append(p)
+    slug = "-".join(kept) if kept else host
+    # Sanitize
+    slug = re.sub(r"[^a-z0-9-]", "-", slug)
+    slug = re.sub(r"-+", "-", slug).strip("-")
+    return slug or "audit"
+
+
+def title_from_domain(url: str) -> str:
+    """Derive a display name from a URL."""
+    parsed = urlparse(url if "://" in url else f"https://{url}")
+    host = parsed.netloc or parsed.path
+    host = host.lower().strip("/")
+    first = host.split(".")[0]
+    return first.capitalize()
+
+
+# ---------------- Data transformations ----------------
+
+def transform_competitors(botsee_competitors: list, site_own_url: str = None,
+                          site_own_name: str = None, limit: int = 10) -> list:
+    """Convert BotSee competitor shape into our dashboard shape."""
+    out = []
+    for c in botsee_competitors[:limit]:
+        out.append({
+            "name": c.get("name"),
+            "appearance": c.get("appearance_percentage", 0),
+            "rank": c.get("avg_rank") if c.get("avg_rank") is not None else None,
+            "providers": c.get("providers", []),
+            "isOwn": bool(c.get("is_own", False)),
+            "url": c.get("url"),
+        })
+    return out
+
+
+def transform_keywords(botsee_keywords, limit: int = 30) -> list:
+    """Transform BotSee keyword results into [{text, count}]. Sort by count desc."""
+    if isinstance(botsee_keywords, list):
+        items = botsee_keywords
+    elif isinstance(botsee_keywords, dict):
+        items = (
+            botsee_keywords.get("keywords")
+            or botsee_keywords.get("items")
+            or []
+        )
+    else:
+        items = []
+
+    out = []
+    for k in items:
+        if isinstance(k, str):
+            out.append({"text": k, "count": 1})
+        elif isinstance(k, dict):
+            text = k.get("keyword") or k.get("text") or k.get("term") or ""
+            count = k.get("count") or k.get("frequency") or k.get("total_mentions") or 1
+            if text:
+                out.append({"text": text, "count": count})
+
+    out.sort(key=lambda x: x.get("count", 0), reverse=True)
+    return out[:limit]
+
+
+def transform_sources(botsee_sources, limit: int = 50) -> list:
+    """Transform BotSee sources into [{name, url, mentions}].
+
+    BotSee may return a list, or {sources: [...]}, or {items: [...]}.
+    Sometimes URLs contain trailing `",` artifacts from the BotSee
+    extractor; clean those defensively. Sort by mentions desc and limit.
+    """
+    if isinstance(botsee_sources, list):
+        items = botsee_sources
+    elif isinstance(botsee_sources, dict):
+        items = (
+            botsee_sources.get("sources")
+            or botsee_sources.get("items")
+            or []
+        )
+    else:
+        items = []
+
+    def _clean(s: str) -> str:
+        if not isinstance(s, str):
+            return ""
+        # Strip trailing `",` and stray quotes
+        s = s.strip()
+        s = s.rstrip(",").rstrip('"').rstrip("'").rstrip(",").strip()
+        return s
+
+    out = []
+    for s in items:
+        if not isinstance(s, dict):
+            continue
+        raw_name = s.get("title") or s.get("name") or s.get("domain") or s.get("url", "")
+        raw_url = s.get("url") or s.get("domain") or raw_name
+        name = _clean(raw_name)
+        url = _clean(raw_url)
+        mentions = (
+            s.get("mentions")
+            or s.get("total_mentions")
+            or s.get("count")
+            or 0
+        )
+        out.append({"name": name, "url": url, "mentions": mentions})
+
+    # Sort by mentions desc and limit
+    out.sort(key=lambda x: x.get("mentions", 0), reverse=True)
+    return out[:limit]
+
+
+def transform_keyword_opportunities(botsee_opps, limit: int = 15) -> list:
+    """Transform keyword opportunities into [{text, type}].
+
+    BotSee shape: {opportunities: [{question, total_responses, persona,
+    by_model: [{rank, provider, mentioned}]}]}.
+    We classify each as 'missing' if the site wasn't mentioned by any provider,
+    'low_rank' if it was mentioned but ranked poorly.
+    """
+    if isinstance(botsee_opps, dict):
+        items = (
+            botsee_opps.get("opportunities")
+            or botsee_opps.get("keyword_opportunities")
+            or botsee_opps.get("items")
+            or []
+        )
+    elif isinstance(botsee_opps, list):
+        items = botsee_opps
+    else:
+        items = []
+
+    out = []
+    for o in items:
+        if not isinstance(o, dict):
+            continue
+        text = o.get("question") or o.get("keyword") or o.get("text") or ""
+        if not text:
+            continue
+
+        by_model = o.get("by_model", [])
+        any_mentioned = any(m.get("mentioned") for m in by_model if isinstance(m, dict))
+        min_rank = None
+        for m in by_model:
+            if isinstance(m, dict) and m.get("rank"):
+                rank = m["rank"]
+                if min_rank is None or rank < min_rank:
+                    min_rank = rank
+
+        if not any_mentioned:
+            opp_type = "missing"
+        elif min_rank and min_rank > 3:
+            opp_type = "low_rank"
+        else:
+            continue  # mentioned with good rank → not an opportunity
+
+        out.append({
+            "text": text,
+            "type": opp_type,
+            "persona": o.get("persona", ""),
+        })
+
+    return out[:limit]
+
+
+def transform_source_opportunities(botsee_opps, limit: int = 15) -> list:
+    """Transform source opportunities into {name, domain, type}.
+
+    Source opportunities from BotSee use the same shape as sources:
+    {sources: [{title, url, mentions, own_company_mentioned}]}.
+    Filter out own-site entries, deduplicate by domain, sort by mentions.
+    """
+    if isinstance(botsee_opps, dict):
+        items = (
+            botsee_opps.get("sources")
+            or botsee_opps.get("opportunities")
+            or botsee_opps.get("source_opportunities")
+            or botsee_opps.get("items")
+            or []
+        )
+    elif isinstance(botsee_opps, list):
+        items = botsee_opps
+    else:
+        items = []
+
+    def _clean(s: str) -> str:
+        if not isinstance(s, str):
+            return ""
+        return s.strip().rstrip(",").rstrip('"').rstrip("'").rstrip(",").strip()
+
+    def _domain_from_url(url: str) -> str:
+        url = _clean(url)
+        if not url:
+            return ""
+        # Strip scheme
+        if "://" in url:
+            url = url.split("://", 1)[1]
+        # Keep only netloc
+        url = url.split("/", 1)[0]
+        return url
+
+    seen_domains = set()
+    out = []
+    for o in items:
+        if not isinstance(o, dict):
+            continue
+        if o.get("own_company_mentioned"):
+            continue
+        title = _clean(o.get("title") or o.get("name") or "")
+        url = _clean(o.get("url") or "")
+        domain = _domain_from_url(url or title)
+        if not domain or domain in seen_domains:
+            continue
+        seen_domains.add(domain)
+        out.append({
+            "name": title or domain,
+            "domain": domain,
+            "type": "competitor",
+            "mentions": o.get("mentions", 0),
+        })
+
+    out.sort(key=lambda x: x.get("mentions", 0), reverse=True)
+    return out[:limit]
+
+
+def compute_provider_coverage(customer_types: list, deepseek_data: dict = None) -> dict:
+    """Count provider appearances across all competitors.
+
+    For each customer type, count how many competitors each provider mentions.
+    Weight equally across CTs so a provider that appears in one CT gets equal
+    representation to providers appearing in another CT.
+    """
+    ct_totals = {}
+    for ct in customer_types:
+        ct_counts = {}
+        for c in ct.get("competitors", []):
+            for p in c.get("providers", []):
+                key = "openai" if p == "openai-search" else p.lower()
+                ct_counts[key] = ct_counts.get(key, 0) + 1
+
+        if ct_counts:
+            total_in_ct = sum(ct_counts.values())
+            for k, v in ct_counts.items():
+                ct_totals[k] = ct_totals.get(k, 0) + (v / total_in_ct)
+
+    if not ct_totals:
+        return {"claude": 0, "gemini": 0, "deepseek": 0, "openai": 0}
+
+    max_val = max(ct_totals.values())
+    scale = 100.0 / max_val if max_val > 0 else 0
+
+    result = {k: round((v / len(customer_types)) * scale) for k, v in ct_totals.items()}
+    for k in ["claude", "gemini", "deepseek", "openai"]:
+        if k not in result:
+            result[k] = 0
+
+    return result
+
+
+def compute_score(own_appearance_pct: float, own_avg_rank: float = None) -> int:
+    """AI visibility score 0-100.
+
+    Score is primarily driven by appearance percentage (how often the brand
+    is mentioned across AI responses). A small rank bonus rewards brands
+    that appear in prominent positions.
+
+    Formula:
+      - Base = own_appearance_pct (direct 1:1 mapping)
+      - Rank bonus = up to +15 based on average rank:
+          rank 1.0 → +15, rank 2.0 → +10, rank 3.0 → +5, rank > 3 → +0
+      - Final = min(base + rank_bonus, 100)
+    """
+    if not own_appearance_pct or own_appearance_pct <= 0:
+        return 0
+
+    base_score = own_appearance_pct
+
+    rank_bonus = 0
+    if own_avg_rank and own_avg_rank > 0:
+        if own_avg_rank <= 1.0:
+            rank_bonus = 15
+        elif own_avg_rank <= 2.0:
+            rank_bonus = 10
+        elif own_avg_rank <= 3.0:
+            rank_bonus = 5
+
+    return min(int(base_score + rank_bonus), 100)
+
+
+# ---------------- Pipeline stages ----------------
+
+def stage_fetch_botsee_results(client: BotSeeClient, analysis_id: str, state: StateManager) -> dict:
+    """Fetch all BotSee result endpoints for a given analysis."""
+    if state.is_complete("fetch_results"):
+        log("  ✓ Skipping fetch_results (already complete)")
+        return state.get("fetch_results")
+
+    log("Fetching BotSee results...")
+    results = {}
+
+    log("  → competitors")
+    results["competitors"] = client.results_competitors(analysis_id)
+
+    log("  → keywords")
+    results["keywords"] = client.results_keywords(analysis_id)
+
+    log("  → sources")
+    results["sources"] = client.results_sources(analysis_id)
+
+    log("  → responses (for keyword extraction)")
+    try:
+        results["responses"] = client.results_responses(analysis_id)
+    except BotSeeError as e:
+        log(f"  ! responses failed: {e}")
+        results["responses"] = {}
+
+    log("  → keyword opportunities")
+    try:
+        results["keyword_opportunities"] = client.results_keyword_opportunities(analysis_id)
+    except BotSeeError as e:
+        log(f"  ! keyword-opportunities failed: {e}")
+        results["keyword_opportunities"] = {}
+
+    log("  → source opportunities")
+    try:
+        results["source_opportunities"] = client.results_source_opportunities(analysis_id)
+    except BotSeeError as e:
+        log(f"  ! source-opportunities failed: {e}")
+        results["source_opportunities"] = {}
+
+    state.mark_complete("fetch_results", results)
+    log("  ✓ Results fetched")
+    return results
+
+
+def stage_scrape_homepage(generator: InsightsGenerator, url: str, state: StateManager) -> str:
+    """Scrape homepage for insight context."""
+    if state.is_complete("scrape_homepage"):
+        log("  ✓ Skipping scrape_homepage (already complete)")
+        return state.get("homepage_text", "")
+
+    log(f"Scraping homepage {url}...")
+    text = generator.scrape_homepage(url)
+    log(f"  ✓ Retrieved {len(text)} chars")
+    state.mark_complete("scrape_homepage", text)
+    state.set("homepage_text", text)
+    return text
+
+
+def stage_generate_insights(generator: InsightsGenerator, context: dict,
+                             state: StateManager) -> dict:
+    """Call Claude to generate analytical insights."""
+    if state.is_complete("insights"):
+        log("  ✓ Skipping insights (already complete)")
+        return state.get("insights")
+
+    log("Generating insights via Claude...")
+    insights = generator.generate(**context)
+    state.mark_complete("insights", insights)
+    state.set("insights", insights)
+    log("  ✓ Insights generated")
+    return insights
+
+
+def stage_extract_keywords_from_responses(botsee_results: dict,
+                                          generator: InsightsGenerator,
+                                          state: StateManager) -> list:
+    """Extract keywords from raw BotSee responses when results-keywords is empty.
+
+    BotSee sometimes returns empty keywords (e.g. single-model analysis).
+    We extract them from the raw response_text using Claude Haiku.
+    """
+    keywords = transform_keywords(botsee_results.get("keywords", {}))
+    if keywords:
+        log("  Keywords found via BotSee")
+        return keywords
+
+    if state.is_complete("extract_keywords"):
+        log("  ✓ Skipping extract_keywords (already complete)")
+        return state.get("extracted_keywords", [])
+
+    raw = botsee_results.get("responses", [])
+    if isinstance(raw, dict):
+        raw_responses = raw.get("responses", [])
+    elif isinstance(raw, list):
+        raw_responses = raw
+    else:
+        raw_responses = []
+    if not raw_responses:
+        log("  ! No raw responses to extract keywords from")
+        state.mark_complete("extract_keywords", [])
+        return []
+
+    log("  Extracting keywords from raw responses via Claude Haiku...")
+    response_texts = []
+    for r in raw_responses[:10]:
+        text = r.get("response_text", "") if isinstance(r, dict) else str(r)
+        if text and len(text) > 100:
+            response_texts.append(text[:2000])
+
+    if not response_texts:
+        log("  ! No usable response texts")
+        state.mark_complete("extract_keywords", [])
+        return []
+
+    combined = "\n\n---\n\n".join(response_texts[:8])
+
+    system = "You are a keyword extraction assistant. Extract the most important keywords and phrases that appear in these AI search responses. Return a JSON array of objects with {text, count} shape."
+    user = f"""Extract the top 20 keywords/phrases that appear across these AI search responses. Focus on:
+- Platform/brand names mentioned
+- Product categories (staking, lending, DeFi, etc.)
+- Use cases (passive income, trading, etc.)
+- Geographic or demographic terms
+
+Return ONLY a JSON array like: [{{"text": "keyword phrase", "count": 5}}, ...]
+Do not include the site being audited's own name.
+
+Responses:
+{combined[:6000]}
+"""
+
+    try:
+        result = generator._call_openrouter(system, user, max_tokens=1024)
+        import re, json as json_mod
+        result = result.strip()
+        if result.startswith("```"):
+            result = re.sub(r"^```(?:json)?\s*", "", result)
+            result = re.sub(r"\s*```\s*$", "", result)
+        extracted = json_mod.loads(result)
+        if isinstance(extracted, list):
+            keywords = [{"text": k["text"] if isinstance(k, dict) else str(k),
+                        "count": k["count"] if isinstance(k, dict) else 1} for k in extracted]
+            keywords = [k for k in keywords if k["text"]]
+            log(f"  ✓ Extracted {len(keywords)} keywords from responses")
+            state.mark_complete("extract_keywords", keywords)
+            state.set("extracted_keywords", keywords)
+            return keywords
+    except Exception as e:
+        log(f"  ! Keyword extraction failed: {e}")
+
+    state.mark_complete("extract_keywords", [])
+    return []
+
+
+def stage_create_site(client: BotSeeClient, domain: str, state: StateManager,
+                       types: int = 2, personas: int = 2, questions: int = 5) -> dict:
+    """Create a new site in BotSee with customer types, personas, and questions."""
+    if state.is_complete("create_site"):
+        log("  ✓ Skipping create_site (already complete)")
+        return state.get("create_site")
+
+    log(f"Creating BotSee site for {domain}...")
+    result = client.create_site(domain, types=types, personas=personas, questions=questions)
+    log(f"  ✓ Site created")
+    state.mark_complete("create_site", result)
+    state.set("create_site", result)
+    return result
+
+
+def stage_generate_types(client: BotSeeClient, site_uuid: str,
+                          state: StateManager) -> list:
+    """Generate 2 customer types for the site."""
+    if state.is_complete("generate_types"):
+        log("  ✓ Skipping generate_types (already complete)")
+        return state.get("type_uuids", [])
+
+    log("Generating customer types...")
+    result = client.generate_types(site_uuid, count=2)
+    type_uuids = []
+    if isinstance(result, dict) and "customer_types" in result:
+        type_uuids = [ct.get("uuid") or ct.get("customer_type_uuid")
+                      for ct in result.get("customer_types", [])]
+    log(f"  ✓ {len(type_uuids)} types created")
+    state.mark_complete("generate_types", type_uuids)
+    state.set("type_uuids", type_uuids)
+    return type_uuids
+
+
+def stage_generate_personas(client: BotSeeClient, type_uuids: list,
+                              state: StateManager, count: int = 2) -> list:
+    """Generate 2 personas per customer type."""
+    if state.is_complete("generate_personas"):
+        log("  ✓ Skipping generate_personas (already complete)")
+        return state.get("persona_uuids", [])
+
+    all_persona_uuids = []
+    for type_uuid in type_uuids:
+        log(f"  Generating personas for type {type_uuid[:8]}...")
+        result = client.generate_personas(type_uuid, count=count)
+        uuids = []
+        if isinstance(result, dict) and "personas" in result:
+            uuids = [p.get("uuid") or p.get("persona_uuid")
+                     for p in result.get("personas", [])]
+        elif isinstance(result, list):
+            uuids = [p.get("uuid") or p.get("persona_uuid") for p in result]
+        all_persona_uuids.extend(uuids)
+        log(f"  ✓ {len(uuids)} personas created")
+
+    state.mark_complete("generate_personas", all_persona_uuids)
+    state.set("persona_uuids", all_persona_uuids)
+    return all_persona_uuids
+
+
+def stage_generate_questions(client: BotSeeClient, persona_uuids: list,
+                               state: StateManager, count: int = 5) -> None:
+    """Generate 5 questions per persona."""
+    if state.is_complete("generate_questions"):
+        log("  ✓ Skipping generate_questions (already complete)")
+        return
+
+    for persona_uuid in persona_uuids:
+        log(f"  Generating questions for persona {persona_uuid[:8]}...")
+        result = client.generate_questions(persona_uuid, count=count)
+        log(f"  ✓ Questions generated")
+
+    state.mark_complete("generate_questions", {"count": len(persona_uuids)})
+
+
+def stage_run_analysis(client: BotSeeClient, site_uuid: str,
+                        state: StateManager,
+                        models: str = "claude,gemini,openai") -> str:
+    """Run BotSee analysis and poll until completion."""
+    if state.is_complete("run_analysis"):
+        log("  ✓ Skipping run_analysis (already complete)")
+        return state.get("analysis_id")
+
+    log("Starting BotSee analysis...")
+    result = client.run_analysis(site_uuid, models=models)
+    analysis_id = result.get("uuid") or result.get("analysis_uuid") or result.get("id")
+    if not analysis_id:
+        # The CLI may have printed "Analysis started" without returning the ID
+        # List latest analyses to find it
+        log("  Analysis started — fetching analysis ID...")
+        analyses = client.list_analyses(site_uuid, limit=1)
+        if isinstance(analyses, dict) and "analyses" in analyses:
+            analysis_id = analyses["analyses"][0].get("uuid")
+        elif isinstance(analyses, list) and analyses:
+            analysis_id = analyses[0].get("uuid")
+
+    if not analysis_id:
+        raise BotSeeError("Could not determine analysis_id from BotSee response")
+
+    state.set("analysis_id", analysis_id)
+    log(f"  Analysis ID: {analysis_id}")
+
+    # Poll for completion
+    log("  Polling for completion...")
+    for attempt in range(30):
+        time.sleep(10)
+        analyses = client.list_analyses(site_uuid, limit=1)
+        status = None
+        if isinstance(analyses, dict):
+            if "analyses" in analyses:
+                status = analyses["analyses"][0].get("status")
+            elif "status" in analyses:
+                status = analyses.get("status")
+        elif isinstance(analyses, list) and analyses:
+            status = analyses[0].get("status")
+
+        if status == "completed":
+            log(f"  ✓ Analysis completed")
+            break
+        elif status == "failed":
+            raise BotSeeError("BotSee analysis failed")
+        log(f"  Waiting... (attempt {attempt + 1}/30)")
+
+    state.mark_complete("run_analysis", analysis_id)
+    return analysis_id
+
+
+def stage_deepseek_analysis(ds_client: DeepSeekClient, site_name: str,
+                             site_url: str, top_competitors: list,
+                             state: StateManager) -> dict:
+    """Query DeepSeek about brand visibility and competitive landscape."""
+    if state.is_complete("deepseek_analysis"):
+        log("  ✓ Skipping deepseek_analysis (already complete)")
+        return state.get("deepseek_data", {})
+
+    log("Analyzing brand via DeepSeek (OpenRouter)...")
+    comp_names = [c.get("name") for c in top_competitors[:10]]
+
+    try:
+        result = ds_client.analyze_brand(
+            brand_name=site_name,
+            brand_description=f"Site: {site_url}",
+            competitors=comp_names,
+        )
+        # Normalize: extract top competitors from DeepSeek response
+        ds_competitors = result.get("top_competitors", [])
+        competitors_mentioned = [c["name"] for c in ds_competitors
+                                  if isinstance(c, dict) and c.get("name")]
+        deepseek_data = {
+            "analyzed": True,
+            "brand_visibility": result.get("brand_visibility", {}),
+            "top_competitors": ds_competitors,
+            "competitors_mentioned": competitors_mentioned,
+            "sources_cited": result.get("sources_cited", []),
+            "ai_usage": result.get("ai_usage", {}),
+        }
+    except Exception as e:
+        log(f"  ! DeepSeek analysis failed: {e}")
+        deepseek_data = {"analyzed": False, "error": str(e)}
+
+    state.mark_complete("deepseek_analysis", deepseek_data)
+    state.set("deepseek_data", deepseek_data)
+    log(f"  ✓ DeepSeek analysis complete")
+    return deepseek_data
+
+
+def stage_build_data_model(site_info: dict, botsee_results: dict,
+                            insights: dict, deepseek_data: dict = None) -> dict:
+    """Merge everything into the final dashboard data model."""
+    competitors_payload = botsee_results.get("competitors", {})
+
+    # BotSee returns per-customer-type data under by_customer_type
+    by_ct = competitors_payload.get("by_customer_type", [])
+    overall_summary = competitors_payload.get("overall_summary", {})
+
+    customer_types = []
+    for ct in by_ct:
+        transformed = transform_competitors(ct.get("competitors", []))
+        # Build provider order summary: maps provider name → rank position (0 = first-listed)
+        providers_seen = []
+        for c in ct.get("competitors", []):
+            for p in c.get("providers", []):
+                if p not in providers_seen:
+                    providers_seen.append(p)
+        provider_order_summary = {p: i for i, p in enumerate(providers_seen)}
+        customer_types.append({
+            "name": ct.get("customer_type_name", "Unknown"),
+            "uuid": ct.get("customer_type_uuid"),
+            "competitors": transformed,
+            "total_responses": ct.get("total_responses", 0),
+            "provider_order_summary": provider_order_summary,
+        })
+
+    # Detect whether both CT slots have identical competitor appearance rates.
+    # If so, the BotSee analysis returned the same aggregated data for both,
+    # and we flag it so the dashboard can show a data-limitation note.
+    if len(customer_types) >= 2:
+        ct0_appearances = sorted(
+            (c["name"], c["appearance"]) for c in customer_types[0]["competitors"]
+        )
+        ct1_appearances = sorted(
+            (c["name"], c["appearance"]) for c in customer_types[1]["competitors"]
+        )
+        identical_appearances = ct0_appearances == ct1_appearances
+    else:
+        identical_appearances = True
+
+    for i, ct_data in enumerate(customer_types):
+        ct_data["has_distinct_competitor_data"] = not identical_appearances
+        if identical_appearances and i == 1:
+            ct_data["data_note"] = (
+                "Share of Voice percentages reflect the same aggregated BotSee analysis "
+                "for this site. Both customer type tabs display identical competitor rankings "
+                "because BotSee did not return per-segment appearance data for this analysis. "
+                "The provider ordering and source URLs differ per segment."
+            )
+        else:
+            ct_data["data_note"] = None
+
+    # Find own appearance % (highest across customer types)
+    own_appearance_pct = 0
+    own_avg_rank = None
+    for ct in by_ct:
+        for c in ct.get("competitors", []):
+            if c.get("is_own"):
+                own_appearance_pct = max(own_appearance_pct, c.get("appearance_percentage", 0))
+                if own_avg_rank is None or (c.get("avg_rank") and c["avg_rank"] < own_avg_rank):
+                    own_avg_rank = c.get("avg_rank")
+
+    score = compute_score(own_appearance_pct, own_avg_rank)
+    own_mentioned = overall_summary.get("own_company_mentioned", own_appearance_pct > 0)
+
+    # Score status
+    if score == 0:
+        score_status = "Zero AI Visibility"
+        own_note = f"Site NOT mentioned in AI responses"
+    elif score < 25:
+        score_status = "Very Low AI Visibility"
+        own_note = f"Site mentioned in {own_appearance_pct}% of responses"
+    elif score < 50:
+        score_status = "Low AI Visibility"
+        own_note = f"Site mentioned in {own_appearance_pct}% of responses"
+    elif score < 75:
+        score_status = "Moderate AI Visibility"
+        own_note = f"Site mentioned in {own_appearance_pct}% of responses"
+    else:
+        score_status = "Strong AI Visibility"
+        own_note = f"Site mentioned in {own_appearance_pct}% of responses"
+
+    # Top 2 competitors for hero comparison
+    all_competitors_sorted = sorted(
+        (c for ct in by_ct for c in ct.get("competitors", []) if not c.get("is_own")),
+        key=lambda c: c.get("appearance_percentage", 0),
+        reverse=True,
+    )
+    # Dedupe by name
+    seen = set()
+    top_competitors = []
+    for c in all_competitors_sorted:
+        if c.get("name") not in seen:
+            seen.add(c.get("name"))
+            top_competitors.append(c)
+
+    hero_comparison = [
+        {
+            "value": f"{own_appearance_pct}%",
+            "label": f"{site_info['name']} Visibility",
+            "trend": "down" if own_appearance_pct < 25 else ("up" if own_appearance_pct > 50 else ""),
+        }
+    ]
+    if len(top_competitors) >= 1:
+        hero_comparison.append({
+            "value": f"{top_competitors[0].get('appearance_percentage', 0)}%",
+            "label": f"{top_competitors[0].get('name')} (Leader)",
+            "trend": "",
+        })
+    if len(top_competitors) >= 2:
+        hero_comparison.append({
+            "value": f"{top_competitors[1].get('appearance_percentage', 0)}%",
+            "label": f"{top_competitors[1].get('name')} (#2)",
+            "trend": "",
+        })
+
+    total_responses = overall_summary.get("total_responses_analyzed", 0)
+    # BotSee's overall total often only reports one customer type's count.
+    # If the sum of per-CT responses differs, use the sum (it's accurate).
+    sum_per_ct = sum(ct.get("total_responses", 0) for ct in by_ct)
+    if sum_per_ct > total_responses:
+        total_responses = sum_per_ct
+
+    data = {
+        "site": site_info,
+        "summary": {
+            "score": score,
+            "score_status": score_status,
+            "total_responses": total_responses,
+            "responses_per_type": total_responses // max(len(by_ct), 1),
+            "unique_competitors": overall_summary.get("total_unique_competitors", 0),
+            "own_mentioned": own_mentioned,
+            "own_appearance_pct": own_appearance_pct,
+            "own_appearance_note": own_note,
+            "hero_comparison": hero_comparison,
+        },
+        "customer_types": customer_types,
+        "keywords": transform_keywords(botsee_results.get("keywords", {})),
+        "sources": transform_sources(botsee_results.get("sources", {})),
+        "keyword_opportunities": transform_keyword_opportunities(botsee_results.get("keyword_opportunities", {})),
+        "source_opportunities": transform_source_opportunities(botsee_results.get("source_opportunities", {})),
+        "provider_coverage": compute_provider_coverage(customer_types, None),
+        "insights": insights,
+    }
+
+    return data
+
+
+# ---------------- Main CLI ----------------
+
+def run_migrate_existing(args):
+    """Phase 1: migrate an existing BotSee analysis to the new template."""
+    load_dotenv(REPO_ROOT / ".env")
+
+    # Derive site info
+    site_url = args.url
+    if not site_url.startswith("http"):
+        site_url = f"https://{site_url}"
+
+    parsed = urlparse(site_url)
+    domain = parsed.netloc or parsed.path.strip("/")
+    slug = args.slug or slug_from_url(site_url)
+    site_name = args.name or title_from_domain(site_url)
+
+    log(f"=== AI Visibility Audit: {site_name} ({site_url}) ===")
+    log(f"Slug: {slug}")
+    log(f"Analysis ID: {args.analysis_id}")
+
+    # Init state
+    state = StateManager(slug, str(DEFAULT_DASHBOARDS_DIR))
+    if args.fresh:
+        state.reset()
+        log("State reset (--fresh)")
+
+    # Seed state with known IDs
+    state.set("site_uuid", args.site_uuid)
+    state.set("analysis_id", args.analysis_id)
+    state.set("site_url", site_url)
+    state.set("site_slug", slug)
+    state.set("site_name", site_name)
+
+    # Clients
+    botsee = BotSeeClient()
+
+    try:
+        generator = InsightsGenerator()
+    except RuntimeError as e:
+        log(f"ERROR: {e}")
+        log("Add OPENROUTER_API_KEY to your .env file and try again.")
+        sys.exit(1)
+
+    # Stage 1: Fetch BotSee results
+    results = stage_fetch_botsee_results(botsee, args.analysis_id, state)
+
+    # Stage 2: Scrape homepage
+    homepage_text = stage_scrape_homepage(generator, site_url, state)
+
+    # Preview data summary for insights generation
+    competitors_payload = results.get("competitors", {})
+    by_ct = competitors_payload.get("by_customer_type", [])
+    overall = competitors_payload.get("overall_summary", {})
+
+    # Build flat top competitors list for insights context
+    all_comp_map = {}
+    for ct in by_ct:
+        for c in ct.get("competitors", []):
+            name = c.get("name")
+            if name not in all_comp_map or c.get("appearance_percentage", 0) > all_comp_map[name].get("appearance_percentage", 0):
+                all_comp_map[name] = c
+    top_competitors = sorted(all_comp_map.values(),
+                              key=lambda c: c.get("appearance_percentage", 0),
+                              reverse=True)[:10]
+
+    own_pct = 0
+    own_mentioned = overall.get("own_company_mentioned", False)
+    for c in top_competitors:
+        if c.get("is_own"):
+            own_pct = max(own_pct, c.get("appearance_percentage", 0))
+
+    customer_types_context = [
+        {"name": ct.get("customer_type_name"), "total_responses": ct.get("total_responses", 0)}
+        for ct in by_ct
+    ]
+
+    keywords_raw = results.get("keywords", {})
+    keywords_items = keywords_raw.get("keywords") if isinstance(keywords_raw, dict) else keywords_raw
+    if keywords_items is None and isinstance(keywords_raw, dict):
+        keywords_items = keywords_raw.get("items", [])
+    keywords_items = keywords_items or []
+
+    sources_raw = results.get("sources", {})
+    sources_items = sources_raw.get("sources") if isinstance(sources_raw, dict) else sources_raw
+    if sources_items is None and isinstance(sources_raw, dict):
+        sources_items = sources_raw.get("items", [])
+    sources_items = sources_items or []
+
+    total_responses = overall.get("total_responses_analyzed", 0)
+    if not total_responses:
+        total_responses = sum(ct.get("total_responses", 0) for ct in by_ct)
+
+    insight_context = {
+        "site_name": site_name,
+        "site_url": site_url,
+        "homepage_text": homepage_text,
+        "total_responses": total_responses,
+        "unique_competitors": overall.get("total_unique_competitors", 0),
+        "own_mentioned": own_mentioned,
+        "own_appearance_pct": own_pct,
+        "top_competitors": top_competitors,
+        "top_keywords": keywords_items,
+        "top_sources": sources_items,
+        "customer_types": customer_types_context,
+    }
+
+    # Stage 3: Generate insights
+    insights = stage_generate_insights(generator, insight_context, state)
+
+    # Stage 4: Build final data model
+    log("Building final data model...")
+    site_info = {
+        "name": site_name,
+        "url": site_url,
+        "domain": domain,
+        "slug": slug,
+        "analysis_id": args.analysis_id,
+        "site_uuid": args.site_uuid,
+        "generated_at": datetime.utcnow().strftime("%B %d, %Y"),
+        "font_base_url": "https://butterflyio.github.io/promptraise",
+    }
+    data = stage_build_data_model(site_info, results, insights)
+
+    # Persist data.json for inspection
+    output_dir = DEFAULT_DASHBOARDS_DIR / slug
+    output_dir.mkdir(parents=True, exist_ok=True)
+    data_path = output_dir / "data.json"
+    data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    log(f"  ✓ data.json written to {data_path}")
+
+    # Stage 5: Render dashboard
+    log("Rendering dashboard...")
+    renderer = DashboardRenderer(str(TEMPLATE_PATH))
+    output_html = output_dir / "index.html"
+    renderer.render_to_file(data, str(output_html))
+    log(f"  ✓ index.html written to {output_html}")
+
+    state.mark_complete("render_dashboard", {"output_path": str(output_html)})
+
+    # Done
+    log("")
+    log("=" * 60)
+    log("✓ AUDIT COMPLETE")
+    log("=" * 60)
+    log(f"")
+    log(f"Dashboard: {output_html}")
+    log(f"")
+    log(f"To preview:")
+    log(f"  cd dashboards/{slug}")
+    log(f"  python3 -m http.server 9000")
+    log(f"  open http://localhost:9000")
+    log("")
+
+
+def run_full_audit(args):
+    """Phase 2: full end-to-end audit with site creation + DeepSeek."""
+    load_dotenv(REPO_ROOT / ".env")
+
+    site_url = args.url
+    if not site_url.startswith("http"):
+        site_url = f"https://{site_url}"
+
+    parsed = urlparse(site_url)
+    domain = parsed.netloc or parsed.path.strip("/")
+    slug = args.slug or slug_from_url(site_url)
+    site_name = args.name or title_from_domain(site_url)
+
+    log(f"=== AI Visibility Audit (Full): {site_name} ({site_url}) ===")
+    log(f"Slug: {slug}")
+
+    # Init state
+    state = StateManager(slug, str(DEFAULT_DASHBOARDS_DIR))
+    if args.fresh:
+        state.reset()
+        log("State reset (--fresh)")
+
+    state.set("site_url", site_url)
+    state.set("site_slug", slug)
+    state.set("site_name", site_name)
+
+    # Clients
+    botsee = BotSeeClient()
+
+    try:
+        generator = InsightsGenerator()
+        ds_client = DeepSeekClient()
+    except RuntimeError as e:
+        log(f"ERROR: {e}")
+        log("Add OPENROUTER_API_KEY to your .env file and try again.")
+        sys.exit(1)
+
+    # Stage 1: Create site in BotSee
+    site_result = stage_create_site(botsee, domain, state)
+    site_uuid = (
+        site_result.get("uuid")
+        or site_result.get("site_uuid")
+        or site_result.get("id")
+    )
+    if not site_uuid:
+        raise BotSeeError("Could not determine site_uuid from create_site response")
+    state.set("site_uuid", site_uuid)
+    log(f"  Site UUID: {site_uuid}")
+
+    # Stage 2: Generate customer types
+    type_uuids = stage_generate_types(botsee, site_uuid, state)
+
+    # Stage 3: Generate personas
+    persona_uuids = stage_generate_personas(botsee, type_uuids, state)
+
+    # Stage 4: Generate questions
+    stage_generate_questions(botsee, persona_uuids, state)
+
+    # Stage 5: Run analysis
+    analysis_id = stage_run_analysis(botsee, site_uuid, state)
+    state.set("analysis_id", analysis_id)
+
+    # Stage 6: Fetch BotSee results
+    results = stage_fetch_botsee_results(botsee, analysis_id, state)
+
+    # Stage 6b: Extract keywords from raw responses if BotSee returned empty
+    extracted = stage_extract_keywords_from_responses(results, generator, state)
+    if extracted and not results.get("keywords"):
+        results["keywords"] = extracted
+
+    # Stage 7: DeepSeek analysis
+    competitors_payload = results.get("competitors", {})
+    by_ct = competitors_payload.get("by_customer_type", [])
+    all_comp_map = {}
+    for ct in by_ct:
+        for c in ct.get("competitors", []):
+            name = c.get("name")
+            if name not in all_comp_map:
+                all_comp_map[name] = c
+    top_competitors = sorted(all_comp_map.values(),
+                              key=lambda c: c.get("appearance_percentage", 0),
+                              reverse=True)[:10]
+
+    deepseek_data = stage_deepseek_analysis(
+        ds_client, site_name, site_url, top_competitors, state
+    )
+
+    # Stage 8: Scrape homepage
+    homepage_text = stage_scrape_homepage(generator, site_url, state)
+
+    # Stage 9: Build insights context
+    overall = competitors_payload.get("overall_summary", {})
+    by_ct = competitors_payload.get("by_customer_type", [])
+
+    own_pct = 0
+    own_mentioned = overall.get("own_company_mentioned", False)
+    for c in top_competitors:
+        if c.get("is_own"):
+            own_pct = max(own_pct, c.get("appearance_percentage", 0))
+
+    customer_types_context = [
+        {"name": ct.get("customer_type_name"), "total_responses": ct.get("total_responses", 0)}
+        for ct in by_ct
+    ]
+
+    keywords_raw = results.get("keywords", {})
+    keywords_items = keywords_raw.get("keywords") if isinstance(keywords_raw, dict) else keywords_raw
+    if keywords_items is None and isinstance(keywords_raw, dict):
+        keywords_items = keywords_raw.get("items", [])
+    keywords_items = keywords_items or []
+
+    sources_raw = results.get("sources", {})
+    sources_items = sources_raw.get("sources") if isinstance(sources_raw, dict) else sources_raw
+    if sources_items is None and isinstance(sources_raw, dict):
+        sources_items = sources_raw.get("items", [])
+    sources_items = sources_items or []
+
+    total_responses = overall.get("total_responses_analyzed", 0)
+    if not total_responses:
+        total_responses = sum(ct.get("total_responses", 0) for ct in by_ct)
+
+    insight_context = {
+        "site_name": site_name,
+        "site_url": site_url,
+        "homepage_text": homepage_text,
+        "total_responses": total_responses,
+        "unique_competitors": overall.get("total_unique_competitors", 0),
+        "own_mentioned": own_mentioned,
+        "own_appearance_pct": own_pct,
+        "top_competitors": top_competitors,
+        "top_keywords": keywords_items,
+        "top_sources": sources_items,
+        "customer_types": customer_types_context,
+    }
+
+    # Stage 10: Generate insights
+    insights = stage_generate_insights(generator, insight_context, state)
+
+    # Stage 11: Build final data model
+    log("Building final data model...")
+    site_info = {
+        "name": site_name,
+        "url": site_url,
+        "domain": domain,
+        "slug": slug,
+        "analysis_id": analysis_id,
+        "site_uuid": site_uuid,
+        "generated_at": datetime.utcnow().strftime("%B %d, %Y"),
+        "font_base_url": "https://butterflyio.github.io/promptraise",
+    }
+    data = stage_build_data_model(site_info, results, insights, deepseek_data)
+
+    # Persist data.json
+    output_dir = DEFAULT_DASHBOARDS_DIR / slug
+    output_dir.mkdir(parents=True, exist_ok=True)
+    data_path = output_dir / "data.json"
+    data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    log(f"  ✓ data.json written to {data_path}")
+
+    # Stage 12: Render dashboard
+    log("Rendering dashboard...")
+    renderer = DashboardRenderer(str(TEMPLATE_PATH))
+    output_html = output_dir / "index.html"
+    renderer.render_to_file(data, str(output_html))
+    log(f"  ✓ index.html written to {output_html}")
+
+    state.mark_complete("render_dashboard", {"output_path": str(output_html)})
+
+    log("")
+    log("=" * 60)
+    log("✓ FULL AUDIT COMPLETE")
+    log("=" * 60)
+    log(f"")
+    log(f"Dashboard: {output_html}")
+    log(f"Site UUID: {site_uuid}")
+    log(f"Analysis ID: {analysis_id}")
+    log("")
+    log(f"To preview:")
+    log(f"  cd {output_dir}")
+    log(f"  python3 -m http.server 9000")
+    log(f"  open http://localhost:9000")
+    log("")
+
+
+def run_post_botsee(args):
+    """Post-BotSee mode: OpenRouter batch queries — no BotSee credits needed."""
+    load_dotenv(REPO_ROOT / ".env")
+
+    site_url = args.url
+    if not site_url.startswith("http"):
+        site_url = f"https://{site_url}"
+
+    parsed = urlparse(site_url)
+    domain = parsed.netloc or parsed.path.strip("/")
+    slug = args.slug or slug_from_url(site_url)
+    site_name = args.name or title_from_domain(site_url)
+
+    log(f"=== AI Visibility Audit (Post-BotSee): {site_name} ({site_url}) ===")
+    log(f"Slug: {slug}")
+
+    state = StateManager(slug, str(DEFAULT_DASHBOARDS_DIR))
+    if args.fresh:
+        state.reset()
+        log("State reset (--fresh)")
+
+    state.set("site_url", site_url)
+    state.set("site_slug", slug)
+    state.set("site_name", site_name)
+
+    try:
+        or_client = OpenRouterBatchClient()
+        generator = InsightsGenerator()
+    except RuntimeError as e:
+        log(f"ERROR: {e}")
+        sys.exit(1)
+
+    # Stage 1: Scrape homepage for context
+    homepage_text = stage_scrape_homepage(generator, site_url, state)
+
+    # Stage 2: Generate CTs/personas/questions via LLM
+    ct_data = stage_generate_ct_personas_openrouter(or_client, site_name, site_url,
+                                                      homepage_text, state)
+    if args.dry_run:
+        print_dry_run(ct_data, site_name, site_url)
+        sys.exit(0)
+
+    # Stage 2b: Generate dynamic discovery questions from homepage context
+    discovery_questions = stage_generate_discovery_questions_openrouter(
+        or_client, site_name, site_url, homepage_text, state
+    )
+
+    # Stage 2c: Dynamic competitor discovery (3-layer validation)
+    dynamic_competitors, competitor_aliases_map = stage_discover_competitors_dynamic(
+        or_client, site_name, site_url, homepage_text, state
+    )
+    
+    # If < 3 competitors validated, add fallback discovery questions
+    if len(dynamic_competitors) < 3:
+        log(f"  ⚠ Only {len(dynamic_competitors)} competitors discovered, adding fallback questions...")
+        fallback_questions = [
+            f"Which companies would you consider as main competitors to {site_name}?",
+            f"How does {site_name} compare to other options in this market?",
+            f"What are the top alternatives to {site_name}?",
+        ]
+        discovery_questions.extend(fallback_questions)
+        state.set("discovery_questions", discovery_questions)
+
+    # Stage 3: Discovery batch — 5 questions × 4 models
+    discovered_competitors_list = stage_discovery_batch(
+        or_client, site_name, state, discovery_questions=discovery_questions
+    )
+    log(f"  Discovered {len(discovered_competitors_list)} competitors from discovery batch")
+    
+    # Convert list to dict format for merging: {"name": {"name": "...", ...}, ...}
+    discovered_competitors_dict = {}
+    for comp in discovered_competitors_list:
+        if isinstance(comp, dict):
+            name = comp.get("name", str(comp)).lower()
+            discovered_competitors_dict[name] = comp
+        else:
+            name = str(comp).lower()
+            discovered_competitors_dict[name] = {"name": name}
+    
+    # Merge dynamic + discovered competitors (dynamic takes priority for aliases)
+    merged_competitors_dict = {**discovered_competitors_dict, **dynamic_competitors}
+    log(f"  Final competitor set: {len(merged_competitors_dict)} unique competitors")
+    
+    # Convert back to list format for full_batch_query and aggregate_competitors
+    merged_competitors_list = list(merged_competitors_dict.values())
+
+    # Stage 4: Full batch query — 20 questions × 4 models
+    batch_result = stage_full_batch_query(or_client, site_name, ct_data, state,
+                                          competitor_seed=merged_competitors_list,
+                                          competitor_aliases_map=competitor_aliases_map)
+
+    # Stage 5: Aggregate results (competitors + keywords + sources + opportunities)
+    aggregated = stage_aggregate_openrouter_results(
+        or_client, batch_result, site_name, merged_competitors_list, state,
+        competitor_aliases_map=competitor_aliases_map
+    )
+
+
+    # Stage 6: Generate insights (DeepSeek analysis removed)
+    competitors_payload = aggregated.get("competitors", {})
+    by_ct = competitors_payload.get("by_customer_type", [])
+    overall = competitors_payload.get("overall_summary", {})
+
+    all_comp_map = {}
+    for ct in by_ct:
+        for c in ct.get("competitors", []):
+            name = c.get("name")
+            if name not in all_comp_map:
+                all_comp_map[name] = c
+    top_competitors_for_insights = sorted(
+        all_comp_map.values(),
+        key=lambda c: c.get("appearance_percentage", 0),
+        reverse=True,
+    )[:10]
+
+    own_pct = 0
+    own_mentioned = overall.get("own_company_mentioned", False)
+    for c in top_competitors_for_insights:
+        if c.get("is_own"):
+            own_pct = max(own_pct, c.get("appearance_percentage", 0))
+
+    customer_types_context = [
+        {"name": ct.get("customer_type_name"), "total_responses": ct.get("total_responses", 0)}
+        for ct in by_ct
+    ]
+
+    total_responses = overall.get("total_responses_analyzed", 0)
+    if not total_responses:
+        total_responses = sum(ct.get("total_responses", 0) for ct in by_ct)
+
+    keywords_items = aggregated.get("keywords", [])
+    sources_items = aggregated.get("sources", [])
+
+    insight_context = {
+        "site_name": site_name,
+        "site_url": site_url,
+        "homepage_text": homepage_text,
+        "total_responses": total_responses,
+        "unique_competitors": overall.get("total_unique_competitors", 0),
+        "own_mentioned": own_mentioned,
+        "own_appearance_pct": own_pct,
+        "top_competitors": top_competitors_for_insights,
+        "top_keywords": keywords_items,
+        "top_sources": sources_items,
+        "customer_types": customer_types_context,
+    }
+
+    insights = stage_generate_insights(generator, insight_context, state)
+
+    # Stage 8: Build final data model
+    log("Building final data model...")
+    site_info = {
+        "name": site_name,
+        "url": site_url,
+        "domain": domain,
+        "slug": slug,
+        "analysis_id": f"openrouter-{slug}",
+        "site_uuid": "openrouter-batch",
+        "generated_at": datetime.utcnow().strftime("%B %d, %Y"),
+        "font_base_url": "https://butterflyio.github.io/promptraise",
+    }
+
+    botsee_results = {
+        "competitors": aggregated.get("competitors", {}),
+        "keywords": aggregated.get("keywords", []),
+        "sources": aggregated.get("sources", []),
+        "keyword_opportunities": aggregated.get("keyword_opportunities", []),
+        "source_opportunities": aggregated.get("source_opportunities", []),
+    }
+
+    data = stage_build_data_model(site_info, botsee_results, insights, None)
+
+    output_dir = DEFAULT_DASHBOARDS_DIR / slug
+    output_dir.mkdir(parents=True, exist_ok=True)
+    data_path = output_dir / "data.json"
+    data_path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
+    log(f"  ✓ data.json written to {data_path}")
+
+    # Stage 9: Render dashboard
+    log("Rendering dashboard...")
+    renderer = DashboardRenderer(str(TEMPLATE_PATH))
+    output_html = output_dir / "index.html"
+    renderer.render_to_file(data, str(output_html))
+    log(f"  ✓ index.html written to {output_html}")
+
+    state.mark_complete("render_dashboard", {"output_path": str(output_html)})
+
+    log("")
+    log("=" * 60)
+    log("✓ POST-BOTSEE AUDIT COMPLETE")
+    log("=" * 60)
+    log(f"")
+    log(f"Dashboard: {output_html}")
+    log(f"")
+
+
+def stage_generate_ct_personas_openrouter(client: OpenRouterBatchClient,
+                                          site_name: str, site_url: str,
+                                          homepage_text: str,
+                                          state: StateManager) -> dict:
+    """Generate customer types, personas, and questions via LLM."""
+    if state.is_complete("generate_ct_personas"):
+        log("  ✓ Skipping generate_ct_personas (already complete)")
+        return state.get("ct_persona_data")
+
+    log("Generating customer types, personas, and questions via OpenRouter...")
+    result = client.generate_ct_personas_questions(site_name, site_url, homepage_text)
+
+    flat_questions = []
+    for ct in result.get("customer_types", []):
+        for persona in ct.get("personas", []):
+            for q in persona.get("questions", []):
+                if not q.endswith(" [NEEDS_REWRITE]"):
+                    flat_questions.append({
+                        "question": q,
+                        "ct_name": ct.get("name", ""),
+                        "persona_name": persona.get("name", ""),
+                    })
+
+    log(f"  ✓ Generated {len(result.get('customer_types', []))} CTs, "
+        f"{len(flat_questions)} questions")
+    state.mark_complete("generate_ct_personas", result)
+    state.set("ct_persona_data", result)
+    return result
+
+
+def stage_generate_discovery_questions_openrouter(client: OpenRouterBatchClient,
+                                                   site_name: str, site_url: str,
+                                                   homepage_text: str,
+                                                   state: StateManager) -> list:
+    """Generate competitor discovery questions dynamically from homepage context."""
+    if state.is_complete("generate_discovery_questions"):
+        log("  ✓ Skipping generate_discovery_questions (already complete)")
+        return state.get("discovery_questions", [])
+
+    log("Generating competitor discovery questions from website context...")
+    questions = client.generate_discovery_questions(site_name, site_url, homepage_text)
+    log(f"  ✓ Generated {len(questions)} discovery questions")
+    state.mark_complete("generate_discovery_questions", questions)
+    state.set("discovery_questions", questions)
+    return questions
+
+
+def stage_discover_competitors_dynamic(client: OpenRouterBatchClient,
+                                       site_name: str, site_url: str,
+                                       homepage_text: str,
+                                       state: StateManager) -> tuple:
+    """
+    Dynamic competitor discovery using 3-layer validation.
+    Layer 1: Web scrape
+    Layer 2: LLM credibility scoring
+    Layer 3: Post-audit response validation (done later)
+    
+    Returns: (competitors_dict, competitor_aliases_map)
+    """
+    if state.is_complete("discover_competitors_dynamic"):
+        log("  ✓ Skipping dynamic competitor discovery (already complete)")
+        competitors = state.get("discovered_competitors_dynamic", {})
+        aliases = state.get("competitor_aliases_map", {})
+        return competitors, aliases
+
+    log("Running dynamic competitor discovery (3-layer validation)...")
+    
+    try:
+        log("  Layer 1: Identifying Tier-1 competitors from website context...")
+        competitors, aliases = run_competitor_discovery(
+            homepage_url=site_url,
+            homepage_text=homepage_text,
+            client_name=site_name,
+            openrouter_client=client,
+            min_competitors=5,
+            max_competitors=10
+        )
+        
+        log(f"  ✓ Discovered {len(competitors)} Tier-1 competitors")
+        for comp_name, comp_data in competitors.items():
+            score = comp_data.get("credibility_score", 0)
+            log(f"    - {comp_name} (credibility: {score}/5)")
+        
+        state.mark_complete("discover_competitors_dynamic", competitors)
+        state.set("discovered_competitors_dynamic", competitors)
+        state.set("competitor_aliases_map", aliases)
+        
+        return competitors, aliases
+    except KeyboardInterrupt:
+        raise
+    except Exception as e:
+        log(f"  ⚠ Dynamic competitor discovery failed: {e}")
+        log(f"  ⚠ Will use simple discovery + audit response fallback")
+        import traceback
+        traceback.print_exc()
+        return {}, {}
+
+
+def stage_discovery_batch(client: OpenRouterBatchClient, brand_name: str,
+                          state: StateManager,
+                          discovery_questions: list = None) -> list:
+    """Run 5 discovery questions × 4 models to bootstrap competitor list."""
+    if state.is_complete("discovery_batch"):
+        log("  ✓ Skipping discovery_batch (already complete)")
+        return state.get("discovered_competitors", [])
+
+    log("Running discovery batch (5 questions × 4 models)...")
+    responses = client.discovery_batch_query(brand_name, models=MODELS,
+                                              discovery_questions=discovery_questions)
+    competitors = client.extract_competitors_from_discovery(responses, brand_name,
+                                                         min_mentions=1, min_question_types=1)
+    log(f"  ✓ Discovered {len(competitors)} competitors")
+
+    state.mark_complete("discovery_batch", competitors)
+    state.set("discovered_competitors", competitors)
+    return competitors
+
+
+def stage_full_batch_query(client: OpenRouterBatchClient, brand_name: str,
+                          ct_data: dict, state: StateManager,
+                          competitor_seed: list = None,
+                          competitor_aliases_map: dict = None) -> dict:
+    """Run 20 audit questions × 4 models (80 calls total)."""
+    if state.is_complete("full_batch"):
+        log("  ✓ Skipping full_batch (already complete)")
+        return state.get("batch_result")
+
+    log("Running full batch query (20 questions × 4 models = 80 calls)...")
+    ct_list = ct_data.get("customer_types", [])
+    comp_seed = competitor_seed or []
+    result = client.full_batch_query(brand_name, ct_list, models=MODELS,
+                                       use_structured_extraction=False, competitor_seed=comp_seed,
+       competitor_aliases_map=competitor_aliases_map)
+    log(f"  ✓ Got {len(result.get('responses', []))} responses")
+
+    state.mark_complete("full_batch", result)
+    state.set("batch_result", result)
+    return result
+
+
+def stage_aggregate_openrouter_results(client: OpenRouterBatchClient,
+                                        batch_result: dict, brand_name: str,
+                                        competitor_list: list,
+                                        state: StateManager,
+                                        competitor_aliases_map: dict = None) -> dict:
+    """Aggregate batch results into competitors, keywords, sources, opportunities."""
+    if state.is_complete("aggregate_openrouter"):
+        log("  ✓ Skipping aggregate_openrouter (already complete)")
+        return state.get("aggregated_data")
+
+    log("Aggregating results...")
+
+    competitors_data = client.aggregate_competitors(
+        batch_result, competitor_list, brand_name,
+        include_all_discovered=True,
+        competitor_aliases_map=competitor_aliases_map
+    )
+    keywords = client.extract_keywords(batch_result, brand_name)
+    sources = client.extract_sources(batch_result)
+    kw_opps = client.find_keyword_opportunities(batch_result, brand_name)
+    src_opps = client.find_source_opportunities(batch_result, brand_name)
+
+    batch_responses = batch_result.get("responses", [])
+    top_competitors = []
+    if batch_responses:
+        all_comp_map = {}
+        for resp in batch_responses:
+            for comp in resp.get("competitors_mentioned", []):
+                if comp not in all_comp_map:
+                    all_comp_map[comp] = 0
+                all_comp_map[comp] += 1
+        sorted_comps = sorted(all_comp_map.items(), key=lambda x: x[1], reverse=True)
+        seen = set()
+        for name, count in sorted_comps:
+            if name in seen:
+                continue
+            seen.add(name)
+            top_competitors.append({"name": name, "appearance_percentage": count * 5})
+
+    aggregated = {
+        "competitors": competitors_data,
+        "keywords": keywords,
+        "sources": sources,
+        "keyword_opportunities": kw_opps,
+        "source_opportunities": src_opps,
+        "top_competitors": top_competitors[:10],
+    }
+
+    state.mark_complete("aggregate_openrouter", aggregated)
+    state.set("aggregated_data", aggregated)
+    log("  ✓ Aggregation complete")
+    return aggregated
+
+
+def print_dry_run(ct_data: dict, site_name: str, site_url: str):
+    """Print dry-run summary for --post-botsee --dry-run."""
+    print(f"\n=== {site_name} — Dry Run ===")
+    print(f"Site: {site_url}")
+    print(f"\n[Customer Types + Personas]")
+
+    for ct in ct_data.get("customer_types", []):
+        print(f"  CT: {ct.get('name', 'Unknown')}")
+        for persona in ct.get("personas", []):
+            print(f"    Persona: {persona.get('name', 'Unknown')}")
+            for q in persona.get("questions", []):
+                if q.endswith(" [NEEDS_REWRITE]"):
+                    print(f"      [REJECTED] {q}")
+                else:
+                    print(f"      - {q}")
+        print()
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="AI Visibility Audit Tool",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+
+  # Post-BotSee audit (OpenRouter, no BotSee credits needed)
+  python3 audit.py --post-botsee --url https://juno.cash --name "Juno Cash"
+  python3 audit.py --post-botsee --url https://juno.cash --dry-run --name "Juno Cash"
+
+  # BotSee fallback (existing analyses or when OpenRouter unavailable)
+  python3 audit.py --full-audit --url https://example.com --name "Example"
+  python3 audit.py --migrate-existing \\
+      --url https://staynex.vip \\
+      --site-uuid c73a64b1-8118-45e7-b170-e43e7056c793 \\
+      --analysis-id 5b08288f-f375-4113-b204-863556a14ab8 \\
+      --slug staynex-v2
+""",
+    )
+
+    parser.add_argument("--post-botsee", action="store_true",
+                        help="Post-BotSee mode: OpenRouter batch queries (no BotSee credits needed).")
+    parser.add_argument("--dry-run", action="store_true",
+                        help="In --post-botsee mode: verify questions before running audit.")
+    parser.add_argument("--migrate-existing", action="store_true",
+                        help="Phase 1 mode: use an existing BotSee analysis.")
+    parser.add_argument("--full-audit", action="store_true",
+                        help="Phase 2 mode: create site + run analysis + DeepSeek (BotSee).")
+    parser.add_argument("--url", required=True, help="Site URL (e.g. https://staynex.vip)")
+    parser.add_argument("--site-uuid", help="BotSee site UUID (required for --migrate-existing)")
+    parser.add_argument("--analysis-id", help="BotSee analysis UUID (required for --migrate-existing)")
+    parser.add_argument("--slug", help="Output directory slug (auto-derived from URL if omitted)")
+    parser.add_argument("--name", help="Display name for the site (auto-derived from URL if omitted)")
+    parser.add_argument("--fresh", action="store_true", help="Ignore prior state and restart")
+
+    args = parser.parse_args()
+
+    if args.post_botsee and args.full_audit:
+        parser.error("Cannot use --post-botsee and --full-audit together. Choose one.")
+    if args.post_botsee and args.migrate_existing:
+        parser.error("Cannot use --post-botsee and --migrate-existing together.")
+    if args.full_audit and args.migrate_existing:
+        parser.error("Cannot use --full-audit and --migrate-existing together.")
+    if args.dry_run and not args.post_botsee:
+        parser.error("--dry-run only valid with --post-botsee.")
+
+    if args.post_botsee:
+        run_post_botsee(args)
+    elif args.migrate_existing:
+        if not args.site_uuid or not args.analysis_id:
+            parser.error("--migrate-existing requires --site-uuid and --analysis-id")
+        run_migrate_existing(args)
+    elif args.full_audit:
+        run_full_audit(args)
+    else:
+        parser.error("Specify --migrate-existing, --full-audit, or --post-botsee.")
+
+
+if __name__ == "__main__":
+    main()

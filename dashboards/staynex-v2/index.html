@@ -1,0 +1,1388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staynex AI Visibility Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Neutral Sans';
+            src: url('fonts/NeutralSansVF.woff2') format('woff2-variations');
+            font-weight: 400 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Neutral Sans';
+            src: url('fonts/NeutralSans-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Neutral Sans';
+            src: url('fonts/NeutralSans-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --primary: #67FF67;
+            --brand-green: #3D6944;
+            --success: #67FF67;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0F0F0F;
+            --bg-card: #242628;
+            --bg-card-hover: #2D2F32;
+            --text-primary: #DEDCD7;
+            --text-secondary: #C9CDD2;
+            --border: #3A3C40;
+            --muted: #C9CDD2;
+        }
+
+        [data-theme="light"] {
+            --bg-dark: #F0EFEB;
+            --bg-card: #F0EFEB;
+            --bg-card-hover: #E4E3DF;
+            --text-primary: #0F0F0F;
+            --text-secondary: #6B6B6B;
+            --border: #D4D3CF;
+            --muted: #C9CDD2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Neutral Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dashboard { max-width: 1600px; margin: 0 auto; padding: 2rem; }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-left h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left p { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem; }
+        .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.6rem 1rem; border-radius: 0.5rem;
+            font-size: 0.85rem; font-weight: 500;
+            cursor: pointer; transition: all 0.2s; border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            color: white;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); }
+
+        .btn-secondary { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--bg-card-hover); }
+
+        .btn-icon { padding: 0.6rem; }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .score-gauge { position: relative; width: 180px; height: 180px; }
+        .score-gauge svg { transform: rotate(-90deg); }
+        .score-gauge-bg { fill: none; stroke: var(--border); stroke-width: 12; }
+        .score-gauge-fill {
+            fill: none;
+            stroke: url(#scoreGradient);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+
+        .score-gauge-text {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .score-gauge-text .score {
+            font-size: 3rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .score-gauge-text .label { font-size: 0.85rem; color: var(--text-secondary); }
+
+        .hero-details { display: flex; flex-direction: column; gap: 1rem; }
+
+        .score-status {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 9999px;
+            color: var(--danger);
+            font-size: 0.9rem; font-weight: 600; width: fit-content;
+        }
+
+        .score-comparison {
+            display: flex; gap: 2rem; padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-item { text-align: center; }
+        .comparison-item .value { font-size: 1.5rem; font-weight: 700; }
+        .comparison-item .value.up { color: var(--success); }
+        .comparison-item .value.down { color: var(--danger); }
+        .comparison-item .label { font-size: 0.75rem; color: var(--text-secondary); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+        .stat-card .label {
+            color: var(--text-secondary); font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .stat-card .value { font-size: 2rem; font-weight: 700; color: var(--text-primary); }
+        .stat-card .value.brand {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .sub { color: var(--text-secondary); font-size: 0.8rem; margin-top: 0.25rem; }
+
+        .type-tabs {
+            display: flex; gap: 1rem; margin-bottom: 2rem;
+        }
+
+        .type-tab {
+            flex: 1;
+            display: flex; align-items: center; justify-content: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2rem;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 1rem; font-weight: 600;
+            transition: all 0.3s;
+            color: var(--text-primary);
+        }
+         .type-tab:hover { border-color: var(--primary); background: var(--bg-card-hover); }
+        .type-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .type-content { display: none; }
+        .type-content.active { display: block; }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; margin-bottom: 2rem; }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .card:hover { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
+
+        .card-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.1rem; font-weight: 600;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 320px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .tag-own { background: rgba(103, 255, 103, 0.2); color: var(--primary); }
+        .tag-competitor { background: rgba(100, 116, 139, 0.2); color: var(--text-secondary); }
+
+        .data-note {
+            margin-top: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .section-title {
+            font-size: 1.25rem; font-weight: 600;
+            color: var(--brand-green);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+
+        .competitor-table { width: 100%; border-collapse: collapse; }
+        .competitor-table th, .competitor-table td {
+            padding: 1rem; text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .competitor-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .competitor-table tr:hover { background: var(--bg-card-hover); }
+
+        .competitor-name { display: flex; align-items: center; gap: 0.75rem; }
+        .competitor-logo {
+            width: 36px; height: 36px;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.85rem;
+            background: var(--bg-dark);
+        }
+
+        .bar { height: 10px; background: var(--bg-dark); border-radius: 5px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 5px; transition: width 0.8s ease; }
+
+        .provider-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .provider-badge {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .provider-badge.gemini { background: #67FF67; color: #0F0F0F; }
+        .provider-badge.claude { background: #3D6944; color: #DEDCD7; }
+        .provider-badge.openai-search, .provider-badge.openai { background: #C9CDD2; color: #0F0F0F; }
+        .provider-badge.deepseek { background: #C9CDD2; color: #0F0F0F; }
+
+        .rank-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .rank-1 { background: #67FF67; color: #0F0F0F; }
+        .rank-2 { background: #C9CDD2; color: #0F0F0F; }
+        .rank-3 { background: #f97316; color: #0F0F0F; }
+        .rank-other { background: var(--bg-card-hover); color: var(--text-secondary); }
+
+        .keywords-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+        .keywords-wrapper { position: relative; }
+        .keywords-nav {
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .kw-btn {
+            background: var(--bg-dark-hover); border: 1px solid var(--border);
+            color: var(--text-primary); width: 28px; height: 28px;
+            border-radius: 6px; cursor: pointer; font-size: 1rem;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .kw-btn:hover { background: var(--border); }
+        .kw-btn:disabled { opacity: 0.3; cursor: default; }
+        .kw-counter { font-size: 0.75rem; color: var(--text-secondary); min-width: 60px; text-align: center; }
+        .keyword-tag {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+         .keyword-tag:hover { border-color: var(--primary); transform: translateX(4px); }
+        .keyword-tag .text {
+            flex: 1;
+            overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+            margin-right: 0.5rem;
+        }
+        .keyword-tag .count {
+             background: var(--primary); color: #0F0F0F;
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.7rem; font-weight: 600;
+            min-width: 24px; text-align: center;
+        }
+
+        .sources-list { max-height: 320px; overflow-y: auto; }
+        .source-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .source-item:hover { background: var(--bg-card-hover); }
+        .source-item:last-child { border-bottom: none; }
+        .source-info { flex: 1; min-width: 0; }
+        .source-name { font-weight: 500; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .source-url { color: var(--text-secondary); font-size: 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .source-mentions {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem; font-weight: 600;
+            min-width: 45px; text-align: center;
+        }
+
+        .opportunity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .opportunity-list { max-height: 300px; overflow-y: auto; }
+        .opportunity-item {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+         .opportunity-item:hover { border-color: var(--primary); transform: translateX(4px); }
+        .opportunity-badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem; font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        .badge-missing { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .badge-low-rank { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+         .badge-link { background: rgba(103, 255, 103, 0.2); color: var(--primary); }
+
+        .competitor-source {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+         .competitor-source:hover { border-color: var(--primary); transform: translateX(4px); }
+
+        .action-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .action-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .action-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
+        .action-card-header {
+            display: flex; align-items: center; gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .action-card-header h3 { font-size: 1rem; }
+        .action-accent {
+            position: absolute; left: 0; top: 0; bottom: 0;
+            width: 4px; border-radius: 2px;
+        }
+         .action-accent.content { background: var(--primary); }
+        .action-accent.links { background: var(--warning); }
+        .action-accent.wins { background: var(--success); }
+
+        .action-card ul { list-style: none; padding: 0; }
+        .action-card ul li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: flex-start; gap: 0.5rem;
+        }
+        .action-card ul li:last-child { border-bottom: none; }
+         .action-card ul li::before { content: "→"; color: var(--primary); font-weight: bold; }
+
+        .position-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .position-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .position-card h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .position-card.strengths h3 { color: var(--success); }
+        .position-card.opportunities h3 { color: var(--warning); }
+        .position-card.gaps h3 { color: var(--danger); }
+
+        .position-list { list-style: none; padding: 0; }
+        .position-list li {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .position-list li:last-child { margin-bottom: 0; }
+
+        .gap-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        .gap-table th, .gap-table td {
+            padding: 1rem; text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .gap-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background: var(--bg-dark);
+        }
+        .gap-table tr:hover { background: var(--bg-card-hover); }
+        .gap-table .term { font-weight: 600; color: var(--danger); }
+        .gap-table .evidence { color: var(--text-secondary); font-size: 0.85rem; }
+
+        .priority-high { color: var(--danger); font-size: 0.75rem; font-weight: 600; }
+        .priority-medium { color: var(--warning); font-size: 0.75rem; font-weight: 600; }
+        .priority-low { color: var(--success); font-size: 0.75rem; font-weight: 600; }
+
+        .segment-card {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+        .segment-card.positive {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        .segment-card .segment-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .segment-card .segment-note { font-size: 0.75rem; color: var(--danger); }
+        .segment-card.positive .segment-note { color: var(--success); }
+
+        .language-box {
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .language-box.site {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .language-box.ai {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .language-box .lang-label {
+            font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .language-box.site .lang-label { color: var(--success); }
+        .language-box.ai .lang-label { color: var(--warning); }
+        .language-box .lang-value { font-weight: 600; margin-bottom: 0.5rem; }
+        .language-box.site .lang-value { color: var(--success); }
+        .language-box.ai .lang-value { color: var(--warning); }
+        .language-box .lang-context { font-size: 0.8rem; color: var(--text-secondary); }
+
+        .provider-chart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .provider-chart { position: relative; height: 220px; }
+        .provider-legend { display: flex; flex-direction: column; gap: 1rem; }
+        .provider-legend-item { display: flex; align-items: center; gap: 0.75rem; }
+        .provider-legend-item .color { width: 16px; height: 16px; border-radius: 4px; }
+        .provider-legend-item .name { flex: 1; font-size: 0.9rem; }
+        .provider-legend-item .value { font-weight: 600; }
+
+        .footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (max-width: 1200px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .action-grid { grid-template-columns: 1fr; }
+            .position-grid { grid-template-columns: 1fr; }
+            .hero-section { grid-template-columns: 1fr; }
+            .provider-chart-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard { padding: 1rem; }
+            .header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+            .grid-2, .grid-3, .opportunity-grid { grid-template-columns: 1fr; }
+            .keywords-grid { grid-template-columns: 1fr; }
+            .type-tabs { flex-direction: column; }
+            .chart-container { height: 250px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard" id="dashboard">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Staynex AI Visibility Report</h1>
+                <p>Site: staynex.vip | Last updated: <span id="lastUpdated"></span></p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="btn btn-primary" onclick="exportPDF()">
+                    <span>📥</span> Export PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Score -->
+        <div class="hero-section">
+            <div class="score-gauge">
+                <svg width="180" height="180" viewBox="0 0 180 180">
+                    <defs>
+                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#67FF67"/>
+                            <stop offset="100%" style="stop-color:#3D6944"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="score-gauge-bg" cx="90" cy="90" r="70"/>
+                    <circle class="score-gauge-fill" id="scoreCircle" cx="90" cy="90" r="70"/>
+                </svg>
+                <div class="score-gauge-text">
+                    <div class="score" id="scoreNumber">0</div>
+                    <div class="label">/ 100</div>
+                </div>
+            </div>
+            <div class="hero-details">
+                <div class="score-status">
+                    <span>⚠️</span>
+                    <span>Very Low AI Visibility</span>
+                </div>
+                <div class="score-comparison" id="heroComparison"></div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Total Responses</div>
+                <div class="value">60</div>
+                <div class="sub">30 per customer type</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Unique Competitors</div>
+                <div class="value">67</div>
+                <div class="sub">Across all segments</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Staynex Appearance</div>
+                <div class="value brand">6.7%</div>
+                <div class="sub">Site mentioned in 6.7% of responses</div>
+            </div>
+        </div>
+
+        <!-- Segment Tabs -->
+        <div class="type-tabs">
+            <button class="type-tab active" onclick="showType('type1')">
+                <span>Crypto-Native Digital Nomads</span>
+            </button>
+            <button class="type-tab" onclick="showType('type2')">
+                <span>Budget-Conscious Family Travelers</span>
+            </button>
+        </div>
+
+        <!-- Customer Type 1 -->
+        <div id="type1" class="type-content active">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice</div>
+                        <span class="tag tag-competitor">Top 10 Competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type1SovChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank</div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type1RankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-title">Top Competitors — Crypto-Native Digital Nomads</div>
+                <div style="overflow-x: auto;">
+                    <table class="competitor-table" style="min-width: 600px;">
+                        <thead>
+                            <tr>
+                                <th>Competitor</th>
+                                <th>Appearance</th>
+                                <th>Avg Rank</th>
+                                <th>Providers</th>
+                            </tr>
+                        </thead>
+                        <tbody id="type1Table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Type 2 -->
+        <div id="type2" class="type-content">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice</div>
+                        <span class="tag tag-competitor">Top 10 Competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type2SovChart"></canvas>
+                    </div>
+                    <div class="data-note" id="type2DataNote" style="display:none;">
+                        Share of Voice percentages reflect the same aggregated BotSee analysis for this site.
+                        The provider ordering and source URLs differ per segment.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank</div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type2RankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-title">Top Competitors — Budget-Conscious Family Travelers</div>
+                <div style="overflow-x: auto;">
+                    <table class="competitor-table" style="min-width: 600px;">
+                        <thead>
+                            <tr>
+                                <th>Competitor</th>
+                                <th>Appearance</th>
+                                <th>Avg Rank</th>
+                                <th>Providers</th>
+                            </tr>
+                        </thead>
+                        <tbody id="type2Table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keywords & Provider Chart -->
+        <div class="grid-3" style="margin-top: 2rem;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Top Keywords by Frequency</div>
+                    <div class="keywords-nav" id="keywordsNav">
+                        <button class="kw-btn" id="kwPrev" onclick="shiftKeywords(-1)">‹</button>
+                        <span class="kw-counter" id="kwCounter"></span>
+                        <button class="kw-btn" id="kwNext" onclick="shiftKeywords(1)">›</button>
+                    </div>
+                </div>
+                <div class="keywords-wrapper">
+                    <div class="keywords-grid" id="keywordsList"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">AI Provider Coverage</div>
+                </div>
+                <div class="provider-chart-container">
+                    <div class="provider-chart">
+                        <canvas id="providerChart"></canvas>
+                    </div>
+                    <div class="provider-legend" id="providerLegend"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        <div class="card" style="margin-top: 2rem;">
+            <div class="card-header">
+                <div class="card-title">Top Sources Referenced</div>
+            </div>
+            <div class="sources-list" id="sourcesList"></div>
+        </div>
+
+        <!-- Opportunities -->
+        <h2 class="section-title">Opportunities</h2>
+        <div class="opportunity-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Keyword Opportunities</div>
+                    <span class="tag tag-competitor">Where Staynex Ranks Poorly</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    Queries where Staynex is missing or ranks poorly
+                </p>
+                <div class="opportunity-list" id="keywordOpportunities"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Source Opportunities</div>
+                    <span class="tag tag-competitor">Link-Building Targets</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    Competitor domains AI cites — pursue backlinks
+                </p>
+                <div id="sourceOpportunities"></div>
+            </div>
+        </div>
+
+        <!-- Terminology Gap -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-title">Terminology Gap Analysis</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Keywords and terms where Staynex is missing from AI responses.
+            </p>
+            <table class="gap-table">
+                <thead>
+                    <tr>
+                        <th>Missing Term</th>
+                        <th>Evidence</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody id="terminologyGapBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Audience Segments + Language Gap -->
+        <div class="grid-2" style="margin-bottom: 2rem;">
+            <div class="card">
+                <div class="card-title">Audience Segments</div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                    AI query analysis — segments addressed vs. opportunity gaps.
+                </p>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--success); font-size: 1rem; margin-bottom: 1rem;">Currently Addressed</h4>
+                    <div id="segmentsAddressed"></div>
+                </div>
+                <div>
+                    <h4 style="color: var(--danger); font-size: 1rem; margin-bottom: 1rem;">Opportunity Gap</h4>
+                    <div class="opportunity-gap-grid" id="segmentsGap"
+                         style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Language Gap: Homepage vs AI Engines</div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                    How the site describes itself vs. how AI engines reference the space.
+                </p>
+                <div id="languageGapContainer"></div>
+            </div>
+        </div>
+
+        <!-- Competitive Position -->
+        <h2 class="section-title">Staynex's Competitive Position</h2>
+        <div class="position-grid">
+            <div class="position-card strengths">
+                <h3>Strengths</h3>
+                <ul class="position-list" id="positionStrengths"></ul>
+            </div>
+            <div class="position-card opportunities">
+                <h3>Opportunities</h3>
+                <ul class="position-list" id="positionOpportunities"></ul>
+            </div>
+            <div class="position-card gaps">
+                <h3>Gaps</h3>
+                <ul class="position-list" id="positionGaps"></ul>
+            </div>
+        </div>
+
+        <!-- Action Recommendations -->
+        <h2 class="section-title">Content & Action Recommendations</h2>
+        <div class="action-grid">
+            <div class="action-card">
+                <div class="action-accent content"></div>
+                <div class="action-card-header">
+                    <h3>Content Priorities</h3>
+                </div>
+                <ul id="actionContent"></ul>
+            </div>
+            <div class="action-card">
+                <div class="action-accent links"></div>
+                <div class="action-card-header">
+                    <h3>Link-Building Priorities</h3>
+                </div>
+                <ul id="actionLinks"></ul>
+            </div>
+            <div class="action-card">
+                <div class="action-accent wins"></div>
+                <div class="action-card-header">
+                    <h3>Quick Wins</h3>
+                </div>
+                <ul id="actionWins"></ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
+                <p style="color: var(--text-secondary);">Analysis ID: 5b08288f-f375-4113-b204-863556a14ab8</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============ DATA (injected by renderer) ============
+        const DASHBOARD_DATA = {"site":{"name":"Staynex","url":"https://staynex.vip","domain":"staynex.vip","slug":"staynex-v2","analysis_id":"5b08288f-f375-4113-b204-863556a14ab8","site_uuid":"c73a64b1-8118-45e7-b170-e43e7056c793","generated_at":"April 28, 2026"},"summary":{"score":16,"score_status":"Very Low AI Visibility","total_responses":60,"responses_per_type":30,"unique_competitors":67,"own_mentioned":true,"own_appearance_pct":6.7,"own_appearance_note":"Site mentioned in 6.7% of responses","hero_comparison":[{"value":"6.7%","label":"Staynex Visibility","trend":"down"},{"value":"70.0%","label":"Travala (Leader)","trend":""},{"value":"56.7%","label":"LockTrip (#2)","trend":""}]},"customer_types":[{"name":"Crypto-Native Digital Nomads","uuid":"638982e3-c58b-41bf-9b5c-6328c725c55f","competitors":[{"name":"Travala","appearance":70.0,"rank":1.6,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://www.travala.com"},{"name":"LockTrip","appearance":56.7,"rank":3.4,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://locktrip.com"},{"name":"CheapAir","appearance":33.3,"rank":5.4,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://www.cheapair.com"},{"name":"Hopper","appearance":26.7,"rank":2.5,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.hopper.com"},{"name":"Destinia","appearance":26.7,"rank":5.0,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://destinia.com"},{"name":"Travala.com","appearance":26.7,"rank":1.3,"providers":["gemini"],"isOwn":false,"url":"https://www.travala.com"},{"name":"XcelTrip","appearance":23.3,"rank":4.7,"providers":["gemini","openai-search"],"isOwn":false,"url":"https://www.xceltrip.com"},{"name":"Booking.com","appearance":20.0,"rank":5.2,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.booking.com"},{"name":"Dtravel","appearance":20.0,"rank":3.5,"providers":["gemini"],"isOwn":false,"url":"https://www.dtravel.com"},{"name":"Alternative Airlines","appearance":16.7,"rank":4.0,"providers":["claude","gemini","openai-search"],"isOwn":false,"url":"https://www.alternativeairlines.com"}],"total_responses":30,"provider_order_summary":{"gemini":0,"claude":1,"openai-search":2},"has_distinct_competitor_data":false,"data_note":null},{"name":"Budget-Conscious Family Travelers","uuid":"78e11225-bc7f-4376-9775-814620c58981","competitors":[{"name":"Travala","appearance":70.0,"rank":1.6,"providers":["openai-search","claude","gemini"],"isOwn":false,"url":"https://www.travala.com/en-US/"},{"name":"LockTrip","appearance":56.7,"rank":3.4,"providers":["openai-search","gemini","claude"],"isOwn":false,"url":"https://locktrip.com/page/book-hotels-with-crypto"},{"name":"CheapAir","appearance":33.3,"rank":5.4,"providers":["openai-search","gemini","claude"],"isOwn":false,"url":"https://www.cheapair.com"},{"name":"Hopper","appearance":26.7,"rank":2.5,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.hopper.com"},{"name":"Destinia","appearance":26.7,"rank":5.0,"providers":["gemini","claude","openai-search"],"isOwn":false,"url":"https://destinia.com"},{"name":"Travala.com","appearance":26.7,"rank":1.3,"providers":["gemini"],"isOwn":false,"url":"https://www.travala.com"},{"name":"XcelTrip","appearance":23.3,"rank":4.7,"providers":["openai-search","gemini"],"isOwn":false,"url":"https://xceltrip.com/"},{"name":"Booking.com","appearance":20.0,"rank":5.2,"providers":["claude","openai-search"],"isOwn":false,"url":"https://www.booking.com"},{"name":"Dtravel","appearance":20.0,"rank":3.5,"providers":["gemini"],"isOwn":false,"url":"https://www.dtravel.com"},{"name":"Alternative Airlines","appearance":16.7,"rank":4.0,"providers":["openai-search","claude","gemini"],"isOwn":false,"url":"https://www.alternativeairlines.com/cryptocurrencies"}],"total_responses":30,"provider_order_summary":{"openai-search":0,"claude":1,"gemini":2},"has_distinct_competitor_data":false,"data_note":"Share of Voice percentages reflect the same aggregated BotSee analysis for this site. Both customer type tabs display identical competitor rankings because BotSee did not return per-segment appearance data for this analysis. The provider ordering and source URLs differ per segment."}],"keywords":[{"text":"Valor Flights official website","count":1},{"text":"best last minute hotel booking apps for crypto users","count":1},{"text":"best crypto travel booking sites 2024 2025","count":1},{"text":"OneAir travel official website","count":1},{"text":"TravelPerk business travel negotiated rates monthly stays TravelPerk","count":1},{"text":"Travala crypto payments book hotels flights Travala","count":1},{"text":"XcelTrip crypto travel platform features","count":1},{"text":"best apps for last minute hotel bookings HotelTonight Airbnb last minute deals 24 hours","count":1},{"text":"hotel booking app crypto payments instant AI powered last minute","count":1},{"text":"best hotel membership for crypto travelers 60 nights year","count":1},{"text":"Travala accepts crypto hotel bookings no booking fees Travala.com review","count":1},{"text":"Bidroom membership vs traditional OTA pricing for frequent travelers","count":1},{"text":"Travala flights crypto payments accept cryptocurrency flights Travala.com","count":1},{"text":"ASI:One Flights Agent official website","count":1},{"text":"best hotel booking platforms for crypto users no fees","count":1},{"text":"AI powered travel booking tools for last minute trips crypto payment","count":1},{"text":"HotelTonight last minute deals 2026 Airbnb HotelTonight app","count":1},{"text":"Travala vs Alternative Airlines for last minute flights crypto","count":1},{"text":"book hotels with crypto Travala","count":1},{"text":"LockTrip vs Travala vs Dtravel for crypto travel","count":1},{"text":"Selina CoLive vs CitizenM Global Passport for digital nomads","count":1},{"text":"book hotels with cryptocurrency instant payment Travala","count":1},{"text":"AI travel assistant for spontaneous flight booking crypto","count":1},{"text":"Hopper AI hotel booking crypto support","count":1},{"text":"Destinia pay with bitcoin Destinia BitPay 'Destinia accepts bitcoin' 'hotels'","count":1},{"text":"Destinia accept bitcoin hotels BitPay Destinia crypto fees 'no fees'","count":1},{"text":"best last minute hotel booking sites crypto payment","count":1},{"text":"best AI travel assistants for impulsive travelers crypto","count":1},{"text":"AI travel booking tools for spontaneous trips crypto","count":1},{"text":"hotel booking platforms with no last minute price hikes","count":1}],"sources":[{"name":"www.travala.com","url":"https://www.travala.com","mentions":8},{"name":"www.travala.com","url":"https://www.travala.com/en-US/","mentions":5},{"name":"www.hopper.com","url":"https://www.hopper.com","mentions":4},{"name":"Travala Official Website","url":"https://www.travala.com","mentions":4},{"name":"www.cheapair.com","url":"https://www.cheapair.com","mentions":3},{"name":"www.theblueground.com","url":"https://www.theblueground.com","mentions":3},{"name":"Sleap.io | Web3 Hotel Booking  1M+ Hotels & Crypto Payments","url":"https://sleap.io","mentions":3},{"name":"www.techlifeunity.com","url":"https://www.techlifeunity.com/best-last-minute-hotel-apps","mentions":2},{"name":"Priceline Express Deals","url":"https://www.priceline.com/express-deals","mentions":2},{"name":"www.hoteltonight.com","url":"https://www.hoteltonight.com","mentions":2},{"name":"www.bitpay.com","url":"https://www.bitpay.com","mentions":2},{"name":"www.travala.com","url":"https://www.travala.com/payment/nano","mentions":2},{"name":"HotelTonight Official Site","url":"https://www.hoteltonight.com","mentions":2},{"name":"Best Hotel Loyalty Programs 2024","url":"https://thepointsguy.com/guide/best-hotel-loyalty-programs","mentions":2},{"name":"www.coindesk.com","url":"https://www.coindesk.com/business/2025/02/04/trivago-adds-travala-s-hotel-inventory-gaining-crypto-payment-options","mentions":2},{"name":"en.wikipedia.org","url":"https://en.wikipedia.org/wiki/Cheapair","mentions":2},{"name":"Travala - Crypto Travel Booking","url":"https://www.travala.com","mentions":2},{"name":"locktrip.com","url":"https://locktrip.com","mentions":2},{"name":"cointelegraph.com","url":"https://cointelegraph.com/news/travala-trivago-crypto-hotel-bookings","mentions":2},{"name":"Going Premium","url":"https://www.going.com","mentions":1},{"name":"The 7 Best Apps for Finding LastMinute Travel Deals in 2026","url":"https://flylimited.org/best-apps-for-finding-last-minute-travel-deals/","mentions":1},{"name":"www.pallapay.com","url":"https://www.pallapay.com","mentions":1},{"name":"www.cryptotraveler.com","url":"https://www.cryptotraveler.com/","mentions":1},{"name":"Travala vs LockTrip: Which is better for crypto travel?","url":"https://www.bitrates.com/news/editorial/travala-vs-locktrip-which-is-the-best-crypto-travel-booking-site","mentions":1},{"name":"bitget.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQENQrt3sDWcpwfvJ3HljIYci-7qOAY3cu2moC7DcbZy2ui6QAX1loP4RsqWVQ1McGmie0XQodsmgOkjcwy4SIh1tsBNvlEwikObLoqQ_13TpAgrj_Yjb53Kk9Pak_yV3u3zUflCT0SsM7pAQaG3tEP6wvwRDefZRctEqJ8qZxqrVh6pSZHKlXvdjjRXJnSljtUjrJjXSuBlcz-wtlHqocpvdVJTyT93RPF2RR0heQ==","mentions":1},{"name":"Extended Stay America  Monthly Rate Hotels","url":"https://www.extendedstayamerica.com/services-programs/monthly-rate-hotels","mentions":1},{"name":"Travel Companies That Accept Crypto Payments","url":"https://coinspaid.com/blog/travel-companies-accepting-crypto/","mentions":1},{"name":"www.skyscanner.net","url":"https://www.skyscanner.net/sc/en-gb/scr/flights/last-minute-deals/","mentions":1},{"name":"AI Tool for Finding Last-Minute Flight Deals","url":"https://travelfika.com/blog/ai-tool-for-finding-last-minute-flight-deals","mentions":1},{"name":"ByHours  book hotels by the hour (Wikipedia)","url":"https://en.wikipedia.org/wiki/ByHours","mentions":1},{"name":"coinspaid.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQEhwoyX9KRybdL2SdezONGupER4AsTFqe_BQEox1VZ7vHQ6SPy___JMLZNxAmQTQ-W8lw0MBSl9Jaf_yVQOoXkonTzJs8IPU7bx2qFT1L57gTjhxxOHmnmYCVWRtMSIU9sIpNK6BfyOgJNiXWTo4mnVBQ2cEQT1miViTGebR1jwFFJTpAeA7C0=","mentions":1},{"name":"travorio.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQG3nZJF7AwQf6g-gjIWFcEVChpmf_94u6E5lmclYku6fvq_dNhh3dEcgVCaIuxP95Le1CcnNEk3b7Q-PXt6lxPOQefGDafxCnCxzyf9kIJoYg==","mentions":1},{"name":"Dtravel: Decentralizing the Home Sharing Economy","url":"https://www.dtravel.com/about","mentions":1},{"name":"BitPay  Pay for Travel with Bitcoin: Your Guide to Traveling with Cryptocurrency","url":"https://www.bitpay.com/blog/how-to-travel-on-bitcoin","mentions":1},{"name":"Hopper Official Site","url":"https://www.hopper.com","mentions":1},{"name":"KAYAK Official Site","url":"https://www.kayak.com","mentions":1},{"name":"quora.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFsAfl1Ja9jtq0jHD41rApnK1ZSLHAwrIYFWuAPk8p-X50jZzq1k5WEkv5Ty4W-HJnLP8pGD7I9OknvZzRFK09Uw3QpH4rjAcDgJQbtaCfDVWUkXNzhRX2wUqAH-3oI1bisEGtMxI1nxkkYMuehOU60_9qiyAM-afMYHuQCtjel_pYWbwWWysH3301c","mentions":1},{"name":"travelwith2ofus.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQETIQBd0KCJ31bCEoJC0veg8v5z9k7Q6ebhZ4FeiggaRkVyDhftGrQ6Zg4NIO-ikMH_51vXe_6kjCbvhiXQzc9xTe8yZfgcKGmgv4mwBI5KIrX5ukeI_zWSKL4u1SW7pgtYQMCgHN7VI-C9j7oadTU12MknXhIe-VL32HsjfUdGzBqe-1Hdbl8LYRpj_Er6gqg4d0a2kT6sw9eOeoqKNxz2","mentions":1},{"name":"help.travala.com","url":"https://help.travala.com/hc/en-us/articles/27244479669657-How-do-I-select-the-cryptocurrency-payment-option-during-the-booking-process","mentions":1},{"name":"Pallapay  Accept Crypto Payments in Hotels (Pallapay industries page)","url":"https://www.pallapay.com/industries/hotels","mentions":1},{"name":"localsinsider.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQHcGNbF6MxXAmRqZ9oX4V46M9hxGlBnXo6WLT-rSnbOqv4B9MrNb1_WKUm55U7RKyk916dk3zUnxzcFCWI0ZAFVaB2LSXg3h7r2fpTjf2Vfmm9RA8ViLzd8WELyVcYN2oIaTsx1AE9xXyTkye-N0_L_ITJLSOMhtU_cJF3a6P9aahDQDwkOdQ==","mentions":1},{"name":"travala.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQFVO3so4-cvcmZsFtVbLYK4ah3ZBge5-6GvsNV7yJ86rnPyGh3cVcOI7Q11ydTtAdAhYmsHKMc1jlWUAgracgedHP8bCO04mwcR4-VlcJazcTfXRupT5JbVGA==","mentions":1},{"name":"chainwire.org","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQF_3AWCnhH3y1J5An6GcNMEtHLqVQCx_QLcMTLCjytRvNvi7Cn1n1fVHQJxgFsHnO1RxCp_e1EvNlzJ5tprzY4mdfN6oWwMf44YClC8PzH1nVgNCpMm4PMkdfszRvadkTRLu5bcU8o469hZUHAwO1NvxpNU8nuC96ecd5iTQsVasP9gN2dglLUMEcUMFx8sZNDr8uEl4ZFofukAxn1Bb5rFw6iah1XPH72CG4VNzVZn6i14BBHG","mentions":1},{"name":"www.bitpay.com","url":"https://www.bitpay.com/directory/bitpaytravel","mentions":1},{"name":"Hopper (Wikipedia overview of features)","url":"https://en.wikipedia.org/wiki/Hopper_%28company%29","mentions":1},{"name":"Top 10 Travel Websites That Accept Cryptocurrency Payments in 2026","url":"https://nowpayments.io","mentions":1},{"name":"trip1.com","url":"https://trip1.com/","mentions":1},{"name":"travorio.com","url":"https://vertexaisearch.cloud.google.com/grounding-api-redirect/AUZIYQE0PTZo8R1NZzT4iuWQCrXnxHvGa-NhidqEFfQoI5x7CBoyZ21i_LyGRcLhygkXDm2d1iKU-8n2V-j9i9dNNl5rIw2MZIpdYEqVD9vbBorfDw==","mentions":1},{"name":"Marriott Bonvoy Elite Status Benefits","url":"https://www.marriott.com/loyalty/member-benefits/elite.mi","mentions":1},{"name":"Travala - Book Hotels with Nano (payment details page)","url":"https://www.travala.com/payment/nano","mentions":1}],"keyword_opportunities":[{"text":"How do I book hotels cheaper when I'm moving between cities every few months?","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"hotel booking that takes crypto","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"best hotel membership for frequent travelers who stay 60+ nights a year","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"I'm spending way too much on hotel booking fees across multiple cities. What's a better option than Booking.com?","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"best hotel booking without fees","type":"missing","persona":"Frequent-Mover-Optimization-Max"},{"text":"How do I book hotels last minute without getting completely ripped off on price?","type":"missing","persona":"Last-Minute-Spontaneous-Sofia"},{"text":"I need to book a flight tomorrow but don't want to spend 3 hours comparing prices. What's the fastest way?","type":"missing","persona":"Last-Minute-Spontaneous-Sofia"},{"text":"hotel app that takes crypto payments instantly","type":"missing","persona":"Last-Minute-Spontaneous-Sofia"},{"text":"best hotel booking without crazy last minute fees","type":"low_rank","persona":"Last-Minute-Spontaneous-Sofia"}],"source_opportunities":[{"name":"www.travala.com","domain":"www.travala.com","type":"competitor","mentions":8},{"name":"www.hopper.com","domain":"www.hopper.com","type":"competitor","mentions":4},{"name":"www.theblueground.com","domain":"www.theblueground.com","type":"competitor","mentions":3},{"name":"www.cheapair.com","domain":"www.cheapair.com","type":"competitor","mentions":3},{"name":"Sleap.io | Web3 Hotel Booking  1M+ Hotels & Crypto Payments","domain":"sleap.io","type":"competitor","mentions":3},{"name":"en.wikipedia.org","domain":"en.wikipedia.org","type":"competitor","mentions":2},{"name":"www.hoteltonight.com","domain":"www.hoteltonight.com","type":"competitor","mentions":2},{"name":"www.techlifeunity.com","domain":"www.techlifeunity.com","type":"competitor","mentions":2},{"name":"Priceline Express Deals","domain":"www.priceline.com","type":"competitor","mentions":2},{"name":"www.coindesk.com","domain":"www.coindesk.com","type":"competitor","mentions":2},{"name":"locktrip.com","domain":"locktrip.com","type":"competitor","mentions":2},{"name":"cointelegraph.com","domain":"cointelegraph.com","type":"competitor","mentions":2},{"name":"Best Hotel Loyalty Programs 2024","domain":"thepointsguy.com","type":"competitor","mentions":2},{"name":"www.bitpay.com","domain":"www.bitpay.com","type":"competitor","mentions":2},{"name":"Going Premium","domain":"www.going.com","type":"competitor","mentions":1}],"provider_coverage":{"gemini":35,"claude":30,"openai":35},"insights":{"terminology_gap":[{"term":"Web3 Social Travel","evidence":"No consistent AI recognition of this combined term","priority":"HIGH"},{"term":"Real-World Asset (RWA) Integration","evidence":"Limited understanding in AI travel queries","priority":"HIGH"},{"term":"Zero-markup Pricing","evidence":"Not standardized in AI travel comparisons","priority":"MEDIUM"},{"term":"Hybrid Payments","evidence":"Inconsistent AI interpretation","priority":"MEDIUM"},{"term":"JetSet VIP Pass","evidence":"No direct AI search visibility","priority":"HIGH"},{"term":"Travel Economy","evidence":"Minimal contextual understanding","priority":"MEDIUM"}],"language_gap":[{"site_says":"Web3 & AI Infused Social Travel Membership","site_context":"Platform positioning as tech-forward ecosystem","ai_uses":"Crypto travel booking platform","ai_context":"Transactional interpretation"},{"site_says":"Turn spend into ownership","site_context":"Value proposition of membership","ai_uses":"Travel rewards program","ai_context":"Traditional loyalty framework"},{"site_says":"Revolutionizing travel and hospitality","site_context":"Disruptive technology narrative","ai_uses":"Alternative travel booking service","ai_context":"Incremental innovation perception"}],"audience_segments":{"addressed":[{"name":"Crypto Travelers","note":"Primary target with crypto payment options"},{"name":"Digital Nomads","note":"AI-powered travel planning appealing"},{"name":"Frequent Travelers","note":"Scalable membership model"},{"name":"Business Partners","note":"Supplier and distributor integration"}],"opportunity_gap":[{"name":"Budget Family Travelers","note":"Only 33% visibility in AI searches"},{"name":"Last-Minute Bookers","note":"26.7% competitor coverage"},{"name":"Business Travel Market","note":"20% current penetration"},{"name":"International Corporate Travelers","note":"Limited AI recognition"}]},"position":{"strengths":["Zero commission model for hotels","AI-powered personalized travel planning","Hybrid crypto/traditional payment support","Global partnership ecosystem"],"opportunities":["Expand AI travel agent capabilities","Deepen crypto travel market positioning","Create more granular membership tiers","Develop targeted content for underserved segments"],"gaps":["Limited AI search engine visibility","Unclear value prop for traditional travelers","Minimal competitive differentiation narrative","Weak educational content about Web3 travel"]},"action_items":{"content_priorities":["Create comprehensive 'Web3 Travel Guide'","Develop RWA integration case studies","Produce AI travel planning tutorial content","Build segment-specific comparison pages","Generate crypto traveler success stories"],"link_building":["Partner with crypto influencer review sites","Guest post on digital nomad platforms","Create backlinks from travel tech blogs","Engage Web3 community forums","Develop cross-promotional content with partners"],"quick_wins":["Optimize homepage for AI search terms","Refine meta descriptions with key phrases","Update competitive comparison language","Enhance technical SEO for AI crawlability","Implement structured data for travel offerings"]}}};
+
+        // ============ THEME ============
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '☀️';
+            }
+        }
+
+        // ============ PDF EXPORT ============
+        function exportPDF() {
+            const btn = event.target.closest('.btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>⏳</span> Generating...';
+            btn.disabled = true;
+
+            const element = document.getElementById('dashboard');
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: DASHBOARD_DATA.site.slug + '-ai-visibility-report.pdf',
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true, logging: false },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '<span>✅</span> Downloaded!';
+                setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+            }).catch(err => {
+                btn.innerHTML = '<span>❌</span> Failed';
+                setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+                console.error('PDF export error:', err);
+            });
+        }
+
+        // ============ TAB SWITCHING ============
+        function showType(type) {
+            document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.type-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(type).classList.add('active');
+            event.target.closest('.type-tab').classList.add('active');
+
+            setTimeout(() => {
+                ['type1SovChart', 'type1RankChart', 'type2SovChart', 'type2RankChart'].forEach(id => {
+                    const chart = Chart.getChart(id);
+                    if (chart) { chart.resize(); chart.update(); }
+                });
+            }, 100);
+        }
+
+        // ============ HERO SCORE ANIMATION ============
+        function animateScore(target) {
+            const scoreEl = document.getElementById('scoreNumber');
+            const circle = document.getElementById('scoreCircle');
+            const offset = 440 - (440 * target) / 100;
+
+            let current = 0;
+            const increment = Math.max(target / 50, 1);
+            function update() {
+                current += increment;
+                if (current < target) {
+                    scoreEl.textContent = Math.round(current);
+                    requestAnimationFrame(update);
+                } else {
+                    scoreEl.textContent = target;
+                }
+            }
+
+            setTimeout(() => {
+                update();
+                circle.style.strokeDashoffset = offset;
+            }, 500);
+        }
+
+        // ============ HERO COMPARISON ============
+        function renderHeroComparison() {
+            const container = document.getElementById('heroComparison');
+            const items = DASHBOARD_DATA.summary.hero_comparison || [];
+            container.innerHTML = items.map(item => `
+                <div class="comparison-item">
+                    <div class="value ${item.trend || ''}">${item.value}</div>
+                    <div class="label">${item.label}</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ CUSTOMER TYPE TABLES ============
+        function getColorClass(name, index) {
+            const palette = ['#67FF67', '#3D6944', '#C9CDD2', '#f97316', '#67FF67',
+                             '#3D6944', '#C9CDD2', '#f97316', '#67FF67', '#3D6944'];
+            return palette[index % palette.length];
+        }
+
+        function renderCompetitorTable(customerType, tableId) {
+            const tbody = document.getElementById(tableId);
+            tbody.innerHTML = customerType.competitors.map((c, idx) => `
+                <tr>
+                    <td>
+                        <div class="competitor-name">
+                            <div class="competitor-logo" style="background: ${c.isOwn
+                                ? 'linear-gradient(135deg, var(--primary), var(--brand-green))'
+                                : 'var(--bg-dark)'}">
+                                ${(c.name || '?').charAt(0)}
+                            </div>
+                            <div>
+                                ${c.name}
+                                ${c.isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="bar" style="width: 100px;">
+                                <div class="bar-fill" style="width: ${c.appearance}%; background: ${c.isOwn
+                                    ? 'linear-gradient(90deg, var(--primary), var(--brand-green))'
+                                    : getColorClass(c.name, idx)}"></div>
+                            </div>
+                            <span style="min-width: 45px;">${c.appearance}%</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="rank-badge ${c.rank <= 1.5 ? 'rank-1' : c.rank <= 2.5 ? 'rank-2' : c.rank <= 3.5 ? 'rank-3' : 'rank-other'}">
+                            ${Number(c.rank).toFixed(1)}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="provider-badges">
+                            ${(c.providers || []).map(p => `<span class="provider-badge ${p}">${p.replace('-search', '')}</span>`).join('')}
+                        </div>
+                    </td>
+                </tr>
+            `).join('');
+        }
+
+        // ============ KEYWORDS SLIDER ============
+        const KEYWORDS_PAGE_SIZE = 12;
+        let keywordsPage = 0;
+
+        function shiftKeywords(delta) {
+            const total = DASHBOARD_DATA.keywords || [];
+            const totalPages = Math.ceil(total.length / KEYWORDS_PAGE_SIZE);
+            keywordsPage = Math.max(0, Math.min(keywordsPage + delta, totalPages - 1));
+            renderKeywordsPage();
+        }
+
+        function renderKeywordsPage() {
+            const container = document.getElementById('keywordsList');
+            const keywords = DASHBOARD_DATA.keywords || [];
+            if (!keywords.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); grid-column: span 2;">No keywords available.</div>';
+                return;
+            }
+            const start = keywordsPage * KEYWORDS_PAGE_SIZE;
+            const page = keywords.slice(start, start + KEYWORDS_PAGE_SIZE);
+            container.innerHTML = page.map(k => `
+                <div class="keyword-tag">
+                    <span class="text" title="${k.text}">${k.text.length > 40 ? k.text.substring(0, 40) + '...' : k.text}</span>
+                    <span class="count">${k.count}x</span>
+                </div>
+            `).join('');
+
+            const totalPages = Math.ceil(keywords.length / KEYWORDS_PAGE_SIZE);
+            const from = start + 1;
+            const to = Math.min(start + KEYWORDS_PAGE_SIZE, keywords.length);
+            document.getElementById('kwCounter').textContent = `${from}-${to} of ${keywords.length}`;
+            document.getElementById('kwPrev').disabled = keywordsPage === 0;
+            document.getElementById('kwNext').disabled = keywordsPage >= totalPages - 1;
+        }
+
+        function renderKeywords() {
+            keywordsPage = 0;
+            renderKeywordsPage();
+        }
+
+        // ============ SOURCES ============
+        function renderSources() {
+            const container = document.getElementById('sourcesList');
+            const sources = DASHBOARD_DATA.sources || [];
+            if (!sources.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 1rem;">No sources available.</div>';
+                return;
+            }
+            container.innerHTML = sources.slice(0, 10).map(s => `
+                <div class="source-item">
+                    <div class="source-info">
+                        <div class="source-name">${s.name}</div>
+                        <div class="source-url">${s.url}</div>
+                    </div>
+                    <div class="source-mentions">${s.mentions}x</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ OPPORTUNITIES ============
+        function renderKeywordOpportunities() {
+            const container = document.getElementById('keywordOpportunities');
+            const opps = DASHBOARD_DATA.keyword_opportunities || [];
+            if (!opps.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 1rem;">No keyword opportunities.</div>';
+                return;
+            }
+            container.innerHTML = opps.map(k => `
+                <div class="opportunity-item">
+                    <span class="opportunity-badge ${k.type === 'missing' ? 'badge-missing' : 'badge-low-rank'}">
+                        ${k.type === 'missing' ? 'Missing' : 'Rank > 3'}
+                    </span>
+                    ${k.text.length > 80 ? k.text.substring(0, 80) + '...' : k.text}
+                </div>
+            `).join('');
+        }
+
+        function renderSourceOpportunities() {
+            const container = document.getElementById('sourceOpportunities');
+            const opps = DASHBOARD_DATA.source_opportunities || [];
+            if (!opps.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 1rem;">No source opportunities.</div>';
+                return;
+            }
+            container.innerHTML = opps.map(s => `
+                <div class="competitor-source">
+                    <div>
+                        <div style="font-weight: 500;">${s.name}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${s.domain}</div>
+                    </div>
+                    <span class="opportunity-badge badge-link">${s.type}</span>
+                </div>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: TERMINOLOGY GAP ============
+        function renderTerminologyGap() {
+            const tbody = document.getElementById('terminologyGapBody');
+            const rows = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.terminology_gap) || [];
+            if (!rows.length) {
+                tbody.innerHTML = '<tr><td colspan="3" style="color: var(--text-secondary);">No terminology gap data.</td></tr>';
+                return;
+            }
+            tbody.innerHTML = rows.map(r => `
+                <tr>
+                    <td class="term">${r.term}</td>
+                    <td class="evidence">${r.evidence}</td>
+                    <td><span class="priority-${(r.priority || 'MEDIUM').toLowerCase()}">${(r.priority || 'MEDIUM').toUpperCase()}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: AUDIENCE SEGMENTS ============
+        function renderAudienceSegments() {
+            const addressed = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.audience_segments && DASHBOARD_DATA.insights.audience_segments.addressed) || [];
+            const gap = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.audience_segments && DASHBOARD_DATA.insights.audience_segments.opportunity_gap) || [];
+
+            const addressedEl = document.getElementById('segmentsAddressed');
+            if (!addressed.length) {
+                addressedEl.innerHTML = '<p style="color: var(--text-secondary);">No audience segments currently addressed in AI responses.</p>';
+            } else {
+                addressedEl.innerHTML = `<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                    ${addressed.map(s => `
+                        <div class="segment-card positive">
+                            <div class="segment-name">${s.name}</div>
+                            <div class="segment-note">${s.note || ''}</div>
+                        </div>
+                    `).join('')}
+                </div>`;
+            }
+
+            const gapEl = document.getElementById('segmentsGap');
+            gapEl.innerHTML = gap.map(s => `
+                <div class="segment-card">
+                    <div class="segment-name">${s.name}</div>
+                    <div class="segment-note">${s.note || ''}</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: LANGUAGE GAP ============
+        function renderLanguageGap() {
+            const container = document.getElementById('languageGapContainer');
+            const rows = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.language_gap) || [];
+            if (!rows.length) {
+                container.innerHTML = '<p style="color: var(--text-secondary);">No language gap data available.</p>';
+                return;
+            }
+            container.innerHTML = rows.map((r, i) => `
+                <div style="margin-bottom: ${i === rows.length - 1 ? '0' : '1.5rem'};">
+                    <div class="language-box site">
+                        <div class="lang-label">${DASHBOARD_DATA.site.domain} says</div>
+                        <div class="lang-value">${r.site_says}</div>
+                        <div class="lang-context">${r.site_context || ''}</div>
+                    </div>
+                    <div class="language-box ai">
+                        <div class="lang-label">AI engines use</div>
+                        <div class="lang-value">${r.ai_uses}</div>
+                        <div class="lang-context">${r.ai_context || ''}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: POSITION ============
+        function renderPosition() {
+            const p = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.position) || {};
+            const toList = arr => (arr || []).map(x => `<li>${x}</li>`).join('') || '<li style="color: var(--text-secondary);">No items.</li>';
+            document.getElementById('positionStrengths').innerHTML = toList(p.strengths);
+            document.getElementById('positionOpportunities').innerHTML = toList(p.opportunities);
+            document.getElementById('positionGaps').innerHTML = toList(p.gaps);
+        }
+
+        // ============ INSIGHTS: ACTION ITEMS ============
+        function renderActionItems() {
+            const a = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.action_items) || {};
+            const toList = arr => (arr || []).map(x => `<li>${x}</li>`).join('') || '<li style="color: var(--text-secondary);">No items.</li>';
+            document.getElementById('actionContent').innerHTML = toList(a.content_priorities);
+            document.getElementById('actionLinks').innerHTML = toList(a.link_building);
+            document.getElementById('actionWins').innerHTML = toList(a.quick_wins);
+        }
+
+        // ============ CHARTS ============
+        function initCharts() {
+            const commonBarOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { ticks: { color: 'var(--text-secondary)', font: { size: 10 } }, grid: { color: 'var(--border)' } },
+                    y: { ticks: { color: 'var(--text-secondary)' }, grid: { color: 'var(--border)' } }
+                }
+            };
+
+            const type1 = DASHBOARD_DATA.customer_types[0];
+            const type2 = DASHBOARD_DATA.customer_types[1];
+
+            function buildSovChart(canvasId, customerType, color) {
+                const labels = customerType.competitors.slice(0, 10).map(c => c.name);
+                const data = customerType.competitors.slice(0, 10).map(c => c.appearance);
+                new Chart(document.getElementById(canvasId), {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            data,
+                            backgroundColor: color + 'cc',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        ...commonBarOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: { ticks: { color: '#FFFFFF', font: { size: 10 } }, grid: { color: 'var(--border)' } },
+                            y: { ticks: { color: '#FFFFFF' }, grid: { color: 'var(--border)' } }
+                        }
+                    }
+                });
+            }
+
+            function buildRankChart(canvasId, customerType) {
+                const labels = customerType.competitors.slice(0, 10).map(c => c.name);
+                const data = customerType.competitors.slice(0, 10).map(c => c.rank);
+                new Chart(document.getElementById(canvasId), {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            data,
+                            backgroundColor: data.map(r =>
+                                r <= 2 ? 'rgba(103, 255, 103, 0.8)' :
+                                r <= 4 ? 'rgba(201, 205, 210, 0.8)' : 'rgba(249, 115, 22, 0.8)'),
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        ...commonBarOptions,
+                        scales: {
+                            x: { ticks: { color: '#FFFFFF', font: { size: 10 } }, grid: { color: 'var(--border)' } },
+                            y: { ticks: { color: '#FFFFFF' }, grid: { color: 'var(--border)' } }
+                        }
+                    }
+                });
+            }
+
+            buildSovChart('type1SovChart', type1, '#3D6944');
+            buildRankChart('type1RankChart', type1);
+            buildSovChart('type2SovChart', type2, '#67FF67');
+            buildRankChart('type2RankChart', type2);
+
+            // Provider chart
+            const providers = DASHBOARD_DATA.provider_coverage || {};
+            const providerLabels = Object.keys(providers);
+            const providerValues = Object.values(providers);
+            const providerColors = {
+                claude: '#3D6944',
+                gemini: '#67FF67',
+                openai: '#C9CDD2',
+                'openai-search': '#C9CDD2',
+                deepseek: '#C9CDD2'
+            };
+            const bgColors = providerLabels.map(l => providerColors[l] || '#94a3b8');
+
+            new Chart(document.getElementById('providerChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: providerLabels.map(l => l.charAt(0).toUpperCase() + l.slice(1)),
+                    datasets: [{ data: providerValues, backgroundColor: bgColors, borderWidth: 0 }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            document.getElementById('providerLegend').innerHTML = providerLabels.map((label, i) => `
+                <div class="provider-legend-item">
+                    <div class="color" style="background: ${bgColors[i]};"></div>
+                    <div class="name">${label.charAt(0).toUpperCase() + label.slice(1).replace('-search', '')}</div>
+                    <div class="value">${providerValues[i]}%</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ INIT ============
+        // Update timestamp
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit'
+        });
+
+        // Render tables
+        renderCompetitorTable(DASHBOARD_DATA.customer_types[0], 'type1Table');
+        renderCompetitorTable(DASHBOARD_DATA.customer_types[1], 'type2Table');
+
+        // Render lists
+        renderHeroComparison();
+        renderKeywords();
+        renderSources();
+        renderKeywordOpportunities();
+        renderSourceOpportunities();
+
+        // Render insights
+        renderTerminologyGap();
+        renderAudienceSegments();
+        renderLanguageGap();
+        renderPosition();
+        renderActionItems();
+
+        // Init charts — briefly activate both tabs so all canvases are visible
+        const type1Div = document.getElementById('type1');
+        const type2Div = document.getElementById('type2');
+        type1Div.classList.add('active');
+        type2Div.classList.add('active');
+        initCharts();
+        type2Div.classList.remove('active');
+        type1Div.classList.add('active');
+
+        // Show data-limitation note on type2 tab if competitor data is shared with type1
+        const ct2 = DASHBOARD_DATA.customer_types[1];
+        if (ct2 && !ct2.has_distinct_competitor_data && ct2.data_note) {
+            const noteEl = document.getElementById('type2DataNote');
+            if (noteEl) {
+                noteEl.textContent = ct2.data_note;
+                noteEl.style.display = 'block';
+            }
+        }
+
+        // Animate score
+        animateScore(DASHBOARD_DATA.summary.score || 0);
+    </script>
+</body>
+</html>

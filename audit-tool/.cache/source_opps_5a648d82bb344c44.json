@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading cryptocurrency news outlet with strong coverage of decentralized computing and blockchain infrastructure projects"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Prominent platform for emerging blockchain and distributed computing technologies with technical audience"
+  },
+  {
+    "name": "blockonomi.com",
+    "domain": "blockonomi.com",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] In-depth analysis of decentralized networks and cloud computing innovations that align with Botanika's core themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technology-focused crypto publication with strong technical readership interested in distributed computing solutions"
+  },
+  {
+    "name": "thenewstack.io",
+    "domain": "thenewstack.io",
+    "type": "developer community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical publication focusing on cloud-native technologies, infrastructure, and distributed computing architectures"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive coverage of blockchain networks and decentralized technology infrastructure"
+  },
+  {
+    "name": "techcrunch.com",
+    "domain": "techcrunch.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential technology publication with sections dedicated to blockchain and distributed computing innovations"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Thought leadership platform for blockchain and decentralized technology ecosystems"
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative research platform providing deep technical analysis of blockchain and distributed computing networks"
+  },
+  {
+    "name": "protocol.com",
+    "domain": "protocol.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technology-focused publication with strong coverage of distributed computing and blockchain infrastructure"
+  }
+]

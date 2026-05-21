@@ -1,0 +1,82 @@
+[
+  {
+    "name": "defillama.com",
+    "domain": "defillama.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading DeFi liquidity tracking platform that aligns with TermMax's market positioning around platform liquidity and rate strategies"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative crypto research platform with deep coverage of market risk and emerging DeFi platforms like TermMax"
+  },
+  {
+    "name": "bankless.substack.com",
+    "domain": "bankless.substack.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential DeFi newsletter that explores innovative interest rate mechanisms and platform strategies matching TermMax's core themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Respected crypto media outlet covering emerging platforms and market descriptions in decentralized finance"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Premier crypto news source with extensive coverage of market risk and emerging financial technology platforms"
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive crypto research platform that provides deep market analysis and platform descriptions"
+  },
+  {
+    "name": "crypto.news",
+    "domain": "crypto.news",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global crypto news outlet focusing on market dynamics and emerging financial technology platforms"
+  },
+  {
+    "name": "consensys.net",
+    "domain": "consensys.net",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Blockchain research and development platform interested in innovative financial strategies and platform technologies"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technology-focused crypto publication covering emerging market platforms and risk strategies"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global crypto media platform with extensive coverage of DeFi platforms, market rates, and liquidity innovations"
+  }
+]

@@ -40,6 +40,7 @@ function makeRes() {
 
 beforeEach(() => {
   jest.clearAllMocks();
+  process.env.TELEGRAM_BOT_TOKEN = 'test-token';
 });
 
 describe('send-telegram API handler', () => {

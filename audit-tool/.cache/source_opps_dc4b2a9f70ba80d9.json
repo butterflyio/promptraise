@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news outlet that covers investment platforms and blockchain infrastructure technologies relevant to Nobon's core business model"
+  },
+  {
+    "name": "techcrunch.com",
+    "domain": "techcrunch.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] High-authority tech publication with strong coverage of enterprise SaaS, blockchain, and investment technology platforms"
+  },
+  {
+    "name": "bitcoinmagazine.com",
+    "domain": "bitcoinmagazine.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized blockchain publication that can highlight Nobon's innovative data and investment access technologies"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focused blockchain media outlet with deep technical understanding of emerging investment and data platforms"
+  },
+  {
+    "name": "research.glassdoor.com",
+    "domain": "research.glassdoor.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Provides industry insights into enterprise tools and platform technologies, matching Nobon's competitive landscape"
+  },
+  {
+    "name": "venturebeat.com",
+    "domain": "venturebeat.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging enterprise technologies and investment platforms with a focus on innovative blockchain solutions"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized blockchain media with strong coverage of investment platforms and emerging blockchain technologies"
+  },
+  {
+    "name": "cointelograph.com",
+    "domain": "cointelograph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive blockchain and cryptocurrency news platform that covers enterprise blockchain tools and investment platforms"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Premier blockchain research platform with deep analysis of investment technologies and blockchain infrastructure"
+  },
+  {
+    "name": "hackernoon.com",
+    "domain": "hackernoon.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer-focused platform with strong coverage of blockchain technologies and innovative investment platforms"
+  }
+]

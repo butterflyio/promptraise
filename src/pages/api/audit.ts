@@ -1,9 +1,12 @@
 import { createClient } from '@supabase/supabase-js';
 import { sendTelegramMessage } from '@/lib/telegram';
+import { isIP } from 'node:net';
 
 const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+const ACCESS_CODE_PATTERN = /^\d{8}$/;
+const TELEGRAM_HANDLE_PATTERN = /^@?[a-zA-Z0-9_]{4,32}$/;
 
 const WEB3_QUESTIONS_POOL = [
   "What Web3 gaming platforms let indie developers monetize early with play-to-earn models?",
@@ -24,9 +27,75 @@ const WEB3_QUESTIONS_POOL = [
 ];
 
 function getSupabase() {
-  const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
-  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || '';
+  const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || '';
   return createClient(supabaseUrl, supabaseKey);
+}
+
+function hasRequiredServerConfig() {
+  return Boolean(
+    (process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL) &&
+    process.env.SUPABASE_SERVICE_ROLE_KEY &&
+    BOTSEE_API_KEY
+  );
+}
+
+function isPrivateOrLocalHost(hostname: string): boolean {
+  const normalized = hostname.trim().toLowerCase();
+  if (
+    normalized === 'localhost' ||
+    normalized.endsWith('.local') ||
+    normalized === '0.0.0.0'
+  ) {
+    return true;
+  }
+
+  const ipVersion = isIP(normalized);
+  if (ipVersion === 4) {
+    return (
+      normalized.startsWith('10.') ||
+      normalized.startsWith('127.') ||
+      normalized.startsWith('192.168.') ||
+      normalized.startsWith('169.254.') ||
+      /^172\.(1[6-9]|2\d|3[0-1])\./.test(normalized)
+    );
+  }
+
+  if (ipVersion === 6) {
+    return (
+      normalized === '::1' ||
+      /^f[cd][0-9a-f]{2}:/.test(normalized) ||
+      /^fe[89ab][0-9a-f]:/.test(normalized)
+    );
+  }
+
+  return false;
+}
+
+function normalizeWebsiteUrl(input: unknown): string | null {
+  if (typeof input !== 'string') {
+    return null;
+  }
+
+  const trimmed = input.trim();
+  if (!trimmed) {
+    return null;
+  }
+
+  const candidate = /^https?:\/\//i.test(trimmed) ? trimmed : `https://${trimmed}`;
+
+  try {
+    const parsed = new URL(candidate);
+    if (!['http:', 'https:'].includes(parsed.protocol)) {
+      return null;
+    }
+    if (!parsed.hostname || isPrivateOrLocalHost(parsed.hostname)) {
+      return null;
+    }
+    return parsed.toString();
+  } catch {
+    return null;
+  }
 }
 
 function generateAccessCode() {
@@ -39,14 +108,36 @@ function getWeb3Questions(count: number): string[] {
 }
 
 async function botseeRequest(endpoint: string, options: RequestInit = {}) {
-  const response = await fetch(`${BOTSEE_BASE_URL}${endpoint}`, {
+  if (!BOTSEE_API_KEY) {
+    throw new Error('BotSee API key is not configured');
+  }
+
+  const fetchOptions: RequestInit = {
     ...options,
     headers: {
       'Authorization': `Bearer ${BOTSEE_API_KEY}`,
       'Content-Type': 'application/json',
       ...(options.headers as Record<string, string> || {}),
     },
-  });
+  };
+
+  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  let controller: AbortController | undefined;
+
+  if (!options.signal) {
+    controller = new AbortController();
+    fetchOptions.signal = controller.signal;
+    timeoutId = setTimeout(() => controller?.abort(), 20000);
+  }
+
+  let response: Response;
+  try {
+    response = await fetch(`${BOTSEE_BASE_URL}${endpoint}`, fetchOptions);
+  } finally {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+  }
 
   const data = await response.json();
 
@@ -258,19 +349,28 @@ function transformBotSeeResults(
 }
 
 export default async function handler(req, res) {
+  if (req.method !== 'GET' && req.method !== 'POST') {
+    res.setHeader('Allow', 'GET, POST');
+    return res.status(405).json({ error: 'Method not allowed' });
+  }
+
+  if (!hasRequiredServerConfig()) {
+    return res.status(500).json({ error: 'Server configuration is incomplete' });
+  }
+
   if (req.method === 'GET') {
     const { code } = req.query;
 
-    if (!code || typeof code !== 'string') {
+    if (!code || typeof code !== 'string' || !ACCESS_CODE_PATTERN.test(code)) {
       return res.status(400).json({ error: 'Access code required' });
     }
 
     try {
-      const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL;
-      const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY;
+      const supabaseUrl = process.env.SUPABASE_URL || process.env.NEXT_PUBLIC_SUPABASE_URL;
+      const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
       
       const response = await fetch(
-        `${supabaseUrl}/rest/v1/audits?access_code=eq.${code}`,
+        `${supabaseUrl}/rest/v1/audits?access_code=eq.${encodeURIComponent(code)}`,
         {
           headers: {
             'apikey': supabaseKey || '',
@@ -286,17 +386,25 @@ export default async function handler(req, res) {
       }
 
       return res.status(200).json({ audit: data[0] });
-    } catch (err: any) {
+    } catch (err) {
       console.error('Unexpected error:', err);
-      return res.status(500).json({ error: 'Internal server error', details: err.message });
+      return res.status(500).json({ error: 'Internal server error' });
     }
   }
 
   if (req.method === 'POST') {
     const { website_url, company_name, telegram_handle } = req.body;
+    const normalizedWebsiteUrl = normalizeWebsiteUrl(website_url);
 
-    if (!website_url) {
-      return res.status(400).json({ error: 'Website URL is required' });
+    if (!normalizedWebsiteUrl) {
+      return res.status(400).json({ error: 'A valid public website URL is required' });
+    }
+
+    if (
+      telegram_handle &&
+      (typeof telegram_handle !== 'string' || !TELEGRAM_HANDLE_PATTERN.test(telegram_handle))
+    ) {
+      return res.status(400).json({ error: 'Invalid telegram_handle format' });
     }
 
     try {
@@ -306,9 +414,9 @@ export default async function handler(req, res) {
         .from('audits')
         .insert({
           access_code: accessCode,
-          website_url,
-          company_name: company_name || null,
-          telegram_handle: telegram_handle || null,
+          website_url: normalizedWebsiteUrl,
+          company_name: typeof company_name === 'string' ? company_name.trim() || null : null,
+          telegram_handle: typeof telegram_handle === 'string' ? telegram_handle.trim() || null : null,
           status: 'processing',
         })
         .select()
@@ -323,7 +431,7 @@ export default async function handler(req, res) {
       let botseeAnalysisUuid = null;
 
       try {
-        const site = await createBotSeeSite(website_url, company_name);
+        const site = await createBotSeeSite(normalizedWebsiteUrl, company_name);
         botseeSiteUuid = site.site?.uuid || site.uuid;
 
         await getSupabase()
@@ -404,7 +512,7 @@ export default async function handler(req, res) {
           .eq('id', audit.id);
 
         return res.status(500).json({
-          error: botseeError.message || 'BotSee API error',
+          error: 'BotSee API error',
           access_code: accessCode,
           status: 'failed',
         });

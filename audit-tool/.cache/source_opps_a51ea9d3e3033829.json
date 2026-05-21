@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news site with deep coverage of cross-chain protocols and asset transfer technologies, aligning with Beyond's core blockchain infrastructure themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focuses on innovative blockchain protocols and emerging asset transfer technologies, providing strategic visibility for Beyond's cross-chain capabilities"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative research platform covering blockchain infrastructure, asset protocols, and cross-chain technological developments"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global blockchain media outlet with strong coverage of competitive landscape including protocols similar to Beyond's asset transfer mechanisms"
+  },
+  {
+    "name": "defipulse.com",
+    "domain": "defipulse.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized DeFi tracking site that analyzes blockchain asset protocols and cross-chain transfer technologies"
+  },
+  {
+    "name": "banklesshq.com",
+    "domain": "banklesshq.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential Web3 newsletter with deep technical analysis of blockchain protocols and asset transfer innovations"
+  },
+  {
+    "name": "consensys.net/media",
+    "domain": "consensys.net/media",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Ethereum-focused research platform that covers advanced blockchain infrastructure and cross-chain technologies"
+  },
+  {
+    "name": "cryptodaily.co.uk",
+    "domain": "cryptodaily.co.uk",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] UK-based blockchain publication with strong coverage of emerging protocols and asset transfer technologies"
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive blockchain research platform analyzing protocols, asset technologies, and competitive landscape"
+  },
+  {
+    "name": "web3.anthill.ventures",
+    "domain": "web3.anthill.ventures",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Emerging research platform focusing on blockchain infrastructure and cross-chain protocol innovations"
+  }
+]
