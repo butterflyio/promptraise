@@ -44,16 +44,24 @@ export async function sendTelegramMessage(
 
   const sendMessageUrl = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`;
 
-  const response = await fetch(sendMessageUrl, {
-    method: 'POST',
-    signal: AbortSignal.timeout(15000),
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      chat_id: user.chat_id,
-      text: message,
-      disable_web_page_preview: true,
-    }),
-  });
+  const controller = new AbortController();
+  const timeoutId = setTimeout(() => controller.abort(), 15000);
+  let response: Response;
+
+  try {
+    response = await fetch(sendMessageUrl, {
+      method: 'POST',
+      signal: controller.signal,
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        chat_id: user.chat_id,
+        text: message,
+        disable_web_page_preview: true,
+      }),
+    });
+  } finally {
+    clearTimeout(timeoutId);
+  }
 
   const data = await response.json();
 

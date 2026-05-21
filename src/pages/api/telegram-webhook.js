@@ -45,16 +45,22 @@ export default async function handler(req, res) {
       }
 
       if (text === '/start' && chatId && process.env.TELEGRAM_BOT_TOKEN) {
-        await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
-          method: 'POST',
-          signal: AbortSignal.timeout(15000),
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            chat_id: chatId,
-            text: '👋 Welcome to Promptraise!\n\nI will notify you here when your AI Visibility Audit is ready.\n\nTo start an audit, visit: audit.promptraise.com\n\n📩 Questions? Let\'s chat!\nTelegram: @zk_uae',
-            parse_mode: 'HTML',
-          }),
-        });
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000);
+        try {
+          await fetch(`https://api.telegram.org/bot${process.env.TELEGRAM_BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            signal: controller.signal,
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+              chat_id: chatId,
+              text: '👋 Welcome to Promptraise!\n\nI will notify you here when your AI Visibility Audit is ready.\n\nTo start an audit, visit: audit.promptraise.com\n\n📩 Questions? Let\'s chat!\nTelegram: @zk_uae',
+              parse_mode: 'HTML',
+            }),
+          });
+        } finally {
+          clearTimeout(timeoutId);
+        }
       }
     }
 

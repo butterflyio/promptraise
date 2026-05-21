@@ -112,15 +112,32 @@ async function botseeRequest(endpoint: string, options: RequestInit = {}) {
     throw new Error('BotSee API key is not configured');
   }
 
-  const response = await fetch(`${BOTSEE_BASE_URL}${endpoint}`, {
+  const fetchOptions: RequestInit = {
     ...options,
-    signal: options.signal || AbortSignal.timeout(20000),
     headers: {
       'Authorization': `Bearer ${BOTSEE_API_KEY}`,
       'Content-Type': 'application/json',
       ...(options.headers as Record<string, string> || {}),
     },
-  });
+  };
+
+  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  let controller: AbortController | undefined;
+
+  if (!options.signal) {
+    controller = new AbortController();
+    fetchOptions.signal = controller.signal;
+    timeoutId = setTimeout(() => controller?.abort(), 20000);
+  }
+
+  let response: Response;
+  try {
+    response = await fetch(`${BOTSEE_BASE_URL}${endpoint}`, fetchOptions);
+  } finally {
+    if (timeoutId) {
+      clearTimeout(timeoutId);
+    }
+  }
 
   const data = await response.json();
 
