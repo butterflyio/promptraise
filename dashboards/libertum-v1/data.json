@@ -10,28 +10,23 @@
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 0,
-    "score_status": "Zero AI Visibility",
+    "score": 36,
+    "score_status": "Moderate Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
     "unique_competitors": 95,
-    "own_mentioned": false,
-    "own_appearance_pct": 0,
-    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "own_mentioned": true,
+    "own_appearance_pct": 36.2,
+    "own_appearance_note": "Site mentioned in 36.2% of AI responses",
     "hero_comparison": [
       {
-        "value": "0%",
+        "value": "36.2%",
         "label": "Libertum Visibility",
-        "trend": "down"
+        "trend": "up"
       },
       {
         "value": "75.0%",
         "label": "realt (Leader)",
-        "trend": ""
-      },
-      {
-        "value": "67.5%",
-        "label": "fractional (#2)",
         "trend": ""
       }
     ]
