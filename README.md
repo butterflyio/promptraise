@@ -76,6 +76,10 @@ Set up `audit.promptraise.com` in Netlify:
 1. Domain settings → Add custom domain
 2. Configure DNS records as instructed
 
+## Security Notes
+
+- Telegram outbound notifications are sent as plain text (no HTML parsing) to reduce message-format injection risk from untrusted input.
+
 ## Database Schema
 
 ```sql
