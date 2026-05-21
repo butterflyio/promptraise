@@ -6,14 +6,14 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "tsc --noEmit -p tsconfig.lint.json --pretty false",
     "test": "jest",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.0",
     "chart.js": "^4.5.1",
-    "next": "^16.2.1",
+    "next": "16.3.0-canary.25",
     "react": "18.2.0",
     "react-chartjs-2": "^5.3.1",
     "react-dom": "18.2.0"
@@ -23,10 +23,10 @@
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
-    "autoprefixer": "^10.4.17",
+    "autoprefixer": "^10.4.27",
     "jest": "^30.3.0",
-    "postcss": "^8.4.33",
-    "tailwindcss": "^3.4.1",
+    "postcss": "^8.5.15",
+    "tailwindcss": "^3.4.19",
     "ts-jest": "^29.4.6",
     "typescript": "^5"
   }
