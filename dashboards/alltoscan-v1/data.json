@@ -1,0 +1,695 @@
+{
+  "site": {
+    "name": "Alltoscan ATS",
+    "url": "https://ats.alltoscan.com/",
+    "domain": "ats.alltoscan.com",
+    "slug": "alltoscan-v1",
+    "analysis_id": "openrouter-alltoscan-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 21, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 84,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "Alltoscan ATS Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "40.0%",
+        "label": "binance (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "40.0%",
+        "label": "coinbase (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Digital Asset Power Users",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "binance",
+          "appearance": 35.0,
+          "rank": 17.86,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon",
+          "appearance": 35.0,
+          "rank": 18.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainlink",
+          "appearance": 27.5,
+          "rank": 17.73,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "metamask",
+          "appearance": 22.5,
+          "rank": 10.44,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ledger",
+          "appearance": 20.0,
+          "rank": 16.88,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "lever",
+          "appearance": 17.5,
+          "rank": 9.86,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "avalanche",
+          "appearance": 17.5,
+          "rank": 18.86,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "uniswap",
+          "appearance": 17.5,
+          "rank": 14.71,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solana",
+          "appearance": 15.0,
+          "rank": 21.67,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainalysis",
+          "appearance": 15.0,
+          "rank": 16.67,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "etherscan",
+          "appearance": 5.0,
+          "rank": null,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "bscscan",
+          "appearance": 2.5,
+          "rank": null,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tangem",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Financial Innovation Seekers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "binance",
+          "appearance": 40.0,
+          "rank": 15.19,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 40.0,
+          "rank": 17.5,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon",
+          "appearance": 27.5,
+          "rank": 20.64,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ledger",
+          "appearance": 15.0,
+          "rank": 15.67,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solana",
+          "appearance": 15.0,
+          "rank": 17.83,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "kraken",
+          "appearance": 12.5,
+          "rank": 16.2,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "lever",
+          "appearance": 12.5,
+          "rank": 9.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "metamask",
+          "appearance": 10.0,
+          "rank": 17.5,
+          "providers": [
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "uniswap",
+          "appearance": 10.0,
+          "rank": 21.75,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainalysis",
+          "appearance": 10.0,
+          "rank": 21.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "etherscan",
+          "appearance": 5.0,
+          "rank": null,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "bscscan",
+          "appearance": 2.5,
+          "rank": null,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tangem",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "transaction",
+      "count": 177
+    },
+    {
+      "text": "name",
+      "count": 114
+    },
+    {
+      "text": "blockchain",
+      "count": 112
+    },
+    {
+      "text": "transactions",
+      "count": 108
+    },
+    {
+      "text": "data",
+      "count": 102
+    },
+    {
+      "text": "competitors",
+      "count": 92
+    },
+    {
+      "text": "platforms",
+      "count": 77
+    },
+    {
+      "text": "method",
+      "count": 75
+    },
+    {
+      "text": "privacy",
+      "count": 74
+    },
+    {
+      "text": "platform",
+      "count": 74
+    }
+  ],
+  "sources": [
+    {
+      "name": "blender.io",
+      "url": "https://blender.io",
+      "mentions": 1
+    },
+    {
+      "name": "kraken.com",
+      "url": "https://kraken.com",
+      "mentions": 1
+    },
+    {
+      "name": "alltoscan.com",
+      "url": "https://alltoscan.com",
+      "mentions": 1
+    },
+    {
+      "name": "coinbase.com",
+      "url": "https://coinbase.com",
+      "mentions": 1
+    },
+    {
+      "name": "binance.com",
+      "url": "https://binance.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I reduce my transaction expenses when moving value between different international markets?",
+      "type": "missing",
+      "persona": "International Tech Entrepreneur"
+    },
+    {
+      "text": "What's the fastest way to synchronize my business accounts across multiple financial networks?",
+      "type": "missing",
+      "persona": "International Tech Entrepreneur"
+    },
+    {
+      "text": "Can I maintain complete privacy while conducting cross-border financial operations?",
+      "type": "missing",
+      "persona": "International Tech Entrepreneur"
+    },
+    {
+      "text": "How do I protect my transaction history from potential security breaches?",
+      "type": "missing",
+      "persona": "International Tech Entrepreneur"
+    },
+    {
+      "text": "What mechanisms ensure I retain full control of my financial data during international transfers?",
+      "type": "missing",
+      "persona": "International Tech Entrepreneur"
+    },
+    {
+      "text": "How does the platform handle end-to-end encryption for distributed application interactions?",
+      "type": "missing",
+      "persona": "Tech-Savvy Developer"
+    },
+    {
+      "text": "What security measures protect user data during multi-network transactions?",
+      "type": "missing",
+      "persona": "Tech-Savvy Developer"
+    },
+    {
+      "text": "Can developers integrate custom authentication layers into the wallet system?",
+      "type": "missing",
+      "persona": "Tech-Savvy Developer"
+    },
+    {
+      "text": "How are transaction fees calculated across different network architectures?",
+      "type": "missing",
+      "persona": "Tech-Savvy Developer"
+    },
+    {
+      "text": "What programming interfaces support seamless cross-platform asset management?",
+      "type": "missing",
+      "persona": "Tech-Savvy Developer"
+    },
+    {
+      "text": "How can I receive payments from multiple countries without high transfer fees?",
+      "type": "missing",
+      "persona": "Digital Nomad Freelancer"
+    },
+    {
+      "text": "What protection mechanisms exist if a transaction gets interrupted mid-process?",
+      "type": "missing",
+      "persona": "Digital Nomad Freelancer"
+    },
+    {
+      "text": "Can I create multiple secure financial identities for different project types?",
+      "type": "missing",
+      "persona": "Digital Nomad Freelancer"
+    },
+    {
+      "text": "How quickly can I access funds after receiving an international payment?",
+      "type": "missing",
+      "persona": "Digital Nomad Freelancer"
+    },
+    {
+      "text": "What backup strategies prevent losing access to my financial records?",
+      "type": "missing",
+      "persona": "Digital Nomad Freelancer"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net/blog",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "defipulse.com",
+      "domain": "defipulse.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "banklesspublishing.com",
+      "domain": "banklesspublishing.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptonews.com",
+      "domain": "cryptonews.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blocknative.com/blog",
+      "domain": "blocknative.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "deepseek": 50,
+    "gemini": 42,
+    "claude": 30,
+    "openai": 45
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "WATS",
+        "evidence": "Low AI recognition of proprietary wallet technology",
+        "priority": "HIGH"
+      },
+      {
+        "term": "DeFi connections",
+        "evidence": "Vague phrasing not translating to clear AI understanding",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "New Age DeFi Solutions",
+        "evidence": "Lacks specific technical differentiation in AI searches",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Trustless Connections",
+        "evidence": "Minimal contextual mapping in AI response patterns",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Eliminate complex gas fees between hundreds of blockchains",
+        "site_context": "Product positioning statement",
+        "ai_uses": "Multi-chain transaction optimization",
+        "ai_context": "More generic technological description"
+      },
+      {
+        "site_says": "WATS keeps your wallet data private",
+        "site_context": "Security claim",
+        "ai_uses": "Non-custodial wallet with local key storage",
+        "ai_context": "More technical privacy framing"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Digital Asset Power Users",
+          "note": "Strong wallet feature positioning"
+        },
+        {
+          "name": "Financial Innovation Seekers",
+          "note": "Multi-chain transaction appeal"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Enterprise Blockchain Adopters",
+          "note": "Only 12% competitor visibility"
+        },
+        {
+          "name": "Crypto Security Professionals",
+          "note": "Metamask competitor at 22.5%"
+        },
+        {
+          "name": "Cross-Chain Developers",
+          "note": "Limited technical positioning"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Fixed gas fee model using ATS token",
+        "Multi-chain wallet and explorer infrastructure",
+        "User-controlled privacy mechanisms",
+        "Comprehensive blockchain transaction transparency"
+      ],
+      "opportunities": [
+        "Expand enterprise blockchain solutions",
+        "Develop more technical documentation",
+        "Create comparative content against Metamask",
+        "Highlight unique WATS wallet technology"
+      ],
+      "gaps": [
+        "Low AI search visibility",
+        "Unclear technical differentiation",
+        "Limited competitive positioning",
+        "Inconsistent messaging across platforms"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create detailed WATS wallet technical whitepaper",
+        "Develop 'ATS vs Metamask' comparison guide",
+        "Produce multi-chain transaction optimization content",
+        "Build technical use case studies",
+        "Generate developer-focused content series"
+      ],
+      "link_building": [
+        "Partner with blockchain developer communities",
+        "Guest post on crypto technology platforms",
+        "Engage with Web3 influencer networks",
+        "Submit technical talks/papers to blockchain conferences",
+        "Create linkable technical resources"
+      ],
+      "quick_wins": [
+        "Refine homepage technical language",
+        "Add structured data markup for blockchain terms",
+        "Optimize metadata for technical queries",
+        "Create FAQ targeting specific user pain points",
+        "Develop comparison landing pages"
+      ]
+    }
+  }
+}
