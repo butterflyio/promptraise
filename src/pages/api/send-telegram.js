@@ -13,12 +13,13 @@ export default async function handler(req, res) {
 
   try {
     const { telegram_handle, message } = req.body;
+    const normalizedHandle = typeof telegram_handle === 'string' ? telegram_handle.trim() : telegram_handle;
 
     if (!telegram_handle || !message) {
       return res.status(400).json({ error: 'Missing telegram_handle or message' });
     }
 
-    if (typeof telegram_handle !== 'string' || !TELEGRAM_HANDLE_PATTERN.test(telegram_handle)) {
+    if (typeof normalizedHandle !== 'string' || !TELEGRAM_HANDLE_PATTERN.test(normalizedHandle)) {
       return res.status(400).json({ error: 'Invalid telegram_handle format' });
     }
 
@@ -30,7 +31,7 @@ export default async function handler(req, res) {
       return res.status(400).json({ error: 'Message is too long' });
     }
 
-    const result = await sendTelegramMessage(telegram_handle.trim(), message.trim());
+    const result = await sendTelegramMessage(normalizedHandle, message.trim());
 
     if (!result.success) {
       if (result.message === 'User has not started the bot') {
