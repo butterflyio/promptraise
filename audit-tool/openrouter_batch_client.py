@@ -599,10 +599,13 @@ class OpenRouterBatchClient:
                          competitor_aliases_map: dict = None) -> dict:
         models = models or MODELS
         all_responses = []
+        brand_name = brand_name or ""
         brand_variant = brand_name.lower().replace(" ", "").replace(".", "")
         seed_set = set()
         for c in (competitor_seed or []):
             name = c.get("name") if isinstance(c, dict) else str(c)
+            if not name:
+                continue
             name_lower = name.lower()
             if name_lower not in ("bitcoin", "ethereum", brand_variant):
                 seed_set.add(name_lower)
@@ -663,11 +666,14 @@ class OpenRouterBatchClient:
         responses = batch_result.get("responses", [])
         total = len(responses)
 
+        brand_name = brand_name or ""
         brand_lower = brand_name.lower().replace(" ", "").replace(".", "")
 
         seed_names = set()
         for c in (competitor_list or []):
             name = c.get("name") if isinstance(c, dict) else str(c)
+            if not name:
+                continue
             name_lower = name.lower()
             if name_lower not in ("bitcoin", "ethereum", brand_lower):
                 seed_names.add(name_lower)
