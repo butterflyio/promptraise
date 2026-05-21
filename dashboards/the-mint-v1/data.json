@@ -1,0 +1,675 @@
+{
+  "site": {
+    "name": "The Mint",
+    "url": "https://www.the-mint.com/",
+    "domain": "www.the-mint.com",
+    "slug": "the-mint-v1",
+    "analysis_id": "openrouter-the-mint-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 21, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 76,
+    "responses_per_type": 38,
+    "unique_competitors": 78,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "The Mint Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "41.7%",
+        "label": "coinbase (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "16.7%",
+        "label": "opensea (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Alternative Asset Investors",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "tether",
+          "appearance": 15.0,
+          "rank": 16.5,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "tether gold",
+          "appearance": 12.5,
+          "rank": 16.8,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "paxos",
+          "appearance": 10.0,
+          "rank": 13.0,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "digix",
+          "appearance": 10.0,
+          "rank": 20.25,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "reserve",
+          "appearance": 10.0,
+          "rank": 11.25,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 10.0,
+          "rank": 16.5,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "rarible",
+          "appearance": 7.5,
+          "rank": 15.33,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "opensea",
+          "appearance": 7.5,
+          "rank": 15.0,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "kraken",
+          "appearance": 7.5,
+          "rank": 23.0,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "digix (dgx)",
+          "appearance": 5.0,
+          "rank": 18.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "OpenAI": 1,
+        "DeepSeek": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Innovative Asset Diversifiers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "coinbase",
+          "appearance": 41.7,
+          "rank": 14.53,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "opensea",
+          "appearance": 16.7,
+          "rank": 16.17,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "tether",
+          "appearance": 16.7,
+          "rank": 12.17,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "kraken",
+          "appearance": 16.7,
+          "rank": 10.5,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "rally",
+          "appearance": 13.9,
+          "rank": 11.4,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "paxos",
+          "appearance": 11.1,
+          "rank": 13.25,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "rarible",
+          "appearance": 11.1,
+          "rank": 11.75,
+          "providers": [
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "grayscale",
+          "appearance": 11.1,
+          "rank": 16.25,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "gemini",
+          "appearance": 8.3,
+          "rank": 9.33,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "securitize",
+          "appearance": 8.3,
+          "rank": 19.67,
+          "providers": [
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 9,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "OpenAI": 1,
+        "DeepSeek": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "name",
+      "count": 113
+    },
+    {
+      "text": "assets",
+      "count": 89
+    },
+    {
+      "text": "blockchain",
+      "count": 86
+    },
+    {
+      "text": "platforms",
+      "count": 74
+    },
+    {
+      "text": "market",
+      "count": 68
+    },
+    {
+      "text": "liquidity",
+      "count": 63
+    },
+    {
+      "text": "competitors",
+      "count": 62
+    },
+    {
+      "text": "value",
+      "count": 62
+    },
+    {
+      "text": "response",
+      "count": 53
+    },
+    {
+      "text": "asset",
+      "count": 52
+    }
+  ],
+  "sources": [
+    {
+      "name": "paxos",
+      "url": "https://paxos",
+      "mentions": 1
+    },
+    {
+      "name": "tether.to",
+      "url": "https://tether.to",
+      "mentions": 1
+    },
+    {
+      "name": "digix.global",
+      "url": "https://digix.global",
+      "mentions": 1
+    },
+    {
+      "name": "fairmined",
+      "url": "https://fairmined",
+      "mentions": 1
+    },
+    {
+      "name": "kimberleyprocess",
+      "url": "https://kimberleyprocess",
+      "mentions": 1
+    },
+    {
+      "name": "responsiblejewellery",
+      "url": "https://responsiblejewellery",
+      "mentions": 1
+    },
+    {
+      "name": "canadiandiamondcodeofconduct",
+      "url": "https://canadiandiamondcodeofconduct",
+      "mentions": 1
+    },
+    {
+      "name": "europeanjewellery",
+      "url": "https://europeanjewellery",
+      "mentions": 1
+    },
+    {
+      "name": "inheritance.io",
+      "url": "https://inheritance.io",
+      "mentions": 1
+    },
+    {
+      "name": "copper.co",
+      "url": "https://copper.co",
+      "mentions": 1
+    },
+    {
+      "name": "blockchain.com",
+      "url": "https://blockchain.com",
+      "mentions": 1
+    },
+    {
+      "name": "mattereum.com",
+      "url": "https://mattereum.com",
+      "mentions": 1
+    },
+    {
+      "name": "tzero.com",
+      "url": "https://tzero.com",
+      "mentions": 1
+    },
+    {
+      "name": "realt.co",
+      "url": "https://realt.co",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How do Greenlandic rubies compare to traditional precious stone investments?",
+      "type": "missing",
+      "persona": "Wealth Preservation Professional"
+    },
+    {
+      "text": "What independent verification processes ensure the authenticity of these gemstone reserves?",
+      "type": "missing",
+      "persona": "Wealth Preservation Professional"
+    },
+    {
+      "text": "Can I view real-time documentation about the physical asset backing?",
+      "type": "missing",
+      "persona": "Wealth Preservation Professional"
+    },
+    {
+      "text": "What insurance protections are in place for the physical gemstone inventory?",
+      "type": "missing",
+      "persona": "Wealth Preservation Professional"
+    },
+    {
+      "text": "How does the scarcity of these specific gemstones impact long-term value potential?",
+      "type": "missing",
+      "persona": "Wealth Preservation Professional"
+    },
+    {
+      "text": "What environmental standards govern the original gemstone extraction?",
+      "type": "missing",
+      "persona": "Ethical Investment Strategist"
+    },
+    {
+      "text": "How does the closed Greenland mine impact the geological value proposition?",
+      "type": "missing",
+      "persona": "Ethical Investment Strategist"
+    },
+    {
+      "text": "Can you explain the compliance framework protecting investor interests?",
+      "type": "missing",
+      "persona": "Ethical Investment Strategist"
+    },
+    {
+      "text": "What mechanisms ensure transparent pricing and valuation?",
+      "type": "missing",
+      "persona": "Ethical Investment Strategist"
+    },
+    {
+      "text": "How do these assets perform during economic market fluctuations?",
+      "type": "missing",
+      "persona": "Ethical Investment Strategist"
+    },
+    {
+      "text": "How seamlessly can I track and manage my fractional gemstone ownership?",
+      "type": "missing",
+      "persona": "Technology-Enabled Investor"
+    },
+    {
+      "text": "What technical capabilities exist in your transparency dashboard?",
+      "type": "missing",
+      "persona": "Technology-Enabled Investor"
+    },
+    {
+      "text": "Can international investors access this regulated asset structure?",
+      "type": "missing",
+      "persona": "Technology-Enabled Investor"
+    },
+    {
+      "text": "What market liquidity can I expect for these asset-referenced units?",
+      "type": "missing",
+      "persona": "Technology-Enabled Investor"
+    },
+    {
+      "text": "How quickly can I verify my investment's current valuation?",
+      "type": "missing",
+      "persona": "Technology-Enabled Investor"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "banklesshq.com",
+      "domain": "banklesshq.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net/media",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptobriefing.com",
+      "domain": "cryptobriefing.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "trustnodes.com",
+      "domain": "trustnodes.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockonomi.com",
+      "domain": "blockonomi.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io/research",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "gemini": 35,
+    "openai": 34,
+    "deepseek": 50,
+    "claude": 39
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "MiCA-aligned",
+        "evidence": "AI engines do not consistently recognize this regulatory framework",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Greenland Reserve Coin",
+        "evidence": "Low recognition of specific token brand",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Real Assets, Regulated on Chain",
+        "evidence": "Complex positioning not simplified in AI responses",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Asset-Referenced Token",
+        "evidence": "Technical term with low AI comprehension",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "A Billion-Year Story, Backing Every Token",
+        "site_context": "Geological narrative of gemstone origin",
+        "ai_uses": "Digital asset valuation metrics",
+        "ai_context": "Focuses on financial parameters over provenance"
+      },
+      {
+        "site_says": "Regulated exposure to Greenlandic rubies and sapphires",
+        "site_context": "Physical asset backing",
+        "ai_uses": "Generic blockchain token description",
+        "ai_context": "Lacks specificity about physical asset connection"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Alternative Asset Investors",
+          "note": "Primary target with 10 AI responses"
+        },
+        {
+          "name": "Innovative Asset Diversifiers",
+          "note": "Secondary target with 9 AI responses"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Institutional Investors",
+          "note": "Only 15% competitor coverage"
+        },
+        {
+          "name": "Blockchain Compliance Experts",
+          "note": "Low visibility in AI search (7.5%)"
+        },
+        {
+          "name": "Gemstone Collectors",
+          "note": "Potential underserved market with 10% competitor presence"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "First EU MiCA-aligned Asset-Referenced Token",
+        "Unique physical asset backing (rare Greenlandic gemstones)",
+        "Transparent reserve reporting",
+        "Independent custody and auditing"
+      ],
+      "opportunities": [
+        "Expand institutional investor awareness",
+        "Develop more detailed regulatory compliance content",
+        "Create comparative assets analysis"
+      ],
+      "gaps": [
+        "Low AI search visibility (0% own site appearance)",
+        "Limited competitor differentiation",
+        "Technical complexity in token explanation"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop comprehensive MiCA regulatory explainer",
+        "Create whitepaper-style deep dive on gemstone asset valuation",
+        "Produce comparison guides vs top competitors (Tether, Grayscale)",
+        "Build technical documentation for blockchain experts",
+        "Generate investor education series on real-asset tokenization"
+      ],
+      "link_building": [
+        "Engage with blockchain compliance publications",
+        "Pursue guest posts on alternative investment platforms",
+        "Build backlinks from gemstone and mineral investment sites",
+        "Develop partnerships with EU fintech media",
+        "Create collaborative content with regulatory technology blogs"
+      ],
+      "quick_wins": [
+        "Optimize homepage for AI search terminology",
+        "Simplify technical language for broader comprehension",
+        "Add structured data markup for better AI parsing",
+        "Create FAQ targeting specific AI query patterns",
+        "Develop concise 'elevator pitch' content for AI summaries"
+      ]
+    }
+  }
+}

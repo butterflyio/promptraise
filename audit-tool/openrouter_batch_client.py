@@ -315,10 +315,17 @@ class OpenRouterBatchClient:
                     domains.add(domain)
         return list(domains)
 
-    def _check_brand_in_text(self, text: str, brand_variant: str) -> tuple:
+    def _check_brand_in_text(self, text: str, brand_variant: str, aliases: list = None) -> tuple:
         text_lower = text.lower()
         variants = [brand_variant, brand_variant.replace("-", ""), brand_variant.replace("-", " ")]
         variants = [v for v in variants if len(v) > 3]
+        
+        # Add custom aliases for improved detection
+        if aliases:
+            for alias in aliases:
+                alias = alias.lower().replace(" ", "").replace(".", "").replace("-", "")
+                if len(alias) > 3 and alias not in variants:
+                    variants.append(alias)
 
         mentioned = brand_variant in text_lower or any(v in text_lower for v in variants)
 
