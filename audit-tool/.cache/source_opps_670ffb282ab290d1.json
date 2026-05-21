@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news outlet with deep coverage of real asset tokenization and digital ownership technologies"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focuses on blockchain innovations that bridge traditional assets with digital transformation"
+  },
+  {
+    "name": "blocknews.net",
+    "domain": "blocknews.net",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specializes in detailed analysis of blockchain platforms disrupting real estate and asset management"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global platform with extensive coverage of smart contract platforms and tokenization strategies"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "developer community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Premier ethereum ecosystem blog highlighting innovative blockchain ownership models"
+  },
+  {
+    "name": "tokenpost.com",
+    "domain": "tokenpost.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Asian-focused blockchain publication with deep coverage of asset tokenization innovations"
+  },
+  {
+    "name": "investopedia.com/blockchain",
+    "domain": "investopedia.com/blockchain",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative financial platform exploring emerging blockchain asset management technologies"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging blockchain platforms transforming digital asset ownership and real estate tokenization"
+  },
+  {
+    "name": "cryptoinsider.com",
+    "domain": "cryptoinsider.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical blockchain publication focusing on smart contract innovations and asset digitization"
+  },
+  {
+    "name": "theblockcrypto.com",
+    "domain": "theblockcrypto.com",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive blockchain research platform with deep dives into tokenization technologies"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news outlet that frequently covers digital asset management and security innovations, aligning with Colossus Digital's core blockchain and asset themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focused on blockchain technology and digital asset ecosystems, providing ideal coverage for Colossus Digital's smart asset management approach"
+  },
+  {
+    "name": "consensys.net/research",
+    "domain": "consensys.net/research",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative blockchain research platform that analyzes digital asset security and blockchain infrastructure, matching Colossus Digital's technological positioning"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive crypto and blockchain news source with deep coverage of digital asset management platforms and emerging blockchain technologies"
+  },
+  {
+    "name": "banklesshq.com",
+    "domain": "banklesshq.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential crypto newsletter with high-engagement readership interested in innovative blockchain and digital asset management solutions"
+  },
+  {
+    "name": "dappradar.com/blog",
+    "domain": "dappradar.com/blog",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading platform for decentralized application insights, providing exposure to blockchain asset management and security innovations"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global blockchain news platform with extensive coverage of digital asset management technologies and competitive landscape"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technology-focused blockchain publication that analyzes emerging platforms in digital asset management and security"
+  },
+  {
+    "name": "ethereumworld.com",
+    "domain": "ethereumworld.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized research site covering blockchain infrastructure, smart contract innovations, and digital asset management technologies"
+  },
+  {
+    "name": "defipulse.com",
+    "domain": "defipulse.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative research platform tracking decentralized finance innovations, ideal for highlighting Colossus Digital's blockchain asset capabilities"
+  }
+]

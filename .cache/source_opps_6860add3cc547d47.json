@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading crypto news outlet with strong focus on blockchain tokenization and asset innovation, aligning with ShareX Network's core themes"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Extensive coverage of blockchain platforms exploring user-driven revenue models and asset tokenization"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Provides deep analytical coverage of blockchain infrastructure and tokenization strategies relevant to ShareX Network's ecosystem"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focuses on emerging blockchain technologies and platforms that enable users to earn through decentralized networks"
+  },
+  {
+    "name": "blockworks.co",
+    "domain": "blockworks.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers institutional blockchain innovations and tokenization trends that align with ShareX Network's value proposition"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer-focused platform exploring blockchain asset management and decentralized economic models"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging blockchain networks with a focus on user-driven platforms and innovative revenue generation"
+  },
+  {
+    "name": "nasdaq.com/crypto",
+    "domain": "nasdaq.com/crypto",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Institutional financial platform interested in blockchain platforms transforming asset management and tokenization"
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Provides deep crypto research and analysis of platforms revolutionizing asset ownership and blockchain economics"
+  },
+  {
+    "name": "coincodex.com",
+    "domain": "coincodex.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive blockchain platform analysis with emphasis on emerging tokenization and revenue generation models"
+  }
+]

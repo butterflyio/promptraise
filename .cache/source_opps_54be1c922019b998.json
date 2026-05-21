@@ -1,0 +1,82 @@
+[
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading cryptocurrency news outlet that covers privacy-focused cryptocurrencies and international financial technologies matching ScandicCoin's core themes"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative source for cryptocurrency transactions, financial innovations, and security-focused blockchain technologies"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focuses on privacy-centric cryptocurrency projects and advanced transaction technologies that align with ScandicCoin's core value proposition"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging cryptocurrencies with deep dives into transaction mechanisms and international financial technologies"
+  },
+  {
+    "name": "bitcoinmagazine.com",
+    "domain": "bitcoinmagazine.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Established platform for in-depth cryptocurrency analysis, especially for projects emphasizing security and transaction privacy"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] International cryptocurrency news platform that would be ideal for highlighting ScandicCoin's cross-border transaction capabilities"
+  },
+  {
+    "name": "hackernoon.com",
+    "domain": "hackernoon.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical developer community interested in innovative blockchain technologies and privacy-focused cryptocurrency solutions"
+  },
+  {
+    "name": "chainalysis.com/research",
+    "domain": "chainalysis.com/research",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain research platform that analyzes transaction technologies and financial security innovations"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Sophisticated cryptocurrency research platform covering advanced financial technologies and transaction mechanisms"
+  },
+  {
+    "name": "blockworks.co",
+    "domain": "blockworks.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Emerging platform for institutional-level cryptocurrency and blockchain technology insights"
+  }
+]

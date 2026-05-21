@@ -1,0 +1,645 @@
+{
+  "site": {
+    "name": "Colossus Digital",
+    "url": "https://www.colossus.digital/",
+    "domain": "www.colossus.digital",
+    "slug": "colossus-v1",
+    "analysis_id": "openrouter-colossus-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 21, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 96,
+    "own_mentioned": false,
+    "own_appearance_pct": 0,
+    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "hero_comparison": [
+      {
+        "value": "0%",
+        "label": "Colossus Digital Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "57.5%",
+        "label": "coinbase (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "30.0%",
+        "label": "binance (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Financial Institutions",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "coinbase",
+          "appearance": 57.5,
+          "rank": 17.74,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance",
+          "appearance": 30.0,
+          "rank": 18.42,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "aave",
+          "appearance": 30.0,
+          "rank": 14.0,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "uniswap",
+          "appearance": 27.5,
+          "rank": 17.91,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "compound",
+          "appearance": 25.0,
+          "rank": 15.8,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "fireblocks",
+          "appearance": 25.0,
+          "rank": 15.7,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "kraken",
+          "appearance": 20.0,
+          "rank": 17.88,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "sushiswap",
+          "appearance": 20.0,
+          "rank": 17.75,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase custody",
+          "appearance": 20.0,
+          "rank": 14.75,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainalysis",
+          "appearance": 17.5,
+          "rank": 18.29,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "DeepSeek": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Investment Foundations",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "polygon",
+          "appearance": 25.0,
+          "rank": 14.1,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainlink",
+          "appearance": 22.5,
+          "rank": 15.22,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance",
+          "appearance": 20.0,
+          "rank": 9.62,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polkadot",
+          "appearance": 15.0,
+          "rank": 13.83,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "staking rewards",
+          "appearance": 15.0,
+          "rank": 12.17,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "aave",
+          "appearance": 15.0,
+          "rank": 17.5,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 15.0,
+          "rank": 14.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "yearn finance",
+          "appearance": 15.0,
+          "rank": 12.5,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "alchemy",
+          "appearance": 10.0,
+          "rank": 15.0,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "consensys",
+          "appearance": 10.0,
+          "rank": 9.25,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "DeepSeek": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "name",
+      "count": 103
+    },
+    {
+      "text": "competitors",
+      "count": 101
+    },
+    {
+      "text": "blockchain",
+      "count": 77
+    },
+    {
+      "text": "smart",
+      "count": 67
+    },
+    {
+      "text": "security",
+      "count": 66
+    },
+    {
+      "text": "asset",
+      "count": 65
+    },
+    {
+      "text": "assets",
+      "count": 61
+    },
+    {
+      "text": "staking",
+      "count": 57
+    },
+    {
+      "text": "response",
+      "count": 54
+    },
+    {
+      "text": "platforms",
+      "count": 50
+    }
+  ],
+  "sources": [
+    {
+      "name": "colossusdigital.io",
+      "url": "https://colossusdigital.io",
+      "mentions": 1
+    },
+    {
+      "name": "polygon",
+      "url": "https://polygon",
+      "mentions": 1
+    },
+    {
+      "name": "colossusdigital",
+      "url": "https://colossusdigital",
+      "mentions": 1
+    },
+    {
+      "name": "alchemy",
+      "url": "https://alchemy",
+      "mentions": 1
+    },
+    {
+      "name": "chain",
+      "url": "https://chain",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How do you verify the security protocols for external staking partnerships?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    },
+    {
+      "text": "What regulatory frameworks are supported by your institutional platform?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    },
+    {
+      "text": "Can I maintain granular access controls for different team members?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    },
+    {
+      "text": "How do you prevent unauthorized asset movements during yield generation?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    },
+    {
+      "text": "What audit trails are available for tracking institutional transactions?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    },
+    {
+      "text": "What average annual performance can I expect from different reward protocols?",
+      "type": "missing",
+      "persona": "Asset Portfolio Manager"
+    },
+    {
+      "text": "How quickly can I liquidate assets if market conditions change?",
+      "type": "missing",
+      "persona": "Asset Portfolio Manager"
+    },
+    {
+      "text": "Which global custody providers are currently integrated with your platform?",
+      "type": "missing",
+      "persona": "Asset Portfolio Manager"
+    },
+    {
+      "text": "Can I set automated rebalancing rules for my digital asset portfolio?",
+      "type": "missing",
+      "persona": "Asset Portfolio Manager"
+    },
+    {
+      "text": "What risk mitigation strategies do you recommend for institutional portfolios?",
+      "type": "missing",
+      "persona": "Asset Portfolio Manager"
+    },
+    {
+      "text": "How does your platform handle multi-chain asset diversification?",
+      "type": "missing",
+      "persona": "Research Director"
+    },
+    {
+      "text": "What technical documentation is available for integration assessment?",
+      "type": "missing",
+      "persona": "Research Director"
+    },
+    {
+      "text": "Can I generate detailed performance analytics across different reward mechanisms?",
+      "type": "missing",
+      "persona": "Research Director"
+    },
+    {
+      "text": "How transparent are your backend infrastructure architectural decisions?",
+      "type": "missing",
+      "persona": "Research Director"
+    },
+    {
+      "text": "What academic partnerships inform your technological development?",
+      "type": "missing",
+      "persona": "Research Director"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net/research",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "banklesshq.com",
+      "domain": "banklesshq.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dappradar.com/blog",
+      "domain": "dappradar.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "ethereumworld.com",
+      "domain": "ethereumworld.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "defipulse.com",
+      "domain": "defipulse.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 45,
+    "gemini": 47,
+    "deepseek": 50,
+    "claude": 35
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "Composable Finance",
+        "evidence": "AI engines associate composable finance with developer-level DeFi protocols (Aave, Uniswap) rather than institutional staking infrastructure. Colossus positions itself as \"The institutional gateway for composable finance\" but AI models do not connect this term to non-custodial staking, custody-native yield generation, or institutional-grade infrastructure.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Institutional Hub",
+        "evidence": "Limited AI recognition of specific platform name",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Non-custodial staking",
+        "evidence": "Undefined technical specificity in AI search",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Multi-chain yield generation",
+        "evidence": "Incomplete technical understanding by AI engines",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Digital asset infrastructure",
+        "evidence": "Lack of precise categorization in AI responses",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Bridging the gap between Asset Holders and yield generation",
+        "site_context": "Marketing positioning statement",
+        "ai_uses": "Blockchain staking platform",
+        "ai_context": "Generic service description"
+      },
+      {
+        "site_says": "Secure, non-custodial and efficient staking",
+        "site_context": "Technical product description",
+        "ai_uses": "Cryptocurrency investment service",
+        "ai_context": "Broader, less precise categorization"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Financial Institutions",
+          "note": "Primary target with 10/80 query responses"
+        },
+        {
+          "name": "Investment Foundations",
+          "note": "Secondary institutional target"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Crypto Exchanges",
+          "note": "25% competitor coverage (Coinbase, Binance)"
+        },
+        {
+          "name": "Custody Providers",
+          "note": "20% market overlap (Fireblocks, Ledger)"
+        },
+        {
+          "name": "DeFi Platforms",
+          "note": "30% competitor presence (Aave, Uniswap)"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Multi-chain staking capabilities (+30 blockchains)",
+        "Direct integration with major custody solutions",
+        "Institutional-grade security protocols",
+        "Real-time asset management dashboard"
+      ],
+      "opportunities": [
+        "Expand technical documentation for AI searchability",
+        "Create comparative content against top competitors",
+        "Develop more granular blockchain infrastructure descriptions"
+      ],
+      "gaps": [
+        "Limited AI search visibility",
+        "Unclear product category positioning",
+        "Redundant homepage messaging"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop detailed 'Institutional Staking Guide'",
+        "Create blockchain-specific use case studies",
+        "Produce technical comparison content",
+        "Generate multi-chain staking explainer content",
+        "Develop compliance and security white papers"
+      ],
+      "link_building": [
+        "Partner content with Coinbase, Binance top performers",
+        "Guest post on blockchain infrastructure platforms",
+        "Develop cross-promotional content with custody providers",
+        "Create expert quote/interview opportunities"
+      ],
+      "quick_wins": [
+        "Refactor homepage to reduce content redundancy",
+        "Optimize metadata for AI search terms",
+        "Create dedicated product landing pages",
+        "Implement schema markup for blockchain services",
+        "Develop targeted keyword content clusters"
+      ]
+    }
+  }
+}

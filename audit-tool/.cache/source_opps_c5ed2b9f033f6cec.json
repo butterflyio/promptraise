@@ -1,0 +1,82 @@
+[
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging DeFi platforms with strong focus on market strategies and liquidity innovations"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] High-authority crypto news site that frequently profiles emerging risk management and interest rate platforms"
+  },
+  {
+    "name": "theblock.xyz",
+    "domain": "theblock.xyz",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Deep technical analysis of blockchain platforms with emphasis on market infrastructure and protocol descriptions"
+  },
+  {
+    "name": "defipulse.com",
+    "domain": "defipulse.com",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Tracks DeFi platform metrics, especially around liquidity and market positioning competitive analysis"
+  },
+  {
+    "name": "bankless.substack.com",
+    "domain": "bankless.substack.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential DeFi-focused newsletter that examines emerging platforms and their strategic market approaches"
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Provides comprehensive crypto asset research with deep dives into platform mechanics and market risk assessments"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging crypto platforms with specific interest in innovative market rate and liquidity strategies"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global crypto news platform that profiles innovative blockchain platforms and their market differentiation"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "developer community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical blog focusing on blockchain infrastructure and platform innovations with high developer credibility"
+  },
+  {
+    "name": "hackernoon.com",
+    "domain": "hackernoon.com",
+    "type": "tech publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical audience interested in emerging blockchain platforms and their unique market positioning"
+  }
+]
