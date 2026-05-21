@@ -1,0 +1,721 @@
+{
+  "site": {
+    "name": "Nobon",
+    "url": "https://www.nobon.com/",
+    "domain": "www.nobon.com",
+    "slug": "nobon-v1",
+    "analysis_id": "openrouter-nobon-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 21, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 45,
+    "score_status": "Moderate Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 60,
+    "own_mentioned": true,
+    "own_appearance_pct": 40.0,
+    "own_appearance_note": "Site mentioned in 40.0% of AI responses",
+    "hero_comparison": [
+      {
+        "value": "40.0%",
+        "label": "Nobon Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "20.0%",
+        "label": "angellist (Leader)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Fundraising Professionals",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "angellist",
+          "appearance": 20.0,
+          "rank": 17.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "seedinvest",
+          "appearance": 15.0,
+          "rank": 12.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "republic",
+          "appearance": 15.0,
+          "rank": 19.33,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "securitize",
+          "appearance": 12.5,
+          "rank": 14.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "salesforce",
+          "appearance": 12.5,
+          "rank": 16.2,
+          "providers": [
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "crunchbase",
+          "appearance": 10.0,
+          "rank": 18.25,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "hubspot",
+          "appearance": 10.0,
+          "rank": 16.5,
+          "providers": [
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polymath",
+          "appearance": 7.5,
+          "rank": 10.67,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "DocuSign",
+          "appearance": 7.5,
+          "rank": 17.33,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "docusign",
+          "appearance": 7.5,
+          "rank": 17.33,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Investment Ecosystem Managers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "chainalysis",
+          "appearance": 15.0,
+          "rank": 12.67,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "carta",
+          "appearance": 12.5,
+          "rank": 16.0,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "hubspot",
+          "appearance": 10.0,
+          "rank": 26.75,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "salesforce",
+          "appearance": 10.0,
+          "rank": 25.5,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "crunchbase",
+          "appearance": 10.0,
+          "rank": 14.75,
+          "providers": [
+            "Claude",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "syndicate",
+          "appearance": 7.5,
+          "rank": 12.33,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "DocuSign",
+          "appearance": 7.5,
+          "rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "docusign",
+          "appearance": 7.5,
+          "rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "elliptic",
+          "appearance": 7.5,
+          "rank": 14.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ciphertrace",
+          "appearance": 7.5,
+          "rank": 15.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "name",
+      "count": 186
+    },
+    {
+      "text": "competitors",
+      "count": 141
+    },
+    {
+      "text": "platform",
+      "count": 134
+    },
+    {
+      "text": "blockchain",
+      "count": 121
+    },
+    {
+      "text": "investor",
+      "count": 114
+    },
+    {
+      "text": "data",
+      "count": 113
+    },
+    {
+      "text": "tools",
+      "count": 102
+    },
+    {
+      "text": "access",
+      "count": 101
+    },
+    {
+      "text": "management",
+      "count": 95
+    },
+    {
+      "text": "investment",
+      "count": 94
+    }
+  ],
+  "sources": [
+    {
+      "name": "monday.com",
+      "url": "https://monday.com",
+      "mentions": 6
+    },
+    {
+      "name": "crypto.com",
+      "url": "https://crypto.com",
+      "mentions": 1
+    },
+    {
+      "name": "automate.io",
+      "url": "https://automate.io",
+      "mentions": 1
+    },
+    {
+      "name": "nobon",
+      "url": "https://nobon",
+      "mentions": 1
+    },
+    {
+      "name": "nobon.io",
+      "url": "https://nobon.io",
+      "mentions": 1
+    },
+    {
+      "name": "dune.com",
+      "url": "https://dune.com",
+      "mentions": 1
+    },
+    {
+      "name": "nansen",
+      "url": "https://nansen",
+      "mentions": 1
+    },
+    {
+      "name": "zapper.fi",
+      "url": "https://zapper.fi",
+      "mentions": 1
+    },
+    {
+      "name": "messari.io",
+      "url": "https://messari.io",
+      "mentions": 1
+    },
+    {
+      "name": "tokenterminal",
+      "url": "https://tokenterminal",
+      "mentions": 1
+    },
+    {
+      "name": "debank.com",
+      "url": "https://debank.com",
+      "mentions": 1
+    },
+    {
+      "name": "cryptoquant",
+      "url": "https://cryptoquant",
+      "mentions": 1
+    },
+    {
+      "name": "glassnode",
+      "url": "https://glassnode",
+      "mentions": 1
+    },
+    {
+      "name": "chainalysis",
+      "url": "https://chainalysis",
+      "mentions": 1
+    },
+    {
+      "name": "coinmetrics.io",
+      "url": "https://coinmetrics.io",
+      "mentions": 1
+    },
+    {
+      "name": "alchemy",
+      "url": "https://alchemy",
+      "mentions": 1
+    },
+    {
+      "name": "pitch.com",
+      "url": "https://pitch.com",
+      "mentions": 1
+    },
+    {
+      "name": "litprotocol.com",
+      "url": "https://litprotocol.com",
+      "mentions": 1
+    },
+    {
+      "name": "arweave.org",
+      "url": "https://arweave.org",
+      "mentions": 1
+    },
+    {
+      "name": "unlock-protocol.com",
+      "url": "https://unlock-protocol.com",
+      "mentions": 1
+    },
+    {
+      "name": "coingecko",
+      "url": "https://coingecko",
+      "mentions": 1
+    },
+    {
+      "name": "coinmarketcap.com",
+      "url": "https://coinmarketcap.com",
+      "mentions": 1
+    },
+    {
+      "name": "lunarcrush.com",
+      "url": "https://lunarcrush.com",
+      "mentions": 1
+    },
+    {
+      "name": "blockchain.com",
+      "url": "https://blockchain.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I speed up my fundraising timeline from initial pitch to closing?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What tools help me track investor interest without constant manual follow-up?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "Can I control document access and prevent unintended information leaks?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "How do I create a professional investor experience that stands out from traditional approaches?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What metrics can I use to understand which investors are most engaged with my proposal?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "How can I standardize our investment documentation across different funding stages?",
+      "type": "missing",
+      "persona": "Growth Stage CEO"
+    },
+    {
+      "text": "What solutions reduce administrative overhead during large capital raise processes?",
+      "type": "missing",
+      "persona": "Growth Stage CEO"
+    },
+    {
+      "text": "How quickly can my team transition from fragmented tools to a unified platform?",
+      "type": "missing",
+      "persona": "Growth Stage CEO"
+    },
+    {
+      "text": "What security measures protect sensitive financial information during deal negotiations?",
+      "type": "missing",
+      "persona": "Growth Stage CEO"
+    },
+    {
+      "text": "How can I centralize deal tracking across multiple potential investments?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "What tools help me quickly assess and compare different investment opportunities?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "How do I maintain consistent communication with potential and current investors?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "What solutions help me manage confidential documents across different client engagements?",
+      "type": "missing",
+      "persona": "Investment Advisor"
+    },
+    {
+      "text": "Can I customize access permissions for different participants in a transaction?",
+      "type": "missing",
+      "persona": "Investment Advisor"
+    },
+    {
+      "text": "How do I streamline due diligence processes across complex investment scenarios?",
+      "type": "missing",
+      "persona": "Investment Advisor"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "techcrunch.com",
+      "domain": "techcrunch.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "bitcoinmagazine.com",
+      "domain": "bitcoinmagazine.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "research.glassdoor.com",
+      "domain": "research.glassdoor.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "venturebeat.com",
+      "domain": "venturebeat.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelograph.com",
+      "domain": "cointelograph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "hackernoon.com",
+      "domain": "hackernoon.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "claude": 28,
+    "deepseek": 50,
+    "openai": 50,
+    "gemini": 47
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "deal workspace",
+        "evidence": "No AI recognition of this specific term",
+        "priority": "HIGH"
+      },
+      {
+        "term": "private markets platform",
+        "evidence": "Inconsistent AI understanding",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "digital infrastructure",
+        "evidence": "Needs more contextual explanation",
+        "priority": "HIGH"
+      },
+      {
+        "term": "workflow automation",
+        "evidence": "Minimal AI comprehension of Nobon's specific approach",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Capital deal live in 15 minutes",
+        "site_context": "Rapid deployment promise",
+        "ai_uses": "Investment platform with unspecified setup time",
+        "ai_context": "Generic platform description"
+      },
+      {
+        "site_says": "No spreadsheets. No email threads.",
+        "site_context": "Eliminating manual processes",
+        "ai_uses": "Traditional investment management tools",
+        "ai_context": "Limited recognition of workflow innovation"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Project Developers",
+          "note": "Primary target with 20% visibility"
+        },
+        {
+          "name": "Fund Managers",
+          "note": "Strong platform fit"
+        },
+        {
+          "name": "Institutional Investors",
+          "note": "Key target segment"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Emerging Market Investors",
+          "note": "15% competitor coverage"
+        },
+        {
+          "name": "Blockchain Investment Teams",
+          "note": "10% current market penetration"
+        },
+        {
+          "name": "International DFIs",
+          "note": "Underserved with 7.5% current visibility"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "End-to-end deal management platform",
+        "Automated workflow with e-signatures",
+        "Real-time investor tracking",
+        "Network syndication capabilities"
+      ],
+      "opportunities": [
+        "Expand blockchain investment tools",
+        "Create more comparative content against competitors",
+        "Develop vertical-specific landing pages",
+        "Enhance AI search visibility"
+      ],
+      "gaps": [
+        "Limited AI search recognition",
+        "Inconsistent competitor positioning",
+        "Unclear differentiation from traditional platforms"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create comprehensive 'Private Markets Digital Transformation' whitepaper",
+        "Develop detailed competitor comparison guides",
+        "Produce technical deep-dive content on workflow automation",
+        "Generate case studies highlighting unique platform capabilities",
+        "Build targeted segment-specific resource libraries"
+      ],
+      "link_building": [
+        "Guest post on investment technology platforms",
+        "Collaborate with angellist and seedinvest for cross-promotion",
+        "Create linkable assets targeting blockchain investment ecosystem",
+        "Engage with industry podcasts and webinars",
+        "Develop strategic partnerships with investment networks"
+      ],
+      "quick_wins": [
+        "Optimize page metadata for AI search visibility",
+        "Refine homepage language for clearer AI comprehension",
+        "Update competitor keywords and terminology",
+        "Implement structured data markup",
+        "Create dedicated competitor comparison pages"
+      ]
+    }
+  }
+}
