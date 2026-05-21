@@ -6,7 +6,7 @@ const BOTSEE_API_KEY = process.env.BOTSEE_API_KEY;
 const BOTSEE_BASE_URL = 'https://www.botsee.io';
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 const ACCESS_CODE_PATTERN = /^\d{8}$/;
-const TELEGRAM_HANDLE_PATTERN = /^@?[a-zA-Z0-9_]{5,32}$/;
+const TELEGRAM_HANDLE_PATTERN = /^@?[a-zA-Z0-9_]{4,32}$/;
 
 const WEB3_QUESTIONS_POOL = [
   "What Web3 gaming platforms let indie developers monetize early with play-to-earn models?",
