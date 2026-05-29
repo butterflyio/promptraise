@@ -743,21 +743,6 @@ class OpenRouterBatchClient:
             own_data["appearance_percentage"] = round((brand_mention_count / total) * 100, 1)
             own_data["avg_rank"] = round(brand_rank_sum / brand_mention_count, 1) if brand_rank_sum > 0 else None
 
-        # BUG FIX: Also count brand mentions from the brand_mentioned field in responses.
-        brand_mention_count = 0
-        brand_rank_sum = 0
-        for resp in responses:
-            if resp.get("brand_mentioned"):
-                brand_mention_count += 1
-                rank = resp.get("brand_rank")
-                if rank is not None and rank > 0:
-                    brand_rank_sum += rank
-
-        if brand_mention_count > 0:
-            own_mentioned = True
-            own_data["appearance_percentage"] = round((brand_mention_count / total) * 100, 1)
-            own_data["avg_rank"] = round(brand_rank_sum / brand_mention_count, 1) if brand_rank_sum > 0 else None
-
         by_ct = {}
         ct_response_counts = {}
         for resp in responses:
