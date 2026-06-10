@@ -1,0 +1,1457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Decurity AI Visibility Report</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <style>
+        @font-face {
+            font-family: 'Neutral Sans';
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSansVF.woff2') format('woff2-variations');
+            font-weight: 400 900;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Neutral Sans';
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Regular.woff2') format('woff2');
+            font-weight: 400;
+            font-style: normal;
+            font-display: swap;
+        }
+        @font-face {
+            font-family: 'Neutral Sans';
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Bold.woff2') format('woff2');
+            font-weight: 700;
+            font-style: normal;
+            font-display: swap;
+        }
+
+        :root {
+            --primary: #67FF67;
+            --brand-green: #3D6944;
+            --success: #67FF67;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+            --bg-dark: #0F0F0F;
+            --bg-card: #242628;
+            --bg-card-hover: #2D2F32;
+            --text-primary: #DEDCD7;
+            --text-secondary: #C9CDD2;
+            --border: #3A3C40;
+            --muted: #C9CDD2;
+        }
+
+        [data-theme="light"] {
+            --bg-dark: #F0EFEB;
+            --bg-card: #F0EFEB;
+            --bg-card-hover: #E4E3DF;
+            --text-primary: #0F0F0F;
+            --text-secondary: #6B6B6B;
+            --border: #D4D3CF;
+            --muted: #C9CDD2;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Neutral Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .dashboard { max-width: 1600px; margin: 0 auto; padding: 2rem; }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-left h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-left p { color: var(--text-secondary); font-size: 0.9rem; margin-top: 0.25rem; }
+        .header-actions { display: flex; gap: 0.75rem; align-items: center; }
+
+        .btn {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.6rem 1rem; border-radius: 0.5rem;
+            font-size: 0.85rem; font-weight: 500;
+            cursor: pointer; transition: all 0.2s; border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            color: white;
+        }
+        .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 4px 15px rgba(139, 92, 246, 0.4); }
+
+        .btn-secondary { background: var(--bg-card); color: var(--text-primary); border: 1px solid var(--border); }
+        .btn-secondary:hover { background: var(--bg-card-hover); }
+
+        .btn-icon { padding: 0.6rem; }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            align-items: center;
+        }
+
+        .score-gauge { position: relative; width: 180px; height: 180px; }
+        .score-gauge svg { transform: rotate(-90deg); }
+        .score-gauge-bg { fill: none; stroke: var(--border); stroke-width: 12; }
+        .score-gauge-fill {
+            fill: none;
+            stroke: url(#scoreGradient);
+            stroke-width: 12;
+            stroke-linecap: round;
+            stroke-dasharray: 440;
+            stroke-dashoffset: 440;
+            transition: stroke-dashoffset 2s ease-out;
+        }
+
+        .score-gauge-text {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .score-gauge-text .score {
+            font-size: 3rem; font-weight: 700;
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .score-gauge-text .label { font-size: 0.85rem; color: var(--text-secondary); }
+
+        .hero-details { display: flex; flex-direction: column; gap: 1rem; }
+
+        .score-status {
+            display: inline-flex; align-items: center; gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            border-radius: 9999px;
+            color: var(--danger);
+            font-size: 0.9rem; font-weight: 600; width: fit-content;
+        }
+
+        .score-comparison {
+            display: flex; gap: 2rem; padding: 1rem;
+            background: var(--bg-card);
+            border-radius: 0.75rem;
+            border: 1px solid var(--border);
+        }
+
+        .comparison-item { text-align: center; }
+        .comparison-item .value { font-size: 1.5rem; font-weight: 700; }
+        .comparison-item .value.up { color: var(--success); }
+        .comparison-item .value.down { color: var(--danger); }
+        .comparison-item .label { font-size: 0.75rem; color: var(--text-secondary); }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            border-color: var(--primary);
+        }
+        .stat-card .label {
+            color: var(--text-secondary); font-size: 0.85rem;
+            margin-bottom: 0.5rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .stat-card .value { font-size: 2rem; font-weight: 700; color: var(--text-primary); }
+        .stat-card .value.brand {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .stat-card .sub { color: var(--text-secondary); font-size: 0.8rem; margin-top: 0.25rem; }
+
+        .type-tabs {
+            display: flex; gap: 1rem; margin-bottom: 2rem;
+        }
+
+        .type-tab {
+            flex: 1;
+            display: flex; align-items: center; justify-content: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2rem;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 1rem;
+            cursor: pointer;
+            font-size: 1rem; font-weight: 600;
+            transition: all 0.3s;
+            color: var(--text-primary);
+        }
+         .type-tab:hover { border-color: var(--primary); background: var(--bg-card-hover); }
+        .type-tab.active {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            border-color: transparent;
+            color: white;
+            box-shadow: 0 8px 25px rgba(139, 92, 246, 0.3);
+        }
+
+        .type-content { display: none; }
+        .type-content.active { display: block; }
+
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .grid-3 { display: grid; grid-template-columns: 1fr 2fr; gap: 1.5rem; margin-bottom: 2rem; }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+        }
+        .card:hover { box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); }
+
+        .card-header {
+            display: flex; justify-content: space-between; align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        .card-title {
+            font-size: 1.1rem; font-weight: 600;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+
+        .chart-container {
+            position: relative;
+            height: 320px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        .tag-own { background: rgba(103, 255, 103, 0.2); color: var(--primary); }
+        .tag-competitor { background: rgba(100, 116, 139, 0.2); color: var(--text-secondary); }
+
+        .data-note {
+            margin-top: 0.75rem;
+            padding: 0.5rem 0.75rem;
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+            border-radius: 0.5rem;
+            font-size: 0.7rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
+        .section-title {
+            font-size: 1.25rem; font-weight: 600;
+            color: var(--brand-green);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid var(--primary);
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+
+        .competitor-table { width: 100%; border-collapse: collapse; }
+        .competitor-table th, .competitor-table td {
+            padding: 1rem; text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .competitor-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .competitor-table tr:hover { background: var(--bg-card-hover); }
+
+        .competitor-name { display: flex; align-items: center; gap: 0.75rem; }
+        .competitor-logo {
+            width: 36px; height: 36px;
+            border-radius: 8px;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: 700; font-size: 0.85rem;
+            background: var(--bg-dark);
+        }
+
+        .bar { height: 10px; background: var(--bg-dark); border-radius: 5px; overflow: hidden; }
+        .bar-fill { height: 100%; border-radius: 5px; transition: width 0.8s ease; }
+
+        .provider-badges { display: flex; gap: 0.4rem; flex-wrap: wrap; }
+        .provider-badge {
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.65rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+         .provider-badge.gemini { background: #f59e0b; color: #0F0F0F; }
+         .provider-badge.claude { background: #3D6944; color: #DEDCD7; }
+         .provider-badge.openai-search, .provider-badge.openai { background: #ef4444; color: #FFFFFF; }
+         .provider-badge.deepseek { background: #67FF67; color: #0F0F0F; }
+
+        .rank-badge {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            border-radius: 9999px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .rank-1 { background: #67FF67; color: #0F0F0F; }
+        .rank-2 { background: #C9CDD2; color: #0F0F0F; }
+        .rank-3 { background: #f97316; color: #0F0F0F; }
+        .rank-other { background: var(--bg-card-hover); color: var(--text-secondary); }
+
+        .keywords-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; }
+        .keywords-wrapper { position: relative; }
+        .keywords-nav {
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .kw-btn {
+            background: var(--bg-dark-hover); border: 1px solid var(--border);
+            color: var(--text-primary); width: 28px; height: 28px;
+            border-radius: 6px; cursor: pointer; font-size: 1rem;
+            display: flex; align-items: center; justify-content: center;
+            transition: background 0.2s;
+        }
+        .kw-btn:hover { background: var(--border); }
+        .kw-btn:disabled { opacity: 0.3; cursor: default; }
+        .kw-counter { font-size: 0.75rem; color: var(--text-secondary); min-width: 60px; text-align: center; }
+        .keyword-tag {
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            padding: 0.75rem 1rem;
+            border-radius: 0.75rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            display: flex; justify-content: space-between; align-items: center;
+        }
+         .keyword-tag:hover { border-color: var(--primary); transform: translateX(4px); }
+        .keyword-tag .text {
+            flex: 1;
+            overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+            margin-right: 0.5rem;
+        }
+        .keyword-tag .count {
+             background: var(--primary); color: #0F0F0F;
+            padding: 0.2rem 0.5rem;
+            border-radius: 9999px;
+            font-size: 0.7rem; font-weight: 600;
+            min-width: 24px; text-align: center;
+        }
+
+        .sources-list { max-height: 320px; overflow-y: auto; }
+        .source-item {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+            transition: background 0.2s;
+        }
+        .source-item:hover { background: var(--bg-card-hover); }
+        .source-item:last-child { border-bottom: none; }
+        .source-info { flex: 1; min-width: 0; }
+        .source-name { font-weight: 500; font-size: 0.9rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .source-url { color: var(--text-secondary); font-size: 0.75rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .source-mentions {
+            background: linear-gradient(135deg, var(--primary), var(--brand-green));
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.85rem; font-weight: 600;
+            min-width: 45px; text-align: center;
+        }
+
+        .opportunity-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .opportunity-list { max-height: 300px; overflow-y: auto; }
+        .opportunity-item {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border: 1px solid var(--border);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+         .opportunity-item:hover { border-color: var(--primary); transform: translateX(4px); }
+        .opportunity-badge {
+            display: inline-block;
+            padding: 0.15rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.7rem; font-weight: 600;
+            margin-right: 0.5rem;
+        }
+        .badge-missing { background: rgba(239, 68, 68, 0.2); color: var(--danger); }
+        .badge-low-rank { background: rgba(245, 158, 11, 0.2); color: var(--warning); }
+         .badge-link { background: rgba(103, 255, 103, 0.2); color: var(--primary); }
+
+        .competitor-source {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+         .competitor-source:hover { border-color: var(--primary); transform: translateX(4px); }
+
+        .action-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .action-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+        .action-card:hover { transform: translateY(-4px); box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); }
+        .action-card-header {
+            display: flex; align-items: center; gap: 0.75rem;
+            margin-bottom: 1rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .action-card-header h3 { font-size: 1rem; }
+        .action-accent {
+            position: absolute; left: 0; top: 0; bottom: 0;
+            width: 4px; border-radius: 2px;
+        }
+         .action-accent.content { background: var(--primary); }
+        .action-accent.links { background: var(--warning); }
+        .action-accent.wins { background: var(--success); }
+
+        .action-card ul { list-style: none; padding: 0; }
+        .action-card ul li {
+            padding: 0.5rem 0;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            border-bottom: 1px solid var(--border);
+            display: flex; align-items: flex-start; gap: 0.5rem;
+        }
+        .action-card ul li:last-child { border-bottom: none; }
+         .action-card ul li::before { content: "→"; color: var(--primary); font-weight: bold; }
+
+        .position-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-bottom: 2rem; }
+        .position-card {
+            background: var(--bg-card);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            border: 1px solid var(--border);
+        }
+        .position-card h3 {
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .position-card.strengths h3 { color: var(--success); }
+        .position-card.opportunities h3 { color: var(--warning); }
+        .position-card.gaps h3 { color: var(--danger); }
+
+        .position-list { list-style: none; padding: 0; }
+        .position-list li {
+            padding: 0.75rem;
+            background: var(--bg-dark);
+            border-radius: 0.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 0.85rem;
+        }
+        .position-list li:last-child { margin-bottom: 0; }
+
+        .gap-table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+        .gap-table th, .gap-table td {
+            padding: 1rem; text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        .gap-table th {
+            color: var(--text-secondary);
+            font-weight: 500;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            background: var(--bg-dark);
+        }
+        .gap-table tr:hover { background: var(--bg-card-hover); }
+        .gap-table .term { font-weight: 600; color: var(--danger); }
+        .gap-table .evidence { color: var(--text-secondary); font-size: 0.85rem; }
+
+        .priority-high { color: var(--danger); font-size: 0.75rem; font-weight: 600; }
+        .priority-medium { color: var(--warning); font-size: 0.75rem; font-weight: 600; }
+        .priority-low { color: var(--success); font-size: 0.75rem; font-weight: 600; }
+
+        .segment-card {
+            background: rgba(239, 68, 68, 0.1);
+            border: 1px solid rgba(239, 68, 68, 0.3);
+            padding: 1rem;
+            border-radius: 0.75rem;
+            text-align: center;
+        }
+        .segment-card.positive {
+            background: rgba(16, 185, 129, 0.1);
+            border-color: rgba(16, 185, 129, 0.3);
+        }
+        .segment-card .segment-name { font-weight: 600; font-size: 0.9rem; margin-bottom: 0.25rem; }
+        .segment-card .segment-note { font-size: 0.75rem; color: var(--danger); }
+        .segment-card.positive .segment-note { color: var(--success); }
+
+        .language-box {
+            padding: 1rem;
+            border-radius: 0.75rem;
+            margin-bottom: 1rem;
+        }
+        .language-box.site {
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid rgba(16, 185, 129, 0.3);
+        }
+        .language-box.ai {
+            background: rgba(245, 158, 11, 0.1);
+            border: 1px solid rgba(245, 158, 11, 0.3);
+        }
+        .language-box .lang-label {
+            font-size: 0.75rem; font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .language-box.site .lang-label { color: var(--success); }
+        .language-box.ai .lang-label { color: var(--warning); }
+        .language-box .lang-value { font-weight: 600; margin-bottom: 0.5rem; }
+        .language-box.site .lang-value { color: var(--success); }
+        .language-box.ai .lang-value { color: var(--warning); }
+        .language-box .lang-context { font-size: 0.8rem; color: var(--text-secondary); }
+
+        .provider-chart-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .provider-chart { position: relative; height: 220px; }
+        .provider-legend { display: flex; flex-direction: column; gap: 1rem; }
+        .provider-legend-item { display: flex; align-items: center; gap: 0.75rem; }
+        .provider-legend-item .color { width: 16px; height: 16px; border-radius: 4px; }
+        .provider-legend-item .name { flex: 1; font-size: 0.9rem; }
+        .provider-legend-item .value { font-weight: 600; }
+
+        .footer {
+            margin-top: 3rem;
+            padding: 2rem;
+            border-radius: 1.5rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        @media (max-width: 1200px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .action-grid { grid-template-columns: 1fr; }
+            .position-grid { grid-template-columns: 1fr; }
+            .hero-section { grid-template-columns: 1fr; }
+            .provider-chart-container { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 768px) {
+            .dashboard { padding: 1rem; }
+            .header { flex-direction: column; gap: 1rem; align-items: flex-start; }
+            .grid-2, .grid-3, .opportunity-grid { grid-template-columns: 1fr; }
+            .keywords-grid { grid-template-columns: 1fr; }
+            .type-tabs { flex-direction: column; }
+            .chart-container { height: 250px; }
+            .stats-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard" id="dashboard">
+        <!-- Header -->
+        <div class="header">
+            <div class="header-left">
+                <h1>Decurity AI Visibility Report</h1>
+                <p>Site: www.decurity.io | Last updated: <span id="lastUpdated"></span></p>
+            </div>
+            <div class="header-actions">
+                <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
+                    <span id="themeIcon">🌙</span>
+                </button>
+                <button class="btn btn-primary" onclick="exportPDF()">
+                    <span>📥</span> Export PDF
+                </button>
+            </div>
+        </div>
+
+        <!-- Hero Score -->
+        <div class="hero-section">
+            <div class="score-gauge">
+                <svg width="180" height="180" viewBox="0 0 180 180">
+                    <defs>
+                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#67FF67"/>
+                            <stop offset="100%" style="stop-color:#3D6944"/>
+                        </linearGradient>
+                    </defs>
+                    <circle class="score-gauge-bg" cx="90" cy="90" r="70"/>
+                    <circle class="score-gauge-fill" id="scoreCircle" cx="90" cy="90" r="70"/>
+                </svg>
+                <div class="score-gauge-text">
+                    <div class="score" id="scoreNumber">0</div>
+                    <div class="label">/ 100</div>
+                </div>
+            </div>
+            <div class="hero-details">
+                <div class="score-status" id="scoreStatusBadge">
+                    <span>⚠️</span>
+                    <span id="scoreStatusText">Zero AI Visibility</span>
+                </div>
+                <div class="score-comparison" id="heroComparison"></div>
+            </div>
+        </div>
+
+        <!-- Stats Grid -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="label">Total Responses</div>
+                <div class="value">80</div>
+                <div class="sub">40 per customer type</div>
+            </div>
+            <div class="stat-card">
+                <div class="label">Unique Competitors</div>
+                <div class="value">30</div>
+                <div class="sub">Across all segments</div>
+            </div>
+            <div class="stat-card">
+                <div class="label" id="appearanceLabel">Decurity Appearance</div>
+                <div class="value brand" id="appearanceValue">0%</div>
+                <div class="sub" id="appearanceSub">Site NOT mentioned in AI responses</div>
+            </div>
+        </div>
+
+        <!-- Segment Tabs -->
+        <div class="type-tabs">
+            <button class="type-tab active" onclick="showType('type1')">
+                <span>Enterprise Technology Security</span>
+            </button>
+            <button class="type-tab" onclick="showType('type2')">
+                <span>Emerging Technology Innovators</span>
+            </button>
+        </div>
+
+        <!-- Customer Type 1 -->
+        <div id="type1" class="type-content active">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice</div>
+                        <span class="tag tag-competitor">Top 10 Competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type1SovChart"></canvas>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank</div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type1RankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-title">Top Competitors — Enterprise Technology Security</div>
+                <div style="overflow-x: auto;">
+                    <table class="competitor-table" style="min-width: 600px;">
+                        <thead>
+                            <tr>
+                                <th>Competitor</th>
+                                <th>Appearance</th>
+                                <th>Avg Rank</th>
+                                <th>Providers</th>
+                            </tr>
+                        </thead>
+                        <tbody id="type1Table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Customer Type 2 -->
+        <div id="type2" class="type-content">
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Share of Voice</div>
+                        <span class="tag tag-competitor">Top 10 Competitors</span>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type2SovChart"></canvas>
+                    </div>
+                    <div class="data-note" id="type2DataNote" style="display:none;">
+                        Share of Voice percentages reflect the same aggregated BotSee analysis for this site.
+                        The provider ordering and source URLs differ per segment.
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-title">Average Rank</div>
+                    </div>
+                    <div class="chart-container">
+                        <canvas id="type2RankChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card" style="margin-top: 2rem;">
+                <div class="card-title">Top Competitors — Emerging Technology Innovators</div>
+                <div style="overflow-x: auto;">
+                    <table class="competitor-table" style="min-width: 600px;">
+                        <thead>
+                            <tr>
+                                <th>Competitor</th>
+                                <th>Appearance</th>
+                                <th>Avg Rank</th>
+                                <th>Providers</th>
+                            </tr>
+                        </thead>
+                        <tbody id="type2Table"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Keywords & Provider Chart -->
+        <div class="grid-3" style="margin-top: 2rem;">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Top Keywords by Frequency</div>
+                    <div class="keywords-nav" id="keywordsNav">
+                        <button class="kw-btn" id="kwPrev" onclick="shiftKeywords(-1)">‹</button>
+                        <span class="kw-counter" id="kwCounter"></span>
+                        <button class="kw-btn" id="kwNext" onclick="shiftKeywords(1)">›</button>
+                    </div>
+                </div>
+                <div class="keywords-wrapper">
+                    <div class="keywords-grid" id="keywordsList"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">AI Provider Coverage</div>
+                </div>
+                <div class="provider-chart-container">
+                    <div class="provider-chart">
+                        <canvas id="providerChart"></canvas>
+                    </div>
+                    <div class="provider-legend" id="providerLegend"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Sources -->
+        <div class="card" style="margin-top: 2rem;">
+            <div class="card-header">
+                <div class="card-title">Top Sources Referenced</div>
+            </div>
+            <div class="sources-list" id="sourcesList"></div>
+        </div>
+
+        <!-- Opportunities -->
+        <h2 class="section-title">Opportunities</h2>
+        <div class="opportunity-grid">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Keyword Opportunities</div>
+                    <span class="tag tag-competitor">Where Decurity Ranks Poorly</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    Queries where Decurity is missing or ranks poorly
+                </p>
+                <div class="opportunity-list" id="keywordOpportunities"></div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">Source Opportunities</div>
+                    <span class="tag tag-competitor">Link-Building Targets</span>
+                </div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
+                    Competitor domains AI cites — pursue backlinks
+                </p>
+                <div id="sourceOpportunities"></div>
+            </div>
+        </div>
+
+        <!-- Terminology Gap -->
+        <div class="card" style="margin-bottom: 2rem;">
+            <div class="card-title">Terminology Gap Analysis</div>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
+                Keywords and terms where Decurity is missing from AI responses.
+            </p>
+            <table class="gap-table">
+                <thead>
+                    <tr>
+                        <th>Missing Term</th>
+                        <th>Evidence</th>
+                        <th>Priority</th>
+                    </tr>
+                </thead>
+                <tbody id="terminologyGapBody"></tbody>
+            </table>
+        </div>
+
+        <!-- Audience Segments + Language Gap -->
+        <div class="grid-2" style="margin-bottom: 2rem;">
+            <div class="card">
+                <div class="card-title">Audience Segments</div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                    AI query analysis — segments addressed vs. opportunity gaps.
+                </p>
+                <div style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--success); font-size: 1rem; margin-bottom: 1rem;">Currently Addressed</h4>
+                    <div id="segmentsAddressed"></div>
+                </div>
+                <div>
+                    <h4 style="color: var(--danger); font-size: 1rem; margin-bottom: 1rem;">Opportunity Gap</h4>
+                    <div class="opportunity-gap-grid" id="segmentsGap"
+                         style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;"></div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-title">Language Gap: Homepage vs AI Engines</div>
+                <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1.5rem;">
+                    How the site describes itself vs. how AI engines reference the space.
+                </p>
+                <div id="languageGapContainer"></div>
+            </div>
+        </div>
+
+        <!-- Competitive Position -->
+        <h2 class="section-title">Decurity's Competitive Position</h2>
+        <div class="position-grid">
+            <div class="position-card strengths">
+                <h3>Strengths</h3>
+                <ul class="position-list" id="positionStrengths"></ul>
+            </div>
+            <div class="position-card opportunities">
+                <h3>Opportunities</h3>
+                <ul class="position-list" id="positionOpportunities"></ul>
+            </div>
+            <div class="position-card gaps">
+                <h3>Gaps</h3>
+                <ul class="position-list" id="positionGaps"></ul>
+            </div>
+        </div>
+
+        <!-- Action Recommendations -->
+        <h2 class="section-title">Content & Action Recommendations</h2>
+        <div class="action-grid">
+            <div class="action-card">
+                <div class="action-accent content"></div>
+                <div class="action-card-header">
+                    <h3>Content Priorities</h3>
+                </div>
+                <ul id="actionContent"></ul>
+            </div>
+            <div class="action-card">
+                <div class="action-accent links"></div>
+                <div class="action-card-header">
+                    <h3>Link-Building Priorities</h3>
+                </div>
+                <ul id="actionLinks"></ul>
+            </div>
+            <div class="action-card">
+                <div class="action-accent wins"></div>
+                <div class="action-card-header">
+                    <h3>Quick Wins</h3>
+                </div>
+                <ul id="actionWins"></ul>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
+                <p style="color: var(--text-secondary);">Analysis ID: openrouter-www-decurity</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ============ DATA (injected by renderer) ============
+        const DASHBOARD_DATA = {"site":{"name":"Decurity","url":"https://www.decurity.io","domain":"www.decurity.io","slug":"www-decurity","analysis_id":"openrouter-www-decurity","site_uuid":"openrouter-batch","generated_at":"June 10, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":0,"score_status":"Zero AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":30,"own_mentioned":true,"own_appearance_pct":0,"own_appearance_note":"Site NOT mentioned in AI responses","hero_comparison":[{"value":"0%","label":"Decurity Visibility","trend":"down"},{"value":"57.5%","label":"OpenZeppelin (Leader)","trend":""},{"value":"57.5%","label":"openzeppelin (#2)","trend":""}]},"customer_types":[{"name":"Enterprise Technology Security","uuid":null,"competitors":[{"name":"OpenZeppelin","appearance":52.5,"rank":21.19,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"openzeppelin","appearance":52.5,"rank":21.19,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"CertiK","appearance":52.5,"rank":16.05,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"certik","appearance":52.5,"rank":16.05,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"trail of bits","appearance":42.5,"rank":19.59,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"quantstamp","appearance":42.5,"rank":18.06,"providers":["DeepSeek","Gemini","OpenAI"],"isOwn":false,"url":null},{"name":"consensys diligence","appearance":40.0,"rank":21.62,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"Hacken","appearance":15.0,"rank":19.83,"providers":["DeepSeek","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"SlowMist","appearance":12.5,"rank":15.2,"providers":["DeepSeek","Gemini","OpenAI"],"isOwn":false,"url":null},{"name":"hacken","appearance":12.5,"rank":19.6,"providers":["DeepSeek","Claude","OpenAI"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"DeepSeek":0,"Gemini":1,"Claude":2,"OpenAI":3},"has_distinct_competitor_data":true,"data_note":null},{"name":"Emerging Technology Innovators","uuid":null,"competitors":[{"name":"OpenZeppelin","appearance":57.5,"rank":17.78,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"openzeppelin","appearance":57.5,"rank":17.78,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"trail of bits","appearance":45.0,"rank":15.89,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"CertiK","appearance":42.5,"rank":14.53,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"consensys diligence","appearance":42.5,"rank":19.06,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"certik","appearance":42.5,"rank":14.53,"providers":["DeepSeek","Gemini","Claude","OpenAI"],"isOwn":false,"url":null},{"name":"quantstamp","appearance":35.0,"rank":17.43,"providers":["DeepSeek","Gemini","OpenAI"],"isOwn":false,"url":null},{"name":"certora","appearance":27.5,"rank":15.18,"providers":["DeepSeek","Gemini","Claude"],"isOwn":false,"url":null},{"name":"PeckShield","appearance":17.5,"rank":15.29,"providers":["DeepSeek","Gemini","OpenAI"],"isOwn":false,"url":null},{"name":"peckshield","appearance":17.5,"rank":15.29,"providers":["DeepSeek","Gemini","OpenAI"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"DeepSeek":0,"Gemini":1,"Claude":2,"OpenAI":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"security","count":225},{"text":"smart","count":151},{"text":"name","count":139},{"text":"vulnerabilities","count":137},{"text":"tools","count":112},{"text":"blockchain","count":101},{"text":"contract","count":101},{"text":"analysis","count":95},{"text":"testing","count":92},{"text":"smart contract","count":83}],"sources":[{"name":"hackerone","url":"https://hackerone","mentions":1},{"name":"securify.chainsecurity","url":"https://securify.chainsecurity","mentions":1},{"name":"openzeppelin.com","url":"https://openzeppelin.com","mentions":1},{"name":"immunefi.com","url":"https://immunefi.com","mentions":1},{"name":"trailofbits","url":"https://trailofbits","mentions":1},{"name":"mythx.io","url":"https://mythx.io","mentions":1},{"name":"quantstamp.com","url":"https://quantstamp.com","mentions":1},{"name":"certik","url":"https://certik","mentions":1},{"name":"consensys.net","url":"https://consensys.net","mentions":1},{"name":"owasp.org","url":"https://owasp.org","mentions":1}],"keyword_opportunities":[{"text":"How can I systematically assess potential vulnerabilities in our distributed application architecture?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"What specific testing methodologies do you use to identify potential system compromise scenarios?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"Can you compare your security assessment approach against traditional software vulnerability scanning?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"What emergency response capabilities do you offer if a critical security issue is discovered?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"Would your team be able to provide a comprehensive risk analysis for our upcoming platform launch?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"What specific protocols do you recommend for securing multi-layer distributed systems?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"Can you provide a detailed breakdown of potential attack vectors in modular software architectures?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"What continuous monitoring strategies would you suggest for preventing unauthorized system interactions?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"How quickly can your team conduct a comprehensive security review of a complex software platform?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"What initial security assessments would you recommend for a newly developed software platform?","type":"missing","persona":"Technical Startup Founder"},{"text":"How can I proactively identify potential vulnerabilities before public launch?","type":"missing","persona":"Technical Startup Founder"},{"text":"What are the most common critical errors emerging technology teams make in system design?","type":"missing","persona":"Technical Startup Founder"},{"text":"Can you help validate the architectural integrity of our proposed system design?","type":"missing","persona":"Technical Startup Founder"},{"text":"What sophisticated testing approaches do you use for complex computational systems?","type":"missing","persona":"Research Protocol Developer"},{"text":"How do you systematically analyze potential interaction risks between different software modules?","type":"missing","persona":"Research Protocol Developer"}],"source_opportunities":[{"name":"cointelegraph.com","domain":"cointelegraph.com","type":"competitor","mentions":0},{"name":"decrypt.co","domain":"decrypt.co","type":"competitor","mentions":0},{"name":"defillama.com","domain":"defillama.com","type":"competitor","mentions":0},{"name":"consensys.net/blog","domain":"consensys.net","type":"competitor","mentions":0},{"name":"cryptonews.com","domain":"cryptonews.com","type":"competitor","mentions":0},{"name":"chainlink.com/research","domain":"chainlink.com","type":"competitor","mentions":0},{"name":"coindesk.com","domain":"coindesk.com","type":"competitor","mentions":0},{"name":"hackernoon.com","domain":"hackernoon.com","type":"competitor","mentions":0},{"name":"encrypted.xyz","domain":"encrypted.xyz","type":"competitor","mentions":0},{"name":"blockworks.co","domain":"blockworks.co","type":"competitor","mentions":0}],"provider_coverage":{"deepseek":50,"gemini":45,"claude":38,"openai":48},"insights":{"terminology_gap":[{"term":"web3 security monitoring","evidence":"Low AI recognition compared to blockchain security","priority":"HIGH"},{"term":"Decentralized Finance Systems Application Security","evidence":"Overly complex phrasing reduces search clarity","priority":"HIGH"},{"term":"Invariant Development","evidence":"Specialized term with minimal AI understanding","priority":"MEDIUM"},{"term":"OPSEC consulting","evidence":"Technical jargon limiting broader search visibility","priority":"MEDIUM"},{"term":"dApp security","evidence":"Niche terminology with fragmented AI interpretation","priority":"LOW"}],"language_gap":[{"site_says":"Tier-1 web3 security audit firm","site_context":"Self-promotional positioning","ai_uses":"Blockchain security services","ai_context":"More generic, less branded description"},{"site_says":"Ethical hackers who won hardest CTF competitions","site_context":"Credential highlighting","ai_uses":"Security research and vulnerability assessment","ai_context":"Focus on capabilities over achievements"}],"audience_segments":{"addressed":[{"name":"Enterprise Technology Security","note":"Direct service offering"},{"name":"DeFi Protocol Developers","note":"Targeted smart contract audit services"}],"opportunity_gap":[{"name":"Venture Capital","note":"Emerging market with 40% competitor coverage"},{"name":"Layer 1 Blockchain Teams","note":"Limited competitive presence at 35%"},{"name":"Emerging Web3 Startups","note":"Underserved segment with 25% market visibility"}]},"position":{"strengths":["Comprehensive security service spectrum","Proven track record with named DeFi protocols","Multi-blockchain expertise (Ethereum, Solana, Aptos)","Strong client testimonials from recognized brands"],"opportunities":["Expand risk assessment for VC/PE funds","Develop more educational content on security methodologies","Create specialized service packages for emerging blockchain sectors"],"gaps":["Limited AI search engine visibility","Inconsistent terminology across technical descriptions","Lack of clear differentiation from top competitors like OpenZeppelin and CertiK"]},"action_items":{"content_priorities":["Create comprehensive 'Web3 Security Explained' guide","Develop comparison pages: 'Decurity vs Top Blockchain Auditors'","Produce technical deep-dive whitepapers on invariant testing","Generate video content explaining complex security concepts","Build case study library with detailed protocol security transformations"],"link_building":["Guest post on top blockchain and cybersecurity platforms","Engage with web3 security research communities","Collaborate with blockchain accelerator programs","Create linkable technical resources on security methodologies","Develop partnerships with blockchain development platforms"],"quick_wins":["Refine homepage SEO keywords","Update meta descriptions with precise security terminology","Implement schema markup for security services","Optimize testimonial page for search visibility","Create targeted landing pages for specific blockchain ecosystems"]}}};
+
+        // ============ THEME ============
+        function toggleTheme() {
+            const body = document.body;
+            const themeIcon = document.getElementById('themeIcon');
+            if (body.getAttribute('data-theme') === 'light') {
+                body.removeAttribute('data-theme');
+                themeIcon.textContent = '🌙';
+            } else {
+                body.setAttribute('data-theme', 'light');
+                themeIcon.textContent = '☀️';
+            }
+        }
+
+        // ============ PDF EXPORT ============
+        function exportPDF() {
+            const btn = event.target.closest('.btn');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span>⏳</span> Generating...';
+            btn.disabled = true;
+
+            const element = document.getElementById('dashboard');
+            const opt = {
+                margin: [10, 10, 10, 10],
+                filename: DASHBOARD_DATA.site.slug + '-ai-visibility-report.pdf',
+                image: { type: 'jpeg', quality: 0.95 },
+                html2canvas: { scale: 2, useCORS: true, letterRendering: true, logging: false },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+                pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+            };
+
+            html2pdf().set(opt).from(element).save().then(() => {
+                btn.innerHTML = '<span>✅</span> Downloaded!';
+                setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+            }).catch(err => {
+                btn.innerHTML = '<span>❌</span> Failed';
+                setTimeout(() => { btn.innerHTML = originalText; btn.disabled = false; }, 2000);
+                console.error('PDF export error:', err);
+            });
+        }
+
+        // ============ TAB SWITCHING ============
+        function showType(type) {
+            document.querySelectorAll('.type-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.type-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(type).classList.add('active');
+            event.target.closest('.type-tab').classList.add('active');
+
+            setTimeout(() => {
+                ['type1SovChart', 'type1RankChart', 'type2SovChart', 'type2RankChart'].forEach(id => {
+                    const chart = Chart.getChart(id);
+                    if (chart) { chart.resize(); chart.update(); }
+                });
+            }, 100);
+        }
+
+        // ============ HERO SCORE ANIMATION ============
+        function animateScore(target) {
+            const scoreEl = document.getElementById('scoreNumber');
+            const circle = document.getElementById('scoreCircle');
+            const offset = 440 - (440 * target) / 100;
+
+            let current = 0;
+            const increment = Math.max(target / 50, 1);
+            function update() {
+                current += increment;
+                if (current < target) {
+                    scoreEl.textContent = Math.round(current);
+                    requestAnimationFrame(update);
+                } else {
+                    scoreEl.textContent = target;
+                }
+            }
+
+            setTimeout(() => {
+                update();
+                circle.style.strokeDashoffset = offset;
+            }, 500);
+        }
+
+        // ============ HERO COMPARISON ============
+        function renderHeroComparison() {
+            const container = document.getElementById('heroComparison');
+            const items = DASHBOARD_DATA.summary.hero_comparison || [];
+            container.innerHTML = items.map(item => `
+                <div class="comparison-item">
+                    <div class="value ${item.trend || ''}">${item.value}</div>
+                    <div class="label">${item.label}</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ CUSTOMER TYPE TABLES ============
+        function getColorClass(name, index) {
+            const palette = ['#67FF67', '#3D6944', '#C9CDD2', '#f97316', '#67FF67',
+                             '#3D6944', '#C9CDD2', '#f97316', '#67FF67', '#3D6944'];
+            return palette[index % palette.length];
+        }
+
+        function renderCompetitorTable(customerType, tableId) {
+            const tbody = document.getElementById(tableId);
+            if (!customerType.competitors || customerType.competitors.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: #999; padding: 2rem;">No competitor data</td></tr>';
+                return;
+            }
+            tbody.innerHTML = customerType.competitors.map((c, idx) => {
+                const appearance = c.appearance_percentage || c.appearance || 0;
+                const rank = c.avg_rank !== undefined && c.avg_rank !== null
+                    ? c.avg_rank
+                    : (c.rank !== undefined && c.rank !== null ? c.rank : null);
+                const rankValue = rank !== null ? Number(rank).toFixed(1) : 'N/A';
+                const rankClass = rank !== null
+                    ? (rank <= 1.5 ? 'rank-1' : rank <= 2.5 ? 'rank-2' : rank <= 3.5 ? 'rank-3' : 'rank-other')
+                    : 'rank-other';
+                const isOwn = c.is_own || c.isOwn || false;
+                const providers = c.providers || [];
+                return `
+                <tr>
+                    <td>
+                        <div class="competitor-name">
+                            <div class="competitor-logo" style="background: ${isOwn
+                                ? 'linear-gradient(135deg, var(--primary), var(--brand-green))'
+                                : 'var(--bg-dark)'}">
+                                ${(c.name || '?').charAt(0)}
+                            </div>
+                            <div>
+                                ${c.name}
+                                ${isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div class="bar" style="width: 100px;">
+                                <div class="bar-fill" style="width: ${appearance}%; background: ${isOwn
+                                    ? 'linear-gradient(90deg, var(--primary), var(--brand-green))'
+                                    : getColorClass(c.name, idx)}"></div>
+                            </div>
+                            <span style="min-width: 45px;">${appearance.toFixed(1)}%</span>
+                        </div>
+                    </td>
+                    <td>
+                        <span class="rank-badge ${rankClass}">
+                            ${rankValue}
+                        </span>
+                    </td>
+                    <td>
+                        <div class="provider-badges">
+                            ${providers.map(p => `<span class="provider-badge ${p.toLowerCase()}">${p.replace('-search', '')}</span>`).join('')}
+                        </div>
+                    </td>
+                </tr>
+            `;
+            }).join('');
+        }
+
+        // ============ KEYWORDS SLIDER ============
+        const KEYWORDS_PAGE_SIZE = 12;
+        let keywordsPage = 0;
+
+        function shiftKeywords(delta) {
+            const total = DASHBOARD_DATA.keywords || [];
+            const totalPages = Math.ceil(total.length / KEYWORDS_PAGE_SIZE);
+            keywordsPage = Math.max(0, Math.min(keywordsPage + delta, totalPages - 1));
+            renderKeywordsPage();
+        }
+
+        function renderKeywordsPage() {
+            const container = document.getElementById('keywordsList');
+            const keywords = DASHBOARD_DATA.keywords || [];
+            if (!keywords.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); grid-column: span 2;">No keywords available.</div>';
+                return;
+            }
+            const start = keywordsPage * KEYWORDS_PAGE_SIZE;
+            const page = keywords.slice(start, start + KEYWORDS_PAGE_SIZE);
+            container.innerHTML = page.map(k => `
+                <div class="keyword-tag">
+                    <span class="text" title="${k.text}">${k.text.length > 40 ? k.text.substring(0, 40) + '...' : k.text}</span>
+                    <span class="count">${k.count}x</span>
+                </div>
+            `).join('');
+
+            const totalPages = Math.ceil(keywords.length / KEYWORDS_PAGE_SIZE);
+            const from = start + 1;
+            const to = Math.min(start + KEYWORDS_PAGE_SIZE, keywords.length);
+            document.getElementById('kwCounter').textContent = `${from}-${to} of ${keywords.length}`;
+            document.getElementById('kwPrev').disabled = keywordsPage === 0;
+            document.getElementById('kwNext').disabled = keywordsPage >= totalPages - 1;
+        }
+
+        function renderKeywords() {
+            keywordsPage = 0;
+            renderKeywordsPage();
+        }
+
+        // ============ SOURCES ============
+        function renderSources() {
+            const container = document.getElementById('sourcesList');
+            const sources = DASHBOARD_DATA.sources || [];
+            if (!sources.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 1rem;">No sources available.</div>';
+                return;
+            }
+            container.innerHTML = sources.slice(0, 10).map(s => `
+                <div class="source-item">
+                    <div class="source-info">
+                        <div class="source-name">${s.name}</div>
+                        <div class="source-url">${s.url}</div>
+                    </div>
+                    <div class="source-mentions">${s.mentions}x</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ OPPORTUNITIES ============
+        function renderKeywordOpportunities() {
+            const container = document.getElementById('keywordOpportunities');
+            const opps = DASHBOARD_DATA.keyword_opportunities || [];
+            if (!opps.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 1rem;">No keyword opportunities.</div>';
+                return;
+            }
+            container.innerHTML = opps.map(k => `
+                <div class="opportunity-item">
+                    <span class="opportunity-badge ${k.type === 'missing' ? 'badge-missing' : 'badge-low-rank'}">
+                        ${k.type === 'missing' ? 'Missing' : 'Rank > 3'}
+                    </span>
+                    ${k.text.length > 80 ? k.text.substring(0, 80) + '...' : k.text}
+                </div>
+            `).join('');
+        }
+
+        function renderSourceOpportunities() {
+            const container = document.getElementById('sourceOpportunities');
+            const opps = DASHBOARD_DATA.source_opportunities || [];
+            if (!opps.length) {
+                container.innerHTML = '<div style="color: var(--text-secondary); padding: 1rem;">No source opportunities.</div>';
+                return;
+            }
+            container.innerHTML = opps.map(s => `
+                <div class="competitor-source">
+                    <div>
+                        <div style="font-weight: 500;">${s.name}</div>
+                        <div style="color: var(--text-secondary); font-size: 0.75rem;">${s.domain}</div>
+                    </div>
+                    <span class="opportunity-badge badge-link">${s.type}</span>
+                </div>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: TERMINOLOGY GAP ============
+        function renderTerminologyGap() {
+            const tbody = document.getElementById('terminologyGapBody');
+            const rows = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.terminology_gap) || [];
+            if (!rows.length) {
+                tbody.innerHTML = '<tr><td colspan="3" style="color: var(--text-secondary);">No terminology gap data.</td></tr>';
+                return;
+            }
+            tbody.innerHTML = rows.map(r => `
+                <tr>
+                    <td class="term">${r.term}</td>
+                    <td class="evidence">${r.evidence}</td>
+                    <td><span class="priority-${(r.priority || 'MEDIUM').toLowerCase()}">${(r.priority || 'MEDIUM').toUpperCase()}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: AUDIENCE SEGMENTS ============
+        function renderAudienceSegments() {
+            const addressed = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.audience_segments && DASHBOARD_DATA.insights.audience_segments.addressed) || [];
+            const gap = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.audience_segments && DASHBOARD_DATA.insights.audience_segments.opportunity_gap) || [];
+
+            const addressedEl = document.getElementById('segmentsAddressed');
+            if (!addressed.length) {
+                addressedEl.innerHTML = '<p style="color: var(--text-secondary);">No audience segments currently addressed in AI responses.</p>';
+            } else {
+                addressedEl.innerHTML = `<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem;">
+                    ${addressed.map(s => `
+                        <div class="segment-card positive">
+                            <div class="segment-name">${s.name}</div>
+                            <div class="segment-note">${s.note || ''}</div>
+                        </div>
+                    `).join('')}
+                </div>`;
+            }
+
+            const gapEl = document.getElementById('segmentsGap');
+            gapEl.innerHTML = gap.map(s => `
+                <div class="segment-card">
+                    <div class="segment-name">${s.name}</div>
+                    <div class="segment-note">${s.note || ''}</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: LANGUAGE GAP ============
+        function renderLanguageGap() {
+            const container = document.getElementById('languageGapContainer');
+            const rows = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.language_gap) || [];
+            if (!rows.length) {
+                container.innerHTML = '<p style="color: var(--text-secondary);">No language gap data available.</p>';
+                return;
+            }
+            container.innerHTML = rows.map((r, i) => `
+                <div style="margin-bottom: ${i === rows.length - 1 ? '0' : '1.5rem'};">
+                    <div class="language-box site">
+                        <div class="lang-label">${DASHBOARD_DATA.site.domain} says</div>
+                        <div class="lang-value">${r.site_says}</div>
+                        <div class="lang-context">${r.site_context || ''}</div>
+                    </div>
+                    <div class="language-box ai">
+                        <div class="lang-label">AI engines use</div>
+                        <div class="lang-value">${r.ai_uses}</div>
+                        <div class="lang-context">${r.ai_context || ''}</div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // ============ INSIGHTS: POSITION ============
+        function renderPosition() {
+            const p = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.position) || {};
+            const toList = arr => (arr || []).map(x => `<li>${x}</li>`).join('') || '<li style="color: var(--text-secondary);">No items.</li>';
+            document.getElementById('positionStrengths').innerHTML = toList(p.strengths);
+            document.getElementById('positionOpportunities').innerHTML = toList(p.opportunities);
+            document.getElementById('positionGaps').innerHTML = toList(p.gaps);
+        }
+
+        // ============ INSIGHTS: ACTION ITEMS ============
+        function renderActionItems() {
+            const a = (DASHBOARD_DATA.insights && DASHBOARD_DATA.insights.action_items) || {};
+            const toList = arr => (arr || []).map(x => `<li>${x}</li>`).join('') || '<li style="color: var(--text-secondary);">No items.</li>';
+            document.getElementById('actionContent').innerHTML = toList(a.content_priorities);
+            document.getElementById('actionLinks').innerHTML = toList(a.link_building);
+            document.getElementById('actionWins').innerHTML = toList(a.quick_wins);
+        }
+
+        // ============ CHARTS ============
+        function initCharts() {
+            const commonBarOptions = {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: { legend: { display: false } },
+                scales: {
+                    x: { ticks: { color: 'var(--text-secondary)', font: { size: 10 } }, grid: { color: 'var(--border)' } },
+                    y: { ticks: { color: 'var(--text-secondary)' }, grid: { color: 'var(--border)' } }
+                }
+            };
+
+            const type1 = DASHBOARD_DATA.customer_types[0];
+            const type2 = DASHBOARD_DATA.customer_types[1];
+
+            function buildSovChart(canvasId, customerType, color) {
+                if (!customerType.competitors || customerType.competitors.length === 0) return;
+                const labels = customerType.competitors.slice(0, 10).map(c => c.name);
+                const data = customerType.competitors.slice(0, 10).map(c => c.appearance_percentage || c.appearance || 0);
+                const canvas = document.getElementById(canvasId);
+                canvas.height = 320;
+                new Chart(canvas, {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            data,
+                            backgroundColor: color + 'cc',
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        ...commonBarOptions,
+                        indexAxis: 'y',
+                        scales: {
+                            x: { ticks: { color: '#FFFFFF', font: { size: 10 } }, grid: { color: 'var(--border)' } },
+                            y: { ticks: { color: '#FFFFFF' }, grid: { color: 'var(--border)' } }
+                        }
+                    }
+                });
+            }
+
+            function buildRankChart(canvasId, customerType) {
+                if (!customerType.competitors || customerType.competitors.length === 0) return;
+                
+                // Filter: only include competitors with actual rank values
+                const competitorsWithRank = customerType.competitors
+                    .filter(c => {
+                        const rank = c.avg_rank !== undefined ? c.avg_rank : c.rank;
+                        return rank !== undefined && rank !== null && rank > 0;
+                    })
+                    .slice(0, 10);
+                
+                if (competitorsWithRank.length === 0) return; // No data to display
+                
+                const labels = competitorsWithRank.map(c => c.name);
+                const data = competitorsWithRank.map(c => c.avg_rank !== undefined ? c.avg_rank : (c.rank || 0));
+                const canvas = document.getElementById(canvasId);
+                canvas.height = 320;
+                new Chart(canvas, {
+                    type: 'bar',
+                    data: {
+                        labels,
+                        datasets: [{
+                            data,
+                            backgroundColor: data.map(r =>
+                                r <= 2 ? 'rgba(103, 255, 103, 0.8)' :
+                                r <= 4 ? 'rgba(201, 205, 210, 0.8)' : 'rgba(249, 115, 22, 0.8)'),
+                            borderRadius: 4
+                        }]
+                    },
+                    options: {
+                        ...commonBarOptions,
+                        scales: {
+                            x: { ticks: { color: '#FFFFFF', font: { size: 10 } }, grid: { color: 'var(--border)' } },
+                            y: { ticks: { color: '#FFFFFF' }, grid: { color: 'var(--border)' } }
+                        }
+                    }
+                });
+            }
+
+            buildSovChart('type1SovChart', type1, '#3D6944');
+            buildRankChart('type1RankChart', type1);
+            buildSovChart('type2SovChart', type2, '#67FF67');
+            buildRankChart('type2RankChart', type2);
+
+            // Provider chart
+            const providers = DASHBOARD_DATA.provider_coverage || {};
+            const providerLabels = Object.keys(providers);
+            const providerValues = Object.values(providers);
+            const providerColors = {
+                'Claude': '#3D6944',           // Brand green (dark)
+                'DeepSeek': '#67FF67',        // Brand primary (bright)
+                'Gemini': '#f59e0b',          // Warning/amber
+                'OpenAI': '#ef4444',          // Danger/red
+                'claude': '#3D6944',
+                'deepseek': '#67FF67',
+                'gemini': '#f59e0b',
+                'openai': '#ef4444',
+                'openai-search': '#ef4444'
+            };
+            const bgColors = providerLabels.map(l => providerColors[l] || providerColors[l.toLowerCase()] || '#94a3b8');
+
+            new Chart(document.getElementById('providerChart'), {
+                type: 'doughnut',
+                data: {
+                    labels: providerLabels,
+                    datasets: [{ data: providerValues, backgroundColor: bgColors, borderWidth: 0 }]
+                },
+                options: {
+                    responsive: true, maintainAspectRatio: false,
+                    cutout: '65%',
+                    plugins: { legend: { display: false } }
+                }
+            });
+
+            document.getElementById('providerLegend').innerHTML = providerLabels.map((label, i) => `
+                <div class="provider-legend-item">
+                    <div class="color" style="background: ${bgColors[i]};"></div>
+                    <div class="name">${label}</div>
+                    <div class="value">${providerValues[i]} responses</div>
+                </div>
+            `).join('');
+        }
+
+        // ============ INIT ============
+        // Update timestamp
+        document.getElementById('lastUpdated').textContent = new Date().toLocaleString('en-US', {
+            year: 'numeric', month: 'long', day: 'numeric',
+            hour: '2-digit', minute: '2-digit'
+        });
+
+        // Render tables
+        renderCompetitorTable(DASHBOARD_DATA.customer_types[0], 'type1Table');
+        renderCompetitorTable(DASHBOARD_DATA.customer_types[1], 'type2Table');
+
+        // Render lists
+        renderHeroComparison();
+        renderKeywords();
+        renderSources();
+        renderKeywordOpportunities();
+        renderSourceOpportunities();
+
+        // Render insights
+        renderTerminologyGap();
+        renderAudienceSegments();
+        renderLanguageGap();
+        renderPosition();
+        renderActionItems();
+
+        // Init charts — briefly activate both tabs so all canvases are visible
+        const type1Div = document.getElementById('type1');
+        const type2Div = document.getElementById('type2');
+        type1Div.classList.add('active');
+        type2Div.classList.add('active');
+        initCharts();
+        type2Div.classList.remove('active');
+        type1Div.classList.add('active');
+
+        // Show data-limitation note on type2 tab if competitor data is shared with type1
+        const ct2 = DASHBOARD_DATA.customer_types[1];
+        if (ct2 && !ct2.has_distinct_competitor_data && ct2.data_note) {
+            const noteEl = document.getElementById('type2DataNote');
+            if (noteEl) {
+                noteEl.textContent = ct2.data_note;
+                noteEl.style.display = 'block';
+            }
+        }
+
+        // Render dynamic score status
+        function renderScoreStatus() {
+            const s = DASHBOARD_DATA.summary;
+
+            const badge = document.getElementById('scoreStatusBadge');
+            const statusText = document.getElementById('scoreStatusText');
+            if (badge && statusText) {
+                statusText.textContent = s.score_status || 'Zero AI Visibility';
+                if (s.own_mentioned) {
+                    badge.style.background = 'rgba(16, 185, 129, 0.1)';
+                    badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+                    badge.style.color = 'var(--success)';
+                    badge.querySelector('span:first-child').textContent = '✅';
+                } else {
+                    badge.style.background = 'rgba(239, 68, 68, 0.1)';
+                    badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+                    badge.style.color = 'var(--danger)';
+                    badge.querySelector('span:first-child').textContent = '⚠️';
+                }
+            }
+
+            const label = document.getElementById('appearanceLabel');
+            if (label) label.textContent = (DASHBOARD_DATA.site.name || 'Brand') + ' Appearance';
+
+            const value = document.getElementById('appearanceValue');
+            if (value) value.textContent = (s.own_appearance_pct || 0) + '%';
+
+            const sub = document.getElementById('appearanceSub');
+            if (sub) sub.textContent = s.own_appearance_note || 'Site NOT mentioned in AI responses';
+        }
+        renderScoreStatus();
+
+        // Animate score
+        animateScore(DASHBOARD_DATA.summary.score || 0);
+    </script>
+</body>
+</html>
