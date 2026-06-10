@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news outlet with strong coverage of asset tokenization and market platforms, aligning with The Mint's core themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Focuses on blockchain innovations and digital asset ecosystems, providing targeted exposure for The Mint's blockchain strategies"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global platform with deep coverage of cryptocurrency markets and tokenization, matching The Mint's competitive landscape"
+  },
+  {
+    "name": "banklesshq.com",
+    "domain": "banklesshq.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential Web3 and crypto economics newsletter that would amplify The Mint's value proposition in decentralized finance"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "research publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative research platform covering blockchain assets, market liquidity, and platform innovations"
+  },
+  {
+    "name": "consensys.net/media",
+    "domain": "consensys.net/media",
+    "type": "research publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer-focused blockchain research site with deep technical coverage of asset tokenization platforms"
+  },
+  {
+    "name": "cryptobriefing.com",
+    "domain": "cryptobriefing.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Provides detailed analysis of blockchain projects, market dynamics, and emerging asset platforms"
+  },
+  {
+    "name": "trustnodes.com",
+    "domain": "trustnodes.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers regulatory and market developments in blockchain, aligning with The Mint's competitive intelligence"
+  },
+  {
+    "name": "blockonomi.com",
+    "domain": "blockonomi.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive coverage of blockchain technologies, asset innovations, and market trends"
+  },
+  {
+    "name": "messari.io/research",
+    "domain": "messari.io/research",
+    "type": "research publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Premier crypto research platform providing deep market analysis and asset valuation insights"
+  }
+]

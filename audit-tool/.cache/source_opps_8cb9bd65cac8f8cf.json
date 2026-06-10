@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news outlet that covers innovative financial platforms with strong focus on asset tokenization and blockchain infrastructure"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technology-focused crypto publication that emphasizes emerging blockchain platforms and financial innovations"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global cryptocurrency news platform with extensive coverage of blockchain finance platforms and emerging technological solutions"
+  },
+  {
+    "name": "blockonomi.com",
+    "domain": "blockonomi.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] In-depth research site analyzing blockchain platforms, particularly those bridging physical and digital asset management"
+  },
+  {
+    "name": "consensys.net",
+    "domain": "consensys.net",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Ethereum-focused research and development platform interested in innovative blockchain financial technologies"
+  },
+  {
+    "name": "cryptoinsider.com",
+    "domain": "cryptoinsider.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical publication covering next-generation blockchain finance platforms and asset management solutions"
+  },
+  {
+    "name": "hackernoon.com",
+    "domain": "hackernoon.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer-centric platform with strong interest in blockchain technology and financial platform innovations"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Premium blockchain research platform covering advanced financial platforms and asset tokenization strategies"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technology news site with deep coverage of emerging blockchain finance platforms and innovative asset management solutions"
+  },
+  {
+    "name": "cryptodaily.co.uk",
+    "domain": "cryptodaily.co.uk",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] UK-based crypto publication emphasizing technological innovation in blockchain finance"
+  }
+]

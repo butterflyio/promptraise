@@ -1,0 +1,82 @@
+[
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news outlet that frequently covers blockchain transaction platforms and data analytics tools, aligning with Alltoscan ATS's core themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Tech-focused blockchain publication that provides in-depth coverage of emerging blockchain transaction and data platforms"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative blockchain research platform that explores transaction technologies and platform innovations, matching Alltoscan ATS's technological focus"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Prominent blockchain media outlet with strong coverage of transaction technologies and platform developments"
+  },
+  {
+    "name": "defipulse.com",
+    "domain": "defipulse.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading DeFi research platform that analyzes transaction platforms and blockchain ecosystem innovations"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Blockchain news site with deep coverage of emerging transaction technologies and data platforms"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Comprehensive blockchain research platform that provides in-depth analysis of transaction technologies and platform ecosystems"
+  },
+  {
+    "name": "banklesspublishing.com",
+    "domain": "banklesspublishing.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential blockchain newsletter focusing on innovative transaction platforms and decentralized technologies"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global blockchain news platform that covers emerging transaction and data analytics technologies"
+  },
+  {
+    "name": "blocknative.com/blog",
+    "domain": "blocknative.com/blog",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical blog focusing on blockchain transaction infrastructure and data technologies, directly relevant to Alltoscan ATS's core offerings"
+  }
+]

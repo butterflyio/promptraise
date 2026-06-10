@@ -1,0 +1,82 @@
+[
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Major crypto news outlet with strong focus on blockchain security, smart contract vulnerabilities, and industry auditing techniques"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Tech-focused crypto publication that covers emerging security tools and blockchain vulnerability research"
+  },
+  {
+    "name": "defillama.com",
+    "domain": "defillama.com",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Prominent DeFi analytics platform that highlights smart contract security and audit insights for blockchain protocols"
+  },
+  {
+    "name": "consensys.net/blog",
+    "domain": "consensys.net/blog",
+    "type": "research publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain research platform with deep technical coverage of smart contract security and development tools"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global cryptocurrency news site with strong coverage of blockchain security innovations and emerging auditing technologies"
+  },
+  {
+    "name": "chainlink.com/research",
+    "domain": "chainlink.com/research",
+    "type": "research site",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential blockchain infrastructure platform that publishes in-depth technical research on smart contract security methodologies"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Premier cryptocurrency news platform with extensive coverage of blockchain security trends and vulnerability analysis"
+  },
+  {
+    "name": "hackernoon.com",
+    "domain": "hackernoon.com",
+    "type": "developer community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Technical publication with strong developer audience interested in blockchain security, smart contract development, and audit technologies"
+  },
+  {
+    "name": "encrypted.xyz",
+    "domain": "encrypted.xyz",
+    "type": "research newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized cybersecurity newsletter focusing on emerging blockchain and smart contract security innovations"
+  },
+  {
+    "name": "blockworks.co",
+    "domain": "blockworks.co",
+    "type": "news publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Industry-leading blockchain news site with deep technical coverage of security protocols and audit methodologies"
+  }
+]

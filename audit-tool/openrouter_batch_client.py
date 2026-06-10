@@ -18,14 +18,14 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 MODELS = [
     "deepseek/deepseek-chat-v3",
     "anthropic/claude-3.5-haiku",
-    "google/gemini-2.0-flash-001",
+    "google/gemini-2.5-flash",
     "openai/gpt-4o-mini",
 ]
 
 MODEL_DISPLAY_NAMES = {
     "deepseek/deepseek-chat-v3": "DeepSeek",
     "anthropic/claude-3.5-haiku": "Claude",
-    "google/gemini-2.0-flash-001": "Gemini",
+    "google/gemini-2.5-flash": "Gemini",
     "openai/gpt-4o-mini": "OpenAI",
 }
 

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading cryptocurrency news outlet with strong focus on blockchain assets and tokenization, aligned with The Mint's web3 and gemstone asset positioning"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Authoritative source for blockchain and digital asset market coverage, potential platform to highlight The Mint's unique blockchain-based gemstone valuation approach"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Tech-forward crypto publication that covers innovative blockchain asset platforms, ideal for showcasing The Mint's novel digital asset methodology"
+  },
+  {
+    "name": "consensys.net/research",
+    "domain": "consensys.net/research",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Blockchain research hub with deep technical insights, perfect for demonstrating The Mint's sophisticated asset tokenization strategy"
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Respected crypto research and news platform focused on digital asset markets and blockchain innovation"
+  },
+  {
+    "name": "blockdata.tech",
+    "domain": "blockdata.tech",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] In-depth blockchain and digital asset market intelligence platform ideal for technical positioning of The Mint's approach"
+  },
+  {
+    "name": "cryptonews.com",
+    "domain": "cryptonews.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Wide-reaching crypto newsletter with audience interested in innovative blockchain asset platforms and tokenization"
+  },
+  {
+    "name": "banklesspro.substack.com",
+    "domain": "banklesspro.substack.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Influential web3 and digital asset newsletter targeting sophisticated crypto investors and technologists"
+  },
+  {
+    "name": "github.com/blockchain-research",
+    "domain": "github.com/blockchain-research",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer community focused on blockchain asset innovation, potential technical validation of The Mint's approach"
+  },
+  {
+    "name": "chainanalysis.com/blog",
+    "domain": "chainanalysis.com/blog",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain research platform with deep insights into digital asset valuation and market trends"
+  }
+]

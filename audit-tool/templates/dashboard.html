@@ -632,9 +632,9 @@
                 </div>
             </div>
             <div class="hero-details">
-                <div class="score-status">
+                <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span>{{SCORE_STATUS}}</span>
+                    <span id="scoreStatusText">{{SCORE_STATUS}}</span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -653,9 +653,9 @@
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label">{{SITE_NAME}} Appearance</div>
-                <div class="value brand">{{OWN_APPEARANCE_PCT}}%</div>
-                <div class="sub">{{OWN_APPEARANCE_NOTE}}</div>
+                <div class="label" id="appearanceLabel">{{SITE_NAME}} Appearance</div>
+                <div class="value brand" id="appearanceValue">{{OWN_APPEARANCE_PCT}}%</div>
+                <div class="sub" id="appearanceSub">{{OWN_APPEARANCE_NOTE}}</div>
             </div>
         </div>
 
@@ -1417,6 +1417,38 @@
                 noteEl.style.display = 'block';
             }
         }
+
+        // Render dynamic score status
+        function renderScoreStatus() {
+            const s = DASHBOARD_DATA.summary;
+
+            const badge = document.getElementById('scoreStatusBadge');
+            const statusText = document.getElementById('scoreStatusText');
+            if (badge && statusText) {
+                statusText.textContent = s.score_status || 'Zero AI Visibility';
+                if (s.own_mentioned) {
+                    badge.style.background = 'rgba(16, 185, 129, 0.1)';
+                    badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+                    badge.style.color = 'var(--success)';
+                    badge.querySelector('span:first-child').textContent = '✅';
+                } else {
+                    badge.style.background = 'rgba(239, 68, 68, 0.1)';
+                    badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+                    badge.style.color = 'var(--danger)';
+                    badge.querySelector('span:first-child').textContent = '⚠️';
+                }
+            }
+
+            const label = document.getElementById('appearanceLabel');
+            if (label) label.textContent = (DASHBOARD_DATA.site.name || 'Brand') + ' Appearance';
+
+            const value = document.getElementById('appearanceValue');
+            if (value) value.textContent = (s.own_appearance_pct || 0) + '%';
+
+            const sub = document.getElementById('appearanceSub');
+            if (sub) sub.textContent = s.own_appearance_note || 'Site NOT mentioned in AI responses';
+        }
+        renderScoreStatus();
 
         // Animate score
         animateScore(DASHBOARD_DATA.summary.score || 0);
