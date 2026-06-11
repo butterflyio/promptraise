@@ -1,11 +1,5 @@
 {
-  "buildCommand": "echo 'Static files only'",
-  "outputDirectory": "docs",
-  "framework": "static",
-  "rewrites": [
-    {
-      "source": "/:path*",
-      "destination": "/:path*.html"
-    }
-  ]
+  "framework": "nextjs",
+  "installCommand": "npm ci",
+  "buildCommand": "npm run build"
 }
