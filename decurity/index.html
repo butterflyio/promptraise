@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> AI Visibility Report</title>
+    <title>Decurity AI Visibility Report</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSansVF.woff2') format('woff2-variations');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSansVF.woff2') format('woff2-variations');
             font-weight: 400 900;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSans-Regular.woff2') format('woff2');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Regular.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSans-Bold.woff2') format('woff2');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Bold.woff2') format('woff2');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -600,8 +600,8 @@
         <!-- Header -->
         <div class="header">
             <div class="header-left">
-                <h1> AI Visibility Report</h1>
-                <p>Site:  | Last updated: <span id="lastUpdated"></span></p>
+                <h1>Decurity AI Visibility Report</h1>
+                <p>Site: www.decurity.io | Last updated: <span id="lastUpdated"></span></p>
             </div>
             <div class="header-actions">
                 <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
@@ -634,7 +634,7 @@
             <div class="hero-details">
                 <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span id="scoreStatusText"></span>
+                    <span id="scoreStatusText">Moderate AI Visibility</span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -644,28 +644,28 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="label">Total Responses</div>
-                <div class="value"></div>
-                <div class="sub"> per customer type</div>
+                <div class="value">80</div>
+                <div class="sub">40 per customer type</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value"></div>
+                <div class="value">30</div>
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label" id="appearanceLabel"> Appearance</div>
-                <div class="value brand" id="appearanceValue">%</div>
-                <div class="sub" id="appearanceSub"></div>
+                <div class="label" id="appearanceLabel">Decurity Appearance</div>
+                <div class="value brand" id="appearanceValue">26.2%</div>
+                <div class="sub" id="appearanceSub">Site mentioned in 26.2% of responses</div>
             </div>
         </div>
 
         <!-- Segment Tabs -->
         <div class="type-tabs">
             <button class="type-tab active" onclick="showType('type1')">
-                <span></span>
+                <span>Enterprise Technology Security</span>
             </button>
             <button class="type-tab" onclick="showType('type2')">
-                <span></span>
+                <span>Emerging Technology Innovators</span>
             </button>
         </div>
 
@@ -691,7 +691,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — </div>
+                <div class="card-title">Top Competitors — Enterprise Technology Security</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -734,7 +734,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — </div>
+                <div class="card-title">Top Competitors — Emerging Technology Innovators</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -793,10 +793,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Keyword Opportunities</div>
-                    <span class="tag tag-competitor">Where  Ranks Poorly</span>
+                    <span class="tag tag-competitor">Where Decurity Ranks Poorly</span>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
-                    Queries where  is missing or ranks poorly
+                    Queries where Decurity is missing or ranks poorly
                 </p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
@@ -816,7 +816,7 @@
         <div class="card" style="margin-bottom: 2rem;">
             <div class="card-title">Terminology Gap Analysis</div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                Keywords and terms where  is missing from AI responses.
+                Keywords and terms where Decurity is missing from AI responses.
             </p>
             <table class="gap-table">
                 <thead>
@@ -857,7 +857,7 @@
         </div>
 
         <!-- Competitive Position -->
-        <h2 class="section-title">'s Competitive Position</h2>
+        <h2 class="section-title">Decurity's Competitive Position</h2>
         <div class="position-grid">
             <div class="position-card strengths">
                 <h3>Strengths</h3>
@@ -903,14 +903,14 @@
         <div class="footer">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
-                <p style="color: var(--text-secondary);">Analysis ID: </p>
+                <p style="color: var(--text-secondary);">Analysis ID: openrouter-www-decurity</p>
             </div>
         </div>
     </div>
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = ;
+        const DASHBOARD_DATA = {"site":{"name":"Decurity","url":"https://www.decurity.io","domain":"www.decurity.io","slug":"www-decurity","analysis_id":"openrouter-www-decurity","site_uuid":"openrouter-batch","generated_at":"June 10, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":26,"score_status":"Moderate AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":30,"own_mentioned":true,"own_appearance_pct":26.2,"own_appearance_note":"Site mentioned in 26.2% of responses","hero_comparison":[{"value":"26.2%","label":"Decurity Visibility","trend":""},{"value":"57.5%","label":"OpenZeppelin (Leader)","trend":""},{"value":"57.5%","label":"openzeppelin (#2)","trend":""}]},"customer_types":[{"name":"Enterprise Technology Security","uuid":null,"competitors":[{"name":"OpenZeppelin","appearance_percentage":52.5,"avg_rank":21.19,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"openzeppelin","appearance_percentage":52.5,"avg_rank":21.19,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"CertiK","appearance_percentage":52.5,"avg_rank":16.05,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"certik","appearance_percentage":52.5,"avg_rank":16.05,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"trail of bits","appearance_percentage":42.5,"avg_rank":19.59,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"quantstamp","appearance_percentage":42.5,"avg_rank":18.06,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"consensys diligence","appearance_percentage":40.0,"avg_rank":21.62,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"Decurity","appearance_percentage":30.0,"avg_rank":6.92,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":true},{"name":"Hacken","appearance_percentage":15.0,"avg_rank":19.83,"providers":["DeepSeek","anthropic/claude-3.5-haiku","OpenAI"],"is_own":false},{"name":"SlowMist","appearance_percentage":12.5,"avg_rank":15.2,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"hacken","appearance_percentage":12.5,"avg_rank":19.6,"providers":["DeepSeek","anthropic/claude-3.5-haiku","OpenAI"],"is_own":false},{"name":"slowmist","appearance_percentage":12.5,"avg_rank":15.2,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"halborn","appearance_percentage":12.5,"avg_rank":15.0,"providers":["OpenAI","google/gemini-2.5-flash"],"is_own":false},{"name":"PeckShield","appearance_percentage":10.0,"avg_rank":20.0,"providers":["DeepSeek","google/gemini-2.5-flash"],"is_own":false},{"name":"peckshield","appearance_percentage":10.0,"avg_rank":20.0,"providers":["DeepSeek","google/gemini-2.5-flash"],"is_own":false},{"name":"immunefi","appearance_percentage":7.5,"avg_rank":15.33,"providers":["DeepSeek","OpenAI"],"is_own":false},{"name":"hackerone","appearance_percentage":7.5,"avg_rank":26.33,"providers":["DeepSeek","OpenAI"],"is_own":false},{"name":"auditor","appearance_percentage":7.5,"avg_rank":11.0,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"chainsecurity","appearance_percentage":2.5,"avg_rank":25.0,"providers":["DeepSeek"],"is_own":false},{"name":"certora","appearance_percentage":2.5,"avg_rank":16.0,"providers":["DeepSeek"],"is_own":false},{"name":"nomad","appearance_percentage":2.5,"avg_rank":19.0,"providers":["DeepSeek"],"is_own":false},{"name":"runtime verification","appearance_percentage":2.5,"avg_rank":19.0,"providers":["google/gemini-2.5-flash"],"is_own":false}],"total_responses":10,"provider_order_summary":{"DeepSeek":0,"Gemini":1,"Claude":2,"OpenAI":3},"has_distinct_competitor_data":true,"data_note":null},{"name":"Emerging Technology Innovators","uuid":null,"competitors":[{"name":"OpenZeppelin","appearance_percentage":57.5,"avg_rank":17.78,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"openzeppelin","appearance_percentage":57.5,"avg_rank":17.78,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"trail of bits","appearance_percentage":45.0,"avg_rank":15.89,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"CertiK","appearance_percentage":42.5,"avg_rank":14.53,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"consensys diligence","appearance_percentage":42.5,"avg_rank":19.06,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"certik","appearance_percentage":42.5,"avg_rank":14.53,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"quantstamp","appearance_percentage":35.0,"avg_rank":17.43,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"certora","appearance_percentage":27.5,"avg_rank":15.18,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash"],"is_own":false},{"name":"Decurity","appearance_percentage":22.5,"avg_rank":5.0,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash"],"is_own":true},{"name":"PeckShield","appearance_percentage":17.5,"avg_rank":15.29,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"peckshield","appearance_percentage":17.5,"avg_rank":15.29,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"Hacken","appearance_percentage":15.0,"avg_rank":22.0,"providers":["DeepSeek","anthropic/claude-3.5-haiku","OpenAI"],"is_own":false},{"name":"hacken","appearance_percentage":15.0,"avg_rank":22.0,"providers":["DeepSeek","anthropic/claude-3.5-haiku","OpenAI"],"is_own":false},{"name":"hackerone","appearance_percentage":15.0,"avg_rank":26.17,"providers":["DeepSeek","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"SlowMist","appearance_percentage":10.0,"avg_rank":21.75,"providers":["DeepSeek","google/gemini-2.5-flash"],"is_own":false},{"name":"slowmist","appearance_percentage":10.0,"avg_rank":21.75,"providers":["DeepSeek","google/gemini-2.5-flash"],"is_own":false},{"name":"immunefi","appearance_percentage":10.0,"avg_rank":17.0,"providers":["DeepSeek","anthropic/claude-3.5-haiku","google/gemini-2.5-flash","OpenAI"],"is_own":false},{"name":"halborn","appearance_percentage":10.0,"avg_rank":11.0,"providers":["google/gemini-2.5-flash"],"is_own":false},{"name":"chainsecurity","appearance_percentage":7.5,"avg_rank":22.67,"providers":["DeepSeek"],"is_own":false},{"name":"auditor","appearance_percentage":7.5,"avg_rank":10.0,"providers":["google/gemini-2.5-flash"],"is_own":false},{"name":"solidified","appearance_percentage":5.0,"avg_rank":20.0,"providers":["DeepSeek"],"is_own":false},{"name":"runtime verification","appearance_percentage":5.0,"avg_rank":9.5,"providers":["DeepSeek","google/gemini-2.5-flash"],"is_own":false},{"name":"Trail of Bits","appearance_percentage":2.5,"avg_rank":46.0,"providers":["DeepSeek"],"is_own":false},{"name":"blocksec","appearance_percentage":2.5,"avg_rank":23.0,"providers":["google/gemini-2.5-flash"],"is_own":false},{"name":"nomad","appearance_percentage":2.5,"avg_rank":3.0,"providers":["google/gemini-2.5-flash"],"is_own":false}],"total_responses":10,"provider_order_summary":{"DeepSeek":0,"Gemini":1,"Claude":2,"OpenAI":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"security","count":225},{"text":"smart","count":151},{"text":"name","count":139},{"text":"vulnerabilities","count":137},{"text":"tools","count":112},{"text":"blockchain","count":101},{"text":"contract","count":101},{"text":"analysis","count":95},{"text":"testing","count":92},{"text":"smart contract","count":83}],"sources":[{"name":"hackerone","url":"https://hackerone","mentions":1},{"name":"securify.chainsecurity","url":"https://securify.chainsecurity","mentions":1},{"name":"openzeppelin.com","url":"https://openzeppelin.com","mentions":1},{"name":"immunefi.com","url":"https://immunefi.com","mentions":1},{"name":"trailofbits","url":"https://trailofbits","mentions":1},{"name":"mythx.io","url":"https://mythx.io","mentions":1},{"name":"quantstamp.com","url":"https://quantstamp.com","mentions":1},{"name":"certik","url":"https://certik","mentions":1},{"name":"consensys.net","url":"https://consensys.net","mentions":1},{"name":"owasp.org","url":"https://owasp.org","mentions":1}],"keyword_opportunities":[{"text":"How can I systematically assess potential vulnerabilities in our distributed application architecture?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"What specific testing methodologies do you use to identify potential system compromise scenarios?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"Can you compare your security assessment approach against traditional software vulnerability scanning?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"What emergency response capabilities do you offer if a critical security issue is discovered?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"Would your team be able to provide a comprehensive risk analysis for our upcoming platform launch?","type":"missing","persona":"CTO Technology Risk Manager"},{"text":"What specific protocols do you recommend for securing multi-layer distributed systems?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"Can you provide a detailed breakdown of potential attack vectors in modular software architectures?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"What continuous monitoring strategies would you suggest for preventing unauthorized system interactions?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"How quickly can your team conduct a comprehensive security review of a complex software platform?","type":"missing","persona":"Infrastructure Security Architect"},{"text":"What initial security assessments would you recommend for a newly developed software platform?","type":"missing","persona":"Technical Startup Founder"},{"text":"How can I proactively identify potential vulnerabilities before public launch?","type":"missing","persona":"Technical Startup Founder"},{"text":"What are the most common critical errors emerging technology teams make in system design?","type":"missing","persona":"Technical Startup Founder"},{"text":"Can you help validate the architectural integrity of our proposed system design?","type":"missing","persona":"Technical Startup Founder"},{"text":"What sophisticated testing approaches do you use for complex computational systems?","type":"missing","persona":"Research Protocol Developer"},{"text":"How do you systematically analyze potential interaction risks between different software modules?","type":"missing","persona":"Research Protocol Developer"}],"source_opportunities":[{"name":"cointelegraph.com","domain":"cointelegraph.com","type":"competitor","mentions":0},{"name":"decrypt.co","domain":"decrypt.co","type":"competitor","mentions":0},{"name":"defillama.com","domain":"defillama.com","type":"competitor","mentions":0},{"name":"consensys.net/blog","domain":"consensys.net","type":"competitor","mentions":0},{"name":"cryptonews.com","domain":"cryptonews.com","type":"competitor","mentions":0},{"name":"chainlink.com/research","domain":"chainlink.com","type":"competitor","mentions":0},{"name":"coindesk.com","domain":"coindesk.com","type":"competitor","mentions":0},{"name":"hackernoon.com","domain":"hackernoon.com","type":"competitor","mentions":0},{"name":"encrypted.xyz","domain":"encrypted.xyz","type":"competitor","mentions":0},{"name":"blockworks.co","domain":"blockworks.co","type":"competitor","mentions":0}],"provider_coverage":{"deepseek":50,"gemini":45,"claude":38,"openai":48},"insights":{"terminology_gap":[{"term":"web3 security monitoring","evidence":"Low AI recognition compared to blockchain security","priority":"HIGH"},{"term":"Decentralized Finance Systems Application Security","evidence":"Overly complex phrasing reduces search clarity","priority":"HIGH"},{"term":"Invariant Development","evidence":"Specialized term with minimal AI understanding","priority":"MEDIUM"},{"term":"OPSEC consulting","evidence":"Technical jargon limiting broader search visibility","priority":"MEDIUM"},{"term":"dApp security","evidence":"Niche terminology with fragmented AI interpretation","priority":"LOW"}],"language_gap":[{"site_says":"Tier-1 web3 security audit firm","site_context":"Self-promotional positioning","ai_uses":"Blockchain security services","ai_context":"More generic, less branded description"},{"site_says":"Ethical hackers who won hardest CTF competitions","site_context":"Credential highlighting","ai_uses":"Security research and vulnerability assessment","ai_context":"Focus on capabilities over achievements"}],"audience_segments":{"addressed":[{"name":"Enterprise Technology Security","note":"Direct service offering"},{"name":"DeFi Protocol Developers","note":"Targeted smart contract audit services"}],"opportunity_gap":[{"name":"Venture Capital","note":"Emerging market with 40% competitor coverage"},{"name":"Layer 1 Blockchain Teams","note":"Limited competitive presence at 35%"},{"name":"Emerging Web3 Startups","note":"Underserved segment with 25% market visibility"}]},"position":{"strengths":["Comprehensive security service spectrum","Proven track record with named DeFi protocols","Multi-blockchain expertise (Ethereum, Solana, Aptos)","Strong client testimonials from recognized brands"],"opportunities":["Expand risk assessment for VC/PE funds","Develop more educational content on security methodologies","Create specialized service packages for emerging blockchain sectors"],"gaps":["Limited AI search engine visibility","Inconsistent terminology across technical descriptions","Lack of clear differentiation from top competitors like OpenZeppelin and CertiK"]},"action_items":{"content_priorities":["Create comprehensive 'Web3 Security Explained' guide","Develop comparison pages: 'Decurity vs Top Blockchain Auditors'","Produce technical deep-dive whitepapers on invariant testing","Generate video content explaining complex security concepts","Build case study library with detailed protocol security transformations"],"link_building":["Guest post on top blockchain and cybersecurity platforms","Engage with web3 security research communities","Collaborate with blockchain accelerator programs","Create linkable technical resources on security methodologies","Develop partnerships with blockchain development platforms"],"quick_wins":["Refine homepage SEO keywords","Update meta descriptions with precise security terminology","Implement schema markup for security services","Optimize testimonial page for search visibility","Create targeted landing pages for specific blockchain ecosystems"]}}};
 
         // ============ THEME ============
         function toggleTheme() {

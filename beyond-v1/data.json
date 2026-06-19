@@ -10,17 +10,17 @@
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 0,
-    "score_status": "Zero AI Visibility",
+    "score": 5,
+    "score_status": "Low AI Visibility",
     "total_responses": 60,
     "responses_per_type": 30,
     "unique_competitors": 111,
-    "own_mentioned": false,
-    "own_appearance_pct": 0,
-    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "own_mentioned": true,
+    "own_appearance_pct": 5.0,
+    "own_appearance_note": "Site mentioned in 5.0% of responses",
     "hero_comparison": [
       {
-        "value": "0%",
+        "value": "5.0%",
         "label": "Beyond Visibility",
         "trend": "down"
       },
@@ -43,120 +43,309 @@
       "competitors": [
         {
           "name": "cosmos",
-          "appearance": 70.0,
-          "rank": 13.46,
+          "appearance_percentage": 70.0,
+          "avg_rank": 13.46,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "polkadot",
-          "appearance": 66.7,
-          "rank": 8.91,
+          "appearance_percentage": 66.7,
+          "avg_rank": 8.91,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 53.3,
-          "rank": 13.09,
+          "appearance_percentage": 53.3,
+          "avg_rank": 13.09,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "polygon",
-          "appearance": 50.0,
-          "rank": 12.67,
+          "appearance_percentage": 50.0,
+          "avg_rank": 12.67,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "binance smart chain",
-          "appearance": 33.3,
-          "rank": 11.0,
+          "appearance_percentage": 33.3,
+          "avg_rank": 11.0,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "avalanche",
-          "appearance": 33.3,
-          "rank": 10.5,
+          "appearance_percentage": 33.3,
+          "avg_rank": 10.5,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "wormhole",
-          "appearance": 26.7,
-          "rank": 14.67,
+          "appearance_percentage": 26.7,
+          "avg_rank": 14.67,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "solana",
-          "appearance": 20.0,
-          "rank": 14.33,
+          "appearance_percentage": 20.0,
+          "avg_rank": 14.33,
           "providers": [
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "optimism",
-          "appearance": 16.7,
-          "rank": 0,
+          "appearance_percentage": 16.7,
+          "avg_rank": null,
           "providers": [
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "polygon bridge",
-          "appearance": 16.7,
-          "rank": 15.0,
+          "appearance_percentage": 16.7,
+          "avg_rank": 15.0,
           "providers": [
-            "Claude",
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "uniswap",
+          "appearance_percentage": 16.7,
+          "avg_rank": 9.5,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "multichain",
+          "appearance_percentage": 16.7,
+          "avg_rank": 7.67,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "wrapped bitcoin (wbtc)",
+          "appearance_percentage": 13.3,
+          "avg_rank": 16.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "anyswap",
+          "appearance_percentage": 13.3,
+          "avg_rank": 9.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "wrapped tokens",
+          "appearance_percentage": 13.3,
+          "avg_rank": 13.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "wbtc",
+          "appearance_percentage": 13.3,
+          "avg_rank": 16.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "renbtc",
+          "appearance_percentage": 10.0,
+          "avg_rank": 19.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cardano",
+          "appearance_percentage": 10.0,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "thorchain",
+          "appearance_percentage": 10.0,
+          "avg_rank": 11.67,
+          "providers": [
+            "OpenAI",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance_percentage": 6.7,
+          "avg_rank": null,
+          "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "aave",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "zksync",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "layerzero",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "band protocol",
+          "appearance_percentage": 3.3,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ren protocol",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "axelar",
+          "appearance_percentage": 3.3,
+          "avg_rank": 11.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainsafe",
+          "appearance_percentage": 3.3,
+          "avg_rank": 18.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainalysis",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche bridge",
+          "appearance_percentage": 3.3,
+          "avg_rank": 13.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sbtc",
+          "appearance_percentage": 3.3,
+          "avg_rank": 19.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Beyond",
+          "appearance_percentage": 3.3,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": true
         }
       ],
       "total_responses": 10,
@@ -174,120 +363,468 @@
       "competitors": [
         {
           "name": "cosmos",
-          "appearance": 80.0,
-          "rank": 12.28,
+          "appearance_percentage": 80.0,
+          "avg_rank": 12.28,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 60.0,
-          "rank": 9.57,
+          "appearance_percentage": 60.0,
+          "avg_rank": 9.57,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "polkadot",
-          "appearance": 60.0,
-          "rank": 10.38,
+          "appearance_percentage": 60.0,
+          "avg_rank": 10.38,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "polygon",
-          "appearance": 50.0,
-          "rank": 11.0,
+          "appearance_percentage": 50.0,
+          "avg_rank": 11.0,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "avalanche",
-          "appearance": 46.7,
-          "rank": 14.5,
+          "appearance_percentage": 46.7,
+          "avg_rank": 14.5,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "wormhole",
-          "appearance": 33.3,
-          "rank": 13.67,
+          "appearance_percentage": 33.3,
+          "avg_rank": 13.67,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "binance smart chain",
-          "appearance": 26.7,
-          "rank": 12.0,
+          "appearance_percentage": 26.7,
+          "avg_rank": 12.0,
           "providers": [
-            "Claude",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "axelar",
-          "appearance": 26.7,
-          "rank": 12.0,
+          "appearance_percentage": 26.7,
+          "avg_rank": 12.0,
           "providers": [
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "uniswap",
-          "appearance": 23.3,
-          "rank": 13.5,
+          "appearance_percentage": 23.3,
+          "avg_rank": 13.5,
           "providers": [
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "multichain",
-          "appearance": 23.3,
-          "rank": 13.2,
+          "appearance_percentage": 23.3,
+          "avg_rank": 13.2,
           "providers": [
-            "Claude",
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "anyswap",
+          "appearance_percentage": 23.3,
+          "avg_rank": 14.5,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "thorchain",
+          "appearance_percentage": 23.3,
+          "avg_rank": 14.67,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "solana",
+          "appearance_percentage": 23.3,
+          "avg_rank": 13.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "renvm",
+          "appearance_percentage": 20.0,
+          "avg_rank": 19.5,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "wbtc",
+          "appearance_percentage": 20.0,
+          "avg_rank": 16.33,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance_percentage": 16.7,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "layerzero",
+          "appearance_percentage": 16.7,
+          "avg_rank": 17.5,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "wrapped bitcoin (wbtc)",
+          "appearance_percentage": 16.7,
+          "avg_rank": 16.33,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "the graph",
+          "appearance_percentage": 13.3,
+          "avg_rank": 12.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "lightning network",
+          "appearance_percentage": 13.3,
+          "avg_rank": 10.75,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "zksync",
+          "appearance_percentage": 10.0,
+          "avg_rank": null,
+          "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "aave",
+          "appearance_percentage": 10.0,
+          "avg_rank": 18.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "band protocol",
+          "appearance_percentage": 10.0,
+          "avg_rank": 10.67,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "optimism",
+          "appearance_percentage": 10.0,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cardano",
+          "appearance_percentage": 10.0,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "polygon bridge",
+          "appearance_percentage": 10.0,
+          "avg_rank": 14.5,
+          "providers": [
+            "OpenAI",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "wrapped tokens",
+          "appearance_percentage": 10.0,
+          "avg_rank": 10.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche bridge",
+          "appearance_percentage": 10.0,
+          "avg_rank": 17.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "compound",
+          "appearance_percentage": 6.7,
+          "avg_rank": 20.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "api3",
+          "appearance_percentage": 6.7,
+          "avg_rank": 10.5,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "metamask",
+          "appearance_percentage": 6.7,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "celer network",
+          "appearance_percentage": 6.7,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "renbtc",
+          "appearance_percentage": 6.7,
+          "avg_rank": 12.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainlink ccip",
+          "appearance_percentage": 6.7,
+          "avg_rank": 15.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Beyond",
+          "appearance_percentage": 6.7,
+          "avg_rank": 3.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "rarible",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "opensea",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "covalent",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "magic eden",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "subquery",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "foundation",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "poly network",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ren protocol",
+          "appearance_percentage": 3.3,
+          "avg_rank": 19.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "trust wallet",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "tbtc",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sbtc",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "coinomi",
+          "appearance_percentage": 3.3,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
         }
       ],
       "total_responses": 10,
