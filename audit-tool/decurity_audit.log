@@ -1,0 +1,77 @@
+[18:21:06] === AI Visibility Audit (Post-BotSee): Decurity (https://www.decurity.io) ===
+[18:21:06] Slug: www-decurity
+[18:21:06] Scraping homepage https://www.decurity.io...
+[18:21:07]   ✓ Retrieved 4000 chars
+[18:21:07] Generating customer types, personas, and questions via OpenRouter...
+[18:21:22]   ✓ Generated 2 CTs, 20 questions
+[18:21:22] Generating competitor discovery questions from website context...
+[18:21:26]   ✓ Generated 5 discovery questions
+[18:21:26] Running dynamic competitor discovery (3-layer validation)...
+[18:21:26]   Layer 1: Identifying Tier-1 competitors from website context...
+Layer 1 FAIL: ConsenSys Diligence - no web presence found
+Only 4 competitors found, minimum is 5. Will use fallback during audit.
+[18:22:10]   ✓ Discovered 4 Tier-1 competitors
+[18:22:10]     - Certik (credibility: 4.0/5)
+[18:22:10]     - Trail of Bits (credibility: 5.0/5)
+[18:22:10]     - Hacken (credibility: 4.0/5)
+[18:22:10]     - PeckShield (credibility: 4.0/5)
+[18:22:10] Running discovery batch (5 questions × 4 models)...
+Traceback (most recent call last):
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1624, in <module>
+    main()
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1612, in main
+    run_post_botsee(args)
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1220, in run_post_botsee
+    discovered_competitors_list = stage_discovery_batch(
+                                  ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1459, in stage_discovery_batch
+    responses = client.discovery_batch_query(brand_name, models=MODELS,
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 532, in discovery_batch_query
+    raw = self._call(model, messages, max_tokens=1024)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 172, in _call
+    raise RuntimeError(f"OpenRouter {resp.status_code}: {resp.text[:300]}")
+RuntimeError: OpenRouter 404: {"error":{"message":"No endpoints found for google/gemini-2.0-flash-001.","code":404},"user_id":"user_3Cvo1RvdkCFWmfX9JeFjioPkWeW"}
+[18:31:10] === AI Visibility Audit (Post-BotSee): Decurity (https://www.decurity.io) ===
+[18:31:10] Slug: www-decurity
+[18:31:10] State reset (--fresh)
+[18:31:10] Scraping homepage https://www.decurity.io...
+[18:31:11]   ✓ Retrieved 4000 chars
+[18:31:11] Generating customer types, personas, and questions via OpenRouter...
+[18:31:27]   ✓ Generated 2 CTs, 20 questions
+[18:31:27] Generating competitor discovery questions from website context...
+[18:31:30]   ✓ Generated 5 discovery questions
+[18:31:30] Running dynamic competitor discovery (3-layer validation)...
+[18:31:30]   Layer 1: Identifying Tier-1 competitors from website context...
+Layer 1 FAIL: Consensys Diligence - no web presence found
+[18:33:03]   ✓ Discovered 6 Tier-1 competitors
+[18:33:03]     - PeckShield (credibility: 5.0/5)
+[18:33:03]     - OpenZeppelin (credibility: 4.0/5)
+[18:33:03]     - Hacken (credibility: 5.0/5)
+[18:33:03]     - CertiK (credibility: 5.0/5)
+[18:33:03]     - SlowMist (credibility: 4.0/5)
+[18:33:03]     - Trail of Bits (credibility: 4.0/5)
+[18:33:03] Running discovery batch (5 questions × 4 models)...
+[18:38:34]   ✓ Discovered 24 competitors
+[18:38:34]   Discovered 24 competitors from discovery batch
+[18:38:34]   Final competitor set: 30 unique competitors
+[18:38:34] Running full batch query (20 questions × 4 models = 80 calls)...
+[18:50:07]   ✓ Got 80 responses
+[18:50:07] Aggregating results...
+[18:50:18]   ✓ Aggregation complete
+[18:50:18] Generating insights via Claude...
+[18:50:35]   ✓ Insights generated
+[18:50:35] Building final data model...
+/Users/zkhan/promptraise/audit-tool/audit.py:1314: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "generated_at": datetime.utcnow().strftime("%B %d, %Y"),
+[18:50:35]   ✓ data.json written to /Users/zkhan/promptraise/dashboards/www-decurity/data.json
+[18:50:35] Rendering dashboard...
+[18:50:35]   ✓ index.html written to /Users/zkhan/promptraise/dashboards/www-decurity/index.html
+[18:50:35] 
+[18:50:35] ============================================================
+[18:50:35] ✓ POST-BOTSEE AUDIT COMPLETE
+[18:50:35] ============================================================
+[18:50:35] 
+[18:50:35] Dashboard: /Users/zkhan/promptraise/dashboards/www-decurity/index.html
+[18:50:35] 

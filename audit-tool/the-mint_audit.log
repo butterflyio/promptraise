@@ -1,0 +1,40 @@
+[07:45:21] === AI Visibility Audit (Post-BotSee): The Mint (https://www.the-mint.com/) ===
+[07:45:21] Slug: the-mint-v1
+[07:45:21] State reset (--fresh)
+[07:45:21] Scraping homepage https://www.the-mint.com/...
+[07:45:22]   ✓ Retrieved 3855 chars
+[07:45:22] Generating customer types, personas, and questions via OpenRouter...
+[07:45:37]   ✓ Generated 2 CTs, 19 questions
+[07:45:37] Generating competitor discovery questions from website context...
+[07:45:42]   ✓ Generated 5 discovery questions
+[07:45:42] Running dynamic competitor discovery (3-layer validation)...
+[07:45:42]   Layer 1: Identifying Tier-1 competitors from website context...
+Error in LLM competitor identification: Invalid cLayer 1 TIMEOUT: Tether Gold (https://www.tether-gold.com)
+Layer 1 TIMEOUT: Tether Gold (https://tether-gold.com)
+Layer 1 FAIL: Tether Gold - no web presence found
+Layer 1 FAIL: Digix Gold Token - no web presence found
+Only 2 competitors found, minimum is 5. Will use fallback during audit.
+[07:46:20]   ✓ Disc[07:53:51]   ✓ Discovered 99 competitors
+[07:53:51]   Discovered 99 competitors from discovery batch
+[07:53:51]   Final competitor set: 99 unique competitors
+[07:53:51] Running full batch query (20 questions × 4 models = 80 calls)...
+[08:04:04]   ✓ Got 80 responses
+[08:04:04] Aggregating results...
+[08:04:16]   ✓ Aggregation complete
+[08:04:16] Generating insights via Claude...
+[08:04:32]   ✓ Insights generated
+[08:04:32] Building final data model...
+/Users/zkhan/promptraise/audit-tool/audit.py:1314: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to repr[08:04:34]   ✓ Insights generated
+[08:04:34] Building final data model...
+/Users/zkhan/promptraise/audit-tool/audit.py:1314: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  "generated_at": datetime.utcnow().strftime("%B %d, %Y"),
+[08:04:34]   ✓ data.json written to /Users/zkhan/promptraise/dashboards/the-mint-v1/data.json
+[08:04:34] Rendering dashboard...
+[08:04:34]   ✓ index.html written to /Users/zkhan/promptraise/dashboards/the-mint-v1/index.html
+[08:04:34] 
+[08:04:34] ============================================================
+[08:04:34] ✓ POST-BOTSEE AUDIT COMPLETE
+[08:04:34] ============================================================
+[08:04:34] 
+[08:04:34] Dashboard: /Users/zkhan/promptraise/dashboards/the-mint-v1/index.html
+[08:04:34] 

@@ -1,0 +1,41 @@
+/Users/zkhan/Library/Python/3.9/lib/python/site-packages/urllib3/__init__.py:35: NotOpenSSLWarning: urllib3 v2 only supports OpenSSL 1.1.1+, currently the 'ssl' module is compiled with 'LibreSSL 2.8.3'. See: https://github.com/urllib3/urllib3/issues/3020
+  warnings.warn(
+[17:03:06] === AI Visibility Audit (Post-BotSee): StreamFlow Finance (https://streamflow.finance/) ===
+[17:03:06] Slug: streamflow
+[17:03:06] State reset (--fresh)
+[17:03:06] Scraping homepage https://streamflow.finance/...
+[17:03:07]   ✓ Retrieved 4000 chars
+[17:03:07] Generating customer types, personas, and questions via OpenRouter...
+[17:03:21]   ✓ Generated 2 CTs, 20 questions
+[17:03:21] Generating competitor discovery questions from website context...
+[17:03:25]   ✓ Generated 5 discovery questions
+[17:03:25] Running dynamic competitor discovery (3-layer validation)...
+[17:03:25]   Layer 1: Identifying Tier-1 competitors from website context...
+Layer 1 FAIL: Utopia Labs - no web presence found
+[17:04:05]   ✓ Discovered 5 Tier-1 competitors
+[17:04:05]     - Hedgey (credibility: 4.0/5)
+[17:04:05]     - Drip (credibility: 4.0/5)
+[17:04:05]     - Bon Finance (credibility: 5.0/5)
+[17:04:05]     - Coinshift (credibility: 4.0/5)
+[17:04:05]     - Vestd (credibility: 4.0/5)
+[17:04:05] Running discovery batch (5 questions × 4 models)...
+[17:07:55]   ✓ Discovered 53 competitors
+[17:07:55]   Discovered 53 competitors from discovery batch
+[17:07:55]   Final competitor set: 58 unique competitors
+[17:07:55] Running full batch query (20 questions × 4 models = 80 calls)...
+[17:16:36]   ✓ Got 80 responses
+[17:16:36] Aggregating results...
+[17:16:46]   ✓ Aggregation complete
+[17:16:46] Generating insights via Claude...
+[17:17:04]   ✓ Insights generated
+[17:17:04] Building final data model...
+[17:17:04]   ✓ data.json written to /Users/zkhan/promptraise/dashboards/streamflow/data.json
+[17:17:04] Rendering dashboard...
+[17:17:04]   ✓ index.html written to /Users/zkhan/promptraise/dashboards/streamflow/index.html
+[17:17:04] 
+[17:17:04] ============================================================
+[17:17:04] ✓ POST-BOTSEE AUDIT COMPLETE
+[17:17:04] ============================================================
+[17:17:04] 
+[17:17:04] Dashboard: /Users/zkhan/promptraise/dashboards/streamflow/index.html
+[17:17:04] 

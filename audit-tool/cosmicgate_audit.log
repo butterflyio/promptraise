@@ -1,0 +1,145 @@
+[00:54:13] === AI Visibility Audit (Post-BotSee): CosmicGate (https://www.cosmicgate.ai/) ===
+[00:54:13] Slug: www-cosmicgate
+[00:54:13] State reset (--fresh)
+[00:54:13] Scraping homepage https://www.cosmicgate.ai/...
+[00:54:17]   ✓ Retrieved 4000 chars
+[00:54:17] Generating customer types, personas, and questions via OpenRouter...
+Traceback (most recent call last):
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1624, in <module>
+    main()
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1612, in main
+    run_post_botsee(args)
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1192, in run_post_botsee
+    ct_data = stage_generate_ct_personas_openrouter(or_client, site_name, site_url,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1362, in stage_generate_ct_personas_openrouter
+    result = client.generate_ct_personas_questions(site_name, site_url, homepage_text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 473, in generate_ct_personas_questions
+    result = self._call_with_json_retry(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 202, in _call_with_json_retry
+    raw = self._call(model, messages, max_tokens)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 172, in _call
+    raise RuntimeError(f"OpenRouter {resp.status_code}: {resp.text[:300]}")
+RuntimeError: OpenRouter 404: {"error":{"message":"Provider returned error","code":404,"metadata":{"raw":"{\"message\":\"This model version has reached the end of its life. Please refer to the AWS documentation for more details.\"}","provider_name":"Amazon Bedrock","is_byok":false,"previous_errors":[{"code":404,"message":"Provid
+[00:55:29] === AI Visibility Audit (Post-BotSee): CosmicGate (https://www.cosmicgate.ai/) ===
+[00:55:29] Slug: www-cosmicgate
+[00:55:29] State reset (--fresh)
+[00:55:29] Scraping homepage https://www.cosmicgate.ai/...
+[00:55:30]   ✓ Retrieved 4000 chars
+[00:55:30] Generating customer types, personas, and questions via OpenRouter...
+Traceback (most recent call last):
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1624, in <module>
+    main()
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1612, in main
+    run_post_botsee(args)
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1192, in run_post_botsee
+    ct_data = stage_generate_ct_personas_openrouter(or_client, site_name, site_url,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1362, in stage_generate_ct_personas_openrouter
+    result = client.generate_ct_personas_questions(site_name, site_url, homepage_text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 473, in generate_ct_personas_questions
+    result = self._call_with_json_retry(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 202, in _call_with_json_retry
+    raw = self._call(model, messages, max_tokens)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 172, in _call
+    raise RuntimeError(f"OpenRouter {resp.status_code}: {resp.text[:300]}")
+RuntimeError: OpenRouter 404: {"error":{"message":"Provider returned error","code":404,"metadata":{"raw":"{\"message\":\"This model version has reached the end of its life. Please refer to the AWS documentation for more details.\"}","provider_name":"Amazon Bedrock","is_byok":false,"previous_errors":[{"code":404,"message":"Provid
+[00:56:32] === AI Visibility Audit (Post-BotSee): CosmicGate (https://www.cosmicgate.ai/) ===
+[00:56:32] Slug: www-cosmicgate
+[00:56:32] State reset (--fresh)
+[00:56:32] Scraping homepage https://www.cosmicgate.ai/...
+[00:56:33]   ✓ Retrieved 4000 chars
+[00:56:33] Generating customer types, personas, and questions via OpenRouter...
+Traceback (most recent call last):
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1624, in <module>
+    main()
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1612, in main
+    run_post_botsee(args)
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1192, in run_post_botsee
+    ct_data = stage_generate_ct_personas_openrouter(or_client, site_name, site_url,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1362, in stage_generate_ct_personas_openrouter
+    result = client.generate_ct_personas_questions(site_name, site_url, homepage_text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 473, in generate_ct_personas_questions
+    result = self._call_with_json_retry(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 202, in _call_with_json_retry
+    raw = self._call(model, messages, max_tokens)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 172, in _call
+    raise RuntimeError(f"OpenRouter {resp.status_code}: {resp.text[:300]}")
+RuntimeError: OpenRouter 404: {"error":{"message":"Provider returned error","code":404,"metadata":{"raw":"{\"message\":\"This model version has reached the end of its life. Please refer to the AWS documentation for more details.\"}","provider_name":"Amazon Bedrock","is_byok":false,"previous_errors":[{"code":404,"message":"Provid
+[00:59:57] === AI Visibility Audit (Post-BotSee): CosmicGate (https://www.cosmicgate.ai/) ===
+[00:59:57] Slug: www-cosmicgate
+[00:59:57] State reset (--fresh)
+[00:59:57] Scraping homepage https://www.cosmicgate.ai/...
+[00:59:57]   ✓ Retrieved 4000 chars
+[00:59:57] Generating customer types, personas, and questions via OpenRouter...
+Traceback (most recent call last):
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1624, in <module>
+    main()
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1612, in main
+    run_post_botsee(args)
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1192, in run_post_botsee
+    ct_data = stage_generate_ct_personas_openrouter(or_client, site_name, site_url,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1362, in stage_generate_ct_personas_openrouter
+    result = client.generate_ct_personas_questions(site_name, site_url, homepage_text)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 473, in generate_ct_personas_questions
+    result = self._call_with_json_retry(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 202, in _call_with_json_retry
+    raw = self._call(model, messages, max_tokens)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/openrouter_batch_client.py", line 172, in _call
+    raise RuntimeError(f"OpenRouter {resp.status_code}: {resp.text[:300]}")
+RuntimeError: OpenRouter 404: {"error":{"message":"No endpoints found for anthropic/claude-3.5-haiku-20241022.","code":404},"user_id":"user_3Cvo1RvdkCFWmfX9JeFjioPkWeW"}
+[01:02:13] === AI Visibility Audit (Post-BotSee): CosmicGate (https://www.cosmicgate.ai/) ===
+[01:02:13] Slug: www-cosmicgate
+[01:02:13] State reset (--fresh)
+[01:02:13] Scraping homepage https://www.cosmicgate.ai/...
+[01:02:14]   ✓ Retrieved 4000 chars
+[01:02:14] Generating customer types, personas, and questions via OpenRouter...
+[01:02:23]   ✓ Generated 2 CTs, 20 questions
+[01:02:23] Generating competitor discovery questions from website context...
+[01:02:25]   ✓ Generated 5 discovery questions
+[01:02:25] Running dynamic competitor discovery (3-layer validation)...
+[01:02:25]   Layer 1: Identifying Tier-1 competitors from website context...
+Error in LLM competitor identification: OpenRouter 404: {"error":{"message":"Provider returned error","code":404,"metadata":{"raw":"{\"message\":\"This model version has reached the end of its life. Please refer to the AWS documentation for more details.\"}","provider_name":"Amazon Bedrock","is_byok":false,"previous_errors":[{"code":404,"message":"Provid
+Only 0 competitors found, minimum is 5. Will use fallback during audit.
+[01:02:26]   ✓ Discovered 0 Tier-1 competitors
+[01:02:26]   ⚠ Only 0 competitors discovered, adding fallback questions...
+[01:02:26] Running discovery batch (5 questions × 4 models)...
+[01:09:57]   ✓ Discovered 69 competitors
+[01:09:57]   Discovered 69 competitors from discovery batch
+[01:09:57]   Final competitor set: 69 unique competitors
+[01:09:57] Running full batch query (20 questions × 4 models = 80 calls)...
+[01:20:30]   ✓ Got 80 responses
+[01:20:30] Aggregating results...
+[01:20:39]   ✓ Aggregation complete
+[01:20:39] Generating insights via Claude...
+Traceback (most recent call last):
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1624, in <module>
+    main()
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1612, in main
+    run_post_botsee(args)
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 1303, in run_post_botsee
+    insights = stage_generate_insights(generator, insight_context, state)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/audit.py", line 417, in stage_generate_insights
+    insights = generator.generate(**context)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/insights_generator.py", line 262, in generate
+    response_text = self._call_openrouter(
+                    ^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/zkhan/promptraise/audit-tool/insights_generator.py", line 201, in _call_openrouter
+    raise RuntimeError(
+RuntimeError: OpenRouter returned 404: {"error":{"message":"Provider returned error","code":404,"metadata":{"raw":"{\"message\":\"This model version has reached the end of its life. Please refer to the AWS documentation for more details.\"}","provider_name":"Amazon Bedrock","is_byok":false,"previous_errors":[{"code":404,"message":"Provider returned error","provider_name":"Amazon Bedrock","raw":"{\"message\":\"This model version has reached the end of its life. Please refer to the AWS documentation for more details.\"}"}]}},"user_id":
