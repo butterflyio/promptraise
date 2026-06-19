@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> AI Visibility Report</title>
+    <title>ICN AI Visibility Report</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSansVF.woff2') format('woff2-variations');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSansVF.woff2') format('woff2-variations');
             font-weight: 400 900;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSans-Regular.woff2') format('woff2');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Regular.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSans-Bold.woff2') format('woff2');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Bold.woff2') format('woff2');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -600,8 +600,8 @@
         <!-- Header -->
         <div class="header">
             <div class="header-left">
-                <h1> AI Visibility Report</h1>
-                <p>Site:  | Last updated: <span id="lastUpdated"></span></p>
+                <h1>ICN AI Visibility Report</h1>
+                <p>Site: icn.ai | Last updated: <span id="lastUpdated"></span></p>
             </div>
             <div class="header-actions">
                 <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
@@ -634,7 +634,7 @@
             <div class="hero-details">
                 <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span id="scoreStatusText"></span>
+                    <span id="scoreStatusText">Moderate AI Visibility</span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -644,28 +644,28 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="label">Total Responses</div>
-                <div class="value"></div>
-                <div class="sub"> per customer type</div>
+                <div class="value">80</div>
+                <div class="sub">40 per customer type</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value"></div>
+                <div class="value">6</div>
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label" id="appearanceLabel"> Appearance</div>
-                <div class="value brand" id="appearanceValue">%</div>
-                <div class="sub" id="appearanceSub"></div>
+                <div class="label" id="appearanceLabel">ICN Appearance</div>
+                <div class="value brand" id="appearanceValue">31.2%</div>
+                <div class="sub" id="appearanceSub">Site mentioned in 31.2% of responses</div>
             </div>
         </div>
 
         <!-- Segment Tabs -->
         <div class="type-tabs">
             <button class="type-tab active" onclick="showType('type1')">
-                <span></span>
+                <span>Customer Type 1</span>
             </button>
             <button class="type-tab" onclick="showType('type2')">
-                <span></span>
+                <span>Customer Type 2</span>
             </button>
         </div>
 
@@ -691,7 +691,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — </div>
+                <div class="card-title">Top Competitors — Customer Type 1</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -734,7 +734,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — </div>
+                <div class="card-title">Top Competitors — Customer Type 2</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -793,10 +793,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Keyword Opportunities</div>
-                    <span class="tag tag-competitor">Where  Ranks Poorly</span>
+                    <span class="tag tag-competitor">Where ICN Ranks Poorly</span>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
-                    Queries where  is missing or ranks poorly
+                    Queries where ICN is missing or ranks poorly
                 </p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
@@ -816,7 +816,7 @@
         <div class="card" style="margin-bottom: 2rem;">
             <div class="card-title">Terminology Gap Analysis</div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                Keywords and terms where  is missing from AI responses.
+                Keywords and terms where ICN is missing from AI responses.
             </p>
             <table class="gap-table">
                 <thead>
@@ -857,7 +857,7 @@
         </div>
 
         <!-- Competitive Position -->
-        <h2 class="section-title">'s Competitive Position</h2>
+        <h2 class="section-title">ICN's Competitive Position</h2>
         <div class="position-grid">
             <div class="position-card strengths">
                 <h3>Strengths</h3>
@@ -903,14 +903,14 @@
         <div class="footer">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
-                <p style="color: var(--text-secondary);">Analysis ID: </p>
+                <p style="color: var(--text-secondary);">Analysis ID: openrouter-icn-global</p>
             </div>
         </div>
     </div>
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = ;
+        const DASHBOARD_DATA = {"site":{"name":"ICN","url":"https://icn.ai","domain":"icn.ai","slug":"icn-global","analysis_id":"openrouter-icn-global","site_uuid":"openrouter-batch","generated_at":"May 07, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":31,"score_status":"Moderate AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":6,"own_mentioned":true,"own_appearance_pct":31.2,"own_appearance_note":"Site mentioned in 31.2% of responses","hero_comparison":[{"value":"31.2%","label":"Icn Visibility","trend":""},{"value":"17.5%","label":"vast (Leader)","trend":""},{"value":"5.0%","label":"CoreWeave (#2)","trend":""}]},"customer_types":[{"customer_type_name":"Enterprise AI Integration","competitors":[{"name":"Icn","appearance_percentage":45.0,"avg_rank":4.5,"providers":["DeepSeek","google/gemini-2.0-flash-001","anthropic/claude-3.5-haiku","OpenAI"],"is_own":true},{"name":"monero","appearance_percentage":5.0,"avg_rank":12.5,"providers":["google/gemini-2.0-flash-001"],"is_own":false},{"name":"zcash","appearance_percentage":5.0,"avg_rank":12.5,"providers":["google/gemini-2.0-flash-001"],"is_own":false}],"total_responses":10},{"customer_type_name":"Research & Academic Innovation","competitors":[{"name":"vast","appearance_percentage":17.5,"avg_rank":10.67,"providers":["DeepSeek","google/gemini-2.0-flash-001","OpenAI"],"is_own":false},{"name":"Icn","appearance_percentage":17.5,"avg_rank":3.0,"providers":["DeepSeek","anthropic/claude-3.5-haiku","OpenAI"],"is_own":true},{"name":"dash","appearance_percentage":2.5,"avg_rank":null,"providers":["DeepSeek"],"is_own":false},{"name":"modal","appearance_percentage":2.5,"avg_rank":12.0,"providers":["anthropic/claude-3.5-haiku"],"is_own":false},{"name":"hugging face","appearance_percentage":2.5,"avg_rank":null,"providers":["OpenAI"],"is_own":false}],"total_responses":10}],"keywords":[{"text":"data","count":166},{"text":"name","count":115},{"text":"response","count":60},{"text":"privacy","count":57},{"text":"learning","count":54},{"text":"systems","count":51},{"text":"analysis","count":49},{"text":"machine","count":47},{"text":"machine learning","count":47},{"text":"processing","count":45}],"sources":[{"name":"microsoft","url":"https://microsoft","mentions":1},{"name":"cloud.google","url":"https://cloud.google","mentions":1},{"name":"aws.amazon","url":"https://aws.amazon","mentions":1},{"name":"developer.nvidia","url":"https://developer.nvidia","mentions":1}],"keyword_opportunities":[{"text":"How can our machine learning infrastructure handle 500 concurrent predictive models?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What performance benchmarks distinguish your computational intelligence platform from competitors?","type":"missing","persona":"Technical Implementation Lead"},{"text":"Can your system integrate seamlessly with our existing enterprise data architectures?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What security protocols protect sensitive algorithmic intellectual property?","type":"missing","persona":"Technical Implementation Lead"},{"text":"How quickly can your platform adapt to emerging machine learning requirements?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What unique computational approaches can accelerate our research and development cycles?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How do intelligent systems reduce operational complexity across multiple business units?","type":"missing","persona":"Chief Innovation Officer"},{"text":"Can your solution dynamically scale across global enterprise environments?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How can advanced intelligence platforms support cross-disciplinary research methodologies?","type":"missing","persona":"Research Laboratory Director"},{"text":"What computational capabilities enable more sophisticated scientific modeling?","type":"missing","persona":"Research Laboratory Director"},{"text":"What machine learning architectures support reproducible research protocols?","type":"missing","persona":"Research Laboratory Director"},{"text":"How do intelligent systems accelerate academic discovery processes?","type":"missing","persona":"Research Laboratory Director"},{"text":"What computational frameworks support sophisticated statistical analysis?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"How can intelligent systems help validate complex research hypotheses?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"What training resources accompany your advanced computational platform?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"How can our machine learning infrastructure handle 500 concurrent predictive models?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What security protocols protect sensitive algorithmic intellectual property?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What unique computational approaches can accelerate our research and development cycles?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How do intelligent systems reduce operational complexity across multiple business units?","type":"missing","persona":"Chief Innovation Officer"},{"text":"What case studies demonstrate measurable efficiency gains from your platform?","type":"missing","persona":"Chief Innovation Officer"}],"source_opportunities":[{"name":"techcrunch.com","domain":"techcrunch.com","type":"publication","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"forbes.com","domain":"forbes.com","type":"publication","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"venturebeat.com","domain":"venturebeat.com","type":"publication","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"slashgear.com","domain":"slashgear.com","type":"publication","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"infoq.com","domain":"infoq.com","type":"developer","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"producthunt.com","domain":"producthunt.com","type":"community","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"hackernews.com","domain":"hackernews.com","type":"community","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"news.ycombinator.com","domain":"news.ycombinator.com","type":"community","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"betanews.com","domain":"betanews.com","type":"publication","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."},{"name":"siliconangle.com","domain":"siliconangle.com","type":"publication","mentions":0,"priority":"OPPORTUNITY","reason":"[LINK TARGET] Industry publication. 6 competitors active. Brand not yet mentioned."}],"provider_coverage":{"DeepSeek":20,"Claude":20,"Gemini":20,"OpenAI":20},"insights":{"terminology_gap":[{"term":"ICN AI","evidence":"No mentions in AI search results","priority":"HIGH"},{"term":"privacy systems","evidence":"Mentioned but not distinctively explained","priority":"MEDIUM"},{"term":"machine learning integration","evidence":"Generic language used","priority":"HIGH"},{"term":"data processing framework","evidence":"Lacks clear technical differentiation","priority":"MEDIUM"},{"term":"enterprise AI solution","evidence":"Minimal competitive positioning","priority":"HIGH"},{"term":"research innovation platform","evidence":"Weak academic positioning","priority":"MEDIUM"}],"language_gap":[{"site_says":"Enterprise AI Integration","site_context":"Broad marketing statement","ai_uses":"Specific infrastructure solutions","ai_context":"Technical precision required"},{"site_says":"Research & Academic Innovation","site_context":"Generic academic positioning","ai_uses":"Niche domain-specific platforms","ai_context":"Specialized ecosystem needed"},{"site_says":"Privacy-Focused Systems","site_context":"Conceptual privacy claim","ai_uses":"Concrete data protection mechanisms","ai_context":"Demonstrable security protocols"}],"audience_segments":{"addressed":[{"name":"Enterprise AI Teams","note":"10 response mentions"},{"name":"Academic Researchers","note":"10 response mentions"},{"name":"Machine Learning Practitioners","note":"Keyword alignment"},{"name":"Data Privacy Professionals","note":"Privacy keywords detected"}],"opportunity_gap":[{"name":"Blockchain Innovators","note":"Vast (17.5%) market visibility"},{"name":"Cryptocurrency Developers","note":"Monero/Zcash (5.0%) presence"},{"name":"Cloud Infrastructure Teams","note":"Microsoft/Google/AWS citations"},{"name":"GPU Computing Specialists","note":"NVIDIA developer references"}]},"position":{"strengths":["Privacy-oriented approach","Multi-domain keyword relevance","Enterprise and academic targeting","Technical language sophistication"],"opportunities":["Expand blockchain integration narrative","Develop specialized research content","Create comparative technology pages","Build AI infrastructure thought leadership"],"gaps":["Lack of competitive differentiation","Minimal AI engine recognition","Weak market positioning","Insufficient technical storytelling"]},"action_items":{"content_priorities":["Develop 'ICN vs Vast' comparative whitepaper","Create technical deep-dive blog series","Produce academic research collaboration content","Design enterprise AI integration case studies","Write privacy framework explainer guides"],"link_building":["Partner with blockchain research institutions","Guest post on machine learning platforms","Engage with NVIDIA developer communities","Cross-link with academic technology journals","Collaborate with cloud infrastructure blogs"],"quick_wins":["Update metadata for AI search optimization","Refine keyword targeting strategy","Implement structured data markup","Create FAQ targeting specific AI queries","Develop targeted landing pages for key segments"]}}};
 
         // ============ THEME ============
         function toggleTheme() {
