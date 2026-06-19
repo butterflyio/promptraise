@@ -1,0 +1,1109 @@
+{
+  "site": {
+    "name": "CosmicGate",
+    "url": "https://www.cosmicgate.ai/",
+    "domain": "www.cosmicgate.ai",
+    "slug": "www-cosmicgate",
+    "analysis_id": "openrouter-www-cosmicgate",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "June 19, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 55,
+    "score_status": "Strong AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 69,
+    "own_mentioned": true,
+    "own_appearance_pct": 55.0,
+    "own_appearance_note": "Site mentioned in 55.0% of responses",
+    "hero_comparison": [
+      {
+        "value": "55.0%",
+        "label": "CosmicGate Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "42.5%",
+        "label": "ren (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "35.0%",
+        "label": "sorare (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Sports Enthusiasts",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "CosmicGate",
+          "appearance_percentage": 45.0,
+          "avg_rank": 5.83,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "ren",
+          "appearance_percentage": 42.5,
+          "avg_rank": 8.24,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sorare",
+          "appearance_percentage": 35.0,
+          "avg_rank": 16.14,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "decentraland",
+          "appearance_percentage": 30.0,
+          "avg_rank": 15.58,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "predict",
+          "appearance_percentage": 30.0,
+          "avg_rank": 6.58,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "augur",
+          "appearance_percentage": 25.0,
+          "avg_rank": 12.2,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nba top shot",
+          "appearance_percentage": 22.5,
+          "avg_rank": 16.11,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "top shot",
+          "appearance_percentage": 22.5,
+          "avg_rank": 16.11,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chiliz",
+          "appearance_percentage": 20.0,
+          "avg_rank": 16.0,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "gnosis",
+          "appearance_percentage": 20.0,
+          "avg_rank": 13.75,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "draftkings",
+          "appearance_percentage": 15.0,
+          "avg_rank": 16.17,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fanduel",
+          "appearance_percentage": 12.5,
+          "avg_rank": 20.2,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "omen",
+          "appearance_percentage": 12.5,
+          "avg_rank": 18.0,
+          "providers": [
+            "OpenAI",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "polymarket",
+          "appearance_percentage": 10.0,
+          "avg_rank": 11.75,
+          "providers": [
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "socios",
+          "appearance_percentage": 10.0,
+          "avg_rank": 17.25,
+          "providers": [
+            "OpenAI",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "uniswap",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sportx",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.33,
+          "providers": [
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "appearance_percentage": 5.0,
+          "avg_rank": 19.5,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "polkadot",
+          "appearance_percentage": 5.0,
+          "avg_rank": 20.0,
+          "providers": [
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "rally",
+          "appearance_percentage": 5.0,
+          "avg_rank": 17.5,
+          "providers": [
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "socios.com",
+          "appearance_percentage": 5.0,
+          "avg_rank": 17.0,
+          "providers": [
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "betprotocol",
+          "appearance_percentage": 5.0,
+          "avg_rank": 19.5,
+          "providers": [
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "mlb champions",
+          "appearance_percentage": 2.5,
+          "avg_rank": 19.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "plotx",
+          "appearance_percentage": 2.5,
+          "avg_rank": 16.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance_percentage": 2.5,
+          "avg_rank": 26.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "solana",
+          "appearance_percentage": 2.5,
+          "avg_rank": 8.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "optimism",
+          "appearance_percentage": 2.5,
+          "avg_rank": 26.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "betfair",
+          "appearance_percentage": 2.5,
+          "avg_rank": 10.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "unikrn",
+          "appearance_percentage": 2.5,
+          "avg_rank": 6.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sushiswap",
+          "appearance_percentage": 2.5,
+          "avg_rank": 10.0,
+          "providers": [
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cosmos",
+          "appearance_percentage": 2.5,
+          "avg_rank": 13.0,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "dapper labs",
+          "appearance_percentage": 2.5,
+          "avg_rank": 9.0,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "the graph",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "flow",
+          "appearance_percentage": 2.5,
+          "avg_rank": 11.0,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Mistral": 1,
+        "Llama": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Content Creators and Influencers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "CosmicGate",
+          "appearance_percentage": 65.0,
+          "avg_rank": 4.35,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "ren",
+          "appearance_percentage": 40.0,
+          "avg_rank": 7.75,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "rally",
+          "appearance_percentage": 25.0,
+          "avg_rank": 12.6,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sorare",
+          "appearance_percentage": 20.0,
+          "avg_rank": 13.88,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chiliz",
+          "appearance_percentage": 17.5,
+          "avg_rank": 10.86,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "socios",
+          "appearance_percentage": 15.0,
+          "avg_rank": 13.33,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "decentraland",
+          "appearance_percentage": 12.5,
+          "avg_rank": 13.6,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "the graph",
+          "appearance_percentage": 10.0,
+          "avg_rank": 22.5,
+          "providers": [
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "predict",
+          "appearance_percentage": 10.0,
+          "avg_rank": 8.0,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "appearance_percentage": 7.5,
+          "avg_rank": 16.33,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nba top shot",
+          "appearance_percentage": 7.5,
+          "avg_rank": 21.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "top shot",
+          "appearance_percentage": 7.5,
+          "avg_rank": 21.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "socios.com",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.67,
+          "providers": [
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "flow",
+          "appearance_percentage": 7.5,
+          "avg_rank": 16.0,
+          "providers": [
+            "OpenAI",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "omen",
+          "appearance_percentage": 7.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "OpenAI",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "solana",
+          "appearance_percentage": 5.0,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "dapper labs",
+          "appearance_percentage": 5.0,
+          "avg_rank": 22.5,
+          "providers": [
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche",
+          "appearance_percentage": 2.5,
+          "avg_rank": 18.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance_percentage": 2.5,
+          "avg_rank": 29.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "band protocol",
+          "appearance_percentage": 2.5,
+          "avg_rank": 26.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "alchemy",
+          "appearance_percentage": 2.5,
+          "avg_rank": 22.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "moralis",
+          "appearance_percentage": 2.5,
+          "avg_rank": 22.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "autograph",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fancraze",
+          "appearance_percentage": 2.5,
+          "avg_rank": 20.0,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Mistral": 1,
+        "Llama": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "platform",
+      "count": 162
+    },
+    {
+      "text": "name",
+      "count": 158
+    },
+    {
+      "text": "competitors",
+      "count": 136
+    },
+    {
+      "text": "sports",
+      "count": 125
+    },
+    {
+      "text": "nfts",
+      "count": 112
+    },
+    {
+      "text": "platforms",
+      "count": 112
+    },
+    {
+      "text": "content",
+      "count": 91
+    },
+    {
+      "text": "collectibles",
+      "count": 90
+    },
+    {
+      "text": "blockchain",
+      "count": 88
+    },
+    {
+      "text": "digital",
+      "count": 78
+    }
+  ],
+  "sources": [
+    {
+      "name": "socios.com",
+      "url": "https://socios.com",
+      "mentions": 3
+    },
+    {
+      "name": "mirror.xyz",
+      "url": "https://mirror.xyz",
+      "mentions": 3
+    },
+    {
+      "name": "sound.xyz",
+      "url": "https://sound.xyz",
+      "mentions": 2
+    },
+    {
+      "name": "nft",
+      "url": "https://nft",
+      "mentions": 2
+    },
+    {
+      "name": "layer3.xyz",
+      "url": "https://layer3.xyz",
+      "mentions": 1
+    },
+    {
+      "name": "cosmicgate",
+      "url": "https://cosmicgate",
+      "mentions": 1
+    },
+    {
+      "name": "cosmicgate.io",
+      "url": "https://cosmicgate.io",
+      "mentions": 1
+    },
+    {
+      "name": "discord.gg",
+      "url": "https://discord.gg",
+      "mentions": 1
+    },
+    {
+      "name": "cryptocollectiblesexpo",
+      "url": "https://cryptocollectiblesexpo",
+      "mentions": 1
+    },
+    {
+      "name": "ethglobal.com",
+      "url": "https://ethglobal.com",
+      "mentions": 1
+    },
+    {
+      "name": "decetralizedartfest",
+      "url": "https://decetralizedartfest",
+      "mentions": 1
+    },
+    {
+      "name": "sproutsocial.com",
+      "url": "https://sproutsocial.com",
+      "mentions": 1
+    },
+    {
+      "name": "kounta",
+      "url": "https://kounta",
+      "mentions": 1
+    },
+    {
+      "name": "tableau",
+      "url": "https://tableau",
+      "mentions": 1
+    },
+    {
+      "name": "wyscout.com",
+      "url": "https://wyscout.com",
+      "mentions": 1
+    },
+    {
+      "name": "zepp.com",
+      "url": "https://zepp.com",
+      "mentions": 1
+    },
+    {
+      "name": "crowdtangle",
+      "url": "https://crowdtangle",
+      "mentions": 1
+    },
+    {
+      "name": "unmetric.com",
+      "url": "https://unmetric.com",
+      "mentions": 1
+    },
+    {
+      "name": "thenftshow",
+      "url": "https://thenftshow",
+      "mentions": 1
+    },
+    {
+      "name": "blockchain-expo.com",
+      "url": "https://blockchain-expo.com",
+      "mentions": 1
+    },
+    {
+      "name": "opensea.io",
+      "url": "https://opensea.io",
+      "mentions": 1
+    },
+    {
+      "name": "devcon.org",
+      "url": "https://devcon.org",
+      "mentions": 1
+    },
+    {
+      "name": "sportx.io",
+      "url": "https://sportx.io",
+      "mentions": 1
+    },
+    {
+      "name": "polymarket",
+      "url": "https://polymarket",
+      "mentions": 1
+    },
+    {
+      "name": "betprotocol.com",
+      "url": "https://betprotocol.com",
+      "mentions": 1
+    },
+    {
+      "name": "augur",
+      "url": "https://augur",
+      "mentions": 1
+    },
+    {
+      "name": "olyseum.io",
+      "url": "https://olyseum.io",
+      "mentions": 1
+    },
+    {
+      "name": "chiliz",
+      "url": "https://chiliz",
+      "mentions": 1
+    },
+    {
+      "name": "sorare.com",
+      "url": "https://sorare.com",
+      "mentions": 1
+    },
+    {
+      "name": "autograph.io",
+      "url": "https://autograph.io",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I use digital collectibles to gain an advantage in fantasy sports?",
+      "type": "missing",
+      "persona": "Fantasy Sports Player"
+    },
+    {
+      "text": "Can I use my collectible assets to create unique strategies for gameplay?",
+      "type": "missing",
+      "persona": "Fantasy Sports Player"
+    },
+    {
+      "text": "What are the real-time features that predict player performance in sports events?",
+      "type": "missing",
+      "persona": "Fantasy Sports Player"
+    },
+    {
+      "text": "Are there community events where I can showcase my collectibles and strategies?",
+      "type": "missing",
+      "persona": "Fantasy Sports Player"
+    },
+    {
+      "text": "What types of collectible assets are available for casual fans like me?",
+      "type": "missing",
+      "persona": "Casual Sports Fan"
+    },
+    {
+      "text": "Can I earn rewards through participation, even if I don't win predictions?",
+      "type": "missing",
+      "persona": "Casual Sports Fan"
+    },
+    {
+      "text": "How can I mint collectibles based on my sports content?",
+      "type": "missing",
+      "persona": "Sports Content Creator"
+    },
+    {
+      "text": "Are there tools to analyze audience engagement and predict trends in sports?",
+      "type": "missing",
+      "persona": "Sports Content Creator"
+    },
+    {
+      "text": "What methods can I use to turn my audience into active participants in my content?",
+      "type": "missing",
+      "persona": "Social Media Influencer"
+    },
+    {
+      "text": "Are there options for exclusive content that can be unlocked by fans through collectibles?",
+      "type": "missing",
+      "persona": "Social Media Influencer"
+    },
+    {
+      "text": "How can I track my audience's engagement with my collectibles effectively?",
+      "type": "missing",
+      "persona": "Social Media Influencer"
+    },
+    {
+      "text": "How can I use digital collectibles to gain an advantage in fantasy sports?",
+      "type": "missing",
+      "persona": "Fantasy Sports Player"
+    },
+    {
+      "text": "Are there community events where I can showcase my collectibles and strategies?",
+      "type": "missing",
+      "persona": "Fantasy Sports Player"
+    },
+    {
+      "text": "How can I make predictions on sports events without any prior experience?",
+      "type": "missing",
+      "persona": "Casual Sports Fan"
+    },
+    {
+      "text": "What types of collectible assets are available for casual fans like me?",
+      "type": "missing",
+      "persona": "Casual Sports Fan"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "nftnow.com",
+      "domain": "nftnow.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "gamasutra.com",
+      "domain": "gamasutra.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "tokenomics.org",
+      "domain": "tokenomics.org",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "nftevening.com",
+      "domain": "nftevening.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchain.news",
+      "domain": "blockchain.news",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 45,
+    "mistral": 40,
+    "llama": 42,
+    "deepseek": 50,
+    "claude": 0,
+    "gemini": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "Agentic Layer",
+        "evidence": "Unique concept utilized on site not mentioned by AI.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "tokenized playable assets",
+        "evidence": "Specific phrase for asset description missing in AI responses.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "$GATEAI",
+        "evidence": "Token mention unique to the site, not recognized by AI.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "fractional ownership",
+        "evidence": "Term used on site but low recognition in AI discussions.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Decentralized intelligence layer behind fan ownership in sports entertainment.",
+        "site_context": "Describes the unique framework of their ecosystem.",
+        "ai_uses": "sports",
+        "ai_context": "AI focuses on broader sports categories."
+      },
+      {
+        "site_says": "Creates a fan-first social app that makes sport predictions fun again.",
+        "site_context": "Highlighting user-centered design.",
+        "ai_uses": "digital",
+        "ai_context": "AI uses more generalized terms related to digital platforms."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Sports Enthusiasts",
+          "note": "Directly targeted through sports prediction content."
+        },
+        {
+          "name": "Content Creators and Influencers",
+          "note": "Involved in tokenization and asset creation."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Gamer Community",
+          "note": "Potential audience not addressed, competitors like Top Shot target them at 22.5%."
+        },
+        {
+          "name": "Investors",
+          "note": "Growing demand for NFT investment strategies not tapped into."
+        },
+        {
+          "name": "General Sports Fans",
+          "note": "Broad audience that engages with collectibles, lower outreach."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Unique focus on integrating AI with sports predictions.",
+        "Innovative tokenization strategies for fan assets.",
+        "Robust community framework fostering engagement."
+      ],
+      "opportunities": [
+        "Expand content around competitive analysis versus rivals like Sorare (35.0% presence).",
+        "Develop niche content aimed at gamer communities.",
+        "Leverage partnerships with influencers for greater reach."
+      ],
+      "gaps": [
+        "Low visibility in AI-driven search results (0% site appearance).",
+        "Not enough outreach to investors interested in sports NFTs.",
+        "Underutilization of social media channels compared to competitors."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a dedicated page explaining the 'Agentic Layer' and its benefits.",
+        "Develop blog posts highlighting success stories of tokenized assets.",
+        "Publish comparison articles with direct competitors like Sorare.",
+        "Enhance SEO for terms like 'tokenized collectibles' and 'sports NFTs'."
+      ],
+      "link_building": [
+        "Reach out to industry blogs for guest post opportunities related to sports prediction.",
+        "Engage with influencers and encourage backlinks through partnerships.",
+        "Create infographics linked to educational content on NFTs and collectibles.",
+        "Tap into sports forums for sharing unique insights and garnering backlinks."
+      ],
+      "quick_wins": [
+        "Optimize homepage for key phrases like 'sports NFTs'.",
+        "Utilize social media channels to announce new features like $GATEAI.",
+        "Implement a referral program for users bringing in new fans or collectors.",
+        "Feature testimonials and case studies prominently on the site."
+      ]
+    }
+  }
+}

@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CosmicGate AI Visibility Report</title>
+    <title> AI Visibility Report</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSansVF.woff2') format('woff2-variations');
+            src: url('/fonts/NeutralSansVF.woff2') format('woff2-variations');
             font-weight: 400 900;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Regular.woff2') format('woff2');
+            src: url('/fonts/NeutralSans-Regular.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Bold.woff2') format('woff2');
+            src: url('/fonts/NeutralSans-Bold.woff2') format('woff2');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -600,8 +600,8 @@
         <!-- Header -->
         <div class="header">
             <div class="header-left">
-                <h1>CosmicGate AI Visibility Report</h1>
-                <p>Site: www.cosmicgate.ai | Last updated: <span id="lastUpdated"></span></p>
+                <h1> AI Visibility Report</h1>
+                <p>Site:  | Last updated: <span id="lastUpdated"></span></p>
             </div>
             <div class="header-actions">
                 <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
@@ -634,7 +634,7 @@
             <div class="hero-details">
                 <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span id="scoreStatusText">Zero AI Visibility</span>
+                    <span id="scoreStatusText"></span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -644,28 +644,28 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="label">Total Responses</div>
-                <div class="value">80</div>
-                <div class="sub">40 per customer type</div>
+                <div class="value"></div>
+                <div class="sub"> per customer type</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value">69</div>
+                <div class="value"></div>
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label" id="appearanceLabel">CosmicGate Appearance</div>
-                <div class="value brand" id="appearanceValue">0%</div>
-                <div class="sub" id="appearanceSub">Site NOT mentioned in AI responses</div>
+                <div class="label" id="appearanceLabel"> Appearance</div>
+                <div class="value brand" id="appearanceValue">%</div>
+                <div class="sub" id="appearanceSub"></div>
             </div>
         </div>
 
         <!-- Segment Tabs -->
         <div class="type-tabs">
             <button class="type-tab active" onclick="showType('type1')">
-                <span>Sports Enthusiasts</span>
+                <span></span>
             </button>
             <button class="type-tab" onclick="showType('type2')">
-                <span>Content Creators and Influencers</span>
+                <span></span>
             </button>
         </div>
 
@@ -691,7 +691,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — Sports Enthusiasts</div>
+                <div class="card-title">Top Competitors — </div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -734,7 +734,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — Content Creators and Influencers</div>
+                <div class="card-title">Top Competitors — </div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -793,10 +793,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Keyword Opportunities</div>
-                    <span class="tag tag-competitor">Where CosmicGate Ranks Poorly</span>
+                    <span class="tag tag-competitor">Where  Ranks Poorly</span>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
-                    Queries where CosmicGate is missing or ranks poorly
+                    Queries where  is missing or ranks poorly
                 </p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
@@ -816,7 +816,7 @@
         <div class="card" style="margin-bottom: 2rem;">
             <div class="card-title">Terminology Gap Analysis</div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                Keywords and terms where CosmicGate is missing from AI responses.
+                Keywords and terms where  is missing from AI responses.
             </p>
             <table class="gap-table">
                 <thead>
@@ -857,7 +857,7 @@
         </div>
 
         <!-- Competitive Position -->
-        <h2 class="section-title">CosmicGate's Competitive Position</h2>
+        <h2 class="section-title">'s Competitive Position</h2>
         <div class="position-grid">
             <div class="position-card strengths">
                 <h3>Strengths</h3>
@@ -903,14 +903,14 @@
         <div class="footer">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
-                <p style="color: var(--text-secondary);">Analysis ID: openrouter-www-cosmicgate</p>
+                <p style="color: var(--text-secondary);">Analysis ID: </p>
             </div>
         </div>
     </div>
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = {"site":{"name":"CosmicGate","url":"https://www.cosmicgate.ai/","domain":"www.cosmicgate.ai","slug":"www-cosmicgate","analysis_id":"openrouter-www-cosmicgate","site_uuid":"openrouter-batch","generated_at":"June 19, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":0,"score_status":"Zero AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":69,"own_mentioned":true,"own_appearance_pct":0,"own_appearance_note":"Site NOT mentioned in AI responses","hero_comparison":[{"value":"0%","label":"CosmicGate Visibility","trend":"down"},{"value":"42.5%","label":"ren (Leader)","trend":""},{"value":"35.0%","label":"sorare (#2)","trend":""}]},"customer_types":[{"name":"Sports Enthusiasts","uuid":null,"competitors":[{"name":"ren","appearance":42.5,"rank":8.24,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"sorare","appearance":35.0,"rank":16.14,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"decentraland","appearance":30.0,"rank":15.58,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"predict","appearance":30.0,"rank":6.58,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"augur","appearance":25.0,"rank":12.2,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"nba top shot","appearance":22.5,"rank":16.11,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"top shot","appearance":22.5,"rank":16.11,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"chiliz","appearance":20.0,"rank":16.0,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"gnosis","appearance":20.0,"rank":13.75,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"draftkings","appearance":15.0,"rank":16.17,"providers":["OpenAI","Llama","DeepSeek"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"OpenAI":0,"Mistral":1,"Llama":2,"DeepSeek":3},"has_distinct_competitor_data":true,"data_note":null},{"name":"Content Creators and Influencers","uuid":null,"competitors":[{"name":"ren","appearance":40.0,"rank":7.75,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"rally","appearance":25.0,"rank":12.6,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"sorare","appearance":20.0,"rank":13.88,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"chiliz","appearance":17.5,"rank":10.86,"providers":["Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"socios","appearance":15.0,"rank":13.33,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"decentraland","appearance":12.5,"rank":13.6,"providers":["OpenAI","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"the graph","appearance":10.0,"rank":22.5,"providers":["Mistral","DeepSeek"],"isOwn":false,"url":null},{"name":"predict","appearance":10.0,"rank":8.0,"providers":["OpenAI","Mistral","Llama","DeepSeek"],"isOwn":false,"url":null},{"name":"chainlink","appearance":7.5,"rank":16.33,"providers":["OpenAI","DeepSeek"],"isOwn":false,"url":null},{"name":"nba top shot","appearance":7.5,"rank":21.0,"providers":["OpenAI","DeepSeek"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"OpenAI":0,"Mistral":1,"Llama":2,"DeepSeek":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"platform","count":162},{"text":"name","count":158},{"text":"competitors","count":136},{"text":"sports","count":125},{"text":"nfts","count":112},{"text":"platforms","count":112},{"text":"content","count":91},{"text":"collectibles","count":90},{"text":"blockchain","count":88},{"text":"digital","count":78}],"sources":[{"name":"socios.com","url":"https://socios.com","mentions":3},{"name":"mirror.xyz","url":"https://mirror.xyz","mentions":3},{"name":"sound.xyz","url":"https://sound.xyz","mentions":2},{"name":"nft","url":"https://nft","mentions":2},{"name":"layer3.xyz","url":"https://layer3.xyz","mentions":1},{"name":"cosmicgate","url":"https://cosmicgate","mentions":1},{"name":"cosmicgate.io","url":"https://cosmicgate.io","mentions":1},{"name":"discord.gg","url":"https://discord.gg","mentions":1},{"name":"cryptocollectiblesexpo","url":"https://cryptocollectiblesexpo","mentions":1},{"name":"ethglobal.com","url":"https://ethglobal.com","mentions":1},{"name":"decetralizedartfest","url":"https://decetralizedartfest","mentions":1},{"name":"sproutsocial.com","url":"https://sproutsocial.com","mentions":1},{"name":"kounta","url":"https://kounta","mentions":1},{"name":"tableau","url":"https://tableau","mentions":1},{"name":"wyscout.com","url":"https://wyscout.com","mentions":1},{"name":"zepp.com","url":"https://zepp.com","mentions":1},{"name":"crowdtangle","url":"https://crowdtangle","mentions":1},{"name":"unmetric.com","url":"https://unmetric.com","mentions":1},{"name":"thenftshow","url":"https://thenftshow","mentions":1},{"name":"blockchain-expo.com","url":"https://blockchain-expo.com","mentions":1},{"name":"opensea.io","url":"https://opensea.io","mentions":1},{"name":"devcon.org","url":"https://devcon.org","mentions":1},{"name":"sportx.io","url":"https://sportx.io","mentions":1},{"name":"polymarket","url":"https://polymarket","mentions":1},{"name":"betprotocol.com","url":"https://betprotocol.com","mentions":1},{"name":"augur","url":"https://augur","mentions":1},{"name":"olyseum.io","url":"https://olyseum.io","mentions":1},{"name":"chiliz","url":"https://chiliz","mentions":1},{"name":"sorare.com","url":"https://sorare.com","mentions":1},{"name":"autograph.io","url":"https://autograph.io","mentions":1}],"keyword_opportunities":[{"text":"How can I use digital collectibles to gain an advantage in fantasy sports?","type":"missing","persona":"Fantasy Sports Player"},{"text":"Can I use my collectible assets to create unique strategies for gameplay?","type":"missing","persona":"Fantasy Sports Player"},{"text":"What are the real-time features that predict player performance in sports events?","type":"missing","persona":"Fantasy Sports Player"},{"text":"Are there community events where I can showcase my collectibles and strategies?","type":"missing","persona":"Fantasy Sports Player"},{"text":"What types of collectible assets are available for casual fans like me?","type":"missing","persona":"Casual Sports Fan"},{"text":"Can I earn rewards through participation, even if I don't win predictions?","type":"missing","persona":"Casual Sports Fan"},{"text":"How can I mint collectibles based on my sports content?","type":"missing","persona":"Sports Content Creator"},{"text":"Are there tools to analyze audience engagement and predict trends in sports?","type":"missing","persona":"Sports Content Creator"},{"text":"What methods can I use to turn my audience into active participants in my content?","type":"missing","persona":"Social Media Influencer"},{"text":"Are there options for exclusive content that can be unlocked by fans through collectibles?","type":"missing","persona":"Social Media Influencer"},{"text":"How can I track my audience's engagement with my collectibles effectively?","type":"missing","persona":"Social Media Influencer"},{"text":"How can I use digital collectibles to gain an advantage in fantasy sports?","type":"missing","persona":"Fantasy Sports Player"},{"text":"Are there community events where I can showcase my collectibles and strategies?","type":"missing","persona":"Fantasy Sports Player"},{"text":"How can I make predictions on sports events without any prior experience?","type":"missing","persona":"Casual Sports Fan"},{"text":"What types of collectible assets are available for casual fans like me?","type":"missing","persona":"Casual Sports Fan"}],"source_opportunities":[{"name":"decrypt.co","domain":"decrypt.co","type":"competitor","mentions":0},{"name":"cointelegraph.com","domain":"cointelegraph.com","type":"competitor","mentions":0},{"name":"theblock.co","domain":"theblock.co","type":"competitor","mentions":0},{"name":"nftnow.com","domain":"nftnow.com","type":"competitor","mentions":0},{"name":"gamasutra.com","domain":"gamasutra.com","type":"competitor","mentions":0},{"name":"cryptoslate.com","domain":"cryptoslate.com","type":"competitor","mentions":0},{"name":"tokenomics.org","domain":"tokenomics.org","type":"competitor","mentions":0},{"name":"messari.io","domain":"messari.io","type":"competitor","mentions":0},{"name":"nftevening.com","domain":"nftevening.com","type":"competitor","mentions":0},{"name":"blockchain.news","domain":"blockchain.news","type":"competitor","mentions":0}],"provider_coverage":{"openai":45,"mistral":40,"llama":42,"deepseek":50,"claude":0,"gemini":0},"insights":{"terminology_gap":[{"term":"Agentic Layer","evidence":"Unique concept utilized on site not mentioned by AI.","priority":"HIGH"},{"term":"tokenized playable assets","evidence":"Specific phrase for asset description missing in AI responses.","priority":"HIGH"},{"term":"$GATEAI","evidence":"Token mention unique to the site, not recognized by AI.","priority":"MEDIUM"},{"term":"fractional ownership","evidence":"Term used on site but low recognition in AI discussions.","priority":"MEDIUM"}],"language_gap":[{"site_says":"Decentralized intelligence layer behind fan ownership in sports entertainment.","site_context":"Describes the unique framework of their ecosystem.","ai_uses":"sports","ai_context":"AI focuses on broader sports categories."},{"site_says":"Creates a fan-first social app that makes sport predictions fun again.","site_context":"Highlighting user-centered design.","ai_uses":"digital","ai_context":"AI uses more generalized terms related to digital platforms."}],"audience_segments":{"addressed":[{"name":"Sports Enthusiasts","note":"Directly targeted through sports prediction content."},{"name":"Content Creators and Influencers","note":"Involved in tokenization and asset creation."}],"opportunity_gap":[{"name":"Gamer Community","note":"Potential audience not addressed, competitors like Top Shot target them at 22.5%."},{"name":"Investors","note":"Growing demand for NFT investment strategies not tapped into."},{"name":"General Sports Fans","note":"Broad audience that engages with collectibles, lower outreach."}]},"position":{"strengths":["Unique focus on integrating AI with sports predictions.","Innovative tokenization strategies for fan assets.","Robust community framework fostering engagement."],"opportunities":["Expand content around competitive analysis versus rivals like Sorare (35.0% presence).","Develop niche content aimed at gamer communities.","Leverage partnerships with influencers for greater reach."],"gaps":["Low visibility in AI-driven search results (0% site appearance).","Not enough outreach to investors interested in sports NFTs.","Underutilization of social media channels compared to competitors."]},"action_items":{"content_priorities":["Create a dedicated page explaining the 'Agentic Layer' and its benefits.","Develop blog posts highlighting success stories of tokenized assets.","Publish comparison articles with direct competitors like Sorare.","Enhance SEO for terms like 'tokenized collectibles' and 'sports NFTs'."],"link_building":["Reach out to industry blogs for guest post opportunities related to sports prediction.","Engage with influencers and encourage backlinks through partnerships.","Create infographics linked to educational content on NFTs and collectibles.","Tap into sports forums for sharing unique insights and garnering backlinks."],"quick_wins":["Optimize homepage for key phrases like 'sports NFTs'.","Utilize social media channels to announce new features like $GATEAI.","Implement a referral program for users bringing in new fans or collectors.","Feature testimonials and case studies prominently on the site."]}}};
+        const DASHBOARD_DATA = ;
 
         // ============ THEME ============
         function toggleTheme() {

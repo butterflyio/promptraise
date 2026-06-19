@@ -1,0 +1,1069 @@
+{
+  "site": {
+    "name": "Botanika",
+    "url": "https://botanika.ai",
+    "domain": "botanika.ai",
+    "slug": "botanika-v1",
+    "analysis_id": "openrouter-botanika-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "May 19, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 25,
+    "score_status": "Moderate AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 86,
+    "own_mentioned": true,
+    "own_appearance_pct": 25.0,
+    "own_appearance_note": "Site mentioned in 25.0% of responses",
+    "hero_comparison": [
+      {
+        "value": "25.0%",
+        "label": "Botanika Visibility",
+        "trend": ""
+      },
+      {
+        "value": "37.5%",
+        "label": "ipfs (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "35.0%",
+        "label": "azure (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Enterprise Data Infrastructure",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "azure",
+          "appearance_percentage": 35.0,
+          "avg_rank": 15.43,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "google cloud",
+          "appearance_percentage": 32.5,
+          "avg_rank": 14.69,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "aws",
+          "appearance_percentage": 32.5,
+          "avg_rank": 12.54,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "filecoin",
+          "appearance_percentage": 27.5,
+          "avg_rank": 11.82,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "arweave",
+          "appearance_percentage": 25.0,
+          "avg_rank": 15.3,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "akash network",
+          "appearance_percentage": 22.5,
+          "avg_rank": 11.89,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "akash",
+          "appearance_percentage": 22.5,
+          "avg_rank": 11.89,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "golem",
+          "appearance_percentage": 22.5,
+          "avg_rank": 14.67,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sia",
+          "appearance_percentage": 20.0,
+          "avg_rank": 18.62,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "storj",
+          "appearance_percentage": 20.0,
+          "avg_rank": 14.62,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "polygon",
+          "appearance_percentage": 20.0,
+          "avg_rank": 14.12,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Botanika",
+          "appearance_percentage": 20.0,
+          "avg_rank": 5.75,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "ipfs",
+          "appearance_percentage": 17.5,
+          "avg_rank": 17.86,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "iexec",
+          "appearance_percentage": 15.0,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "golem network",
+          "appearance_percentage": 15.0,
+          "avg_rank": 17.67,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ipfs (interplanetary file system)",
+          "appearance_percentage": 10.0,
+          "avg_rank": 16.75,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "render network",
+          "appearance_percentage": 7.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ocean protocol",
+          "appearance_percentage": 7.5,
+          "avg_rank": 28.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.0,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "dfinity internet computer",
+          "appearance_percentage": 7.5,
+          "avg_rank": 20.67,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fluence",
+          "appearance_percentage": 5.0,
+          "avg_rank": 22.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "flux",
+          "appearance_percentage": 2.5,
+          "avg_rank": 3.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "crust network",
+          "appearance_percentage": 2.5,
+          "avg_rank": 29.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "streamr",
+          "appearance_percentage": 2.5,
+          "avg_rank": 28.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nsf",
+          "appearance_percentage": 2.5,
+          "avg_rank": 28.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "foundation",
+          "appearance_percentage": 2.5,
+          "avg_rank": 9.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "livepeer",
+          "appearance_percentage": 2.5,
+          "avg_rank": 28.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "theta network",
+          "appearance_percentage": 2.5,
+          "avg_rank": 32.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fantom",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Research & Innovation Ecosystem",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "ipfs",
+          "appearance_percentage": 37.5,
+          "avg_rank": 15.87,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ocean protocol",
+          "appearance_percentage": 35.0,
+          "avg_rank": 13.43,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "aws",
+          "appearance_percentage": 35.0,
+          "avg_rank": 13.43,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "golem",
+          "appearance_percentage": 32.5,
+          "avg_rank": 20.15,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "filecoin",
+          "appearance_percentage": 32.5,
+          "avg_rank": 12.85,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "azure",
+          "appearance_percentage": 30.0,
+          "avg_rank": 15.08,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Botanika",
+          "appearance_percentage": 30.0,
+          "avg_rank": 4.17,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "arweave",
+          "appearance_percentage": 27.5,
+          "avg_rank": 15.0,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "google cloud",
+          "appearance_percentage": 27.5,
+          "avg_rank": 12.73,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ipfs (interplanetary file system)",
+          "appearance_percentage": 22.5,
+          "avg_rank": 14.44,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "golem network",
+          "appearance_percentage": 22.5,
+          "avg_rank": 22.44,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "iexec",
+          "appearance_percentage": 15.0,
+          "avg_rank": 20.67,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "render network",
+          "appearance_percentage": 12.5,
+          "avg_rank": 19.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sia",
+          "appearance_percentage": 12.5,
+          "avg_rank": 14.2,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "numerai",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.67,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "foundation",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.67,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "akash network",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "akash",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "storj",
+          "appearance_percentage": 7.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "streamr",
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.5,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "appearance_percentage": 5.0,
+          "avg_rank": 20.5,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fluence",
+          "appearance_percentage": 2.5,
+          "avg_rank": 13.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "rarible",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "opensea",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche",
+          "appearance_percentage": 2.5,
+          "avg_rank": 18.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fetch.ai",
+          "appearance_percentage": 2.5,
+          "avg_rank": 25.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "singularitynet",
+          "appearance_percentage": 2.5,
+          "avg_rank": 25.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "molecule.to",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nsf",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "researchhub",
+          "appearance_percentage": 2.5,
+          "avg_rank": 15.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "origintrail",
+          "appearance_percentage": 2.5,
+          "avg_rank": 19.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "data",
+      "count": 360
+    },
+    {
+      "text": "decentralized",
+      "count": 200
+    },
+    {
+      "text": "storage",
+      "count": 151
+    },
+    {
+      "text": "name",
+      "count": 140
+    },
+    {
+      "text": "blockchain",
+      "count": 139
+    },
+    {
+      "text": "cloud",
+      "count": 138
+    },
+    {
+      "text": "network",
+      "count": 135
+    },
+    {
+      "text": "computing",
+      "count": 121
+    },
+    {
+      "text": "platform",
+      "count": 103
+    },
+    {
+      "text": "competitors",
+      "count": 102
+    }
+  ],
+  "sources": [
+    {
+      "name": "flower.dev",
+      "url": "https://flower.dev",
+      "mentions": 2
+    },
+    {
+      "name": "tensorflow",
+      "url": "https://tensorflow",
+      "mentions": 2
+    },
+    {
+      "name": "genomes.io",
+      "url": "https://genomes.io",
+      "mentions": 1
+    },
+    {
+      "name": "horovod.ai",
+      "url": "https://horovod.ai",
+      "mentions": 1
+    },
+    {
+      "name": "near.org",
+      "url": "https://near.org",
+      "mentions": 1
+    },
+    {
+      "name": "polkadot.network",
+      "url": "https://polkadot.network",
+      "mentions": 1
+    },
+    {
+      "name": "filecoin.io",
+      "url": "https://filecoin.io",
+      "mentions": 1
+    },
+    {
+      "name": "sia.tech",
+      "url": "https://sia.tech",
+      "mentions": 1
+    },
+    {
+      "name": "arweave",
+      "url": "https://arweave",
+      "mentions": 1
+    },
+    {
+      "name": "eigenlayer.com",
+      "url": "https://eigenlayer.com",
+      "mentions": 1
+    },
+    {
+      "name": "oceanprotocol.com",
+      "url": "https://oceanprotocol.com",
+      "mentions": 1
+    },
+    {
+      "name": "celo.org",
+      "url": "https://celo.org",
+      "mentions": 1
+    },
+    {
+      "name": "botanika",
+      "url": "https://botanika",
+      "mentions": 1
+    },
+    {
+      "name": "researchhub",
+      "url": "https://researchhub",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I reduce our current cloud storage infrastructure costs by 40%?",
+      "type": "missing",
+      "persona": "Technical Infrastructure Director"
+    },
+    {
+      "text": "What options exist for geographic redundancy without traditional data center investments?",
+      "type": "missing",
+      "persona": "Technical Infrastructure Director"
+    },
+    {
+      "text": "Can machine learning models be trained more efficiently using distributed computational networks?",
+      "type": "missing",
+      "persona": "Technical Infrastructure Director"
+    },
+    {
+      "text": "What are the security advantages of decentralized storage compared to centralized systems?",
+      "type": "missing",
+      "persona": "Technical Infrastructure Director"
+    },
+    {
+      "text": "How quickly can our organization migrate existing data infrastructure to a more flexible platform?",
+      "type": "missing",
+      "persona": "Technical Infrastructure Director"
+    },
+    {
+      "text": "What computational models support massive parallel processing for neural network training?",
+      "type": "missing",
+      "persona": "AI Research Lead"
+    },
+    {
+      "text": "How can I access globally distributed computing resources without complex procurement?",
+      "type": "missing",
+      "persona": "AI Research Lead"
+    },
+    {
+      "text": "Can I dynamically scale computational resources based on project complexity?",
+      "type": "missing",
+      "persona": "AI Research Lead"
+    },
+    {
+      "text": "What performance benchmarks demonstrate distributed computational efficiency?",
+      "type": "missing",
+      "persona": "AI Research Lead"
+    },
+    {
+      "text": "How can multiple research departments share computational resources securely?",
+      "type": "missing",
+      "persona": "University Research Coordinator"
+    },
+    {
+      "text": "What infrastructure supports collaborative international research initiatives?",
+      "type": "missing",
+      "persona": "University Research Coordinator"
+    },
+    {
+      "text": "Can we reduce our high-performance computing equipment capital expenses?",
+      "type": "missing",
+      "persona": "University Research Coordinator"
+    },
+    {
+      "text": "What mechanisms protect intellectual property during distributed research?",
+      "type": "missing",
+      "persona": "University Research Coordinator"
+    },
+    {
+      "text": "What distributed processing architectures support complex climate simulation models?",
+      "type": "missing",
+      "persona": "Scientific Computing Specialist"
+    },
+    {
+      "text": "How can genomic research datasets be stored with maximum accessibility and minimal latency?",
+      "type": "missing",
+      "persona": "Scientific Computing Specialist"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockonomi.com",
+      "domain": "blockonomi.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "thenewstack.io",
+      "domain": "thenewstack.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptonews.com",
+      "domain": "cryptonews.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "techcrunch.com",
+      "domain": "techcrunch.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net/blog",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "protocol.com",
+      "domain": "protocol.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 47,
+    "gemini": 50,
+    "claude": 45,
+    "deepseek": 50
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "DePIN",
+        "evidence": "Low recognition in AI responses",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Full Stack Data Infrastructure",
+        "evidence": "Vague competitor mapping",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Decentralized Computing Layer",
+        "evidence": "Limited semantic understanding",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Blockchain Storage",
+        "evidence": "Competing descriptions from AI",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Full Stack Data Infrastructure Layer",
+        "site_context": "Technical positioning",
+        "ai_uses": "Cloud computing platform",
+        "ai_context": "Generalized categorization"
+      },
+      {
+        "site_says": "Storage, AI, and DePIN",
+        "site_context": "Product capabilities",
+        "ai_uses": "Decentralized network services",
+        "ai_context": "Partial functional understanding"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Enterprise Data Infrastructure",
+          "note": "10 direct responses"
+        },
+        {
+          "name": "Research & Innovation Ecosystem",
+          "note": "10 direct responses"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Cloud Providers",
+          "note": "35% competitor visibility"
+        },
+        {
+          "name": "Blockchain Storage Solutions",
+          "note": "32.5% competitor presence"
+        },
+        {
+          "name": "Distributed Computing Networks",
+          "note": "22.5% market recognition"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Unique DePIN positioning",
+        "Multi-layer infrastructure approach",
+        "Broad technological coverage",
+        "Emerging decentralized technology focus"
+      ],
+      "opportunities": [
+        "Clarify technical differentiation",
+        "Expand AI engine visibility",
+        "Create comparative content",
+        "Develop thought leadership narratives"
+      ],
+      "gaps": [
+        "Limited brand recognition",
+        "Inconsistent terminology",
+        "Weak competitive positioning",
+        "Minimal AI search presence"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop comprehensive DePIN explanation guide",
+        "Create 'Botanika vs Major Cloud Providers' comparison",
+        "Produce technical whitepaper on infrastructure approach",
+        "Build detailed use case library",
+        "Generate AI-optimized keyword content"
+      ],
+      "link_building": [
+        "Partner with research institutions",
+        "Guest post on blockchain/cloud platforms",
+        "Engage with decentralized technology forums",
+        "Create collaborative research content",
+        "Develop strategic backlink partnerships"
+      ],
+      "quick_wins": [
+        "Update homepage with AI-searchable language",
+        "Implement structured data markup",
+        "Optimize metadata for key terms",
+        "Create targeted landing pages",
+        "Develop media kit with clear positioning"
+      ]
+    }
+  }
+}

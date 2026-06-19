@@ -10,18 +10,18 @@
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 0,
-    "score_status": "Zero AI Visibility",
+    "score": 31,
+    "score_status": "Moderate AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
     "unique_competitors": 6,
-    "own_mentioned": false,
-    "own_appearance_pct": 0,
-    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "own_mentioned": true,
+    "own_appearance_pct": 31.2,
+    "own_appearance_note": "Site mentioned in 31.2% of responses",
     "hero_comparison": [
       {
-        "value": "0%",
-        "label": "ICN Visibility",
+        "value": "31.2%",
+        "label": "Icn Visibility",
         "trend": ""
       },
       {
@@ -41,20 +41,32 @@
       "customer_type_name": "Enterprise AI Integration",
       "competitors": [
         {
-          "name": "CoreWeave",
+          "name": "Icn",
+          "appearance_percentage": 45.0,
+          "avg_rank": 4.5,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "monero",
           "appearance_percentage": 5.0,
           "avg_rank": 12.5,
           "providers": [
-            "Gemini"
+            "google/gemini-2.0-flash-001"
           ],
           "is_own": false
         },
         {
-          "name": "Lambda Labs",
+          "name": "zcash",
           "appearance_percentage": 5.0,
           "avg_rank": 12.5,
           "providers": [
-            "Gemini"
+            "google/gemini-2.0-flash-001"
           ],
           "is_own": false
         }
@@ -69,16 +81,27 @@
           "appearance_percentage": 17.5,
           "avg_rank": 10.67,
           "providers": [
-            "Gemini",
-            "OpenAI",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
           "is_own": false
         },
         {
-          "name": "Paperspace",
+          "name": "Icn",
+          "appearance_percentage": 17.5,
+          "avg_rank": 3.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "dash",
           "appearance_percentage": 2.5,
-          "avg_rank": 0,
+          "avg_rank": null,
           "providers": [
             "DeepSeek"
           ],
@@ -89,14 +112,14 @@
           "appearance_percentage": 2.5,
           "avg_rank": 12.0,
           "providers": [
-            "Claude"
+            "anthropic/claude-3.5-haiku"
           ],
           "is_own": false
         },
         {
           "name": "hugging face",
           "appearance_percentage": 2.5,
-          "avg_rank": 0,
+          "avg_rank": null,
           "providers": [
             "OpenAI"
           ],

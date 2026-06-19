@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botanika AI Visibility Report</title>
+    <title> AI Visibility Report</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSansVF.woff2') format('woff2-variations');
+            src: url('/fonts/NeutralSansVF.woff2') format('woff2-variations');
             font-weight: 400 900;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Regular.woff2') format('woff2');
+            src: url('/fonts/NeutralSans-Regular.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Bold.woff2') format('woff2');
+            src: url('/fonts/NeutralSans-Bold.woff2') format('woff2');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -600,8 +600,8 @@
         <!-- Header -->
         <div class="header">
             <div class="header-left">
-                <h1>Botanika AI Visibility Report</h1>
-                <p>Site: botanika.ai | Last updated: <span id="lastUpdated"></span></p>
+                <h1> AI Visibility Report</h1>
+                <p>Site:  | Last updated: <span id="lastUpdated"></span></p>
             </div>
             <div class="header-actions">
                 <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
@@ -632,9 +632,9 @@
                 </div>
             </div>
             <div class="hero-details">
-                <div class="score-status">
+                <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span>Zero AI Visibility</span>
+                    <span id="scoreStatusText"></span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -644,28 +644,28 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="label">Total Responses</div>
-                <div class="value">80</div>
-                <div class="sub">40 per customer type</div>
+                <div class="value"></div>
+                <div class="sub"> per customer type</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value">86</div>
+                <div class="value"></div>
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label">Botanika Appearance</div>
-                <div class="value brand">0%</div>
-                <div class="sub">Site NOT mentioned in AI responses</div>
+                <div class="label" id="appearanceLabel"> Appearance</div>
+                <div class="value brand" id="appearanceValue">%</div>
+                <div class="sub" id="appearanceSub"></div>
             </div>
         </div>
 
         <!-- Segment Tabs -->
         <div class="type-tabs">
             <button class="type-tab active" onclick="showType('type1')">
-                <span>Enterprise Data Infrastructure</span>
+                <span></span>
             </button>
             <button class="type-tab" onclick="showType('type2')">
-                <span>Research & Innovation Ecosystem</span>
+                <span></span>
             </button>
         </div>
 
@@ -691,7 +691,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — Enterprise Data Infrastructure</div>
+                <div class="card-title">Top Competitors — </div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -734,7 +734,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — Research & Innovation Ecosystem</div>
+                <div class="card-title">Top Competitors — </div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -793,10 +793,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Keyword Opportunities</div>
-                    <span class="tag tag-competitor">Where Botanika Ranks Poorly</span>
+                    <span class="tag tag-competitor">Where  Ranks Poorly</span>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
-                    Queries where Botanika is missing or ranks poorly
+                    Queries where  is missing or ranks poorly
                 </p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
@@ -816,7 +816,7 @@
         <div class="card" style="margin-bottom: 2rem;">
             <div class="card-title">Terminology Gap Analysis</div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                Keywords and terms where Botanika is missing from AI responses.
+                Keywords and terms where  is missing from AI responses.
             </p>
             <table class="gap-table">
                 <thead>
@@ -857,7 +857,7 @@
         </div>
 
         <!-- Competitive Position -->
-        <h2 class="section-title">Botanika's Competitive Position</h2>
+        <h2 class="section-title">'s Competitive Position</h2>
         <div class="position-grid">
             <div class="position-card strengths">
                 <h3>Strengths</h3>
@@ -903,14 +903,14 @@
         <div class="footer">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
-                <p style="color: var(--text-secondary);">Analysis ID: openrouter-botanika-v1</p>
+                <p style="color: var(--text-secondary);">Analysis ID: </p>
             </div>
         </div>
     </div>
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = {"site":{"name":"Botanika","url":"https://botanika.ai","domain":"botanika.ai","slug":"botanika-v1","analysis_id":"openrouter-botanika-v1","site_uuid":"openrouter-batch","generated_at":"May 19, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":0,"score_status":"Zero AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":86,"own_mentioned":false,"own_appearance_pct":0,"own_appearance_note":"Site NOT mentioned in AI responses","hero_comparison":[{"value":"0%","label":"Botanika Visibility","trend":"down"},{"value":"37.5%","label":"ipfs (Leader)","trend":""},{"value":"35.0%","label":"azure (#2)","trend":""}]},"customer_types":[{"name":"Enterprise Data Infrastructure","uuid":null,"competitors":[{"name":"azure","appearance":35.0,"rank":15.43,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"google cloud","appearance":32.5,"rank":14.69,"providers":["OpenAI","Gemini","DeepSeek"],"isOwn":false,"url":null},{"name":"aws","appearance":32.5,"rank":12.54,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"filecoin","appearance":27.5,"rank":11.82,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"arweave","appearance":25.0,"rank":15.3,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"akash network","appearance":22.5,"rank":11.89,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"akash","appearance":22.5,"rank":11.89,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"golem","appearance":22.5,"rank":14.67,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"sia","appearance":20.0,"rank":18.62,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"storj","appearance":20.0,"rank":14.62,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"OpenAI":0,"Gemini":1,"Claude":2,"DeepSeek":3},"has_distinct_competitor_data":true,"data_note":null},{"name":"Research & Innovation Ecosystem","uuid":null,"competitors":[{"name":"ipfs","appearance":37.5,"rank":15.87,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"ocean protocol","appearance":35.0,"rank":13.43,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"aws","appearance":35.0,"rank":13.43,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"golem","appearance":32.5,"rank":20.15,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"filecoin","appearance":32.5,"rank":12.85,"providers":["OpenAI","Gemini","DeepSeek"],"isOwn":false,"url":null},{"name":"azure","appearance":30.0,"rank":15.08,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"arweave","appearance":27.5,"rank":15.0,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"google cloud","appearance":27.5,"rank":12.73,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"ipfs (interplanetary file system)","appearance":22.5,"rank":14.44,"providers":["Gemini","Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"golem network","appearance":22.5,"rank":22.44,"providers":["OpenAI","Gemini","Claude","DeepSeek"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"OpenAI":0,"Gemini":1,"Claude":2,"DeepSeek":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"data","count":360},{"text":"decentralized","count":200},{"text":"storage","count":151},{"text":"name","count":140},{"text":"blockchain","count":139},{"text":"cloud","count":138},{"text":"network","count":135},{"text":"computing","count":121},{"text":"platform","count":103},{"text":"competitors","count":102}],"sources":[{"name":"flower.dev","url":"https://flower.dev","mentions":2},{"name":"tensorflow","url":"https://tensorflow","mentions":2},{"name":"genomes.io","url":"https://genomes.io","mentions":1},{"name":"horovod.ai","url":"https://horovod.ai","mentions":1},{"name":"near.org","url":"https://near.org","mentions":1},{"name":"polkadot.network","url":"https://polkadot.network","mentions":1},{"name":"filecoin.io","url":"https://filecoin.io","mentions":1},{"name":"sia.tech","url":"https://sia.tech","mentions":1},{"name":"arweave","url":"https://arweave","mentions":1},{"name":"eigenlayer.com","url":"https://eigenlayer.com","mentions":1},{"name":"oceanprotocol.com","url":"https://oceanprotocol.com","mentions":1},{"name":"celo.org","url":"https://celo.org","mentions":1},{"name":"botanika","url":"https://botanika","mentions":1},{"name":"researchhub","url":"https://researchhub","mentions":1}],"keyword_opportunities":[{"text":"How can I reduce our current cloud storage infrastructure costs by 40%?","type":"missing","persona":"Technical Infrastructure Director"},{"text":"What options exist for geographic redundancy without traditional data center investments?","type":"missing","persona":"Technical Infrastructure Director"},{"text":"Can machine learning models be trained more efficiently using distributed computational networks?","type":"missing","persona":"Technical Infrastructure Director"},{"text":"What are the security advantages of decentralized storage compared to centralized systems?","type":"missing","persona":"Technical Infrastructure Director"},{"text":"How quickly can our organization migrate existing data infrastructure to a more flexible platform?","type":"missing","persona":"Technical Infrastructure Director"},{"text":"What computational models support massive parallel processing for neural network training?","type":"missing","persona":"AI Research Lead"},{"text":"How can I access globally distributed computing resources without complex procurement?","type":"missing","persona":"AI Research Lead"},{"text":"Can I dynamically scale computational resources based on project complexity?","type":"missing","persona":"AI Research Lead"},{"text":"What performance benchmarks demonstrate distributed computational efficiency?","type":"missing","persona":"AI Research Lead"},{"text":"How can multiple research departments share computational resources securely?","type":"missing","persona":"University Research Coordinator"},{"text":"What infrastructure supports collaborative international research initiatives?","type":"missing","persona":"University Research Coordinator"},{"text":"Can we reduce our high-performance computing equipment capital expenses?","type":"missing","persona":"University Research Coordinator"},{"text":"What mechanisms protect intellectual property during distributed research?","type":"missing","persona":"University Research Coordinator"},{"text":"What distributed processing architectures support complex climate simulation models?","type":"missing","persona":"Scientific Computing Specialist"},{"text":"How can genomic research datasets be stored with maximum accessibility and minimal latency?","type":"missing","persona":"Scientific Computing Specialist"}],"source_opportunities":[{"name":"coindesk.com","domain":"coindesk.com","type":"competitor","mentions":0},{"name":"cointelegraph.com","domain":"cointelegraph.com","type":"competitor","mentions":0},{"name":"blockonomi.com","domain":"blockonomi.com","type":"competitor","mentions":0},{"name":"decrypt.co","domain":"decrypt.co","type":"competitor","mentions":0},{"name":"thenewstack.io","domain":"thenewstack.io","type":"competitor","mentions":0},{"name":"cryptonews.com","domain":"cryptonews.com","type":"competitor","mentions":0},{"name":"techcrunch.com","domain":"techcrunch.com","type":"competitor","mentions":0},{"name":"consensys.net/blog","domain":"consensys.net","type":"competitor","mentions":0},{"name":"messari.io","domain":"messari.io","type":"competitor","mentions":0},{"name":"protocol.com","domain":"protocol.com","type":"competitor","mentions":0}],"provider_coverage":{"openai":47,"gemini":50,"claude":45,"deepseek":50},"insights":{"terminology_gap":[{"term":"DePIN","evidence":"Low recognition in AI responses","priority":"HIGH"},{"term":"Full Stack Data Infrastructure","evidence":"Vague competitor mapping","priority":"HIGH"},{"term":"Decentralized Computing Layer","evidence":"Limited semantic understanding","priority":"MEDIUM"},{"term":"Blockchain Storage","evidence":"Competing descriptions from AI","priority":"MEDIUM"}],"language_gap":[{"site_says":"Full Stack Data Infrastructure Layer","site_context":"Technical positioning","ai_uses":"Cloud computing platform","ai_context":"Generalized categorization"},{"site_says":"Storage, AI, and DePIN","site_context":"Product capabilities","ai_uses":"Decentralized network services","ai_context":"Partial functional understanding"}],"audience_segments":{"addressed":[{"name":"Enterprise Data Infrastructure","note":"10 direct responses"},{"name":"Research & Innovation Ecosystem","note":"10 direct responses"}],"opportunity_gap":[{"name":"Cloud Providers","note":"35% competitor visibility"},{"name":"Blockchain Storage Solutions","note":"32.5% competitor presence"},{"name":"Distributed Computing Networks","note":"22.5% market recognition"}]},"position":{"strengths":["Unique DePIN positioning","Multi-layer infrastructure approach","Broad technological coverage","Emerging decentralized technology focus"],"opportunities":["Clarify technical differentiation","Expand AI engine visibility","Create comparative content","Develop thought leadership narratives"],"gaps":["Limited brand recognition","Inconsistent terminology","Weak competitive positioning","Minimal AI search presence"]},"action_items":{"content_priorities":["Develop comprehensive DePIN explanation guide","Create 'Botanika vs Major Cloud Providers' comparison","Produce technical whitepaper on infrastructure approach","Build detailed use case library","Generate AI-optimized keyword content"],"link_building":["Partner with research institutions","Guest post on blockchain/cloud platforms","Engage with decentralized technology forums","Create collaborative research content","Develop strategic backlink partnerships"],"quick_wins":["Update homepage with AI-searchable language","Implement structured data markup","Optimize metadata for key terms","Create targeted landing pages","Develop media kit with clear positioning"]}}};
+        const DASHBOARD_DATA = ;
 
         // ============ THEME ============
         function toggleTheme() {
@@ -1417,6 +1417,38 @@
                 noteEl.style.display = 'block';
             }
         }
+
+        // Render dynamic score status
+        function renderScoreStatus() {
+            const s = DASHBOARD_DATA.summary;
+
+            const badge = document.getElementById('scoreStatusBadge');
+            const statusText = document.getElementById('scoreStatusText');
+            if (badge && statusText) {
+                statusText.textContent = s.score_status || 'Zero AI Visibility';
+                if (s.own_mentioned) {
+                    badge.style.background = 'rgba(16, 185, 129, 0.1)';
+                    badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+                    badge.style.color = 'var(--success)';
+                    badge.querySelector('span:first-child').textContent = '✅';
+                } else {
+                    badge.style.background = 'rgba(239, 68, 68, 0.1)';
+                    badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+                    badge.style.color = 'var(--danger)';
+                    badge.querySelector('span:first-child').textContent = '⚠️';
+                }
+            }
+
+            const label = document.getElementById('appearanceLabel');
+            if (label) label.textContent = (DASHBOARD_DATA.site.name || 'Brand') + ' Appearance';
+
+            const value = document.getElementById('appearanceValue');
+            if (value) value.textContent = (s.own_appearance_pct || 0) + '%';
+
+            const sub = document.getElementById('appearanceSub');
+            if (sub) sub.textContent = s.own_appearance_note || 'Site NOT mentioned in AI responses';
+        }
+        renderScoreStatus();
 
         // Animate score
         animateScore(DASHBOARD_DATA.summary.score || 0);
