@@ -1,0 +1,18 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[THEME-DRIVEN] Leading crypto publication for 'blockchain' coverage."
+  },
+  {
+    "name": "pymnts.com",
+    "domain": "pymnts.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[THEME-DRIVEN] Payment industry publication for 'payment' coverage."
+  }
+]

@@ -761,12 +761,16 @@ class OpenRouterBatchClient:
                 by_ct[ct][comp]["models"].add(model_key)
 
         by_customer_type = []
+        brand_mention_by_ct = {}  # Track brand mentions per customer type
+        for resp in responses:
+            ct = resp.get("ct_name", "Unknown")
+            if resp.get("brand_mentioned"):
+                brand_mention_by_ct[ct] = brand_mention_by_ct.get(ct, 0) + 1
+
         for ct_name, comps in by_ct.items():
             ct_total = ct_response_counts.get(ct_name, 1)
             ct_comps = []
             for comp_name, data in comps.items():
-                if comp_name == brand_lower:
-                    continue
                 count = data["count"]
                 pct = round((count / ct_total) * 100, 1) if ct_total > 0 else 0
                 positions = data["positions"]
@@ -777,12 +781,36 @@ class OpenRouterBatchClient:
                     "appearance_percentage": pct,
                     "avg_rank": avg_rank,
                     "providers": providers,
-                    "is_own": False,
+                    "is_own": comp_name == brand_lower,
                 })
 
             # NOTE: Removed include_all_discovered logic for this CT
             # Only show competitors that were actually mentioned in this CT's responses
             # This prevents showing 0% for competitors not mentioned in this segment
+
+            # Add brand as a competitor entry if mentioned in this CT
+            brand_mentions_ct = brand_mention_by_ct.get(ct_name, 0)
+            if brand_mentions_ct > 0:
+                # Calculate rank for brand mentions in this CT
+                brand_ranks_ct = []
+                for resp in responses:
+                    if resp.get("ct_name") == ct_name and resp.get("brand_mentioned"):
+                        rank = resp.get("brand_rank")
+                        if rank is not None and rank > 0:
+                            brand_ranks_ct.append(rank)
+                avg_brand_rank = round(sum(brand_ranks_ct) / len(brand_ranks_ct), 2) if brand_ranks_ct else None
+                providers = list(set(
+                    MODEL_DISPLAY_NAMES.get(r["model"], r["model"])
+                    for r in responses
+                    if r.get("ct_name") == ct_name and r.get("brand_mentioned")
+                ))
+                ct_comps.append({
+                    "name": brand_name,
+                    "appearance_percentage": round((brand_mentions_ct / ct_total) * 100, 1),
+                    "avg_rank": avg_brand_rank,
+                    "providers": providers,
+                    "is_own": True,
+                })
 
             ct_comps.sort(key=lambda c: c.get("appearance_percentage", 0), reverse=True)
             by_customer_type.append({

@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> AI Visibility Report</title>
+    <title>StreamFlow Finance AI Visibility Report</title>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
     <style>
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSansVF.woff2') format('woff2-variations');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSansVF.woff2') format('woff2-variations');
             font-weight: 400 900;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSans-Regular.woff2') format('woff2');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Regular.woff2') format('woff2');
             font-weight: 400;
             font-style: normal;
             font-display: swap;
         }
         @font-face {
             font-family: 'Neutral Sans';
-            src: url('/fonts/NeutralSans-Bold.woff2') format('woff2');
+            src: url('https://butterflyio.github.io/promptraise/fonts/NeutralSans-Bold.woff2') format('woff2');
             font-weight: 700;
             font-style: normal;
             font-display: swap;
@@ -600,8 +600,8 @@
         <!-- Header -->
         <div class="header">
             <div class="header-left">
-                <h1> AI Visibility Report</h1>
-                <p>Site:  | Last updated: <span id="lastUpdated"></span></p>
+                <h1>StreamFlow Finance AI Visibility Report</h1>
+                <p>Site: streamflow.finance | Last updated: <span id="lastUpdated"></span></p>
             </div>
             <div class="header-actions">
                 <button class="btn btn-secondary btn-icon" onclick="toggleTheme()" title="Toggle Theme">
@@ -634,7 +634,7 @@
             <div class="hero-details">
                 <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span id="scoreStatusText"></span>
+                    <span id="scoreStatusText">Zero AI Visibility</span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -644,28 +644,28 @@
         <div class="stats-grid">
             <div class="stat-card">
                 <div class="label">Total Responses</div>
-                <div class="value"></div>
-                <div class="sub"> per customer type</div>
+                <div class="value">80</div>
+                <div class="sub">40 per customer type</div>
             </div>
             <div class="stat-card">
                 <div class="label">Unique Competitors</div>
-                <div class="value"></div>
+                <div class="value">56</div>
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label" id="appearanceLabel"> Appearance</div>
-                <div class="value brand" id="appearanceValue">%</div>
-                <div class="sub" id="appearanceSub"></div>
+                <div class="label" id="appearanceLabel">StreamFlow Finance Appearance</div>
+                <div class="value brand" id="appearanceValue">0%</div>
+                <div class="sub" id="appearanceSub">Site NOT mentioned in AI responses</div>
             </div>
         </div>
 
         <!-- Segment Tabs -->
         <div class="type-tabs">
             <button class="type-tab active" onclick="showType('type1')">
-                <span></span>
+                <span>Startup Founders</span>
             </button>
             <button class="type-tab" onclick="showType('type2')">
-                <span></span>
+                <span>Enterprise Payroll</span>
             </button>
         </div>
 
@@ -691,7 +691,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — </div>
+                <div class="card-title">Top Competitors — Startup Founders</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -734,7 +734,7 @@
                 </div>
             </div>
             <div class="card" style="margin-top: 2rem;">
-                <div class="card-title">Top Competitors — </div>
+                <div class="card-title">Top Competitors — Enterprise Payroll</div>
                 <div style="overflow-x: auto;">
                     <table class="competitor-table" style="min-width: 600px;">
                         <thead>
@@ -793,10 +793,10 @@
             <div class="card">
                 <div class="card-header">
                     <div class="card-title">Keyword Opportunities</div>
-                    <span class="tag tag-competitor">Where  Ranks Poorly</span>
+                    <span class="tag tag-competitor">Where StreamFlow Finance Ranks Poorly</span>
                 </div>
                 <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 1rem;">
-                    Queries where  is missing or ranks poorly
+                    Queries where StreamFlow Finance is missing or ranks poorly
                 </p>
                 <div class="opportunity-list" id="keywordOpportunities"></div>
             </div>
@@ -816,7 +816,7 @@
         <div class="card" style="margin-bottom: 2rem;">
             <div class="card-title">Terminology Gap Analysis</div>
             <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1.5rem;">
-                Keywords and terms where  is missing from AI responses.
+                Keywords and terms where StreamFlow Finance is missing from AI responses.
             </p>
             <table class="gap-table">
                 <thead>
@@ -857,7 +857,7 @@
         </div>
 
         <!-- Competitive Position -->
-        <h2 class="section-title">'s Competitive Position</h2>
+        <h2 class="section-title">StreamFlow Finance's Competitive Position</h2>
         <div class="position-grid">
             <div class="position-card strengths">
                 <h3>Strengths</h3>
@@ -903,14 +903,14 @@
         <div class="footer">
             <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
                 <p>Generated in full confidentiality by <strong style="color: var(--primary);">www.promptraise.com</strong></p>
-                <p style="color: var(--text-secondary);">Analysis ID: </p>
+                <p style="color: var(--text-secondary);">Analysis ID: openrouter-streamflow</p>
             </div>
         </div>
     </div>
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = ;
+        const DASHBOARD_DATA = {"site":{"name":"StreamFlow Finance","url":"https://streamflow.finance/","domain":"streamflow.finance","slug":"streamflow","analysis_id":"openrouter-streamflow","site_uuid":"openrouter-batch","generated_at":"June 17, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":0,"score_status":"Zero AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":56,"own_mentioned":false,"own_appearance_pct":0,"own_appearance_note":"Site NOT mentioned in AI responses","hero_comparison":[{"value":"0%","label":"StreamFlow Finance Visibility","trend":"down"},{"value":"47.5%","label":"superfluid (Leader)","trend":""},{"value":"47.5%","label":"sablier (#2)","trend":""}]},"customer_types":[{"name":"Startup Founders","uuid":null,"competitors":[{"name":"superfluid","appearance":47.5,"rank":15.26,"providers":["Claude","OpenAI","DeepSeek","Gemini"],"isOwn":false,"url":null},{"name":"sablier","appearance":47.5,"rank":15.58,"providers":["Claude","OpenAI","DeepSeek","Gemini"],"isOwn":false,"url":null},{"name":"gnosis safe","appearance":35.0,"rank":16.14,"providers":["Claude","OpenAI","DeepSeek","Gemini"],"isOwn":false,"url":null},{"name":"openzeppelin","appearance":20.0,"rank":17.88,"providers":["Claude","OpenAI","DeepSeek"],"isOwn":false,"url":null},{"name":"openzeppelin defender","appearance":10.0,"rank":19.0,"providers":["OpenAI","DeepSeek"],"isOwn":false,"url":null},{"name":"llamapay","appearance":10.0,"rank":13.75,"providers":["Claude","DeepSeek"],"isOwn":false,"url":null},{"name":"Vestd","appearance":7.5,"rank":14.33,"providers":["Gemini"],"isOwn":false,"url":null},{"name":"squads protocol","appearance":7.5,"rank":23.0,"providers":["Gemini"],"isOwn":false,"url":null},{"name":"fireblocks","appearance":5.0,"rank":26.0,"providers":["DeepSeek"],"isOwn":false,"url":null},{"name":"carta","appearance":5.0,"rank":8.5,"providers":["Claude","OpenAI"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"Claude":0,"OpenAI":1,"DeepSeek":2,"Gemini":3},"has_distinct_competitor_data":true,"data_note":null},{"name":"Enterprise Payroll","uuid":null,"competitors":[{"name":"superfluid","appearance":27.5,"rank":13.0,"providers":["Claude","DeepSeek","Gemini"],"isOwn":false,"url":null},{"name":"sablier","appearance":27.5,"rank":12.82,"providers":["Claude","DeepSeek","Gemini"],"isOwn":false,"url":null},{"name":"gnosis safe","appearance":17.5,"rank":11.0,"providers":["Claude","OpenAI","DeepSeek","Gemini"],"isOwn":false,"url":null},{"name":"openzeppelin","appearance":7.5,"rank":15.33,"providers":["Claude","OpenAI","DeepSeek"],"isOwn":false,"url":null},{"name":"request finance","appearance":5.0,"rank":15.0,"providers":["Claude"],"isOwn":false,"url":null},{"name":"llamapay","appearance":5.0,"rank":23.0,"providers":["Claude"],"isOwn":false,"url":null},{"name":"sablier finance","appearance":5.0,"rank":12.0,"providers":["Claude","Gemini"],"isOwn":false,"url":null},{"name":"deel","appearance":5.0,"rank":12.0,"providers":["Gemini"],"isOwn":false,"url":null},{"name":"moonpay","appearance":5.0,"rank":19.5,"providers":["OpenAI"],"isOwn":false,"url":null},{"name":"Hedgey","appearance":2.5,"rank":20.0,"providers":["DeepSeek"],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"Claude":0,"DeepSeek":1,"Gemini":2,"OpenAI":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"name","count":115},{"text":"vesting","count":113},{"text":"smart","count":111},{"text":"token","count":94},{"text":"competitors","count":89},{"text":"payment","count":84},{"text":"blockchain","count":83},{"text":"compensation","count":76},{"text":"contracts","count":65},{"text":"payments","count":64}],"sources":[{"name":"streamflow.finance","url":"https://streamflow.finance","mentions":4},{"name":"streamflow","url":"https://streamflow","mentions":2},{"name":"chain","url":"https://chain","mentions":1},{"name":"capdesk.com","url":"https://capdesk.com","mentions":1},{"name":"carta.com","url":"https://carta.com","mentions":1},{"name":"pulley.com","url":"https://pulley.com","mentions":1},{"name":"gust.com","url":"https://gust.com","mentions":1},{"name":"equityzen.com","url":"https://equityzen.com","mentions":1}],"keyword_opportunities":[{"text":"How can I automatically distribute team equity without manual spreadsheet tracking?","type":"missing","persona":"Tech Founder"},{"text":"What's the most efficient way to set up graduated compensation schedules for early employees?","type":"missing","persona":"Tech Founder"},{"text":"Can I customize release timelines for different team member roles?","type":"missing","persona":"Tech Founder"},{"text":"How do I prevent accidental over-payments during team member compensation?","type":"missing","persona":"Tech Founder"},{"text":"What reporting tools exist to track total team compensation allocation?","type":"missing","persona":"Tech Founder"},{"text":"How can I create transparent funding release schedules for my investors?","type":"missing","persona":"Venture-Backed Founder"},{"text":"What mechanisms prevent unauthorized fund transfers?","type":"missing","persona":"Venture-Backed Founder"},{"text":"Can I set up performance-based funding triggers?","type":"missing","persona":"Venture-Backed Founder"},{"text":"How do I manage multi-tranche investments with precise conditions?","type":"missing","persona":"Venture-Backed Founder"},{"text":"What audit trails exist for investor fund tracking?","type":"missing","persona":"Venture-Backed Founder"},{"text":"How can I automate global team member payment schedules?","type":"missing","persona":"HR Operations Manager"},{"text":"What cross-border payment compliance features are available?","type":"missing","persona":"HR Operations Manager"},{"text":"Can I create region-specific compensation tiers?","type":"missing","persona":"HR Operations Manager"},{"text":"How do I track total compensation across multiple departments?","type":"missing","persona":"HR Operations Manager"},{"text":"What fraud prevention mechanisms protect automated payments?","type":"missing","persona":"HR Operations Manager"}],"source_opportunities":[{"name":"decentralized.substack.com","domain":"decentralized.substack.com","type":"competitor","mentions":0},{"name":"cryptoeconomics.org","domain":"cryptoeconomics.org","type":"competitor","mentions":0},{"name":"techcrunch.com","domain":"techcrunch.com","type":"competitor","mentions":0},{"name":"coindesk.com","domain":"coindesk.com","type":"competitor","mentions":0},{"name":"gitcoin.co/blog","domain":"gitcoin.co","type":"competitor","mentions":0},{"name":"banklesspro.substack.com","domain":"banklesspro.substack.com","type":"competitor","mentions":0},{"name":"tokentuesdays.com","domain":"tokentuesdays.com","type":"competitor","mentions":0},{"name":"dappradar.com","domain":"dappradar.com","type":"competitor","mentions":0},{"name":"thedefiant.io","domain":"thedefiant.io","type":"competitor","mentions":0},{"name":"messari.io/research","domain":"messari.io","type":"competitor","mentions":0}],"provider_coverage":{"claude":50,"openai":33,"deepseek":45,"gemini":38},"insights":{"terminology_gap":[{"term":"vesting schedule","evidence":"High variability in AI understanding of specific vesting mechanisms","priority":"HIGH"},{"term":"token distribution platform","evidence":"Inconsistent recognition across AI search engines","priority":"HIGH"},{"term":"on-chain payroll","evidence":"Limited AI comprehension of Solana-specific payroll features","priority":"MEDIUM"},{"term":"staking-as-a-service","evidence":"Weak AI mapping to core service definition","priority":"MEDIUM"},{"term":"SDK integration","evidence":"Incomplete AI understanding of programmable token transfer","priority":"LOW"}],"language_gap":[{"site_says":"Solana Token Distribution Platform","site_context":"Technical, blockchain-focused description","ai_uses":"Crypto payment automation service","ai_context":"More generalized financial technology framing"},{"site_says":"Batch payouts, schedule releases","site_context":"Technical workflow description","ai_uses":"Flexible compensation management","ai_context":"Enterprise HR-oriented language"}],"audience_segments":{"addressed":[{"name":"Solana Projects","note":"Primary target with 40K+ existing projects"},{"name":"Startup Founders","note":"Custom token distribution solutions"},{"name":"Blockchain Developers","note":"SDK and integration focus"}],"opportunity_gap":[{"name":"Enterprise Payroll","note":"Only 35% competitive coverage"},{"name":"Traditional VC Funding","note":"47.5% competitor presence"},{"name":"Global Compensation Teams","note":"Limited AI recognition"}]},"position":{"strengths":["Solana-native token distribution platform","Comprehensive vesting and airdrop automation","Modular infrastructure for custom solutions","Proven track record (1.3M+ users, $1.4B TVL)"],"opportunities":["Expand enterprise payroll narratives","Create more technical integration content","Develop comparative marketing against top competitors","Enhance SDK documentation visibility"],"gaps":["Limited AI search visibility","Inconsistent terminology across platforms","Weak differentiation in AI search results","Minimal coverage in non-crypto AI contexts"]},"action_items":{"content_priorities":["Create comprehensive 'Solana Token Distribution Guide'","Develop detailed SDK integration tutorials","Produce technical comparison pages vs Superfluid/Sablier","Build enterprise payroll use-case content","Develop technical white papers on on-chain compensation"],"link_building":["Guest post on Solana developer platforms","Engage with blockchain developer communities","Create backlinks from technical documentation sites","Collaborate with enterprise HR technology blogs","Develop partnership content with Solana ecosystem projects"],"quick_wins":["Optimize homepage metadata for AI search","Create clear, AI-friendly product descriptions","Implement structured data for better AI comprehension","Develop FAQ targeting specific AI query patterns","Refine technical language for broader understanding"]}}};
 
         // ============ THEME ============
         function toggleTheme() {

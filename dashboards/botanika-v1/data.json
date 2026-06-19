@@ -10,19 +10,19 @@
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 0,
-    "score_status": "Zero AI Visibility",
+    "score": 25,
+    "score_status": "Moderate AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
     "unique_competitors": 86,
-    "own_mentioned": false,
-    "own_appearance_pct": 0,
-    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "own_mentioned": true,
+    "own_appearance_pct": 25.0,
+    "own_appearance_note": "Site mentioned in 25.0% of responses",
     "hero_comparison": [
       {
-        "value": "0%",
+        "value": "25.0%",
         "label": "Botanika Visibility",
-        "trend": "down"
+        "trend": ""
       },
       {
         "value": "37.5%",
@@ -43,132 +43,313 @@
       "competitors": [
         {
           "name": "azure",
-          "appearance": 35.0,
-          "rank": 15.43,
+          "appearance_percentage": 35.0,
+          "avg_rank": 15.43,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "google cloud",
-          "appearance": 32.5,
-          "rank": 14.69,
+          "appearance_percentage": 32.5,
+          "avg_rank": 14.69,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "aws",
-          "appearance": 32.5,
-          "rank": 12.54,
+          "appearance_percentage": 32.5,
+          "avg_rank": 12.54,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "filecoin",
-          "appearance": 27.5,
-          "rank": 11.82,
+          "appearance_percentage": 27.5,
+          "avg_rank": 11.82,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "arweave",
-          "appearance": 25.0,
-          "rank": 15.3,
+          "appearance_percentage": 25.0,
+          "avg_rank": 15.3,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "akash network",
-          "appearance": 22.5,
-          "rank": 11.89,
+          "appearance_percentage": 22.5,
+          "avg_rank": 11.89,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "akash",
-          "appearance": 22.5,
-          "rank": 11.89,
+          "appearance_percentage": 22.5,
+          "avg_rank": 11.89,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "golem",
-          "appearance": 22.5,
-          "rank": 14.67,
+          "appearance_percentage": 22.5,
+          "avg_rank": 14.67,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "sia",
-          "appearance": 20.0,
-          "rank": 18.62,
+          "appearance_percentage": 20.0,
+          "avg_rank": 18.62,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "storj",
-          "appearance": 20.0,
-          "rank": 14.62,
+          "appearance_percentage": 20.0,
+          "avg_rank": 14.62,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "polygon",
+          "appearance_percentage": 20.0,
+          "avg_rank": 14.12,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Botanika",
+          "appearance_percentage": 20.0,
+          "avg_rank": 5.75,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "ipfs",
+          "appearance_percentage": 17.5,
+          "avg_rank": 17.86,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "iexec",
+          "appearance_percentage": 15.0,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "golem network",
+          "appearance_percentage": 15.0,
+          "avg_rank": 17.67,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ipfs (interplanetary file system)",
+          "appearance_percentage": 10.0,
+          "avg_rank": 16.75,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "render network",
+          "appearance_percentage": 7.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "ocean protocol",
+          "appearance_percentage": 7.5,
+          "avg_rank": 28.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.0,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "dfinity internet computer",
+          "appearance_percentage": 7.5,
+          "avg_rank": 20.67,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fluence",
+          "appearance_percentage": 5.0,
+          "avg_rank": 22.0,
+          "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "flux",
+          "appearance_percentage": 2.5,
+          "avg_rank": 3.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "crust network",
+          "appearance_percentage": 2.5,
+          "avg_rank": 29.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "streamr",
+          "appearance_percentage": 2.5,
+          "avg_rank": 28.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nsf",
+          "appearance_percentage": 2.5,
+          "avg_rank": 28.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "foundation",
+          "appearance_percentage": 2.5,
+          "avg_rank": 9.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "livepeer",
+          "appearance_percentage": 2.5,
+          "avg_rank": 28.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "theta network",
+          "appearance_percentage": 2.5,
+          "avg_rank": 32.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fantom",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -187,131 +368,325 @@
       "competitors": [
         {
           "name": "ipfs",
-          "appearance": 37.5,
-          "rank": 15.87,
+          "appearance_percentage": 37.5,
+          "avg_rank": 15.87,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "ocean protocol",
-          "appearance": 35.0,
-          "rank": 13.43,
+          "appearance_percentage": 35.0,
+          "avg_rank": 13.43,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "aws",
-          "appearance": 35.0,
-          "rank": 13.43,
+          "appearance_percentage": 35.0,
+          "avg_rank": 13.43,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "golem",
-          "appearance": 32.5,
-          "rank": 20.15,
+          "appearance_percentage": 32.5,
+          "avg_rank": 20.15,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "filecoin",
-          "appearance": 32.5,
-          "rank": 12.85,
+          "appearance_percentage": 32.5,
+          "avg_rank": 12.85,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "azure",
-          "appearance": 30.0,
-          "rank": 15.08,
+          "appearance_percentage": 30.0,
+          "avg_rank": 15.08,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "Botanika",
+          "appearance_percentage": 30.0,
+          "avg_rank": 4.17,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": true
         },
         {
           "name": "arweave",
-          "appearance": 27.5,
-          "rank": 15.0,
+          "appearance_percentage": 27.5,
+          "avg_rank": 15.0,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "google cloud",
-          "appearance": 27.5,
-          "rank": 12.73,
+          "appearance_percentage": 27.5,
+          "avg_rank": 12.73,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "ipfs (interplanetary file system)",
-          "appearance": 22.5,
-          "rank": 14.44,
+          "appearance_percentage": 22.5,
+          "avg_rank": 14.44,
           "providers": [
-            "Gemini",
-            "Claude",
-            "DeepSeek"
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "golem network",
-          "appearance": 22.5,
-          "rank": 22.44,
+          "appearance_percentage": 22.5,
+          "avg_rank": 22.44,
           "providers": [
-            "OpenAI",
-            "Gemini",
-            "Claude",
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "iexec",
+          "appearance_percentage": 15.0,
+          "avg_rank": 20.67,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "render network",
+          "appearance_percentage": 12.5,
+          "avg_rank": 19.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "sia",
+          "appearance_percentage": 12.5,
+          "avg_rank": 14.2,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "numerai",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.67,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "foundation",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.67,
+          "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "akash network",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "akash",
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "storj",
+          "appearance_percentage": 7.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "streamr",
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.5,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "appearance_percentage": 5.0,
+          "avg_rank": 20.5,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fluence",
+          "appearance_percentage": 2.5,
+          "avg_rank": 13.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "rarible",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "opensea",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "avalanche",
+          "appearance_percentage": 2.5,
+          "avg_rank": 18.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "fetch.ai",
+          "appearance_percentage": 2.5,
+          "avg_rank": 25.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "singularitynet",
+          "appearance_percentage": 2.5,
+          "avg_rank": 25.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "molecule.to",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nsf",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "researchhub",
+          "appearance_percentage": 2.5,
+          "avg_rank": 15.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "origintrail",
+          "appearance_percentage": 2.5,
+          "avg_rank": 19.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
         }
       ],
       "total_responses": 10,

@@ -1,0 +1,544 @@
+{
+  "stages": {
+    "scrape_homepage": true,
+    "generate_ct_personas": true,
+    "generate_discovery_questions": true,
+    "discover_competitors_dynamic": true
+  },
+  "data": {
+    "site_url": "https://www.cosmicgate.ai/",
+    "site_slug": "cosmicgate-v2",
+    "site_name": "CosmicGate",
+    "homepage_text": "The Agentic Layer for Sports Prediction Marketst The Agentic Layer for Sports Prediction Markets The Agentic Layer for Sports Prediction Marketst $GATEAI PRESALE - ICO/IEO Announcement cosmicgate.ai App Access Whitepaper Offcanvas Menu Open Close THE AGENTIC LAYER For Sports PREDICTION Markets Powered by AI & Creator Community See Our Ecosystem $GATEAI PRESALE legendz.fun legendz.fun beta live Legendz turns sports collectibles into playable prediction assets legendz.fun legendz.fun beta live Sports NFTs aren\u2019t JPEGs. Predictions aren\u2019t boring odds. Fans don\u2019t just bet - they build, collect, and evolve Sports RWA Trading Cards aren't static assets, physical cards are tokenized for real-world gameplay Play lineups, Predict Odds with your collectibles Win: you earn rewards Lose: there's no loss, you simply get your staked NFT back Legendz.fun Legendz turns sports collectibles into playable prediction assets legendz.fun legendz.fun live Decentralized intelligence layer behind fan ownership in sports entertainment. It transforms fandom into tokenized playable assets \u2014 fast, scalable, and unstoppable. Candyclaw.fun Candyclaw.fun devnet AI Agentic Tokenization: Automnomous mint process for fan assets collectibles Creator AI Tools: Creators mint fan assets for royalty Prediction Intelligence: Agentic layer for sports predictionss Community-driven: Powered by AI Agents and creator community Become A Creator Decentralized intelligence layer behind fan ownership in sports &amp; entertainment. It transforms fandom into tokenized playable assets \u2014 fast, scalable, and unstoppable. Candyclaw.fun Candyclaw.fun devnet Fanpulse Fanpulse soon The economic social engine of the CosmicGATE ecosystem. A fan-first social app that makes sport predictions fun again. Sports predictions are not some boring stats, here fans own the narratives Fans turn sports trends into trades and signals into positions Moments become markets fans can enter, shape, and own Powered by Cosmicgate intelligent layer for agentic predictions and analytics CosmicGATE Fan Token enables sports teams, artists, festivals, concerts, and entertainment brands to tokenize real-world assets and fan experiences \u2014 turning passive spectators into active stakeholders in the entertainment economy. Fan Token: RWA Tokenization for Sports & Entertainment Fan token launchpad for athletes & artists: Agentic tokenization launchpad where fans, artists, and athletes co-own experiences. Fans trade, co-own, and earn. Fractional Ownership: Fans gain access to tokenized collectibles, merch and memorabilia of their favorite artists and athletes. Tokenization at Scale: Fan tokens are generated autonomously by AI Validators with $GATEAI utility at its core. Fan Token Launch Inquiry Explore More > CosmicGATE Fan Token enables athletes and artists to tokenize influence and share experiences with fans \u2014 turning passive spectators into active stakeholders in the entertainment economy. Fan Token: RWA Tokenization for Sports & Entertainment CommunityNet is the underlying protocol powering prediction agents \u2014 a purpose-built decentralized protocol that powers AI agents trained to run sports prediction models at scale. CommunityNet CommunityNet devnet Decentralized Compute for Agentic Predictions Real-time task distribution and proof-of-inference for agentic validation AI/ML decision logic for autonomous agents supporting prediction engine Powered by node-based staking protocol and reward system Decentralized Compute for Agentic Predictions CommunityNet CommunityNet devnet $GATEAI GATE8J...42oPWx Audited By Hacken/TrustSwap BUILT ON ICO/IEO EXCHANGES The Framework NEW FANDOM REQUIRES NEW EXPERIENCE CosmicgateAI is redefining sports fandom through AI-native predictions built from the ground up. Powered by a model-first, agentic architecture, the platform enables decentralized asset creation, deeper fan engagement, and social prediction experiences at scale. 01 \u2014 Intelligence \u25c8 Agentic tokenization AI Agents are bui",
+    "ct_persona_data": {
+      "customer_types": [
+        {
+          "name": "Sports Enthusiasts",
+          "description": "Individuals passionate about sports who want to engage more deeply with their favorite teams and players through interactive experiences.",
+          "personas": [
+            {
+              "name": "Casual Fan",
+              "description": "A regular sports follower who enjoys engaging with teams but has limited knowledge of digital collectible assets.",
+              "questions": [
+                "How can I participate in sports predictions without prior experience?",
+                "What are the advantages of using interactive collectibles in sports?",
+                "Can I create and earn from my own sports-related content?",
+                "Which type of sports collectibles can I use for making predictions?",
+                "Are there any community events where fans can collaborate on predictions?"
+              ]
+            },
+            {
+              "name": "Avid Supporter",
+              "description": "A dedicated sports fan who actively follows teams and players and is interested in leveraging technology for deeper engagement.",
+              "questions": [
+                "What tools can help me enhance my prediction accuracy using fan collectibles?",
+                "How does the ownership of sports collectibles affect my engagement with the teams?",
+                "What unique experiences can I access through tokenized sports assets? [NEEDS_REWRITE]",
+                "How do I predict outcomes using my collectibles, and what rewards can I earn?",
+                "Can I connect with other fans through this platform to share insights and strategies?"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Creative Content Makers",
+          "description": "Individuals and creators looking to engage sports fans in innovative ways by producing and monetizing unique content and collectibles.",
+          "personas": [
+            {
+              "name": "Emerging Creator",
+              "description": "A new content creator aiming to build a fanbase and monetize their sports-related creations.",
+              "questions": [
+                "What opportunities do I have to create and sell sports-focused content?",
+                "How can I incorporate elements of gamification into my sports collectibles?",
+                "What are the best practices for promoting my sports predictions and assets?",
+                "How can I collaborate with sports teams to create unique experiences for fans?",
+                "Are there any tools available to help me analyze fan engagement and content performance?"
+              ]
+            },
+            {
+              "name": "Established Influencer",
+              "description": "A well-known sports content creator looking to leverage technology for deeper audience engagement and monetization.",
+              "questions": [
+                "How can I utilize a decentralized platform to increase my audience reach?",
+                "What innovative ways can I engage my followers with sports collectibles?",
+                "Are there customizable options available for my sports prediction and asset offerings?",
+                "How can I automate the tokenization process for my fan merchandise? [NEEDS_REWRITE]",
+                "What metrics should I track to evaluate the success of my sports-related content and collectibles?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "discovery_questions": [
+      "Which platforms offer interactive fan experiences through sports collectibles and predictions similar to CosmicGate?",
+      "What other projects are raising awareness about tokenized fan ownership in the sports entertainment sector?",
+      "Can you recommend emerging platforms that enable creators to develop and monetize sports-related prediction assets?",
+      "What new entrants in the sports prediction market are utilizing AI to enhance fan engagement and ownership?",
+      "How do existing solutions compare to CosmicGate in terms of transforming fan interactions with sports events through playable assets?"
+    ],
+    "discovered_competitors_dynamic": {
+      "Rumble Gaming": {
+        "credibility_score": 4.0,
+        "reasoning": "Rumble Gaming and CosmicGate both operate in the sports predictions and fan engagement market, leveraging NFTs and gaming mechanics, which makes them strong competitors. However, there may be slight differences in their user experience or specific features that differentiate them in this space.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Rumble Gaming",
+          "RumbleGaming",
+          "rumblegaming",
+          "Rumble Gameing",
+          "Rumble-Gaming",
+          "RG",
+          "RumbleG",
+          "RumbleGame",
+          "RumbleGamingOfficial",
+          "RmbGmng",
+          "RumbleGamng",
+          "rumble_gaming",
+          "RumbleGM",
+          "RumbelGaming",
+          "RumbleGamers",
+          "Rumble_Gaming"
+        ]
+      },
+      "Chalkline Sports": {
+        "credibility_score": 4.0,
+        "reasoning": "Chalkline Sports offers a similar platform for sports predictions and fan engagement leveraging NFTs and gaming mechanics, positioning it as a strong competitor to CosmicGate. While there may be slight product or market differentiation, they both cater to the same target audience of sports fans and collectors.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Chalkline Sports",
+          "ChalklineSports",
+          "chalklinesports",
+          "Chalk Line Sports",
+          "ChalkLineSportsCo",
+          "CLS",
+          "ChalklynSports",
+          "Chalk-LinesSport",
+          "ChlklnSprts",
+          "Chalkline_Sports",
+          "ChlkLineSports",
+          "ChalklineSportsInc",
+          "chalkline.sports",
+          "ChalklineSportz",
+          "ChlkLnSprts",
+          "C_SP"
+        ]
+      },
+      "Zed Run": {
+        "credibility_score": 4.0,
+        "reasoning": "Zed Run and CosmicGate both operate in the sports prediction and fan engagement market, leveraging NFTs and gaming mechanics. While Zed Run focuses on virtual horse racing and related gaming experiences, it still appeals to sports fans and collectors, making it a strong competitor to CosmicGate despite some differentiation in product focus.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Zed Run",
+          "ZedRun",
+          "zedrun",
+          "ZEDRUN",
+          "ZedRunOfficial",
+          "zed-run",
+          "Zed_Run",
+          "ZedR",
+          "ZedRUn",
+          "Zedr",
+          "Z_D_R_U_N",
+          "ZedRunGame",
+          "zedrunn",
+          "ZEDR",
+          "ZedGame",
+          "ZED_RUN"
+        ]
+      },
+      "Bloxcards": {
+        "credibility_score": 4.0,
+        "reasoning": "Bloxcards offers similar platforms focused on sports predictions and fan engagement through NFTs and gaming, closely aligning with CosmicGate's offerings, although there may be slight differences in features or target audiences.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Bloxcards",
+          "BloxCards",
+          "BLOXCARDZ",
+          "blox cards",
+          "BloxCrd",
+          "BloxcardsApp",
+          "BloxCrs",
+          "bloxcrds",
+          "Blox-Cards",
+          "Blox Crds",
+          "BloxC",
+          "BCards",
+          "Bloexcards",
+          "Blocsards",
+          "BLOXCARDZ"
+        ]
+      },
+      "Sorare": {
+        "credibility_score": 4.0,
+        "reasoning": "Sorare and CosmicGate both operate in the sports prediction and fan engagement space using NFTs and gaming mechanics, targeting similar audiences. However, Sorare focuses heavily on fantasy sports and collecting player cards, while CosmicGate may offer more generalized prediction and gaming features, creating a slight differentiation in their product offerings.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "sorare",
+          "Sorare",
+          "sor are",
+          "soRare",
+          "s0rare",
+          "S0rare",
+          "sorare_",
+          "sorareofficial",
+          "Sora",
+          "SoR",
+          "sor-ar",
+          "sora.re",
+          "sorare.com",
+          "sorareapp",
+          "SR"
+        ]
+      },
+      "WagerLab": {
+        "credibility_score": 4.0,
+        "reasoning": "WagerLab and CosmicGate both focus on sports predictions and fan engagement through NFTs and gaming mechanics. While they offer similar platforms and appeal to the same audience of sports fans and collectors, there may be slight product differentiations or unique features that set them apart.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "WagerLab",
+          "wagerlab",
+          "Wager lab",
+          "wager lab",
+          "WAGRLAB",
+          "WgrLab",
+          "WGLB",
+          "WgrL",
+          "WGERLAB",
+          "Wag3rLab",
+          "Wagerlabb",
+          "WagerL4b",
+          "wgrl_b",
+          "WgrLab.com",
+          "WagerLabOfficial"
+        ]
+      }
+    },
+    "competitor_aliases_map": {
+      "Rumble Gaming": [
+        "Rumble Gaming",
+        "RumbleGaming",
+        "rumblegaming",
+        "Rumble Gameing",
+        "Rumble-Gaming",
+        "RG",
+        "RumbleG",
+        "RumbleGame",
+        "RumbleGamingOfficial",
+        "RmbGmng",
+        "RumbleGamng",
+        "rumble_gaming",
+        "RumbleGM",
+        "RumbelGaming",
+        "RumbleGamers",
+        "Rumble_Gaming"
+      ],
+      "Chalkline Sports": [
+        "Chalkline Sports",
+        "ChalklineSports",
+        "chalklinesports",
+        "Chalk Line Sports",
+        "ChalkLineSportsCo",
+        "CLS",
+        "ChalklynSports",
+        "Chalk-LinesSport",
+        "ChlklnSprts",
+        "Chalkline_Sports",
+        "ChlkLineSports",
+        "ChalklineSportsInc",
+        "chalkline.sports",
+        "ChalklineSportz",
+        "ChlkLnSprts",
+        "C_SP"
+      ],
+      "Zed Run": [
+        "Zed Run",
+        "ZedRun",
+        "zedrun",
+        "ZEDRUN",
+        "ZedRunOfficial",
+        "zed-run",
+        "Zed_Run",
+        "ZedR",
+        "ZedRUn",
+        "Zedr",
+        "Z_D_R_U_N",
+        "ZedRunGame",
+        "zedrunn",
+        "ZEDR",
+        "ZedGame",
+        "ZED_RUN"
+      ],
+      "Bloxcards": [
+        "Bloxcards",
+        "BloxCards",
+        "BLOXCARDZ",
+        "blox cards",
+        "BloxCrd",
+        "BloxcardsApp",
+        "BloxCrs",
+        "bloxcrds",
+        "Blox-Cards",
+        "Blox Crds",
+        "BloxC",
+        "BCards",
+        "Bloexcards",
+        "Blocsards",
+        "BLOXCARDZ"
+      ],
+      "Sorare": [
+        "sorare",
+        "Sorare",
+        "sor are",
+        "soRare",
+        "s0rare",
+        "S0rare",
+        "sorare_",
+        "sorareofficial",
+        "Sora",
+        "SoR",
+        "sor-ar",
+        "sora.re",
+        "sorare.com",
+        "sorareapp",
+        "SR"
+      ],
+      "WagerLab": [
+        "WagerLab",
+        "wagerlab",
+        "Wager lab",
+        "wager lab",
+        "WAGRLAB",
+        "WgrLab",
+        "WGLB",
+        "WgrL",
+        "WGERLAB",
+        "Wag3rLab",
+        "Wagerlabb",
+        "WagerL4b",
+        "wgrl_b",
+        "WgrLab.com",
+        "WagerLabOfficial"
+      ]
+    }
+  },
+  "stage_data": {
+    "scrape_homepage": "The Agentic Layer for Sports Prediction Marketst The Agentic Layer for Sports Prediction Markets The Agentic Layer for Sports Prediction Marketst $GATEAI PRESALE - ICO/IEO Announcement cosmicgate.ai App Access Whitepaper Offcanvas Menu Open Close THE AGENTIC LAYER For Sports PREDICTION Markets Powered by AI & Creator Community See Our Ecosystem $GATEAI PRESALE legendz.fun legendz.fun beta live Legendz turns sports collectibles into playable prediction assets legendz.fun legendz.fun beta live Sports NFTs aren\u2019t JPEGs. Predictions aren\u2019t boring odds. Fans don\u2019t just bet - they build, collect, and evolve Sports RWA Trading Cards aren't static assets, physical cards are tokenized for real-world gameplay Play lineups, Predict Odds with your collectibles Win: you earn rewards Lose: there's no loss, you simply get your staked NFT back Legendz.fun Legendz turns sports collectibles into playable prediction assets legendz.fun legendz.fun live Decentralized intelligence layer behind fan ownership in sports entertainment. It transforms fandom into tokenized playable assets \u2014 fast, scalable, and unstoppable. Candyclaw.fun Candyclaw.fun devnet AI Agentic Tokenization: Automnomous mint process for fan assets collectibles Creator AI Tools: Creators mint fan assets for royalty Prediction Intelligence: Agentic layer for sports predictionss Community-driven: Powered by AI Agents and creator community Become A Creator Decentralized intelligence layer behind fan ownership in sports &amp; entertainment. It transforms fandom into tokenized playable assets \u2014 fast, scalable, and unstoppable. Candyclaw.fun Candyclaw.fun devnet Fanpulse Fanpulse soon The economic social engine of the CosmicGATE ecosystem. A fan-first social app that makes sport predictions fun again. Sports predictions are not some boring stats, here fans own the narratives Fans turn sports trends into trades and signals into positions Moments become markets fans can enter, shape, and own Powered by Cosmicgate intelligent layer for agentic predictions and analytics CosmicGATE Fan Token enables sports teams, artists, festivals, concerts, and entertainment brands to tokenize real-world assets and fan experiences \u2014 turning passive spectators into active stakeholders in the entertainment economy. Fan Token: RWA Tokenization for Sports & Entertainment Fan token launchpad for athletes & artists: Agentic tokenization launchpad where fans, artists, and athletes co-own experiences. Fans trade, co-own, and earn. Fractional Ownership: Fans gain access to tokenized collectibles, merch and memorabilia of their favorite artists and athletes. Tokenization at Scale: Fan tokens are generated autonomously by AI Validators with $GATEAI utility at its core. Fan Token Launch Inquiry Explore More > CosmicGATE Fan Token enables athletes and artists to tokenize influence and share experiences with fans \u2014 turning passive spectators into active stakeholders in the entertainment economy. Fan Token: RWA Tokenization for Sports & Entertainment CommunityNet is the underlying protocol powering prediction agents \u2014 a purpose-built decentralized protocol that powers AI agents trained to run sports prediction models at scale. CommunityNet CommunityNet devnet Decentralized Compute for Agentic Predictions Real-time task distribution and proof-of-inference for agentic validation AI/ML decision logic for autonomous agents supporting prediction engine Powered by node-based staking protocol and reward system Decentralized Compute for Agentic Predictions CommunityNet CommunityNet devnet $GATEAI GATE8J...42oPWx Audited By Hacken/TrustSwap BUILT ON ICO/IEO EXCHANGES The Framework NEW FANDOM REQUIRES NEW EXPERIENCE CosmicgateAI is redefining sports fandom through AI-native predictions built from the ground up. Powered by a model-first, agentic architecture, the platform enables decentralized asset creation, deeper fan engagement, and social prediction experiences at scale. 01 \u2014 Intelligence \u25c8 Agentic tokenization AI Agents are bui",
+    "generate_ct_personas": {
+      "customer_types": [
+        {
+          "name": "Sports Enthusiasts",
+          "description": "Individuals passionate about sports who want to engage more deeply with their favorite teams and players through interactive experiences.",
+          "personas": [
+            {
+              "name": "Casual Fan",
+              "description": "A regular sports follower who enjoys engaging with teams but has limited knowledge of digital collectible assets.",
+              "questions": [
+                "How can I participate in sports predictions without prior experience?",
+                "What are the advantages of using interactive collectibles in sports?",
+                "Can I create and earn from my own sports-related content?",
+                "Which type of sports collectibles can I use for making predictions?",
+                "Are there any community events where fans can collaborate on predictions?"
+              ]
+            },
+            {
+              "name": "Avid Supporter",
+              "description": "A dedicated sports fan who actively follows teams and players and is interested in leveraging technology for deeper engagement.",
+              "questions": [
+                "What tools can help me enhance my prediction accuracy using fan collectibles?",
+                "How does the ownership of sports collectibles affect my engagement with the teams?",
+                "What unique experiences can I access through tokenized sports assets? [NEEDS_REWRITE]",
+                "How do I predict outcomes using my collectibles, and what rewards can I earn?",
+                "Can I connect with other fans through this platform to share insights and strategies?"
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Creative Content Makers",
+          "description": "Individuals and creators looking to engage sports fans in innovative ways by producing and monetizing unique content and collectibles.",
+          "personas": [
+            {
+              "name": "Emerging Creator",
+              "description": "A new content creator aiming to build a fanbase and monetize their sports-related creations.",
+              "questions": [
+                "What opportunities do I have to create and sell sports-focused content?",
+                "How can I incorporate elements of gamification into my sports collectibles?",
+                "What are the best practices for promoting my sports predictions and assets?",
+                "How can I collaborate with sports teams to create unique experiences for fans?",
+                "Are there any tools available to help me analyze fan engagement and content performance?"
+              ]
+            },
+            {
+              "name": "Established Influencer",
+              "description": "A well-known sports content creator looking to leverage technology for deeper audience engagement and monetization.",
+              "questions": [
+                "How can I utilize a decentralized platform to increase my audience reach?",
+                "What innovative ways can I engage my followers with sports collectibles?",
+                "Are there customizable options available for my sports prediction and asset offerings?",
+                "How can I automate the tokenization process for my fan merchandise? [NEEDS_REWRITE]",
+                "What metrics should I track to evaluate the success of my sports-related content and collectibles?"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "generate_discovery_questions": [
+      "Which platforms offer interactive fan experiences through sports collectibles and predictions similar to CosmicGate?",
+      "What other projects are raising awareness about tokenized fan ownership in the sports entertainment sector?",
+      "Can you recommend emerging platforms that enable creators to develop and monetize sports-related prediction assets?",
+      "What new entrants in the sports prediction market are utilizing AI to enhance fan engagement and ownership?",
+      "How do existing solutions compare to CosmicGate in terms of transforming fan interactions with sports events through playable assets?"
+    ],
+    "discover_competitors_dynamic": {
+      "Rumble Gaming": {
+        "credibility_score": 4.0,
+        "reasoning": "Rumble Gaming and CosmicGate both operate in the sports predictions and fan engagement market, leveraging NFTs and gaming mechanics, which makes them strong competitors. However, there may be slight differences in their user experience or specific features that differentiate them in this space.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Rumble Gaming",
+          "RumbleGaming",
+          "rumblegaming",
+          "Rumble Gameing",
+          "Rumble-Gaming",
+          "RG",
+          "RumbleG",
+          "RumbleGame",
+          "RumbleGamingOfficial",
+          "RmbGmng",
+          "RumbleGamng",
+          "rumble_gaming",
+          "RumbleGM",
+          "RumbelGaming",
+          "RumbleGamers",
+          "Rumble_Gaming"
+        ]
+      },
+      "Chalkline Sports": {
+        "credibility_score": 4.0,
+        "reasoning": "Chalkline Sports offers a similar platform for sports predictions and fan engagement leveraging NFTs and gaming mechanics, positioning it as a strong competitor to CosmicGate. While there may be slight product or market differentiation, they both cater to the same target audience of sports fans and collectors.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Chalkline Sports",
+          "ChalklineSports",
+          "chalklinesports",
+          "Chalk Line Sports",
+          "ChalkLineSportsCo",
+          "CLS",
+          "ChalklynSports",
+          "Chalk-LinesSport",
+          "ChlklnSprts",
+          "Chalkline_Sports",
+          "ChlkLineSports",
+          "ChalklineSportsInc",
+          "chalkline.sports",
+          "ChalklineSportz",
+          "ChlkLnSprts",
+          "C_SP"
+        ]
+      },
+      "Zed Run": {
+        "credibility_score": 4.0,
+        "reasoning": "Zed Run and CosmicGate both operate in the sports prediction and fan engagement market, leveraging NFTs and gaming mechanics. While Zed Run focuses on virtual horse racing and related gaming experiences, it still appeals to sports fans and collectors, making it a strong competitor to CosmicGate despite some differentiation in product focus.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Zed Run",
+          "ZedRun",
+          "zedrun",
+          "ZEDRUN",
+          "ZedRunOfficial",
+          "zed-run",
+          "Zed_Run",
+          "ZedR",
+          "ZedRUn",
+          "Zedr",
+          "Z_D_R_U_N",
+          "ZedRunGame",
+          "zedrunn",
+          "ZEDR",
+          "ZedGame",
+          "ZED_RUN"
+        ]
+      },
+      "Bloxcards": {
+        "credibility_score": 4.0,
+        "reasoning": "Bloxcards offers similar platforms focused on sports predictions and fan engagement through NFTs and gaming, closely aligning with CosmicGate's offerings, although there may be slight differences in features or target audiences.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "Bloxcards",
+          "BloxCards",
+          "BLOXCARDZ",
+          "blox cards",
+          "BloxCrd",
+          "BloxcardsApp",
+          "BloxCrs",
+          "bloxcrds",
+          "Blox-Cards",
+          "Blox Crds",
+          "BloxC",
+          "BCards",
+          "Bloexcards",
+          "Blocsards",
+          "BLOXCARDZ"
+        ]
+      },
+      "Sorare": {
+        "credibility_score": 4.0,
+        "reasoning": "Sorare and CosmicGate both operate in the sports prediction and fan engagement space using NFTs and gaming mechanics, targeting similar audiences. However, Sorare focuses heavily on fantasy sports and collecting player cards, while CosmicGate may offer more generalized prediction and gaming features, creating a slight differentiation in their product offerings.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "sorare",
+          "Sorare",
+          "sor are",
+          "soRare",
+          "s0rare",
+          "S0rare",
+          "sorare_",
+          "sorareofficial",
+          "Sora",
+          "SoR",
+          "sor-ar",
+          "sora.re",
+          "sorare.com",
+          "sorareapp",
+          "SR"
+        ]
+      },
+      "WagerLab": {
+        "credibility_score": 4.0,
+        "reasoning": "WagerLab and CosmicGate both focus on sports predictions and fan engagement through NFTs and gaming mechanics. While they offer similar platforms and appeal to the same audience of sports fans and collectors, there may be slight product differentiations or unique features that set them apart.",
+        "market_segment": "These companies directly compete with CosmicGate by offering similar platforms for sports predictions and fan engagement leveraging NFTs and gaming mechanics, appealing to sports fans and collectors.",
+        "tier": 1,
+        "aliases": [
+          "WagerLab",
+          "wagerlab",
+          "Wager lab",
+          "wager lab",
+          "WAGRLAB",
+          "WgrLab",
+          "WGLB",
+          "WgrL",
+          "WGERLAB",
+          "Wag3rLab",
+          "Wagerlabb",
+          "WagerL4b",
+          "wgrl_b",
+          "WgrLab.com",
+          "WagerLabOfficial"
+        ]
+      }
+    }
+  }
+}

@@ -10,19 +10,19 @@
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 0,
-    "score_status": "Zero AI Visibility",
+    "score": 55,
+    "score_status": "Strong AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
     "unique_competitors": 34,
-    "own_mentioned": false,
-    "own_appearance_pct": 0,
-    "own_appearance_note": "Site NOT mentioned in AI responses",
+    "own_mentioned": true,
+    "own_appearance_pct": 55.0,
+    "own_appearance_note": "Site mentioned in 55.0% of responses",
     "hero_comparison": [
       {
-        "value": "0%",
+        "value": "55.0%",
         "label": "TermMax Visibility",
-        "trend": "down"
+        "trend": "up"
       },
       {
         "value": "37.5%",
@@ -42,126 +42,260 @@
       "uuid": null,
       "competitors": [
         {
-          "name": "uniswap",
-          "appearance": 27.5,
-          "rank": 14.38,
+          "name": "TermMax",
+          "appearance_percentage": 70.0,
+          "avg_rank": 3.22,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": true
+        },
+        {
+          "name": "uniswap",
+          "appearance_percentage": 27.5,
+          "avg_rank": 14.38,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 25.0,
-          "rank": 9.33,
+          "appearance_percentage": 25.0,
+          "avg_rank": 9.33,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "compound",
-          "appearance": 17.5,
-          "rank": 11.2,
+          "appearance_percentage": 17.5,
+          "avg_rank": 11.2,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "balancer",
-          "appearance": 12.5,
-          "rank": 16.5,
+          "appearance_percentage": 12.5,
+          "avg_rank": 16.5,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "yearn finance",
-          "appearance": 12.5,
-          "rank": 9.75,
+          "appearance_percentage": 12.5,
+          "avg_rank": 9.75,
           "providers": [
             "DeepSeek",
-            "Claude",
+            "anthropic/claude-3.5-haiku",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "sushiswap",
-          "appearance": 12.5,
-          "rank": 16.0,
+          "appearance_percentage": 12.5,
+          "avg_rank": 16.0,
           "providers": [
             "DeepSeek",
-            "Claude",
+            "anthropic/claude-3.5-haiku",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 10.0,
-          "rank": 11.5,
+          "appearance_percentage": 10.0,
+          "avg_rank": 11.5,
           "providers": [
             "DeepSeek",
-            "Claude",
+            "anthropic/claude-3.5-haiku",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "synthetix",
-          "appearance": 7.5,
-          "rank": 15.0,
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.0,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "curve finance",
-          "appearance": 7.5,
-          "rank": null,
+          "appearance_percentage": 7.5,
+          "avg_rank": null,
           "providers": [
             "DeepSeek",
-            "Claude",
+            "anthropic/claude-3.5-haiku",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "makerdao",
-          "appearance": 7.5,
-          "rank": 13.0,
+          "appearance_percentage": 7.5,
+          "avg_rank": 13.0,
           "providers": [
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "curve",
+          "appearance_percentage": 7.5,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "uma",
+          "appearance_percentage": 5.0,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "pancakeswap",
+          "appearance_percentage": 5.0,
+          "avg_rank": 6.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "dydx",
+          "appearance_percentage": 5.0,
+          "avg_rank": 19.0,
+          "providers": [
+            "OpenAI",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cryptocompare",
+          "appearance_percentage": 5.0,
+          "avg_rank": 19.0,
+          "providers": [
+            "OpenAI",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "band protocol",
+          "appearance_percentage": 2.5,
+          "avg_rank": 7.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "theblock",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "paraswap",
+          "appearance_percentage": 2.5,
+          "avg_rank": 15.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "1inch",
+          "appearance_percentage": 2.5,
+          "avg_rank": 14.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "yield protocol",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "euler",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "blockfi",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "coinmarketcap",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "the graph",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -179,131 +313,306 @@
       "uuid": null,
       "competitors": [
         {
-          "name": "compound",
-          "appearance": 37.5,
-          "rank": 11.33,
+          "name": "TermMax",
+          "appearance_percentage": 40.0,
+          "avg_rank": 3.38,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": true
+        },
+        {
+          "name": "compound",
+          "appearance_percentage": 37.5,
+          "avg_rank": 11.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 37.5,
-          "rank": 13.58,
+          "appearance_percentage": 37.5,
+          "avg_rank": 13.58,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "uniswap",
-          "appearance": 30.0,
-          "rank": 13.5,
+          "appearance_percentage": 30.0,
+          "avg_rank": 13.5,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "yearn finance",
-          "appearance": 22.5,
-          "rank": 11.88,
+          "appearance_percentage": 22.5,
+          "avg_rank": 11.88,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "sushiswap",
-          "appearance": 20.0,
-          "rank": 13.0,
+          "appearance_percentage": 20.0,
+          "avg_rank": 13.0,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "curve",
-          "appearance": 17.5,
-          "rank": 14.33,
+          "appearance_percentage": 17.5,
+          "avg_rank": 14.33,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "pancakeswap",
-          "appearance": 15.0,
-          "rank": 13.0,
+          "appearance_percentage": 15.0,
+          "avg_rank": 13.0,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "dydx",
-          "appearance": 15.0,
-          "rank": 13.75,
+          "appearance_percentage": 15.0,
+          "avg_rank": 13.75,
           "providers": [
             "DeepSeek",
-            "Claude",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "blockfi",
-          "appearance": 12.5,
-          "rank": 7.0,
+          "appearance_percentage": 12.5,
+          "avg_rank": 7.0,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
         },
         {
           "name": "curve finance",
-          "appearance": 12.5,
-          "rank": 15.75,
+          "appearance_percentage": 12.5,
+          "avg_rank": 15.75,
           "providers": [
             "DeepSeek",
-            "OpenAI",
-            "Gemini"
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "is_own": false
+        },
+        {
+          "name": "makerdao",
+          "appearance_percentage": 12.5,
+          "avg_rank": 9.33,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "balancer",
+          "appearance_percentage": 12.5,
+          "avg_rank": 13.8,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "appearance_percentage": 12.5,
+          "avg_rank": 12.25,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001",
+            "anthropic/claude-3.5-haiku",
+            "OpenAI"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "perpetual protocol",
+          "appearance_percentage": 7.5,
+          "avg_rank": 16.0,
+          "providers": [
+            "DeepSeek",
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "aragon",
+          "appearance_percentage": 5.0,
+          "avg_rank": 8.0,
+          "providers": [
+            "DeepSeek",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "anchor protocol",
+          "appearance_percentage": 5.0,
+          "avg_rank": 18.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "coingecko",
+          "appearance_percentage": 5.0,
+          "avg_rank": 16.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "coinmarketcap",
+          "appearance_percentage": 5.0,
+          "avg_rank": 16.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "nexo",
+          "appearance_percentage": 5.0,
+          "avg_rank": 10.0,
+          "providers": [
+            "OpenAI",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "band protocol",
+          "appearance_percentage": 5.0,
+          "avg_rank": 11.0,
+          "providers": [
+            "OpenAI",
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "synthetix",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "maple finance",
+          "appearance_percentage": 2.5,
+          "avg_rank": 18.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "gmx",
+          "appearance_percentage": 2.5,
+          "avg_rank": 18.0,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "uma",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "anthropic/claude-3.5-haiku"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "marinade finance",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "venus",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "convex finance",
+          "appearance_percentage": 2.5,
+          "avg_rank": 12.0,
+          "providers": [
+            "google/gemini-2.0-flash-001"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cryptocompare",
+          "appearance_percentage": 2.5,
+          "avg_rank": null,
+          "providers": [
+            "OpenAI"
+          ],
+          "is_own": false
         }
       ],
       "total_responses": 10,

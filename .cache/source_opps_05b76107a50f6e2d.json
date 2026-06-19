@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading blockchain news site with strong focus on tokenization and platform innovations matching ScandicCoin's core themes"
+  },
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Tech-focused crypto media that covers emerging blockchain platforms and competitive landscape analysis"
+  },
+  {
+    "name": "theblock.xyz",
+    "domain": "theblock.xyz",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] In-depth blockchain research platform that provides authoritative coverage of emerging cryptocurrency technologies and ownership structures"
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Global crypto news outlet with extensive coverage of blockchain platforms and competitive ecosystem dynamics"
+  },
+  {
+    "name": "consensys.net/media",
+    "domain": "consensys.net/media",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer-focused blockchain media that explores emerging tokenization technologies and platform innovations"
+  },
+  {
+    "name": "techcrunch.com/blockchain",
+    "domain": "techcrunch.com/blockchain",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Mainstream tech media section with significant blockchain and cryptocurrency technology coverage"
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized crypto news platform covering platform technologies and competitive blockchain landscapes"
+  },
+  {
+    "name": "blockdata.tech",
+    "domain": "blockdata.tech",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Advanced blockchain market intelligence platform providing deep technological analysis of emerging cryptocurrency projects"
+  },
+  {
+    "name": "bitcoinmagazine.com",
+    "domain": "bitcoinmagazine.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Long-standing crypto publication with extensive coverage of blockchain platform innovations and tokenization strategies"
+  },
+  {
+    "name": "cryptodaily.co.uk",
+    "domain": "cryptodaily.co.uk",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] European-focused crypto news outlet that provides comprehensive coverage of blockchain technologies"
+  }
+]
