@@ -1,0 +1,82 @@
+[
+  {
+    "name": "decrypt.co",
+    "domain": "decrypt.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Decrypt covers cryptocurrency and blockchain news extensively, making it critical for CosmicGate to be featured given the rising interest in NFTs and collectibles related to these technologies."
+  },
+  {
+    "name": "cointelegraph.com",
+    "domain": "cointelegraph.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Cointelegraph is a leading media outlet in the blockchain and crypto niche, frequently covering competitors like Chainlink and Chiliz, providing a ripe opportunity for CosmicGate to enhance visibility."
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] The Block specializes in in-depth industry analysis and news, making it an essential platform for CosmicGate to gain authoritative insights on the evolving market, especially in areas related to their competitive themes."
+  },
+  {
+    "name": "nftnow.com",
+    "domain": "nftnow.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] With a focus on NFTs and the digital collectibles market, NFT Now can provide CosmicGate with the exposure needed to engage with their target audience, similar to what competitors like Alchemy are achieving."
+  },
+  {
+    "name": "gamasutra.com",
+    "domain": "gamasutra.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Gamasutra covers the intersection of gaming and technology, which is relevant as CosmicGate seeks to enter or appeal to gaming audiences interested in NFTs and collectibles."
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] CryptoSlate provides news, analysis, and insights on cryptocurrencies and blockchain projects, positioning it as a vital publication for CosmicGate to share their narratives alongside competitors."
+  },
+  {
+    "name": "tokenomics.org",
+    "domain": "tokenomics.org",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Tokenomics is focused on the economics behind token issuance in blockchain projects, thus enabling CosmicGate to engage with analysts and investors interested in the financial models of their platform."
+  },
+  {
+    "name": "messari.io",
+    "domain": "messari.io",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Messari offers in-depth research and analytics on crypto projects; securing coverage here could highlight CosmicGate's differentiators against key competitors and attract institutional attention."
+  },
+  {
+    "name": "nftevening.com",
+    "domain": "nftevening.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] NFT Evening covers the latest in the NFT space, providing CosmicGate a specific platform to discuss their offerings within the burgeoning collectibles market and tie into current trends."
+  },
+  {
+    "name": "blockchain.news",
+    "domain": "blockchain.news",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Blockchain News provides valuable insights and news in the blockchain space, which can help CosmicGate position itself within the ecosystem that includes competitors while reaching audiences interested in sports and collectibles."
+  }
+]

@@ -112,7 +112,7 @@ Respond in JSON format:
 
     try:
         response_text = openrouter_client._call(
-            model="anthropic/claude-3.5-haiku",
+            model="openai/gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
@@ -209,7 +209,7 @@ Respond in JSON:
 
     try:
         response_text = openrouter_client._call(
-            model="anthropic/claude-3.5-haiku",
+            model="openai/gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
@@ -261,7 +261,7 @@ Return JSON:
 
     try:
         response_text = openrouter_client._call(
-            model="anthropic/claude-3.5-haiku",
+            model="openai/gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )
@@ -365,7 +365,7 @@ Return JSON:
 
     try:
         response_text = openrouter_client._call(
-            model="anthropic/claude-3.5-haiku",
+            model="openai/gpt-4o-mini",
             messages=[{"role": "user", "content": prompt}],
             max_tokens=300
         )

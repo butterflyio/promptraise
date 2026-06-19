@@ -17,16 +17,16 @@ OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
 MODELS = [
     "deepseek/deepseek-chat-v3",
-    "anthropic/claude-3.5-haiku",
-    "google/gemini-2.5-flash",
     "openai/gpt-4o-mini",
+    "mistralai/mistral-small-3.1-24b-instruct",
+    "meta-llama/llama-3.1-70b-instruct",
 ]
 
 MODEL_DISPLAY_NAMES = {
     "deepseek/deepseek-chat-v3": "DeepSeek",
-    "anthropic/claude-3.5-haiku": "Claude",
-    "google/gemini-2.5-flash": "Gemini",
     "openai/gpt-4o-mini": "OpenAI",
+    "mistralai/mistral-small-3.1-24b-instruct": "Mistral",
+    "meta-llama/llama-3.1-70b-instruct": "Llama",
 }
 
 # DISCOVERY_QUESTIONS removed - dynamically generated per project subcategory via _detect_subcategory_and_generate_questions
@@ -471,7 +471,7 @@ class OpenRouterBatchClient:
             )},
         ]
         result = self._call_with_json_retry(
-            "anthropic/claude-3.5-haiku", messages, max_tokens=2048
+            "openai/gpt-4o-mini", messages, max_tokens=2048
         )
 
         cts = result.get("customer_types", [])
@@ -503,7 +503,7 @@ class OpenRouterBatchClient:
             )},
         ]
         result = self._call_with_json_retry(
-            "anthropic/claude-3.5-haiku", messages, max_tokens=1024
+            "openai/gpt-4o-mini", messages, max_tokens=1024
         )
         questions = result.get("discovery_questions", [])
         if not questions or len(questions) < 5:
@@ -1086,7 +1086,7 @@ Generate exactly 12 entries."""
 
         try:
             llm_response = self._call(
-                model="anthropic/claude-3.5-haiku",
+                model="openai/gpt-4o-mini",
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=800,
             )

@@ -1,0 +1,82 @@
+[
+  {
+    "name": "decentralized.substack.com",
+    "domain": "decentralized.substack.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Covers emerging DeFi payment and vesting platforms, potential deep-dive opportunity for StreamFlow's smart contract compensation mechanisms"
+  },
+  {
+    "name": "cryptoeconomics.org",
+    "domain": "cryptoeconomics.org",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Academic-level publication focusing on token economics and smart contract innovations in finance"
+  },
+  {
+    "name": "techcrunch.com",
+    "domain": "techcrunch.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] High-profile tech media that covers fintech and blockchain startups with similar infrastructure to StreamFlow Finance"
+  },
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Leading cryptocurrency news site with strong coverage of smart contract payment and compensation platforms"
+  },
+  {
+    "name": "gitcoin.co/blog",
+    "domain": "gitcoin.co/blog",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Developer-focused platform interested in innovative blockchain payment and vesting technologies"
+  },
+  {
+    "name": "banklesspro.substack.com",
+    "domain": "banklesspro.substack.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Targeted blockchain finance publication covering emerging compensation and token distribution platforms"
+  },
+  {
+    "name": "tokentuesdays.com",
+    "domain": "tokentuesdays.com",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Specialized newsletter analyzing token economics and smart contract financial innovations"
+  },
+  {
+    "name": "dappradar.com",
+    "domain": "dappradar.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Platform tracking decentralized applications with strong interest in financial smart contract technologies"
+  },
+  {
+    "name": "thedefiant.io",
+    "domain": "thedefiant.io",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Decentralized finance publication focusing on innovative financial infrastructure and token-based compensation"
+  },
+  {
+    "name": "messari.io/research",
+    "domain": "messari.io/research",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Crypto research platform providing deep analysis of emerging blockchain financial technologies"
+  }
+]

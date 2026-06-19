@@ -107,7 +107,7 @@ Guidelines:
 class InsightsGenerator:
     """Generates analytical insight sections via OpenRouter (Claude Haiku)."""
 
-    DEFAULT_MODEL = "anthropic/claude-3.5-haiku"
+    DEFAULT_MODEL = "openai/gpt-4o-mini"
     OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
     def __init__(
