@@ -58,22 +58,10 @@
           "appearance_percentage": 62.5,
           "avg_rank": 14.76,
           "providers": [
-            "OpenAI",
             "DeepSeek",
             "Llama",
-            "Mistral"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "zoom",
-          "appearance_percentage": 62.5,
-          "avg_rank": 14.76,
-          "providers": [
-            "OpenAI",
-            "DeepSeek",
-            "Llama",
-            "Mistral"
+            "Mistral",
+            "OpenAI"
           ],
           "is_own": false
         },
@@ -215,25 +203,7 @@
           "is_own": false
         },
         {
-          "name": "whereby",
-          "appearance_percentage": 2.5,
-          "avg_rank": 41.0,
-          "providers": [
-            "DeepSeek"
-          ],
-          "is_own": false
-        },
-        {
           "name": "BigBlueButton",
-          "appearance_percentage": 2.5,
-          "avg_rank": 10.0,
-          "providers": [
-            "Mistral"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "bigbluebutton",
           "appearance_percentage": 2.5,
           "avg_rank": 10.0,
           "providers": [
@@ -273,22 +243,10 @@
           "appearance_percentage": 50.0,
           "avg_rank": 10.4,
           "providers": [
-            "OpenAI",
             "DeepSeek",
             "Llama",
-            "Mistral"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "zoom",
-          "appearance_percentage": 50.0,
-          "avg_rank": 10.4,
-          "providers": [
-            "OpenAI",
-            "DeepSeek",
-            "Llama",
-            "Mistral"
+            "Mistral",
+            "OpenAI"
           ],
           "is_own": false
         },
@@ -365,9 +323,9 @@
           "appearance_percentage": 7.5,
           "avg_rank": 15.33,
           "providers": [
-            "OpenAI",
             "DeepSeek",
-            "Llama"
+            "Llama",
+            "OpenAI"
           ],
           "is_own": false
         },
@@ -375,17 +333,6 @@
           "name": "jitsi",
           "appearance_percentage": 7.5,
           "avg_rank": 17.67,
-          "providers": [
-            "OpenAI",
-            "DeepSeek",
-            "Llama"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "whereby",
-          "appearance_percentage": 7.5,
-          "avg_rank": 15.33,
           "providers": [
             "OpenAI",
             "DeepSeek",
@@ -453,15 +400,6 @@
         },
         {
           "name": "BigBlueButton",
-          "appearance_percentage": 2.5,
-          "avg_rank": 17.0,
-          "providers": [
-            "DeepSeek"
-          ],
-          "is_own": false
-        },
-        {
-          "name": "bigbluebutton",
           "appearance_percentage": 2.5,
           "avg_rank": 17.0,
           "providers": [

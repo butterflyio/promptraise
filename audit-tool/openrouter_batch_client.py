@@ -688,17 +688,19 @@ class OpenRouterBatchClient:
         mention_buckets = {}
         for resp in responses:
             for comp in resp.get("competitors_mentioned", []):
-                if comp not in mention_buckets:
-                    mention_buckets[comp] = {"total": 0, "by_model": {}, "by_question": set(), "mention_positions": []}
-                mention_buckets[comp]["total"] += 1
+                comp_lower = comp.lower()
+                if comp_lower not in mention_buckets:
+                    mention_buckets[comp_lower] = {"total": 0, "by_model": {}, "by_question": set(), "mention_positions": [], "canonical_name": comp}
+                bucket = mention_buckets[comp_lower]
+                bucket["total"] += 1
                 model_key = MODEL_DISPLAY_NAMES.get(resp["model"], resp["model"])
-                if model_key not in mention_buckets[comp]["by_model"]:
-                    mention_buckets[comp]["by_model"][model_key] = 0
-                mention_buckets[comp]["by_model"][model_key] += 1
-                mention_buckets[comp]["by_question"].add(resp["question"][:50])
+                if model_key not in bucket["by_model"]:
+                    bucket["by_model"][model_key] = 0
+                bucket["by_model"][model_key] += 1
+                bucket["by_question"].add(resp["question"][:50])
                 pos = resp.get("mention_position", {}).get(comp)
                 if pos is not None:
-                    mention_buckets[comp]["mention_positions"].append(pos)
+                    bucket["mention_positions"].append(pos)
 
         if include_all_discovered:
             for seed_name in seed_names:
@@ -706,17 +708,18 @@ class OpenRouterBatchClient:
                     mention_buckets[seed_name] = {"total": 0, "by_model": {}, "by_question": set(), "mention_positions": []}
 
         overall_competitors = {}
-        for comp, bucket in mention_buckets.items():
+        for comp_lower, bucket in mention_buckets.items():
             appearance_pct = round((bucket["total"] / total) * 100, 1) if total > 0 else 0
             positions = bucket.get("mention_positions", [])
             avg_rank = round(sum(positions) / len(positions), 2) if positions else None
             providers = list(bucket.get("by_model", {}).keys())
-            overall_competitors[comp] = {
-                "name": comp,
+            canonical_name = bucket.get("canonical_name", comp_lower)
+            overall_competitors[comp_lower] = {
+                "name": canonical_name,
                 "appearance_percentage": appearance_pct,
                 "avg_rank": avg_rank,
                 "providers": providers,
-                "is_own": comp == brand_lower,
+                "is_own": comp_lower == brand_lower,
             }
 
         top_competitors = sorted(
