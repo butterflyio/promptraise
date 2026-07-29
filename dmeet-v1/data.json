@@ -1,0 +1,833 @@
+{
+  "site": {
+    "name": "Dmeet",
+    "url": "https://dmeet.org/",
+    "domain": "dmeet.org",
+    "slug": "dmeet-v1",
+    "analysis_id": "openrouter-dmeet-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "July 29, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 85,
+    "score_status": "Market Leader",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 36,
+    "own_mentioned": true,
+    "own_appearance_pct": 85.0,
+    "own_appearance_note": "Site mentioned in 85.0% of responses",
+    "hero_comparison": [
+      {
+        "value": "85.0%",
+        "label": "Dmeet Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "62.5%",
+        "label": "Zoom (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "52.5%",
+        "label": "microsoft teams (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Remote Teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Dmeet",
+          "appearance_percentage": 85.0,
+          "avg_rank": 4.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "Zoom",
+          "appearance_percentage": 62.5,
+          "avg_rank": 14.76,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "zoom",
+          "appearance_percentage": 62.5,
+          "avg_rank": 14.76,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "microsoft teams",
+          "appearance_percentage": 52.5,
+          "avg_rank": 18.67,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "google meet",
+          "appearance_percentage": 42.5,
+          "avg_rank": 17.12,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "discord",
+          "appearance_percentage": 27.5,
+          "avg_rank": 20.36,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "slack",
+          "appearance_percentage": 25.0,
+          "avg_rank": 19.3,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "huddle01",
+          "appearance_percentage": 10.0,
+          "avg_rank": 13.75,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "livepeer",
+          "appearance_percentage": 10.0,
+          "avg_rank": 18.75,
+          "providers": [
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "jitsi",
+          "appearance_percentage": 10.0,
+          "avg_rank": 14.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "skype",
+          "appearance_percentage": 10.0,
+          "avg_rank": 15.25,
+          "providers": [
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "signal",
+          "appearance_percentage": 7.5,
+          "avg_rank": 11.67,
+          "providers": [
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "otter.ai",
+          "appearance_percentage": 5.0,
+          "avg_rank": 9.5,
+          "providers": [
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "jitsi meet",
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.0,
+          "providers": [
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cisco webex",
+          "appearance_percentage": 5.0,
+          "avg_rank": 13.5,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Whereby",
+          "appearance_percentage": 2.5,
+          "avg_rank": 41.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "whereby",
+          "appearance_percentage": 2.5,
+          "avg_rank": 41.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "BigBlueButton",
+          "appearance_percentage": 2.5,
+          "avg_rank": 10.0,
+          "providers": [
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "bigbluebutton",
+          "appearance_percentage": 2.5,
+          "avg_rank": 10.0,
+          "providers": [
+            "Mistral"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Mistral": 1,
+        "Llama": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Small Business Owners",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Dmeet",
+          "appearance_percentage": 67.5,
+          "avg_rank": 7.41,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": true
+        },
+        {
+          "name": "Zoom",
+          "appearance_percentage": 50.0,
+          "avg_rank": 10.4,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "zoom",
+          "appearance_percentage": 50.0,
+          "avg_rank": 10.4,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "microsoft teams",
+          "appearance_percentage": 37.5,
+          "avg_rank": 11.6,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "google meet",
+          "appearance_percentage": 32.5,
+          "avg_rank": 12.77,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "slack",
+          "appearance_percentage": 20.0,
+          "avg_rank": 16.75,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "discord",
+          "appearance_percentage": 17.5,
+          "avg_rank": 16.43,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "signal",
+          "appearance_percentage": 10.0,
+          "avg_rank": 5.75,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "whatsapp",
+          "appearance_percentage": 10.0,
+          "avg_rank": 7.5,
+          "providers": [
+            "OpenAI",
+            "Llama",
+            "Mistral"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "Whereby",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.33,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "jitsi",
+          "appearance_percentage": 7.5,
+          "avg_rank": 17.67,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "whereby",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.33,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "otter.ai",
+          "appearance_percentage": 7.5,
+          "avg_rank": 14.33,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "cisco webex",
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.33,
+          "providers": [
+            "OpenAI",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "huddle01",
+          "appearance_percentage": 5.0,
+          "avg_rank": 23.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "livepeer",
+          "appearance_percentage": 5.0,
+          "avg_rank": 15.5,
+          "providers": [
+            "DeepSeek",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "jitsi meet",
+          "appearance_percentage": 5.0,
+          "avg_rank": 19.0,
+          "providers": [
+            "OpenAI",
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "skype",
+          "appearance_percentage": 5.0,
+          "avg_rank": 10.5,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "BigBlueButton",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "bigbluebutton",
+          "appearance_percentage": 2.5,
+          "avg_rank": 17.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "is_own": false
+        },
+        {
+          "name": "securemeet",
+          "appearance_percentage": 2.5,
+          "avg_rank": 9.0,
+          "providers": [
+            "Llama"
+          ],
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Mistral": 1,
+        "Llama": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "name",
+      "count": 129
+    },
+    {
+      "text": "meeting",
+      "count": 127
+    },
+    {
+      "text": "features",
+      "count": 104
+    },
+    {
+      "text": "video",
+      "count": 99
+    },
+    {
+      "text": "competitors",
+      "count": 87
+    },
+    {
+      "text": "google",
+      "count": 77
+    },
+    {
+      "text": "tools",
+      "count": 74
+    },
+    {
+      "text": "feature",
+      "count": 69
+    },
+    {
+      "text": "zoom",
+      "count": 65
+    },
+    {
+      "text": "web3",
+      "count": 62
+    }
+  ],
+  "sources": [
+    {
+      "name": "dmeet.io",
+      "url": "https://dmeet.io",
+      "mentions": 1
+    },
+    {
+      "name": "rev.com",
+      "url": "https://rev.com",
+      "mentions": 1
+    },
+    {
+      "name": "gong.io",
+      "url": "https://gong.io",
+      "mentions": 1
+    },
+    {
+      "name": "monday.com",
+      "url": "https://monday.com",
+      "mentions": 1
+    },
+    {
+      "name": "zoom.us",
+      "url": "https://zoom.us",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What features does this app provide to facilitate real-time translations during discussions?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "What recommendations do you have for maximizing productivity with your video conferencing features?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "How can I make use of meeting summaries to follow up with my clients effectively?",
+      "type": "missing",
+      "persona": "Freelance Consultant"
+    },
+    {
+      "text": "What advice do you have for ensuring a secure connection while discussing confidential topics?",
+      "type": "missing",
+      "persona": "Freelance Consultant"
+    },
+    {
+      "text": "What options are available for maintaining a professional appearance during video calls?",
+      "type": "missing",
+      "persona": "E-commerce Business Owner"
+    },
+    {
+      "text": "How can I leverage meeting recordings to improve customer service interactions?",
+      "type": "missing",
+      "persona": "E-commerce Business Owner"
+    },
+    {
+      "text": "What recommendations can you give on using this app to enhance buyer-seller communication?",
+      "type": "missing",
+      "persona": "E-commerce Business Owner"
+    },
+    {
+      "text": "What recommendations do you have for maximizing productivity with your video conferencing features?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "How does the AI memory feature work in recalling past discussions with suppliers?",
+      "type": "missing",
+      "persona": "E-commerce Business Owner"
+    },
+    {
+      "text": "Which other platforms should I consider if I\u2019m looking for integrated online meeting solutions?",
+      "type": "missing",
+      "persona": "E-commerce Business Owner"
+    },
+    {
+      "text": "How can I ensure my team remembers key points from our video meetings?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "How can I make use of meeting summaries to follow up with my clients effectively?",
+      "type": "missing",
+      "persona": "Freelance Consultant"
+    },
+    {
+      "text": "Are there features that help with international client communication, like language translations?",
+      "type": "missing",
+      "persona": "Freelance Consultant"
+    },
+    {
+      "text": "What are some practical ways to use this tool for presenting ideas to clients during calls?",
+      "type": "missing",
+      "persona": "Freelance Consultant"
+    },
+    {
+      "text": "Which other platforms should I consider if I\u2019m looking for integrated online meeting solutions?",
+      "type": "missing",
+      "persona": "E-commerce Business Owner"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "techcrunch.com",
+      "domain": "techcrunch.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] TechCrunch covers innovative tools and services in the tech space, providing a significant platform for Dmeet to showcase its unique meeting features and competitive advantages against established players."
+    },
+    {
+      "name": "venturebeat.com",
+      "domain": "venturebeat.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] VentureBeat focuses on emerging technologies and startups. Dmeet can gain exposure here by highlighting its differentiation in the competitive video conferencing landscape."
+    },
+    {
+      "name": "gartner.com",
+      "domain": "gartner.com",
+      "type": "research",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] Gartner is a leading research and advisory company that offers insights into technology trends. Inclusion in one of their reports can enhance Dmeet's credibility among enterprise clients comparing meeting tools."
+    },
+    {
+      "name": "forrester.com",
+      "domain": "forrester.com",
+      "type": "research",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] Forrester provides in-depth analysis of various software tools and platforms. A feature on Dmeet would benefit in demonstrating its features against competitors like Zoom and Cisco WebEx."
+    },
+    {
+      "name": "pcmag.com",
+      "domain": "pcmag.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] PCMag provides detailed reviews and feature comparisons of tech products, making it an ideal platform for Dmeet to be compared favorably against competitors."
+    },
+    {
+      "name": "cnet.com",
+      "domain": "cnet.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] CNET is known for technology news and product reviews. An article featuring Dmeet would help reach a broader audience and potentially highlight its unique features."
+    },
+    {
+      "name": "zdnet.com",
+      "domain": "zdnet.com",
+      "type": "publication",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] ZDNet focuses on business technology news. Coverage of Dmeet would be beneficial to target business professionals considering different meeting tools."
+    },
+    {
+      "name": "g2.com",
+      "domain": "g2.com",
+      "type": "community",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] G2 is a peer-to-peer review site for business software. A presence on G2 can help Dmeet gather user feedback and improve visibility compared to competitors like Google Meet and Jitsi."
+    },
+    {
+      "name": "slack.com",
+      "domain": "slack.com",
+      "type": "community",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] The Slack community often explores integrations and tools that can enhance the user experience. Dmeet's features could be highlighted for potential integrations with collaboration tools."
+    },
+    {
+      "name": "twilio.com",
+      "domain": "twilio.com",
+      "type": "community",
+      "mentions": 0,
+      "priority": "OPPORTUNITY",
+      "reason": "[DYNAMIC] Twilio's community focuses on communication tools and applications. As a player in the meeting space, showcasing how Dmeet integrates with communication APIs could attract attention from developers."
+    }
+  ],
+  "provider_coverage": {
+    "openai": 20,
+    "mistral": 20,
+    "llama": 20,
+    "deepseek": 20,
+    "claude": 0,
+    "gemini": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "video conferencing",
+        "evidence": "AI responses frequently use this term while the site does not prominently feature it.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "collaboration tools",
+        "evidence": "The site does not emphasize this term, which is commonly used in AI responses.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "remote work solutions",
+        "evidence": "Despite targeting remote teams, this terminology is not utilized on the site.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "integrations",
+        "evidence": "AI responses reference this feature while it's not highlighted on the site.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "No homepage text available.",
+        "site_context": "The homepage lacks content explaining services.",
+        "ai_uses": "AI mentions features of video and collaboration tools.",
+        "ai_context": "AI provides clear descriptions of similar services that the site doesn't articulate."
+      },
+      {
+        "site_says": "No homepage text available.",
+        "site_context": "Absence of targeted keywords.",
+        "ai_uses": "AI focuses on terms like 'remote teams' and 'small business owners'.",
+        "ai_context": "AI uses audience-specific language that the site does not."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Remote Teams",
+          "note": "Responses from this segment directly involve using the platform."
+        },
+        {
+          "name": "Small Business Owners",
+          "note": "This segment uses the platform for business meetings."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Enterprise Clients",
+          "note": "Competitors like Zoom and Microsoft Teams target larger enterprises effectively with 62.5% and 52.5% visibility."
+        },
+        {
+          "name": "Individual Users",
+          "note": "There is potential to attract solo users, not primarily addressed by current competitors."
+        },
+        {
+          "name": "Educational Institutions",
+          "note": "AI responses indicate a growing trend in educational use cases not specifically targeted."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "High presence in AI search results at 85.0%.",
+        "Strong performance against main competitors such as Zoom and Microsoft Teams.",
+        "Unique positioning with focus on remote collaboration tools."
+      ],
+      "opportunities": [
+        "Expand content to include detailed keywords around integrations and video conferencing.",
+        "Create targeted marketing campaigns for enterprise and educational segments.",
+        "Enhance AI-driven SEO strategies by incorporating terms frequently mentioned in AI responses."
+      ],
+      "gaps": [
+        "Limited visibility in AI search compared to competitors like Zoom and Microsoft Teams.",
+        "Low engagement for terms like 'collaboration tools' and 'video conferencing'.",
+        "Absence of homepage content may hinder overall search visibility."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop homepage content that defines and showcases video conferencing tools.",
+        "Create a dedicated page for remote work solutions and their benefits.",
+        "Implement a blog focusing on collaboration tools and case studies.",
+        "Optimize existing content for keywords like 'integrations' and 'remote teams'.",
+        "Highlight unique features and differentiate from competitors."
+      ],
+      "link_building": [
+        "Establish partnerships with educational institutions for backlinks.",
+        "Engage in guest blogging on relevant tech and business sites to improve domain authority.",
+        "Create case studies that can be featured on industry websites for high-quality links.",
+        "Encourage user-generated content and testimonials that can be linked back.",
+        "Collaborate with influencers in the remote work domain for visibility."
+      ],
+      "quick_wins": [
+        "Update existing content to reflect commonly used terms in AI.",
+        "Utilize social media to engage with remote teams and small business owners directly.",
+        "Launch a survey to gather user feedback on desired features.",
+        "Create introductory guides for first-time users to increase engagement.",
+        "Run a targeted campaign to promote specific features in high-demand sectors."
+      ]
+    }
+  }
+}
