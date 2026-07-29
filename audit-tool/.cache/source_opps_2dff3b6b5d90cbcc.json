@@ -1,0 +1,82 @@
+[
+  {
+    "name": "techcrunch.com",
+    "domain": "techcrunch.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] TechCrunch covers innovative tools and services in the tech space, providing a significant platform for Dmeet to showcase its unique meeting features and competitive advantages against established players."
+  },
+  {
+    "name": "venturebeat.com",
+    "domain": "venturebeat.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] VentureBeat focuses on emerging technologies and startups. Dmeet can gain exposure here by highlighting its differentiation in the competitive video conferencing landscape."
+  },
+  {
+    "name": "gartner.com",
+    "domain": "gartner.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Gartner is a leading research and advisory company that offers insights into technology trends. Inclusion in one of their reports can enhance Dmeet's credibility among enterprise clients comparing meeting tools."
+  },
+  {
+    "name": "forrester.com",
+    "domain": "forrester.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Forrester provides in-depth analysis of various software tools and platforms. A feature on Dmeet would benefit in demonstrating its features against competitors like Zoom and Cisco WebEx."
+  },
+  {
+    "name": "pcmag.com",
+    "domain": "pcmag.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] PCMag provides detailed reviews and feature comparisons of tech products, making it an ideal platform for Dmeet to be compared favorably against competitors."
+  },
+  {
+    "name": "cnet.com",
+    "domain": "cnet.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] CNET is known for technology news and product reviews. An article featuring Dmeet would help reach a broader audience and potentially highlight its unique features."
+  },
+  {
+    "name": "zdnet.com",
+    "domain": "zdnet.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] ZDNet focuses on business technology news. Coverage of Dmeet would be beneficial to target business professionals considering different meeting tools."
+  },
+  {
+    "name": "g2.com",
+    "domain": "g2.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] G2 is a peer-to-peer review site for business software. A presence on G2 can help Dmeet gather user feedback and improve visibility compared to competitors like Google Meet and Jitsi."
+  },
+  {
+    "name": "slack.com",
+    "domain": "slack.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] The Slack community often explores integrations and tools that can enhance the user experience. Dmeet's features could be highlighted for potential integrations with collaboration tools."
+  },
+  {
+    "name": "twilio.com",
+    "domain": "twilio.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Twilio's community focuses on communication tools and applications. As a player in the meeting space, showcasing how Dmeet integrates with communication APIs could attract attention from developers."
+  }
+]
