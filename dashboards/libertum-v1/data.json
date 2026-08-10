@@ -38,125 +38,115 @@
       "competitors": [
         {
           "name": "realt",
-          "appearance": 75.0,
-          "rank": 16.2,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 75.0,
+          "avg_rank": 16.2,
+          "is_own": false
         },
         {
           "name": "fractional",
-          "appearance": 67.5,
-          "rank": 9.11,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 67.5,
+          "avg_rank": 9.11,
+          "is_own": false
         },
         {
           "name": "propy",
-          "appearance": 37.5,
-          "rank": 18.47,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 37.5,
+          "avg_rank": 18.47,
+          "is_own": false
         },
         {
           "name": "securitize",
-          "appearance": 25.0,
-          "rank": 23.5,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 23.5,
+          "is_own": false
         },
         {
           "name": "harbor",
-          "appearance": 20.0,
-          "rank": 25.88,
           "providers": [
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 25.88,
+          "is_own": false
         },
         {
           "name": "polygon",
-          "appearance": 17.5,
-          "rank": 14.43,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 14.43,
+          "is_own": false
         },
         {
           "name": "solidblock",
-          "appearance": 12.5,
-          "rank": 21.2,
           "providers": [
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 21.2,
+          "is_own": false
         },
         {
           "name": "openzeppelin",
-          "appearance": 12.5,
-          "rank": 16.2,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 16.2,
+          "is_own": false
         },
         {
           "name": "solana",
-          "appearance": 12.5,
-          "rank": 22.6,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 22.6,
+          "is_own": false
         },
         {
           "name": "polymath",
-          "appearance": 12.5,
-          "rank": 20.6,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 20.6,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -175,125 +165,115 @@
       "competitors": [
         {
           "name": "fractional",
-          "appearance": 25.0,
-          "rank": 10.3,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 10.3,
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 25.0,
-          "rank": 20.3,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 20.3,
+          "is_own": false
         },
         {
           "name": "compound",
-          "appearance": 22.5,
-          "rank": 20.0,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 22.5,
+          "avg_rank": 20.0,
+          "is_own": false
         },
         {
           "name": "solana",
-          "appearance": 20.0,
-          "rank": 11.75,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 11.75,
+          "is_own": false
         },
         {
           "name": "polygon",
-          "appearance": 17.5,
-          "rank": 17.86,
           "providers": [
             "Gemini",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 17.86,
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 17.5,
-          "rank": 18.86,
           "providers": [
             "Gemini",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 18.86,
+          "is_own": false
         },
         {
           "name": "uniswap",
-          "appearance": 12.5,
-          "rank": 26.6,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 26.6,
+          "is_own": false
         },
         {
           "name": "polkadot",
-          "appearance": 12.5,
-          "rank": 19.8,
           "providers": [
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 19.8,
+          "is_own": false
         },
         {
           "name": "realt",
-          "appearance": 12.5,
-          "rank": 18.0,
           "providers": [
             "OpenAI",
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 18.0,
+          "is_own": false
         },
         {
           "name": "opensea",
-          "appearance": 10.0,
-          "rank": 14.0,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 14.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,

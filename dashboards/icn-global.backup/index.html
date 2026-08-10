@@ -319,10 +319,10 @@
             font-weight: 600;
             text-transform: uppercase;
         }
-        .provider-badge.gemini { background: #67FF67; color: #0F0F0F; }
-        .provider-badge.claude { background: #3D6944; color: #DEDCD7; }
-        .provider-badge.openai-search, .provider-badge.openai { background: #C9CDD2; color: #0F0F0F; }
-        .provider-badge.deepseek { background: #C9CDD2; color: #0F0F0F; }
+         .provider-badge.gemini { background: #f59e0b; color: #0F0F0F; }
+         .provider-badge.claude { background: #3D6944; color: #DEDCD7; }
+         .provider-badge.openai-search, .provider-badge.openai { background: #ef4444; color: #FFFFFF; }
+         .provider-badge.deepseek { background: #67FF67; color: #0F0F0F; }
 
         .rank-badge {
             display: inline-block;
@@ -632,9 +632,9 @@
                 </div>
             </div>
             <div class="hero-details">
-                <div class="score-status">
+                <div class="score-status" id="scoreStatusBadge">
                     <span>⚠️</span>
-                    <span>Zero AI Visibility</span>
+                    <span id="scoreStatusText">Zero AI Visibility</span>
                 </div>
                 <div class="score-comparison" id="heroComparison"></div>
             </div>
@@ -653,9 +653,9 @@
                 <div class="sub">Across all segments</div>
             </div>
             <div class="stat-card">
-                <div class="label">Icn Appearance</div>
-                <div class="value brand">0%</div>
-                <div class="sub">Site NOT mentioned in AI responses</div>
+                <div class="label" id="appearanceLabel">Icn Appearance</div>
+                <div class="value brand" id="appearanceValue">0%</div>
+                <div class="sub" id="appearanceSub">Site NOT mentioned in AI responses</div>
             </div>
         </div>
 
@@ -910,7 +910,7 @@
 
     <script>
         // ============ DATA (injected by renderer) ============
-        const DASHBOARD_DATA = {"site":{"name":"Icn","url":"https://icn.ai","domain":"icn.ai","slug":"icn-global","analysis_id":"openrouter-icn-global","site_uuid":"openrouter-batch","generated_at":"May 07, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":0,"score_status":"Zero AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":36,"own_mentioned":false,"own_appearance_pct":0,"own_appearance_note":"Site NOT mentioned in AI responses","hero_comparison":[{"value":"0%","label":"Icn Visibility","trend":"down"},{"value":"17.5%","label":"vast (Leader)","trend":""},{"value":"5.0%","label":"monero (#2)","trend":""}]},"customer_types":[{"name":"Enterprise AI Integration","uuid":null,"competitors":[{"name":"monero","appearance":5.0,"rank":12.5,"providers":["gemini"],"isOwn":false,"url":null},{"name":"zcash","appearance":5.0,"rank":12.5,"providers":["gemini"],"isOwn":false,"url":null},{"name":"secret network (scrt)","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"singularitynet","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"ibm watson openscale","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"oasis network","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"fiddler ai","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"pivx","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"dash (dash)","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"railgun","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"gemini":0},"has_distinct_competitor_data":true,"data_note":null},{"name":"Research & Academic Innovation","uuid":null,"competitors":[{"name":"vast","appearance":17.5,"rank":10.67,"providers":["deepseek","gemini","openai"],"isOwn":false,"url":null},{"name":"dash","appearance":2.5,"rank":0,"providers":["deepseek"],"isOwn":false,"url":null},{"name":"modal","appearance":2.5,"rank":12.0,"providers":["claude"],"isOwn":false,"url":null},{"name":"hugging face","appearance":2.5,"rank":0,"providers":["openai"],"isOwn":false,"url":null},{"name":"secret network (scrt)","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"singularitynet","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"ibm watson openscale","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"oasis network","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"fiddler ai","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null},{"name":"pivx","appearance":0,"rank":0,"providers":[],"isOwn":false,"url":null}],"total_responses":10,"provider_order_summary":{"deepseek":0,"gemini":1,"openai":2,"claude":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"data","count":166},{"text":"name","count":115},{"text":"response","count":60},{"text":"privacy","count":57},{"text":"learning","count":54},{"text":"systems","count":51},{"text":"analysis","count":49},{"text":"machine","count":47},{"text":"machine learning","count":47},{"text":"processing","count":45}],"sources":[{"name":"example.com","url":"https://example.com","mentions":1},{"name":"microsoft","url":"https://microsoft","mentions":1},{"name":"cloud.google","url":"https://cloud.google","mentions":1},{"name":"aws.amazon","url":"https://aws.amazon","mentions":1},{"name":"developer.nvidia","url":"https://developer.nvidia","mentions":1}],"keyword_opportunities":[{"text":"How can our machine learning infrastructure handle 500 concurrent predictive models?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What performance benchmarks distinguish your computational intelligence platform from competitors?","type":"missing","persona":"Technical Implementation Lead"},{"text":"Can your system integrate seamlessly with our existing enterprise data architectures?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What security protocols protect sensitive algorithmic intellectual property?","type":"missing","persona":"Technical Implementation Lead"},{"text":"How quickly can your platform adapt to emerging machine learning requirements?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What unique computational approaches can accelerate our research and development cycles?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How do intelligent systems reduce operational complexity across multiple business units?","type":"missing","persona":"Chief Innovation Officer"},{"text":"Can your solution dynamically scale across global enterprise environments?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How can advanced intelligence platforms support cross-disciplinary research methodologies?","type":"missing","persona":"Research Laboratory Director"},{"text":"What computational capabilities enable more sophisticated scientific modeling?","type":"missing","persona":"Research Laboratory Director"},{"text":"What machine learning architectures support reproducible research protocols?","type":"missing","persona":"Research Laboratory Director"},{"text":"How do intelligent systems accelerate academic discovery processes?","type":"missing","persona":"Research Laboratory Director"},{"text":"What computational frameworks support sophisticated statistical analysis?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"How can intelligent systems help validate complex research hypotheses?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"What training resources accompany your advanced computational platform?","type":"missing","persona":"Graduate Research Coordinator"}],"source_opportunities":[{"name":"example.com","domain":"example.com","type":"competitor","mentions":1},{"name":"microsoft","domain":"microsoft","type":"competitor","mentions":1},{"name":"cloud.google","domain":"cloud.google","type":"competitor","mentions":1},{"name":"aws.amazon","domain":"aws.amazon","type":"competitor","mentions":1},{"name":"developer.nvidia","domain":"developer.nvidia","type":"competitor","mentions":1}],"provider_coverage":{"gemini":50,"deepseek":14,"openai":14,"claude":7},"insights":{"terminology_gap":[{"term":"ICN","evidence":"No AI recognition of site brand","priority":"HIGH"},{"term":"Privacy Systems","evidence":"Limited context in AI results","priority":"HIGH"},{"term":"Data Processing Framework","evidence":"Vague mentions in AI responses","priority":"MEDIUM"},{"term":"Machine Learning Integration","evidence":"Generic competitive landscape","priority":"MEDIUM"},{"term":"Enterprise AI Solution","evidence":"Minimal specialized positioning","priority":"LOW"},{"term":"Research Innovation Platform","evidence":"Weak academic technology signals","priority":"LOW"}],"language_gap":[{"site_says":"Advanced AI Integration","site_context":"Assumed technical positioning","ai_uses":"Generic data processing capabilities","ai_context":"Commodity technology description"},{"site_says":"Privacy-Centric Systems","site_context":"Security focus","ai_uses":"Basic data protection mentions","ai_context":"Standard compliance language"},{"site_says":"Enterprise Solution","site_context":"High-end market positioning","ai_uses":"Competitive technology landscape","ai_context":"Multiple vendor comparisons"}],"audience_segments":{"addressed":[{"name":"Enterprise AI Integration","note":"10/20 response coverage"},{"name":"Research & Academic Innovators","note":"10/20 response coverage"}],"opportunity_gap":[{"name":"Blockchain Privacy Sector","note":"17.5% market share via Vast competitor"},{"name":"Cryptography Researchers","note":"5% market presence via Monero/Zcash"},{"name":"Machine Learning Platforms","note":"Weak positioning against Modal"},{"name":"Decentralized AI Networks","note":"Zero visibility in SingularityNet space"}]},"position":{"strengths":["Privacy-oriented technology framework","Multi-segment technology approach","Complex data processing capabilities","Enterprise and academic market targeting"],"opportunities":["Expand blockchain privacy narrative","Create comparative technology content","Develop specialized research positioning","Target emerging AI integration markets"],"gaps":["Lack of clear AI engine recognition","Weak competitive differentiation","Missing detailed technical positioning","No prominent thought leadership content"]},"action_items":{"content_priorities":["Develop 'ICN vs Competitor' technical deep-dive pages","Create comprehensive privacy technology whitepaper","Produce machine learning integration case studies","Generate research-oriented technical blog series","Build comprehensive AI systems comparison guide"],"link_building":["Guest post on cryptography and privacy platforms","Engage with academic research publication networks","Collaborate with blockchain technology journals","Create linkable research methodology content","Develop technical webinar cross-promotion strategy"],"quick_wins":["Update meta descriptions for AI search optimization","Create keyword-rich technical landing pages","Implement schema markup for research content","Develop targeted social media technical snippets","Optimize homepage for AI engine discovery"]}}};
+        const DASHBOARD_DATA = {"site":{"name":"Icn","url":"https://icn.ai","domain":"icn.ai","slug":"icn-global","analysis_id":"openrouter-icn-global","site_uuid":"openrouter-batch","generated_at":"May 07, 2026","font_base_url":"https://butterflyio.github.io/promptraise"},"summary":{"score":0,"score_status":"Zero AI Visibility","total_responses":80,"responses_per_type":40,"unique_competitors":36,"own_mentioned":false,"own_appearance_pct":0,"own_appearance_note":"Site NOT mentioned in AI responses","hero_comparison":[{"value":"0%","label":"Icn Visibility","trend":"down"},{"value":"17.5%","label":"vast (Leader)","trend":""},{"value":"5.0%","label":"monero (#2)","trend":""}]},"customer_types":[{"name":"Enterprise AI Integration","uuid":null,"competitors":[{"name":"monero","providers":["gemini"],"appearance_percentage":5.0,"avg_rank":12.5,"is_own":false},{"name":"zcash","providers":["gemini"],"appearance_percentage":5.0,"avg_rank":12.5,"is_own":false},{"name":"secret network (scrt)","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"singularitynet","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"ibm watson openscale","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"oasis network","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"fiddler ai","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"pivx","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"dash (dash)","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"railgun","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false}],"total_responses":10,"provider_order_summary":{"gemini":0},"has_distinct_competitor_data":true,"data_note":null},{"name":"Research & Academic Innovation","uuid":null,"competitors":[{"name":"vast","providers":["deepseek","gemini","openai"],"appearance_percentage":17.5,"avg_rank":10.67,"is_own":false},{"name":"dash","providers":["deepseek"],"appearance_percentage":2.5,"avg_rank":0,"is_own":false},{"name":"modal","providers":["claude"],"appearance_percentage":2.5,"avg_rank":12.0,"is_own":false},{"name":"hugging face","providers":["openai"],"appearance_percentage":2.5,"avg_rank":0,"is_own":false},{"name":"secret network (scrt)","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"singularitynet","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"ibm watson openscale","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"oasis network","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"fiddler ai","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false},{"name":"pivx","providers":[],"appearance_percentage":0,"avg_rank":0,"is_own":false}],"total_responses":10,"provider_order_summary":{"deepseek":0,"gemini":1,"openai":2,"claude":3},"has_distinct_competitor_data":true,"data_note":null}],"keywords":[{"text":"data","count":166},{"text":"name","count":115},{"text":"response","count":60},{"text":"privacy","count":57},{"text":"learning","count":54},{"text":"systems","count":51},{"text":"analysis","count":49},{"text":"machine","count":47},{"text":"machine learning","count":47},{"text":"processing","count":45}],"sources":[{"name":"example.com","url":"https://example.com","mentions":1},{"name":"microsoft","url":"https://microsoft","mentions":1},{"name":"cloud.google","url":"https://cloud.google","mentions":1},{"name":"aws.amazon","url":"https://aws.amazon","mentions":1},{"name":"developer.nvidia","url":"https://developer.nvidia","mentions":1}],"keyword_opportunities":[{"text":"How can our machine learning infrastructure handle 500 concurrent predictive models?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What performance benchmarks distinguish your computational intelligence platform from competitors?","type":"missing","persona":"Technical Implementation Lead"},{"text":"Can your system integrate seamlessly with our existing enterprise data architectures?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What security protocols protect sensitive algorithmic intellectual property?","type":"missing","persona":"Technical Implementation Lead"},{"text":"How quickly can your platform adapt to emerging machine learning requirements?","type":"missing","persona":"Technical Implementation Lead"},{"text":"What unique computational approaches can accelerate our research and development cycles?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How do intelligent systems reduce operational complexity across multiple business units?","type":"missing","persona":"Chief Innovation Officer"},{"text":"Can your solution dynamically scale across global enterprise environments?","type":"missing","persona":"Chief Innovation Officer"},{"text":"How can advanced intelligence platforms support cross-disciplinary research methodologies?","type":"missing","persona":"Research Laboratory Director"},{"text":"What computational capabilities enable more sophisticated scientific modeling?","type":"missing","persona":"Research Laboratory Director"},{"text":"What machine learning architectures support reproducible research protocols?","type":"missing","persona":"Research Laboratory Director"},{"text":"How do intelligent systems accelerate academic discovery processes?","type":"missing","persona":"Research Laboratory Director"},{"text":"What computational frameworks support sophisticated statistical analysis?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"How can intelligent systems help validate complex research hypotheses?","type":"missing","persona":"Graduate Research Coordinator"},{"text":"What training resources accompany your advanced computational platform?","type":"missing","persona":"Graduate Research Coordinator"}],"source_opportunities":[{"name":"example.com","domain":"example.com","type":"competitor","mentions":1},{"name":"microsoft","domain":"microsoft","type":"competitor","mentions":1},{"name":"cloud.google","domain":"cloud.google","type":"competitor","mentions":1},{"name":"aws.amazon","domain":"aws.amazon","type":"competitor","mentions":1},{"name":"developer.nvidia","domain":"developer.nvidia","type":"competitor","mentions":1}],"provider_coverage":{"gemini":50,"deepseek":14,"openai":14,"claude":7},"insights":{"terminology_gap":[{"term":"ICN","evidence":"No AI recognition of site brand","priority":"HIGH"},{"term":"Privacy Systems","evidence":"Limited context in AI results","priority":"HIGH"},{"term":"Data Processing Framework","evidence":"Vague mentions in AI responses","priority":"MEDIUM"},{"term":"Machine Learning Integration","evidence":"Generic competitive landscape","priority":"MEDIUM"},{"term":"Enterprise AI Solution","evidence":"Minimal specialized positioning","priority":"LOW"},{"term":"Research Innovation Platform","evidence":"Weak academic technology signals","priority":"LOW"}],"language_gap":[{"site_says":"Advanced AI Integration","site_context":"Assumed technical positioning","ai_uses":"Generic data processing capabilities","ai_context":"Commodity technology description"},{"site_says":"Privacy-Centric Systems","site_context":"Security focus","ai_uses":"Basic data protection mentions","ai_context":"Standard compliance language"},{"site_says":"Enterprise Solution","site_context":"High-end market positioning","ai_uses":"Competitive technology landscape","ai_context":"Multiple vendor comparisons"}],"audience_segments":{"addressed":[{"name":"Enterprise AI Integration","note":"10/20 response coverage"},{"name":"Research & Academic Innovators","note":"10/20 response coverage"}],"opportunity_gap":[{"name":"Blockchain Privacy Sector","note":"17.5% market share via Vast competitor"},{"name":"Cryptography Researchers","note":"5% market presence via Monero/Zcash"},{"name":"Machine Learning Platforms","note":"Weak positioning against Modal"},{"name":"Decentralized AI Networks","note":"Zero visibility in SingularityNet space"}]},"position":{"strengths":["Privacy-oriented technology framework","Multi-segment technology approach","Complex data processing capabilities","Enterprise and academic market targeting"],"opportunities":["Expand blockchain privacy narrative","Create comparative technology content","Develop specialized research positioning","Target emerging AI integration markets"],"gaps":["Lack of clear AI engine recognition","Weak competitive differentiation","Missing detailed technical positioning","No prominent thought leadership content"]},"action_items":{"content_priorities":["Develop 'ICN vs Competitor' technical deep-dive pages","Create comprehensive privacy technology whitepaper","Produce machine learning integration case studies","Generate research-oriented technical blog series","Build comprehensive AI systems comparison guide"],"link_building":["Guest post on cryptography and privacy platforms","Engage with academic research publication networks","Collaborate with blockchain technology journals","Create linkable research methodology content","Develop technical webinar cross-promotion strategy"],"quick_wins":["Update meta descriptions for AI search optimization","Create keyword-rich technical landing pages","Implement schema markup for research content","Develop targeted social media technical snippets","Optimize homepage for AI engine discovery"]}}};
 
         // ============ THEME ============
         function toggleTheme() {
@@ -1012,43 +1012,59 @@
 
         function renderCompetitorTable(customerType, tableId) {
             const tbody = document.getElementById(tableId);
-            tbody.innerHTML = customerType.competitors.map((c, idx) => `
+            if (!customerType.competitors || customerType.competitors.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="4" style="text-align: center; color: #999; padding: 2rem;">No competitor data</td></tr>';
+                return;
+            }
+            tbody.innerHTML = customerType.competitors.map((c, idx) => {
+                const appearance = c.appearance_percentage || c.appearance || 0;
+                const rank = c.avg_rank !== undefined && c.avg_rank !== null
+                    ? c.avg_rank
+                    : (c.rank !== undefined && c.rank !== null ? c.rank : null);
+                const rankValue = rank !== null ? Number(rank).toFixed(1) : 'N/A';
+                const rankClass = rank !== null
+                    ? (rank <= 1.5 ? 'rank-1' : rank <= 2.5 ? 'rank-2' : rank <= 3.5 ? 'rank-3' : 'rank-other')
+                    : 'rank-other';
+                const isOwn = c.is_own || c.isOwn || false;
+                const providers = c.providers || [];
+                return `
                 <tr>
                     <td>
                         <div class="competitor-name">
-                            <div class="competitor-logo" style="background: ${c.isOwn
+                            <div class="competitor-logo" style="background: ${isOwn
                                 ? 'linear-gradient(135deg, var(--primary), var(--brand-green))'
                                 : 'var(--bg-dark)'}">
                                 ${(c.name || '?').charAt(0)}
                             </div>
                             <div>
                                 ${c.name}
-                                ${c.isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
+                                ${isOwn ? '<span class="tag tag-own" style="margin-left: 0.5rem;">YOU</span>' : ''}
                             </div>
                         </div>
                     </td>
                     <td>
                         <div style="display: flex; align-items: center; gap: 0.75rem;">
                             <div class="bar" style="width: 100px;">
-                                <div class="bar-fill" style="width: ${c.appearance}%; background: ${c.isOwn
+                                <div class="bar-fill" style="width: ${appearance}%; background: ${isOwn
                                     ? 'linear-gradient(90deg, var(--primary), var(--brand-green))'
                                     : getColorClass(c.name, idx)}"></div>
                             </div>
-                            <span style="min-width: 45px;">${c.appearance}%</span>
+                            <span style="min-width: 45px;">${appearance.toFixed(1)}%</span>
                         </div>
                     </td>
                     <td>
-                        <span class="rank-badge ${c.rank <= 1.5 ? 'rank-1' : c.rank <= 2.5 ? 'rank-2' : c.rank <= 3.5 ? 'rank-3' : 'rank-other'}">
-                            ${Number(c.rank).toFixed(1)}
+                        <span class="rank-badge ${rankClass}">
+                            ${rankValue}
                         </span>
                     </td>
                     <td>
                         <div class="provider-badges">
-                            ${(c.providers || []).map(p => `<span class="provider-badge ${p}">${p.replace('-search', '')}</span>`).join('')}
+                            ${providers.map(p => `<span class="provider-badge ${p.toLowerCase()}">${p.replace('-search', '')}</span>`).join('')}
                         </div>
                     </td>
                 </tr>
-            `).join('');
+            `;
+            }).join('');
         }
 
         // ============ KEYWORDS SLIDER ============
@@ -1249,8 +1265,9 @@
             const type2 = DASHBOARD_DATA.customer_types[1];
 
             function buildSovChart(canvasId, customerType, color) {
+                if (!customerType.competitors || customerType.competitors.length === 0) return;
                 const labels = customerType.competitors.slice(0, 10).map(c => c.name);
-                const data = customerType.competitors.slice(0, 10).map(c => c.appearance);
+                const data = customerType.competitors.slice(0, 10).map(c => c.appearance_percentage || c.appearance || 0);
                 const canvas = document.getElementById(canvasId);
                 canvas.height = 320;
                 new Chart(canvas, {
@@ -1275,8 +1292,20 @@
             }
 
             function buildRankChart(canvasId, customerType) {
-                const labels = customerType.competitors.slice(0, 10).map(c => c.name);
-                const data = customerType.competitors.slice(0, 10).map(c => c.rank);
+                if (!customerType.competitors || customerType.competitors.length === 0) return;
+                
+                // Filter: only include competitors with actual rank values
+                const competitorsWithRank = customerType.competitors
+                    .filter(c => {
+                        const rank = c.avg_rank !== undefined ? c.avg_rank : c.rank;
+                        return rank !== undefined && rank !== null && rank > 0;
+                    })
+                    .slice(0, 10);
+                
+                if (competitorsWithRank.length === 0) return; // No data to display
+                
+                const labels = competitorsWithRank.map(c => c.name);
+                const data = competitorsWithRank.map(c => c.avg_rank !== undefined ? c.avg_rank : (c.rank || 0));
                 const canvas = document.getElementById(canvasId);
                 canvas.height = 320;
                 new Chart(canvas, {
@@ -1311,18 +1340,22 @@
             const providerLabels = Object.keys(providers);
             const providerValues = Object.values(providers);
             const providerColors = {
-                claude: '#3D6944',
-                gemini: '#67FF67',
-                openai: '#C9CDD2',
-                'openai-search': '#C9CDD2',
-                deepseek: '#C9CDD2'
+                'Claude': '#3D6944',           // Brand green (dark)
+                'DeepSeek': '#67FF67',        // Brand primary (bright)
+                'Gemini': '#f59e0b',          // Warning/amber
+                'OpenAI': '#ef4444',          // Danger/red
+                'claude': '#3D6944',
+                'deepseek': '#67FF67',
+                'gemini': '#f59e0b',
+                'openai': '#ef4444',
+                'openai-search': '#ef4444'
             };
-            const bgColors = providerLabels.map(l => providerColors[l] || '#94a3b8');
+            const bgColors = providerLabels.map(l => providerColors[l] || providerColors[l.toLowerCase()] || '#94a3b8');
 
             new Chart(document.getElementById('providerChart'), {
                 type: 'doughnut',
                 data: {
-                    labels: providerLabels.map(l => l.charAt(0).toUpperCase() + l.slice(1)),
+                    labels: providerLabels,
                     datasets: [{ data: providerValues, backgroundColor: bgColors, borderWidth: 0 }]
                 },
                 options: {
@@ -1335,8 +1368,8 @@
             document.getElementById('providerLegend').innerHTML = providerLabels.map((label, i) => `
                 <div class="provider-legend-item">
                     <div class="color" style="background: ${bgColors[i]};"></div>
-                    <div class="name">${label.charAt(0).toUpperCase() + label.slice(1).replace('-search', '')}</div>
-                    <div class="value">${providerValues[i]}%</div>
+                    <div class="name">${label}</div>
+                    <div class="value">${providerValues[i]} responses</div>
                 </div>
             `).join('');
         }
@@ -1384,6 +1417,38 @@
                 noteEl.style.display = 'block';
             }
         }
+
+        // Render dynamic score status
+        function renderScoreStatus() {
+            const s = DASHBOARD_DATA.summary;
+
+            const badge = document.getElementById('scoreStatusBadge');
+            const statusText = document.getElementById('scoreStatusText');
+            if (badge && statusText) {
+                statusText.textContent = s.score_status || 'Zero AI Visibility';
+                if (s.own_mentioned) {
+                    badge.style.background = 'rgba(16, 185, 129, 0.1)';
+                    badge.style.borderColor = 'rgba(16, 185, 129, 0.3)';
+                    badge.style.color = 'var(--success)';
+                    badge.querySelector('span:first-child').textContent = '✅';
+                } else {
+                    badge.style.background = 'rgba(239, 68, 68, 0.1)';
+                    badge.style.borderColor = 'rgba(239, 68, 68, 0.3)';
+                    badge.style.color = 'var(--danger)';
+                    badge.querySelector('span:first-child').textContent = '⚠️';
+                }
+            }
+
+            const label = document.getElementById('appearanceLabel');
+            if (label) label.textContent = (DASHBOARD_DATA.site.name || 'Brand') + ' Appearance';
+
+            const value = document.getElementById('appearanceValue');
+            if (value) value.textContent = (s.own_appearance_pct || 0) + '%';
+
+            const sub = document.getElementById('appearanceSub');
+            if (sub) sub.textContent = s.own_appearance_note || 'Site NOT mentioned in AI responses';
+        }
+        renderScoreStatus();
 
         // Animate score
         animateScore(DASHBOARD_DATA.summary.score || 0);

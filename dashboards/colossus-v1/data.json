@@ -38,131 +38,121 @@
       "competitors": [
         {
           "name": "coinbase",
-          "appearance": 57.5,
-          "rank": 17.74,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 57.5,
+          "avg_rank": 17.74,
+          "is_own": false
         },
         {
           "name": "binance",
-          "appearance": 30.0,
-          "rank": 18.42,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 30.0,
+          "avg_rank": 18.42,
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 30.0,
-          "rank": 14.0,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 30.0,
+          "avg_rank": 14.0,
+          "is_own": false
         },
         {
           "name": "uniswap",
-          "appearance": 27.5,
-          "rank": 17.91,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 27.5,
+          "avg_rank": 17.91,
+          "is_own": false
         },
         {
           "name": "compound",
-          "appearance": 25.0,
-          "rank": 15.8,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 15.8,
+          "is_own": false
         },
         {
           "name": "fireblocks",
-          "appearance": 25.0,
-          "rank": 15.7,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 15.7,
+          "is_own": false
         },
         {
           "name": "kraken",
-          "appearance": 20.0,
-          "rank": 17.88,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 17.88,
+          "is_own": false
         },
         {
           "name": "sushiswap",
-          "appearance": 20.0,
-          "rank": 17.75,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 17.75,
+          "is_own": false
         },
         {
           "name": "coinbase custody",
-          "appearance": 20.0,
-          "rank": 14.75,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 14.75,
+          "is_own": false
         },
         {
           "name": "chainalysis",
-          "appearance": 17.5,
-          "rank": 18.29,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 18.29,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -181,126 +171,116 @@
       "competitors": [
         {
           "name": "polygon",
-          "appearance": 25.0,
-          "rank": 14.1,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 14.1,
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 22.5,
-          "rank": 15.22,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 22.5,
+          "avg_rank": 15.22,
+          "is_own": false
         },
         {
           "name": "binance",
-          "appearance": 20.0,
-          "rank": 9.62,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 9.62,
+          "is_own": false
         },
         {
           "name": "polkadot",
-          "appearance": 15.0,
-          "rank": 13.83,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 13.83,
+          "is_own": false
         },
         {
           "name": "staking rewards",
-          "appearance": 15.0,
-          "rank": 12.17,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 12.17,
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 15.0,
-          "rank": 17.5,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 17.5,
+          "is_own": false
         },
         {
           "name": "coinbase",
-          "appearance": 15.0,
-          "rank": 14.0,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 14.0,
+          "is_own": false
         },
         {
           "name": "yearn finance",
-          "appearance": 15.0,
-          "rank": 12.5,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 12.5,
+          "is_own": false
         },
         {
           "name": "alchemy",
-          "appearance": 10.0,
-          "rank": 15.0,
           "providers": [
             "OpenAI",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 15.0,
+          "is_own": false
         },
         {
           "name": "consensys",
-          "appearance": 10.0,
-          "rank": 9.25,
           "providers": [
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 9.25,
+          "is_own": false
         }
       ],
       "total_responses": 10,

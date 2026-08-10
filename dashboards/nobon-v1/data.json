@@ -38,121 +38,111 @@
       "competitors": [
         {
           "name": "angellist",
-          "appearance": 20.0,
-          "rank": 17.0,
           "providers": [
             "Claude",
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 17.0,
+          "is_own": false
         },
         {
           "name": "seedinvest",
-          "appearance": 15.0,
-          "rank": 12.0,
           "providers": [
             "Claude",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 12.0,
+          "is_own": false
         },
         {
           "name": "republic",
-          "appearance": 15.0,
-          "rank": 19.33,
           "providers": [
             "Claude",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 19.33,
+          "is_own": false
         },
         {
           "name": "securitize",
-          "appearance": 12.5,
-          "rank": 14.0,
           "providers": [
             "Claude",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 14.0,
+          "is_own": false
         },
         {
           "name": "salesforce",
-          "appearance": 12.5,
-          "rank": 16.2,
           "providers": [
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 16.2,
+          "is_own": false
         },
         {
           "name": "crunchbase",
-          "appearance": 10.0,
-          "rank": 18.25,
           "providers": [
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 18.25,
+          "is_own": false
         },
         {
           "name": "hubspot",
-          "appearance": 10.0,
-          "rank": 16.5,
           "providers": [
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 16.5,
+          "is_own": false
         },
         {
           "name": "polymath",
-          "appearance": 7.5,
-          "rank": 10.67,
           "providers": [
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 10.67,
+          "is_own": false
         },
         {
           "name": "DocuSign",
-          "appearance": 7.5,
-          "rank": 17.33,
           "providers": [
             "Claude",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 17.33,
+          "is_own": false
         },
         {
           "name": "docusign",
-          "appearance": 7.5,
-          "rank": 17.33,
           "providers": [
             "Claude",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 17.33,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -171,121 +161,111 @@
       "competitors": [
         {
           "name": "chainalysis",
-          "appearance": 15.0,
-          "rank": 12.67,
           "providers": [
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 12.67,
+          "is_own": false
         },
         {
           "name": "carta",
-          "appearance": 12.5,
-          "rank": 16.0,
           "providers": [
             "Claude",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 16.0,
+          "is_own": false
         },
         {
           "name": "hubspot",
-          "appearance": 10.0,
-          "rank": 26.75,
           "providers": [
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 26.75,
+          "is_own": false
         },
         {
           "name": "salesforce",
-          "appearance": 10.0,
-          "rank": 25.5,
           "providers": [
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 25.5,
+          "is_own": false
         },
         {
           "name": "crunchbase",
-          "appearance": 10.0,
-          "rank": 14.75,
           "providers": [
             "Claude",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 14.75,
+          "is_own": false
         },
         {
           "name": "syndicate",
-          "appearance": 7.5,
-          "rank": 12.33,
           "providers": [
             "Claude",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "is_own": false
         },
         {
           "name": "DocuSign",
-          "appearance": 7.5,
-          "rank": 12.33,
           "providers": [
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "is_own": false
         },
         {
           "name": "docusign",
-          "appearance": 7.5,
-          "rank": 12.33,
           "providers": [
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 12.33,
+          "is_own": false
         },
         {
           "name": "elliptic",
-          "appearance": 7.5,
-          "rank": 14.0,
           "providers": [
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 14.0,
+          "is_own": false
         },
         {
           "name": "ciphertrace",
-          "appearance": 7.5,
-          "rank": 15.0,
           "providers": [
             "DeepSeek",
             "OpenAI",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,

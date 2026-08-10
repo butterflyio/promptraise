@@ -43,124 +43,114 @@
       "competitors": [
         {
           "name": "realt",
-          "appearance": 62.5,
-          "rank": 5.79,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 62.5,
+          "avg_rank": 5.79,
+          "is_own": false
         },
         {
           "name": "centrifuge",
-          "appearance": 27.5,
-          "rank": 7.6,
           "providers": [
             "Claude",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 27.5,
+          "avg_rank": 7.6,
+          "is_own": false
         },
         {
           "name": "goldfinch",
-          "appearance": 15.0,
-          "rank": 8.0,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 8.0,
+          "is_own": false
         },
         {
           "name": "filecoin",
-          "appearance": 12.5,
-          "rank": 9.0,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 9.0,
+          "is_own": false
         },
         {
           "name": "helium",
-          "appearance": 12.5,
-          "rank": 3.4,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 3.4,
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 10.0,
-          "rank": 13.5,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 13.5,
+          "is_own": false
         },
         {
           "name": "render",
-          "appearance": 7.5,
-          "rank": 7.5,
           "providers": [
             "Claude",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 7.5,
+          "is_own": false
         },
         {
           "name": "circle",
-          "appearance": 7.5,
-          "rank": 6.0,
           "providers": [
             "Claude",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 6.0,
+          "is_own": false
         },
         {
           "name": "arweave",
-          "appearance": 5.0,
-          "rank": 6.0,
           "providers": [
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 6.0,
+          "is_own": false
         },
         {
           "name": "binance",
-          "appearance": 5.0,
-          "rank": 8.0,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 8.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -179,125 +169,115 @@
       "competitors": [
         {
           "name": "helium",
-          "appearance": 42.5,
-          "rank": 3.81,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 42.5,
+          "avg_rank": 3.81,
+          "is_own": false
         },
         {
           "name": "filecoin",
-          "appearance": 25.0,
-          "rank": 8.2,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 8.2,
+          "is_own": false
         },
         {
           "name": "render",
-          "appearance": 22.5,
-          "rank": 9.0,
           "providers": [
             "Claude",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 22.5,
+          "avg_rank": 9.0,
+          "is_own": false
         },
         {
           "name": "coinbase",
-          "appearance": 17.5,
-          "rank": 5.0,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 5.0,
+          "is_own": false
         },
         {
           "name": "binance",
-          "appearance": 15.0,
-          "rank": 9.0,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 9.0,
+          "is_own": false
         },
         {
           "name": "realt",
-          "appearance": 12.5,
-          "rank": 7.4,
           "providers": [
             "Claude",
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 7.4,
+          "is_own": false
         },
         {
           "name": "chainlink",
-          "appearance": 12.5,
-          "rank": 6.25,
           "providers": [
             "Claude",
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 6.25,
+          "is_own": false
         },
         {
           "name": "dimo",
-          "appearance": 10.0,
-          "rank": 13.0,
           "providers": [
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 13.0,
+          "is_own": false
         },
         {
           "name": "centrifuge",
-          "appearance": 7.5,
-          "rank": 10.5,
           "providers": [
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 10.5,
+          "is_own": false
         },
         {
           "name": "hivemapper",
-          "appearance": 7.5,
-          "rank": 5.0,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 5.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,

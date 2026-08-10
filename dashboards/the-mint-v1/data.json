@@ -43,124 +43,114 @@
       "competitors": [
         {
           "name": "tether",
-          "appearance": 15.0,
-          "rank": 16.5,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 16.5,
+          "is_own": false
         },
         {
           "name": "tether gold",
-          "appearance": 12.5,
-          "rank": 16.8,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 16.8,
+          "is_own": false
         },
         {
           "name": "paxos",
-          "appearance": 10.0,
-          "rank": 13.0,
           "providers": [
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 13.0,
+          "is_own": false
         },
         {
           "name": "digix",
-          "appearance": 10.0,
-          "rank": 20.25,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 20.25,
+          "is_own": false
         },
         {
           "name": "reserve",
-          "appearance": 10.0,
-          "rank": 11.25,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 11.25,
+          "is_own": false
         },
         {
           "name": "coinbase",
-          "appearance": 10.0,
-          "rank": 16.5,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 16.5,
+          "is_own": false
         },
         {
           "name": "rarible",
-          "appearance": 7.5,
-          "rank": 15.33,
           "providers": [
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.33,
+          "is_own": false
         },
         {
           "name": "opensea",
-          "appearance": 7.5,
-          "rank": 15.0,
           "providers": [
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.0,
+          "is_own": false
         },
         {
           "name": "kraken",
-          "appearance": 7.5,
-          "rank": 23.0,
           "providers": [
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 23.0,
+          "is_own": false
         },
         {
           "name": "digix (dgx)",
-          "appearance": 5.0,
-          "rank": 18.0,
           "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 18.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -179,122 +169,112 @@
       "competitors": [
         {
           "name": "coinbase",
-          "appearance": 41.7,
-          "rank": 14.53,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 41.7,
+          "avg_rank": 14.53,
+          "is_own": false
         },
         {
           "name": "opensea",
-          "appearance": 16.7,
-          "rank": 16.17,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 16.7,
+          "avg_rank": 16.17,
+          "is_own": false
         },
         {
           "name": "tether",
-          "appearance": 16.7,
-          "rank": 12.17,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 16.7,
+          "avg_rank": 12.17,
+          "is_own": false
         },
         {
           "name": "kraken",
-          "appearance": 16.7,
-          "rank": 10.5,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 16.7,
+          "avg_rank": 10.5,
+          "is_own": false
         },
         {
           "name": "rally",
-          "appearance": 13.9,
-          "rank": 11.4,
           "providers": [
             "Gemini",
             "OpenAI",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 13.9,
+          "avg_rank": 11.4,
+          "is_own": false
         },
         {
           "name": "paxos",
-          "appearance": 11.1,
-          "rank": 13.25,
           "providers": [
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 11.1,
+          "avg_rank": 13.25,
+          "is_own": false
         },
         {
           "name": "rarible",
-          "appearance": 11.1,
-          "rank": 11.75,
           "providers": [
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 11.1,
+          "avg_rank": 11.75,
+          "is_own": false
         },
         {
           "name": "grayscale",
-          "appearance": 11.1,
-          "rank": 16.25,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 11.1,
+          "avg_rank": 16.25,
+          "is_own": false
         },
         {
           "name": "gemini",
-          "appearance": 8.3,
-          "rank": 9.33,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 8.3,
+          "avg_rank": 9.33,
+          "is_own": false
         },
         {
           "name": "securitize",
-          "appearance": 8.3,
-          "rank": 19.67,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 8.3,
+          "avg_rank": 19.67,
+          "is_own": false
         }
       ],
       "total_responses": 9,

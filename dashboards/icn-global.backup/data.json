@@ -43,87 +43,77 @@
       "competitors": [
         {
           "name": "monero",
-          "appearance": 5.0,
-          "rank": 12.5,
           "providers": [
             "gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.5,
+          "is_own": false
         },
         {
           "name": "zcash",
-          "appearance": 5.0,
-          "rank": 12.5,
           "providers": [
             "gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.5,
+          "is_own": false
         },
         {
           "name": "secret network (scrt)",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "singularitynet",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "ibm watson openscale",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "oasis network",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "fiddler ai",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "pivx",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "dash (dash)",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "railgun",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -139,93 +129,83 @@
       "competitors": [
         {
           "name": "vast",
-          "appearance": 17.5,
-          "rank": 10.67,
           "providers": [
             "deepseek",
             "gemini",
             "openai"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 10.67,
+          "is_own": false
         },
         {
           "name": "dash",
-          "appearance": 2.5,
-          "rank": 0,
           "providers": [
             "deepseek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 2.5,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "modal",
-          "appearance": 2.5,
-          "rank": 12.0,
           "providers": [
             "claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 2.5,
+          "avg_rank": 12.0,
+          "is_own": false
         },
         {
           "name": "hugging face",
-          "appearance": 2.5,
-          "rank": 0,
           "providers": [
             "openai"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 2.5,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "secret network (scrt)",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "singularitynet",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "ibm watson openscale",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "oasis network",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "fiddler ai",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         },
         {
           "name": "pivx",
-          "appearance": 0,
-          "rank": 0,
           "providers": [],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 0,
+          "avg_rank": 0,
+          "is_own": false
         }
       ],
       "total_responses": 10,

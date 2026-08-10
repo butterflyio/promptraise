@@ -43,124 +43,114 @@
       "competitors": [
         {
           "name": "paris",
-          "appearance": 25.0,
-          "rank": 11.8,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 25.0,
+          "avg_rank": 11.8,
+          "is_own": false
         },
         {
           "name": "dent",
-          "appearance": 22.5,
-          "rank": 21.89,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 22.5,
+          "avg_rank": 21.89,
+          "is_own": false
         },
         {
           "name": "propy",
-          "appearance": 20.0,
-          "rank": 15.88,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 15.88,
+          "is_own": false
         },
         {
           "name": "ripple",
-          "appearance": 17.5,
-          "rank": 18.57,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 18.57,
+          "is_own": false
         },
         {
           "name": "stellar",
-          "appearance": 15.0,
-          "rank": 13.5,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 13.5,
+          "is_own": false
         },
         {
           "name": "solana",
-          "appearance": 12.5,
-          "rank": 17.2,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 17.2,
+          "is_own": false
         },
         {
           "name": "ethereum (eth)",
-          "appearance": 10.0,
-          "rank": 9.25,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 9.25,
+          "is_own": false
         },
         {
           "name": "ripple (xrp)",
-          "appearance": 10.0,
-          "rank": 13.25,
           "providers": [
             "Gemini",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 13.25,
+          "is_own": false
         },
         {
           "name": "realt",
-          "appearance": 10.0,
-          "rank": 17.25,
           "providers": [
             "Gemini",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 17.25,
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 7.5,
-          "rank": 18.0,
           "providers": [
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 18.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -179,128 +169,118 @@
       "competitors": [
         {
           "name": "ripple",
-          "appearance": 37.5,
-          "rank": 12.4,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 37.5,
+          "avg_rank": 12.4,
+          "is_own": false
         },
         {
           "name": "stellar",
-          "appearance": 30.0,
-          "rank": 15.0,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 30.0,
+          "avg_rank": 15.0,
+          "is_own": false
         },
         {
           "name": "paris",
-          "appearance": 22.5,
-          "rank": 12.0,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 22.5,
+          "avg_rank": 12.0,
+          "is_own": false
         },
         {
           "name": "ripple (xrp)",
-          "appearance": 20.0,
-          "rank": 12.12,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 12.12,
+          "is_own": false
         },
         {
           "name": "solana",
-          "appearance": 20.0,
-          "rank": 12.38,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 12.38,
+          "is_own": false
         },
         {
           "name": "aave",
-          "appearance": 15.0,
-          "rank": 17.5,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 17.5,
+          "is_own": false
         },
         {
           "name": "stellar (xlm)",
-          "appearance": 15.0,
-          "rank": 13.83,
           "providers": [
             "Gemini",
             "DeepSeek",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 13.83,
+          "is_own": false
         },
         {
           "name": "dent",
-          "appearance": 15.0,
-          "rank": 17.33,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI",
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 15.0,
+          "avg_rank": 17.33,
+          "is_own": false
         },
         {
           "name": "swift",
-          "appearance": 12.5,
-          "rank": 12.4,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 12.5,
+          "avg_rank": 12.4,
+          "is_own": false
         },
         {
           "name": "revolut",
-          "appearance": 10.0,
-          "rank": 20.0,
           "providers": [
             "Gemini",
             "DeepSeek",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 20.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,

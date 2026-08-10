@@ -1,0 +1,630 @@
+{
+  "site": {
+    "name": "Taran",
+    "url": "https://www.taran.space",
+    "domain": "www.taran.space",
+    "slug": "taran-v1",
+    "analysis_id": "openrouter-taran-v1",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "August 10, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 10,
+    "score_status": "Very Low AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 45,
+    "own_mentioned": true,
+    "own_appearance_pct": 10.0,
+    "own_appearance_note": "Site mentioned in 10.0% of responses",
+    "hero_comparison": [
+      {
+        "value": "10.0%",
+        "label": "Taran Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "50.0%",
+        "label": "CertiK (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "50.0%",
+        "label": "certik (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "High-Stakes Development Teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "polkadot",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 45.0,
+          "avg_rank": 12.72,
+          "is_own": false
+        },
+        {
+          "name": "cosmos",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 37.5,
+          "avg_rank": 11.73,
+          "is_own": false
+        },
+        {
+          "name": "CertiK",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 35.0,
+          "avg_rank": 10.93,
+          "is_own": false
+        },
+        {
+          "name": "certik",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 35.0,
+          "avg_rank": 10.93,
+          "is_own": false
+        },
+        {
+          "name": "Quantstamp",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 35.0,
+          "avg_rank": 9.57,
+          "is_own": false
+        },
+        {
+          "name": "quant",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 35.0,
+          "avg_rank": 9.57,
+          "is_own": false
+        },
+        {
+          "name": "quantstamp",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 35.0,
+          "avg_rank": 9.57,
+          "is_own": false
+        },
+        {
+          "name": "OpenZeppelin",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 32.5,
+          "avg_rank": 8.92,
+          "is_own": false
+        },
+        {
+          "name": "openzeppelin",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 32.5,
+          "avg_rank": 8.92,
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 30.0,
+          "avg_rank": 15.67,
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Mistral": 0,
+        "DeepSeek": 1,
+        "Llama": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Investment Firms & Financial Institutions",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "CertiK",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 50.0,
+          "avg_rank": 10.45,
+          "is_own": false
+        },
+        {
+          "name": "certik",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 50.0,
+          "avg_rank": 10.45,
+          "is_own": false
+        },
+        {
+          "name": "Quantstamp",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 45.0,
+          "avg_rank": 11.5,
+          "is_own": false
+        },
+        {
+          "name": "quant",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 45.0,
+          "avg_rank": 11.5,
+          "is_own": false
+        },
+        {
+          "name": "quantstamp",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 45.0,
+          "avg_rank": 11.5,
+          "is_own": false
+        },
+        {
+          "name": "OpenZeppelin",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 37.5,
+          "avg_rank": 9.53,
+          "is_own": false
+        },
+        {
+          "name": "openzeppelin",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 37.5,
+          "avg_rank": 9.53,
+          "is_own": false
+        },
+        {
+          "name": "trail of bits",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 35.0,
+          "avg_rank": 13.29,
+          "is_own": false
+        },
+        {
+          "name": "polkadot",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
+          "appearance_percentage": 32.5,
+          "avg_rank": 14.31,
+          "is_own": false
+        },
+        {
+          "name": "chainlink",
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "appearance_percentage": 25.0,
+          "avg_rank": 20.0,
+          "is_own": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Mistral": 0,
+        "DeepSeek": 1,
+        "Llama": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "security",
+      "count": 182
+    },
+    {
+      "text": "name",
+      "count": 171
+    },
+    {
+      "text": "competitors",
+      "count": 135
+    },
+    {
+      "text": "smart",
+      "count": 121
+    },
+    {
+      "text": "protocol",
+      "count": 91
+    },
+    {
+      "text": "audit",
+      "count": 90
+    },
+    {
+      "text": "chain",
+      "count": 86
+    },
+    {
+      "text": "compliance",
+      "count": 83
+    },
+    {
+      "text": "audits",
+      "count": 81
+    },
+    {
+      "text": "blockchain",
+      "count": 76
+    }
+  ],
+  "sources": [
+    {
+      "name": "quantstamp.com",
+      "url": "https://quantstamp.com",
+      "mentions": 1
+    },
+    {
+      "name": "certik",
+      "url": "https://certik",
+      "mentions": 1
+    },
+    {
+      "name": "hacken.io",
+      "url": "https://hacken.io",
+      "mentions": 1
+    },
+    {
+      "name": "trailofbits.com",
+      "url": "https://trailofbits.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What common vulnerabilities should I be aware of when designing a new protocol?",
+      "type": "missing",
+      "persona": "Lead Software Engineer"
+    },
+    {
+      "text": "How do I evaluate the security measures of existing protocols before integration?",
+      "type": "missing",
+      "persona": "Lead Software Engineer"
+    },
+    {
+      "text": "Can you help identify potential failure points in cross-chain interactions?",
+      "type": "missing",
+      "persona": "Lead Software Engineer"
+    },
+    {
+      "text": "What specific architectural considerations should I take into account during the design phase?",
+      "type": "missing",
+      "persona": "Lead Software Engineer"
+    },
+    {
+      "text": "How do I ensure that the protocol can handle high transaction volumes without compromising security?",
+      "type": "missing",
+      "persona": "Lead Software Engineer"
+    },
+    {
+      "text": "What are the best practices for ensuring protocol integrity before launch?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "How do I compare different security audit services to choose the right one for our needs?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "What potential pitfalls should I consider when planning a multi-chain architecture?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "Can you provide a detailed report on the security posture of our current system?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "What post-launch monitoring should I implement to safeguard against vulnerabilities?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "What specific security measures should I look for when evaluating a new technology provider?",
+      "type": "missing",
+      "persona": "Risk Management Analyst"
+    },
+    {
+      "text": "How can I assess the potential risks of proprietary protocols being used in our investments?",
+      "type": "missing",
+      "persona": "Risk Management Analyst"
+    },
+    {
+      "text": "What are the key indicators of a robust security audit report?",
+      "type": "missing",
+      "persona": "Risk Management Analyst"
+    },
+    {
+      "text": "How do trust boundaries affect the security of integrated systems across different platforms?",
+      "type": "missing",
+      "persona": "Risk Management Analyst"
+    },
+    {
+      "text": "Can you recommend best practices for mitigating risks involved in implementing these technologies?",
+      "type": "missing",
+      "persona": "Risk Management Analyst"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "defiantnews.com",
+      "domain": "defiantnews.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dapp.com",
+      "domain": "dapp.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchainsecurity.com",
+      "domain": "blockchainsecurity.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "catalyst.technology",
+      "domain": "catalyst.technology",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "hackernoon.com",
+      "domain": "hackernoon.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchainassociation.org",
+      "domain": "blockchainassociation.org",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptobriefing.com",
+      "domain": "cryptobriefing.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "mistral": 50,
+    "deepseek": 50,
+    "llama": 47,
+    "openai": 50,
+    "claude": 0,
+    "gemini": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "DeFi teams",
+        "evidence": "AI engines do not recognize this specific customer type",
+        "priority": "HIGH"
+      },
+      {
+        "term": "cross-chain trust boundaries",
+        "evidence": "Lacks broad understanding in AI responses",
+        "priority": "HIGH"
+      },
+      {
+        "term": "failure-prone edges",
+        "evidence": "Not mentioned in AI-driven results",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "protocol logic",
+        "evidence": "Missed in AI descriptions of security services",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "mechanism-level review",
+        "evidence": "Specific service not recognized by AI",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Protocol security and architecture for blockchain infrastructure",
+        "site_context": "Core service description",
+        "ai_uses": "security",
+        "ai_context": "General term without specific context"
+      },
+      {
+        "site_says": "High-stakes DeFi teams",
+        "site_context": "Identified target audience",
+        "ai_uses": "competitors",
+        "ai_context": "Focus on broader company competition"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "High-Stakes Development Teams",
+          "note": "Directly mentioned in services"
+        },
+        {
+          "name": "Investment Firms & Financial Institutions",
+          "note": "Targeted through case studies"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Regulatory Compliance Teams",
+          "note": "Competitors like CertiK rank high at 35%"
+        },
+        {
+          "name": "Blockchain Protocol Developers",
+          "note": "Engagement strategies often aim here"
+        },
+        {
+          "name": "Enterprise Security Departments",
+          "note": "Competitors are attracting these clients"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "In-depth focus on blockchain security audits",
+        "Extensive experience with significant crypto assets",
+        "Comprehensive case studies showcasing real-world impact"
+      ],
+      "opportunities": [
+        "Increase content around regulatory compliance in blockchain",
+        "Expand language to align with broader AI understanding",
+        "Create targeted content for emerging blockchain sectors"
+      ],
+      "gaps": [
+        "Low visibility in AI search engine responses (0%)",
+        "Significant competition from established brands like CertiK and OpenZeppelin",
+        "Limited unique branding in AI results due to common terminology usage"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop content around DeFi team security needs",
+        "Create guides on cross-chain trust boundary complexities",
+        "Produce case studies highlighting successes in high-stakes scenarios",
+        "Write articles comparing different blockchain security standards",
+        "Enhance homepage with SEO-rich content around blockchain terminology"
+      ],
+      "link_building": [
+        "Engage with industry-specific blogs for guest posts",
+        "Collaborate with crypto influencers for backlink opportunities",
+        "Participate in and sponsor blockchain webinars and conferences",
+        "Create valuable resources for developers to link back to",
+        "Reach out to academic institutions for partnerships"
+      ],
+      "quick_wins": [
+        "Optimize current pages for AI-searched keywords like 'protocol audit'",
+        "Adjust homepage to reflect AI language preferences",
+        "Implement internal linking strategies to improve site navigation",
+        "Increase social media presence to attract diverse visitor demographics",
+        "Utilize case studies in targeted outreach campaigns"
+      ]
+    }
+  }
+}

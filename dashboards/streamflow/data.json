@@ -43,117 +43,107 @@
       "competitors": [
         {
           "name": "superfluid",
-          "appearance": 47.5,
-          "rank": 15.26,
           "providers": [
             "Claude",
             "OpenAI",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 47.5,
+          "avg_rank": 15.26,
+          "is_own": false
         },
         {
           "name": "sablier",
-          "appearance": 47.5,
-          "rank": 15.58,
           "providers": [
             "Claude",
             "OpenAI",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 47.5,
+          "avg_rank": 15.58,
+          "is_own": false
         },
         {
           "name": "gnosis safe",
-          "appearance": 35.0,
-          "rank": 16.14,
           "providers": [
             "Claude",
             "OpenAI",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 35.0,
+          "avg_rank": 16.14,
+          "is_own": false
         },
         {
           "name": "openzeppelin",
-          "appearance": 20.0,
-          "rank": 17.88,
           "providers": [
             "Claude",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 20.0,
+          "avg_rank": 17.88,
+          "is_own": false
         },
         {
           "name": "openzeppelin defender",
-          "appearance": 10.0,
-          "rank": 19.0,
           "providers": [
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 19.0,
+          "is_own": false
         },
         {
           "name": "llamapay",
-          "appearance": 10.0,
-          "rank": 13.75,
           "providers": [
             "Claude",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 10.0,
+          "avg_rank": 13.75,
+          "is_own": false
         },
         {
           "name": "Vestd",
-          "appearance": 7.5,
-          "rank": 14.33,
           "providers": [
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 14.33,
+          "is_own": false
         },
         {
           "name": "squads protocol",
-          "appearance": 7.5,
-          "rank": 23.0,
           "providers": [
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 23.0,
+          "is_own": false
         },
         {
           "name": "fireblocks",
-          "appearance": 5.0,
-          "rank": 26.0,
           "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 26.0,
+          "is_own": false
         },
         {
           "name": "carta",
-          "appearance": 5.0,
-          "rank": 8.5,
           "providers": [
             "Claude",
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 8.5,
+          "is_own": false
         }
       ],
       "total_responses": 10,
@@ -172,113 +162,103 @@
       "competitors": [
         {
           "name": "superfluid",
-          "appearance": 27.5,
-          "rank": 13.0,
           "providers": [
             "Claude",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 27.5,
+          "avg_rank": 13.0,
+          "is_own": false
         },
         {
           "name": "sablier",
-          "appearance": 27.5,
-          "rank": 12.82,
           "providers": [
             "Claude",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 27.5,
+          "avg_rank": 12.82,
+          "is_own": false
         },
         {
           "name": "gnosis safe",
-          "appearance": 17.5,
-          "rank": 11.0,
           "providers": [
             "Claude",
             "OpenAI",
             "DeepSeek",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 17.5,
+          "avg_rank": 11.0,
+          "is_own": false
         },
         {
           "name": "openzeppelin",
-          "appearance": 7.5,
-          "rank": 15.33,
           "providers": [
             "Claude",
             "OpenAI",
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 7.5,
+          "avg_rank": 15.33,
+          "is_own": false
         },
         {
           "name": "request finance",
-          "appearance": 5.0,
-          "rank": 15.0,
           "providers": [
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 15.0,
+          "is_own": false
         },
         {
           "name": "llamapay",
-          "appearance": 5.0,
-          "rank": 23.0,
           "providers": [
             "Claude"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 23.0,
+          "is_own": false
         },
         {
           "name": "sablier finance",
-          "appearance": 5.0,
-          "rank": 12.0,
           "providers": [
             "Claude",
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.0,
+          "is_own": false
         },
         {
           "name": "deel",
-          "appearance": 5.0,
-          "rank": 12.0,
           "providers": [
             "Gemini"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 12.0,
+          "is_own": false
         },
         {
           "name": "moonpay",
-          "appearance": 5.0,
-          "rank": 19.5,
           "providers": [
             "OpenAI"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 5.0,
+          "avg_rank": 19.5,
+          "is_own": false
         },
         {
           "name": "Hedgey",
-          "appearance": 2.5,
-          "rank": 20.0,
           "providers": [
             "DeepSeek"
           ],
-          "isOwn": false,
-          "url": null
+          "appearance_percentage": 2.5,
+          "avg_rank": 20.0,
+          "is_own": false
         }
       ],
       "total_responses": 10,
