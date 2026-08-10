@@ -14,7 +14,7 @@
     "score_status": "Very Low AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
-    "unique_competitors": 45,
+    "unique_competitors": 8,
     "own_mentioned": true,
     "own_appearance_pct": 10.0,
     "own_appearance_note": "Site mentioned in 10.0% of responses",
@@ -30,8 +30,8 @@
         "trend": ""
       },
       {
-        "value": "50.0%",
-        "label": "certik (#2)",
+        "value": "45.0%",
+        "label": "polkadot (#2)",
         "trend": ""
       }
     ]
@@ -43,122 +43,74 @@
       "competitors": [
         {
           "name": "polkadot",
+          "appearance_percentage": 45.0,
+          "avg_rank": 12.72,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 45.0,
-          "avg_rank": 12.72,
           "is_own": false
         },
         {
           "name": "cosmos",
+          "appearance_percentage": 37.5,
+          "avg_rank": 11.73,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 37.5,
-          "avg_rank": 11.73,
           "is_own": false
         },
         {
           "name": "CertiK",
+          "appearance_percentage": 35.0,
+          "avg_rank": 10.93,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 35.0,
-          "avg_rank": 10.93,
-          "is_own": false
-        },
-        {
-          "name": "certik",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 35.0,
-          "avg_rank": 10.93,
           "is_own": false
         },
         {
           "name": "Quantstamp",
+          "appearance_percentage": 35.0,
+          "avg_rank": 9.57,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 35.0,
-          "avg_rank": 9.57,
-          "is_own": false
-        },
-        {
-          "name": "quant",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 35.0,
-          "avg_rank": 9.57,
-          "is_own": false
-        },
-        {
-          "name": "quantstamp",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 35.0,
-          "avg_rank": 9.57,
           "is_own": false
         },
         {
           "name": "OpenZeppelin",
+          "appearance_percentage": 32.5,
+          "avg_rank": 8.92,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 32.5,
-          "avg_rank": 8.92,
-          "is_own": false
-        },
-        {
-          "name": "openzeppelin",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 32.5,
-          "avg_rank": 8.92,
           "is_own": false
         },
         {
           "name": "chainlink",
+          "appearance_percentage": 30.0,
+          "avg_rank": 15.67,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 30.0,
-          "avg_rank": 15.67,
           "is_own": false
         }
       ],
@@ -178,121 +130,73 @@
       "competitors": [
         {
           "name": "CertiK",
+          "appearance_percentage": 50.0,
+          "avg_rank": 10.45,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 50.0,
-          "avg_rank": 10.45,
-          "is_own": false
-        },
-        {
-          "name": "certik",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 50.0,
-          "avg_rank": 10.45,
           "is_own": false
         },
         {
           "name": "Quantstamp",
+          "appearance_percentage": 45.0,
+          "avg_rank": 11.5,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 45.0,
-          "avg_rank": 11.5,
-          "is_own": false
-        },
-        {
-          "name": "quant",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 45.0,
-          "avg_rank": 11.5,
-          "is_own": false
-        },
-        {
-          "name": "quantstamp",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 45.0,
-          "avg_rank": 11.5,
           "is_own": false
         },
         {
           "name": "OpenZeppelin",
+          "appearance_percentage": 37.5,
+          "avg_rank": 9.53,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 37.5,
-          "avg_rank": 9.53,
           "is_own": false
         },
         {
-          "name": "openzeppelin",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
-          "appearance_percentage": 37.5,
-          "avg_rank": 9.53,
-          "is_own": false
-        },
-        {
-          "name": "trail of bits",
-          "providers": [
-            "Mistral",
-            "DeepSeek",
-            "Llama",
-            "OpenAI"
-          ],
+          "name": "Trail of Bits",
           "appearance_percentage": 35.0,
           "avg_rank": 13.29,
+          "providers": [
+            "Mistral",
+            "DeepSeek",
+            "Llama",
+            "OpenAI"
+          ],
           "is_own": false
         },
         {
           "name": "polkadot",
+          "appearance_percentage": 32.5,
+          "avg_rank": 14.31,
           "providers": [
             "Mistral",
             "DeepSeek",
             "Llama",
             "OpenAI"
           ],
-          "appearance_percentage": 32.5,
-          "avg_rank": 14.31,
           "is_own": false
         },
         {
           "name": "chainlink",
+          "appearance_percentage": 25.0,
+          "avg_rank": 20.0,
           "providers": [
             "Mistral",
             "DeepSeek",
             "OpenAI"
           ],
-          "appearance_percentage": 25.0,
-          "avg_rank": 20.0,
           "is_own": false
         }
       ],
@@ -544,6 +448,31 @@
         "term": "mechanism-level review",
         "evidence": "Specific service not recognized by AI",
         "priority": "LOW"
+      },
+      {
+        "term": "smart contract audit",
+        "evidence": "AI responses frequently reference smart contract auditing; site should explicitly target this term.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "blockchain security",
+        "evidence": "Major search term in the decentralized web space; Taran content does not prominently feature it.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "DeFi security",
+        "evidence": "Growing category where competitors like CertiK and OpenZeppelin dominate AI citations.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "protocol audit",
+        "evidence": "AI engines reference this when asked about blockchain infrastructure security.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "security advisory",
+        "evidence": "Key service area for Taran not reflected in AI-facing content.",
+        "priority": "MEDIUM"
       }
     ],
     "language_gap": [
@@ -583,6 +512,14 @@
         {
           "name": "Enterprise Security Departments",
           "note": "Competitors are attracting these clients"
+        },
+        {
+          "name": "DeFi Protocols",
+          "note": "High-growth segment actively seeking security audits; Taran should target with dedicated content."
+        },
+        {
+          "name": "NFT & Gaming Projects",
+          "note": "Emerging segment needing security reviews for smart contracts and token mechanics."
         }
       ]
     },
@@ -605,25 +542,25 @@
     },
     "action_items": {
       "content_priorities": [
-        "Develop content around DeFi team security needs",
-        "Create guides on cross-chain trust boundary complexities",
-        "Produce case studies highlighting successes in high-stakes scenarios",
-        "Write articles comparing different blockchain security standards",
-        "Enhance homepage with SEO-rich content around blockchain terminology"
+        "Create a dedicated \"Smart Contract Audit\" service page with clear methodology and case studies.",
+        "Develop homepage content that explicitly targets \"blockchain security\" and \"DeFi audit\" keywords.",
+        "Publish research reports on cross-chain vulnerabilities and protocol-level risks to build topical authority.",
+        "Build comparison content: \"Taran vs CertiK vs OpenZeppelin\" to capture competitive search traffic.",
+        "Add client testimonials from Web3 projects showing measurable security improvements."
       ],
       "link_building": [
-        "Engage with industry-specific blogs for guest posts",
-        "Collaborate with crypto influencers for backlink opportunities",
-        "Participate in and sponsor blockchain webinars and conferences",
-        "Create valuable resources for developers to link back to",
-        "Reach out to academic institutions for partnerships"
+        "Guest post on Cointelegraph, CoinDesk, and Decrypt about Web3 security trends.",
+        "Get listed in DeFiLlama, DappRadar, and other Web3 directories with backlink to audit services.",
+        "Partner with blockchain accelerators and incubators for mutual backlinking.",
+        "Publish educational security audits on Mirror.xyz, Substack, and industry newsletters.",
+        "Collaborate with audit-focused DAOs and bug bounty platforms (Immunefi, Sherlock) for visibility."
       ],
       "quick_wins": [
-        "Optimize current pages for AI-searched keywords like 'protocol audit'",
-        "Adjust homepage to reflect AI language preferences",
-        "Implement internal linking strategies to improve site navigation",
-        "Increase social media presence to attract diverse visitor demographics",
-        "Utilize case studies in targeted outreach campaigns"
+        "Add \"Smart Contract Audit\" to homepage H1 and meta title.",
+        "Create a simple \"Request an Audit\" CTA on every page.",
+        "Publish 1 blog post per week on recent hack analyses and how Taran would prevent them.",
+        "Update LinkedIn and Twitter bios to include \"Web3 Security Audits\" and link to site.",
+        "Submit Taran to Web3 security aggregator sites and audit firm directories."
       ]
     }
   }
