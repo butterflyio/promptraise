@@ -1,0 +1,82 @@
+[
+  {
+    "name": "coindesk.com",
+    "domain": "coindesk.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Coindesk is a leading news site that regularly covers blockchain security, auditing, and smart contract discussions, which aligns perfectly with Taran's focus on compliance and security."
+  },
+  {
+    "name": "theblock.co",
+    "domain": "theblock.co",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] The Block provides in-depth analysis on blockchain-related topics, including regulatory compliance and smart contracts, making it a valuable target for Taran to gain relevant exposure."
+  },
+  {
+    "name": "cryptoslate.com",
+    "domain": "cryptoslate.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] CryptoSlate offers insights into the blockchain ecosystem, frequently discussing security protocols and auditor comparisons, which Taran can leverage to highlight its unique offerings."
+  },
+  {
+    "name": "defiantnews.com",
+    "domain": "defiantnews.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Defiant News focuses on decentralized finance, covering smart contracts and security, which can help Taran position itself effectively within the DeFi community."
+  },
+  {
+    "name": "dapp.com",
+    "domain": "dapp.com",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Dapp.com showcases decentralized applications, emphasizing smart contract security; Taran can gain visibility among developers concerned with security audits."
+  },
+  {
+    "name": "blockchainsecurity.com",
+    "domain": "blockchainsecurity.com",
+    "type": "research",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] As a site dedicated to blockchain security research, gaining coverage here would enhance Taran's authority in security compliance related to smart contracts."
+  },
+  {
+    "name": "catalyst.technology",
+    "domain": "catalyst.technology",
+    "type": "newsletter",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Catalyst Technology newsletter provides insights into blockchain innovations, including security protocols; Taran can contribute expert commentary to become a thought leader."
+  },
+  {
+    "name": "hackernoon.com",
+    "domain": "hackernoon.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Hackernoon frequently publishes articles on auditing and cybersecurity in blockchain, perfect for Taran to reach developers and tech enthusiasts interested in security."
+  },
+  {
+    "name": "blockchainassociation.org",
+    "domain": "blockchainassociation.org",
+    "type": "community",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] The Blockchain Association represents industry players and provides resources on compliance and security, ideal for Taran to engage with policymakers and industry leaders."
+  },
+  {
+    "name": "cryptobriefing.com",
+    "domain": "cryptobriefing.com",
+    "type": "publication",
+    "mentions": 0,
+    "priority": "OPPORTUNITY",
+    "reason": "[DYNAMIC] Crypto Briefing covers news and trends in blockchain, including smart contract audits, which can bring Taran visibility among investors and project developers."
+  }
+]
