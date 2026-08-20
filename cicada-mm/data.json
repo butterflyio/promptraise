@@ -1,0 +1,661 @@
+{
+  "site": {
+    "name": "Cicada MM",
+    "url": "https://www.cicada-mm.com",
+    "domain": "www.cicada-mm.com",
+    "slug": "cicada-mm",
+    "analysis_id": "openrouter-cicada-mm",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "August 20, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 7,
+    "score_status": "Very Low AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 73,
+    "own_mentioned": true,
+    "own_appearance_pct": 2.5,
+    "own_appearance_note": "Site mentioned in 2.5% of responses",
+    "hero_comparison": [
+      {
+        "value": "2.5%",
+        "label": "Cicada MM Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "47.5%",
+        "label": "uniswap (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "45.0%",
+        "label": "binance (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Project Founders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "uniswap",
+          "appearance": 47.5,
+          "rank": 12.42,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance",
+          "appearance": 45.0,
+          "rank": 14.78,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "sushiswap",
+          "appearance": 27.5,
+          "rank": 11.45,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "pancakeswap",
+          "appearance": 22.5,
+          "rank": 13.44,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "the block",
+          "appearance": 12.5,
+          "rank": 10.2,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coingecko",
+          "appearance": 12.5,
+          "rank": 7.8,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "balancer",
+          "appearance": 12.5,
+          "rank": 13.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "wintermute",
+          "appearance": 12.5,
+          "rank": 14.0,
+          "providers": [
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinmarketcap",
+          "appearance": 10.0,
+          "rank": 7.25,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainalysis",
+          "appearance": 7.5,
+          "rank": 17.0,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Claude": 1,
+        "DeepSeek": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Investors and Traders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "coingecko",
+          "appearance": 35.0,
+          "rank": 10.64,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinmarketcap",
+          "appearance": 32.5,
+          "rank": 10.54,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "messari",
+          "appearance": 27.5,
+          "rank": 12.27,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance",
+          "appearance": 20.0,
+          "rank": 16.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "uniswap",
+          "appearance": 17.5,
+          "rank": 14.29,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "the block",
+          "appearance": 12.5,
+          "rank": 9.8,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainalysis",
+          "appearance": 10.0,
+          "rank": 13.5,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "wintermute",
+          "appearance": 10.0,
+          "rank": 13.0,
+          "providers": [
+            "OpenAI",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "delphi digital",
+          "appearance": 7.5,
+          "rank": 10.67,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "sushiswap",
+          "appearance": 7.5,
+          "rank": 10.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Claude": 1,
+        "DeepSeek": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "market",
+      "count": 183
+    },
+    {
+      "text": "name",
+      "count": 159
+    },
+    {
+      "text": "competitors",
+      "count": 120
+    },
+    {
+      "text": "your",
+      "count": 106
+    },
+    {
+      "text": "projects",
+      "count": 101
+    },
+    {
+      "text": "data",
+      "count": 97
+    },
+    {
+      "text": "liquidity",
+      "count": 95
+    },
+    {
+      "text": "project",
+      "count": 77
+    },
+    {
+      "text": "community",
+      "count": 73
+    },
+    {
+      "text": "blockchain",
+      "count": 64
+    }
+  ],
+  "sources": [
+    {
+      "name": "crypto.com",
+      "url": "https://crypto.com",
+      "mentions": 2
+    },
+    {
+      "name": "gate.io",
+      "url": "https://gate.io",
+      "mentions": 2
+    },
+    {
+      "name": "blockchain.com",
+      "url": "https://blockchain.com",
+      "mentions": 1
+    },
+    {
+      "name": "cicadamm.com",
+      "url": "https://cicadamm.com",
+      "mentions": 1
+    },
+    {
+      "name": "coingecko",
+      "url": "https://coingecko",
+      "mentions": 1
+    },
+    {
+      "name": "debank.com",
+      "url": "https://debank.com",
+      "mentions": 1
+    },
+    {
+      "name": "coinmarketcap.com",
+      "url": "https://coinmarketcap.com",
+      "mentions": 1
+    },
+    {
+      "name": "defipulse.com",
+      "url": "https://defipulse.com",
+      "mentions": 1
+    },
+    {
+      "name": "mirror.xyz",
+      "url": "https://mirror.xyz",
+      "mentions": 1
+    },
+    {
+      "name": "cryptorank.io",
+      "url": "https://cryptorank.io",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What are the best strategies to ensure successful entry for my project in the market?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "How can I optimize my marketing efforts to gain traction for my new initiative?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What typical challenges do new projects face during their launch period?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "Can you provide examples of past projects you helped bring to listing on exchanges?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What resources do you offer to track market performance post-launch?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "What kind of support do you offer to help integrate new financial solutions into my online platform?",
+      "type": "missing",
+      "persona": "E-commerce Entrepreneur"
+    },
+    {
+      "text": "How can your services help improve liquidity for specific products I plan to launch?",
+      "type": "missing",
+      "persona": "E-commerce Entrepreneur"
+    },
+    {
+      "text": "Are there tailored marketing frameworks you provide that can boost my e-commerce project visibility?",
+      "type": "missing",
+      "persona": "E-commerce Entrepreneur"
+    },
+    {
+      "text": "What metrics do you use to gauge the success of market engagement strategies?",
+      "type": "missing",
+      "persona": "E-commerce Entrepreneur"
+    },
+    {
+      "text": "Can you assist with compliance issues related to listing my products on exchanges?",
+      "type": "missing",
+      "persona": "E-commerce Entrepreneur"
+    },
+    {
+      "text": "What unique advantages do you offer that differentiate your services from other market support providers?",
+      "type": "missing",
+      "persona": "Institutional Investor"
+    },
+    {
+      "text": "How do you ensure reliable market insights for assessing potential asset launches?",
+      "type": "missing",
+      "persona": "Institutional Investor"
+    },
+    {
+      "text": "Can your team assist in the execution of large volume trades off-exchange?",
+      "type": "missing",
+      "persona": "Institutional Investor"
+    },
+    {
+      "text": "What risk management frameworks do you provide to protect investment in new projects?",
+      "type": "missing",
+      "persona": "Institutional Investor"
+    },
+    {
+      "text": "How does your partnership model work in terms of shared benefits?",
+      "type": "missing",
+      "persona": "Institutional Investor"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptobriefing.com",
+      "domain": "cryptobriefing.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockworks.co",
+      "domain": "blockworks.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "nansen.ai",
+      "domain": "nansen.ai",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "bitcoinmagazine.com",
+      "domain": "bitcoinmagazine.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "finextra.com",
+      "domain": "finextra.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 39,
+    "claude": 28,
+    "deepseek": 50,
+    "gemini": 45
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "market making strategies",
+        "evidence": "AI tends to focus on general 'market' references",
+        "priority": "HIGH"
+      },
+      {
+        "term": "liquidity solutions",
+        "evidence": "AI responses commonly refer to 'liquidity' without specifics",
+        "priority": "HIGH"
+      },
+      {
+        "term": "long-term partnerships",
+        "evidence": "AI lacks emphasis on the lasting relationships aspect",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "comprehensive marketing support",
+        "evidence": "AI mentions 'marketing' but not in the detailed context provided",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "trading volumes enhancement",
+        "evidence": "AI mentions 'trading' but not the enhancement focus",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "We help you manage your project at different stages of its development...",
+        "site_context": "Focused on project management across stages.",
+        "ai_uses": "AI emphasizes project launch and market entry.",
+        "ai_context": "Missing the nuanced approach to development stages."
+      },
+      {
+        "site_says": "We value long-term partnerships...",
+        "site_context": "Highlights partnership longevity.",
+        "ai_uses": "AI often does not cite long-term collaboration.",
+        "ai_context": "Focus is primarily transactional."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Project Founders",
+          "note": "Directly targeted with tailored market solutions."
+        },
+        {
+          "name": "Investors and Traders",
+          "note": "Market insights and trading support offered."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Token Developers",
+          "note": "Growing focus, competitors like Uniswap at 47.5%."
+        },
+        {
+          "name": "Institutional Investors",
+          "note": "Underrepresented, with Binance at 45%."
+        },
+        {
+          "name": "Advisory Services Users",
+          "note": "Potential market, Sushiswap at 27.5%."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Full market making service provider with tailored strategies.",
+        "Comprehensive marketing and advisory services.",
+        "Strong support network for listing across exchanges."
+      ],
+      "opportunities": [
+        "Expand content around market-making specifics.",
+        "Develop partnerships with institutional investors.",
+        "Leverage unique case studies demonstrating benefits."
+      ],
+      "gaps": [
+        "Lack of visibility in AI search results (0% site appearance).",
+        "Weak brand presence compared to competitors like Uniswap and Binance.",
+        "Limited coverage on key terms such as 'liquidity solutions'."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a detailed guide on 'Market Making Explained'.",
+        "Develop case studies showcasing successful partnerships.",
+        "Publish thought leadership articles on liquidity strategies.",
+        "Optimize homepage content with high-search keywords.",
+        "Add a FAQ section addressing project management nuances."
+      ],
+      "link_building": [
+        "Outreach for guest posts on crypto and finance blogs.",
+        "Collaborate with influencers in the blockchain space.",
+        "Create high-value infographics for sharing.",
+        "Engage in backlink initiatives with industry websites.",
+        "Participate in podcasts or webinars to drive traffic."
+      ],
+      "quick_wins": [
+        "Update meta tags to include targeted keywords.",
+        "Enhance social media presence with educational posts.",
+        "Implement a newsletter for regular updates and insights.",
+        "Use Google Analytics to track keyword performance.",
+        "Optimize images with alt text relevant to services."
+      ]
+    }
+  }
+}
