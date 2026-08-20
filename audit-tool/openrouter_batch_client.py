@@ -15,19 +15,37 @@ import requests
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-MODELS = [
-    "deepseek/deepseek-chat-v3",
-    "anthropic/claude-3.5-haiku",
-    "google/gemini-2.0-flash-001",
+def _env_models() -> list:
+    """Allow overriding the model set at runtime via OPENROUTER_MODELS (comma-separated).
+    This is the swap method for testing: set the env var, no code change needed.
+    Example: OPENROUTER_MODELS="deepseek/deepseek-chat,anthropic/claude-3-haiku,google/gemini-2.5-flash,openai/gpt-4o-mini"
+    """
+    raw = os.environ.get("OPENROUTER_MODELS", "").strip()
+    if raw:
+        return [m.strip() for m in raw.split(",") if m.strip()]
+    return DEFAULT_MODELS
+
+DEFAULT_MODELS = [
+    "deepseek/deepseek-chat",
+    "anthropic/claude-3-haiku",
+    "google/gemini-2.5-flash",
     "openai/gpt-4o-mini",
 ]
 
+MODELS = _env_models()
+
 MODEL_DISPLAY_NAMES = {
-    "deepseek/deepseek-chat-v3": "DeepSeek",
-    "anthropic/claude-3.5-haiku": "Claude",
-    "google/gemini-2.0-flash-001": "Gemini",
+    "deepseek/deepseek-chat": "DeepSeek",
+    "anthropic/claude-3-haiku": "Claude",
+    "google/gemini-2.5-flash": "Gemini",
     "openai/gpt-4o-mini": "OpenAI",
 }
+
+def _helper_model() -> str:
+    """The single model used for internal generation (customer types, discovery,
+    publication discovery). Overridable via OPENROUTER_HELPER_MODEL for testing.
+    """
+    return os.environ.get("OPENROUTER_HELPER_MODEL", "anthropic/claude-3-haiku").strip()
 
 # DISCOVERY_QUESTIONS removed - dynamically generated per project subcategory via _detect_subcategory_and_generate_questions
 
@@ -464,7 +482,7 @@ class OpenRouterBatchClient:
             )},
         ]
         result = self._call_with_json_retry(
-            "anthropic/claude-3.5-haiku", messages, max_tokens=2048
+            _helper_model(), messages, max_tokens=2048
         )
 
         cts = result.get("customer_types", [])
@@ -496,7 +514,7 @@ class OpenRouterBatchClient:
             )},
         ]
         result = self._call_with_json_retry(
-            "anthropic/claude-3.5-haiku", messages, max_tokens=1024
+            _helper_model(), messages, max_tokens=1024
         )
         questions = result.get("discovery_questions", [])
         if not questions or len(questions) < 5:
@@ -1064,7 +1082,7 @@ Generate exactly 12 entries."""
 
         try:
             llm_response = self._call(
-                model="anthropic/claude-3.5-haiku",
+                model=_helper_model(),
                 messages=[{"role": "user", "content": prompt}],
                 max_tokens=800,
             )
