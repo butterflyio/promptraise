@@ -1,0 +1,705 @@
+{
+  "site": {
+    "name": "Cointelegraph",
+    "url": "https://cointelegraph.com/",
+    "domain": "cointelegraph.com",
+    "slug": "cointelegraph",
+    "analysis_id": "openrouter-cointelegraph",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "August 20, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 40,
+    "score_status": "Low AI Visibility",
+    "total_responses": 76,
+    "responses_per_type": 38,
+    "unique_competitors": 39,
+    "own_mentioned": true,
+    "own_appearance_pct": 40.0,
+    "own_appearance_note": "Site mentioned in 40.0% of responses",
+    "hero_comparison": [
+      {
+        "value": "40.0%",
+        "label": "Cointelegraph Visibility",
+        "trend": ""
+      },
+      {
+        "value": "27.5%",
+        "label": "coindesk (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "25.0%",
+        "label": "The Block (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Retail Investors",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Cointelegraph",
+          "appearance": 40.0,
+          "rank": 7.75,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "coindesk",
+          "appearance": 27.5,
+          "rank": 14.82,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "The Block",
+          "appearance": 25.0,
+          "rank": 18.0,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "the block",
+          "appearance": 22.5,
+          "rank": 18.11,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "decrypt",
+          "appearance": 20.0,
+          "rank": 13.75,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coingecko",
+          "appearance": 15.0,
+          "rank": 15.5,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "tradingview",
+          "appearance": 12.5,
+          "rank": 6.4,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "messari",
+          "appearance": 7.5,
+          "rank": 11.33,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ethereum.org",
+          "appearance": 5.0,
+          "rank": 20.5,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "nomics",
+          "appearance": 5.0,
+          "rank": 10.5,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "Claude": 1,
+        "DeepSeek": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Institutional Investors",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Cointelegraph",
+          "appearance": 19.4,
+          "rank": 7.86,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "nomics",
+          "appearance": 8.3,
+          "rank": 19.0,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coingecko",
+          "appearance": 8.3,
+          "rank": 12.33,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "The Block",
+          "appearance": 5.6,
+          "rank": 10.0,
+          "providers": [
+            "Gemini",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "the block",
+          "appearance": 5.6,
+          "rank": 10.0,
+          "providers": [
+            "Gemini",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coindesk",
+          "appearance": 5.6,
+          "rank": 7.5,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "etherscan",
+          "appearance": 2.8,
+          "rank": 37.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "bloomberg",
+          "appearance": 2.8,
+          "rank": 18.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ethereum foundation",
+          "appearance": 2.8,
+          "rank": 2.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 9,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "digital",
+      "count": 212
+    },
+    {
+      "text": "assets",
+      "count": 186
+    },
+    {
+      "text": "digital assets",
+      "count": 137
+    },
+    {
+      "text": "asset",
+      "count": 122
+    },
+    {
+      "text": "market",
+      "count": 108
+    },
+    {
+      "text": "platforms",
+      "count": 104
+    },
+    {
+      "text": "name",
+      "count": 95
+    },
+    {
+      "text": "competitors",
+      "count": 90
+    },
+    {
+      "text": "regulatory",
+      "count": 84
+    },
+    {
+      "text": "blockchain",
+      "count": 81
+    }
+  ],
+  "sources": [
+    {
+      "name": "crypto.com",
+      "url": "https://crypto.com",
+      "mentions": 5
+    },
+    {
+      "name": "cointelegraph.com",
+      "url": "https://cointelegraph.com",
+      "mentions": 4
+    },
+    {
+      "name": "academy.binance",
+      "url": "https://academy.binance",
+      "mentions": 3
+    },
+    {
+      "name": "kraken",
+      "url": "https://kraken",
+      "mentions": 2
+    },
+    {
+      "name": "coindesk",
+      "url": "https://coindesk",
+      "mentions": 2
+    },
+    {
+      "name": "ethereum.org",
+      "url": "https://ethereum.org",
+      "mentions": 2
+    },
+    {
+      "name": "theblock",
+      "url": "https://theblock",
+      "mentions": 2
+    },
+    {
+      "name": "coinbase",
+      "url": "https://coinbase",
+      "mentions": 2
+    },
+    {
+      "name": "ledger",
+      "url": "https://ledger",
+      "mentions": 1
+    },
+    {
+      "name": "blockchain.com",
+      "url": "https://blockchain.com",
+      "mentions": 1
+    },
+    {
+      "name": "academy.cointelegraph",
+      "url": "https://academy.cointelegraph",
+      "mentions": 1
+    },
+    {
+      "name": "defieducation.org",
+      "url": "https://defieducation.org",
+      "mentions": 1
+    },
+    {
+      "name": "messari.io",
+      "url": "https://messari.io",
+      "mentions": 1
+    },
+    {
+      "name": "delphidigital",
+      "url": "https://delphidigital",
+      "mentions": 1
+    },
+    {
+      "name": "decrypt.co",
+      "url": "https://decrypt.co",
+      "mentions": 1
+    },
+    {
+      "name": "trendspider.com",
+      "url": "https://trendspider.com",
+      "mentions": 1
+    },
+    {
+      "name": "cryptohopper",
+      "url": "https://cryptohopper",
+      "mentions": 1
+    },
+    {
+      "name": "tradingview",
+      "url": "https://tradingview",
+      "mentions": 1
+    },
+    {
+      "name": "3commas.io",
+      "url": "https://3commas.io",
+      "mentions": 1
+    },
+    {
+      "name": "coinigy",
+      "url": "https://coinigy",
+      "mentions": 1
+    },
+    {
+      "name": "copper.co",
+      "url": "https://copper.co",
+      "mentions": 1
+    },
+    {
+      "name": "youtube",
+      "url": "https://youtube",
+      "mentions": 1
+    },
+    {
+      "name": "investopedia",
+      "url": "https://investopedia",
+      "mentions": 1
+    },
+    {
+      "name": "defipulse.com",
+      "url": "https://defipulse.com",
+      "mentions": 1
+    },
+    {
+      "name": "cryptozombies.io",
+      "url": "https://cryptozombies.io",
+      "mentions": 1
+    },
+    {
+      "name": "investing.com",
+      "url": "https://investing.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "Can you explain how to choose a secure platform for holding digital assets?",
+      "type": "missing",
+      "persona": "Newbie Investor"
+    },
+    {
+      "text": "How do market trends influence the performance of different digital assets?",
+      "type": "missing",
+      "persona": "Newbie Investor"
+    },
+    {
+      "text": "What safety measures should I implement when accessing investment platforms?",
+      "type": "missing",
+      "persona": "Newbie Investor"
+    },
+    {
+      "text": "What tools are recommended for conducting technical analysis of digital asset price trends?",
+      "type": "missing",
+      "persona": "Savvy Retail Trader"
+    },
+    {
+      "text": "What are some common pitfalls to avoid when making trades in this sector?",
+      "type": "missing",
+      "persona": "Savvy Retail Trader"
+    },
+    {
+      "text": "How does regulatory news impact price fluctuations in digital assets?",
+      "type": "missing",
+      "persona": "Savvy Retail Trader"
+    },
+    {
+      "text": "Which digital assets have shown consistent performance over recent months?",
+      "type": "missing",
+      "persona": "Savvy Retail Trader"
+    },
+    {
+      "text": "What criteria should I use to evaluate institutional-grade digital asset custody solutions?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "How can I assess the long-term viability of different digital assets for institutional investment?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "What strategies are most effective for managing risk in a portfolio that includes digital assets?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "How do partnerships with technology firms enhance the capabilities of my fund’s operations?",
+      "type": "missing",
+      "persona": "Fund Manager"
+    },
+    {
+      "text": "What are the benefits of integrating digital assets into a corporate treasury strategy?",
+      "type": "missing",
+      "persona": "Corporate Treasurer"
+    },
+    {
+      "text": "How can I optimize our company’s liquidity using digital assets?",
+      "type": "missing",
+      "persona": "Corporate Treasurer"
+    },
+    {
+      "text": "What steps should be taken to ensure compliance with financial regulations when using digital assets?",
+      "type": "missing",
+      "persona": "Corporate Treasurer"
+    },
+    {
+      "text": "How do market developments affect the strategic use of digital assets in a corporate setting?",
+      "type": "missing",
+      "persona": "Corporate Treasurer"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "delphidigital.io",
+      "domain": "delphidigital.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockworks.co",
+      "domain": "blockworks.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "bloomberg.com/crypto",
+      "domain": "bloomberg.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "ethereum.org/en/community",
+      "domain": "ethereum.org",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "ontech.com",
+      "domain": "ontech.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "finextra.com",
+      "domain": "finextra.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "gemini": 50,
+    "claude": 38,
+    "deepseek": 42,
+    "openai": 22
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "blockchain news",
+        "evidence": "Site focuses on specific news but AI engines prioritize broader terms like 'digital assets'",
+        "priority": "HIGH"
+      },
+      {
+        "term": "cryptocurrency prices",
+        "evidence": "Site mentions prices frequently, while AI lacks this specific reference",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "crypto industry",
+        "evidence": "Site emphasizes industry context, but AI responses lack this focus",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "mining",
+        "evidence": "Site includes this term often, whereas AI uses more general terms",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "The most recent news about crypto industry",
+        "site_context": "Focuses heavily on current events in crypto",
+        "ai_uses": "digital assets",
+        "ai_context": "AI discusses broader concepts rather than specific news"
+      },
+      {
+        "site_says": "Blockchain News",
+        "site_context": "Specific to the blockchain sector",
+        "ai_uses": "market platforms",
+        "ai_context": "AI leans towards terminologies around trading and platforms"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Retail Investors",
+          "note": "Site caters well with news targeted at retail investors"
+        },
+        {
+          "name": "Institutional Investors",
+          "note": "Content is relevant for institutional context as well"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Institutional Investors",
+          "note": "Competitor CoinDesk captures 27.5% of queries, indicating opportunity"
+        },
+        {
+          "name": "Young Investors",
+          "note": "Segment not directly addressed while trend indicates interest in crypto among youth"
+        },
+        {
+          "name": "Tech Enthusiasts",
+          "note": "Competitor The Block captures a significant share with 25.0% relevance"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong brand recognition in the crypto news space",
+        "High frequency of news updates on major cryptocurrencies",
+        "Diverse coverage of cryptocurrency topics"
+      ],
+      "opportunities": [
+        "Expand coverage on institutional investment topics",
+        "Increase focus on emerging technologies like DeFi",
+        "Leverage AI insights for targeted content creation"
+      ],
+      "gaps": [
+        "Low ranking for niche keywords like 'blockchain news'",
+        "Limited mentions in AI responses compared to competitors",
+        "Underrepresentation in institutional-focused queries"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create dedicated sections for institutional investor content",
+        "Develop content on 'crypto mining' focused topics",
+        "Highlight 'cryptocurrency prices' in more articles",
+        "Increase blog posts on emerging blockchain trends"
+      ],
+      "link_building": [
+        "Collaborate with blockchain educational sites for guest posts",
+        "Engage in partnerships with financial analysis platforms",
+        "Develop whitepapers on cryptocurrency market trends"
+      ],
+      "quick_wins": [
+        "Optimize current articles for keywords like 'blockchain news'",
+        "Enhance homepage SEO to improve AI visibility",
+        "Regularly update content with trending cryptocurrency news topics",
+        "Use social media to share breaking news to increase site traffic"
+      ]
+    }
+  }
+}
