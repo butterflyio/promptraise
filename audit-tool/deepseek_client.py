@@ -23,7 +23,7 @@ Always respond with valid JSON only. No markdown, no prose outside the JSON."""
 class DeepSeekClient:
     """Queries DeepSeek via OpenRouter for brand competitive data."""
 
-    DEFAULT_MODEL = "deepseek/deepseek-chat-v3"
+    DEFAULT_MODEL = "deepseek/deepseek-chat"
 
     def __init__(self, api_key: Optional[str] = None, model: Optional[str] = None):
         self.api_key = api_key or os.environ.get("OPENROUTER_API_KEY")

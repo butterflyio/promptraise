@@ -15,19 +15,36 @@ import requests
 
 OPENROUTER_URL = "https://openrouter.ai/api/v1/chat/completions"
 
-MODELS = [
-    "deepseek/deepseek-chat-v3",
+def _env_models() -> list:
+    """Allow overriding the model set at runtime via OPENROUTER_MODELS (comma-separated).
+    Swap method for testing: set the env var, no code change needed.
+    """
+    raw = os.environ.get("OPENROUTER_MODELS", "").strip()
+    if raw:
+        return [m.strip() for m in raw.split(",") if m.strip()]
+    return DEFAULT_MODELS
+
+DEFAULT_MODELS = [
+    "deepseek/deepseek-chat",
+    "anthropic/claude-3-haiku",
+    "google/gemini-2.5-flash",
     "openai/gpt-4o-mini",
-    "mistralai/mistral-small-3.1-24b-instruct",
-    "meta-llama/llama-3.1-70b-instruct",
 ]
 
+MODELS = _env_models()
+
 MODEL_DISPLAY_NAMES = {
-    "deepseek/deepseek-chat-v3": "DeepSeek",
+    "deepseek/deepseek-chat": "DeepSeek",
+    "anthropic/claude-3-haiku": "Claude",
+    "google/gemini-2.5-flash": "Gemini",
     "openai/gpt-4o-mini": "OpenAI",
-    "mistralai/mistral-small-3.1-24b-instruct": "Mistral",
-    "meta-llama/llama-3.1-70b-instruct": "Llama",
 }
+
+def _helper_model() -> str:
+    """The single model used for internal generation (customer types, discovery,
+    publication discovery). Overridable via OPENROUTER_HELPER_MODEL for testing.
+    """
+    return os.environ.get("OPENROUTER_HELPER_MODEL", "anthropic/claude-3-haiku").strip()
 
 # DISCOVERY_QUESTIONS removed - dynamically generated per project subcategory via _detect_subcategory_and_generate_questions
 
