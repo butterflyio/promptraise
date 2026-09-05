@@ -1,0 +1,657 @@
+{
+  "site": {
+    "name": "Ordocode",
+    "url": "https://ordocode.ai/",
+    "domain": "ordocode.ai",
+    "slug": "ordocode",
+    "analysis_id": "openrouter-ordocode",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "September 05, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 52,
+    "score_status": "Moderate AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 75,
+    "own_mentioned": true,
+    "own_appearance_pct": 52.5,
+    "own_appearance_note": "Site mentioned in 52.5% of responses",
+    "hero_comparison": [
+      {
+        "value": "52.5%",
+        "label": "Ordocode Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "70.0%",
+        "label": "chai (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "37.5%",
+        "label": "truffle (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Software Developers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "chai",
+          "appearance": 70.0,
+          "rank": 9.71,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Ordocode",
+          "appearance": 40.0,
+          "rank": 3.81,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "truffle",
+          "appearance": 37.5,
+          "rank": 11.93,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "hardhat",
+          "appearance": 32.5,
+          "rank": 15.62,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "openzeppelin",
+          "appearance": 32.5,
+          "rank": 13.62,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solidity",
+          "appearance": 27.5,
+          "rank": 11.55,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "certik",
+          "appearance": 20.0,
+          "rank": 9.88,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "alchemy",
+          "appearance": 15.0,
+          "rank": 15.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "truffle suite",
+          "appearance": 15.0,
+          "rank": 11.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "certora",
+          "appearance": 15.0,
+          "rank": 15.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Product Managers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "chai",
+          "appearance": 67.5,
+          "rank": 8.26,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Ordocode",
+          "appearance": 52.5,
+          "rank": 5.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "openzeppelin",
+          "appearance": 22.5,
+          "rank": 12.11,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "certik",
+          "appearance": 15.0,
+          "rank": 12.83,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "truffle",
+          "appearance": 12.5,
+          "rank": 10.6,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "circleci",
+          "appearance": 10.0,
+          "rank": 20.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "diligence",
+          "appearance": 10.0,
+          "rank": 15.75,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "hardhat",
+          "appearance": 10.0,
+          "rank": 9.5,
+          "providers": [
+            "DeepSeek",
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solidity",
+          "appearance": 10.0,
+          "rank": 12.0,
+          "providers": [
+            "OpenAI",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "runtime verification",
+          "appearance": 7.5,
+          "rank": 14.67,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "code",
+      "count": 257
+    },
+    {
+      "text": "name",
+      "count": 144
+    },
+    {
+      "text": "smart",
+      "count": 142
+    },
+    {
+      "text": "tools",
+      "count": 132
+    },
+    {
+      "text": "development",
+      "count": 123
+    },
+    {
+      "text": "testing",
+      "count": 94
+    },
+    {
+      "text": "blockchain",
+      "count": 92
+    },
+    {
+      "text": "requirements",
+      "count": 91
+    },
+    {
+      "text": "contract",
+      "count": 85
+    },
+    {
+      "text": "formal",
+      "count": 84
+    }
+  ],
+  "sources": [
+    {
+      "name": "ordocode.com",
+      "url": "https://ordocode.com",
+      "mentions": 2
+    },
+    {
+      "name": "monday.com",
+      "url": "https://monday.com",
+      "mentions": 2
+    },
+    {
+      "name": "gitlab.com",
+      "url": "https://gitlab.com",
+      "mentions": 2
+    },
+    {
+      "name": "trufflesuite",
+      "url": "https://trufflesuite",
+      "mentions": 1
+    },
+    {
+      "name": "remix.ethereum",
+      "url": "https://remix.ethereum",
+      "mentions": 1
+    },
+    {
+      "name": "hardhat.org",
+      "url": "https://hardhat.org",
+      "mentions": 1
+    },
+    {
+      "name": "trello.com",
+      "url": "https://trello.com",
+      "mentions": 1
+    },
+    {
+      "name": "slack.com",
+      "url": "https://slack.com",
+      "mentions": 1
+    },
+    {
+      "name": "asana.com",
+      "url": "https://asana.com",
+      "mentions": 1
+    },
+    {
+      "name": "atlassian",
+      "url": "https://atlassian",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I automate the process of turning product requirements into functional code?",
+      "type": "missing",
+      "persona": "Independent Developer"
+    },
+    {
+      "text": "What solutions exist for verifying the accuracy and reliability of software I develop?",
+      "type": "missing",
+      "persona": "Independent Developer"
+    },
+    {
+      "text": "What steps can I take to ensure that my software adheres to specified requirements?",
+      "type": "missing",
+      "persona": "Independent Developer"
+    },
+    {
+      "text": "Are there tools that allow me to monitor the development process in real time?",
+      "type": "missing",
+      "persona": "Independent Developer"
+    },
+    {
+      "text": "What are the advantages of using AI to generate software code from specifications?",
+      "type": "missing",
+      "persona": "Team Lead at a Tech Company"
+    },
+    {
+      "text": "How does formal verification improve team collaboration during the development process?",
+      "type": "missing",
+      "persona": "Team Lead at a Tech Company"
+    },
+    {
+      "text": "Can I see examples of completed projects that demonstrate the effectiveness of this software generation process?",
+      "type": "missing",
+      "persona": "Team Lead at a Tech Company"
+    },
+    {
+      "text": "How do I ensure that the code meets industry standards before deployment?",
+      "type": "missing",
+      "persona": "Team Lead at a Tech Company"
+    },
+    {
+      "text": "What process do I follow to convert a product vision into accurate technical specifications?",
+      "type": "missing",
+      "persona": "Startup Product Manager"
+    },
+    {
+      "text": "How can I verify that the generated code meets the project's requirements?",
+      "type": "missing",
+      "persona": "Startup Product Manager"
+    },
+    {
+      "text": "What are the best practices for collaborating with developers using AI-generated solutions?",
+      "type": "missing",
+      "persona": "Startup Product Manager"
+    },
+    {
+      "text": "What steps can I take to ensure that my software adheres to specified requirements?",
+      "type": "missing",
+      "persona": "Independent Developer"
+    },
+    {
+      "text": "Are there tools that allow me to monitor the development process in real time?",
+      "type": "missing",
+      "persona": "Independent Developer"
+    },
+    {
+      "text": "What are the advantages of using AI to generate software code from specifications?",
+      "type": "missing",
+      "persona": "Team Lead at a Tech Company"
+    },
+    {
+      "text": "How does formal verification improve team collaboration during the development process?",
+      "type": "missing",
+      "persona": "Team Lead at a Tech Company"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dapp.com",
+      "domain": "dapp.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockonomi.com",
+      "domain": "blockonomi.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "towardsdatascience.com",
+      "domain": "towardsdatascience.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "hackernoon.com",
+      "domain": "hackernoon.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "ethereum.org",
+      "domain": "ethereum.org",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchain.org",
+      "domain": "blockchain.org",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "claude": 30,
+    "deepseek": 50,
+    "openai": 42,
+    "gemini": 50
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "formally verified",
+        "evidence": "The term 'formally verified' is not recognized by AI engines in their responses.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Cambrian language",
+        "evidence": "AI engines do not refer to 'Cambrian language', potentially limiting recognition of OrdoCode's technology.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "approved specification",
+        "evidence": "AI engines mention 'specification' but not in conjunction with 'approved', leading to less visibility in formal contexts.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "verified properties",
+        "evidence": "Specific phrases like 'verified properties' are not captured, impacting SEO around key features of the service.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "OrdoCode turns an agreed product specification into source code, tests, and verification evidence.",
+        "site_context": "Clear but technical description of the service.",
+        "ai_uses": "Code, development, blockchain, tools.",
+        "ai_context": "AI engines use broader, simpler terms associated with software development."
+      },
+      {
+        "site_says": "Your idea. Clear requirements. Your code. Verified properties.",
+        "site_context": "Highlights OrdoCode's customer-centric focus.",
+        "ai_uses": "Testing, requirements, smart contract.",
+        "ai_context": "AI emphasizes output and typical software processes."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Software Developers",
+          "note": "Clearly targeted with technical offerings."
+        },
+        {
+          "name": "Product Managers",
+          "note": "Focused on requirements and oversight."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Enterprises",
+          "note": "Competitors like chai attract 70.0% visibility."
+        },
+        {
+          "name": "Startups",
+          "note": "Rival platforms like OpenZeppelin have a significant market presence."
+        },
+        {
+          "name": "Blockchain Specialists",
+          "note": "Competition from platforms focused on blockchain tools is high."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Comprehensive approach to software development with verification",
+        "Unique focus on formal verification in AI-generated code",
+        "High customer engagement potential with beta testing"
+      ],
+      "opportunities": [
+        "Expand content around differences between OrdoCode and competitors like chai and truffle",
+        "Incorporate terminology that resonates with AI engines for better visibility",
+        "Leverage partnerships with educational platforms for outreach"
+      ],
+      "gaps": [
+        "Lower AI visibility compared to top competitors (40.0% vs chai's 70.0%)",
+        "Underutilization of key technical terms that can enhance search visibility",
+        "Limited recognition of platform-specific features in AI-generated content"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create detailed 'How OrdoCode works' guides focused on blockchain development",
+        "Develop case studies showcasing successful deployments with real specifications",
+        "Revamp homepage to highlight unique technology aspects and benefits",
+        "Optimize existing content for recognized AI search terms like 'smart contract'"
+      ],
+      "link_building": [
+        "Establish backlinks from blockchain and software development educational sites",
+        "Collaborate with influencers in the coding community for content co-creation",
+        "Engage in guest blogging on tech platforms to enhance domain authority",
+        "Participate in webinars and podcasts to improve brand presence"
+      ],
+      "quick_wins": [
+        "Update meta descriptions to include high-traffic keywords identified in the audit",
+        "Enhance social media campaigns to directly address competitive offerings",
+        "Conduct a keyword analysis to find additional terms missing from the site's content",
+        "Implement on-page SEO tactics focusing on identified high-value phrases"
+      ]
+    }
+  }
+}
