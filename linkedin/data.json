@@ -1,0 +1,756 @@
+{
+  "site": {
+    "name": "Linkedin",
+    "url": "https://www.linkedin.com/",
+    "domain": "www.linkedin.com",
+    "slug": "linkedin",
+    "analysis_id": "openrouter-linkedin",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "September 10, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 72,
+    "score_status": "Moderate AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 124,
+    "own_mentioned": true,
+    "own_appearance_pct": 72.5,
+    "own_appearance_note": "Site mentioned in 72.5% of responses",
+    "hero_comparison": [
+      {
+        "value": "72.5%",
+        "label": "Linkedin Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "60.0%",
+        "label": "consensys (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "37.5%",
+        "label": "solana (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Job Seekers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Linkedin",
+          "appearance": 65.0,
+          "rank": 7.46,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "consensys",
+          "appearance": 60.0,
+          "rank": 12.88,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solana",
+          "appearance": 37.5,
+          "rank": 14.4,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance",
+          "appearance": 35.0,
+          "rank": 14.79,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "otoco",
+          "appearance": 35.0,
+          "rank": 13.79,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 35.0,
+          "rank": 14.14,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "aave",
+          "appearance": 27.5,
+          "rank": 15.09,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "indeed",
+          "appearance": 20.0,
+          "rank": 12.25,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "twitter",
+          "appearance": 15.0,
+          "rank": 18.83,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "AngelList",
+          "appearance": 15.0,
+          "rank": 16.67,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Claude": 1,
+        "Gemini": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Employers and Recruiters",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Linkedin",
+          "appearance": 72.5,
+          "rank": 8.69,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "consensys",
+          "appearance": 42.5,
+          "rank": 14.94,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 25.0,
+          "rank": 15.7,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "AngelList",
+          "appearance": 22.5,
+          "rank": 14.44,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "angellist",
+          "appearance": 22.5,
+          "rank": 14.44,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "aave",
+          "appearance": 22.5,
+          "rank": 20.78,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solana",
+          "appearance": 22.5,
+          "rank": 18.44,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "discord",
+          "appearance": 20.0,
+          "rank": 12.38,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "remote",
+          "appearance": 20.0,
+          "rank": 19.38,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "cryptojobslist",
+          "appearance": 17.5,
+          "rank": 19.0,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Claude": 1,
+        "Gemini": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "blockchain",
+      "count": 257
+    },
+    {
+      "text": "web3",
+      "count": 246
+    },
+    {
+      "text": "your",
+      "count": 212
+    },
+    {
+      "text": "name",
+      "count": 169
+    },
+    {
+      "text": "company",
+      "count": 119
+    },
+    {
+      "text": "details",
+      "count": 109
+    },
+    {
+      "text": "industry",
+      "count": 98
+    },
+    {
+      "text": "competitors",
+      "count": 96
+    },
+    {
+      "text": "candidates",
+      "count": 91
+    },
+    {
+      "text": "companies",
+      "count": 90
+    }
+  ],
+  "sources": [
+    {
+      "name": "glassdoor",
+      "url": "https://glassdoor",
+      "mentions": 3
+    },
+    {
+      "name": "angel.co",
+      "url": "https://angel.co",
+      "mentions": 2
+    },
+    {
+      "name": "linkedin",
+      "url": "https://linkedin",
+      "mentions": 2
+    },
+    {
+      "name": "economicgraph.linkedin",
+      "url": "https://economicgraph.linkedin",
+      "mentions": 2
+    },
+    {
+      "name": "mirror.xyz",
+      "url": "https://mirror.xyz",
+      "mentions": 1
+    },
+    {
+      "name": "blockchain",
+      "url": "https://blockchain",
+      "mentions": 1
+    },
+    {
+      "name": "coingecko",
+      "url": "https://coingecko",
+      "mentions": 1
+    },
+    {
+      "name": "cryptojobslist.com",
+      "url": "https://cryptojobslist.com",
+      "mentions": 1
+    },
+    {
+      "name": "web3.career",
+      "url": "https://web3.career",
+      "mentions": 1
+    },
+    {
+      "name": "greenhouse",
+      "url": "https://greenhouse",
+      "mentions": 1
+    },
+    {
+      "name": "lever",
+      "url": "https://lever",
+      "mentions": 1
+    },
+    {
+      "name": "ashbyhq",
+      "url": "https://ashbyhq",
+      "mentions": 1
+    },
+    {
+      "name": "gem",
+      "url": "https://gem",
+      "mentions": 1
+    },
+    {
+      "name": "hadley",
+      "url": "https://hadley",
+      "mentions": 1
+    },
+    {
+      "name": "pinata",
+      "url": "https://pinata",
+      "mentions": 1
+    },
+    {
+      "name": "blockchain.com",
+      "url": "https://blockchain.com",
+      "mentions": 1
+    },
+    {
+      "name": "interviewing.io",
+      "url": "https://interviewing.io",
+      "mentions": 1
+    },
+    {
+      "name": "coindesk",
+      "url": "https://coindesk",
+      "mentions": 1
+    },
+    {
+      "name": "speedtest.net",
+      "url": "https://speedtest.net",
+      "mentions": 1
+    },
+    {
+      "name": "cryptojobs.co",
+      "url": "https://cryptojobs.co",
+      "mentions": 1
+    },
+    {
+      "name": "qualified.io",
+      "url": "https://qualified.io",
+      "mentions": 1
+    },
+    {
+      "name": "remote.co",
+      "url": "https://remote.co",
+      "mentions": 1
+    },
+    {
+      "name": "roberthalf",
+      "url": "https://roberthalf",
+      "mentions": 1
+    },
+    {
+      "name": "indeed",
+      "url": "https://indeed",
+      "mentions": 1
+    },
+    {
+      "name": "crunchbase",
+      "url": "https://crunchbase",
+      "mentions": 1
+    },
+    {
+      "name": "ziprecruiter",
+      "url": "https://ziprecruiter",
+      "mentions": 1
+    },
+    {
+      "name": "employeereferrals.com",
+      "url": "https://employeereferrals.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What are some effective ways to showcase my skills on my professional profile?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "What should I focus on when connecting with industry professionals?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "What tips can help me prepare for a virtual job interview?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "Are there specific certifications that could enhance my profile for career advancement?",
+      "type": "missing",
+      "persona": "Mid-Career Professional"
+    },
+    {
+      "text": "How can diversity initiatives be effectively integrated into the hiring process?",
+      "type": "missing",
+      "persona": "Corporate HR Manager"
+    },
+    {
+      "text": "What tools are recommended for managing recruitment workflows and candidate tracking?",
+      "type": "missing",
+      "persona": "Corporate HR Manager"
+    },
+    {
+      "text": "Are there specific companies that hire recent graduates frequently?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "What tips can help me prepare for a virtual job interview?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "Are there specific certifications that could enhance my profile for career advancement?",
+      "type": "missing",
+      "persona": "Mid-Career Professional"
+    },
+    {
+      "text": "What are the best practices for posting job openings to attract top talent?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "How can diversity initiatives be effectively integrated into the hiring process?",
+      "type": "missing",
+      "persona": "Corporate HR Manager"
+    },
+    {
+      "text": "What tools are recommended for managing recruitment workflows and candidate tracking?",
+      "type": "missing",
+      "persona": "Corporate HR Manager"
+    },
+    {
+      "text": "Are there specific companies that hire recent graduates frequently?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "What tips can help me prepare for a virtual job interview?",
+      "type": "missing",
+      "persona": "Recent Graduate"
+    },
+    {
+      "text": "How can I highlight my experience to appeal to employers in a different sector?",
+      "type": "missing",
+      "persona": "Mid-Career Professional"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "cointelegraph.com",
+      "domain": "cointelegraph.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decentralized.africa",
+      "domain": "decentralized.africa",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "web3foundation.org",
+      "domain": "web3foundation.org",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dapp.com",
+      "domain": "dapp.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "community.nasdaq.com",
+      "domain": "community.nasdaq.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchain-expo.com",
+      "domain": "blockchain-expo.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "navigator-crypto.com",
+      "domain": "navigator-crypto.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "consensys.net",
+      "domain": "consensys.net",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 47,
+    "claude": 42,
+    "gemini": 48,
+    "deepseek": 50
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "professional identity",
+        "evidence": "This specific term may resonate more with users than general terms.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "network engagement",
+        "evidence": "AI responses focus on connections rather than engagement, missing the depth.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "opportunity access",
+        "evidence": "''Access knowledge, insights and opportunities' is not mirrored in AI content.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Open To Work",
+        "evidence": "This feature could boost relevance but is not prominently noted by AI.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "skills development",
+        "evidence": "Site emphasizes learning and skill acquisition, which AI could better utilize.",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Manage your professional identity.",
+        "site_context": "Focus on personal branding.",
+        "ai_uses": "company details",
+        "ai_context": "AI emphasizes organizational aspects over personal branding."
+      },
+      {
+        "site_says": "Connect with people who can help.",
+        "site_context": "Encourages networking.",
+        "ai_uses": "candidates",
+        "ai_context": "AI primarily highlights job seekers without a networking angle."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Job Seekers",
+          "note": "Targeted with a vast array of job opportunities."
+        },
+        {
+          "name": "Employers and Recruiters",
+          "note": "Offers tools for recruitment and job posting."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Freelancers",
+          "note": "Only 15% visibility against competitors."
+        },
+        {
+          "name": "Small Business Owners",
+          "note": "Lacking targeted content, <20% visibility."
+        },
+        {
+          "name": "Students",
+          "note": "Competitors like AngelList target this segment well."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong brand recognition with 1 billion members.",
+        "Diverse content offerings including courses and job postings.",
+        "Robust tools for both job seekers and employers."
+      ],
+      "opportunities": [
+        "Increase focus on niches like freelancers for better visibility.",
+        "Enhance presence around 'network engagement' in AI responses.",
+        "Leverage specific features like 'Open To Work' in outreach."
+      ],
+      "gaps": [
+        "Lower visibility (65%) compared to strong competitors like Consensys (60%).",
+        "Underrepresentation in topics like blockchain and Web3 in AI mentions.",
+        "Competitor sites have higher rankings in non-traditional job markets."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop comprehensive content around 'network engagement' roles.",
+        "Create targeted resources for freelancers and small businesses.",
+        "Highlight the 'Open To Work' feature in content and marketing.",
+        "Increase educational content related to blockchain and Web3."
+      ],
+      "link_building": [
+        "Collaborate with educational sites for backlinks to courses.",
+        "Engage with industry blogs covering networking and recruitment.",
+        "Create shareable infographics on labor market trends to drive links.",
+        "Leverage partner networks for cross-promotion and linking opportunities."
+      ],
+      "quick_wins": [
+        "Optimize existing pages with keywords like 'professional identity'.",
+        "Feature user testimonials prominently to enhance trust.",
+        "Implement a blog section targeting freelancers with relevant tips.",
+        "Use AI tools to identify underutilized keywords in site content."
+      ]
+    }
+  }
+}
