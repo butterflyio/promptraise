@@ -1,0 +1,667 @@
+{
+  "site": {
+    "name": "Acurast",
+    "url": "https://acurast.com/",
+    "domain": "acurast.com",
+    "slug": "acurast",
+    "analysis_id": "openrouter-acurast",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "September 15, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 97,
+    "score_status": "Strong AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 54,
+    "own_mentioned": true,
+    "own_appearance_pct": 97.5,
+    "own_appearance_note": "Site mentioned in 97.5% of responses",
+    "hero_comparison": [
+      {
+        "value": "97.5%",
+        "label": "Acurast Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "27.5%",
+        "label": "akash network (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "22.5%",
+        "label": "filecoin (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Tech Savvy Individuals",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Acurast",
+          "appearance": 82.5,
+          "rank": 4.06,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "filecoin",
+          "appearance": 22.5,
+          "rank": 14.44,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "akash network",
+          "appearance": 20.0,
+          "rank": 16.5,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Golem",
+          "appearance": 12.5,
+          "rank": 16.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "golem",
+          "appearance": 12.5,
+          "rank": 16.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "helium",
+          "appearance": 12.5,
+          "rank": 6.6,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ipfs",
+          "appearance": 10.0,
+          "rank": 12.0,
+          "providers": [
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "fluence",
+          "appearance": 7.5,
+          "rank": 16.67,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "render network",
+          "appearance": 7.5,
+          "rank": 19.33,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "iExec",
+          "appearance": 5.0,
+          "rank": 25.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "SMBs and Startups",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Acurast",
+          "appearance": 97.5,
+          "rank": 3.49,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "akash network",
+          "appearance": 27.5,
+          "rank": 15.27,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "filecoin",
+          "appearance": 17.5,
+          "rank": 13.0,
+          "providers": [
+            "OpenAI",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "render network",
+          "appearance": 15.0,
+          "rank": 13.17,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Golem",
+          "appearance": 15.0,
+          "rank": 13.5,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "golem",
+          "appearance": 15.0,
+          "rank": 13.5,
+          "providers": [
+            "OpenAI",
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "iExec",
+          "appearance": 10.0,
+          "rank": 18.25,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "iexec",
+          "appearance": 10.0,
+          "rank": 18.25,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "storj",
+          "appearance": 10.0,
+          "rank": 11.75,
+          "providers": [
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ipfs",
+          "appearance": 7.5,
+          "rank": 14.33,
+          "providers": [
+            "Gemini",
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "data",
+      "count": 336
+    },
+    {
+      "text": "decentralized",
+      "count": 199
+    },
+    {
+      "text": "network",
+      "count": 153
+    },
+    {
+      "text": "blockchain",
+      "count": 112
+    },
+    {
+      "text": "name",
+      "count": 93
+    },
+    {
+      "text": "applications",
+      "count": 74
+    },
+    {
+      "text": "computing",
+      "count": 71
+    },
+    {
+      "text": "processing",
+      "count": 71
+    },
+    {
+      "text": "cloud",
+      "count": 68
+    },
+    {
+      "text": "competitors",
+      "count": 66
+    }
+  ],
+  "sources": [
+    {
+      "name": "acurast.com",
+      "url": "https://acurast.com",
+      "mentions": 7
+    },
+    {
+      "name": "acurast",
+      "url": "https://acurast",
+      "mentions": 3
+    },
+    {
+      "name": "discord.gg",
+      "url": "https://discord.gg",
+      "mentions": 2
+    },
+    {
+      "name": "forum.acurast",
+      "url": "https://forum.acurast",
+      "mentions": 2
+    },
+    {
+      "name": "thegraph.com",
+      "url": "https://thegraph.com",
+      "mentions": 2
+    },
+    {
+      "name": "kolibr.io",
+      "url": "https://kolibr.io",
+      "mentions": 1
+    },
+    {
+      "name": "t.me",
+      "url": "https://t.me",
+      "mentions": 1
+    },
+    {
+      "name": "blog.acurast",
+      "url": "https://blog.acurast",
+      "mentions": 1
+    },
+    {
+      "name": "zkproof.org",
+      "url": "https://zkproof.org",
+      "mentions": 1
+    },
+    {
+      "name": "chain.link",
+      "url": "https://chain.link",
+      "mentions": 1
+    },
+    {
+      "name": "vimeo.com",
+      "url": "https://vimeo.com",
+      "mentions": 1
+    },
+    {
+      "name": "chain",
+      "url": "https://chain",
+      "mentions": 1
+    },
+    {
+      "name": "developer.acurast",
+      "url": "https://developer.acurast",
+      "mentions": 1
+    },
+    {
+      "name": "youtube.com",
+      "url": "https://youtube.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I leverage smartphones in a distributed network for my app?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "What are the specific advantages of using mobile devices for compute tasks?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "What kind of data processing capabilities does Acurast provide for analytics?",
+      "type": "missing",
+      "persona": "Data Scientist"
+    },
+    {
+      "text": "How can I ensure confidentiality while executing data analysis tasks on distributed systems?",
+      "type": "missing",
+      "persona": "Data Scientist"
+    },
+    {
+      "text": "How can I leverage smartphones in a distributed network for my app?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "What are the specific advantages of using mobile devices for compute tasks?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "How can I ensure confidentiality while executing data analysis tasks on distributed systems?",
+      "type": "missing",
+      "persona": "Data Scientist"
+    },
+    {
+      "text": "What are the potential revenue opportunities for using Acurast's compute network?",
+      "type": "missing",
+      "persona": "Startup Founder"
+    },
+    {
+      "text": "How can I leverage smartphones in a distributed network for my app?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "How does Acurast's mobile computing compare to traditional cloud services?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "What are the specific advantages of using mobile devices for compute tasks?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "Can I integrate my existing applications with Acurast's network easily?",
+      "type": "missing",
+      "persona": "Mobile App Developer"
+    },
+    {
+      "text": "How can I ensure confidentiality while executing data analysis tasks on distributed systems?",
+      "type": "missing",
+      "persona": "Data Scientist"
+    },
+    {
+      "text": "How does the performance of Acurast's network compare to centralized data processing?",
+      "type": "missing",
+      "persona": "Data Scientist"
+    },
+    {
+      "text": "Are there specific languages or frameworks that work best with Acurast for data science?",
+      "type": "missing",
+      "persona": "Data Scientist"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchainnews.com",
+      "domain": "blockchainnews.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dev.to",
+      "domain": "dev.to",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "zilliqa.com",
+      "domain": "zilliqa.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockgeeks.com",
+      "domain": "blockgeeks.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "gencraft.com",
+      "domain": "gencraft.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dzone.com",
+      "domain": "dzone.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "medium.com/@jacobwhite",
+      "domain": "medium.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 34,
+    "gemini": 50,
+    "claude": 31,
+    "deepseek": 49
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "Decentralized Compute Network",
+        "evidence": "AI engines do not recognize this specific term.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Cloud Rebellion",
+        "evidence": "Limited mention in AI responses compared to site usage.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Staked Compute",
+        "evidence": "AI engines have little to no reference to this unique approach.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Confidential LLMs",
+        "evidence": "Not referenced by AI engines despite being a key feature.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "The Real Decentralized Compute Network",
+        "site_context": "Highlights the unique value proposition of Acurast.",
+        "ai_uses": "Decentralized network and compute solutions.",
+        "ai_context": "Focuses on general decentralized terms without brand specificity."
+      },
+      {
+        "site_says": "Powered by Smartphones",
+        "site_context": "Emphasizes the hardware aspect of Acurast's solution.",
+        "ai_uses": "Blockchain and computing.",
+        "ai_context": "Lacks emphasis on the smartphone-focused approach."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Tech Savvy Individuals",
+          "note": "Well-targeted segment with relevant responses."
+        },
+        {
+          "name": "SMBs and Startups",
+          "note": "Identified needs for decentralized solutions."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Eco-conscious consumers",
+          "note": "Competitive landscape at about 12.5%."
+        },
+        {
+          "name": "Broader tech enthusiasts",
+          "note": "AI mentions only 10% of inquiries related."
+        },
+        {
+          "name": "Enterprises looking for cloud alternatives",
+          "note": "Competitors like Filecoin at 22.5%."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong emphasis on security through smartphone technology.",
+        "Unique community engagement initiatives (e.g., Cloud Rebellion).",
+        "High AI visibility compared to competitors like Filecoin and Akash Network."
+      ],
+      "opportunities": [
+        "Expand outreach to enterprise-level customers seeking decentralized solutions.",
+        "Increase content around unique offerings like Staked Compute.",
+        "Leverage community-driven content to enhance brand visibility."
+      ],
+      "gaps": [
+        "Lower visibility in AI engines compared to competitors.",
+        "Limited recognition of specialized terminology.",
+        "Underutilization of content about unique community features."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create detailed pages on Staked Compute and its benefits.",
+        "Develop content around the Cloud Rebellion community initiatives.",
+        "Publish case studies on successful decentralized compute applications.",
+        "Enhance blog topics to cover smartphone security features.",
+        "Utilize AI-targeted keywords in content strategy."
+      ],
+      "link_building": [
+        "Engage with tech forums and communities to link back to Acurast.",
+        "Collaborate with influencers in the decentralized tech space.",
+        "Increase backlinks from related blogs focused on decentralized computing.",
+        "Partnerships with academic institutions for research citations.",
+        "Submit guest articles to blockchain and tech news sites."
+      ],
+      "quick_wins": [
+        "Optimize homepage for highlighted keywords like 'Decentralized Compute Network.'",
+        "Social media campaign targeting misunderstood terms like 'Staked Compute.'",
+        "Share success stories in user forums to foster engagement.",
+        "Update meta descriptions to include AI-friendly terminology.",
+        "Launch educational webinars highlighting unique features."
+      ]
+    }
+  }
+}
