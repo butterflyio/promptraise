@@ -6,32 +6,32 @@
     "slug": "up10",
     "analysis_id": "openrouter-up10",
     "site_uuid": "openrouter-batch",
-    "generated_at": "September 08, 2026",
+    "generated_at": "September 17, 2026",
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 50,
-    "score_status": "Moderate AI Visibility",
+    "score": 37,
+    "score_status": "Low AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
-    "unique_competitors": 61,
+    "unique_competitors": 51,
     "own_mentioned": true,
-    "own_appearance_pct": 50.0,
-    "own_appearance_note": "Site mentioned in 50.0% of responses",
+    "own_appearance_pct": 37.5,
+    "own_appearance_note": "Site mentioned in 37.5% of responses",
     "hero_comparison": [
       {
-        "value": "50.0%",
+        "value": "37.5%",
         "label": "Up10 Visibility",
         "trend": ""
       },
       {
-        "value": "50.0%",
-        "label": "solana (Leader)",
+        "value": "35.0%",
+        "label": "Polkastarter (Leader)",
         "trend": ""
       },
       {
-        "value": "42.5%",
-        "label": "Polkastarter (#2)",
+        "value": "35.0%",
+        "label": "polkastarter (#2)",
         "trend": ""
       }
     ]
@@ -43,259 +43,125 @@
       "competitors": [
         {
           "name": "Up10",
-          "appearance": 50.0,
-          "rank": 4.1,
+          "appearance": 37.5,
+          "rank": 3.53,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
             "Gemini",
-            "DeepSeek"
+            "OpenAI"
           ],
           "isOwn": true,
           "url": null
         },
         {
           "name": "Polkastarter",
-          "appearance": 42.5,
-          "rank": 11.06,
+          "appearance": 35.0,
+          "rank": 10.0,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
             "Gemini",
-            "DeepSeek"
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
         },
         {
           "name": "polkastarter",
-          "appearance": 42.5,
-          "rank": 11.06,
+          "appearance": 35.0,
+          "rank": 10.0,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
             "Gemini",
-            "DeepSeek"
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
         },
         {
-          "name": "solana",
-          "appearance": 35.0,
-          "rank": 13.5,
+          "name": "uniswap",
+          "appearance": 30.0,
+          "rank": 14.92,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
             "Gemini",
-            "DeepSeek"
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
         },
         {
           "name": "binance launchpad",
-          "appearance": 30.0,
-          "rank": 14.5,
+          "appearance": 27.5,
+          "rank": 10.91,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
             "Gemini",
-            "DeepSeek"
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "DAO Maker",
+          "appearance": 25.0,
+          "rank": 9.9,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "dao maker",
+          "appearance": 25.0,
+          "rank": 9.9,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
         },
         {
           "name": "coinlist",
-          "appearance": 25.0,
-          "rank": 10.4,
+          "appearance": 22.5,
+          "rank": 10.78,
           "providers": [
+            "DeepSeek",
+            "Claude",
             "Gemini",
-            "OpenAI",
-            "DeepSeek"
+            "OpenAI"
           ],
           "isOwn": false,
           "url": null
         },
         {
-          "name": "avalanche",
-          "appearance": 22.5,
-          "rank": 9.67,
+          "name": "Seedify",
+          "appearance": 17.5,
+          "rank": 10.57,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
+            "Gemini"
           ],
           "isOwn": false,
           "url": null
         },
         {
           "name": "seedify",
-          "appearance": 20.0,
-          "rank": 11.62,
+          "appearance": 17.5,
+          "rank": 10.57,
           "providers": [
+            "DeepSeek",
             "Claude",
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "DAO Maker",
-          "appearance": 15.0,
-          "rank": 14.83,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "dao maker",
-          "appearance": 15.0,
-          "rank": 14.83,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        }
-      ],
-      "total_responses": 10,
-      "provider_order_summary": {
-        "Claude": 0,
-        "OpenAI": 1,
-        "Gemini": 2,
-        "DeepSeek": 3
-      },
-      "has_distinct_competitor_data": true,
-      "data_note": null
-    },
-    {
-      "name": "Investors and Supporters",
-      "uuid": null,
-      "competitors": [
-        {
-          "name": "solana",
-          "appearance": 50.0,
-          "rank": 15.35,
-          "providers": [
-            "Claude",
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Up10",
-          "appearance": 42.5,
-          "rank": 4.18,
-          "providers": [
-            "Claude",
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
-          ],
-          "isOwn": true,
-          "url": null
-        },
-        {
-          "name": "avalanche",
-          "appearance": 27.5,
-          "rank": 21.45,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "gitcoin",
-          "appearance": 10.0,
-          "rank": 18.0,
-          "providers": [
-            "Claude",
-            "OpenAI",
-            "Gemini",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "Polkastarter",
-          "appearance": 10.0,
-          "rank": 9.75,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "polkastarter",
-          "appearance": 10.0,
-          "rank": 9.75,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "DAO Maker",
-          "appearance": 7.5,
-          "rank": 14.0,
-          "providers": [
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "dao maker",
-          "appearance": 7.5,
-          "rank": 14.0,
-          "providers": [
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "coinlist",
-          "appearance": 5.0,
-          "rank": 13.0,
-          "providers": [
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
-        },
-        {
-          "name": "gamefi",
-          "appearance": 5.0,
-          "rank": 11.5,
-          "providers": [
             "Gemini"
           ],
           "isOwn": false,
@@ -304,10 +170,141 @@
       ],
       "total_responses": 10,
       "provider_order_summary": {
-        "Claude": 0,
-        "OpenAI": 1,
+        "DeepSeek": 0,
+        "Claude": 1,
         "Gemini": 2,
-        "DeepSeek": 3
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Early Adopters and Supporters",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "uniswap",
+          "appearance": 32.5,
+          "rank": 15.0,
+          "providers": [
+            "DeepSeek",
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Up10",
+          "appearance": 25.0,
+          "rank": 5.0,
+          "providers": [
+            "DeepSeek",
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "Polkastarter",
+          "appearance": 12.5,
+          "rank": 12.8,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polkastarter",
+          "appearance": 12.5,
+          "rank": 12.8,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinlist",
+          "appearance": 10.0,
+          "rank": 8.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "DAO Maker",
+          "appearance": 7.5,
+          "rank": 14.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "dao maker",
+          "appearance": 7.5,
+          "rank": 14.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "binance launchpad",
+          "appearance": 7.5,
+          "rank": 9.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "TrustSwap",
+          "appearance": 2.5,
+          "rank": 19.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "trustswap",
+          "appearance": 2.5,
+          "rank": 19.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Claude": 1,
+        "Gemini": 2,
+        "OpenAI": 3
       },
       "has_distinct_competitor_data": true,
       "data_note": null
@@ -316,59 +313,69 @@
   "keywords": [
     {
       "text": "projects",
-      "count": 202
-    },
-    {
-      "text": "project",
-      "count": 199
-    },
-    {
-      "text": "community",
       "count": 184
     },
     {
-      "text": "platform",
-      "count": 111
-    },
-    {
-      "text": "platforms",
-      "count": 103
-    },
-    {
       "text": "name",
-      "count": 99
+      "count": 169
     },
     {
-      "text": "your",
-      "count": 85
+      "text": "project",
+      "count": 168
+    },
+    {
+      "text": "community",
+      "count": 132
     },
     {
       "text": "competitors",
-      "count": 83
+      "count": 120
     },
     {
-      "text": "web3",
-      "count": 82
+      "text": "platform",
+      "count": 100
+    },
+    {
+      "text": "your",
+      "count": 92
+    },
+    {
+      "text": "blockchain",
+      "count": 90
+    },
+    {
+      "text": "platforms",
+      "count": 77
     },
     {
       "text": "ethereum",
-      "count": 69
+      "count": 71
     }
   ],
   "sources": [
     {
-      "name": "reddit",
-      "url": "https://reddit",
+      "name": "gamefi.org",
+      "url": "https://gamefi.org",
+      "mentions": 3
+    },
+    {
+      "name": "messari.io",
+      "url": "https://messari.io",
       "mentions": 2
     },
     {
-      "name": "devcon.org",
-      "url": "https://devcon.org",
+      "name": "polkastarter.com",
+      "url": "https://polkastarter.com",
       "mentions": 2
     },
     {
-      "name": "ethglobal.com",
-      "url": "https://ethglobal.com",
+      "name": "discord.gg",
+      "url": "https://discord.gg",
+      "mentions": 2
+    },
+    {
+      "name": "t.me",
+      "url": "https://t.me",
       "mentions": 2
     },
     {
@@ -377,33 +384,23 @@
       "mentions": 2
     },
     {
-      "name": "snapshot.org",
-      "url": "https://snapshot.org",
+      "name": "youtube",
+      "url": "https://youtube",
       "mentions": 2
     },
     {
-      "name": "gitcoin.co",
-      "url": "https://gitcoin.co",
+      "name": "up10.io",
+      "url": "https://up10.io",
+      "mentions": 2
+    },
+    {
+      "name": "gate.io",
+      "url": "https://gate.io",
       "mentions": 1
     },
     {
-      "name": "ethcc.io",
-      "url": "https://ethcc.io",
-      "mentions": 1
-    },
-    {
-      "name": "web3summit.com",
-      "url": "https://web3summit.com",
-      "mentions": 1
-    },
-    {
-      "name": "gamefi.org",
-      "url": "https://gamefi.org",
-      "mentions": 1
-    },
-    {
-      "name": "initialcoinoffering.com",
-      "url": "https://initialcoinoffering.com",
+      "name": "coinmarketcap.com",
+      "url": "https://coinmarketcap.com",
       "mentions": 1
     },
     {
@@ -412,33 +409,83 @@
       "mentions": 1
     },
     {
+      "name": "trustswap.org",
+      "url": "https://trustswap.org",
+      "mentions": 1
+    },
+    {
+      "name": "medium.com",
+      "url": "https://medium.com",
+      "mentions": 1
+    },
+    {
+      "name": "daomaker.com",
+      "url": "https://daomaker.com",
+      "mentions": 1
+    },
+    {
+      "name": "forum.up",
+      "url": "https://forum.up",
+      "mentions": 1
+    },
+    {
       "name": "tally.xyz",
       "url": "https://tally.xyz",
       "mentions": 1
     },
     {
-      "name": "dapp.com",
-      "url": "https://dapp.com",
+      "name": "boardroom.io",
+      "url": "https://boardroom.io",
       "mentions": 1
     },
     {
-      "name": "instagram.com",
-      "url": "https://instagram.com",
+      "name": "snapshot.org",
+      "url": "https://snapshot.org",
       "mentions": 1
     },
     {
-      "name": "defipulse",
-      "url": "https://defipulse",
+      "name": "immutable",
+      "url": "https://immutable",
       "mentions": 1
     },
     {
-      "name": "t.me",
-      "url": "https://t.me",
+      "name": "mirror.xyz",
+      "url": "https://mirror.xyz",
       "mentions": 1
     },
     {
-      "name": "linkedin.com",
-      "url": "https://linkedin.com",
+      "name": "impactdao.xyz",
+      "url": "https://impactdao.xyz",
+      "mentions": 1
+    },
+    {
+      "name": "launchpool.xyz",
+      "url": "https://launchpool.xyz",
+      "mentions": 1
+    },
+    {
+      "name": "launchpad.binance",
+      "url": "https://launchpad.binance",
+      "mentions": 1
+    },
+    {
+      "name": "linkedin",
+      "url": "https://linkedin",
+      "mentions": 1
+    },
+    {
+      "name": "coinlist.co",
+      "url": "https://coinlist.co",
+      "mentions": 1
+    },
+    {
+      "name": "blog.up",
+      "url": "https://blog.up",
+      "mentions": 1
+    },
+    {
+      "name": "nomics.com",
+      "url": "https://nomics.com",
       "mentions": 1
     },
     {
@@ -447,115 +494,99 @@
       "mentions": 1
     },
     {
+      "name": "dappradar.com",
+      "url": "https://dappradar.com",
+      "mentions": 1
+    },
+    {
       "name": "coingecko",
       "url": "https://coingecko",
       "mentions": 1
     },
     {
-      "name": "discord.gg",
-      "url": "https://discord.gg",
-      "mentions": 1
-    },
-    {
-      "name": "coindesk",
-      "url": "https://coindesk",
-      "mentions": 1
-    },
-    {
-      "name": "meetup",
-      "url": "https://meetup",
-      "mentions": 1
-    },
-    {
-      "name": "ethereum.stackexchange",
-      "url": "https://ethereum.stackexchange",
+      "name": "defipulse.com",
+      "url": "https://defipulse.com",
       "mentions": 1
     }
   ],
   "keyword_opportunities": [
     {
-      "text": "How can I launch my project on a platform that prioritizes fairness?",
+      "text": "How can I ensure that all participants have an equal chance to contribute to my project?",
       "type": "missing",
-      "persona": "Startup Founder"
+      "persona": "Tech Entrepreneur"
     },
     {
-      "text": "What features should I consider when choosing a launchpad for my idea?",
+      "text": "What features does your launchpad offer for promoting new digital products?",
       "type": "missing",
-      "persona": "Startup Founder"
+      "persona": "Tech Entrepreneur"
     },
     {
-      "text": "What are the main steps to get my project listed on your platform?",
+      "text": "What are the best practices for presenting my project to potential backers on your site?",
       "type": "missing",
-      "persona": "Startup Founder"
+      "persona": "Tech Entrepreneur"
     },
     {
-      "text": "Can you recommend best practices for designing my project's funding campaign on this platform?",
+      "text": "Which other platforms have successfully helped similar projects gain initial funding?",
       "type": "missing",
-      "persona": "Startup Founder"
+      "persona": "Tech Entrepreneur"
     },
     {
-      "text": "How do I evaluate the platform's reliability before launching my project?",
+      "text": "What tools does your platform provide for showcasing my digital art or content?",
       "type": "missing",
-      "persona": "Product Developer"
+      "persona": "Creative Innovator"
     },
     {
-      "text": "Are there any partnerships or collaborations that can enhance my project's visibility?",
+      "text": "Are there similar projects that have been launched successfully recently that I can learn from?",
       "type": "missing",
-      "persona": "Product Developer"
+      "persona": "Creative Innovator"
     },
     {
-      "text": "What criteria do you use to assess the quality of projects before they are launched?",
+      "text": "What specific outcomes should I measure to assess the impact of my launch on your platform?",
       "type": "missing",
-      "persona": "Angel Investor"
+      "persona": "Creative Innovator"
     },
     {
-      "text": "What is the process for providing feedback or engaging with projects that have launched?",
+      "text": "Can you suggest strategies for building a community around my project before the launch?",
       "type": "missing",
-      "persona": "Angel Investor"
+      "persona": "Creative Innovator"
     },
     {
-      "text": "Can I track the performance of projects I support through your platform?",
+      "text": "What criteria should I use to decide which new projects to support on your platform?",
       "type": "missing",
-      "persona": "Angel Investor"
+      "persona": "Tech Enthusiast"
     },
     {
-      "text": "Are there community events or forums where I can connect with project developers?",
+      "text": "Can I find a list of upcoming launches to evaluate before making a decision?",
       "type": "missing",
-      "persona": "Angel Investor"
+      "persona": "Tech Enthusiast"
     },
     {
-      "text": "Are there ways to contribute to projects beyond financial support?",
+      "text": "What type of rewards or benefits can I expect from participating in new launches?",
       "type": "missing",
-      "persona": "Community Supporter"
+      "persona": "Tech Enthusiast"
     },
     {
-      "text": "How transparent is the process for project development after funding?",
+      "text": "Do you have any recommendations for emerging projects that align with my interests?",
       "type": "missing",
-      "persona": "Community Supporter"
+      "persona": "Tech Enthusiast"
     },
     {
-      "text": "Can I communicate directly with the teams behind the projects I support?",
+      "text": "How do I identify projects that focus on social impact or benefits to communities?",
       "type": "missing",
-      "persona": "Community Supporter"
+      "persona": "Social Advocate"
     },
     {
-      "text": "How can I launch my project on a platform that prioritizes fairness?",
+      "text": "Can I evaluate the track records of projects that have launched successfully before?",
       "type": "missing",
-      "persona": "Startup Founder"
+      "persona": "Social Advocate"
     },
     {
-      "text": "What features should I consider when choosing a launchpad for my idea?",
+      "text": "What are the best practices for promoting projects that I support to my network?",
       "type": "missing",
-      "persona": "Startup Founder"
+      "persona": "Social Advocate"
     }
   ],
   "source_opportunities": [
-    {
-      "name": "theblock.co",
-      "domain": "theblock.co",
-      "type": "competitor",
-      "mentions": 0
-    },
     {
       "name": "cointelegraph.com",
       "domain": "cointelegraph.com",
@@ -569,14 +600,44 @@
       "mentions": 0
     },
     {
-      "name": "consensys.net",
-      "domain": "consensys.net",
+      "name": "cryptoslate.com",
+      "domain": "cryptoslate.com",
       "type": "competitor",
       "mentions": 0
     },
     {
-      "name": "messari.io",
-      "domain": "messari.io",
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "aummap.com",
+      "domain": "aummap.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "dailydrip.com",
+      "domain": "dailydrip.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockworks.co",
+      "domain": "blockworks.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptobriefing.com",
+      "domain": "cryptobriefing.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "redefiningcrypto.com",
+      "domain": "redefiningcrypto.com",
       "type": "competitor",
       "mentions": 0
     },
@@ -585,139 +646,116 @@
       "domain": "nansen.ai",
       "type": "competitor",
       "mentions": 0
-    },
-    {
-      "name": "tokenmetrics.com",
-      "domain": "tokenmetrics.com",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
-      "name": "messenger.network",
-      "domain": "messenger.network",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
-      "name": "defi rate.com",
-      "domain": "defi rate.com",
-      "type": "competitor",
-      "mentions": 0
-    },
-    {
-      "name": "blockchain.news",
-      "domain": "blockchain.news",
-      "type": "competitor",
-      "mentions": 0
     }
   ],
   "provider_coverage": {
-    "claude": 25,
-    "openai": 50,
-    "gemini": 50,
-    "deepseek": 44
+    "deepseek": 50,
+    "claude": 23,
+    "gemini": 44,
+    "openai": 34
   },
   "insights": {
     "terminology_gap": [
       {
         "term": "fair launchpad",
-        "evidence": "AI engines do not recognize this term as commonly associated with launchpads",
+        "evidence": "AI engines did not recognize this specific term",
         "priority": "HIGH"
       },
       {
         "term": "Web3 projects",
-        "evidence": "This specific phrasing does not appear in top AI results",
+        "evidence": "Specific focus on Web3 is undervalued in AI mentions",
         "priority": "HIGH"
       },
       {
-        "term": "community building",
-        "evidence": "Not emphasized in AI responses despite being a core aspect of projects",
+        "term": "community engagement",
+        "evidence": "Lack of reference in AI responses despite importance",
         "priority": "MEDIUM"
       },
       {
-        "term": "decentralized funding",
-        "evidence": "Terminology related to funding models is less recognized in AI",
+        "term": "decentralized fundraising",
+        "evidence": "Not mentioned by AI, yet a critical aspect of their service",
         "priority": "MEDIUM"
       }
     ],
     "language_gap": [
       {
         "site_says": "UP10 - a fair launchpad for Web3 projects",
-        "site_context": "Focuses on the fair launch aspect.",
-        "ai_uses": "projects, community, platforms",
-        "ai_context": "AI highlights community and platform usage without mentioning fairness."
+        "site_context": "Emphasis on fairness in launchpad services",
+        "ai_uses": "platform, blockchain, projects",
+        "ai_context": "Focus on broader terms that encompass various platforms"
       },
       {
-        "site_says": "UP10",
-        "site_context": "Repeated site branding with less contextual depth.",
-        "ai_uses": "your competitors, web3, ethereum",
-        "ai_context": "AI delves into competitive aspects and broader terms."
+        "site_says": "emerging project creators",
+        "site_context": "Target audience is explicitly named",
+        "ai_uses": "community, competitors, your",
+        "ai_context": "AI uses generic terms for the audience pool"
       }
     ],
     "audience_segments": {
       "addressed": [
         {
           "name": "Emerging Project Creators",
-          "note": "Respondent segment directly related to project launches."
+          "note": "Directly mentioned in the context of their services"
         },
         {
-          "name": "Investors and Supporters",
-          "note": "Relevant for funding initiatives."
+          "name": "Early Adopters and Supporters",
+          "note": "Target audience for new projects"
         }
       ],
       "opportunity_gap": [
         {
-          "name": "General Web3 Enthusiasts",
-          "note": "Not explicitly targeted despite AI mentions, avg rank 13.5 for Solana."
+          "name": "Investors",
+          "note": "Currently not targeted despite potential relevance (competitors have ~30% presence)"
         },
         {
-          "name": "Venture Capitalists",
-          "note": "Potential segment not addressed, with competitors like Binance Launchpad at 14.5."
+          "name": "Community Builders",
+          "note": "Could leverage community aspects (competitors with ~25% presence)"
         },
         {
-          "name": "Token Holders",
-          "note": "Could leverage community interest; competitors like Coinlist rank at 10.4."
+          "name": "Blockchain Developers",
+          "note": "Underrepresented in content despite relevance (competitors ~22% presence)"
         }
       ]
     },
     "position": {
       "strengths": [
-        "Strong brand recognition within its niche",
-        "Own site appears in 50% of AI responses",
-        "Direct competition with leading launchpads"
+        "Strong brand recognition with 37.5% AI mention rate",
+        "Focus on fairness sets it apart from competitors",
+        "Engagement with emerging project creators",
+        "Utilization of a unique launchpad model"
       ],
       "opportunities": [
-        "Enhance community-centric language to align with AI terminology",
-        "Broaden audience targeting to include unaddressed segments",
-        "Capitalize on the growing trend of decentralized funding models"
+        "Expand content targeting blockchain developers",
+        "Increase marketing on community engagement",
+        "Leverage competitor weaknesses in decentralized fundraising"
       ],
       "gaps": [
-        "Limited variety in content encouraging repeat visits",
-        "Non-recognition of unique selling propositions (e.g., fair launchpad)",
-        "Less engagement with community-driven platforms cited by AI"
+        "Limited mention of specific services like community engagement",
+        "Underexposure in AI search visibility compared to competitors",
+        "Lack of diverse content addressing investor concerns"
       ]
     },
     "action_items": {
       "content_priorities": [
-        "Create content around 'Web3 community building' to attract AI traffic",
-        "Develop a blog series on 'Fair vs. Unfair Launchpads'",
-        "Implement case studies highlighting successful launches via UP10",
-        "Optimize homepage for terms like 'decentralized funding' and 'community projects'",
-        "Add clear calls-to-action directed towards project creators"
+        "Create targeted landing pages for blockchain developers",
+        "Develop content around 'fair launchpad' comparisons with competitors",
+        "Enhance community engagement communications",
+        "Publish case studies on successful projects launched",
+        "Optimize existing content for emerging project creators"
       ],
       "link_building": [
-        "Engage with top mentions like Reddit and ethglobal.com for backlinks",
-        "Network with rivals to exchange guest posts or link swaps",
-        "Increase social media presence to generate links from related communities",
-        "Host webinars featuring experts to attract links and mentions",
-        "Submit site to related directories and review platforms"
+        "Reach out to gamefi.org and messari.io for backlinks",
+        "Collaborate with YouTube channels focused on Web3",
+        "Engage in partnerships with relevant forums (Discord, Telegram)",
+        "Seek guest blogging opportunities on crypto websites",
+        "Create shareable infographics summarizing launchpad benefits"
       ],
       "quick_wins": [
-        "Update website metadata to incorporate keywords like 'decentralized funding'",
-        "Refresh homepage content to reduce repetition and enhance clarity",
-        "Utilize AI tools to monitor competitor keyword strategies",
-        "Enhance user testimonials on the website to boost credibility",
-        "Deploy an FAQ section to address common queries in launchpad operations"
+        "Update homepage copy to include targeted keywords like 'decentralized fundraising'",
+        "Add testimonials from early adopters on the site",
+        "Launch a social media campaign showcasing unique aspects of the platform",
+        "Engage existing community members to promote their projects through UP10",
+        "Optimize meta tags and descriptions to align with AI search phrases"
       ]
     }
   }
