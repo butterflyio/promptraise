@@ -1,0 +1,680 @@
+{
+  "site": {
+    "name": "Frax",
+    "url": "https://frax.com/",
+    "domain": "frax.com",
+    "slug": "frax",
+    "analysis_id": "openrouter-frax",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "September 18, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 100,
+    "score_status": "Strong AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 65,
+    "own_mentioned": true,
+    "own_appearance_pct": 100.0,
+    "own_appearance_note": "Site mentioned in 100.0% of responses",
+    "hero_comparison": [
+      {
+        "value": "100.0%",
+        "label": "Frax Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "80.0%",
+        "label": "dai (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "80.0%",
+        "label": "usdc (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Individual Users",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Frax",
+          "appearance": 100.0,
+          "rank": 3.58,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "dai",
+          "appearance": 80.0,
+          "rank": 12.72,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "usdc",
+          "appearance": 80.0,
+          "rank": 11.03,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "usdt",
+          "appearance": 67.5,
+          "rank": 12.22,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Aave",
+          "appearance": 50.0,
+          "rank": 12.85,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "aave",
+          "appearance": 50.0,
+          "rank": 12.85,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "maker",
+          "appearance": 47.5,
+          "rank": 14.63,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "tether",
+          "appearance": 47.5,
+          "rank": 12.53,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "makerdao",
+          "appearance": 45.0,
+          "rank": 15.78,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "UniSwap",
+          "appearance": 42.5,
+          "rank": 9.35,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Businesses and Enterprises",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Frax",
+          "appearance": 100.0,
+          "rank": 3.05,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "usdc",
+          "appearance": 77.5,
+          "rank": 10.55,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "dai",
+          "appearance": 70.0,
+          "rank": 13.46,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "maker",
+          "appearance": 57.5,
+          "rank": 13.7,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "makerdao",
+          "appearance": 55.0,
+          "rank": 14.18,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Aave",
+          "appearance": 52.5,
+          "rank": 13.57,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "aave",
+          "appearance": 52.5,
+          "rank": 13.57,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ust",
+          "appearance": 50.0,
+          "rank": 12.45,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "usdt",
+          "appearance": 50.0,
+          "rank": 13.25,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "tether",
+          "appearance": 45.0,
+          "rank": 13.39,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "stablecoin",
+      "count": 217
+    },
+    {
+      "text": "decentralized",
+      "count": 135
+    },
+    {
+      "text": "finance",
+      "count": 135
+    },
+    {
+      "text": "liquidity",
+      "count": 123
+    },
+    {
+      "text": "defi",
+      "count": 120
+    },
+    {
+      "text": "algorithmic",
+      "count": 103
+    },
+    {
+      "text": "protocol",
+      "count": 96
+    },
+    {
+      "text": "usdc",
+      "count": 96
+    },
+    {
+      "text": "yield",
+      "count": 90
+    },
+    {
+      "text": "users",
+      "count": 89
+    }
+  ],
+  "sources": [
+    {
+      "name": "discord.gg",
+      "url": "https://discord.gg",
+      "mentions": 3
+    },
+    {
+      "name": "t.me",
+      "url": "https://t.me",
+      "mentions": 3
+    },
+    {
+      "name": "frax",
+      "url": "https://frax",
+      "mentions": 2
+    },
+    {
+      "name": "fraxfinance.medium",
+      "url": "https://fraxfinance.medium",
+      "mentions": 2
+    },
+    {
+      "name": "frax.finance",
+      "url": "https://frax.finance",
+      "mentions": 2
+    },
+    {
+      "name": "gate.io",
+      "url": "https://gate.io",
+      "mentions": 1
+    },
+    {
+      "name": "reddit",
+      "url": "https://reddit",
+      "mentions": 1
+    },
+    {
+      "name": "gov.frax",
+      "url": "https://gov.frax",
+      "mentions": 1
+    },
+    {
+      "name": "aave",
+      "url": "https://aave",
+      "mentions": 1
+    },
+    {
+      "name": "oasis.app",
+      "url": "https://oasis.app",
+      "mentions": 1
+    },
+    {
+      "name": "youtube",
+      "url": "https://youtube",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I use Frax to maintain the stability of my digital assets?",
+      "type": "missing",
+      "persona": "Tech-Savvy Investor"
+    },
+    {
+      "text": "What features does Frax offer for managing my financial transactions?",
+      "type": "missing",
+      "persona": "Tech-Savvy Investor"
+    },
+    {
+      "text": "What unique advantages does Frax provide for daily financial operations?",
+      "type": "missing",
+      "persona": "Tech-Savvy Investor"
+    },
+    {
+      "text": "What are some user reviews or case studies that highlight the benefits of using Frax?",
+      "type": "missing",
+      "persona": "Tech-Savvy Investor"
+    },
+    {
+      "text": "What types of services does Frax provide for someone new to digital finance?",
+      "type": "missing",
+      "persona": "Casual User"
+    },
+    {
+      "text": "What practical scenarios can I use Frax in to improve my everyday finances?",
+      "type": "missing",
+      "persona": "Casual User"
+    },
+    {
+      "text": "Is there any community support or resources available for beginners using Frax?",
+      "type": "missing",
+      "persona": "Casual User"
+    },
+    {
+      "text": "What financial tools does Frax offer that can benefit my company?",
+      "type": "missing",
+      "persona": "Small Business Owner"
+    },
+    {
+      "text": "Are there any integration options with existing business software available through Frax?",
+      "type": "missing",
+      "persona": "Small Business Owner"
+    },
+    {
+      "text": "Are there best practices or benchmarks for using Frax effectively in large organizations?",
+      "type": "missing",
+      "persona": "Corporate Finance Manager"
+    },
+    {
+      "text": "What are some user reviews or case studies that highlight the benefits of using Frax?",
+      "type": "missing",
+      "persona": "Tech-Savvy Investor"
+    },
+    {
+      "text": "Is there any community support or resources available for beginners using Frax?",
+      "type": "missing",
+      "persona": "Casual User"
+    },
+    {
+      "text": "What are some specific use cases where other businesses improved operations using Frax?",
+      "type": "missing",
+      "persona": "Small Business Owner"
+    },
+    {
+      "text": "Is there any community support or resources available for beginners using Frax?",
+      "type": "missing",
+      "persona": "Casual User"
+    },
+    {
+      "text": "What financial tools does Frax offer that can benefit my company?",
+      "type": "missing",
+      "persona": "Small Business Owner"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "cryptobriefing.com",
+      "domain": "cryptobriefing.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "bankless.substack.com",
+      "domain": "bankless.substack.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "a16z.com",
+      "domain": "a16z.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "nansen.ai",
+      "domain": "nansen.ai",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "uniswap.org/blog",
+      "domain": "uniswap.org",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "yearn.finance",
+      "domain": "yearn.finance",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "deepseek": 50,
+    "gemini": 50,
+    "openai": 50,
+    "claude": 45
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "The Financial Engine of the Internet",
+        "evidence": "This phrase is unique to Frax but not recognized by AI engines.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "algorithmic stablecoin",
+        "evidence": "This specific phrase is less mentioned in AI responses compared to 'stablecoin'.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "decentralized finance solution",
+        "evidence": "AI engines do not emphasize the unique solution aspect.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "liquidity protocol",
+        "evidence": "AI references liquidity but misses the protocol context.",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "The Financial Engine of the Internet",
+        "site_context": "Frax's branding emphasizes its unique role.",
+        "ai_uses": "stablecoin, decentralized, finance",
+        "ai_context": "AI focuses on general terms rather than specific branding."
+      },
+      {
+        "site_says": "decentralized finance solution",
+        "site_context": "Frax describes itself with specific terminology.",
+        "ai_uses": "defi",
+        "ai_context": "AI uses shorthand without complexity of offerings."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Individual Users",
+          "note": "Target audience with specific needs."
+        },
+        {
+          "name": "Businesses and Enterprises",
+          "note": "Focus on larger financial solutions."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Hedge Funds",
+          "note": "Competitors like Aave and Maker capture this segment."
+        },
+        {
+          "name": "Retail Investors",
+          "note": "Potential segment with visibility in responses."
+        },
+        {
+          "name": "Crypto Developers",
+          "note": "Industry focus by competitors; AI references are limited."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "High site appearance (100.0%)",
+        "Strong average ranking compared to competitors (3.58)",
+        "Unique branding in the market",
+        "Established credibility through multiple mentions"
+      ],
+      "opportunities": [
+        "Expand content on algorithmic solutions",
+        "Leverage top keywords like 'yield' and 'liquidity' in blog posts",
+        "Increase presence in fintech discussions",
+        "Create educational content targeting underserved segments"
+      ],
+      "gaps": [
+        "Limited recognition of specific service terms by AI",
+        "Underrepresentation in hedge fund discussions",
+        "Competitors dominate key search queries",
+        "Less visibility for cutting-edge financial technology innovations"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop detailed guides on decentralized finance",
+        "Create a comparison article between algorithmic and traditional stablecoins",
+        "Publish case studies highlighting successful applications of Frax",
+        "Enhance FAQ section with AI-relevant terminology",
+        "Introduce a blog series on emerging trends in crypto finance"
+      ],
+      "link_building": [
+        "Reach out to crypto influencers for guest posts",
+        "Collaborate with DeFi-related educational platforms",
+        "Engage in discussions on Reddit and Discord related to Frax's offerings",
+        "Build links with high-authority financial blogs",
+        "Promote content on platforms frequented by crypto developers"
+      ],
+      "quick_wins": [
+        "Optimize homepage for keywords like 'stablecoin' and 'liquidity'",
+        "Update meta descriptions to reflect AI usage terms",
+        "Engage with community on social media platforms like Telegram",
+        "Monitor competitor content and adjust strategies accordingly",
+        "Use testimonials and user stories to enhance trustworthiness"
+      ]
+    }
+  }
+}
