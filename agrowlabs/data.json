@@ -1,0 +1,638 @@
+{
+  "site": {
+    "name": "Agrowlabs",
+    "url": "https://agrowlabs.xyz/",
+    "domain": "agrowlabs.xyz",
+    "slug": "agrowlabs",
+    "analysis_id": "openrouter-agrowlabs",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "September 24, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 82,
+    "score_status": "Strong AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 83,
+    "own_mentioned": true,
+    "own_appearance_pct": 82.5,
+    "own_appearance_note": "Site mentioned in 82.5% of responses",
+    "hero_comparison": [
+      {
+        "value": "82.5%",
+        "label": "Agrowlabs Visibility",
+        "trend": "up"
+      },
+      {
+        "value": "67.5%",
+        "label": "vechain (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "55.0%",
+        "label": "provenance (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Supply Chain Management Professionals",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Agrowlabs",
+          "appearance": 77.5,
+          "rank": 5.48,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "vechain",
+          "appearance": 67.5,
+          "rank": 12.37,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "provenance",
+          "appearance": 55.0,
+          "rank": 14.18,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ibm food trust",
+          "appearance": 52.5,
+          "rank": 11.48,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "origintrail",
+          "appearance": 50.0,
+          "rank": 12.95,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ambrosus",
+          "appearance": 22.5,
+          "rank": 17.22,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "hyperledger",
+          "appearance": 22.5,
+          "rank": 13.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "te-food",
+          "appearance": 15.0,
+          "rank": 11.5,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "everledger",
+          "appearance": 12.5,
+          "rank": 21.0,
+          "providers": [
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon",
+          "appearance": 10.0,
+          "rank": 13.5,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Enterprise IT Decision Makers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Agrowlabs",
+          "appearance": 82.5,
+          "rank": 4.18,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "consensys",
+          "appearance": 35.0,
+          "rank": 11.36,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "chainlink",
+          "appearance": 32.5,
+          "rank": 12.38,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polygon",
+          "appearance": 20.0,
+          "rank": 11.62,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "hyperledger",
+          "appearance": 20.0,
+          "rank": 13.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "polkadot",
+          "appearance": 20.0,
+          "rank": 12.38,
+          "providers": [
+            "Gemini",
+            "DeepSeek",
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "solana",
+          "appearance": 10.0,
+          "rank": 10.5,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ibm blockchain",
+          "appearance": 10.0,
+          "rank": 20.25,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ibm food trust",
+          "appearance": 7.5,
+          "rank": 12.33,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "te-food",
+          "appearance": 7.5,
+          "rank": 5.0,
+          "providers": [
+            "Gemini",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "blockchain",
+      "count": 266
+    },
+    {
+      "text": "supply",
+      "count": 194
+    },
+    {
+      "text": "data",
+      "count": 173
+    },
+    {
+      "text": "chain",
+      "count": 170
+    },
+    {
+      "text": "supply chain",
+      "count": 159
+    },
+    {
+      "text": "name",
+      "count": 130
+    },
+    {
+      "text": "food",
+      "count": 121
+    },
+    {
+      "text": "solutions",
+      "count": 118
+    },
+    {
+      "text": "competitors",
+      "count": 103
+    },
+    {
+      "text": "platform",
+      "count": 89
+    }
+  ],
+  "sources": [
+    {
+      "name": "ripe.io",
+      "url": "https://ripe.io",
+      "mentions": 2
+    },
+    {
+      "name": "agrowlabs.com",
+      "url": "https://agrowlabs.com",
+      "mentions": 1
+    },
+    {
+      "name": "traceability.io",
+      "url": "https://traceability.io",
+      "mentions": 1
+    },
+    {
+      "name": "provenance.org",
+      "url": "https://provenance.org",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What are the steps involved in integrating a traceability solution into my current system?",
+      "type": "missing",
+      "persona": "Logistics Manager"
+    },
+    {
+      "text": "What tools can help me analyze data from multiple supply chain sources effectively?",
+      "type": "missing",
+      "persona": "Supply Chain Analyst"
+    },
+    {
+      "text": "How do your solutions assist in monitoring supply chain disruptions?",
+      "type": "missing",
+      "persona": "Supply Chain Analyst"
+    },
+    {
+      "text": "How can your development process accommodate timelines and budget constraints?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "How do you handle updates and maintenance post-implementation?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "What solutions exist for enhancing transparency and trust within my supply chain?",
+      "type": "missing",
+      "persona": "Logistics Manager"
+    },
+    {
+      "text": "Can you provide examples of successful implementations in supply chain management?",
+      "type": "missing",
+      "persona": "Logistics Manager"
+    },
+    {
+      "text": "How can your solutions enhance the security of my existing systems?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "What differentiates your infrastructure from other tech providers?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "Can you provide examples of successful implementations in supply chain management?",
+      "type": "missing",
+      "persona": "Logistics Manager"
+    },
+    {
+      "text": "How can your development process accommodate timelines and budget constraints?",
+      "type": "missing",
+      "persona": "Project Manager"
+    },
+    {
+      "text": "How can I use technology to track the origins of my products in real-time?",
+      "type": "missing",
+      "persona": "Logistics Manager"
+    },
+    {
+      "text": "Can you provide examples of successful implementations in supply chain management?",
+      "type": "missing",
+      "persona": "Logistics Manager"
+    },
+    {
+      "text": "What tools can help me analyze data from multiple supply chain sources effectively?",
+      "type": "missing",
+      "persona": "Supply Chain Analyst"
+    },
+    {
+      "text": "How can your development process accommodate timelines and budget constraints?",
+      "type": "missing",
+      "persona": "Project Manager"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "forbes.com",
+      "domain": "forbes.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "agfundernews.com",
+      "domain": "agfundernews.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "foodtechconnect.com",
+      "domain": "foodtechconnect.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "deloitte.com",
+      "domain": "deloitte.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "chemicalsafety.com",
+      "domain": "chemicalsafety.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "agriculture.com",
+      "domain": "agriculture.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchain.info",
+      "domain": "blockchain.info",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "mordorintelligence.com",
+      "domain": "mordorintelligence.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "gemini": 50,
+    "deepseek": 50,
+    "claude": 36,
+    "openai": 36
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "cross-chain bridges",
+        "evidence": "not seen in AI responses",
+        "priority": "HIGH"
+      },
+      {
+        "term": "production-grade solutions",
+        "evidence": "less prominent in AI mentions",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "composable blockchain",
+        "evidence": "missing from AI-generated content",
+        "priority": "HIGH"
+      },
+      {
+        "term": "trusted blockchain infrastructure",
+        "evidence": "not referenced by AI engines",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "enterprise adoption",
+        "evidence": "underrepresented in AI results",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "real-world applications",
+        "evidence": "not utilized by AI engines",
+        "priority": "HIGH"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Real-world solutions powered by blockchain",
+        "site_context": "Emphasizes practical applications.",
+        "ai_uses": "solutions",
+        "ai_context": "Focuses on general solutions without specific context."
+      },
+      {
+        "site_says": "cross-chain bridges",
+        "site_context": "Describes a unique offering.",
+        "ai_uses": "blockchain",
+        "ai_context": "Relies on generic blockchain terminology."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Supply Chain Management Professionals",
+          "note": "Directly targeted with relevant services."
+        },
+        {
+          "name": "Enterprise IT Decision Makers",
+          "note": "Emphasizes solutions for decision-makers."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Small to Medium Enterprises",
+          "note": "Competitors target this segment, avg rank 12.37."
+        },
+        {
+          "name": "Non-Profit Organizations",
+          "note": "Less focus from competitors, potential for outreach."
+        },
+        {
+          "name": "Government Agencies",
+          "note": "Growing market for blockchain solutions."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong focus on Cardano blockchain solutions",
+        "High own site appearance at 77.5%",
+        "Established trust and transparency communication",
+        "Comprehensive service offerings from concept to deployment"
+      ],
+      "opportunities": [
+        "Expand content on cross-chain and composable blockchain themes",
+        "Enhance branding around blockchain infrastructure strength",
+        "Develop partnerships with smaller competitors targeting SMEs"
+      ],
+      "gaps": [
+        "Lower recognition in AI compared to top competitors",
+        "Underutilization of industry-specific terminology in AI responses",
+        "Limited mentions of unique selling points in AI data"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create dedicated page on cross-chain solutions",
+        "Develop content around production-grade deployment success stories",
+        "Enhance SEO for enterprise blockchain applications",
+        "Produce whitepapers on trusted infrastructure in blockchain"
+      ],
+      "link_building": [
+        "Engage with ripe.io for backlink opportunities",
+        "Create guest posts on supply chain blockchain blogs",
+        "Collaborate with industry leaders for co-marketing",
+        "Participate in blockchain forums and discussions to gain links"
+      ],
+      "quick_wins": [
+        "Optimize homepage content for better AI visibility",
+        "Target specific keywords related to composable blockchain",
+        "Add testimonials to strengthen trust and evidence",
+        "Utilize social media to amplify and share relevant content"
+      ]
+    }
+  }
+}
