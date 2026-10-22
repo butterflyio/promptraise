@@ -1,0 +1,565 @@
+{
+  "site": {
+    "name": "Rock'n'Block",
+    "url": "https://rocknblock.io",
+    "domain": "rocknblock.io",
+    "slug": "rocknblock",
+    "analysis_id": "openrouter-rocknblock",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "October 22, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 21,
+    "score_status": "Very Low AI Visibility",
+    "total_responses": 72,
+    "responses_per_type": 36,
+    "unique_competitors": 61,
+    "own_mentioned": true,
+    "own_appearance_pct": 11.1,
+    "own_appearance_note": "Site mentioned in 11.1% of responses",
+    "hero_comparison": [
+      {
+        "value": "11.1%",
+        "label": "Rock'n'Block Visibility",
+        "trend": "down"
+      },
+      {
+        "value": "13.9%",
+        "label": "Alchemy (Leader)",
+        "trend": ""
+      },
+      {
+        "value": "13.9%",
+        "label": "alchemy (#2)",
+        "trend": ""
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Startups and Founders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Alchemy",
+          "appearance": 13.9,
+          "rank": 1.2,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "alchemy",
+          "appearance": 13.9,
+          "rank": 1.2,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 11.1,
+          "rank": 1.25,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "fireblocks",
+          "appearance": 8.3,
+          "rank": 1.33,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "circle",
+          "appearance": 5.6,
+          "rank": 1.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "privy",
+          "appearance": 5.6,
+          "rank": 1.5,
+          "providers": [
+            "OpenAI",
+            "DeepSeek"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "OpenZeppelin",
+          "appearance": 5.6,
+          "rank": 1.0,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "openzeppelin",
+          "appearance": 5.6,
+          "rank": 1.0,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "QuickNode",
+          "appearance": 5.6,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "moralis",
+          "appearance": 5.6,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 9,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "DeepSeek": 1,
+        "Gemini": 2
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Established Financial Institutions",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Alchemy",
+          "appearance": 11.1,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "alchemy",
+          "appearance": 11.1,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "coinbase",
+          "appearance": 11.1,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "Rock'n'Block",
+          "appearance": 11.1,
+          "rank": 1.75,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": true,
+          "url": null
+        },
+        {
+          "name": "QuickNode",
+          "appearance": 8.3,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "quicknode",
+          "appearance": 8.3,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "ConsenSys",
+          "appearance": 8.3,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "consensys",
+          "appearance": 8.3,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "OpenZeppelin",
+          "appearance": 5.6,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        },
+        {
+          "name": "openzeppelin",
+          "appearance": 5.6,
+          "rank": 1.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false,
+          "url": null
+        }
+      ],
+      "total_responses": 9,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "name",
+      "count": 47
+    },
+    {
+      "text": "data",
+      "count": 35
+    },
+    {
+      "text": "compliance",
+      "count": 35
+    },
+    {
+      "text": "details",
+      "count": 34
+    },
+    {
+      "text": "chain",
+      "count": 32
+    },
+    {
+      "text": "crypto",
+      "count": 31
+    },
+    {
+      "text": "product",
+      "count": 31
+    },
+    {
+      "text": "web3",
+      "count": 30
+    },
+    {
+      "text": "risk",
+      "count": 30
+    },
+    {
+      "text": "blockchain",
+      "count": 29
+    }
+  ],
+  "sources": [
+    {
+      "name": "checkout.com",
+      "url": "https://checkout.com",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I quickly develop a solution that allows real-time data handling for my new financial app?",
+      "type": "missing",
+      "persona": "Tech Entrepreneur"
+    },
+    {
+      "text": "What services can support the launch of a platform where users can predict market outcomes?",
+      "type": "missing",
+      "persona": "Tech Entrepreneur"
+    },
+    {
+      "text": "What differentiates a custom-built DEX from an off-the-shelf option for my company?",
+      "type": "missing",
+      "persona": "Tech Entrepreneur"
+    },
+    {
+      "text": "What steps should I take to build a reliable marketplace for real-world asset opportunities?",
+      "type": "missing",
+      "persona": "Product Manager"
+    },
+    {
+      "text": "Can you help me understand the features needed for a successful lending platform?",
+      "type": "missing",
+      "persona": "Product Manager"
+    },
+    {
+      "text": "Which platforms offer the best tools for visualizing historical market data?",
+      "type": "missing",
+      "persona": "Product Manager"
+    },
+    {
+      "text": "How do I compare the efficiency of different payment integration options for high transaction volumes?",
+      "type": "missing",
+      "persona": "Product Manager"
+    },
+    {
+      "text": "What key metrics should I track to evaluate user engagement on a financial product?",
+      "type": "missing",
+      "persona": "Product Manager"
+    },
+    {
+      "text": "What infrastructure is necessary for creating a scalable solution for managing multiple financial products?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "How can I leverage existing technologies to improve transaction processing speeds in my services?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "What are the best practices for integrating advanced data streaming capabilities into our platforms?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "How do I choose the right partner to develop complex financial systems tailored to our needs?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "What factors should I consider when evaluating the risks of developing decentralized financial solutions?",
+      "type": "missing",
+      "persona": "Chief Technology Officer"
+    },
+    {
+      "text": "How can I ensure that our investments in technology maintain regulatory standards?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    },
+    {
+      "text": "What resources are available for staying updated on changes in regulations affecting financial technology?",
+      "type": "missing",
+      "persona": "Compliance Officer"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "name": "theblock.co",
+      "domain": "theblock.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "coindesk.com",
+      "domain": "coindesk.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "forbes.com",
+      "domain": "forbes.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "protocol.com",
+      "domain": "protocol.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "messari.io",
+      "domain": "messari.io",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "decrypt.co",
+      "domain": "decrypt.co",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "finextra.com",
+      "domain": "finextra.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockjournal.com",
+      "domain": "blockjournal.com",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "blockchainreporter.net",
+      "domain": "blockchainreporter.net",
+      "type": "competitor",
+      "mentions": 0
+    },
+    {
+      "name": "onetechhub.com",
+      "domain": "onetechhub.com",
+      "type": "competitor",
+      "mentions": 0
+    }
+  ],
+  "provider_coverage": {
+    "openai": 50,
+    "deepseek": 11,
+    "gemini": 7,
+    "claude": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "perpetual DEX",
+        "evidence": "Not recognized by AI as a distinct category",
+        "priority": "HIGH"
+      },
+      {
+        "term": "prediction markets",
+        "evidence": "Underrepresented in AI responses",
+        "priority": "HIGH"
+      },
+      {
+        "term": "tokenization",
+        "evidence": "Keyword not fully recognized in relation to assets",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "real-world assets (RWA)",
+        "evidence": "Not utilized in the AI-generated content",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "financial infrastructure",
+        "evidence": "Lacks presence in AI rankings",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Web3 Native Development Studio",
+        "site_context": "Defines core offering clearly",
+        "ai_uses": "web3",
+        "ai_context": "Generalized keyword without deep context"
+      },
+      {
+        "site_says": "blockchain engineering for financial infrastructure",
+        "site_context": "Highlights technical expertise",
+        "ai_uses": "crypto, blockchain, compliance",
+        "ai_context": "Uses broader terms without specific application"
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Startups and Founders",
+          "note": "Targeted by service offerings"
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Established Financial Institutions",
+          "note": "Equal response volume but weak presence in AI rankings"
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Specialized in complex DeFi platforms",
+        "Strong focus on tokenization of real-world assets",
+        "Expertise in custom blockchain solutions"
+      ],
+      "opportunities": [
+        "Expand visibility in AI rankings against top competitors like Alchemy (13.9%)",
+        "Enhance content around emerging concepts like perpetual DEXs",
+        "Improve SEO for key phrases like 'prediction markets' and 'blockchain engineering'"
+      ],
+      "gaps": [
+        "Low mention rate in AI responses (0% site appearance)",
+        "Heavily outperformed by competitors in AI rankings",
+        "Limited coverage of niche terms in AI responses"
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Develop case studies emphasizing 'prediction markets' and 'tokenization'",
+        "Create a dedicated page focused on 'perpetual DEX' offerings",
+        "Increase blog posts on 'real-world assets' and their applications",
+        "Optimize homepage to incorporate high-traffic keywords identified in AI responses"
+      ],
+      "link_building": [
+        "Establish partnerships with content creators in DeFi and blockchain",
+        "Engage in guest posting on relevant financial and tech blogs",
+        "Create high-quality infographics for sharing about RWA tokenization and financial infrastructure",
+        "Utilize social media channels to enhance visibility and backlinks"
+      ],
+      "quick_wins": [
+        "Optimize existing blog articles for identified high-ranking keywords",
+        "Update meta descriptions to include AI-relevant keywords",
+        "Leverage client's portfolio projects for enhanced visibility in AI responses",
+        "Ensure technical SEO elements (site speed, mobile optimization) are addressed"
+      ]
+    }
+  }
+}
