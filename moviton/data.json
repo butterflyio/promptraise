@@ -17,7 +17,7 @@
     "unique_competitors": 54,
     "own_mentioned": true,
     "own_appearance_pct": 0.0,
-    "own_appearance_note": "Unprompted recall 0.0% across 24 brand-free buyer-intent queries. (When the brand is named, echo is 100.0% - that is not visibility.)",
+    "own_appearance_note": "Unprompted recall 0.0% across 24 brand-free buyer-intent queries",
     "hero_comparison": [
       {
         "value": "0.0%",
@@ -25,24 +25,23 @@
         "trend": "down"
       },
       {
-        "value": "100.0%",
-        "label": "When brand is named",
+        "value": "83.3%",
+        "label": "Uber Eats",
         "trend": ""
       },
       {
-        "value": "55.0%",
-        "label": "Deliveroo (Leader)",
+        "value": "75.0%",
+        "label": "DoorDash",
         "trend": ""
       },
       {
-        "value": "42.5%",
-        "label": "doordash (#2)",
-        "trend": ""
+        "value": "0%",
+        "label": "Moviton",
+        "trend": "down"
       }
     ],
     "unprompted_recall_pct": 0.0,
-    "unprompted_note": "Unprompted recall 0.0% across 24 brand-free queries - the brand is NOT mentioned by AI when its name isn't in the question.",
-    "named_recall_pct": 100.0
+    "unprompted_note": "Unprompted recall 0.0% across 24 brand-free queries - the brand is NOT mentioned by AI when its name isn't in the question."
   },
   "customer_types": [
     {
@@ -51,119 +50,206 @@
       "competitors": [
         {
           "name": "Moviton",
-          "appearance": 100.0,
-          "rank": 2.25,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": true,
-          "url": null
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
         },
         {
-          "name": "vechain",
-          "appearance": 32.5,
-          "rank": 16.38,
-          "providers": [
-            "Gemini",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Uber Eats",
+          "appearance": 83.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "doordash",
-          "appearance": 32.5,
-          "rank": 10.69,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "DoorDash",
+          "appearance": 75.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "lalamove",
-          "appearance": 22.5,
-          "rank": 12.56,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Roadie",
+          "appearance": 54.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "shipchain",
-          "appearance": 17.5,
-          "rank": 12.43,
-          "providers": [
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "ShipChain",
+          "appearance": 33.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "stuart",
-          "appearance": 10.0,
-          "rank": 16.5,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "UPS",
+          "appearance": 33.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "shippo",
-          "appearance": 10.0,
-          "rank": 1.0,
-          "providers": [
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Instacart",
+          "appearance": 29.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "postmates",
-          "appearance": 7.5,
-          "rank": 19.33,
-          "providers": [
-            "Gemini",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Dispatch",
+          "appearance": 29.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "glovo",
-          "appearance": 7.5,
-          "rank": 1.0,
-          "providers": [
-            "OpenAI"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Shipt",
+          "appearance": 25.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "shipbob",
-          "appearance": 5.0,
-          "rank": 3.5,
-          "providers": [
-            "OpenAI",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Deliveroo",
+          "appearance": 25.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Lalamove",
+          "appearance": 25.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "VeChain",
+          "appearance": 20.8,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "FedEx",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "DHL",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Amazon Logistics",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Stuart",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Grab",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Postmates",
+          "appearance": 8.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Onfleet",
+          "appearance": 8.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Glovo",
+          "appearance": 8.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "ShipBob",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Bolt",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "GrubHub",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Gojek",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "USPS",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Arcadier",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Deliveree",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Shippo",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Easyship",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         }
       ],
       "total_responses": 10,
@@ -182,121 +268,206 @@
       "competitors": [
         {
           "name": "Moviton",
-          "appearance": 100.0,
-          "rank": 2.23,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": true,
-          "url": null
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Uber Eats",
+          "appearance": 83.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "DoorDash",
+          "appearance": 75.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Roadie",
+          "appearance": 54.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "ShipChain",
+          "appearance": 33.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "UPS",
+          "appearance": 33.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Instacart",
+          "appearance": 29.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Dispatch",
+          "appearance": 29.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Shipt",
+          "appearance": 25.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
           "name": "Deliveroo",
-          "appearance": 55.0,
-          "rank": 16.36,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "appearance": 25.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "doordash",
-          "appearance": 42.5,
-          "rank": 16.71,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Lalamove",
+          "appearance": 25.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "vechain",
-          "appearance": 22.5,
-          "rank": 19.11,
-          "providers": [
-            "Gemini",
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "VeChain",
+          "appearance": 20.8,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "glovo",
-          "appearance": 20.0,
-          "rank": 10.0,
-          "providers": [
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "FedEx",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "shipchain",
-          "appearance": 17.5,
-          "rank": 16.43,
-          "providers": [
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "DHL",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Amazon Logistics",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Stuart",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
           "name": "Grab",
-          "appearance": 10.0,
-          "rank": 16.25,
-          "providers": [
-            "OpenAI",
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "stuart",
-          "appearance": 7.5,
-          "rank": 16.33,
-          "providers": [
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Postmates",
+          "appearance": 8.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "postmates",
-          "appearance": 5.0,
-          "rank": 20.5,
-          "providers": [
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Onfleet",
+          "appearance": 8.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         },
         {
-          "name": "flexport",
-          "appearance": 5.0,
-          "rank": 10.5,
-          "providers": [
-            "DeepSeek"
-          ],
-          "isOwn": false,
-          "url": null
+          "name": "Glovo",
+          "appearance": 8.3,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "ShipBob",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Bolt",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "GrubHub",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Gojek",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "USPS",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Arcadier",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Deliveree",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Shippo",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
+        },
+        {
+          "name": "Easyship",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": false
         }
       ],
       "total_responses": 10,
@@ -523,10 +694,9 @@
     },
     "position": {
       "strengths": [
-        "Own site is mentioned in 100.0% of responses, showing strong brand presence in the audit set.",
-        "Average rank of 2.25 for Moviton is very strong when it appears.",
         "The site clearly differentiates with AI + Web3 + smart contract messaging.",
-        "The platform concept spans multiple payment rails and networks, which is a distinctive operational feature."
+        "The platform concept spans multiple payment rails and networks, which is a distinctive operational feature.",
+        "Moviton has near-zero unprompted recall in brand-free category queries, while mainstream and specialist platforms dominate share of voice."
       ],
       "opportunities": [
         "Shift AI-facing language toward delivery/logistics outcomes to match the terms AI engines already use.",
