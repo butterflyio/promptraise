@@ -10,14 +10,14 @@
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 100,
-    "score_status": "Strong AI Visibility",
+    "score": 0,
+    "score_status": "Zero AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
     "unique_competitors": 54,
     "own_mentioned": true,
-    "own_appearance_pct": 100.0,
-    "own_appearance_note": "Site mentioned in 100.0% of responses",
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Unprompted recall 0.0% across 24 brand-free buyer-intent queries. (When the brand is named, echo is 100.0% - that is not visibility.)",
     "hero_comparison": [
       {
         "value": "0.0%",
@@ -26,8 +26,8 @@
       },
       {
         "value": "100.0%",
-        "label": "Moviton Visibility",
-        "trend": "up"
+        "label": "When brand is named",
+        "trend": ""
       },
       {
         "value": "55.0%",
@@ -41,7 +41,8 @@
       }
     ],
     "unprompted_recall_pct": 0.0,
-    "unprompted_note": "Unprompted recall 0.0% across 24 brand-free queries - the brand is NOT mentioned by AI when its name isn't in the question."
+    "unprompted_note": "Unprompted recall 0.0% across 24 brand-free queries - the brand is NOT mentioned by AI when its name isn't in the question.",
+    "named_recall_pct": 100.0
   },
   "customer_types": [
     {
