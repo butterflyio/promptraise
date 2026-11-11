@@ -20,6 +20,11 @@
     "own_appearance_note": "Site mentioned in 100.0% of responses",
     "hero_comparison": [
       {
+        "value": "0.0%",
+        "label": "Unprompted recall",
+        "trend": "down"
+      },
+      {
         "value": "100.0%",
         "label": "Moviton Visibility",
         "trend": "up"
@@ -34,7 +39,9 @@
         "label": "doordash (#2)",
         "trend": ""
       }
-    ]
+    ],
+    "unprompted_recall_pct": 0.0,
+    "unprompted_note": "Unprompted recall 0.0% across 24 brand-free queries - the brand is NOT mentioned by AI when its name isn't in the question."
   },
   "customer_types": [
     {
@@ -471,13 +478,13 @@
     ],
     "language_gap": [
       {
-        "site_says": "“MVON Token Sale | MovitOn, the Next Uber for Delivery”",
+        "site_says": "\u201cMVON Token Sale | MovitOn, the Next Uber for Delivery\u201d",
         "site_context": "Homepage headline leads with a token sale and a consumer analogy.",
         "ai_uses": "Delivery, logistics, courier, platform, blockchain, decentralized",
         "ai_context": "AI engines describe the company as a delivery/logistics tech platform rather than a token sale."
       },
       {
-        "site_says": "“global DePIN P2P delivery platform powered by AI and Web3 smart contracts”",
+        "site_says": "\u201cglobal DePIN P2P delivery platform powered by AI and Web3 smart contracts\u201d",
         "site_context": "Highly technical positioning with Web3/DePIN jargon.",
         "ai_uses": "Delivery, logistics, courier, dispatch, blockchain",
         "ai_context": "AI responses simplify the category into practical logistics terms and do not strongly echo DePIN/Web3 wording."
