@@ -59,196 +59,289 @@
           "name": "Uber Eats",
           "appearance": 83.3,
           "rank": 8.3,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "DoorDash",
           "appearance": 75.0,
           "rank": 9.2,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Roadie",
           "appearance": 54.2,
           "rank": 17.3,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "ShipChain",
           "appearance": 33.3,
           "rank": 7.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "UPS",
           "appearance": 33.3,
           "rank": 12.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Instacart",
           "appearance": 29.2,
           "rank": 9.1,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Dispatch",
           "appearance": 29.2,
           "rank": 16.4,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Shipt",
           "appearance": 25.0,
           "rank": 19.5,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Deliveroo",
           "appearance": 25.0,
           "rank": 14.8,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Lalamove",
           "appearance": 25.0,
           "rank": 26.5,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "VeChain",
           "appearance": 20.8,
           "rank": 10.6,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "FedEx",
           "appearance": 16.7,
           "rank": 18.8,
-          "providers": [],
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "DHL",
           "appearance": 16.7,
           "rank": 28.2,
-          "providers": [],
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Amazon Logistics",
           "appearance": 16.7,
           "rank": 23.7,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
           "isOwn": false
         },
         {
           "name": "Stuart",
           "appearance": 16.7,
           "rank": 26.2,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Grab",
           "appearance": 16.7,
           "rank": 16.5,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Postmates",
           "appearance": 8.3,
           "rank": 7.5,
-          "providers": [],
+          "providers": [
+            "DeepSeek"
+          ],
           "isOwn": false
         },
         {
           "name": "Onfleet",
           "appearance": 8.3,
           "rank": 14.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Glovo",
           "appearance": 8.3,
           "rank": 24.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "ShipBob",
           "appearance": 4.2,
           "rank": 3.0,
-          "providers": [],
+          "providers": [
+            "DeepSeek"
+          ],
           "isOwn": false
         },
         {
           "name": "Bolt",
           "appearance": 4.2,
           "rank": 15.0,
-          "providers": [],
+          "providers": [
+            "DeepSeek"
+          ],
           "isOwn": false
         },
         {
           "name": "GrubHub",
           "appearance": 4.2,
           "rank": 6.0,
-          "providers": [],
+          "providers": [
+            "Claude"
+          ],
           "isOwn": false
         },
         {
           "name": "Gojek",
           "appearance": 4.2,
           "rank": 20.0,
-          "providers": [],
+          "providers": [
+            "Claude"
+          ],
           "isOwn": false
         },
         {
           "name": "USPS",
           "appearance": 4.2,
           "rank": 15.0,
-          "providers": [],
+          "providers": [
+            "Gemini"
+          ],
           "isOwn": false
         },
         {
           "name": "Arcadier",
           "appearance": 4.2,
           "rank": 22.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Deliveree",
           "appearance": 4.2,
           "rank": 35.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Shippo",
           "appearance": 4.2,
           "rank": 26.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Easyship",
           "appearance": 4.2,
           "rank": 25.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         }
       ],
@@ -277,196 +370,289 @@
           "name": "Uber Eats",
           "appearance": 83.3,
           "rank": 8.3,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "DoorDash",
           "appearance": 75.0,
           "rank": 9.2,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Roadie",
           "appearance": 54.2,
           "rank": 17.3,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "ShipChain",
           "appearance": 33.3,
           "rank": 7.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "UPS",
           "appearance": 33.3,
           "rank": 12.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Instacart",
           "appearance": 29.2,
           "rank": 9.1,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Dispatch",
           "appearance": 29.2,
           "rank": 16.4,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Shipt",
           "appearance": 25.0,
           "rank": 19.5,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Deliveroo",
           "appearance": 25.0,
           "rank": 14.8,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Lalamove",
           "appearance": 25.0,
           "rank": 26.5,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "VeChain",
           "appearance": 20.8,
           "rank": 10.6,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "FedEx",
           "appearance": 16.7,
           "rank": 18.8,
-          "providers": [],
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "DHL",
           "appearance": 16.7,
           "rank": 28.2,
-          "providers": [],
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Amazon Logistics",
           "appearance": 16.7,
           "rank": 23.7,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
           "isOwn": false
         },
         {
           "name": "Stuart",
           "appearance": 16.7,
           "rank": 26.2,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Grab",
           "appearance": 16.7,
           "rank": 16.5,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Postmates",
           "appearance": 8.3,
           "rank": 7.5,
-          "providers": [],
+          "providers": [
+            "DeepSeek"
+          ],
           "isOwn": false
         },
         {
           "name": "Onfleet",
           "appearance": 8.3,
           "rank": 14.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Glovo",
           "appearance": 8.3,
           "rank": 24.0,
-          "providers": [],
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "ShipBob",
           "appearance": 4.2,
           "rank": 3.0,
-          "providers": [],
+          "providers": [
+            "DeepSeek"
+          ],
           "isOwn": false
         },
         {
           "name": "Bolt",
           "appearance": 4.2,
           "rank": 15.0,
-          "providers": [],
+          "providers": [
+            "DeepSeek"
+          ],
           "isOwn": false
         },
         {
           "name": "GrubHub",
           "appearance": 4.2,
           "rank": 6.0,
-          "providers": [],
+          "providers": [
+            "Claude"
+          ],
           "isOwn": false
         },
         {
           "name": "Gojek",
           "appearance": 4.2,
           "rank": 20.0,
-          "providers": [],
+          "providers": [
+            "Claude"
+          ],
           "isOwn": false
         },
         {
           "name": "USPS",
           "appearance": 4.2,
           "rank": 15.0,
-          "providers": [],
+          "providers": [
+            "Gemini"
+          ],
           "isOwn": false
         },
         {
           "name": "Arcadier",
           "appearance": 4.2,
           "rank": 22.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Deliveree",
           "appearance": 4.2,
           "rank": 35.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Shippo",
           "appearance": 4.2,
           "rank": 26.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         },
         {
           "name": "Easyship",
           "appearance": 4.2,
           "rank": 25.0,
-          "providers": [],
+          "providers": [
+            "OpenAI"
+          ],
           "isOwn": false
         }
       ],
@@ -696,10 +882,10 @@
     }
   ],
   "provider_coverage": {
-    "gemini": 41,
-    "openai": 47,
-    "claude": 44,
-    "deepseek": 50
+    "claude": 86,
+    "deepseek": 62,
+    "gemini": 62,
+    "openai": 100
   },
   "insights": {
     "terminology_gap": [
@@ -782,6 +968,7 @@
       "strengths": [
         "The site clearly differentiates with AI + Web3 + smart contract messaging.",
         "The platform concept spans multiple payment rails and networks, which is a distinctive operational feature.",
+        "Moviton has near-zero unprompted recall in brand-free category queries, while mainstream and specialist platforms dominate share of voice.",
         "Moviton has near-zero unprompted recall in brand-free category queries, while mainstream and specialist platforms dominate share of voice.",
         "Moviton has near-zero unprompted recall in brand-free category queries, while mainstream and specialist platforms dominate share of voice."
       ],
