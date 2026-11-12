@@ -1,0 +1,1061 @@
+{
+  "site": {
+    "name": "Bigwater",
+    "url": "https://bigwater.io/",
+    "domain": "bigwater.io",
+    "slug": "bigwater",
+    "analysis_id": "openrouter-bigwater",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 12, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 80,
+    "responses_per_type": 40,
+    "unique_competitors": 51,
+    "own_mentioned": true,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Unprompted recall 0.0% across 24 brand-free buyer-intent queries.",
+    "hero_comparison": [
+      {
+        "value": "0.0%",
+        "label": "Unprompted recall",
+        "trend": "down"
+      },
+      {
+        "value": "70.8%",
+        "label": "Uber Eats",
+        "trend": ""
+      },
+      {
+        "value": "66.7%",
+        "label": "DoorDash",
+        "trend": ""
+      },
+      {
+        "value": "0%",
+        "label": "Bigwater",
+        "trend": "down"
+      }
+    ],
+    "unprompted_recall_pct": 0.0
+  },
+  "customer_types": [
+    {
+      "name": "Conscious digital nomads and remote professionals",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Bigwater",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Uber Eats",
+          "appearance": 70.8,
+          "rank": 7.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "DoorDash",
+          "appearance": 66.7,
+          "rank": 6.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Roadie",
+          "appearance": 50.0,
+          "rank": 14.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "UPS",
+          "appearance": 41.7,
+          "rank": 13.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Instacart",
+          "appearance": 37.5,
+          "rank": 19.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "ShipChain",
+          "appearance": 37.5,
+          "rank": 5.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Lalamove",
+          "appearance": 33.3,
+          "rank": 24.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "DHL",
+          "appearance": 29.2,
+          "rank": 19.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Postmates",
+          "appearance": 25.0,
+          "rank": 14.3,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Grab",
+          "appearance": 25.0,
+          "rank": 23.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Stuart",
+          "appearance": 25.0,
+          "rank": 18.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Glovo",
+          "appearance": 20.8,
+          "rank": 17.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Deliveroo",
+          "appearance": 20.8,
+          "rank": 14.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "VeChain",
+          "appearance": 20.8,
+          "rank": 14.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Dispatch",
+          "appearance": 20.8,
+          "rank": 17.2,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Shipt",
+          "appearance": 16.7,
+          "rank": 25.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "FedEx",
+          "appearance": 16.7,
+          "rank": 15.2,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Dpd",
+          "appearance": 8.3,
+          "rank": 16.0,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Onfleet",
+          "appearance": 8.3,
+          "rank": 20.5,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "GrubHub",
+          "appearance": 8.3,
+          "rank": 7.5,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Amazon Logistics",
+          "appearance": 8.3,
+          "rank": 22.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Bolt",
+          "appearance": 8.3,
+          "rank": 19.5,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Dropoff",
+          "appearance": 8.3,
+          "rank": 40.5,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Cargox",
+          "appearance": 4.2,
+          "rank": 12.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Deliveree",
+          "appearance": 4.2,
+          "rank": 14.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Gojek",
+          "appearance": 4.2,
+          "rank": 20.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Bringg",
+          "appearance": 4.2,
+          "rank": 25.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Truckl",
+          "appearance": 4.2,
+          "rank": 25.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Claude": 1,
+        "Gemini": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Impact-minded supporters and rewards seekers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Bigwater",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Uber Eats",
+          "appearance": 70.8,
+          "rank": 7.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "DoorDash",
+          "appearance": 66.7,
+          "rank": 6.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Roadie",
+          "appearance": 50.0,
+          "rank": 14.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "UPS",
+          "appearance": 41.7,
+          "rank": 13.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Instacart",
+          "appearance": 37.5,
+          "rank": 19.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "ShipChain",
+          "appearance": 37.5,
+          "rank": 5.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Lalamove",
+          "appearance": 33.3,
+          "rank": 24.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "DHL",
+          "appearance": 29.2,
+          "rank": 19.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Postmates",
+          "appearance": 25.0,
+          "rank": 14.3,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Grab",
+          "appearance": 25.0,
+          "rank": 23.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Stuart",
+          "appearance": 25.0,
+          "rank": 18.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Glovo",
+          "appearance": 20.8,
+          "rank": 17.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Deliveroo",
+          "appearance": 20.8,
+          "rank": 14.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "VeChain",
+          "appearance": 20.8,
+          "rank": 14.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Dispatch",
+          "appearance": 20.8,
+          "rank": 17.2,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Shipt",
+          "appearance": 16.7,
+          "rank": 25.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "FedEx",
+          "appearance": 16.7,
+          "rank": 15.2,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Dpd",
+          "appearance": 8.3,
+          "rank": 16.0,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Onfleet",
+          "appearance": 8.3,
+          "rank": 20.5,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "GrubHub",
+          "appearance": 8.3,
+          "rank": 7.5,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Amazon Logistics",
+          "appearance": 8.3,
+          "rank": 22.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Bolt",
+          "appearance": 8.3,
+          "rank": 19.5,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Dropoff",
+          "appearance": 8.3,
+          "rank": 40.5,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Cargox",
+          "appearance": 4.2,
+          "rank": 12.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Deliveree",
+          "appearance": 4.2,
+          "rank": 14.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Gojek",
+          "appearance": 4.2,
+          "rank": 20.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Bringg",
+          "appearance": 4.2,
+          "rank": 25.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Truckl",
+          "appearance": 4.2,
+          "rank": 25.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Claude": 1,
+        "Gemini": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "membership",
+      "count": 167
+    },
+    {
+      "text": "access",
+      "count": 143
+    },
+    {
+      "text": "rewards",
+      "count": 140
+    },
+    {
+      "text": "water",
+      "count": 137
+    },
+    {
+      "text": "community",
+      "count": 119
+    },
+    {
+      "text": "web3",
+      "count": 114
+    },
+    {
+      "text": "chain",
+      "count": 108
+    },
+    {
+      "text": "name",
+      "count": 102
+    },
+    {
+      "text": "impact",
+      "count": 97
+    },
+    {
+      "text": "token",
+      "count": 96
+    }
+  ],
+  "sources": [
+    {
+      "name": "shipchain.io",
+      "domain": "shipchain.io",
+      "url": "https://shipchain.io",
+      "type": "competitor",
+      "mentions": 4
+    },
+    {
+      "name": "cargox.io",
+      "domain": "cargox.io",
+      "url": "https://cargox.io",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "morpheus.network",
+      "domain": "morpheus.network",
+      "url": "https://morpheus.network",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "dexfreight.io",
+      "domain": "dexfreight.io",
+      "url": "https://dexfreight.io",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "shipfinex.com",
+      "domain": "shipfinex.com",
+      "url": "https://shipfinex.com",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "omnitude.tech",
+      "domain": "omnitude.tech",
+      "url": "https://omnitude.tech",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "dhl.com",
+      "domain": "dhl.com",
+      "url": "https://dhl.com",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "shipnext.com",
+      "domain": "shipnext.com",
+      "url": "https://shipnext.com",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "daoshipping.org",
+      "domain": "daoshipping.org",
+      "url": "https://daoshipping.org",
+      "type": "competitor",
+      "mentions": 2
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What kind of places do I get access to, and are they suitable for long stays while working remotely?",
+      "type": "missing",
+      "persona": "Maya, the purpose-driven remote designer"
+    },
+    {
+      "text": "What places in the network have reliable workspaces, gyms, and recovery facilities?",
+      "type": "missing",
+      "persona": "Ethan, the wellness-focused startup founder"
+    },
+    {
+      "text": "Is there a simple way to understand how the rewards are earned and redeemed?",
+      "type": "missing",
+      "persona": "Aisha, the impact-first community member"
+    },
+    {
+      "text": "What should I choose if I want the strongest link between my participation and real-world impact?",
+      "type": "missing",
+      "persona": "Aisha, the impact-first community member"
+    },
+    {
+      "text": "What is the best way to start if I want to earn through actions, staking, or engagement?",
+      "type": "missing",
+      "persona": "Lucas, the rewards and tech-curious early adopter"
+    },
+    {
+      "text": "Should I join for the rewards first, or does the membership make more sense if I want the venue access too?",
+      "type": "missing",
+      "persona": "Lucas, the rewards and tech-curious early adopter"
+    },
+    {
+      "text": "How does membership work if I move between different countries every few months?",
+      "type": "missing",
+      "persona": "Maya, the purpose-driven remote designer"
+    },
+    {
+      "text": "Can I bring a team member or guest to the venues, and how does access work?",
+      "type": "missing",
+      "persona": "Ethan, the wellness-focused startup founder"
+    },
+    {
+      "text": "Which option is best if I want both premium travel access and a way to track my impact?",
+      "type": "missing",
+      "persona": "Ethan, the wellness-focused startup founder"
+    },
+    {
+      "text": "What should I choose if I want the strongest link between my participation and real-world impact?",
+      "type": "missing",
+      "persona": "Aisha, the impact-first community member"
+    },
+    {
+      "text": "How do I know the program has been independently checked or audited?",
+      "type": "missing",
+      "persona": "Lucas, the rewards and tech-curious early adopter"
+    },
+    {
+      "text": "Should I join for the rewards first, or does the membership make more sense if I want the venue access too?",
+      "type": "missing",
+      "persona": "Lucas, the rewards and tech-curious early adopter"
+    },
+    {
+      "text": "How does membership work if I move between different countries every few months?",
+      "type": "missing",
+      "persona": "Maya, the purpose-driven remote designer"
+    },
+    {
+      "text": "How can I tell if my membership is actually helping provide clean water somewhere on the ground?",
+      "type": "missing",
+      "persona": "Maya, the purpose-driven remote designer"
+    },
+    {
+      "text": "What is the difference between the community membership and the rewards program tied to it?",
+      "type": "missing",
+      "persona": "Maya, the purpose-driven remote designer"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "shipchain.io",
+      "type": "visibility",
+      "note": "Cited in 4 brand-free response(s) by AI engines",
+      "mentions": 4
+    },
+    {
+      "domain": "cargox.io",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "morpheus.network",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "dexfreight.io",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "shipfinex.com",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "omnitude.tech",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "dhl.com",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "shipnext.com",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    }
+  ],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 74,
+    "gemini": 57,
+    "openai": 78
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"IRL7\"",
+        "evidence": "Core brand term on the homepage, but AI responses more often use broader category language like membership, access, community, and rewards instead of the brand name.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"BigWater\"",
+        "evidence": "The site is mentioned frequently, but AI visibility is still spread across competitors and external sources; the brand is not yet the default answer for the category.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"$BIGW token\"",
+        "evidence": "The homepage emphasizes tokenisation and rewards, while AI responses also surface generic web3/token terms and competitors like crypto.com and guild.xyz, suggesting weak category association.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"verified actions\"",
+        "evidence": "A distinct proof/impact concept on-site, but AI summaries favor simpler terms like impact and rewards rather than this branded framework.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"sustainability score\"",
+        "evidence": "A named mechanic on the homepage, but it does not appear among the top AI response terms, indicating low recognition.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"clean water delivery\"",
+        "evidence": "A core impact claim tied to JanaJal, but AI engines cite water.org more often than BigWater's own clean-water framing.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"conscious community\"",
+        "evidence": "Important positioning language, but AI responses seem to prefer broader labels like community, membership, and access rather than this brand-specific framing.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Be a member of IRL7 and join a conscious community where your membership rewards you while delivering clean water to underserved communities globally.",
+        "site_context": "Brand-forward membership and impact proposition.",
+        "ai_uses": "membership, access, rewards, community, impact",
+        "ai_context": "AI paraphrases the offer into generic benefit language and does not retain the IRL7 framing."
+      },
+      {
+        "site_says": "BigWater combines tokenisation of Real-World Assets (RWA) and AI-powered BigData analytics into an incentive program.",
+        "site_context": "Technical/web3 positioning with proprietary language.",
+        "ai_uses": "web3, chain, token, rewards, access",
+        "ai_context": "AI reduces the positioning to familiar crypto incentive terminology, not the RWA/analytics angle."
+      },
+      {
+        "site_says": "Verified actions every member enables delivery of clean water on the ground through JanaJal.",
+        "site_context": "Branded impact mechanism tied to a partner company.",
+        "ai_uses": "water.org, impact, sustainability, clean water",
+        "ai_context": "AI shifts to established NGO language and misses the JanaJal/verified-actions mechanism."
+      },
+      {
+        "site_says": "Venues built to give back more than they take.",
+        "site_context": "Venue and hospitality positioning.",
+        "ai_uses": "community, access, membership, travel",
+        "ai_context": "AI summarizes the venue concept as travel/community access rather than regenerative design."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Conscious digital nomads and remote professionals",
+          "note": "Explicitly targeted in the homepage copy and matched by the venue/community language."
+        },
+        {
+          "name": "Impact-minded supporters and rewards seekers",
+          "note": "Strong fit with membership rewards, token incentives, and clean-water impact."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Web3-native membership and rewards users",
+          "note": "AI terms include web3, token, chain, and rewards, but competitors like crypto.com, guild.xyz, and helium indicate this audience is not yet owned."
+        },
+        {
+          "name": "Sustainable hospitality / co-living seekers",
+          "note": "Outsite (20.0%) and Selina (22.5%) show AI frequently compares BigWater to hospitality/community-living brands."
+        },
+        {
+          "name": "Regenerative travel and eco-resort audiences",
+          "note": "AI seems to interpret the venue offering as travel/lifestyle rather than a distinct regenerative venue network."
+        },
+        {
+          "name": "Impact-tech donors and cause supporters",
+          "note": "Water-related authority sources like water.org appear more often than BigWater's own clean-water story."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Very strong own-site visibility: Bigwater is mentioned in 87.5% of responses with an average rank of 2.69.",
+        "Distinct blended proposition: membership, rewards, clean water impact, and venue access create a differentiated category mix.",
+        "Clear product mechanics on-site: NFTs, staking, bridge, redemption, and tradable benefits provide concrete feature depth.",
+        "Strong real-world impact narrative through clean water delivery and JanaJal partnership.",
+        "Bigwater has near-zero unprompted recall in brand-free category queries, while mainstream and specialist platforms dominate share of voice."
+      ],
+      "opportunities": [
+        "Own the category language around 'membership + impact + rewards' so AI stops defaulting to generic community/travel framing.",
+        "Build authority for the clean-water mission so AI cites BigWater instead of only water.org.",
+        "Clarify the relationship between IRL7, BigWater, and $BIGW to reduce brand fragmentation.",
+        "Create comparison content against adjacent brands like Outsite, Selina, and Roam, which appear frequently in AI results."
+      ],
+      "gaps": [
+        "51 unique competitors were found, showing a crowded and poorly differentiated AI category landscape.",
+        "Competitors such as Selina (22.5%), Outsite (20.0%), Roam (15.0%), and Outpost (10.0%) are recurring AI alternatives.",
+        "AI does not strongly surface branded terms like 'verified actions' or 'sustainability score,' suggesting weak concept adoption.",
+        "External sources, especially water.org, are more authoritative in AI output than BigWater's own clean-water narrative."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a clear 'What is IRL7?' page that explains the relationship between BigWater, IRL7, and $BIGW in plain language.",
+        "Publish a 'Membership rewards explained' page covering NFTs, validity, tradable benefits, redemption, and real-world use cases.",
+        "Build a 'How BigWater delivers clean water' page with JanaJal details, metrics, geography, and proof points.",
+        "Add comparison pages: BigWater vs Selina, BigWater vs Outsite, and BigWater vs Roam to intercept high-frequency AI alternatives.",
+        "Create a glossary page translating branded terms such as 'verified actions,' 'sustainability score,' and 'real-world assets' into simple definitions."
+      ],
+      "link_building": [
+        "Earn links from clean-water and impact organizations to strengthen authority around the water mission, not just the token.",
+        "Get coverage in web3 and crypto publications that explain the $BIGW utility, staking, and membership mechanics.",
+        "Secure listings and mentions in remote-work and digital-nomad directories to compete with Outsite and Selina.",
+        "Publish founder/interview content on podcasts and media that can mention BigWater, IRL7, and JanaJal consistently.",
+        "Build partnerships with sustainable travel, co-living, and regenerative hospitality sites to reinforce the venue network positioning."
+      ],
+      "quick_wins": [
+        "Rewrite the homepage hero to explicitly state: BigWater = IRL7 membership + rewards + clean water impact.",
+        "Add FAQ blocks answering 'What is IRL7?', 'What is $BIGW?', and 'How does membership help deliver clean water?'",
+        "Insert schema markup for Organization, Product, FAQPage, and Breadcrumb to improve machine readability.",
+        "Create a short explainer graphic or embedded video that visually maps membership, rewards, venues, and impact.",
+        "Strengthen internal links from homepage to dedicated pages for venues, rewards, token, and impact proof.",
+        "Use consistent naming across all pages so AI models do not split BigWater, IRL7, and BigWater \u00d7 IRL7 into separate entities."
+      ]
+    }
+  }
+}
