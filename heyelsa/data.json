@@ -1,0 +1,572 @@
+{
+  "site": {
+    "name": "Elsa",
+    "url": "https://www.heyelsa.ai",
+    "domain": "www.heyelsa.ai",
+    "slug": "heyelsa",
+    "analysis_id": "openrouter-heyelsa",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 13, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 4,
+    "score_status": "Very Low AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 11,
+    "own_mentioned": true,
+    "own_appearance_pct": 4.2,
+    "own_appearance_note": "Site mentioned in 4.2% of brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "25.0%",
+        "label": "metamask",
+        "trend": ""
+      },
+      {
+        "value": "16.7%",
+        "label": "uniswap",
+        "trend": ""
+      },
+      {
+        "value": "4.2%",
+        "label": "Elsa",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Self-directed onchain users",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Elsa",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "metamask",
+          "appearance": 25.0,
+          "rank": 11.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 16.7,
+          "rank": 19.2,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "socket",
+          "appearance": 16.7,
+          "rank": 30.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zapper",
+          "appearance": 16.7,
+          "rank": 31.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zerion",
+          "appearance": 16.7,
+          "rank": 21.7,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "brian",
+          "appearance": 16.7,
+          "rank": 7.8,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "rabby",
+          "appearance": 12.5,
+          "rank": 10.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "across",
+          "appearance": 8.3,
+          "rank": 24.5,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "safe",
+          "appearance": 8.3,
+          "rank": 21.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "layerzero",
+          "appearance": 8.3,
+          "rank": 18.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "stargate",
+          "appearance": 4.2,
+          "rank": 31.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Newcomers and cautious learners",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Elsa",
+          "appearance": 4.2,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "metamask",
+          "appearance": 25.0,
+          "rank": 11.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 16.7,
+          "rank": 19.2,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "socket",
+          "appearance": 16.7,
+          "rank": 30.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zapper",
+          "appearance": 16.7,
+          "rank": 31.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zerion",
+          "appearance": 16.7,
+          "rank": 21.7,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "brian",
+          "appearance": 16.7,
+          "rank": 7.8,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "rabby",
+          "appearance": 12.5,
+          "rank": 10.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "across",
+          "appearance": 8.3,
+          "rank": 24.5,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "safe",
+          "appearance": 8.3,
+          "rank": 21.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "layerzero",
+          "appearance": 8.3,
+          "rank": 18.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "stargate",
+          "appearance": 4.2,
+          "rank": 31.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "chain",
+      "count": 224
+    },
+    {
+      "text": "risk",
+      "count": 176
+    },
+    {
+      "text": "wallet",
+      "count": 175
+    },
+    {
+      "text": "name",
+      "count": 165
+    },
+    {
+      "text": "yield",
+      "count": 155
+    },
+    {
+      "text": "across",
+      "count": 126
+    },
+    {
+      "text": "transaction",
+      "count": 119
+    },
+    {
+      "text": "step",
+      "count": 117
+    },
+    {
+      "text": "bridge",
+      "count": 110
+    },
+    {
+      "text": "execution",
+      "count": 108
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "How can I swap and bridge assets in one flow without using multiple apps?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "What tools help me find the best route for a transfer with the lowest fees and slippage?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "What is the easiest way to start if I have never moved digital assets before?",
+      "type": "missing",
+      "persona": "Curious beginner"
+    },
+    {
+      "text": "Can Elsa help me understand the difference between swapping, bridging, and sending funds?",
+      "type": "missing",
+      "persona": "Curious beginner"
+    },
+    {
+      "text": "What would you recommend for a beginner who wants to try this without getting lost in technical details?",
+      "type": "missing",
+      "persona": "Curious beginner"
+    },
+    {
+      "text": "How can I swap and bridge assets in one flow without using multiple apps?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "How can I swap and bridge assets in one flow without using multiple apps?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "What tools help me find the best route for a transfer with the lowest fees and slippage?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "What should I use if I want my assets rebalanced automatically based on market conditions?",
+      "type": "missing",
+      "persona": "Yield seeker"
+    },
+    {
+      "text": "What is the easiest way to start if I have never moved digital assets before?",
+      "type": "missing",
+      "persona": "Curious beginner"
+    },
+    {
+      "text": "Can Elsa help me understand the difference between swapping, bridging, and sending funds?",
+      "type": "missing",
+      "persona": "Curious beginner"
+    },
+    {
+      "text": "What would you recommend for a beginner who wants to try this without getting lost in technical details?",
+      "type": "missing",
+      "persona": "Curious beginner"
+    },
+    {
+      "text": "How does Elsa compare with using separate apps for swapping, bridging, and yield management?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "Can Elsa help me move funds and automatically choose the safest path for a specific use case?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    },
+    {
+      "text": "What is the best way to use Elsa if I want to keep a portion in stable assets and the rest in yield opportunities?",
+      "type": "missing",
+      "persona": "Active DeFi operator"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 88,
+    "deepseek": 62,
+    "gemini": 100,
+    "openai": 38
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "AI crypto copilot",
+        "evidence": "Homepage centers this phrase, but AI responses more often use generic terms like transaction, bridge, wallet, yield, and execution rather than 'copilot'.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "smart portfolio building",
+        "evidence": "A core homepage feature, yet AI responses favor 'yield' and 'portfolio' language without surfacing Elsa as a portfolio-building tool in many answers.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "returns on autopilot",
+        "evidence": "The site emphasizes automated yield discovery, but AI language shows stronger association with 'yield' and 'risk' than this branded promise.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "limit orders",
+        "evidence": "Listed as a key feature on-site, but not reflected in the top AI keyword set or competitor framing; likely under-recognized in answers.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "safe and secure / built-in risk protection",
+        "evidence": "Safety messaging is prominent on the homepage, while AI outputs more frequently mention 'risk' as a decision factor than Elsa-specific safeguards.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "multi-model architecture",
+        "evidence": "A differentiator on-site, but AI responses do not appear to map this to user-facing benefits in search-style answers.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "learn as you go",
+        "evidence": "The homepage positions Elsa for education, but AI-generated responses are still dominated by execution, bridge, and wallet use cases.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Harness the power of AI in Crypto with Elsa, your crypto co-pilot.",
+        "site_context": "Brand-first framing with an assistant/copilot metaphor.",
+        "ai_uses": "AI crypto assistant for swaps, bridges, wallets, yield, and transaction execution.",
+        "ai_context": "AI engines describe functional jobs-to-be-done rather than the copilot metaphor."
+      },
+      {
+        "site_says": "No dashboards to learn. No complex workflows. Just tell Elsa what you want to do.",
+        "site_context": "Ease-of-use and conversational UX are emphasized.",
+        "ai_uses": "Swap, bridge, send assets, manage wallet, and execute transactions in one step.",
+        "ai_context": "AI responses focus on concrete actions and step-by-step execution benefits."
+      },
+      {
+        "site_says": "Returns on Autopilot and Smart Portfolio Building.",
+        "site_context": "Automation and portfolio optimization are highlighted as core value props.",
+        "ai_uses": "Yield, risk, chain, transaction, bridge, and execution.",
+        "ai_context": "The AI language is more operational and DeFi-native than portfolio-strategy oriented."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Self-directed onchain users",
+          "note": "Strong fit with swaps, bridging, limit orders, and multi-chain execution; this segment is directly reflected in the homepage and audit."
+        },
+        {
+          "name": "Newcomers and cautious learners",
+          "note": "Clear educational angle with plain-language explanations and built-in safety messaging."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "DeFi power users comparing execution tools",
+          "note": "Competitors like Uniswap (50.0%), 1inch (27.5%), Socket (30.0%), and Stargate (20.0%) appear in AI responses, suggesting room to win comparison queries."
+        },
+        {
+          "name": "Risk-sensitive crypto users",
+          "note": "AI responses surface 'risk' and 'safe' frequently, but Elsa is not yet strongly associated with trusted-risk mitigation in AI answers."
+        },
+        {
+          "name": "Multi-chain bridge users",
+          "note": "The keyword set includes 'across' and 'bridge', and competitors like Socket and LayerZero are visible; Elsa should own this category more explicitly."
+        },
+        {
+          "name": "Yield-seeking portfolio optimizers",
+          "note": "AI engines mention 'yield' often, but Elsa is not yet dominant in that intent compared with general DeFi tools."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Own-site visibility is strong: Elsa appears in 85.0% of AI responses, showing solid brand recognition.",
+        "Clear product breadth: swaps, bridges, portfolio management, yield routing, and limit orders create a broad use-case footprint.",
+        "Strong simplicity promise: conversational execution and 'no dashboards' messaging is differentiated and easy to understand.",
+        "Safety and education are credible differentiators for cautious users and new entrants.",
+        "Elsa has 4.2% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice.",
+        "Elsa has 4.2% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Outrank generic DeFi competitors in 'best crypto assistant' and 'AI trading' style answers by clarifying primary use cases.",
+        "Own comparison searches against Uniswap, 1inch, Socket, Stargate, and LayerZero with dedicated pages.",
+        "Translate safety messaging into concrete trust signals that AI can cite in answers.",
+        "Make limit orders and multi-chain execution more visible in structured content so AI associates Elsa with these tasks.",
+        "Capture bridge and execution intents where keywords already appear in AI outputs but brand association is still weak."
+      ],
+      "gaps": [
+        "Competitors are frequently present in AI responses: Uniswap 50.0%, Socket 30.0%, 1inch 27.5%, Safe 25.0%, Zapper 20.0%.",
+        "AI engines use operational DeFi language more than Elsa's branded language, weakening attribution for some high-intent queries.",
+        "The homepage over-indexes on broad promises and under-specifies feature-level proof for limit orders, bridge routing, and risk controls.",
+        "Only two customer types were tested, and both are somewhat generic; there may be unaddressed sub-intents like power traders, bridge users, and yield optimizers."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create dedicated pages for 'AI crypto assistant' and 'AI crypto copilot' with clear use-case examples, FAQs, and schema.",
+        "Publish comparison pages: Elsa vs Uniswap, Elsa vs 1inch, Elsa vs Socket, Elsa vs Safe, Elsa vs Zapper.",
+        "Build a 'bridge and swap in one step' page focused on multi-chain execution, routing, and fee/risk reduction.",
+        "Create a 'limit orders with AI' page showing how Elsa triggers trades, manages conditions, and reduces manual monitoring.",
+        "Add a 'safety and risk protection' page with explicit safeguards, failure prevention, and user-error reduction details.",
+        "Publish educational content for newcomers: plain-language explainers for swaps, bridges, yield, slippage, and multisig."
+      ],
+      "link_building": [
+        "Earn mentions from crypto education sites that already show up in AI citations, especially platforms similar to brianknows.org.",
+        "Pursue citations from DeFi routing and bridging ecosystems such as Squid Router and similar multi-chain infrastructure sites.",
+        "Secure third-party reviews or integrations coverage from crypto.com-style authority sources that AI already cites.",
+        "Obtain backlinks from wallet, bridge, and trading workflow partners to reinforce Elsa's association with execution and safety.",
+        "Publish guest posts or co-marketed content on multi-chain and yield strategy topics to widen entity recognition.",
+        "Target comparison and listicle placements for 'best AI crypto tools,' 'best crypto copilot,' and 'best DeFi assistant' queries."
+      ],
+      "quick_wins": [
+        "Add FAQ blocks using the exact phrases AI already uses: swap, bridge, wallet, yield, risk, transaction, execution, one step.",
+        "Rewrite hero/supporting copy to include both branded and functional language, e.g. 'AI crypto copilot for swaps, bridges, and portfolio actions.'",
+        "Expose structured feature summaries above the fold for limit orders, cross-chain support, and risk protection.",
+        "Create concise internal links from homepage to comparison, safety, bridge, and limit order pages.",
+        "Add schema markup for Product, FAQ, and SoftwareApplication to improve AI extraction.",
+        "Insert plain-text examples of common tasks so AI can map Elsa to real-world prompts and intents."
+      ]
+    }
+  }
+}
