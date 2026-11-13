@@ -1,0 +1,581 @@
+{
+  "site": {
+    "name": "BSV Blockchain",
+    "url": "https://bsvblockchain.org/",
+    "domain": "bsvblockchain.org",
+    "slug": "bsvblockchain",
+    "analysis_id": "openrouter-bsvblockchain",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 13, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 10,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "95.8%",
+        "label": "solana",
+        "trend": ""
+      },
+      {
+        "value": "54.2%",
+        "label": "arbitrum",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "BSV Blockchain",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Enterprise data and payments teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "BSV Blockchain",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "solana",
+          "appearance": 95.8,
+          "rank": 15.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance": 54.2,
+          "rank": 21.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "optimism",
+          "appearance": 50.0,
+          "rank": 21.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "avalanche",
+          "appearance": 50.0,
+          "rank": 22.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sui",
+          "appearance": 45.8,
+          "rank": 16.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 37.5,
+          "rank": 23.3,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 33.3,
+          "rank": 20.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "hedera",
+          "appearance": 29.2,
+          "rank": 17.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "stellar",
+          "appearance": 25.0,
+          "rank": 18.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tron",
+          "appearance": 12.5,
+          "rank": 27.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Product builders and solution designers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "BSV Blockchain",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "solana",
+          "appearance": 95.8,
+          "rank": 15.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance": 54.2,
+          "rank": 21.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "optimism",
+          "appearance": 50.0,
+          "rank": 21.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "avalanche",
+          "appearance": 50.0,
+          "rank": 22.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sui",
+          "appearance": 45.8,
+          "rank": 16.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 37.5,
+          "rank": 23.3,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 33.3,
+          "rank": 20.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "hedera",
+          "appearance": 29.2,
+          "rank": 17.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "stellar",
+          "appearance": 25.0,
+          "rank": 18.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tron",
+          "appearance": 12.5,
+          "rank": 27.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "data",
+      "count": 537
+    },
+    {
+      "text": "chain",
+      "count": 429
+    },
+    {
+      "text": "transaction",
+      "count": 334
+    },
+    {
+      "text": "ethereum",
+      "count": 292
+    },
+    {
+      "text": "fees",
+      "count": 261
+    },
+    {
+      "text": "high",
+      "count": 256
+    },
+    {
+      "text": "enterprise",
+      "count": 251
+    },
+    {
+      "text": "bitcoin",
+      "count": 229
+    },
+    {
+      "text": "solana",
+      "count": 197
+    },
+    {
+      "text": "payments",
+      "count": 177
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "How does BSV handle very high payment volumes without slowing down?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "What makes BSV different from other distributed ledger systems for business payments?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "What kinds of payment apps are a good use case for BSV?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "Is BSV a good recommendation for a company that needs predictable transaction costs?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "What is the best use case for putting business records directly on BSV?",
+      "type": "missing",
+      "persona": "Enterprise solutions manager"
+    },
+    {
+      "text": "Should I recommend BSV for a system that needs both payments and data logging?",
+      "type": "missing",
+      "persona": "Enterprise solutions manager"
+    },
+    {
+      "text": "What kind of app is BSV best suited for?",
+      "type": "missing",
+      "persona": "Startup founder building a new app"
+    },
+    {
+      "text": "How can BSV help solve the problem of high transaction fees in a consumer app?",
+      "type": "missing",
+      "persona": "Startup founder building a new app"
+    },
+    {
+      "text": "What is the difference between BSV and other ledger systems for application integration?",
+      "type": "missing",
+      "persona": "Integration developer"
+    },
+    {
+      "text": "What use cases work well with BSV Script and on-chain data?",
+      "type": "missing",
+      "persona": "Integration developer"
+    },
+    {
+      "text": "How does BSV handle very high payment volumes without slowing down?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "What makes BSV different from other distributed ledger systems for business payments?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "Can BSV be a better fit than traditional card rails for microtransactions?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "What kinds of payment apps are a good use case for BSV?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    },
+    {
+      "text": "Is BSV a good recommendation for a company that needs predictable transaction costs?",
+      "type": "missing",
+      "persona": "Payments platform architect"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 80,
+    "gemini": 80,
+    "openai": 90
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"data on chain\"",
+        "evidence": "Homepage emphasizes this phrase, but AI responses more often use \"data,\" \"enterprise,\" and \"payments\" rather than BSV's exact wording.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Bitcoin's original design\"",
+        "evidence": "Central brand message on-site, but AI engines still surface competitors like base (85%) and solana (75%) far more often than BSV Blockchain (22.5%).",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"teranode\"",
+        "evidence": "Important technical differentiator on the homepage, yet it is not reflected in the dominant AI search language around scalability, fees, and enterprise payments.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"UTXO-based architecture\"",
+        "evidence": "The site uses this protocol term, but AI outputs cluster around practical solution terms like \"transaction,\" \"payments,\" and \"enterprise\" instead.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"simplified payment verification\"",
+        "evidence": "The homepage includes SPV language, but AI queries appear to favor accessible phrases such as low fees, high throughput, and scalable payments.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"protocol stability\"",
+        "evidence": "A meaningful enterprise argument on the site, but AI responses do not surface this framing as a common selection criterion.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "BSV Blockchain represents Bitcoin\u2019s original design and preserves the original Bitcoin protocol.",
+        "site_context": "Strong ideological and protocol-led framing.",
+        "ai_uses": "AI responses more often frame the category around scalable payments, low fees, enterprise use, and data transactions.",
+        "ai_context": "Practical value language dominates search summaries."
+      },
+      {
+        "site_says": "With no protocol-defined maximum block size, BSV can scale naturally as demand grows.",
+        "site_context": "Technical scalability explanation.",
+        "ai_uses": "AI engines tend to compare networks by throughput, low fees, and application fit, often naming Solana, Tron, Sui, and Hedera.",
+        "ai_context": "Competitive benchmark language is more visible than protocol detail."
+      },
+      {
+        "site_says": "Unleash the potential of data-on-chain.",
+        "site_context": "Product narrative centered on on-chain data storage/use.",
+        "ai_uses": "AI language is broader and more enterprise-oriented, using terms like data, chain, transaction, enterprise, and payments.",
+        "ai_context": "AI abstracts the value proposition into business outcomes."
+      },
+      {
+        "site_says": "Restoring the original Bitcoin Script functionality and providing powerful smart contract programmability.",
+        "site_context": "Developer/protocol feature description.",
+        "ai_uses": "AI responses more commonly discuss general smart contract platforms and ecosystems, with Ethereum appearing in top keywords.",
+        "ai_context": "The market is being described through familiar platform comparisons."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Enterprise data and payments teams",
+          "note": "Homepage speaks to scalability, transaction volume, low cost, and protocol stability."
+        },
+        {
+          "name": "Product builders and solution designers",
+          "note": "Technical concepts like UTXO, Script, SPV, and Teranode appeal to implementation-focused audiences."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Blockchain platform evaluators",
+          "note": "Competitors dominate AI visibility: base 85.0%, solana 75.0%, tron 57.5%, sui 50.0%."
+        },
+        {
+          "name": "Enterprise architects comparing chains",
+          "note": "BSV appears in only 22.5% of AI responses, while Hedera (47.5%) and Polygon (37.5%) are surfaced more often."
+        },
+        {
+          "name": "Payments infrastructure buyers",
+          "note": "AI keywords emphasize fees, payments, and enterprise, but BSV is not yet the default recommendation in those queries."
+        },
+        {
+          "name": "Developer teams looking for scalable L1 alternatives",
+          "note": "BSV is overshadowed by Solana, Tron, Sui, and Ethereum-related language in the AI layer."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clear scalability story with uncapped block size and Teranode positioning.",
+        "Strong low-cost, high-throughput transaction narrative aligned with AI keyword patterns.",
+        "Distinct Bitcoin-originality message that differentiates BSV from many L1 competitors.",
+        "Enterprise-relevant technical themes: data, payments, protocol stability, and smart contract programmability.",
+        "BSV Blockchain has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Translate protocol language into buyer language around payments, settlement, and enterprise workloads.",
+        "Build comparison content against the AI-visible leaders: Base, Solana, Tron, Sui, and Hedera.",
+        "Increase visibility for terms AI already uses: fees, enterprise, payments, transaction throughput, and data.",
+        "Use more third-party validation and citations so AI engines can confidently recommend BSV.",
+        "Expand pages that explain real-world use cases rather than only technical foundations."
+      ],
+      "gaps": [
+        "Low AI share of voice overall: BSV Blockchain appears in only 22.5% of responses.",
+        "Competitors dominate visibility, especially Base (85.0%) and Solana (75.0%).",
+        "The site overuses niche protocol terminology that AI does not repeat as often.",
+        "The homepage content is duplicated heavily, which may weaken extractability and topical clarity.",
+        "Only one cited source appears in the audit (yours.org), suggesting limited third-party authority signals."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a \"BSV vs Solana\" comparison page focused on fees, throughput, finality, and enterprise payments.",
+        "Create a \"BSV vs Base / Ethereum L2\" page addressing data-on-chain, transaction cost, and scalability tradeoffs.",
+        "Publish an \"Enterprise payments on BSV\" hub using the exact language AI already favors: enterprise, payments, fees, and transaction volume.",
+        "Rewrite the homepage intro to reduce repeated wording and add concise, scannable answer-first paragraphs.",
+        "Add use-case pages for data storage, micropayments, and high-volume transaction processing with concrete examples.",
+        "Create a Teranode explainer optimized for AI retrieval: what it is, why it matters, and how it changes throughput."
+      ],
+      "link_building": [
+        "Earn citations from neutral technical and industry sources that discuss BSV scalability and payments use cases.",
+        "Secure mentions in developer, enterprise architecture, and blockchain research publications to diversify beyond yours.org.",
+        "Pursue comparison-review links from sites covering blockchain performance, fees, and infrastructure choices.",
+        "Build references from ecosystem partners, case studies, and implementation writeups that mention BSV in practical contexts.",
+        "Target source pages that AI systems commonly cite for blockchain research, benchmarking, and protocol analysis.",
+        "Develop linkable assets such as benchmarks, case studies, and protocol explainer charts for earning editorial citations."
+      ],
+      "quick_wins": [
+        "Replace duplicated homepage copy with cleaner, unique sections and explicit answer-style summaries.",
+        "Add a concise FAQ section answering: What is BSV? Why does it matter for payments? How does it compare to Solana/Base?",
+        "Insert the terms AI already uses more often: enterprise, payments, fees, transaction throughput, and data.",
+        "Add schema markup for Organization, FAQPage, and Article to improve machine readability.",
+        "Create a short \"Why BSV for enterprise payments\" section near the top of the homepage.",
+        "Update internal links so key pages on scalability, Teranode, and use cases are easier for crawlers and AI extractors to find."
+      ]
+    }
+  }
+}
