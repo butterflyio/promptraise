@@ -14,7 +14,7 @@
     "score_status": "Zero AI Visibility",
     "total_responses": 80,
     "responses_per_type": 40,
-    "unique_competitors": 51,
+    "unique_competitors": 7,
     "own_mentioned": true,
     "own_appearance_pct": 0.0,
     "own_appearance_note": "Unprompted recall 0.0% across 24 brand-free buyer-intent queries.",
@@ -25,18 +25,18 @@
         "trend": "down"
       },
       {
-        "value": "70.8%",
-        "label": "Uber Eats",
+        "value": "29.2%",
+        "label": "selina",
         "trend": ""
       },
       {
-        "value": "66.7%",
-        "label": "DoorDash",
+        "value": "25.0%",
+        "label": "outsite",
         "trend": ""
       },
       {
-        "value": "0%",
-        "label": "Bigwater",
+        "value": "0.0%",
+        "label": "BigWater",
         "trend": "down"
       }
     ],
@@ -48,99 +48,16 @@
       "uuid": null,
       "competitors": [
         {
-          "name": "Bigwater",
+          "name": "BigWater",
           "appearance": 0.0,
           "rank": null,
           "providers": [],
           "isOwn": true
         },
         {
-          "name": "Uber Eats",
-          "appearance": 70.8,
-          "rank": 7.1,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "DoorDash",
-          "appearance": 66.7,
-          "rank": 6.1,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Roadie",
-          "appearance": 50.0,
-          "rank": 14.8,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "UPS",
-          "appearance": 41.7,
-          "rank": 13.9,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Instacart",
-          "appearance": 37.5,
-          "rank": 19.9,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "ShipChain",
-          "appearance": 37.5,
-          "rank": 5.0,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Lalamove",
-          "appearance": 33.3,
-          "rank": 24.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "DHL",
+          "name": "selina",
           "appearance": 29.2,
-          "rank": 19.2,
+          "rank": 8.0,
           "providers": [
             "Claude",
             "DeepSeek",
@@ -149,19 +66,9 @@
           "isOwn": false
         },
         {
-          "name": "Postmates",
+          "name": "outsite",
           "appearance": 25.0,
-          "rank": 14.3,
-          "providers": [
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Grab",
-          "appearance": 25.0,
-          "rank": 23.0,
+          "rank": 7.7,
           "providers": [
             "Claude",
             "DeepSeek",
@@ -171,181 +78,50 @@
           "isOwn": false
         },
         {
-          "name": "Stuart",
-          "appearance": 25.0,
+          "name": "roam",
+          "appearance": 20.8,
+          "rank": 21.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "outpost",
+          "appearance": 8.3,
+          "rank": 7.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "cabin",
+          "appearance": 4.2,
+          "rank": 7.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "gitcoin",
+          "appearance": 4.2,
+          "rank": 30.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "celo",
+          "appearance": 4.2,
           "rank": 18.0,
           "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
             "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Glovo",
-          "appearance": 20.8,
-          "rank": 17.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Deliveroo",
-          "appearance": 20.8,
-          "rank": 14.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "VeChain",
-          "appearance": 20.8,
-          "rank": 14.0,
-          "providers": [
-            "Claude",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Dispatch",
-          "appearance": 20.8,
-          "rank": 17.2,
-          "providers": [
-            "Claude",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Shipt",
-          "appearance": 16.7,
-          "rank": 25.0,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "FedEx",
-          "appearance": 16.7,
-          "rank": 15.2,
-          "providers": [
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Dpd",
-          "appearance": 8.3,
-          "rank": 16.0,
-          "providers": [
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Onfleet",
-          "appearance": 8.3,
-          "rank": 20.5,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "GrubHub",
-          "appearance": 8.3,
-          "rank": 7.5,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Amazon Logistics",
-          "appearance": 8.3,
-          "rank": 22.0,
-          "providers": [
-            "Claude",
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Bolt",
-          "appearance": 8.3,
-          "rank": 19.5,
-          "providers": [
-            "Claude",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Dropoff",
-          "appearance": 8.3,
-          "rank": 40.5,
-          "providers": [
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Cargox",
-          "appearance": 4.2,
-          "rank": 12.0,
-          "providers": [
-            "DeepSeek"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Deliveree",
-          "appearance": 4.2,
-          "rank": 14.0,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Gojek",
-          "appearance": 4.2,
-          "rank": 20.0,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Bringg",
-          "appearance": 4.2,
-          "rank": 25.0,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Truckl",
-          "appearance": 4.2,
-          "rank": 25.0,
-          "providers": [
-            "Gemini"
           ],
           "isOwn": false
         }
@@ -365,99 +141,16 @@
       "uuid": null,
       "competitors": [
         {
-          "name": "Bigwater",
+          "name": "BigWater",
           "appearance": 0.0,
           "rank": null,
           "providers": [],
           "isOwn": true
         },
         {
-          "name": "Uber Eats",
-          "appearance": 70.8,
-          "rank": 7.1,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "DoorDash",
-          "appearance": 66.7,
-          "rank": 6.1,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Roadie",
-          "appearance": 50.0,
-          "rank": 14.8,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "UPS",
-          "appearance": 41.7,
-          "rank": 13.9,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Instacart",
-          "appearance": 37.5,
-          "rank": 19.9,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "ShipChain",
-          "appearance": 37.5,
-          "rank": 5.0,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Lalamove",
-          "appearance": 33.3,
-          "rank": 24.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "DHL",
+          "name": "selina",
           "appearance": 29.2,
-          "rank": 19.2,
+          "rank": 8.0,
           "providers": [
             "Claude",
             "DeepSeek",
@@ -466,19 +159,9 @@
           "isOwn": false
         },
         {
-          "name": "Postmates",
+          "name": "outsite",
           "appearance": 25.0,
-          "rank": 14.3,
-          "providers": [
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Grab",
-          "appearance": 25.0,
-          "rank": 23.0,
+          "rank": 7.7,
           "providers": [
             "Claude",
             "DeepSeek",
@@ -488,181 +171,50 @@
           "isOwn": false
         },
         {
-          "name": "Stuart",
-          "appearance": 25.0,
+          "name": "roam",
+          "appearance": 20.8,
+          "rank": 21.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "outpost",
+          "appearance": 8.3,
+          "rank": 7.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "cabin",
+          "appearance": 4.2,
+          "rank": 7.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "gitcoin",
+          "appearance": 4.2,
+          "rank": 30.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "celo",
+          "appearance": 4.2,
           "rank": 18.0,
           "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini",
             "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Glovo",
-          "appearance": 20.8,
-          "rank": 17.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Deliveroo",
-          "appearance": 20.8,
-          "rank": 14.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "VeChain",
-          "appearance": 20.8,
-          "rank": 14.0,
-          "providers": [
-            "Claude",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Dispatch",
-          "appearance": 20.8,
-          "rank": 17.2,
-          "providers": [
-            "Claude",
-            "Gemini",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Shipt",
-          "appearance": 16.7,
-          "rank": 25.0,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "FedEx",
-          "appearance": 16.7,
-          "rank": 15.2,
-          "providers": [
-            "DeepSeek",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Dpd",
-          "appearance": 8.3,
-          "rank": 16.0,
-          "providers": [
-            "Claude",
-            "DeepSeek"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Onfleet",
-          "appearance": 8.3,
-          "rank": 20.5,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "GrubHub",
-          "appearance": 8.3,
-          "rank": 7.5,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Amazon Logistics",
-          "appearance": 8.3,
-          "rank": 22.0,
-          "providers": [
-            "Claude",
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Bolt",
-          "appearance": 8.3,
-          "rank": 19.5,
-          "providers": [
-            "Claude",
-            "OpenAI"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Dropoff",
-          "appearance": 8.3,
-          "rank": 40.5,
-          "providers": [
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Cargox",
-          "appearance": 4.2,
-          "rank": 12.0,
-          "providers": [
-            "DeepSeek"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Deliveree",
-          "appearance": 4.2,
-          "rank": 14.0,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Gojek",
-          "appearance": 4.2,
-          "rank": 20.0,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Bringg",
-          "appearance": 4.2,
-          "rank": 25.0,
-          "providers": [
-            "Claude"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "Truckl",
-          "appearance": 4.2,
-          "rank": 25.0,
-          "providers": [
-            "Gemini"
           ],
           "isOwn": false
         }
@@ -722,67 +274,123 @@
   ],
   "sources": [
     {
-      "name": "shipchain.io",
-      "domain": "shipchain.io",
-      "url": "https://shipchain.io",
-      "type": "competitor",
-      "mentions": 4
-    },
-    {
-      "name": "cargox.io",
-      "domain": "cargox.io",
-      "url": "https://cargox.io",
+      "name": "kindtraveler.com",
+      "domain": "kindtraveler.com",
+      "url": "https://kindtraveler.com",
       "type": "competitor",
       "mentions": 2
     },
     {
-      "name": "morpheus.network",
-      "domain": "morpheus.network",
-      "url": "https://morpheus.network",
+      "name": "regenerativetravel.com",
+      "domain": "regenerativetravel.com",
+      "url": "https://regenerativetravel.com",
       "type": "competitor",
       "mentions": 2
     },
     {
-      "name": "dexfreight.io",
-      "domain": "dexfreight.io",
-      "url": "https://dexfreight.io",
+      "name": "ecohotels.com",
+      "domain": "ecohotels.com",
+      "url": "https://ecohotels.com",
       "type": "competitor",
-      "mentions": 2
+      "mentions": 1
     },
     {
-      "name": "shipfinex.com",
-      "domain": "shipfinex.com",
-      "url": "https://shipfinex.com",
+      "name": "thrive365.world",
+      "domain": "thrive365.world",
+      "url": "https://thrive365.world",
       "type": "competitor",
-      "mentions": 2
+      "mentions": 1
     },
     {
-      "name": "omnitude.tech",
-      "domain": "omnitude.tech",
-      "url": "https://omnitude.tech",
+      "name": "staybeyondgreen.com",
+      "domain": "staybeyondgreen.com",
+      "url": "https://staybeyondgreen.com",
       "type": "competitor",
-      "mentions": 2
+      "mentions": 1
     },
     {
-      "name": "dhl.com",
-      "domain": "dhl.com",
-      "url": "https://dhl.com",
+      "name": "goodtraveler.org",
+      "domain": "goodtraveler.org",
+      "url": "https://goodtraveler.org",
       "type": "competitor",
-      "mentions": 2
+      "mentions": 1
     },
     {
-      "name": "shipnext.com",
-      "domain": "shipnext.com",
-      "url": "https://shipnext.com",
+      "name": "elevatedestinations.com",
+      "domain": "elevatedestinations.com",
+      "url": "https://elevatedestinations.com",
       "type": "competitor",
-      "mentions": 2
+      "mentions": 1
     },
     {
-      "name": "daoshipping.org",
-      "domain": "daoshipping.org",
-      "url": "https://daoshipping.org",
+      "name": "packforapurpose.org",
+      "domain": "packforapurpose.org",
+      "url": "https://packforapurpose.org",
       "type": "competitor",
-      "mentions": 2
+      "mentions": 1
+    },
+    {
+      "name": "responsibletravel.com",
+      "domain": "responsibletravel.com",
+      "url": "https://responsibletravel.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "ecocompanion.com",
+      "domain": "ecocompanion.com",
+      "url": "https://ecocompanion.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "fairbnb.coop",
+      "domain": "fairbnb.coop",
+      "url": "https://fairbnb.coop",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "gadventures.com",
+      "domain": "gadventures.com",
+      "url": "https://gadventures.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "intrepidtravel.com",
+      "domain": "intrepidtravel.com",
+      "url": "https://intrepidtravel.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "thelongrun.org",
+      "domain": "thelongrun.org",
+      "url": "https://thelongrun.org",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "shorefast.org",
+      "domain": "shorefast.org",
+      "url": "https://shorefast.org",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "biosphere-expeditions.org",
+      "domain": "biosphere-expeditions.org",
+      "url": "https://biosphere-expeditions.org",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "earthwatch.org",
+      "domain": "earthwatch.org",
+      "url": "https://earthwatch.org",
+      "type": "competitor",
+      "mentions": 1
     }
   ],
   "keyword_opportunities": [
@@ -864,59 +472,59 @@
   ],
   "source_opportunities": [
     {
-      "domain": "shipchain.io",
-      "type": "visibility",
-      "note": "Cited in 4 brand-free response(s) by AI engines",
-      "mentions": 4
-    },
-    {
-      "domain": "cargox.io",
+      "domain": "kindtraveler.com",
       "type": "visibility",
       "note": "Cited in 2 brand-free response(s) by AI engines",
       "mentions": 2
     },
     {
-      "domain": "morpheus.network",
+      "domain": "regenerativetravel.com",
       "type": "visibility",
       "note": "Cited in 2 brand-free response(s) by AI engines",
       "mentions": 2
     },
     {
-      "domain": "dexfreight.io",
+      "domain": "ecohotels.com",
       "type": "visibility",
-      "note": "Cited in 2 brand-free response(s) by AI engines",
-      "mentions": 2
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
     },
     {
-      "domain": "shipfinex.com",
+      "domain": "thrive365.world",
       "type": "visibility",
-      "note": "Cited in 2 brand-free response(s) by AI engines",
-      "mentions": 2
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
     },
     {
-      "domain": "omnitude.tech",
+      "domain": "staybeyondgreen.com",
       "type": "visibility",
-      "note": "Cited in 2 brand-free response(s) by AI engines",
-      "mentions": 2
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
     },
     {
-      "domain": "dhl.com",
+      "domain": "goodtraveler.org",
       "type": "visibility",
-      "note": "Cited in 2 brand-free response(s) by AI engines",
-      "mentions": 2
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
     },
     {
-      "domain": "shipnext.com",
+      "domain": "elevatedestinations.com",
       "type": "visibility",
-      "note": "Cited in 2 brand-free response(s) by AI engines",
-      "mentions": 2
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "packforapurpose.org",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
     }
   ],
   "provider_coverage": {
     "claude": 100,
-    "deepseek": 74,
-    "gemini": 57,
-    "openai": 78
+    "deepseek": 100,
+    "gemini": 80,
+    "openai": 100
   },
   "insights": {
     "terminology_gap": [
@@ -1000,7 +608,7 @@
         },
         {
           "name": "Sustainable hospitality / co-living seekers",
-          "note": "Outsite (20.0%) and Selina (22.5%) show AI frequently compares BigWater to hospitality/community-living brands."
+          "note": "Outsite and Selina show AI frequently compares BigWater to hospitality/community-living brands."
         },
         {
           "name": "Regenerative travel and eco-resort audiences",
@@ -1014,11 +622,10 @@
     },
     "position": {
       "strengths": [
-        "Very strong own-site visibility: Bigwater is mentioned in 87.5% of responses with an average rank of 2.69.",
         "Distinct blended proposition: membership, rewards, clean water impact, and venue access create a differentiated category mix.",
         "Clear product mechanics on-site: NFTs, staking, bridge, redemption, and tradable benefits provide concrete feature depth.",
         "Strong real-world impact narrative through clean water delivery and JanaJal partnership.",
-        "Bigwater has near-zero unprompted recall in brand-free category queries, while mainstream and specialist platforms dominate share of voice."
+        "BigWater has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
       ],
       "opportunities": [
         "Own the category language around 'membership + impact + rewards' so AI stops defaulting to generic community/travel framing.",
