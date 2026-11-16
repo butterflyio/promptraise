@@ -1,0 +1,521 @@
+{
+  "site": {
+    "name": "Ai Ballies Gg",
+    "url": "https://ai.ballies.gg/",
+    "domain": "ai.ballies.gg",
+    "slug": "ai-ballies-gg",
+    "analysis_id": "openrouter-ai-ballies-gg",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 16, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 8,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "0.0%",
+        "label": "Unprompted recall",
+        "trend": "down"
+      },
+      {
+        "value": "37.5%",
+        "label": "draftkings",
+        "trend": ""
+      },
+      {
+        "value": "33.3%",
+        "label": "fanduel",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Ai Ballies Gg",
+        "trend": "down"
+      }
+    ],
+    "unprompted_recall_pct": 0.0
+  },
+  "customer_types": [
+    {
+      "name": "Casual sports prediction players",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Ai Ballies Gg",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "draftkings",
+          "appearance": 37.5,
+          "rank": 17.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fanduel",
+          "appearance": 33.3,
+          "rank": 21.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sleeper",
+          "appearance": 33.3,
+          "rank": 11.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "kalshi",
+          "appearance": 20.8,
+          "rank": 13.2,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polymarket",
+          "appearance": 16.7,
+          "rank": 13.2,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Underdog Fantasy",
+          "appearance": 8.3,
+          "rank": 12.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "PrizePicks",
+          "appearance": 8.3,
+          "rank": 11.5,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sorare",
+          "appearance": 4.2,
+          "rank": 20.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "High-engagement sports bettors",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Ai Ballies Gg",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "draftkings",
+          "appearance": 37.5,
+          "rank": 17.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fanduel",
+          "appearance": 33.3,
+          "rank": 21.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sleeper",
+          "appearance": 33.3,
+          "rank": 11.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "kalshi",
+          "appearance": 20.8,
+          "rank": 13.2,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polymarket",
+          "appearance": 16.7,
+          "rank": 13.2,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Underdog Fantasy",
+          "appearance": 8.3,
+          "rank": 12.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "PrizePicks",
+          "appearance": 8.3,
+          "rank": 11.5,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sorare",
+          "appearance": 4.2,
+          "rank": 20.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "platform",
+      "count": 130
+    },
+    {
+      "text": "game",
+      "count": 121
+    },
+    {
+      "text": "prediction",
+      "count": 111
+    },
+    {
+      "text": "score",
+      "count": 100
+    },
+    {
+      "text": "free",
+      "count": 98
+    },
+    {
+      "text": "exact",
+      "count": 90
+    },
+    {
+      "text": "sports",
+      "count": 88
+    },
+    {
+      "text": "mode",
+      "count": 84
+    },
+    {
+      "text": "rewards",
+      "count": 83
+    },
+    {
+      "text": "web3",
+      "count": 75
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "How does Ballies work if I only want to predict a few games on the weekend?",
+      "type": "missing",
+      "persona": "Weekend score guesser"
+    },
+    {
+      "text": "What are the main differences between ScoreStack, You vs. AI, and Free Roll?",
+      "type": "missing",
+      "persona": "Weekend score guesser"
+    },
+    {
+      "text": "Can I use Ballies without following every matchup during the week?",
+      "type": "missing",
+      "persona": "Weekend score guesser"
+    },
+    {
+      "text": "What mode should I start with if I want the simplest way to try exact-score predictions?",
+      "type": "missing",
+      "persona": "Weekend score guesser"
+    },
+    {
+      "text": "How do I compare my picks against the AI on Ballies?",
+      "type": "missing",
+      "persona": "Competition-driven fan"
+    },
+    {
+      "text": "Does Ballies let me see upcoming games by date so I can plan my picks ahead of time?",
+      "type": "missing",
+      "persona": "Stat-focused matchup analyst"
+    },
+    {
+      "text": "How is You vs. AI different from ScoreStack for someone who likes analyzing matchups?",
+      "type": "missing",
+      "persona": "Stat-focused matchup analyst"
+    },
+    {
+      "text": "How do rewards work in Free Roll on Ballies?",
+      "type": "missing",
+      "persona": "Rewards hunter"
+    },
+    {
+      "text": "What kind of payout can I expect from ScoreStack if I predict three exact scores?",
+      "type": "missing",
+      "persona": "Rewards hunter"
+    },
+    {
+      "text": "Is Free Roll better than You vs. AI if I want to play for rewards more often?",
+      "type": "missing",
+      "persona": "Rewards hunter"
+    },
+    {
+      "text": "How do I compare my picks against the AI on Ballies?",
+      "type": "missing",
+      "persona": "Competition-driven fan"
+    },
+    {
+      "text": "How are points scored when I get the exact score right in ScoreStack or Free Roll?",
+      "type": "missing",
+      "persona": "Competition-driven fan"
+    },
+    {
+      "text": "How is You vs. AI different from ScoreStack for someone who likes analyzing matchups?",
+      "type": "missing",
+      "persona": "Stat-focused matchup analyst"
+    },
+    {
+      "text": "How do rewards work in Free Roll on Ballies?",
+      "type": "missing",
+      "persona": "Rewards hunter"
+    },
+    {
+      "text": "What kind of payout can I expect from ScoreStack if I predict three exact scores?",
+      "type": "missing",
+      "persona": "Rewards hunter"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 38,
+    "gemini": 38,
+    "openai": 75
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"Free Roll\"",
+        "evidence": "A core homepage feature, but AI responses more often use generic terms like \"free\", \"rewards\", or \"exact scores\" rather than the branded game mode.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"ScoreStack\"",
+        "evidence": "Prominent on the homepage, but it is not reflected in the top AI vocabulary; engines instead surface generic \"score\" and \"prediction\" language.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"You vs. AI\"",
+        "evidence": "This is a key product mode on the site, but AI responses mostly frame the category around \"platform\", \"game\", and \"sports prediction\" rather than head-to-head AI play.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"AI Sports Predictions\"",
+        "evidence": "The site positions itself this way, but AI engines more often group it with broader sports betting/picks platforms and web3 prediction products.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"Hot Picks\"",
+        "evidence": "Visible in navigation, but not reflected in common AI-generated phrasing; AI prefers generic ranking/leaderboard language.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"Casual Games\"",
+        "evidence": "Present in the menu, yet AI responses are dominated by serious betting, prediction, and rewards terminology.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Ballies - AI Sports Predictions",
+        "site_context": "Brand language emphasizes an AI-native prediction product.",
+        "ai_uses": "Platform, game, prediction, score, exact scores, rewards, web3",
+        "ai_context": "AI engines describe it as a broader sports prediction/betting platform, not a distinct AI sports product brand."
+      },
+      {
+        "site_says": "ScoreStack \u2014 How to Play Predict 3 exact scores",
+        "site_context": "Product explains a named mode and a specific gameplay mechanic.",
+        "ai_uses": "Exact score, scoring, payout curve, free reward",
+        "ai_context": "Engines strip the branded mode and focus on mechanics/outcomes rather than the product name."
+      },
+      {
+        "site_says": "You Vs. Ai \u2014 How to Play Predict 1 match against AI",
+        "site_context": "The homepage frames this as a direct head-to-head mode.",
+        "ai_uses": "Sports prediction, betting, picks, platform",
+        "ai_context": "AI responses generalize the experience into prediction/betting categories and do not consistently preserve the head-to-head framing."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Casual sports prediction players",
+          "note": "Clearly addressed through \"Casual Games\", tutorials, and free-roll messaging."
+        },
+        {
+          "name": "High-engagement sports bettors",
+          "note": "Supported by odds-like prediction flows, leaderboards, and bet-adjacent language."
+        },
+        {
+          "name": "Web3 / crypto-native prediction users",
+          "note": "AI mentions \"web3\" and cites crypto-related sources, suggesting the product is being understood in that ecosystem."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Mainstream fantasy sports players",
+          "note": "Competitors like sorare appear in 65.0% of responses; Ballies is visible but not yet anchored as a fantasy-style alternative."
+        },
+        {
+          "name": "Prediction market users",
+          "note": "polymarket appears in 25.0% of responses, indicating missed association with market-style prediction intent."
+        },
+        {
+          "name": "Sportsbook comparison shoppers",
+          "note": "draftkings shows 12.5% and fanduel 7.5%; AI is comparing Ballies against sportsbooks instead of positioning it distinctly."
+        },
+        {
+          "name": "Prize-driven casual bettors",
+          "note": "PrizePicks only appears in 5.0% of responses, leaving room to claim this comparison set more strongly."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong product visibility: Ai Ballies Gg appears in 52.5% of AI responses and ranks very high on average rank (2.76).",
+        "Clear gameplay differentiation: exact-score prediction, head-to-head AI play, and free-roll mechanics are distinct.",
+        "The site offers multiple modes and entry points, which gives AI more surfaces to mention.",
+        "The brand is already being grouped with sports prediction, rewards, and web3 concepts, which is a usable discovery base.",
+        "Ai Ballies Gg has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Claim the comparison set against sorare and PrizePicks with explicit comparison pages and copy.",
+        "Turn branded modes like ScoreStack and Free Roll into entity-level concepts AI can cite consistently.",
+        "Clarify whether the product is fantasy, prediction game, sportsbook alternative, or web3 reward platform.",
+        "Build authoritative content that explains scoring, payout curves, and game modes in plain-language search terms."
+      ],
+      "gaps": [
+        "The site is under-associated with the top competitor entity sorare, despite sorare dominating AI visibility at 65.0%.",
+        "Branded mode names are not yet strongly recognized by AI, reducing recall for ScoreStack and Free Roll.",
+        "AI over-relies on generic sports-betting vocabulary instead of the product's own distinctive framing.",
+        "No strong evidence of segment-specific content for fantasy users, sportsbook shoppers, or prediction market users."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a \"Ballies vs Sorare\" comparison page targeting fantasy sports and prediction-game queries.",
+        "Publish a plain-English \"How Ballies Works\" page that explains Free Roll, ScoreStack, and You vs. AI with schema.",
+        "Add a dedicated \"exact score prediction\" explainer that uses the terms AI engines already repeat.",
+        "Build a \"sports prediction platform\" landing page that clarifies category, gameplay, and rewards in non-branded language.",
+        "Create FAQ content for \"free sports prediction game\", \"how to predict exact scores\", and \"AI sports picks\".",
+        "Publish use-case pages for casual players vs high-engagement bettors to match the two audited customer types."
+      ],
+      "link_building": [
+        "Earn mentions from sports prediction, fantasy sports, and web3 gaming publications using anchor text that includes Ballies and ScoreStack.",
+        "Secure comparison/roundup placements alongside sorare, polymarket, PrizePicks, DraftKings, and FanDuel.",
+        "Pursue backlinks from crypto and web3 directories since AI already cites crypto.com and crypto.org sources.",
+        "Get featured in \"best prediction games\" and \"free sports picks\" listicles to increase category association.",
+        "Build partner or community pages with sports/gaming creators that explain Ballies in their own words and link to it.",
+        "Use PR to position Ballies as a unique AI sports prediction platform rather than a generic betting app."
+      ],
+      "quick_wins": [
+        "Add homepage copy that explicitly repeats the phrases \"AI sports predictions\", \"exact scores\", and \"free sports prediction game\".",
+        "Rename or subtitle navigation items with searchable descriptors, e.g. \"ScoreStack (exact score game)\".",
+        "Add FAQ schema for Free Roll, ScoreStack, and You vs. AI so AI engines can extract the product structure.",
+        "Create internal links from the homepage to mode pages using descriptive anchor text instead of only branded labels.",
+        "Insert a short comparison block on the homepage: \"How Ballies differs from sorare, PrizePicks, and DraftKings.\"",
+        "Add visible trust/context copy explaining rewards, scoring, and who the product is for in one sentence each."
+      ]
+    }
+  }
+}
