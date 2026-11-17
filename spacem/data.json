@@ -1,0 +1,568 @@
+{
+  "site": {
+    "name": "SpaceM",
+    "url": "https://spacem.world",
+    "domain": "spacem.world",
+    "slug": "spacem",
+    "analysis_id": "openrouter-spacem",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 8,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "16.7%",
+        "label": "aave",
+        "trend": ""
+      },
+      {
+        "value": "12.5%",
+        "label": "solana",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "SpaceM",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Retail participants seeking access to real-world projects",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "SpaceM",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "aave",
+          "appearance": 16.7,
+          "rank": 20.2,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "solana",
+          "appearance": 12.5,
+          "rank": 15.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 12.5,
+          "rank": 27.7,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 12.5,
+          "rank": 28.3,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "syndicate",
+          "appearance": 12.5,
+          "rank": 16.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "coinlist",
+          "appearance": 8.3,
+          "rank": 35.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "binance",
+          "appearance": 4.2,
+          "rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "republic",
+          "appearance": 4.2,
+          "rank": 17.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Institutional and high-net-worth allocators",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "SpaceM",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "aave",
+          "appearance": 16.7,
+          "rank": 20.2,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "solana",
+          "appearance": 12.5,
+          "rank": 15.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 12.5,
+          "rank": 27.7,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 12.5,
+          "rank": 28.3,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "syndicate",
+          "appearance": 12.5,
+          "rank": 16.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "coinlist",
+          "appearance": 8.3,
+          "rank": 35.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "binance",
+          "appearance": 4.2,
+          "rank": 14.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "republic",
+          "appearance": 4.2,
+          "rank": 17.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "platform",
+      "count": 168
+    },
+    {
+      "text": "project",
+      "count": 149
+    },
+    {
+      "text": "token",
+      "count": 136
+    },
+    {
+      "text": "platforms",
+      "count": 124
+    },
+    {
+      "text": "contract",
+      "count": 119
+    },
+    {
+      "text": "wallet",
+      "count": 115
+    },
+    {
+      "text": "chain",
+      "count": 114
+    },
+    {
+      "text": "access",
+      "count": 104
+    },
+    {
+      "text": "smart",
+      "count": 102
+    },
+    {
+      "text": "web3",
+      "count": 97
+    }
+  ],
+  "sources": [
+    {
+      "name": "defisafety.com",
+      "domain": "defisafety.com",
+      "url": "https://defisafety.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "eips.ethereum.org",
+      "domain": "eips.ethereum.org",
+      "url": "https://eips.ethereum.org",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "defillama.com",
+      "domain": "defillama.com",
+      "url": "https://defillama.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "dune.com",
+      "domain": "dune.com",
+      "url": "https://dune.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "tally.xyz",
+      "domain": "tally.xyz",
+      "url": "https://tally.xyz",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What kinds of real-world projects can I take part in on SpaceM?",
+      "type": "missing",
+      "persona": "Curious first-time participant"
+    },
+    {
+      "text": "What does it mean that every transaction can be checked by anyone?",
+      "type": "missing",
+      "persona": "Rules-focused community member"
+    },
+    {
+      "text": "How do the project terms and final payouts get enforced if no one can override them?",
+      "type": "missing",
+      "persona": "Rules-focused community member"
+    },
+    {
+      "text": "What kinds of property or energy opportunities are available through SpaceM right now?",
+      "type": "missing",
+      "persona": "Family office due diligence lead"
+    },
+    {
+      "text": "What documentation do I need to review before approving participation for a client account?",
+      "type": "missing",
+      "persona": "Family office due diligence lead"
+    },
+    {
+      "text": "What documentation do I need to review before approving participation for a client account?",
+      "type": "missing",
+      "persona": "Family office due diligence lead"
+    },
+    {
+      "text": "How can I verify that the rules for each project are fixed before I join?",
+      "type": "missing",
+      "persona": "Rules-focused community member"
+    },
+    {
+      "text": "What does it mean that every transaction can be checked by anyone?",
+      "type": "missing",
+      "persona": "Rules-focused community member"
+    },
+    {
+      "text": "What documentation do I need to review before approving participation for a client account?",
+      "type": "missing",
+      "persona": "Family office due diligence lead"
+    },
+    {
+      "text": "Is there a clear way to track participation, settlement, and distributions over time?",
+      "type": "missing",
+      "persona": "Private market allocator"
+    },
+    {
+      "text": "How does SpaceM work if I want to join for the first time?",
+      "type": "missing",
+      "persona": "Curious first-time participant"
+    },
+    {
+      "text": "Can you explain the steps from sign-up to final settlement in simple terms?",
+      "type": "missing",
+      "persona": "Curious first-time participant"
+    },
+    {
+      "text": "What is the safest way to start if I want to test it with a small amount first?",
+      "type": "missing",
+      "persona": "Curious first-time participant"
+    },
+    {
+      "text": "How can I verify that the rules for each project are fixed before I join?",
+      "type": "missing",
+      "persona": "Rules-focused community member"
+    },
+    {
+      "text": "What should I compare between SpaceM and similar platforms before joining?",
+      "type": "missing",
+      "persona": "Rules-focused community member"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "defisafety.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "eips.ethereum.org",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "defillama.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "dune.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "tally.xyz",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "deepseek": 100,
+    "gemini": 29,
+    "claude": 29,
+    "openai": 43
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"real-world projects\"",
+        "evidence": "Core homepage phrase, but AI responses still default to generic \"platform\", \"project\", and \"web3\" language instead of this distinct category.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"RWD Participation Protocol\"",
+        "evidence": "A named product on-site, yet AI engines appear to talk about generic \"contract\" and \"platform\" mechanics rather than this protocol branding.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"CORE NFT\"",
+        "evidence": "A central membership product, but AI visibility is weaker around membership-specific terminology than around general crypto assets like token/wallet.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"vault\" / \"vaults\"",
+        "evidence": "Homepage positions vaults as a key entry point, but AI sources more often cite exchanges and wallets than vault-based participation.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"on published terms\"",
+        "evidence": "A strong trust differentiator on-site, but AI answers tend to compress this into generic \"smart contract\" or \"rule-based\" wording.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"verifiable, on-chain\"",
+        "evidence": "Important proof point on the homepage, but AI output more commonly uses broad blockchain terminology and cites third-party sources rather than this exact trust message.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Take part in real-world business projects through one platform, on transparent, rule-based terms.",
+        "site_context": "Positions the product as a participation platform for real-world projects.",
+        "ai_uses": "AI engines describe it more generically as a platform, project, wallet, or smart-contract workflow.",
+        "ai_context": "The category is being flattened into standard Web3 infrastructure language."
+      },
+      {
+        "site_says": "SpaceM does not tokenize ownership. It digitizes participation.",
+        "site_context": "Clear differentiation from tokenized ownership models.",
+        "ai_uses": "Top AI keywords include token, chain, web3, wallet, and smart contract.",
+        "ai_context": "Engines still associate the brand with tokenized crypto concepts rather than participation-first framing."
+      },
+      {
+        "site_says": "Every step runs on smart contracts on a public blockchain.",
+        "site_context": "Trust and execution model emphasized in product copy.",
+        "ai_uses": "Responses frequently surface comparisons to Binance, Solana, MetaMask, Polygon, Uniswap, Coinbase, and Kraken.",
+        "ai_context": "AI is mapping the brand into the broader crypto stack instead of a distinct real-world participation category."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Retail participants seeking access to real-world projects",
+          "note": "Strongly addressed through open access, simple onboarding, and \"take part\" messaging."
+        },
+        {
+          "name": "Institutional and high-net-worth allocators",
+          "note": "Supported by the mention of funds, strategic partners, and audited infrastructure."
+        },
+        {
+          "name": "Crypto-native users",
+          "note": "CORE NFT, wallet, smart contracts, and on-chain language should resonate with web3 users."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "RWA / tokenization researchers and analysts",
+          "note": "AI visibility is low versus category peers; only rwa.xyz appears as a cited source once."
+        },
+        {
+          "name": "Web3 platform comparers",
+          "note": "Competitors like Syndicate (15.0%, avg rank 3.17) and major exchanges/wallets dominate association."
+        },
+        {
+          "name": "Real estate allocators",
+          "note": "Homepage mentions real estate and DAMAC, but AI still leans toward general crypto platforms rather than property-specific investing."
+        },
+        {
+          "name": "Energy and commodities allocators",
+          "note": "Energy is named on-site, but not yet reflected in the dominant AI keyword set or cited-source ecosystem."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clear trust signals: audited by CertiK, AA infrastructure, and public blockchain verification are strong differentiators.",
+        "Distinct product architecture: membership, vaults, and wallet create a multi-product ecosystem rather than a single app.",
+        "Broad thematic appeal: real-world projects, energy, real estate, and funds give the brand multiple entry points.",
+        "SpaceM has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Own the \"real-world projects\" category phrase so AI engines stop defaulting to generic platform/token language.",
+        "Build more explicit comparisons to adjacent brands like Syndicate, Uniswap, MetaMask, and Coinbase to shape category understanding.",
+        "Increase authority around RWA and participation-protocol terminology to appear in more analyst and explainer queries.",
+        "Strengthen source coverage beyond a few crypto domains; current citations skew toward gate.io and blockchain.com."
+      ],
+      "gaps": [
+        "AI responses are still heavily anchored to generic crypto terms: token, wallet, chain, smart contract, web3.",
+        "Competitor presence remains broad: 139 unique competitors were found, showing a crowded and ambiguous category.",
+        "No clear AI-owned narrative yet for CORE NFT versus standard crypto membership or token assets.",
+        "Limited citation diversity reduces trust and may prevent stronger ranking in institutional queries."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a category-defining page for \"real-world projects\" explaining how SpaceM differs from tokenized ownership and generic Web3 investing.",
+        "Publish a dedicated \"RWD Participation Protocol\" explainer with plain-English flow, eligibility, settlement, and risk details.",
+        "Add a CORE NFT page targeting membership, access, governance, and protocol distribution queries with FAQ schema.",
+        "Create comparison pages: \"SpaceM vs Syndicate\", \"SpaceM vs Uniswap\", and \"SpaceM vs traditional tokenized asset platforms\".",
+        "Publish use-case pages for real estate, energy, and funds so AI can map the brand to concrete verticals.",
+        "Add an institutional explainer page covering audits, compliance posture, partner ecosystem, and verification model."
+      ],
+      "link_building": [
+        "Secure mentions and backlinks from RWA and tokenization publications, especially analyst blogs and research hubs beyond rwa.xyz.",
+        "Pursue partner-linked coverage from named collaborators such as Bargo Capital, Blackwell Global, Timeless Capital, and DAMAC.",
+        "Earn third-party explainers or reviews on reputable crypto media that use the phrases \"real-world projects\" and \"participation protocol\".",
+        "Build citations from blockchain education sites and audit/security writeups that mention CertiK, AA infrastructure, and on-chain verification.",
+        "Obtain comparison/editorial mentions in listicles that contrast SpaceM with Syndicate, Coinbase, Binance, and wallet platforms."
+      ],
+      "quick_wins": [
+        "Rewrite the homepage hero to foreground \"real-world projects\" once, then explain it in a simple definition block.",
+        "Add a plain-language FAQ: what is CORE NFT, what is a vault, what is RWD, and how is participation different from ownership.",
+        "Include structured data for Organization, Product, FAQPage, and BreadcrumbList to improve entity clarity.",
+        "Add explicit alt text and internal anchors using the exact product names: CORE NFT, RWD Participation Protocol, SpacePulse, Tangem Wallet.",
+        "Create a short glossary page that defines the brand's preferred terminology and maps it to common search language.",
+        "Place a comparison table on the homepage or product hub contrasting SpaceM with standard exchanges, wallets, and token platforms."
+      ]
+    }
+  }
+}
