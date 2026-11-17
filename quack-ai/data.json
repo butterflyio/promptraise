@@ -1,0 +1,517 @@
+{
+  "site": {
+    "name": "Quack AI",
+    "url": "https://quackai.ai",
+    "domain": "quackai.ai",
+    "slug": "quack-ai",
+    "analysis_id": "openrouter-quack-ai",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 8,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "54.2%",
+        "label": "autonolas",
+        "trend": ""
+      },
+      {
+        "value": "41.7%",
+        "label": "safe",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Quack AI",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "DAO governance teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Quack AI",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "autonolas",
+          "appearance": 54.2,
+          "rank": 20.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "safe",
+          "appearance": 41.7,
+          "rank": 20.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "chainlink",
+          "appearance": 41.7,
+          "rank": 22.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "snapshot",
+          "appearance": 16.7,
+          "rank": 26.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zodiac",
+          "appearance": 16.7,
+          "rank": 12.8,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tally",
+          "appearance": 8.3,
+          "rank": 26.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "aragon",
+          "appearance": 8.3,
+          "rank": 43.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sybil",
+          "appearance": 4.2,
+          "rank": 41.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Protocol builders and app teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Quack AI",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "autonolas",
+          "appearance": 54.2,
+          "rank": 20.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "safe",
+          "appearance": 41.7,
+          "rank": 20.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "chainlink",
+          "appearance": 41.7,
+          "rank": 22.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "snapshot",
+          "appearance": 16.7,
+          "rank": 26.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zodiac",
+          "appearance": 16.7,
+          "rank": 12.8,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tally",
+          "appearance": 8.3,
+          "rank": 26.0,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "aragon",
+          "appearance": 8.3,
+          "rank": 43.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sybil",
+          "appearance": 4.2,
+          "rank": 41.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "chain",
+      "count": 351
+    },
+    {
+      "text": "execution",
+      "count": 253
+    },
+    {
+      "text": "governance",
+      "count": 197
+    },
+    {
+      "text": "safe",
+      "count": 173
+    },
+    {
+      "text": "agent",
+      "count": 162
+    },
+    {
+      "text": "smart",
+      "count": 159
+    },
+    {
+      "text": "name",
+      "count": 155
+    },
+    {
+      "text": "contract",
+      "count": 140
+    },
+    {
+      "text": "transaction",
+      "count": 114
+    },
+    {
+      "text": "treasury",
+      "count": 113
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "How do I set up proposal approval and execution so it works across multiple EVM networks?",
+      "type": "missing",
+      "persona": "Governance operations lead"
+    },
+    {
+      "text": "How can I authorize treasury payments with one signature and still keep spending limits in place?",
+      "type": "missing",
+      "persona": "Treasury and protocol manager"
+    },
+    {
+      "text": "How do I integrate Q402 into an existing app without rewriting our contracts?",
+      "type": "missing",
+      "persona": "Lead smart-contract engineer"
+    },
+    {
+      "text": "Which EVM networks can use Quack AI right now?",
+      "type": "missing",
+      "persona": "Lead smart-contract engineer"
+    },
+    {
+      "text": "Can you recommend the best approach for adding gas-sponsored execution to a product with active users?",
+      "type": "missing",
+      "persona": "Lead smart-contract engineer"
+    },
+    {
+      "text": "How do I set up proposal approval and execution so it works across multiple EVM networks?",
+      "type": "missing",
+      "persona": "Governance operations lead"
+    },
+    {
+      "text": "How do I integrate Q402 into an existing app without rewriting our contracts?",
+      "type": "missing",
+      "persona": "Lead smart-contract engineer"
+    },
+    {
+      "text": "Can you recommend the best approach for adding gas-sponsored execution to a product with active users?",
+      "type": "missing",
+      "persona": "Lead smart-contract engineer"
+    },
+    {
+      "text": "How do I decide whether users should vote manually or delegate actions to an agent?",
+      "type": "missing",
+      "persona": "Product manager for agent tools"
+    },
+    {
+      "text": "What setup would you recommend for a product team that wants users to delegate decisions but still keep controls visible?",
+      "type": "missing",
+      "persona": "Product manager for agent tools"
+    },
+    {
+      "text": "What is the easiest way to reduce manual steps in our voting and settlement workflow?",
+      "type": "missing",
+      "persona": "Governance operations lead"
+    },
+    {
+      "text": "How does Quack AI compare with doing governance execution through multisig-only processes?",
+      "type": "missing",
+      "persona": "Governance operations lead"
+    },
+    {
+      "text": "Can Quack AI help us automate proposal analysis and final execution without losing auditability?",
+      "type": "missing",
+      "persona": "Governance operations lead"
+    },
+    {
+      "text": "What setup would you recommend for a team that wants AI-assisted voting but still wants human review on key decisions?",
+      "type": "missing",
+      "persona": "Governance operations lead"
+    },
+    {
+      "text": "What is Quack AI\u2019s gasless authorization layer used for in treasury workflows?",
+      "type": "missing",
+      "persona": "Treasury and protocol manager"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 83,
+    "gemini": 100,
+    "openai": 67
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"agent economy\"",
+        "evidence": "Core homepage framing, but AI responses more often use generic terms like governance, execution, smart contracts, and treasury rather than this umbrella concept.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Q402\"",
+        "evidence": "Important product label on the site, but it is not a widely recognized term in AI responses; AI appears to understand the function better than the brand name.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Universal Gasless Authorization Layer\"",
+        "evidence": "Strong product phrase on-site, but AI responses appear to default to broader payment authorization / transaction execution language instead of this named concept.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"delegated execution\"",
+        "evidence": "Described prominently on the site, but AI engines more often mention voting, settlement, and smart contract execution without this exact phrasing.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"verifiable intelligence\"",
+        "evidence": "Used in roadmap/positioning, but AI responses seem to describe governance automation and transparency rather than this newer conceptual language.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"bias-free AI\"",
+        "evidence": "Homepage claims this explicitly, but AI responses do not surface it as a defining attribute when describing Quack AI or the category.",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "\u201cofficial governance layer for the agent economy\u201d",
+        "site_context": "Broad category-setting statement centered on a proprietary market framing.",
+        "ai_uses": "\u201cgovernance,\u201d \u201cexecution,\u201d \u201ctreasury,\u201d \u201csmart contract,\u201d \u201ctransaction\u201d",
+        "ai_context": "AI engines translate the value proposition into operational blockchain terms rather than the site\u2019s category language."
+      },
+      {
+        "site_says": "\u201cQ402 is Live on X Layer, BNB Chain\u201d",
+        "site_context": "Product-specific launch messaging with a named release.",
+        "ai_uses": "Mentions competitor and adjacent concepts like Safe, Snapshot, Tally, UMA, Aragon, Zodiac",
+        "ai_context": "AI appears to anchor the category around known governance tools instead of the site\u2019s product launch terminology."
+      },
+      {
+        "site_says": "\u201cUniversal Gasless Authorization Layer\u201d",
+        "site_context": "Feature-led framing for Q402.",
+        "ai_uses": "\u201cpayment authorization,\u201d \u201cgas-sponsored settlements,\u201d \u201cexecution\u201d",
+        "ai_context": "AI rephrases the feature in more standard industry language and does not retain the branded label."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "DAO governance teams",
+          "note": "Explicitly represented in the audit sample and strongly matched by the governance, voting, and delegation language."
+        },
+        {
+          "name": "Protocol builders and app teams",
+          "note": "Homepage speaks to builders with chain compatibility, execution, and integration messaging."
+        },
+        {
+          "name": "AI-agent-enabled organizations",
+          "note": "The site clearly positions around AI agents making decisions and executing actions on-chain."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Treasury / finance operations teams",
+          "note": "AI commonly uses 'treasury' language, but the site does not strongly target treasury operators despite treasury relevance."
+        },
+        {
+          "name": "Safe/Snapshot/Tally switchers",
+          "note": "Safe appears at 87.5% and Tally/Snapshot are prominent in AI responses, but the site lacks direct migration/comparison positioning."
+        },
+        {
+          "name": "Multichain protocol operators",
+          "note": "Competitors like Safe dominate adjacent governance infrastructure conversations; Quack AI should more explicitly claim multichain governance ops."
+        },
+        {
+          "name": "Web3 product teams implementing delegated execution",
+          "note": "AI repeatedly references execution workflows, yet the site does not package this as a clear builder use case."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Very high own-site visibility: Quack AI appears in 92.5% of responses with strong average rank (2.78).",
+        "Clear differentiation around cross-chain governance and execution, reinforced by 10+ chains and 50+ protocol claims.",
+        "Strong product breadth: governance, AI agents, gasless authorization, and settlement workflows are all represented on the homepage.",
+        "Audit shows broad competitive adjacency, meaning the site is already understood as part of the governance infrastructure category.",
+        "Quack AI has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Translate proprietary terms like 'agent economy' and 'Q402' into standard category language that AI engines actually repeat.",
+        "Build comparison content against Safe, Snapshot, Tally, Aragon, and Zodiac to improve retrieval in competitive queries.",
+        "Own the intersection of governance + execution + treasury with clearer use cases and proof points.",
+        "Create pages that tie Q402 directly to common user intents such as delegation, voting automation, and gasless execution."
+      ],
+      "gaps": [
+        "AI engines recognize the category, but not always the branded terminology, especially 'Q402' and 'agent economy'.",
+        "Competitors like Safe (87.5%) remain highly visible, indicating Quack AI has not fully displaced legacy governance brands in AI answers.",
+        "The site\u2019s most distinctive feature claims are not consistently mirrored in AI language.",
+        "There is limited evidence of content aimed at comparison, migration, or implementation queries."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a 'Quack AI vs Safe / Snapshot / Tally / Aragon / Zodiac' comparison hub targeting competitor-led queries.",
+        "Publish a plain-language explainer: 'What is an agent economy?' and connect it directly to governance and execution use cases.",
+        "Add a dedicated Q402 landing page that explains the product in standard terms first, then introduces the brand name.",
+        "Build use-case pages for DAO governance, treasury automation, and multichain execution with concrete workflows and outcomes.",
+        "Create an implementation guide for builders: how to integrate delegated execution / gasless authorization on EVM chains.",
+        "Add FAQ content answering high-intent questions AI systems tend to paraphrase: voting automation, delegation, settlement, and gas sponsorship."
+      ],
+      "link_building": [
+        "Earn mentions from governance tooling roundups that include Safe, Snapshot, and Tally as adjacent benchmarks.",
+        "Target ecosystem announcements and partner pages from BNB Chain, X Layer, and related multichain infrastructure communities.",
+        "Secure citations from developer docs, technical explainers, and integration articles on sites like Alchemy and other web3 infrastructure publishers.",
+        "Push for list placements in 'DAO tools,' 'governance automation,' and 'on-chain execution' directories.",
+        "Encourage protocol partners to link to Q402-specific integration pages rather than only the homepage.",
+        "Repurpose technical content into guest posts or tutorials that explain gasless authorization and delegated execution in accessible language."
+      ],
+      "quick_wins": [
+        "Add a visible 'What Quack AI does in one sentence' summary using common AI search terms: governance, execution, treasury, delegation.",
+        "Replace or supplement 'agent economy' with a plain-language subtitle on key pages to improve AI comprehension.",
+        "Insert explicit competitor comparison sections mentioning Safe, Snapshot, Tally, UMA, Aragon, and Zodiac where relevant.",
+        "Add schema markup for Organization, Product, FAQ, and HowTo on the homepage and Q402 pages.",
+        "Create concise glossary definitions for Q402, delegated execution, and universal gasless authorization.",
+        "Strengthen internal linking from the homepage to docs, FAQs, and launch pages using descriptive anchor text."
+      ]
+    }
+  }
+}
