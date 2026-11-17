@@ -1,0 +1,537 @@
+{
+  "site": {
+    "name": "IMO invest",
+    "url": "https://imo-invest.com",
+    "domain": "imo-invest.com",
+    "slug": "imo-invest",
+    "analysis_id": "openrouter-imo-invest",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 9,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "25.0%",
+        "label": "RealT",
+        "trend": ""
+      },
+      {
+        "value": "25.0%",
+        "label": "lofty",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "IMO invest",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Retail property income seekers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "IMO invest",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "RealT",
+          "appearance": 25.0,
+          "rank": 14.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "lofty",
+          "appearance": 25.0,
+          "rank": 16.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Propy",
+          "appearance": 20.8,
+          "rank": 23.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arrived",
+          "appearance": 16.7,
+          "rank": 23.3,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fundrise",
+          "appearance": 12.5,
+          "rank": 24.3,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "blocksquare",
+          "appearance": 8.3,
+          "rank": 18.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "centrifuge",
+          "appearance": 8.3,
+          "rank": 29.5,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "crowdstreet",
+          "appearance": 8.3,
+          "rank": 25.5,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "brickken",
+          "appearance": 4.2,
+          "rank": 18.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "High-net-worth and family office allocators",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "IMO invest",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "RealT",
+          "appearance": 25.0,
+          "rank": 14.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "lofty",
+          "appearance": 25.0,
+          "rank": 16.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Propy",
+          "appearance": 20.8,
+          "rank": 23.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arrived",
+          "appearance": 16.7,
+          "rank": 23.3,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fundrise",
+          "appearance": 12.5,
+          "rank": 24.3,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "blocksquare",
+          "appearance": 8.3,
+          "rank": 18.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "centrifuge",
+          "appearance": 8.3,
+          "rank": 29.5,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "crowdstreet",
+          "appearance": 8.3,
+          "rank": 25.5,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "brickken",
+          "appearance": 4.2,
+          "rank": 18.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "property",
+      "count": 461
+    },
+    {
+      "text": "estate",
+      "count": 343
+    },
+    {
+      "text": "platform",
+      "count": 267
+    },
+    {
+      "text": "rental",
+      "count": 246
+    },
+    {
+      "text": "token",
+      "count": 230
+    },
+    {
+      "text": "income",
+      "count": 212
+    },
+    {
+      "text": "risk",
+      "count": 169
+    },
+    {
+      "text": "liquidity",
+      "count": 165
+    },
+    {
+      "text": "tokens",
+      "count": 163
+    },
+    {
+      "text": "tokenized",
+      "count": 162
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "Is this a better option than purchasing a real estate fund share?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "What should I check before buying $IMO if I\u2019m new to property-backed products?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "How is IMO invest compared with buying a foreign rental flat myself?",
+      "type": "missing",
+      "persona": "Cross-border income planner"
+    },
+    {
+      "text": "What happens if property income drops or a building becomes vacant?",
+      "type": "missing",
+      "persona": "Due diligence focused decision maker"
+    },
+    {
+      "text": "What should I check before buying $IMO if I\u2019m new to property-backed products?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "Is this a better option than purchasing a real estate fund share?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "What is the easiest way to start with IMO invest if I want income from overseas property?",
+      "type": "missing",
+      "persona": "Cross-border income planner"
+    },
+    {
+      "text": "How does IMO invest fit into a diversified portfolio with property and income assets?",
+      "type": "missing",
+      "persona": "Portfolio diversification manager"
+    },
+    {
+      "text": "Is this a better option than purchasing a real estate fund share?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "What should I check before buying $IMO if I\u2019m new to property-backed products?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "What happens if property income drops or a building becomes vacant?",
+      "type": "missing",
+      "persona": "Due diligence focused decision maker"
+    },
+    {
+      "text": "How does IMO invest let me earn from rental property without buying a full apartment?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "What makes IMO invest different from buying a rental property directly?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "How would I use IMO invest if I want monthly income from property rentals?",
+      "type": "missing",
+      "persona": "First-time property yield buyer"
+    },
+    {
+      "text": "Can I get exposure to property rentals in Switzerland through IMO invest?",
+      "type": "missing",
+      "persona": "Cross-border income planner"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 75,
+    "gemini": 100,
+    "openai": 75
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"RWA\"",
+        "evidence": "The homepage centers on \"RWA\" and \"real estate investment in the blockchain era,\" but AI responses more often use \"tokenized real estate\" and \"real estate platform\" than the RWA acronym.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"buyback and burn\"",
+        "evidence": "A core mechanism on-site, but AI visibility is weak around token-economics language; responses emphasize risk, liquidity, and tokenized assets rather than this specific model.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"staking\"",
+        "evidence": "The site uses \"real estate staking\" and staking-style inventory, but AI engines appear to prioritize broader investment terms and competitors rather than this concept.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"$IMO\"",
+        "evidence": "Brand token language is prominent on-site, yet AI responses surface competitor brands like RealT, fractional, Propy, and Lofty more consistently than IMO token branding.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"deflationary\"",
+        "evidence": "The site explains supply reduction and token burns, but AI responses do not strongly surface deflationary tokenomics as a distinguishing term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"Swiss company\"",
+        "evidence": "The homepage mentions a Swiss company, but AI output is driven more by market category terms than jurisdictional trust signals.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "\u201cReal estate investment in the blockchain era\u201d and \u201cUnlock global real estate investment with RWA through $IMO.\u201d",
+        "site_context": "Brand-forward, future-oriented messaging with crypto-native phrasing.",
+        "ai_uses": "\u201cproperty,\u201d \u201cestate,\u201d \u201cplatform,\u201d \u201crental,\u201d \u201cincome,\u201d \u201crisk,\u201d and \u201cliquidity.\u201d",
+        "ai_context": "AI engines frame the category in plain-language investment terms and operational risk/reward language."
+      },
+      {
+        "site_says": "\u201cBuy $IMO,\u201d \u201ctokenomics,\u201d and \u201cbuyback and burning\u201d are prominent.",
+        "site_context": "The homepage heavily emphasizes the token and mechanics.",
+        "ai_uses": "Competitor comparisons and category language like \u201ctokenized real estate\u201d and \u201creal estate platform.\u201d",
+        "ai_context": "AI seems to understand the space as an investment platform rather than a token-first ecosystem."
+      },
+      {
+        "site_says": "\u201cThe one-of-a-kind token unlocking real estate investment opportunities worldwide.\u201d",
+        "site_context": "Claims uniqueness and global access.",
+        "ai_uses": "Competitor names such as RealT, fractional, Propy, Lofty, and Arrived.",
+        "ai_context": "AI maps the category through recognized peers, not through IMO\u2019s unique framing."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Crypto-native retail investors",
+          "note": "Homepage language, token price, market cap, and exchange links clearly speak to token buyers."
+        },
+        {
+          "name": "Retail property income seekers",
+          "note": "The rental yield, apartment examples, and monthly income framing align with income-focused retail users."
+        },
+        {
+          "name": "Existing blockchain-aware real estate investors",
+          "note": "The site explains tokenization, supply burns, and on-chain data in a way that fits an informed audience."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "High-net-worth and family office allocators",
+          "note": "Only 10 responses tested, yet AI visibility is weak versus competitors and the site lacks institutional proof points; RealT leads far ahead at 195.0% share."
+        },
+        {
+          "name": "Traditional real estate investors comparing platforms",
+          "note": "AI cites category leaders like fractional (87.5%), Propy (85.0%), and Lofty (80.0%), suggesting IMO is not strongly positioned in comparison-search behavior."
+        },
+        {
+          "name": "Risk-conscious yield seekers",
+          "note": "AI keyword patterns include risk and liquidity, but the site does not strongly address these concerns with structured FAQ or proof content."
+        },
+        {
+          "name": "Global / cross-border investors",
+          "note": "The site claims global access, but AI does not consistently surface geo-specific onboarding, compliance, or investor eligibility details."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clear product differentiation through token buyback and burn mechanics tied to rental income.",
+        "Concrete proof assets on the homepage: live price, market cap, circulating supply, burn history, and property examples.",
+        "The site combines real estate cash-flow language with blockchain-native mechanics, creating a distinctive hybrid offer.",
+        "IMO invest has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Translate tokenomics into plain-English investor benefits so AI can answer category queries without relying on jargon.",
+        "Build more comparison content against top AI-visible competitors like RealT, fractional, Propy, and Lofty.",
+        "Expand trust and due-diligence content for both retail and institutional audiences.",
+        "Create pages that explicitly answer risk, liquidity, and yield questions, since those are common AI response themes.",
+        "Strengthen off-site authority so AI engines cite IMO alongside recognized category leaders more often."
+      ],
+      "gaps": [
+        "Competitors dominate category visibility: RealT appears in 195.0% of responses, far above IMO\u2019s 80.0%.",
+        "IMO is not yet the default answer for broader tokenized real estate queries; AI still prefers category leaders and generic platform language.",
+        "The homepage is heavy on token mechanics but light on investor education, compliance, and comparison framing.",
+        "Source diversity is weak around IMO-owned and independent authoritative references; citations skew to external crypto sites and communities."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a dedicated \"What is tokenized real estate?\" page that explains RWA, tokenization, and $IMO in plain investor language.",
+        "Publish a comparison page: \"IMO vs RealT vs Lofty vs Propy vs fractional\" focused on yield, ownership model, geography, and liquidity.",
+        "Add an FAQ targeting AI-style questions: risk, liquidity, minimum investment, rental yield, burn mechanics, and who can invest.",
+        "Build an institutional landing page for family offices and HNW allocators with compliance, governance, asset selection, and reporting details.",
+        "Create a trust page with Swiss entity details, legal structure, property sourcing process, and on-chain transparency explanations."
+      ],
+      "link_building": [
+        "Earn mentions in authoritative crypto and tokenization publications that AI already cites, such as CoinDesk, The Block, and CryptoSlate.",
+        "Secure profile and resource links on major data platforms like CoinGecko and CoinMarketCap with richer project descriptions.",
+        "Publish guest content or interviews on real estate tokenization and RWA platforms to increase category relevance.",
+        "Pursue coverage in investor-facing fintech and real estate outlets that discuss yield, liquidity, and fractional ownership.",
+        "Build referral and mention links from ecosystem partners, exchanges, and wallets to reinforce brand/entity recognition."
+      ],
+      "quick_wins": [
+        "Rewrite the homepage hero to include plain-language terms like \"tokenized real estate investment\" and \"rental income\" alongside $IMO.",
+        "Add internal links from the homepage to FAQs, comparison pages, and investor education pages.",
+        "Mark up key facts with schema where possible: organization, product, FAQ, and financial product-related structured data.",
+        "Create a visible glossary section defining RWA, tokenized real estate, buyback, burn, and staking.",
+        "Add a comparison table with RealT, Lofty, fractional, and Propy to capture competitor-style AI queries.",
+        "Strengthen sourceable proof points on-site: property count, geography, yield examples, supply history, and monthly burn history."
+      ]
+    }
+  }
+}
