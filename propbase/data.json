@@ -1,0 +1,636 @@
+{
+  "site": {
+    "name": "Propbase",
+    "url": "https://propbase.app",
+    "domain": "propbase.app",
+    "slug": "propbase",
+    "analysis_id": "openrouter-propbase",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 9,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "37.5%",
+        "label": "fundrise",
+        "trend": ""
+      },
+      {
+        "value": "29.2%",
+        "label": "RealT",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Propbase",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Retail property income seekers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Propbase",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "fundrise",
+          "appearance": 37.5,
+          "rank": 12.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "RealT",
+          "appearance": 29.2,
+          "rank": 8.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arrived",
+          "appearance": 29.2,
+          "rank": 15.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "lofty",
+          "appearance": 25.0,
+          "rank": 16.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Lofty AI",
+          "appearance": 4.2,
+          "rank": 8.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "propy",
+          "appearance": 4.2,
+          "rank": 7.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "blocksquare",
+          "appearance": 4.2,
+          "rank": 28.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tangible",
+          "appearance": 4.2,
+          "rank": 10.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 4.2,
+          "rank": 16.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Active property capital allocators",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Propbase",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "fundrise",
+          "appearance": 37.5,
+          "rank": 12.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "RealT",
+          "appearance": 29.2,
+          "rank": 8.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arrived",
+          "appearance": 29.2,
+          "rank": 15.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "lofty",
+          "appearance": 25.0,
+          "rank": 16.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Lofty AI",
+          "appearance": 4.2,
+          "rank": 8.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "propy",
+          "appearance": 4.2,
+          "rank": 7.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "blocksquare",
+          "appearance": 4.2,
+          "rank": 28.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tangible",
+          "appearance": 4.2,
+          "rank": 10.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 4.2,
+          "rank": 16.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Claude": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "property",
+      "count": 310
+    },
+    {
+      "text": "platform",
+      "count": 249
+    },
+    {
+      "text": "estate",
+      "count": 246
+    },
+    {
+      "text": "rental",
+      "count": 207
+    },
+    {
+      "text": "liquidity",
+      "count": 177
+    },
+    {
+      "text": "secondary",
+      "count": 173
+    },
+    {
+      "text": "fractional",
+      "count": 163
+    },
+    {
+      "text": "market",
+      "count": 160
+    },
+    {
+      "text": "fees",
+      "count": 148
+    },
+    {
+      "text": "tokenized",
+      "count": 146
+    }
+  ],
+  "sources": [
+    {
+      "name": "fundrise.com",
+      "domain": "fundrise.com",
+      "url": "https://fundrise.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "realtymogul.com",
+      "domain": "realtymogul.com",
+      "url": "https://realtymogul.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "arrivedhomes.com",
+      "domain": "arrivedhomes.com",
+      "url": "https://arrivedhomes.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "groundfloor.us",
+      "domain": "groundfloor.us",
+      "url": "https://groundfloor.us",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "streitwise.com",
+      "domain": "streitwise.com",
+      "url": "https://streitwise.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "yieldstreet.com",
+      "domain": "yieldstreet.com",
+      "url": "https://yieldstreet.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "roofstock.com",
+      "domain": "roofstock.com",
+      "url": "https://roofstock.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "tryst.vc",
+      "domain": "tryst.vc",
+      "url": "https://tryst.vc",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What kind of property would be best for someone who wants regular rental income with low hassle?",
+      "type": "missing",
+      "persona": "First-time fractional property buyer"
+    },
+    {
+      "text": "Which properties on Propbase currently have the best projected rental yield?",
+      "type": "missing",
+      "persona": "Yield-focused small investor"
+    },
+    {
+      "text": "What are the risks of buying shares in hotel-managed properties instead of standard apartments?",
+      "type": "missing",
+      "persona": "Yield-focused small investor"
+    },
+    {
+      "text": "How does fractional ownership of a hotel room work on Propbase?",
+      "type": "missing",
+      "persona": "First-time fractional property buyer"
+    },
+    {
+      "text": "How does Propbase compare with buying a rental condo outright?",
+      "type": "missing",
+      "persona": "First-time fractional property buyer"
+    },
+    {
+      "text": "How do I compare net yield and projected IRR across the available units?",
+      "type": "missing",
+      "persona": "Yield-focused small investor"
+    },
+    {
+      "text": "What are the risks of buying shares in hotel-managed properties instead of standard apartments?",
+      "type": "missing",
+      "persona": "Yield-focused small investor"
+    },
+    {
+      "text": "Is Propbase better for income generation than buying a small condo in a local market?",
+      "type": "missing",
+      "persona": "Yield-focused small investor"
+    },
+    {
+      "text": "Which property on Propbase would you recommend for someone who wants steady income and easy resale?",
+      "type": "missing",
+      "persona": "Yield-focused small investor"
+    },
+    {
+      "text": "How liquid are the property shares on Propbase\u2019s marketplace?",
+      "type": "missing",
+      "persona": "Liquidity-first allocator"
+    },
+    {
+      "text": "What happens if there are no buyers when I want to sell my shares?",
+      "type": "missing",
+      "persona": "Liquidity-first allocator"
+    },
+    {
+      "text": "How does the peer-to-peer marketplace work on Propbase?",
+      "type": "missing",
+      "persona": "Liquidity-first allocator"
+    },
+    {
+      "text": "Is it easier to exit a property position on Propbase than in a traditional sale?",
+      "type": "missing",
+      "persona": "Liquidity-first allocator"
+    },
+    {
+      "text": "What type of property on Propbase would you suggest if I care most about easy resale?",
+      "type": "missing",
+      "persona": "Liquidity-first allocator"
+    },
+    {
+      "text": "Why do I need the platform\u2019s native utility asset to buy or use services on Propbase?",
+      "type": "missing",
+      "persona": "Platform mechanics evaluator"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "fundrise.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "realtymogul.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "arrivedhomes.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "groundfloor.us",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "streitwise.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "yieldstreet.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "roofstock.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "tryst.vc",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 83,
+    "gemini": 100,
+    "openai": 50
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"PROPS\"",
+        "evidence": "Homepage heavily emphasizes the native utility token, but AI responses are dominated by generic terms like property, platform, rental, and liquidity rather than the token name.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"tokenized property transaction platform\"",
+        "evidence": "This is a core site descriptor, but AI engines summarize the category more simply as real estate investing, fractional ownership, or tokenized property.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Nexus App\"",
+        "evidence": "The homepage surfaces this product name, but it does not appear in the AI keyword set or competitor associations, suggesting weak recognition.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"DEX\"",
+        "evidence": "The site mentions a built-in DEX for swapping PROPS, yet AI outputs are not associating Propbase with exchange or trading intent strongly enough to surface this term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"staking\"",
+        "evidence": "Homepage highlights 'Stake $PROPS Earn with PROPS Staking,' but AI responses are not clearly reflecting staking as a top concept for the brand.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"membership tiers\"",
+        "evidence": "The site says users can choose a membership tier, but AI responses do not surface membership as a known buying or participation path.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"liquid asset class\"",
+        "evidence": "This phrasing is central to the homepage, but AI language more often uses secondary market, liquidity, and fractional ownership rather than this broader investment framing.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Highly scalable, fast, and secure blockchain based tokenized property transaction platform.",
+        "site_context": "Technical platform positioning and blockchain infrastructure language dominate the homepage.",
+        "ai_uses": "Real estate investing platform, fractional ownership, rental yield, secondary market liquidity.",
+        "ai_context": "AI engines describe the product in investor-benefit terms, not infrastructure terms."
+      },
+      {
+        "site_says": "Invest with as little as $100 and gain access to high-quality, resilient real estate assets.",
+        "site_context": "Entry price and asset quality are emphasized.",
+        "ai_uses": "Property investing, passive income, tokenized real estate, market liquidity.",
+        "ai_context": "AI frames the brand around accessible real estate income, not minimum investment mechanics."
+      },
+      {
+        "site_says": "PROPS, our platform\u2019s native utility token, powers all smart contract interactions, property transaction fees, rewards, memberships, and more.",
+        "site_context": "Token utility is comprehensive and central to the product.",
+        "ai_uses": "Property, platform, rental, liquidity, secondary, fractional, market, fees.",
+        "ai_context": "AI mentions fees and liquidity, but not the token utility stack or smart-contract role."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Retail property income seekers",
+          "note": "Clearly addressed via fractional ownership, $100 entry point, monthly rental income, and passive earnings."
+        },
+        {
+          "name": "Active property capital allocators",
+          "note": "Supported by buy/sell tokens anytime, P2P marketplace, and liquidity-driven positioning."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Yield-focused real estate investors",
+          "note": "Strong fit, but AI visibility is weaker than RealT (200.0%) and Lofty AI (92.5%)."
+        },
+        {
+          "name": "Secondary-market traders of tokenized real estate",
+          "note": "The site mentions liquidity and instant selling, but AI does not strongly associate Propbase with trading behavior."
+        },
+        {
+          "name": "Crypto-native investors seeking real-world assets (RWA)",
+          "note": "AI sources cite rwa.xyz, but the brand is not yet strongly embedded in RWA language."
+        },
+        {
+          "name": "Global hotel-brand-backed property buyers",
+          "note": "This differentiator is on-site, but it is not surfacing as a recognized segment in AI responses."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Own site mention rate is high at 92.5%, so the brand is already present in AI answers.",
+        "The homepage clearly differentiates on fractional ownership, low minimum investment, and tokenized real estate.",
+        "Liquidity is a strong positioning theme, with P2P marketplace and instant selling language aligned to AI keywords.",
+        "The site has a concrete product stack: marketplace, staking, and DEX, which creates multiple entry points.",
+        "Propbase has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Increase association with the exact category terms AI uses most: fractional ownership, passive income, secondary market, and tokenized real estate.",
+        "Build stronger recognition for PROPS as a utility token rather than just a site feature.",
+        "Clarify the relationship between marketplace investing and token trading so AI can connect the whole product ecosystem.",
+        "Expand visibility around hotel-brand-backed properties and resilience as differentiators against competitors."
+      ],
+      "gaps": [
+        "RealT materially outperforms Propbase in AI presence at 200.0%, indicating stronger category dominance.",
+        "AI responses use generic real estate language more than Propbase-specific product language.",
+        "Top cited sources are booking.com, fractional.xyz, and rwa.xyz, showing external authority is coming from adjacent sources rather than Propbase.",
+        "Competitors like Lofty AI are appearing at the same rate as Propbase, limiting brand distinctiveness.",
+        "The token and staking narrative is not sufficiently embedded in AI-generated summaries."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a dedicated 'What is Propbase?' page optimized around AI-friendly language: fractional real estate, tokenized property, rental yield, and secondary market liquidity.",
+        "Publish a 'Propbase vs RealT vs Lofty AI' comparison page to capture competitive queries and explain where Propbase differs.",
+        "Create a PROPS utility token explainer that explicitly covers staking, fees, rewards, memberships, and DEX use cases.",
+        "Build a page for 'How to invest in tokenized real estate with as little as $100' to match common AI phrasing.",
+        "Add an RWA-focused educational hub that connects Propbase to real-world asset investing language used by AI systems."
+      ],
+      "link_building": [
+        "Earn mentions and backlinks from RWA and tokenized real estate directories, especially sites in the orbit of rwa.xyz.",
+        "Pursue comparative coverage and reviews from crypto-real-estate publications that already cite competitors like RealT and Lofty AI.",
+        "Build authority through listings and guest features on blockchain, DeFi, and real estate investing media that can reinforce PROPS and marketplace terminology.",
+        "Secure mentions from hotel/property ecosystem partners and brand pages to strengthen the 'managed by global hotel brands' claim.",
+        "Target investor education sites and newsletters that cover fractional ownership and passive real estate income."
+      ],
+      "quick_wins": [
+        "Rewrite homepage headings to lead with 'fractional real estate investing' and 'passive rental income' instead of the technical blockchain descriptor.",
+        "Add concise FAQ sections answering 'What is PROPS?', 'How does staking work?', and 'Can I sell anytime?'",
+        "Insert schema-ready definitions and glossary terms for tokenized real estate, fractional ownership, secondary market, and RWA.",
+        "Add internal links from the homepage to marketplace, staking, DEX, and membership pages using the exact terms AI engines use.",
+        "Create a short comparison block that explicitly states why Propbase is different from RealT and Lofty AI."
+      ]
+    }
+  }
+}
