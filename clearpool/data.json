@@ -1,0 +1,523 @@
+{
+  "site": {
+    "name": "Clearpool",
+    "url": "https://clearpool.finance",
+    "domain": "clearpool.finance",
+    "slug": "clearpool",
+    "analysis_id": "openrouter-clearpool",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 45,
+    "score_status": "Low AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 8,
+    "own_mentioned": true,
+    "own_appearance_pct": 45.8,
+    "own_appearance_note": "Site mentioned in 45.8% of brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "87.5%",
+        "label": "maple",
+        "trend": ""
+      },
+      {
+        "value": "75.0%",
+        "label": "centrifuge",
+        "trend": ""
+      },
+      {
+        "value": "45.8%",
+        "label": "Clearpool",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Institutional lenders and treasury allocators",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Clearpool",
+          "appearance": 45.8,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "maple",
+          "appearance": 87.5,
+          "rank": 14.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "centrifuge",
+          "appearance": 75.0,
+          "rank": 17.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Goldfinch",
+          "appearance": 70.8,
+          "rank": 20.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Aave",
+          "appearance": 70.8,
+          "rank": 14.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Maple Finance",
+          "appearance": 70.8,
+          "rank": 14.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "compound",
+          "appearance": 54.2,
+          "rank": 11.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "TrueFi",
+          "appearance": 33.3,
+          "rank": 20.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "credix",
+          "appearance": 12.5,
+          "rank": 11.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Institutional borrowers and capital markets teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Clearpool",
+          "appearance": 45.8,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "maple",
+          "appearance": 87.5,
+          "rank": 14.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "centrifuge",
+          "appearance": 75.0,
+          "rank": 17.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Goldfinch",
+          "appearance": 70.8,
+          "rank": 20.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Aave",
+          "appearance": 70.8,
+          "rank": 14.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Maple Finance",
+          "appearance": 70.8,
+          "rank": 14.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "compound",
+          "appearance": 54.2,
+          "rank": 11.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "TrueFi",
+          "appearance": 33.3,
+          "rank": 20.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "credix",
+          "appearance": 12.5,
+          "rank": 11.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Gemini": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "credit",
+      "count": 414
+    },
+    {
+      "text": "institutional",
+      "count": 293
+    },
+    {
+      "text": "pool",
+      "count": 289
+    },
+    {
+      "text": "risk",
+      "count": 259
+    },
+    {
+      "text": "borrower",
+      "count": 254
+    },
+    {
+      "text": "lending",
+      "count": 232
+    },
+    {
+      "text": "borrowers",
+      "count": 193
+    },
+    {
+      "text": "liquidity",
+      "count": 185
+    },
+    {
+      "text": "pools",
+      "count": 181
+    },
+    {
+      "text": "chain",
+      "count": 180
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "What are the typical risks of lending against real-world assets or stable units on this platform?",
+      "type": "missing",
+      "persona": "Portfolio manager at a digital asset fund"
+    },
+    {
+      "text": "How does repayment work if the loan is issued and settled on-ledger?",
+      "type": "missing",
+      "persona": "Head of financing at a market maker"
+    },
+    {
+      "text": "What kind of borrower profile is most likely to qualify for the upcoming RLUSD credit products?",
+      "type": "missing",
+      "persona": "Institutional operations lead at a payments or settlement firm"
+    },
+    {
+      "text": "What are the main differences between lending into Clearpool and keeping funds in a traditional money market or short-term bond strategy?",
+      "type": "missing",
+      "persona": "Treasury director at a midsize institution"
+    },
+    {
+      "text": "How do the RLUSD vaults work, and what exactly is custodied by Hex Trust?",
+      "type": "missing",
+      "persona": "Treasury director at a midsize institution"
+    },
+    {
+      "text": "What kind of downside protection is built in if a borrower runs into problems?",
+      "type": "missing",
+      "persona": "Treasury director at a midsize institution"
+    },
+    {
+      "text": "Which use case fits better for me: direct exposure to institutional credit markets or the upcoming RLUSD yield product on XRPL?",
+      "type": "missing",
+      "persona": "Treasury director at a midsize institution"
+    },
+    {
+      "text": "What types of borrowers use Clearpool, and how are they underwritten?",
+      "type": "missing",
+      "persona": "Portfolio manager at a digital asset fund"
+    },
+    {
+      "text": "What is the best way to get exposure to institutional yield on RLUSD once the XRPL launch goes live?",
+      "type": "missing",
+      "persona": "Portfolio manager at a digital asset fund"
+    },
+    {
+      "text": "What collateral or balance sheet requirements do borrowers usually need to meet?",
+      "type": "missing",
+      "persona": "Head of financing at a market maker"
+    },
+    {
+      "text": "Can Clearpool support financing for a firm that needs to manage payment flows and reserve liquidity?",
+      "type": "missing",
+      "persona": "Institutional operations lead at a payments or settlement firm"
+    },
+    {
+      "text": "How do the RLUSD vaults work, and what exactly is custodied by Hex Trust?",
+      "type": "missing",
+      "persona": "Treasury director at a midsize institution"
+    },
+    {
+      "text": "What is the best way to get exposure to institutional yield on RLUSD once the XRPL launch goes live?",
+      "type": "missing",
+      "persona": "Portfolio manager at a digital asset fund"
+    },
+    {
+      "text": "How are first-loss protections structured in case a borrower cannot repay in full?",
+      "type": "missing",
+      "persona": "Institutional operations lead at a payments or settlement firm"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 88,
+    "gemini": 75,
+    "openai": 88
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "XRPL / XRP Ledger",
+        "evidence": "The homepage heavily emphasizes XRPL, but AI responses still lean on generic 'credit', 'lending', and competitor terms; Ripple appears only at 17.5%, suggesting the XRP Ledger positioning is not yet consistently surfaced in AI answers.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "RLUSD",
+        "evidence": "A core homepage theme is 'real-world yield on RLUSD,' but the AI keyword set does not surface RLUSD as a recognized concept, indicating weak entity association around this product angle.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "XLS-65 vaults",
+        "evidence": "This protocol-specific term appears prominently on-site, but it does not show up in the AI keyword set, implying low discoverability for the new XRPL-native product architecture.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "XLS-66 lending",
+        "evidence": "The site uses this ledger-standard language, but AI engines are not echoing it; they instead discuss generic borrowing/lending pools and institutional credit.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "custodied by Hex Trust",
+        "evidence": "Homepage mentions custodial structure, but AI responses do not surface Hex Trust as a salient trust signal or provider-specific differentiator.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "native credit primitives",
+        "evidence": "The site frames Clearpool as a ledger primitive, yet AI language centers on conventional lending and credit pools rather than protocol-native credit infrastructure.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "The Credit Layer for the On-Chain Economy; native credit primitives; five layers, all on one ledger.",
+        "site_context": "Strong protocol-centric framing tied to XRPL architecture.",
+        "ai_uses": "Institutional credit, lending, borrower liquidity, pools, risk.",
+        "ai_context": "AI engines simplify the category into familiar DeFi/credit-market language rather than ledger-native architecture."
+      },
+      {
+        "site_says": "Real-world yield on RLUSD, custodied by Hex Trust, native to the XRP Ledger.",
+        "site_context": "Specific product narrative around RLUSD and custody.",
+        "ai_uses": "Institutional lenders and treasury allocators; capital markets teams; generic yield and liquidity terms.",
+        "ai_context": "AI responds to use case and buyer intent, but not the exact RLUSD/XRPL phrasing."
+      },
+      {
+        "site_says": "Permissioned institutional lending across seven networks.",
+        "site_context": "Multi-chain institutional lending emphasis.",
+        "ai_uses": "Aave, Goldfinch, TrueFi, Maple/Maple Finance, Centrifuge.",
+        "ai_context": "AI positions Clearpool against established lending protocols instead of repeating the site\u2019s permissioned-network language."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Institutional lenders and treasury allocators",
+          "note": "Directly addressed in the audit with 10 responses; homepage clearly speaks to yield, TVL, and institutional lending."
+        },
+        {
+          "name": "Institutional borrowers",
+          "note": "Strong fit with borrower, underwriting, and permissioned credit-market language."
+        },
+        {
+          "name": "Capital markets teams",
+          "note": "Relevant to the borrower-facing institutional credit narrative and structured financing angle."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "XRPL-native builders / ecosystem participants",
+          "note": "Under-served relative to Ripple at 17.5%; opportunity to own 'native to the XRP Ledger' queries."
+        },
+        {
+          "name": "Stablecoin yield seekers on RLUSD",
+          "note": "The RLUSD angle is prominent on-site but not reflected in AI keyword coverage."
+        },
+        {
+          "name": "Protocol comparison shoppers",
+          "note": "Competitors dominate AI visibility: Goldfinch 150.0%, TrueFi 125.0%, Aave 110.0%, Maple/Maple Finance 95.0%/90.0%."
+        },
+        {
+          "name": "RWA / treasury yield allocators",
+          "note": "AI language suggests interest in risk, liquidity, and borrower pools, but the site is not yet strongly associated with the broader RWA/yield allocator category."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clearpool has the strongest self-visibility in the set at 97.5% own-site appearance and an average rank of 2.72.",
+        "The homepage differentiates around XRPL-native credit and RLUSD yield, which is a distinctive angle versus generic lending competitors.",
+        "The site already communicates institutional credibility with $965M originated, $30M TVL, and $10M interest paid.",
+        "The product story spans both live multichain activity and a coming-soon XRPL expansion, creating a credible roadmap narrative.",
+        "Clearpool has 45.8% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Own XRPL and RLUSD-related informational queries before competitors or generic DeFi protocols do.",
+        "Translate protocol language into buyer-language that AI engines already use: institutional credit, risk, borrower liquidity, lending pools.",
+        "Build stronger association with Hex Trust and custody as a trust/compliance signal.",
+        "Convert the current multichain credibility into comparison content against Goldfinch, TrueFi, Maple, and Aave."
+      ],
+      "gaps": [
+        "AI sources are not cited at all, so there is weak external corroboration for the site\u2019s claims.",
+        "Competitor visibility is high, especially Goldfinch 150.0%, TrueFi 125.0%, and Aave 110.0%, indicating Clearpool is present but not dominating the category narrative.",
+        "Protocol-specific terms like RLUSD, XLS-65, and XLS-66 are not reflected in AI keyword outputs.",
+        "The site\u2019s messaging is more technical than the way AI summarizes the space, which may suppress match rates on common search prompts."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create an XRPL-specific landing page explaining Clearpool as the institutional credit layer for the XRP Ledger, using plain-language definitions alongside XLS-65 and XLS-66.",
+        "Publish an RLUSD yield page focused on 'real-world yield on RLUSD' with FAQs, use cases, custody details, and risk disclosures.",
+        "Add a 'Clearpool vs Goldfinch vs TrueFi vs Maple' comparison page targeting the exact competitors surfaced in AI responses.",
+        "Write a glossary page for institutional credit terms: borrower, pool, liquidity, risk, repayment, permissioning, custody, and first-loss protection.",
+        "Develop a 'How Clearpool works' explainer that maps the five-layer architecture to buyer outcomes, not just protocol terminology."
+      ],
+      "link_building": [
+        "Secure citations from XRPL ecosystem publications and developer docs that explain Clearpool's role on the XRP Ledger.",
+        "Earn coverage from stablecoin and custody partners, especially Hex Trust, to reinforce RLUSD and custody associations.",
+        "Pursue institutional DeFi and RWA media mentions that use the exact terms AI already prefers: institutional credit, treasury allocators, borrower liquidity.",
+        "Build comparison/editorial links from DeFi analytics and protocol-review sites mentioning Clearpool alongside Goldfinch, TrueFi, Maple, and Aave.",
+        "Target partnerships and co-marketing with XRP Ledger ecosystem groups to increase entity recognition for XRPL-native credit."
+      ],
+      "quick_wins": [
+        "Add FAQ sections with concise answers to 'What is Clearpool on XRPL?' and 'What is RLUSD yield?'",
+        "Update title tags and H1s on key pages to include both site language and AI-friendly terms like institutional lending and credit markets.",
+        "Insert explicit mentions of Hex Trust, RLUSD, XRPL, and permissioned lending in the first screenful of homepage copy.",
+        "Add schema markup for Organization, Product, FAQPage, and BreadcrumbList to improve entity clarity.",
+        "Create short comparison snippets on the homepage or a dedicated page referencing Goldfinch, TrueFi, Maple Finance, and Aave."
+      ]
+    }
+  }
+}
