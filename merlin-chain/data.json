@@ -1,0 +1,472 @@
+{
+  "site": {
+    "name": "Merlin Chain",
+    "url": "https://merlinchain.io",
+    "domain": "merlinchain.io",
+    "slug": "merlin-chain",
+    "analysis_id": "openrouter-merlin-chain",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 16,
+    "score_status": "Very Low AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 6,
+    "own_mentioned": true,
+    "own_appearance_pct": 16.7,
+    "own_appearance_note": "Site mentioned in 16.7% of brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "62.5%",
+        "label": "stacks",
+        "trend": ""
+      },
+      {
+        "value": "62.5%",
+        "label": "rsk",
+        "trend": ""
+      },
+      {
+        "value": "16.7%",
+        "label": "Merlin Chain",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "On-chain asset users",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Merlin Chain",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "stacks",
+          "appearance": 62.5,
+          "rank": 14.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "rsk",
+          "appearance": 62.5,
+          "rank": 17.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Citrea",
+          "appearance": 37.5,
+          "rank": 17.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "botanix",
+          "appearance": 33.3,
+          "rank": 19.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Bitlayer",
+          "appearance": 29.2,
+          "rank": 25.1,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 8.3,
+          "rank": 13.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "OpenAI": 1,
+        "DeepSeek": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Builders and protocol teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Merlin Chain",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "stacks",
+          "appearance": 62.5,
+          "rank": 14.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "rsk",
+          "appearance": 62.5,
+          "rank": 17.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Citrea",
+          "appearance": 37.5,
+          "rank": 17.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "botanix",
+          "appearance": 33.3,
+          "rank": 19.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Bitlayer",
+          "appearance": 29.2,
+          "rank": 25.1,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 8.3,
+          "rank": 13.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "Gemini": 1,
+        "Claude": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "bitcoin",
+      "count": 714
+    },
+    {
+      "text": "native",
+      "count": 228
+    },
+    {
+      "text": "assets",
+      "count": 211
+    },
+    {
+      "text": "bridge",
+      "count": 210
+    },
+    {
+      "text": "network",
+      "count": 195
+    },
+    {
+      "text": "liquidity",
+      "count": 159
+    },
+    {
+      "text": "smart",
+      "count": 149
+    },
+    {
+      "text": "layer",
+      "count": 148
+    },
+    {
+      "text": "defi",
+      "count": 148
+    },
+    {
+      "text": "yield",
+      "count": 140
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "What are the main differences between Merlin Chain and other Bitcoin Layer 2 options for builders?",
+      "type": "missing",
+      "persona": "Protocol integrator"
+    },
+    {
+      "text": "How do I bridge my Bitcoin-based assets to Merlin Chain?",
+      "type": "missing",
+      "persona": "Active Bitcoin asset holder"
+    },
+    {
+      "text": "Which Bitcoin asset types are supported on Merlin Chain right now?",
+      "type": "missing",
+      "persona": "Active Bitcoin asset holder"
+    },
+    {
+      "text": "What is the cheapest way to move my assets between Bitcoin and Merlin Chain?",
+      "type": "missing",
+      "persona": "Active Bitcoin asset holder"
+    },
+    {
+      "text": "What can I actually do with my Bitcoin assets after I bridge them here?",
+      "type": "missing",
+      "persona": "Active Bitcoin asset holder"
+    },
+    {
+      "text": "Which platform is better for using Bitcoin assets with lower fees and faster confirmations?",
+      "type": "missing",
+      "persona": "Active Bitcoin asset holder"
+    },
+    {
+      "text": "How does staking $MERL work and what does the 15% APR mean?",
+      "type": "missing",
+      "persona": "Yield-seeking asset user"
+    },
+    {
+      "text": "What ways are there to earn with Bitcoin assets on Merlin Chain besides staking?",
+      "type": "missing",
+      "persona": "Yield-seeking asset user"
+    },
+    {
+      "text": "Is Merlin Chain a good place to park assets if I want low fees and some yield?",
+      "type": "missing",
+      "persona": "Yield-seeking asset user"
+    },
+    {
+      "text": "How do I build an app on Merlin Chain?",
+      "type": "missing",
+      "persona": "Application founder"
+    },
+    {
+      "text": "What kinds of apps work best on Merlin Chain versus other Bitcoin-related networks?",
+      "type": "missing",
+      "persona": "Application founder"
+    },
+    {
+      "text": "How do I apply for a Merlin grant and what do they look for?",
+      "type": "missing",
+      "persona": "Application founder"
+    },
+    {
+      "text": "Should I launch on Merlin Chain if I want users to interact with Bitcoin-based assets directly?",
+      "type": "missing",
+      "persona": "Application founder"
+    },
+    {
+      "text": "How does the ZK rollup design on Merlin Chain affect speed and security?",
+      "type": "missing",
+      "persona": "Protocol integrator"
+    },
+    {
+      "text": "How reliable is Merlin Chain for handling high activity and many asset types?",
+      "type": "missing",
+      "persona": "Protocol integrator"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 83,
+    "deepseek": 67,
+    "gemini": 100,
+    "openai": 50
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\u201cZK-Rollup on Bitcoin\u201d",
+        "evidence": "Homepage emphasizes this technical framing, but AI responses mostly use broader terms like \u201cbitcoin,\u201d \u201clayer,\u201d and \u201csmart\u201d rather than this exact phrase.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\u201cNative Bitcoin Layer2\u201d",
+        "evidence": "The site leads with this positioning, but AI engines more often describe Merlin as a Bitcoin Layer 2 / EVM-compatible chain and rarely repeat the exact \u201cNative\u201d formulation.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\u201cBRC20 / BRC420 / Bitmap / Atomicals / Pipe / Stamp\u201d",
+        "evidence": "These supported protocol names appear on-site, but AI answers summarize the space with broader \u201cBTC protocols\u201d language and do not consistently surface these asset-specific terms.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\u201cSequencer nodes\u201d",
+        "evidence": "A core technical differentiator on the homepage, but AI-generated responses do not commonly surface this infrastructure term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\u201cMerlin Bridge\u201d",
+        "evidence": "The bridge is on-site, but AI responses cite generic \u201cbridge\u201d language and do not consistently connect it to Merlin as a named product.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\u201cMerlin Seal\u201d",
+        "evidence": "Homepage includes this branded feature, but it is not reflected in the top AI keyword set or cited sources.",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "\u201cThe Native Bitcoin Layer2\u201d and \u201cUnleashing Bitcoin's Potential with Native L1 Assets\u201d",
+        "site_context": "Brand-first and highly specific positioning that assumes familiarity with Merlin\u2019s thesis.",
+        "ai_uses": "AI engines describe Merlin with generic category language such as \u201cbitcoin,\u201d \u201cnetwork,\u201d \u201clayer,\u201d and \u201csmart.\u201d",
+        "ai_context": "Models prefer simpler, category-level phrasing over the site\u2019s coined positioning."
+      },
+      {
+        "site_says": "\u201cZK-Rollup on Bitcoin\u201d and \u201csequencer nodes responsibly managing data transmission via decentralized Oracles\u201d",
+        "site_context": "Technical architecture language focused on mechanism.",
+        "ai_uses": "AI responses emphasize outcomes like \u201clow fees,\u201d \u201chigh scalability,\u201d and \u201cliquidity.\u201d",
+        "ai_context": "Outcome language is more model-friendly than infrastructure-heavy wording."
+      },
+      {
+        "site_says": "\u201cBTC Protocols Support\u201d with a list of protocols",
+        "site_context": "Protocol catalog wording centered on supported asset standards.",
+        "ai_uses": "AI terms cluster around \u201cdefi,\u201d \u201cyield,\u201d \u201cbridge,\u201d and \u201cassets\u201d rather than protocol names.",
+        "ai_context": "The market language is more use-case oriented than list-oriented."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "On-chain asset users",
+          "note": "Clearly addressed by staking, bridge, asset support, and yield-oriented homepage messaging."
+        },
+        {
+          "name": "Builders and protocol teams",
+          "note": "Explicitly addressed through \u201cBuild on Merlin\u201d and grant messaging."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Bitcoin DeFi users seeking yield",
+          "note": "Relevant intent is present in AI keywords (\u201cdefi,\u201d \u201cyield\u201d) but the site could speak more directly to this segment."
+        },
+        {
+          "name": "Cross-chain bridge users",
+          "note": "Bridge intent is surfaced in AI citations, but the site does not own the bridge narrative strongly enough versus generic \u201cbridge\u201d results."
+        },
+        {
+          "name": "BTC asset communities (BRC20/Atomicals/Bitmap holders)",
+          "note": "High-fit segment given homepage support claims, but AI does not consistently recognize Merlin for these asset-specific queries."
+        },
+        {
+          "name": "Comparative buyers evaluating Bitcoin L2s",
+          "note": "Bitlayer appears in 85.0% of responses and stacks in 72.5%, indicating users are comparing options and Merlin needs stronger comparison content."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong topical alignment with Bitcoin Layer 2 themes, especially assets, bridge, liquidity, and DeFi.",
+        "High visibility for the core Merlin narrative across both customer types: on-chain asset users and builders.",
+        "The homepage clearly signals EVM compatibility, BTC protocol support, and low-fee/high-scalability benefits.",
+        "Merlin Chain has 16.7% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Increase semantic match to AI language around Bitcoin L2, DeFi, yield, and bridge use cases.",
+        "Build explicit comparison content against Bitlayer, stacks, Citrea, and rsk to capture evaluation queries.",
+        "Strengthen recognition for asset-specific support terms like BRC20, Atomicals, Bitmap, and related Bitcoin standards.",
+        "Expand builder-facing content to better capture protocol-team queries and technical evaluation intent."
+      ],
+      "gaps": [
+        "Competitor visibility is broad: Bitlayer appears in 85.0% of responses and stacks in 72.5%, showing Merlin is not monopolizing category-level comparisons.",
+        "AI citations skew toward general or third-party sources like gate.io and chainlist.org, not authoritative Merlin pages for every topic.",
+        "The site\u2019s branded terminology is not always mirrored in AI outputs, reducing recall for coined phrases like Merlin Seal and Native Bitcoin Layer2.",
+        "The homepage is heavy on claims and features, but lighter on structured explainer content that maps to common AI query language."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a Bitcoin Layer 2 explainer page that defines Merlin in the exact language AI already uses: Bitcoin L2, bridge, DeFi, liquidity, and yield.",
+        "Publish a protocol-support hub for BRC20, BRC420, Bitmap, Atomicals, Pipe, and Stamp with individual sections and FAQs.",
+        "Build comparison pages: Merlin vs Bitlayer, Merlin vs Stacks, Merlin vs Citrea, and Merlin vs RSK.",
+        "Add a technical architecture page explaining ZK-rollup, sequencer nodes, decentralized oracles, and EVM compatibility in plain language.",
+        "Create builder-focused pages for grants, integration docs, and deployment paths tailored to protocol teams."
+      ],
+      "link_building": [
+        "Earn more authoritative Bitcoin L2 mentions from industry media and research pages that use the same terminology as AI engines.",
+        "Secure backlinks from Bitcoin ecosystem directories and comparison lists that already mention Bitlayer, Stacks, and other L2s.",
+        "Expand links from protocol-specific communities around BRC20, Atomicals, and Bitmap to reinforce asset-support relevance.",
+        "Publish developer/tutorial content on external platforms and link back to Merlin\u2019s builder and docs pages.",
+        "Strengthen citations from high-trust crypto databases and listings beyond gate.io and chainlist.org."
+      ],
+      "quick_wins": [
+        "Rewrite homepage hero copy to include the most common AI language: Bitcoin Layer 2, bridge, DeFi, yield, and liquidity.",
+        "Add FAQ blocks answering \u201cWhat is Merlin Chain?\u201d, \u201cIs Merlin a Bitcoin L2?\u201d, and \u201cWhat assets does Merlin support?\u201d",
+        "Create internal links from the homepage to the bridge, staking, grants, and asset-support pages with descriptive anchor text.",
+        "Add structured schema and concise summaries on key pages so AI systems can extract product and audience intent more reliably.",
+        "Produce a \u201cSupported Bitcoin protocols\u201d section with plain-English explanations, not just a list of names.",
+        "Add comparison snippets on the homepage or dedicated pages that explicitly differentiate Merlin from Bitlayer and Stacks."
+      ]
+    }
+  }
+}
