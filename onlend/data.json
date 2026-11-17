@@ -1,0 +1,592 @@
+{
+  "site": {
+    "name": "Onlend",
+    "url": "https://onlend.io",
+    "domain": "onlend.io",
+    "slug": "onlend",
+    "analysis_id": "openrouter-onlend",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 10,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "79.2%",
+        "label": "aave",
+        "trend": ""
+      },
+      {
+        "value": "70.8%",
+        "label": "morpho",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Onlend",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Financial product builders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Onlend",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "aave",
+          "appearance": 79.2,
+          "rank": 13.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "morpho",
+          "appearance": 70.8,
+          "rank": 13.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "euler",
+          "appearance": 62.5,
+          "rank": 17.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "compound",
+          "appearance": 58.3,
+          "rank": 17.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "centrifuge",
+          "appearance": 37.5,
+          "rank": 21.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "goldfinch",
+          "appearance": 29.2,
+          "rank": 25.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "clearpool",
+          "appearance": 16.7,
+          "rank": 25.2,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "makerdao",
+          "appearance": 8.3,
+          "rank": 24.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "figure",
+          "appearance": 4.2,
+          "rank": 40.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "TrueFi",
+          "appearance": 4.2,
+          "rank": 7.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Protocol and platform operators",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Onlend",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "aave",
+          "appearance": 79.2,
+          "rank": 13.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "morpho",
+          "appearance": 70.8,
+          "rank": 13.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "euler",
+          "appearance": 62.5,
+          "rank": 17.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "compound",
+          "appearance": 58.3,
+          "rank": 17.7,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "centrifuge",
+          "appearance": 37.5,
+          "rank": 21.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "goldfinch",
+          "appearance": 29.2,
+          "rank": 25.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "clearpool",
+          "appearance": 16.7,
+          "rank": 25.2,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "makerdao",
+          "appearance": 8.3,
+          "rank": 24.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "figure",
+          "appearance": 4.2,
+          "rank": 40.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "TrueFi",
+          "appearance": 4.2,
+          "rank": 7.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "lending",
+      "count": 494
+    },
+    {
+      "text": "risk",
+      "count": 319
+    },
+    {
+      "text": "market",
+      "count": 220
+    },
+    {
+      "text": "liquidity",
+      "count": 180
+    },
+    {
+      "text": "aave",
+      "count": 178
+    },
+    {
+      "text": "institutional",
+      "count": 175
+    },
+    {
+      "text": "credit",
+      "count": 169
+    },
+    {
+      "text": "name",
+      "count": 161
+    },
+    {
+      "text": "liquidation",
+      "count": 159
+    },
+    {
+      "text": "protocol",
+      "count": 153
+    }
+  ],
+  "sources": [
+    {
+      "name": "morpho.org",
+      "domain": "morpho.org",
+      "url": "https://morpho.org",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "euler.finance",
+      "domain": "euler.finance",
+      "url": "https://euler.finance",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "Can I launch one lending market first and expand it later to support more assets?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "What kind of oracle support is available if my market needs a specific price source?",
+      "type": "missing",
+      "persona": "Protocol founder launching a niche market"
+    },
+    {
+      "text": "What is the best setup for a private lending market that needs to stay under our own brand and policies?",
+      "type": "missing",
+      "persona": "Operations manager at an institution"
+    },
+    {
+      "text": "What tools let me launch a branded lending product with no coding?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "Can I launch one lending market first and expand it later to support more assets?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "How do I choose between a permissioned lending stack and a more open one?",
+      "type": "missing",
+      "persona": "Head of digital products at an exchange"
+    },
+    {
+      "text": "How do I decide whether to use an updatable market or an immutable one?",
+      "type": "missing",
+      "persona": "Protocol founder launching a niche market"
+    },
+    {
+      "text": "What platform should I use if I need a lending product with KYC, AML, and privacy controls?",
+      "type": "missing",
+      "persona": "Operations manager at an institution"
+    },
+    {
+      "text": "How do I add a lending feature to my app without building the full back end myself?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "What tools let me launch a branded lending product with no coding?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "How do lending platforms like Onlend compare with building a custom system from scratch?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "What setup would you recommend if I need KYC, custom risk rules, and a white-label interface?",
+      "type": "missing",
+      "persona": "Product lead at a fintech app"
+    },
+    {
+      "text": "How do I choose between a permissioned lending stack and a more open one?",
+      "type": "missing",
+      "persona": "Head of digital products at an exchange"
+    },
+    {
+      "text": "What should I look for if I need liquidation controls, analytics, and API access in one platform?",
+      "type": "missing",
+      "persona": "Head of digital products at an exchange"
+    },
+    {
+      "text": "Can Onlend support different collateral and borrow assets for separate user groups?",
+      "type": "missing",
+      "persona": "Head of digital products at an exchange"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "morpho.org",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "euler.finance",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 88,
+    "gemini": 100,
+    "openai": 88
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "onchain lending apps",
+        "evidence": "Homepage lead term, but AI answers more often use broader category language like \u201clending,\u201d \u201ccredit,\u201d and \u201cprotocol\u201d rather than this exact phrase.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "no-code infrastructure",
+        "evidence": "Core positioning on the homepage, but AI visibility trends suggest engines are not consistently surfacing this builder-specific framing when answering lending infrastructure queries.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "white-label frontend",
+        "evidence": "A differentiator on-site, but AI responses appear to favor generic protocol comparisons and rarely echo this productized deployment language.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "permissionless toolset",
+        "evidence": "Used to describe the product for enterprises, but AI results are not reflecting this phrase and instead describe the category in more standard infrastructure terms.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "targeted borrow rates",
+        "evidence": "A strong feature claim, but AI keyword patterns center on \u201cliquidation,\u201d \u201crisk,\u201d and \u201cmarket\u201d rather than rate-control terminology.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "multi-collateral & multi-borrow",
+        "evidence": "Important technical differentiator, yet AI engines appear to discuss lending systems at a higher level and do not consistently surface this capability.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Build and launch onchain lending apps with no-code infrastructure",
+        "site_context": "Product-led, builder-centric framing.",
+        "ai_uses": "Lending, risk, liquidity, credit, protocol, and institutional lending infrastructure",
+        "ai_context": "AI summarizes the space in category terms rather than the app-builder workflow."
+      },
+      {
+        "site_says": "Create your own lending app",
+        "site_context": "Ownership and configurability are emphasized.",
+        "ai_uses": "Compare lending protocols like Aave, Morpho, Compound, Euler",
+        "ai_context": "AI frames the market as protocol selection, not app creation."
+      },
+      {
+        "site_says": "White-label frontend, analytics, REST & GraphQL, KYC/AML support",
+        "site_context": "Operational product stack and enterprise readiness.",
+        "ai_uses": "Institutional, market, liquidation, credit, risk management",
+        "ai_context": "AI surfaces risk and market mechanics more than implementation-layer features."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Financial product builders",
+          "note": "Homepage directly speaks to teams building lending, earn, and looping products."
+        },
+        {
+          "name": "Protocol and platform operators",
+          "note": "Copy around launch, manage, compliance, and infrastructure fits operators shipping lending products."
+        },
+        {
+          "name": "Enterprises / institutions",
+          "note": "The site explicitly mentions institutional platforms and enterprise use."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "DeFi researchers / protocol evaluators",
+          "note": "Aave appears in 85.0% of responses and Morpho in 60.0%, showing strong demand for comparison-oriented answers."
+        },
+        {
+          "name": "Risk and credit decision-makers",
+          "note": "AI keywords heavily feature risk, credit, and liquidation, but the site does not foreground these personas."
+        },
+        {
+          "name": "Stablecoin and treasury teams",
+          "note": "Stablecoin looping is mentioned on-site, but this segment is not yet strongly encoded in the AI response set."
+        },
+        {
+          "name": "RWA platform builders",
+          "note": "RWA use cases are present on-site, but competitor visibility from Goldfinch (37.5%) and Centrifuge (30.0%) indicates room to win this query set."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Own site appears in 90.0% of AI responses, indicating strong baseline recognition.",
+        "Clear differentiation around no-code, configurable lending app infrastructure.",
+        "Strong product breadth: multi-collateral, compliance support, custom IRMs, analytics, and white-label deployment.",
+        "Well-articulated use cases across LST looping, stablecoin looping, neobanks, and RWA lending.",
+        "Onlend has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Own the comparison narrative against Aave (85.0%), Morpho (60.0%), and Compound (77.5%).",
+        "Translate product features into the language AI already uses: risk, credit, liquidity, markets, and institutional lending.",
+        "Build dedicated pages for the highest-intent segments and use cases that AI already mentions.",
+        "Create more citation-worthy content so AI engines rely less on generic sources like crypto.com."
+      ],
+      "gaps": [
+        "Top AI keywords do not reflect the homepage's strongest differentiators; they cluster around generic market mechanics.",
+        "Only one source citation is visible, suggesting weak external corroboration and limited authority signals.",
+        "The site is not yet dominating the builder/institutional comparison queries where competitors are common.",
+        "Competitors with product-category authority still receive substantial coverage in AI responses."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a \u2018Onlend vs Aave vs Morpho\u2019 comparison page focused on app ownership, white-label frontend, and configurable parameters.",
+        "Publish a \u2018What is onchain lending infrastructure?\u2019 explainer that maps product features to AI-friendly terms like credit, risk, liquidity, and liquidation.",
+        "Build use-case pages for \u2018stablecoin looping,\u2019 \u2018LST looping,\u2019 and \u2018RWA lending\u2019 with concrete examples and deployment steps.",
+        "Add an enterprise page for institutional lending platforms covering KYC/AML, compliance, permissions, and governance models.",
+        "Create a technical page for builders covering REST, GraphQL, custom IRMs, oracles, and liquidation controls."
+      ],
+      "link_building": [
+        "Earn mentions in crypto infrastructure roundups that compare lending platforms, not just DeFi protocols.",
+        "Pursue citations from developer and fintech media covering onchain credit, RWA lending, and stablecoin yield products.",
+        "Secure backlinks from partner ecosystems around Chainlink, Pyth, and other oracle/compliance tooling referenced on-site.",
+        "Publish guest posts or technical explainers on builder-focused publications about launching lending apps without code.",
+        "Get listed in AI-citable directories for DeFi infrastructure, lending software, and tokenized asset platforms."
+      ],
+      "quick_wins": [
+        "Add FAQ sections using the exact language AI prefers: risk, credit, liquidity, liquidation, institutional lending.",
+        "Insert comparison tables on key pages with explicit mentions of Aave, Morpho, Compound, Euler, Goldfinch, and Centrifuge.",
+        "Strengthen title tags and H1s to include both product language and category language, e.g. \u2018onchain lending infrastructure for credit markets.\u2019",
+        "Add schema markup for SoftwareApplication, Product, FAQPage, and Organization to improve entity clarity.",
+        "Expand homepage copy to reduce repetition and make the core value proposition more scannable and semantically rich."
+      ]
+    }
+  }
+}
