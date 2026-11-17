@@ -1,0 +1,545 @@
+{
+  "site": {
+    "name": "Sonic",
+    "url": "https://soniclabs.com",
+    "domain": "soniclabs.com",
+    "slug": "sonic",
+    "analysis_id": "openrouter-sonic",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 16,
+    "score_status": "Very Low AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 38,
+    "unique_competitors": 9,
+    "own_mentioned": true,
+    "own_appearance_pct": 16.7,
+    "own_appearance_note": "Site mentioned in 16.7% of brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "83.3%",
+        "label": "Avalanche",
+        "trend": ""
+      },
+      {
+        "value": "79.2%",
+        "label": "arbitrum",
+        "trend": ""
+      },
+      {
+        "value": "16.7%",
+        "label": "Sonic",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "DeFi application teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Sonic",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Avalanche",
+          "appearance": 83.3,
+          "rank": 16.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance": 79.2,
+          "rank": 13.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "optimism",
+          "appearance": 62.5,
+          "rank": 15.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Polygon",
+          "appearance": 58.3,
+          "rank": 19.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 54.2,
+          "rank": 13.6,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "solana",
+          "appearance": 50.0,
+          "rank": 15.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fantom",
+          "appearance": 37.5,
+          "rank": 25.2,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "monad",
+          "appearance": 25.0,
+          "rank": 10.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Sui",
+          "appearance": 12.5,
+          "rank": 21.3,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 9,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Active network users",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Sonic",
+          "appearance": 16.7,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Avalanche",
+          "appearance": 83.3,
+          "rank": 16.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance": 79.2,
+          "rank": 13.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "optimism",
+          "appearance": 62.5,
+          "rank": 15.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Polygon",
+          "appearance": 58.3,
+          "rank": 19.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 54.2,
+          "rank": 13.6,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "solana",
+          "appearance": 50.0,
+          "rank": 15.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fantom",
+          "appearance": 37.5,
+          "rank": 25.2,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "monad",
+          "appearance": 25.0,
+          "rank": 10.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Sui",
+          "appearance": 12.5,
+          "rank": 21.3,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "OpenAI": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "chain",
+      "count": 318
+    },
+    {
+      "text": "bridge",
+      "count": 215
+    },
+    {
+      "text": "network",
+      "count": 196
+    },
+    {
+      "text": "ethereum",
+      "count": 191
+    },
+    {
+      "text": "native",
+      "count": 185
+    },
+    {
+      "text": "liquidity",
+      "count": 142
+    },
+    {
+      "text": "base",
+      "count": 135
+    },
+    {
+      "text": "wallet",
+      "count": 132
+    },
+    {
+      "text": "arbitrum",
+      "count": 128
+    },
+    {
+      "text": "usdc",
+      "count": 124
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "How do I launch a lending or exchange app on Sonic without running into high gas costs?",
+      "type": "missing",
+      "persona": "Protocol founder"
+    },
+    {
+      "text": "What is the difference between Sonic and other high-throughput EVM networks for app builders?",
+      "type": "missing",
+      "persona": "Protocol founder"
+    },
+    {
+      "text": "What setup do you recommend for a new app that wants to earn fees from activity on Sonic?",
+      "type": "missing",
+      "persona": "Protocol founder"
+    },
+    {
+      "text": "How do I move an existing Solidity app to Sonic with the least code changes?",
+      "type": "missing",
+      "persona": "Product engineer"
+    },
+    {
+      "text": "What are the main debugging issues people run into when deploying on Sonic?",
+      "type": "missing",
+      "persona": "Product engineer"
+    },
+    {
+      "text": "How does Sonic compare with other EVM networks for transaction speed and app reliability?",
+      "type": "missing",
+      "persona": "Product engineer"
+    },
+    {
+      "text": "What is the easiest way to let users move assets into Sonic from another network?",
+      "type": "missing",
+      "persona": "Product engineer"
+    },
+    {
+      "text": "Which Sonic documentation should I read first if I need to build and test an app quickly?",
+      "type": "missing",
+      "persona": "Product engineer"
+    },
+    {
+      "text": "How do I get started on Sonic as a regular user?",
+      "type": "missing",
+      "persona": "Power user"
+    },
+    {
+      "text": "What is the safest way to bridge assets into Sonic from another network?",
+      "type": "missing",
+      "persona": "Power user"
+    },
+    {
+      "text": "Where can I find the best apps on Sonic for earning points or rewards?",
+      "type": "missing",
+      "persona": "Power user"
+    },
+    {
+      "text": "What should I do if a transfer into Sonic is stuck or delayed?",
+      "type": "missing",
+      "persona": "Power user"
+    },
+    {
+      "text": "What is Sonic's native dollar-based asset and how is it backed?",
+      "type": "missing",
+      "persona": "Stable asset user"
+    },
+    {
+      "text": "What is the best way to get a dollar-pegged asset onto Sonic from another chain?",
+      "type": "missing",
+      "persona": "Stable asset user"
+    },
+    {
+      "text": "Which Sonic apps support a dollar-pegged asset for everyday use?",
+      "type": "missing",
+      "persona": "Stable asset user"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 89,
+    "deepseek": 67,
+    "gemini": 89,
+    "openai": 100
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"S token\"",
+        "evidence": "Homepage emphasizes staking and airdrop mechanics, but AI responses surface broader chain/bridge/network language and rarely mention the token name directly.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Fee Monetization\"",
+        "evidence": "A key developer differentiator on the site, but it does not appear in the top AI language; AI instead focuses on chain, liquidity, bridge, and wallet terms.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"SonicVM\"",
+        "evidence": "The site uses this product name for EVM compatibility and execution, but AI summaries do not surface it as a recognized term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"SonicDB\"",
+        "evidence": "Homepage highlights storage and node architecture, but AI engines do not appear to surface this infrastructure term in responses.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"Sonic Gateway\"",
+        "evidence": "A named bridge product on-site, while AI more commonly says \"bridge\" or \"native bridge\" without associating the branded product name.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"USSD\"",
+        "evidence": "Homepage promotes Sonic's stablecoin, but AI responses do not show meaningful recognition of the branded stablecoin term.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "\u201cHighest-performing EVM L1,\u201d \u201c400,000 TPS,\u201d \u201cinstant finality,\u201d \u201csub-second confirmation times\u201d",
+        "site_context": "Performance-first positioning centered on speed and EVM compatibility.",
+        "ai_uses": "\u201cchain,\u201d \u201cnetwork,\u201d \u201cbridge,\u201d \u201cethereum,\u201d \u201cliquidity,\u201d \u201cwallet\u201d",
+        "ai_context": "AI frames Sonic more as infrastructure in the broader multichain ecosystem than as a pure performance leader."
+      },
+      {
+        "site_says": "\u201cApps,\u201d \u201cbuilders,\u201d \u201cfee monetization,\u201d \u201cworld-class infrastructure\u201d",
+        "site_context": "Developer and application-growth messaging.",
+        "ai_uses": "\u201cDeFi,\u201d \u201cnative,\u201d \u201cUSDC,\u201d \u201cArbitrum,\u201d \u201cBase,\u201d \u201cPolygon\u201d",
+        "ai_context": "AI compares Sonic against other chains and liquidity venues rather than repeating Sonic\u2019s developer economics language."
+      },
+      {
+        "site_says": "\u201cBridge to Sonic with any asset, from any chain\u201d and \u201cSonic Gateway\u201d",
+        "site_context": "Bridging is presented as a branded product with a clear action path.",
+        "ai_uses": "\u201cbridge,\u201d \u201cnative bridge,\u201d \u201cfrom any chain,\u201d \u201cEthereum\u201d",
+        "ai_context": "AI uses generic bridge language and does not consistently credit Sonic's branded bridging terminology."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "DeFi application teams",
+          "note": "Well represented by docs, builder messaging, fee monetization, and SonicVM/SonicDB infrastructure claims."
+        },
+        {
+          "name": "Active network users",
+          "note": "Homepage clearly addresses users with bridge, stake, earn, wallet, and airdrop flows."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Multichain bridge users",
+          "note": "AI strongly uses bridge/network language; competing chains like Avalanche (133.3%), Polygon (122.2%), and Base (80.6%) are frequently surfaced."
+        },
+        {
+          "name": "Liquidity-seeking DeFi traders",
+          "note": "AI repeatedly emphasizes liquidity and USDC; Sonic should own more comparative DeFi/liquidity narratives."
+        },
+        {
+          "name": "Ethereum-native builders migrating apps",
+          "note": "AI uses ethereum/arbitrum/base language, but the site could speak more directly to migration from these ecosystems."
+        },
+        {
+          "name": "Stablecoin and payments use cases",
+          "note": "USDC appears among top AI keywords, but the branded USSD stablecoin story is under-recognized."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clear performance differentiation: 400,000 TPS and instant finality are memorable and specific.",
+        "Strong product breadth: bridge, staking, docs, apps, wallet flow, and builder tooling are all present on the homepage.",
+        "Developer credibility is reinforced by infrastructure terms like SonicVM, SonicDB, and Fee Monetization.",
+        "Sonic has 16.7% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Own the \"fastest EVM L1\" narrative in AI answers by adding more comparison and proof pages.",
+        "Tie Sonic more explicitly to common AI keywords like chain, network, bridge, liquidity, and Ethereum migration.",
+        "Make Sonic Gateway, USSD, and Fee Monetization more AI-recognizable through supporting pages and schema.",
+        "Capture competitor comparison demand, especially against Avalanche, Polygon, Base, and Arbitrum."
+      ],
+      "gaps": [
+        "AI still surfaces Avalanche (133.3%), Polygon (122.2%), Base (80.6%), and Arbitrum (83.3%) as prominent references more often than Sonic-specific product terms.",
+        "Key branded terms on the site are not showing up in AI language, suggesting weak entity recognition for Sonic products.",
+        "The homepage is heavy on claims but light on third-party proof, benchmarks, and ecosystem validation that AI systems often cite.",
+        "Audience-specific messaging is broad; there is limited explicit content for migration, liquidity, and stablecoin use cases."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a \"Sonic vs Avalanche / Polygon / Base / Arbitrum\" comparison hub focused on speed, fees, finality, and EVM compatibility.",
+        "Publish a \"Why builders choose Sonic\" page that explains Fee Monetization, SonicVM, and SonicDB in plain-language use cases.",
+        "Build a \"Bridge to Sonic\" page optimized around generic AI terms like bridge, network, liquidity, Ethereum, and any asset from any chain.",
+        "Create a USSD stablecoin explainer with use cases, backing, compliance, and how it fits DeFi and payments.",
+        "Add a migration guide for Ethereum and EVM teams: contracts, tooling, wallets, bridging, and deployment steps."
+      ],
+      "link_building": [
+        "Secure citations from major crypto directories and ecosystem pages that mention Sonic Gateway, USSD, and Fee Monetization by name.",
+        "Earn mentions from DeFi onboarding and bridge aggregators that use Sonic as a destination chain.",
+        "Increase references from technical docs and validator/RPC ecosystem pages such as sonicscan.org and rpc.soniclabs.",
+        "Pursue comparative coverage in crypto media that frames Sonic against Avalanche, Polygon, Base, and Arbitrum.",
+        "Build partnerships and co-marketing pages with wallet, bridge, and DeFi app providers that point back to Sonic."
+      ],
+      "quick_wins": [
+        "Add FAQ sections that explicitly answer: \"What is Sonic?\", \"Is Sonic EVM-compatible?\", \"How fast is Sonic?\", and \"How do I bridge to Sonic?\"",
+        "Use structured data and glossary pages for branded entities: Sonic Gateway, SonicVM, SonicDB, USSD, and Fee Monetization.",
+        "Rewrite homepage copy to include the words AI already uses: chain, network, bridge, liquidity, Ethereum, USDC, and native bridge.",
+        "Add short comparison snippets near the hero section stating how Sonic differs from Avalanche, Polygon, Base, and Arbitrum.",
+        "Create indexable pages for staking, bridging, and app building with concise definitions and internal links from the homepage."
+      ]
+    }
+  }
+}
