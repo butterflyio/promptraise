@@ -1,0 +1,527 @@
+{
+  "site": {
+    "name": "Telos",
+    "url": "https://telos.net",
+    "domain": "telos.net",
+    "slug": "telos",
+    "analysis_id": "openrouter-telos",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 9,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "66.7%",
+        "label": "solana",
+        "trend": ""
+      },
+      {
+        "value": "58.3%",
+        "label": "Polygon",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Telos",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Application builders and product teams",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Telos",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "solana",
+          "appearance": 66.7,
+          "rank": 15.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Polygon",
+          "appearance": 58.3,
+          "rank": 19.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Arbitrum",
+          "appearance": 54.2,
+          "rank": 11.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Avalanche",
+          "appearance": 41.7,
+          "rank": 19.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "aztec",
+          "appearance": 41.7,
+          "rank": 17.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "cosmos",
+          "appearance": 41.7,
+          "rank": 14.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Optimism",
+          "appearance": 37.5,
+          "rank": 10.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 33.3,
+          "rank": 11.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sui",
+          "appearance": 25.0,
+          "rank": 25.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "DeepSeek": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Network users and governance participants",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Telos",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "solana",
+          "appearance": 66.7,
+          "rank": 15.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Polygon",
+          "appearance": 58.3,
+          "rank": 19.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Arbitrum",
+          "appearance": 54.2,
+          "rank": 11.4,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Avalanche",
+          "appearance": 41.7,
+          "rank": 19.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "aztec",
+          "appearance": 41.7,
+          "rank": 17.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "cosmos",
+          "appearance": 41.7,
+          "rank": 14.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Optimism",
+          "appearance": 37.5,
+          "rank": 10.1,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 33.3,
+          "rank": 11.2,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "sui",
+          "appearance": 25.0,
+          "rank": 25.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "DeepSeek": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "chain",
+      "count": 285
+    },
+    {
+      "text": "network",
+      "count": 205
+    },
+    {
+      "text": "ethereum",
+      "count": 201
+    },
+    {
+      "text": "privacy",
+      "count": 182
+    },
+    {
+      "text": "tlos",
+      "count": 166
+    },
+    {
+      "text": "native",
+      "count": 142
+    },
+    {
+      "text": "transaction",
+      "count": 140
+    },
+    {
+      "text": "fees",
+      "count": 130
+    },
+    {
+      "text": "block",
+      "count": 126
+    },
+    {
+      "text": "polygon",
+      "count": 101
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "Can I deploy Solidity contracts on Telos without changing my existing tooling?",
+      "type": "missing",
+      "persona": "EVM dApp engineer"
+    },
+    {
+      "text": "How does Telos compare with other EVM networks for speed and transaction costs?",
+      "type": "missing",
+      "persona": "EVM dApp engineer"
+    },
+    {
+      "text": "What kinds of apps are best suited to Telos EVM?",
+      "type": "missing",
+      "persona": "EVM dApp engineer"
+    },
+    {
+      "text": "How do I get started building on Telos with the developer docs?",
+      "type": "missing",
+      "persona": "EVM dApp engineer"
+    },
+    {
+      "text": "What can I actually do with TLOS on Telos?",
+      "type": "missing",
+      "persona": "TLOS holder and network participant"
+    },
+    {
+      "text": "How does the monthly fee burn affect TLOS supply?",
+      "type": "missing",
+      "persona": "TLOS holder and network participant"
+    },
+    {
+      "text": "Where can I see the current TLOS supply and burned amounts?",
+      "type": "missing",
+      "persona": "TLOS holder and network participant"
+    },
+    {
+      "text": "How do I send TLOS privately with zkWallet?",
+      "type": "missing",
+      "persona": "TLOS holder and network participant"
+    },
+    {
+      "text": "What is the difference between using TLOS for gas and using it for governance?",
+      "type": "missing",
+      "persona": "TLOS holder and network participant"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 100,
+    "gemini": 100,
+    "openai": 100
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "zkWallet",
+        "evidence": "Prominent on-site privacy product name, but AI responses more often use generic language like \"privacy tools\" and cite external explorers instead of the product name.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "SNARKtor",
+        "evidence": "High-value zero-knowledge protocol is present on-site, but it is not reflected in top AI keywords; AI engines instead surface broader terms like \"privacy\", \"ethereum\", and \"network\".",
+        "priority": "HIGH"
+      },
+      {
+        "term": "Telos Zero",
+        "evidence": "Governance/security layer name appears on-site, but AI summaries do not consistently surface this branded architecture term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "Lightspeed",
+        "evidence": "The site references Instant Finality / Lightspeed content, but AI-visible terminology is dominated by generic performance language such as \"fast network\" and \"sub-second transactions\".",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "TLOS + USDC shielded transfers",
+        "evidence": "Specific private-payment use case is clear on-site, but AI engines mostly return generic blockchain/payment terms rather than this concrete capability.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "post-quantum accounts",
+        "evidence": "Homepage/news content mentions quantum testnet and account migration, but this emerging capability does not appear in AI keywords or summaries.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "High-performance blockchain infrastructure, fast EVM execution, live privacy tools, and TLOS utility.",
+        "site_context": "The homepage is product-led and feature-dense, using branded concepts and performance claims.",
+        "ai_uses": "AI engines describe Telos more generically as a chain/network for Ethereum-compatible transactions, privacy, fees, and governance.",
+        "ai_context": "AI language is simpler, comparative, and category-based; it rarely repeats the site's branded packaging."
+      },
+      {
+        "site_says": "zkWallet, shielded TLOS and USDC, encrypted memos, and batch transfers.",
+        "site_context": "Privacy messaging is centered on a named app and specific transaction features.",
+        "ai_uses": "AI responses tend to say \"privacy\" or \"private payments\" and cite explorers and market sites rather than the wallet feature set.",
+        "ai_context": "The market reads the offering as a privacy-enabled chain, not yet as a named privacy payment product."
+      },
+      {
+        "site_says": "SNARKtor, recursive proof aggregation, zero-knowledge technology.",
+        "site_context": "The site emphasizes technical depth and cryptography naming.",
+        "ai_uses": "AI answers focus on broad network attributes like \"ethereum\", \"chain\", \"fees\", and \"transactions\" instead of protocol-specific proof terms.",
+        "ai_context": "The technical differentiator is under-translated into common AI retrieval language."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Application builders and product teams",
+          "note": "Well covered by EVM execution, docs, privacy tooling, and builder-oriented CTAs."
+        },
+        {
+          "name": "Network users and governance participants",
+          "note": "Well covered by TLOS utility, governance, staking, and transaction-fee messaging."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Privacy-first payment users",
+          "note": "Strong product fit exists, but AI engines are not consistently surfacing this segment; competitors like Polygon (150.0%) and Avalanche (105.0%) dominate visibility."
+        },
+        {
+          "name": "Web3 teams comparing EVM chains",
+          "note": "AI repeatedly frames Telos against Ethereum-adjacent competitors, but Telos is less visible than Arbitrum (100.0%), Base (75.0%), and Optimism (70.0%)."
+        },
+        {
+          "name": "Advanced crypto-native users evaluating token economics",
+          "note": "TLOS burns, supply, and utility are on-site, yet competitor tokens and network names still appear more often in AI responses."
+        },
+        {
+          "name": "Security and infra researchers",
+          "note": "The site has governance/security and SNARKtor depth, but these themes are not yet prominent in AI citations or summaries."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clear EVM positioning with low fees, sub-second transactions, and Solidity compatibility.",
+        "Distinct privacy narrative with zkWallet, shielded TLOS/USDC, and encrypted memos.",
+        "Strong native token utility story: gas, governance, staking, and fee burns.",
+        "Technical credibility from governance/security and zero-knowledge infrastructure messaging.",
+        "Telos has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Translate branded features into the generic phrases AI engines already use, especially \"private payments\" and \"Ethereum-compatible chain\".",
+        "Turn privacy into a category-defining topic with comparison content against Polygon, Arbitrum, Base, and Avalanche.",
+        "Increase mention of Telos-specific terms in structured, retrievable pages for docs, tokenomics, and product explainers.",
+        "Expand third-party citations so AI systems rely less on explorers and market sites for Telos facts."
+      ],
+      "gaps": [
+        "Competitor visibility is materially higher: Polygon 150.0%, Avalanche 105.0%, Arbitrum 100.0%, while Telos is only 100.0% with a much lower avg rank (2.23).",
+        "The site\u2019s branded terminology is not consistently mirrored in AI outputs, weakening recall for zkWallet, SNARKtor, and Telos Zero.",
+        "AI search favors generic chain terms over Telos-specific differentiators, especially on privacy and tokenomics.",
+        "External source ecosystem is narrow relative to competitors, with AI citing explorers and market data more than authoritative Telos explainers."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a dedicated \"Telos vs Polygon / Arbitrum / Base / Avalanche\" comparison hub focused on privacy, fees, finality, and EVM compatibility.",
+        "Publish a plain-language zkWallet explainer optimized for AI retrieval: what it is, who it is for, supported assets, and how shielded transfers work.",
+        "Add a SNARKtor page that answers \"what is SNARKtor?\" with concise summaries, use cases, and developer benefits.",
+        "Expand tokenomics content around TLOS burns, supply, staking, governance, and private payment utility using simple, repeated terminology.",
+        "Build a privacy pillar page targeting \"private payments on blockchain\" and \"shielded USDC/TLOS\" queries."
+      ],
+      "link_building": [
+        "Secure editorial mentions of Telos privacy and zkWallet from blockchain news and developer publications.",
+        "Earn citations from crypto data and infrastructure sites that already appear in AI results, such as CoinMarketCap, CoinGecko, and explorer ecosystems.",
+        "Publish guest posts or partner content focused on EVM performance and privacy to increase non-owned-source references.",
+        "Get Telos mentioned in comparison and review articles that discuss alternatives to Polygon, Arbitrum, Base, and Avalanche.",
+        "Strengthen links from ecosystem dApps, wallets, and tooling partners to the privacy and tokenomics pages, not just the homepage."
+      ],
+      "quick_wins": [
+        "Rewrite homepage headings to include AI-friendly phrases like \"private payments\", \"Ethereum-compatible chain\", and \"low-fee blockchain\" alongside brand terms.",
+        "Add FAQ blocks for \"What is Telos?\", \"What is zkWallet?\", and \"How does TLOS work?\" with concise answers.",
+        "Use schema markup for Organization, Product, FAQ, and Article pages to improve retrieval of product and token facts.",
+        "Create short glossary pages for zkWallet, SNARKtor, Telos Zero, Lightspeed, and TLOS with one-sentence definitions.",
+        "Add internal links from the homepage to privacy, tokenomics, docs, and governance pages using descriptive anchor text.",
+        "Refresh the privacy and token pages with exact-match language AI already uses, such as \"privacy tools\", \"private payments\", and \"fees\"."
+      ]
+    }
+  }
+}
