@@ -1,0 +1,590 @@
+{
+  "site": {
+    "name": "Lisk",
+    "url": "https://lisk.com",
+    "domain": "lisk.com",
+    "slug": "lisk",
+    "analysis_id": "openrouter-lisk",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 11,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "33.3%",
+        "label": "stripe",
+        "trend": ""
+      },
+      {
+        "value": "25.0%",
+        "label": "ramp",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Lisk",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Finance operations teams at multi-entity companies",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Lisk",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "stripe",
+          "appearance": 33.3,
+          "rank": 14.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "ramp",
+          "appearance": 25.0,
+          "rank": 26.4,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fireblocks",
+          "appearance": 25.0,
+          "rank": 22.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tipalti",
+          "appearance": 25.0,
+          "rank": 28.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 20.8,
+          "rank": 20.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "solana",
+          "appearance": 16.7,
+          "rank": 22.5,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance": 12.5,
+          "rank": 23.0,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "brex",
+          "appearance": 12.5,
+          "rank": 31.5,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "mercury",
+          "appearance": 12.5,
+          "rank": 37.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 8.3,
+          "rank": 36.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "safe",
+          "appearance": 4.2,
+          "rank": 15.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Operations teams using digital money rails",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Lisk",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "stripe",
+          "appearance": 33.3,
+          "rank": 14.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "ramp",
+          "appearance": 25.0,
+          "rank": 26.4,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fireblocks",
+          "appearance": 25.0,
+          "rank": 22.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "tipalti",
+          "appearance": 25.0,
+          "rank": 28.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "polygon",
+          "appearance": 20.8,
+          "rank": 20.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "solana",
+          "appearance": 16.7,
+          "rank": 22.5,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "arbitrum",
+          "appearance": 12.5,
+          "rank": 23.0,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "brex",
+          "appearance": 12.5,
+          "rank": 31.5,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "mercury",
+          "appearance": 12.5,
+          "rank": 37.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "base",
+          "appearance": 8.3,
+          "rank": 36.0,
+          "providers": [
+            "Claude",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "safe",
+          "appearance": 4.2,
+          "rank": 15.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Claude": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "DeepSeek": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "payments",
+      "count": 217
+    },
+    {
+      "text": "treasury",
+      "count": 203
+    },
+    {
+      "text": "crypto",
+      "count": 202
+    },
+    {
+      "text": "multi",
+      "count": 196
+    },
+    {
+      "text": "payment",
+      "count": 191
+    },
+    {
+      "text": "bank",
+      "count": 188
+    },
+    {
+      "text": "safe",
+      "count": 185
+    },
+    {
+      "text": "name",
+      "count": 183
+    },
+    {
+      "text": "platform",
+      "count": 181
+    },
+    {
+      "text": "approval",
+      "count": 179
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "What is the best tool for managing payments across multiple entities without using spreadsheets?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "What should I look for in a platform that combines accounts, payments, and approvals for a finance team?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "What is the best way to manage company funds across banks and digital payment rails in one workspace?",
+      "type": "missing",
+      "persona": "Operations lead at a payments startup"
+    },
+    {
+      "text": "What is the easiest category of tools for managing business money across multiple accounts?",
+      "type": "missing",
+      "persona": "Founder handling finance without a full back-office team"
+    },
+    {
+      "text": "How do I keep all our bank balances, internal transfers, and approval history in one place?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "What is the best tool for managing payments across multiple entities without using spreadsheets?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "How do I compare different finance platforms for multi-entity cash management and approvals?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "Can I use one system to handle vendor payments, payroll, and internal transfers across different accounts?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "What should I look for in a platform that combines accounts, payments, and approvals for a finance team?",
+      "type": "missing",
+      "persona": "Controller managing multi-entity cash operations"
+    },
+    {
+      "text": "What platform is best for approving payments faster when my team works across time zones?",
+      "type": "missing",
+      "persona": "AP and treasury manager at a global company"
+    },
+    {
+      "text": "How do I compare payment workflows for both bank transfers and wallet transfers in one system?",
+      "type": "missing",
+      "persona": "AP and treasury manager at a global company"
+    },
+    {
+      "text": "Can I track invoices, approvals, and payouts in the same workspace?",
+      "type": "missing",
+      "persona": "AP and treasury manager at a global company"
+    },
+    {
+      "text": "What is the easiest way to manage contractor payments in different countries from one dashboard?",
+      "type": "missing",
+      "persona": "AP and treasury manager at a global company"
+    },
+    {
+      "text": "How can I run company payments and approvals without a full finance team?",
+      "type": "missing",
+      "persona": "Founder handling finance without a full back-office team"
+    },
+    {
+      "text": "What is the easiest category of tools for managing business money across multiple accounts?",
+      "type": "missing",
+      "persona": "Founder handling finance without a full back-office team"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 30,
+    "gemini": 70,
+    "openai": 100
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"one workspace\"",
+        "evidence": "Core homepage phrase, but AI responses more often describe the category as payments, treasury, or finance operations; this phrase is not a common retrieval term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"modern money\"",
+        "evidence": "Brand-led language appears on the homepage, but it is not reflected in AI search phrasing or competitor comparisons.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"stablecoin-native finance ops\"",
+        "evidence": "The site emphasizes stablecoins, but AI engines mostly use broader terms like payments, treasury, crypto, and bank; this more specific positioning is not surfaced.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"multi-entity finance teams\"",
+        "evidence": "Homepage targets this audience directly, but AI responses more often use 'finance operations teams' and 'operations teams using digital money rails'.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"accounts, payments, invoices and approvals\"",
+        "evidence": "The site uses this bundled product framing, while AI responses break the category into payments, treasury, approval workflows, and invoicing.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Pay with Lisk\"",
+        "evidence": "This branded payment flow appears on-site, but it is not a recognized AI-search phrase in the audit data.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"portfolios\"",
+        "evidence": "The site promotes portfolios as a module, but AI responses and top keywords focus on payments/treasury rather than portfolio management.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Operate globally with stablecoins. Manage accounts, payments, invoices and approvals in one workspace.",
+        "site_context": "Product-led, integrated workspace framing.",
+        "ai_uses": "payments, treasury, crypto, bank, platform, approval",
+        "ai_context": "Category-led language focused on treasury and payment infrastructure."
+      },
+      {
+        "site_says": "Built for stablecoins, compatible with your bank.",
+        "site_context": "Dual-rail messaging with a stablecoin-first product story.",
+        "ai_uses": "digital money rails, bank transfers, payment workflows, finance operations",
+        "ai_context": "AI describes the space in operational terms rather than compatibility language."
+      },
+      {
+        "site_says": "One workspace. Both worlds.",
+        "site_context": "Concise brand slogan about fiat and stablecoin workflows together.",
+        "ai_uses": "multi-entity companies, finance ops, treasury management, approvals",
+        "ai_context": "AI prefers problem-solution descriptions over branded slogans."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Finance operations teams at multi-entity companies",
+          "note": "Explicitly targeted on the homepage and aligns with one of the tested customer types."
+        },
+        {
+          "name": "Teams managing fiat and stablecoin workflows",
+          "note": "Strong product fit across bank rails and stablecoins."
+        },
+        {
+          "name": "Companies needing approvals and reconciliation",
+          "note": "Homepage clearly addresses reconciliation pain and approval bottlenecks."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Treasury teams",
+          "note": "AI heavily uses 'treasury'; direct visibility is weaker than competitors like Base (90.0%) and the site should speak more to treasury workflows."
+        },
+        {
+          "name": "Payments infrastructure buyers",
+          "note": "Payments is one of the top AI keywords, but the site is less often surfaced versus Bill.com-style payment content."
+        },
+        {
+          "name": "Digital asset operations teams",
+          "note": "Competitors like Fireblocks (47.5%) and Safe (50.0%) appear prominently in adjacent workflows, suggesting room to capture this audience."
+        },
+        {
+          "name": "Stablecoin-native operations teams",
+          "note": "The site is strong here, but AI still clusters around generic crypto/bank language; this segment is under-articulated in AI retrieval."
+        },
+        {
+          "name": "Cross-functional operations teams",
+          "note": "The platform spans accounts, payments, invoicing, and approvals, yet AI does not consistently connect the full suite to one operational buyer."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Strong own-site visibility at 72.5%, indicating the brand is already being surfaced in AI answers.",
+        "Clear differentiation around stablecoins plus bank rails, which matches the use cases AI tends to discuss.",
+        "Product breadth is compelling: accounts, payments, invoicing, portfolios, and approvals in one workflow.",
+        "The site directly addresses a real pain point AI recognizes: reconciliation and approval friction across tools.",
+        "Lisk has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Leverage the fact that Base is surfacing at 90.0% to create more adjacent content around treasury, onchain operations, and digital money workflows.",
+        "Use comparison content against Bill.com, Ramp, Safe, and Fireblocks to intercept AI citations in common buyer journeys.",
+        "Strengthen category language around 'treasury' and 'payments' since these are dominant AI keywords.",
+        "Expand third-party mentions and citations to reduce dependence on generic competitors like Bill.com, which is currently the top cited source."
+      ],
+      "gaps": [
+        "AI search does not consistently pick up the site's brand-specific language such as 'one workspace' or 'modern money'.",
+        "The site is less visible than Base and only moderately visible versus Ramp, Safe, and Fireblocks in adjacent categories.",
+        "Bill.com dominates source citations (17 mentions), suggesting the category association still leans toward incumbent AP/payments tools.",
+        "The homepage's integrated product story is stronger than the AI's current understanding of the brand's category position."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a treasury landing page that uses the exact terms AI prefers: treasury, payment workflows, approvals, and reconciliation.",
+        "Publish a 'stablecoins vs bank rails' comparison page to align the homepage promise with how AI describes the category.",
+        "Build competitor comparison pages for Bill.com, Ramp, Safe, and Fireblocks to capture high-intent AI answers.",
+        "Add use-case pages for multi-entity finance operations, cross-border payouts, and invoice-to-payment workflows.",
+        "Publish a 'how Lisk works' explainer with clear entity/account/approval language instead of brand slogans alone."
+      ],
+      "link_building": [
+        "Earn citations from treasury, fintech, and stablecoin publications that already use the terms AI prefers.",
+        "Target mentions in buyer guides that compare Bill.com, Ramp, Safe, and Fireblocks with new-category entrants.",
+        "Build partner content with stablecoin infrastructure and onchain payment ecosystems to increase topical authority.",
+        "Secure case-study coverage from customers operating across fiat and stablecoins to reinforce real-world use cases.",
+        "Pursue listicle and comparison placements for 'best treasury management' and 'stablecoin payments' queries."
+      ],
+      "quick_wins": [
+        "Add 'treasury' and 'payments' to key homepage headings and subheads without removing the product differentiators.",
+        "Rewrite intro copy to include 'finance operations teams' alongside 'multi-entity finance teams'.",
+        "Create FAQ blocks that answer AI-style questions such as 'What is Lisk used for?' and 'Is it for treasury or payments?'.",
+        "Add schema and on-page definitions for accounts, approvals, invoicing, and stablecoin payments.",
+        "Include more explicit comparison language to Bill.com, Ramp, Safe, and Fireblocks on relevant pages.",
+        "Create internal links from the homepage to dedicated pages for payments, treasury, invoicing, and approvals."
+      ]
+    }
+  }
+}
