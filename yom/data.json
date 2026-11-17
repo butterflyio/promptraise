@@ -1,0 +1,657 @@
+{
+  "site": {
+    "name": "YOM",
+    "url": "https://yom.net",
+    "domain": "yom.net",
+    "slug": "yom",
+    "analysis_id": "openrouter-yom",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 7,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "50.0%",
+        "label": "akash",
+        "trend": ""
+      },
+      {
+        "value": "33.3%",
+        "label": "runpod",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "YOM",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Real-time game publishers and streaming platforms",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "YOM",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "akash",
+          "appearance": 50.0,
+          "rank": 25.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "runpod",
+          "appearance": 33.3,
+          "rank": 17.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "golem",
+          "appearance": 25.0,
+          "rank": 31.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Aethir",
+          "appearance": 4.2,
+          "rank": 13.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "lambda",
+          "appearance": 4.2,
+          "rank": 12.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fastly",
+          "appearance": 4.2,
+          "rank": 25.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "flux",
+          "appearance": 4.2,
+          "rank": 50.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "AI product teams and voice application builders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "YOM",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "akash",
+          "appearance": 50.0,
+          "rank": 25.9,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "runpod",
+          "appearance": 33.3,
+          "rank": 17.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "golem",
+          "appearance": 25.0,
+          "rank": 31.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Aethir",
+          "appearance": 4.2,
+          "rank": 13.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "lambda",
+          "appearance": 4.2,
+          "rank": 12.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fastly",
+          "appearance": 4.2,
+          "rank": 25.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "flux",
+          "appearance": 4.2,
+          "rank": 50.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "Gemini": 1,
+        "OpenAI": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "latency",
+      "count": 289
+    },
+    {
+      "text": "cloud",
+      "count": 259
+    },
+    {
+      "text": "network",
+      "count": 222
+    },
+    {
+      "text": "streaming",
+      "count": 219
+    },
+    {
+      "text": "decentralized",
+      "count": 218
+    },
+    {
+      "text": "your",
+      "count": 192
+    },
+    {
+      "text": "edge",
+      "count": 186
+    },
+    {
+      "text": "name",
+      "count": 149
+    },
+    {
+      "text": "compute",
+      "count": 123
+    },
+    {
+      "text": "data",
+      "count": 122
+    }
+  ],
+  "sources": [
+    {
+      "name": "akash.network",
+      "domain": "akash.network",
+      "url": "https://akash.network",
+      "type": "competitor",
+      "mentions": 3
+    },
+    {
+      "name": "vast.ai",
+      "domain": "vast.ai",
+      "url": "https://vast.ai",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "rendernet.work",
+      "domain": "rendernet.work",
+      "url": "https://rendernet.work",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "lambdalabs.com",
+      "domain": "lambdalabs.com",
+      "url": "https://lambdalabs.com",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "runpod.io",
+      "domain": "runpod.io",
+      "url": "https://runpod.io",
+      "type": "competitor",
+      "mentions": 2
+    },
+    {
+      "name": "gpu.land",
+      "domain": "gpu.land",
+      "url": "https://gpu.land",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "tensordock.com",
+      "domain": "tensordock.com",
+      "url": "https://tensordock.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "fluidstack.io",
+      "domain": "fluidstack.io",
+      "url": "https://fluidstack.io",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "rendertoken.com",
+      "domain": "rendertoken.com",
+      "url": "https://rendertoken.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "gensyn.ai",
+      "domain": "gensyn.ai",
+      "url": "https://gensyn.ai",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "render.com",
+      "domain": "render.com",
+      "url": "https://render.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "golem.network",
+      "domain": "golem.network",
+      "url": "https://golem.network",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "octa.space",
+      "domain": "octa.space",
+      "url": "https://octa.space",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "shadeform.ai",
+      "domain": "shadeform.ai",
+      "url": "https://shadeform.ai",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "runonflux.io",
+      "domain": "runonflux.io",
+      "url": "https://runonflux.io",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "tensority.com",
+      "domain": "tensority.com",
+      "url": "https://tensority.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "salad.com",
+      "domain": "salad.com",
+      "url": "https://salad.com",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How do I reduce latency for streamed games when players are spread across multiple regions?",
+      "type": "missing",
+      "persona": "Platform engineering lead"
+    },
+    {
+      "text": "What types of games work best when each session runs on a nearby home PC or telco rack?",
+      "type": "missing",
+      "persona": "Product manager for cloud gaming"
+    },
+    {
+      "text": "If I want a recommendation for launching streamed gameplay under our own brand, how should I start?",
+      "type": "missing",
+      "persona": "Product manager for cloud gaming"
+    },
+    {
+      "text": "How do I run a voice model on nearby GPUs instead of sending every request to a central server?",
+      "type": "missing",
+      "persona": "AI infrastructure architect"
+    },
+    {
+      "text": "How do I know whether my live AI feature should run on home PCs, telco racks, or both?",
+      "type": "missing",
+      "persona": "Conversational product owner"
+    },
+    {
+      "text": "If I want a recommendation for launching a low-latency voice experience in one region first, what would you suggest?",
+      "type": "missing",
+      "persona": "Conversational product owner"
+    },
+    {
+      "text": "How do I reduce latency for streamed games when players are spread across multiple regions?",
+      "type": "missing",
+      "persona": "Platform engineering lead"
+    },
+    {
+      "text": "What setup would you recommend if I want to launch a new region without buying capacity for the busiest hour?",
+      "type": "missing",
+      "persona": "Platform engineering lead"
+    },
+    {
+      "text": "What types of games work best when each session runs on a nearby home PC or telco rack?",
+      "type": "missing",
+      "persona": "Product manager for cloud gaming"
+    },
+    {
+      "text": "How do I run a voice model on nearby GPUs instead of sending every request to a central server?",
+      "type": "missing",
+      "persona": "AI infrastructure architect"
+    },
+    {
+      "text": "How do I know whether my live AI feature should run on home PCs, telco racks, or both?",
+      "type": "missing",
+      "persona": "Conversational product owner"
+    },
+    {
+      "text": "If I want a recommendation for launching a low-latency voice experience in one region first, what would you suggest?",
+      "type": "missing",
+      "persona": "Conversational product owner"
+    },
+    {
+      "text": "How do I reduce latency for streamed games when players are spread across multiple regions?",
+      "type": "missing",
+      "persona": "Platform engineering lead"
+    },
+    {
+      "text": "What setup would you recommend if I want to launch a new region without buying capacity for the busiest hour?",
+      "type": "missing",
+      "persona": "Platform engineering lead"
+    },
+    {
+      "text": "If I want a recommendation for launching streamed gameplay under our own brand, how should I start?",
+      "type": "missing",
+      "persona": "Product manager for cloud gaming"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "akash.network",
+      "type": "visibility",
+      "note": "Cited in 3 brand-free response(s) by AI engines",
+      "mentions": 3
+    },
+    {
+      "domain": "vast.ai",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "rendernet.work",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "lambdalabs.com",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "runpod.io",
+      "type": "visibility",
+      "note": "Cited in 2 brand-free response(s) by AI engines",
+      "mentions": 2
+    },
+    {
+      "domain": "gpu.land",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "tensordock.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "fluidstack.io",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "claude": 80,
+    "deepseek": 100,
+    "gemini": 60,
+    "openai": 60
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "managed sessions",
+        "evidence": "Homepage repeats this phrase, but AI responses favor broader terms like streaming, cloud, compute, and latency; the product is not consistently surfaced under this wording.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "GPUs next to every user",
+        "evidence": "Core positioning is strong on-site, but AI engines more often describe the category as edge, decentralized, or network GPU infrastructure rather than this exact phrasing.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "home gaming PCs",
+        "evidence": "Site emphasizes home PCs as supply, but AI responses focus on edge/cloud/decentralized compute and do not consistently map this to user-facing search language.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "telco racks",
+        "evidence": "Important for the supply model, but AI engines surface cloud/data-center terminology more often and do not reliably use this operator-specific phrase.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "session pricing",
+        "evidence": "The site uses 'per session' and a sample price ($0.08), but AI responses more often discuss cloud cost, latency, and throughput than session-based billing models.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "real-time services",
+        "evidence": "Homepage frames the category this way, but AI responses more frequently use 'real-time workloads,' 'streaming,' 'voice AI,' and 'games' in answering user queries.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Scale real-time services anywhere your users are, without buying data-centre capacity for the peak.",
+        "site_context": "Strong positioning, but dense and abstract; it reads like infrastructure messaging.",
+        "ai_uses": "AI engines describe the category as edge/decentralized cloud, low-latency streaming, and nearest-GPU delivery.",
+        "ai_context": "The models translate the value into latency, cloud alternatives, and workload-specific use cases."
+      },
+      {
+        "site_says": "Home gaming PCs and telco racks next to your users run games and live AI as managed sessions, paid per session.",
+        "site_context": "Clear supply narrative, but terminology is internal and operational.",
+        "ai_uses": "AI responses more often say 'GPU network,' 'decentralized compute,' 'edge GPU,' or 'streaming platform infrastructure.'",
+        "ai_context": "AI favors standard category labels that competitors also use."
+      },
+      {
+        "site_says": "YOM Games / YOM AI / bring your voice models / link Steam or Epic.",
+        "site_context": "Product naming is brand-forward and feature-rich.",
+        "ai_uses": "AI answers emphasize 'game streaming,' 'voice AI,' 'real-time AI voice,' and compare against existing platforms/services.",
+        "ai_context": "The current names are less discoverable than descriptive, query-matching labels."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Real-time game publishers and streaming platforms",
+          "note": "Clearly addressed on the homepage and product sections; AI visibility is relatively strong for this segment."
+        },
+        {
+          "name": "AI product teams and voice application builders",
+          "note": "Explicitly supported by YOM AI messaging and 'voice models next to the speaker' framing."
+        },
+        {
+          "name": "GPU owners / supply partners",
+          "note": "The site directly speaks to home PC owners and telco/hosting providers who can earn on every session."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Edge compute buyers evaluating latency-sensitive infrastructure",
+          "note": "AI engines use edge/cloud/decentralized compute language, but YOM is only partially surfaced here despite 69 unique competitors."
+        },
+        {
+          "name": "Streaming infrastructure evaluators comparing against Livepeer, Mux, Daily.co, Bitmovin",
+          "note": "These competitors are cited by AI, yet YOM is not consistently positioned as the default alternative."
+        },
+        {
+          "name": "Decentralized GPU marketplace/computing buyers",
+          "note": "Aethir appears in 70.0% of responses, while YOM leads with 77.5%; the category framing should better capture this demand."
+        },
+        {
+          "name": "Teams benchmarking cloud alternatives on cost and latency",
+          "note": "Keywords like latency, cloud, network, and data dominate AI responses, but the site could better own these evaluative queries."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Own-site visibility is strong at 77.5%, with YOM mentioned in most AI responses.",
+        "A strong category distinction exists: nearest-GPU, per-session delivery, and real-time workloads.",
+        "The site has a compelling latency proof point (20ms median one-way delay) that matches AI search interest.",
+        "YOM spans two valuable use cases\u2014games and live AI/voice\u2014giving it broader relevance than single-purpose competitors.",
+        "YOM has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Convert internal supply language into AI-friendly category terms like edge GPU network, decentralized compute, and low-latency streaming infrastructure.",
+        "Build comparison content to out-rank or neutralize competitor citations, especially Aethir (70.0%), Akash (32.5%), and Livepeer (17.5%).",
+        "Expand content around pricing, latency, and region-based deployment since these are the dominant AI-response concepts.",
+        "Increase presence in comparison-source ecosystems where io.net is already heavily cited (20 mentions)."
+      ],
+      "gaps": [
+        "AI responses still cite many competitors, with 69 unique competitors found, indicating category ambiguity.",
+        "The site is not yet the default source for common AI terms like cloud, edge, decentralized, and network GPU.",
+        "Product language is brand-specific and can be harder for AI engines to map to generic user queries.",
+        "The homepage does not clearly dominate comparison intent against major adjacent providers such as CoreWeave, Lambda, Fastly, or io.net."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a 'YOM vs Aethir vs Akash vs io.net' comparison page targeting decentralized GPU and edge compute queries.",
+        "Publish a latency-focused landing page using terms AI already repeats: low-latency streaming, edge GPU, nearest node, and real-time workloads.",
+        "Build separate pages for 'game streaming infrastructure' and 'voice AI hosting' using plain-language headings and FAQ sections.",
+        "Add a pricing explainer for per-session billing versus reserved cloud GPUs, including examples, use cases, and savings language.",
+        "Create a glossary page translating 'managed sessions,' 'telco racks,' and 'home GPUs' into standard market terms.",
+        "Produce case-study content for publishers and voice-AI teams with measurable results: latency, session count, and cost per session."
+      ],
+      "link_building": [
+        "Pursue citations and backlinks from GPU marketplace, edge computing, and decentralized cloud publications that already reference io.net and Aethir.",
+        "Earn links from streaming infrastructure partners and developer platforms where Daily.co, Mux, and Bitmovin are already cited.",
+        "Target telco, hosting, and colocation publications with content about monetizing idle GPU capacity in home and rack environments.",
+        "Secure mentions in AI/ML infrastructure directories and comparison roundups that list CoreWeave, Lambda, Fastly, and Akash.",
+        "Repurpose benchmarks and latency data into linkable assets that industry blogs can cite in 'best edge GPU' and 'best low-latency streaming' articles."
+      ],
+      "quick_wins": [
+        "Rewrite homepage hero copy to include 'edge GPU network,' 'low-latency streaming,' and 'real-time AI' in plain language.",
+        "Add FAQ blocks answering 'What is YOM?', 'How does per-session pricing work?', and 'How is YOM different from cloud GPUs?'",
+        "Insert comparison snippets on the homepage that explicitly name YOM against Aethir, Akash, Livepeer, and io.net.",
+        "Add structured data and clear H1/H2s for 'game streaming', 'voice AI', and 'GPU hosting' to improve AI extraction.",
+        "Create a concise 'why YOM' section with the strongest proof points: 19,786 live sessions, 20ms median delay, and $0.08 session pricing.",
+        "Standardize terminology across pages so 'managed sessions' is always paired with common synonyms like streaming, hosted workloads, and real-time sessions."
+      ]
+    }
+  }
+}
