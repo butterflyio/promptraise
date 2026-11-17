@@ -1,0 +1,618 @@
+{
+  "site": {
+    "name": "Zoth",
+    "url": "https://zoth.io",
+    "domain": "zoth.io",
+    "slug": "zoth",
+    "analysis_id": "openrouter-zoth",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 17, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 38,
+    "unique_competitors": 9,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "37.5%",
+        "label": "circle",
+        "trend": ""
+      },
+      {
+        "value": "29.2%",
+        "label": "BVNK",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Zoth",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Cross-border finance operators",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Zoth",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "circle",
+          "appearance": 37.5,
+          "rank": 13.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "BVNK",
+          "appearance": 29.2,
+          "rank": 9.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fireblocks",
+          "appearance": 25.0,
+          "rank": 18.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "stripe",
+          "appearance": 20.8,
+          "rank": 21.4,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "bridge",
+          "appearance": 16.7,
+          "rank": 16.2,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "ripple",
+          "appearance": 8.3,
+          "rank": 20.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "bitgo",
+          "appearance": 8.3,
+          "rank": 23.5,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Ramp Network",
+          "appearance": 4.2,
+          "rank": 20.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "openeden",
+          "appearance": 4.2,
+          "rank": 34.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "DeepSeek": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Digital asset infrastructure builders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Zoth",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "circle",
+          "appearance": 37.5,
+          "rank": 13.6,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "BVNK",
+          "appearance": 29.2,
+          "rank": 9.0,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "fireblocks",
+          "appearance": 25.0,
+          "rank": 18.8,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "stripe",
+          "appearance": 20.8,
+          "rank": 21.4,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "bridge",
+          "appearance": 16.7,
+          "rank": 16.2,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "ripple",
+          "appearance": 8.3,
+          "rank": 20.0,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "bitgo",
+          "appearance": 8.3,
+          "rank": 23.5,
+          "providers": [
+            "Claude",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Ramp Network",
+          "appearance": 4.2,
+          "rank": 20.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "openeden",
+          "appearance": 4.2,
+          "rank": 34.0,
+          "providers": [
+            "OpenAI"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 9,
+      "provider_order_summary": {
+        "OpenAI": 0,
+        "DeepSeek": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "yield",
+      "count": 227
+    },
+    {
+      "text": "liquidity",
+      "count": 191
+    },
+    {
+      "text": "finance",
+      "count": 173
+    },
+    {
+      "text": "institutional",
+      "count": 151
+    },
+    {
+      "text": "chain",
+      "count": 146
+    },
+    {
+      "text": "compliance",
+      "count": 137
+    },
+    {
+      "text": "name",
+      "count": 136
+    },
+    {
+      "text": "treasury",
+      "count": 118
+    },
+    {
+      "text": "tokenized",
+      "count": 118
+    },
+    {
+      "text": "settlement",
+      "count": 113
+    }
+  ],
+  "sources": [
+    {
+      "name": "aave.com",
+      "domain": "aave.com",
+      "url": "https://aave.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "compound.finance",
+      "domain": "compound.finance",
+      "url": "https://compound.finance",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "circle.com",
+      "domain": "circle.com",
+      "url": "https://circle.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "blockfi.com",
+      "domain": "blockfi.com",
+      "url": "https://blockfi.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "nexo.io",
+      "domain": "nexo.io",
+      "url": "https://nexo.io",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "curve.fi",
+      "domain": "curve.fi",
+      "url": "https://curve.fi",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "How can I send cross-border payments faster without waiting days for bank settlement?",
+      "type": "missing",
+      "persona": "Payments operations manager"
+    },
+    {
+      "text": "Which payment platform is best if I need instant settlement and full transfer visibility?",
+      "type": "missing",
+      "persona": "Payments operations manager"
+    },
+    {
+      "text": "What is the difference between short-term payment financing and a yield vault for treasury cash?",
+      "type": "missing",
+      "persona": "Treasury and finance lead"
+    },
+    {
+      "text": "What infrastructure do I need to launch a stable-value savings product quickly?",
+      "type": "missing",
+      "persona": "Fintech founder"
+    },
+    {
+      "text": "How can I add earning, sending, and automation features to my app?",
+      "type": "missing",
+      "persona": "Fintech founder"
+    },
+    {
+      "text": "What is the easiest way to build compliant financial rails for users in emerging markets?",
+      "type": "missing",
+      "persona": "Fintech founder"
+    },
+    {
+      "text": "What platform is best for launching a finance product with institutional-grade controls?",
+      "type": "missing",
+      "persona": "Fintech founder"
+    },
+    {
+      "text": "How do I compare fund administration platforms for issuing digital investment products?",
+      "type": "missing",
+      "persona": "Fund and structured product operator"
+    },
+    {
+      "text": "What solution should I use if I want investors to deposit and redeem without long lockups?",
+      "type": "missing",
+      "persona": "Fund and structured product operator"
+    },
+    {
+      "text": "How can I earn yield on company balances without locking up funds?",
+      "type": "missing",
+      "persona": "Treasury and finance lead"
+    },
+    {
+      "text": "Which payment platform is best if I need instant settlement and full transfer visibility?",
+      "type": "missing",
+      "persona": "Payments operations manager"
+    },
+    {
+      "text": "What infrastructure do I need to launch a stable-value savings product quickly?",
+      "type": "missing",
+      "persona": "Fintech founder"
+    },
+    {
+      "text": "How do I compare fund administration platforms for issuing digital investment products?",
+      "type": "missing",
+      "persona": "Fund and structured product operator"
+    },
+    {
+      "text": "What built-in compliance checks are available before a payout is sent?",
+      "type": "missing",
+      "persona": "Payments operations manager"
+    },
+    {
+      "text": "How does Zoth route a payment to get the best FX rate and lowest fees?",
+      "type": "missing",
+      "persona": "Payments operations manager"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "aave.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "compound.finance",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "circle.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "blockfi.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "nexo.io",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "curve.fi",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "claude": 100,
+    "deepseek": 83,
+    "gemini": 100,
+    "openai": 100
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"Full-Stack Stablecoin Neobank\"",
+        "evidence": "Core homepage positioning, but AI responses surface broader category terms like yield, liquidity, settlement, compliance, and treasury rather than this branded category phrase.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"Agentic Economy\"",
+        "evidence": "Homepage-led narrative, but AI citations and keyword patterns center on finance infrastructure and payments, not the agentic economy framing.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"CFO Agent\"",
+        "evidence": "Featured on the site, but AI outputs are dominated by institutional finance and payments language; this product concept is not yet a recognized query term in the audit.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"Tokenized Stocks\"",
+        "evidence": "Prominent on the homepage sale banner, but AI search visibility is concentrated around stablecoin finance, cross-border payments, and RWA yields rather than tokenized equity offers.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"zVaults\"",
+        "evidence": "Brand-led product naming appears on-site, while AI engines more often use generic terms like yield vaults, DeFi yields, and institutional-grade vaults.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"zPayments\"",
+        "evidence": "Brand-led payments label is visible, but AI responses prefer generic cross-border payments, settlement, and money transfer terminology.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"onchain investment vehicles\"",
+        "evidence": "A site-specific descriptor for Fund as a Service, but AI responses cluster around treasury, liquidity, settlement, and tokenized finance instead.",
+        "priority": "LOW"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "\u201cFull-Stack Stablecoin Neobank for the Global South & the Agentic Economy\u201d",
+        "site_context": "High-level brand positioning and vision statement.",
+        "ai_uses": "\u201cstablecoin finance,\u201d \u201ccross-border payments,\u201d \u201cinstitutional-grade infrastructure,\u201d and \u201cyield products.\u201d",
+        "ai_context": "AI treats Zoth as infrastructure for payments, yield, and treasury rather than a neobank concept."
+      },
+      {
+        "site_says": "\u201cEarn, send, and automate stablecoin finance\u201d",
+        "site_context": "Homepage value proposition with product breadth.",
+        "ai_uses": "\u201cliquidity,\u201d \u201csettlement,\u201d \u201ccompliance,\u201d \u201ctreasury,\u201d and \u201cyield\u201d",
+        "ai_context": "AI compresses the offer into finance operations and market infrastructure language."
+      },
+      {
+        "site_says": "\u201cCFO Agent\u201d and \u201cswarm of AI agents\u201d",
+        "site_context": "A new AI-native finance product on the site.",
+        "ai_uses": "No strong agentic-product language; instead it favors established categories like payments and yield platforms.",
+        "ai_context": "The AI agent angle is under-recognized relative to the rest of the platform."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Cross-border finance operators",
+          "note": "Strong fit: zPayments messaging maps directly to instant settlement, compliance, and global transfers."
+        },
+        {
+          "name": "Digital asset infrastructure builders",
+          "note": "Clear relevance through onchain vaults, tokenized finance, and institutional-grade infrastructure."
+        },
+        {
+          "name": "Institutional treasury / yield allocators",
+          "note": "Homepage yield products, APY claims, and RWA/DeFi positioning align well with treasury use cases."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Stablecoin payment infrastructure buyers",
+          "note": "Stable appears in 65.0% of responses and circle in 50.0%, indicating this category is highly visible and competitive."
+        },
+        {
+          "name": "Cross-border remittance / payout teams",
+          "note": "Rail (35.0%, avg rank 3.5) and Ramp Network (40.0%) are more consistently surfaced for payments use cases."
+        },
+        {
+          "name": "RWA / tokenized asset allocators",
+          "note": "Competitors like centrifuge (30.0%) and BVNK (30.0%) appear in AI responses, suggesting Zoth needs stronger category authority."
+        },
+        {
+          "name": "Developer-led infrastructure evaluators",
+          "note": "Fireblocks (25.0%) and bridge (32.5%) show that AI often maps infrastructure buyers to established rails/providers instead of Zoth."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Very high overall AI mention rate for the own brand at 87.5%, showing strong baseline visibility.",
+        "Clear multi-product breadth: yield, payments, tokenization, and AI finance are all represented on the homepage.",
+        "Strong compliance and institutional framing, which matches frequent AI keywords like compliance, institutional, settlement, and treasury.",
+        "Real operational proof points are visible on-site, including 2M+ onboarded wallets, $75M yield products sold, and $500M+ payment volume.",
+        "Zoth has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Own the stablecoin finance category more explicitly, since AI already uses that language instead of the homepage's neobank framing.",
+        "Build authority around cross-border settlement, where competitors like rail, Ramp Network, circle, and stable appear frequently.",
+        "Increase recognition for product-specific terms like zVaults and zPayments by pairing them with generic category phrases.",
+        "Push the CFO/agentic finance narrative into searchable explanations and use cases so AI can connect the brand to that emerging category."
+      ],
+      "gaps": [
+        "AI does not strongly surface the homepage's branded category term \u201cFull-Stack Stablecoin Neobank.\u201d",
+        "Competitors dominate adjacent categories: stable at 65.0%, circle at 50.0%, Ramp Network at 40.0%, rail at 35.0%.",
+        "The AI agent / CFO automation angle is underrepresented relative to payments and yield.",
+        "Top AI keywords are broad finance infrastructure terms, not Zoth-specific product naming."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a pillar page for \u201cstablecoin banking\u201d that explains how Zoth compares to stable, circle, BVNK, and Ramp Network.",
+        "Publish a \u201ccross-border payments with stablecoins\u201d page targeting settlement, FX, compliance, and payout workflows.",
+        "Create separate product pages for zVaults and zPayments that always pair the brand name with generic descriptors like yield vaults and cross-border payments.",
+        "Add an explainer for the CFO Agent with concrete workflows: approvals, invoice handling, treasury automation, and policy controls.",
+        "Publish comparison content for \u201cZoth vs Circle,\u201d \u201cZoth vs stable,\u201d and \u201cZoth vs Ramp Network\u201d to capture high-frequency AI evaluation queries."
+      ],
+      "link_building": [
+        "Prioritize mentions and backlinks from stablecoin, payments, and RWA publications that already cite circle, stable, and BVNK.",
+        "Earn links from compliance and fintech media covering MSB registration, money transmitter licensing, and cross-border settlement.",
+        "Secure citations in developer/infrastructure ecosystems where bridge, rail, fireblocks, and chain.link are commonly referenced.",
+        "Build authoritative references from RWA and yield destinations such as DeFi analytics, vault aggregators, and treasury tooling sites.",
+        "Request inclusion in comparison lists and market maps for stablecoin payments, institutional yield, and onchain finance."
+      ],
+      "quick_wins": [
+        "Rewrite homepage hero copy to include both the branded phrase and the common category term: stablecoin banking, cross-border payments, and yield.",
+        "Add FAQ sections using AI-friendly wording: \u201cWhat is Zoth?\u201d, \u201cHow does Zoth compare to Circle/stable?\u201d, and \u201cIs Zoth compliant?\u201d",
+        "Strengthen internal linking from homepage to zVaults, zPayments, and CFO Agent with descriptive anchor text.",
+        "Add schema markup for Organization, Product, FAQPage, and Article to improve machine readability.",
+        "Replace or supplement branded product names with plain-language subtitles on every major section.",
+        "Create a single \u201cWho Zoth is for\u201d block targeting cross-border operators, treasury teams, and digital asset builders."
+      ]
+    }
+  }
+}
