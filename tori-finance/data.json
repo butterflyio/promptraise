@@ -1,0 +1,573 @@
+{
+  "site": {
+    "name": "Tori Finance",
+    "url": "https://www.tori.finance",
+    "domain": "www.tori.finance",
+    "slug": "tori-finance",
+    "analysis_id": "openrouter-tori-finance",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 19, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 0,
+    "score_status": "Zero AI Visibility",
+    "total_responses": 24,
+    "responses_per_type": 40,
+    "unique_competitors": 8,
+    "own_mentioned": false,
+    "own_appearance_pct": 0.0,
+    "own_appearance_note": "Site NOT mentioned in brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "66.7%",
+        "label": "Ethena",
+        "trend": ""
+      },
+      {
+        "value": "25.0%",
+        "label": "curve",
+        "trend": ""
+      },
+      {
+        "value": "0.0%",
+        "label": "Tori Finance",
+        "trend": "down"
+      }
+    ]
+  },
+  "customer_types": [
+    {
+      "name": "Yield-seeking stable asset holders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Tori Finance",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Ethena",
+          "appearance": 66.7,
+          "rank": 18.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "curve",
+          "appearance": 25.0,
+          "rank": 16.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 25.0,
+          "rank": 18.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "frax",
+          "appearance": 16.7,
+          "rank": 23.8,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Mountain Protocol",
+          "appearance": 16.7,
+          "rank": 16.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "liquity",
+          "appearance": 8.3,
+          "rank": 17.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Elixir",
+          "appearance": 4.2,
+          "rank": 33.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "synthetix",
+          "appearance": 4.2,
+          "rank": 16.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "On-chain portfolio managers",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Tori Finance",
+          "appearance": 0.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "Ethena",
+          "appearance": 66.7,
+          "rank": 18.3,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "curve",
+          "appearance": 25.0,
+          "rank": 16.0,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "uniswap",
+          "appearance": 25.0,
+          "rank": 18.5,
+          "providers": [
+            "Claude",
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "frax",
+          "appearance": 16.7,
+          "rank": 23.8,
+          "providers": [
+            "Claude",
+            "DeepSeek"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Mountain Protocol",
+          "appearance": 16.7,
+          "rank": 16.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "liquity",
+          "appearance": 8.3,
+          "rank": 17.0,
+          "providers": [
+            "DeepSeek",
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "Elixir",
+          "appearance": 4.2,
+          "rank": 33.0,
+          "providers": [
+            "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "synthetix",
+          "appearance": 4.2,
+          "rank": 16.0,
+          "providers": [
+            "DeepSeek"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "DeepSeek": 0,
+        "OpenAI": 1,
+        "Gemini": 2,
+        "Claude": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "yield",
+      "count": 358
+    },
+    {
+      "text": "risk",
+      "count": 239
+    },
+    {
+      "text": "trusd",
+      "count": 217
+    },
+    {
+      "text": "protocol",
+      "count": 150
+    },
+    {
+      "text": "market",
+      "count": 150
+    },
+    {
+      "text": "liquidity",
+      "count": 147
+    },
+    {
+      "text": "strusd",
+      "count": 126
+    },
+    {
+      "text": "contract",
+      "count": 123
+    },
+    {
+      "text": "treasury",
+      "count": 113
+    },
+    {
+      "text": "chain",
+      "count": 108
+    }
+  ],
+  "sources": [
+    {
+      "name": "ethena.fi",
+      "domain": "ethena.fi",
+      "url": "https://ethena.fi",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "mountainprotocol.com",
+      "domain": "mountainprotocol.com",
+      "url": "https://mountainprotocol.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "lybra.finance",
+      "domain": "lybra.finance",
+      "url": "https://lybra.finance",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "spark.fi",
+      "domain": "spark.fi",
+      "url": "https://spark.fi",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "pendle.finance",
+      "domain": "pendle.finance",
+      "url": "https://pendle.finance",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
+  "keyword_opportunities": [
+    {
+      "text": "What are the main risks of holding trUSD in a company or DAO treasury?",
+      "type": "missing",
+      "persona": "Treasury operator"
+    },
+    {
+      "text": "Are Tori Finance contracts audited, and who reviewed them?",
+      "type": "missing",
+      "persona": "Advanced DeFi user"
+    },
+    {
+      "text": "What are the main risks of holding trUSD in a company or DAO treasury?",
+      "type": "missing",
+      "persona": "Treasury operator"
+    },
+    {
+      "text": "What is the best way to use strUSD if I want my treasury to earn from market-neutral strategies?",
+      "type": "missing",
+      "persona": "Treasury operator"
+    },
+    {
+      "text": "Can I swap USDC into trUSD anytime, and how fast does that usually happen?",
+      "type": "missing",
+      "persona": "Passive yield allocator"
+    },
+    {
+      "text": "How do I know whether the returns on strUSD are coming from real activity and not just incentives?",
+      "type": "missing",
+      "persona": "Small balance saver"
+    },
+    {
+      "text": "What happens if the market moves sharply while I hold trUSD or strUSD?",
+      "type": "missing",
+      "persona": "Small balance saver"
+    },
+    {
+      "text": "Is trUSD safer than just holding a dollar-pegged asset in my wallet?",
+      "type": "missing",
+      "persona": "Passive yield allocator"
+    },
+    {
+      "text": "How do I know whether the returns on strUSD are coming from real activity and not just incentives?",
+      "type": "missing",
+      "persona": "Small balance saver"
+    },
+    {
+      "text": "How does strUSD compare with keeping funds in a regular savings account or money market fund?",
+      "type": "missing",
+      "persona": "Small balance saver"
+    },
+    {
+      "text": "Can I use trUSD inside other on-chain apps, or is it a closed product?",
+      "type": "missing",
+      "persona": "Treasury operator"
+    },
+    {
+      "text": "What are the main risks of holding trUSD in a company or DAO treasury?",
+      "type": "missing",
+      "persona": "Treasury operator"
+    },
+    {
+      "text": "What is the best way to use strUSD if I want my treasury to earn from market-neutral strategies?",
+      "type": "missing",
+      "persona": "Treasury operator"
+    },
+    {
+      "text": "What is the difference between holding trUSD and staking it for strUSD?",
+      "type": "missing",
+      "persona": "Advanced DeFi user"
+    },
+    {
+      "text": "Which is better for me: keeping funds in trUSD for flexibility or staking into strUSD for higher potential return?",
+      "type": "missing",
+      "persona": "Advanced DeFi user"
+    }
+  ],
+  "source_opportunities": [
+    {
+      "domain": "ethena.fi",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "mountainprotocol.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "lybra.finance",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "spark.fi",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "pendle.finance",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
+  "provider_coverage": {
+    "claude": 62,
+    "deepseek": 100,
+    "gemini": 88,
+    "openai": 38
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"synthetic dollar\"",
+        "evidence": "The site leads with this term, but AI responses cluster more around \"stable asset,\" \"yield,\" and \"protocol\" than synthetic dollar framing.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"market-neutral strategies\"",
+        "evidence": "Homepage emphasizes market-neutral trading, while AI engines more often describe the product in terms of yield, risk, liquidity, and treasury exposure.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"trUSD\"",
+        "evidence": "The token appears on-site, but AI responses do not consistently surface it as a primary named asset compared with broader stablecoin and yield language.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"strUSD\"",
+        "evidence": "The reward-bearing token is mentioned on-site, but it is not a commonly recognized term in AI answers; AI tends to speak in generic staking/reward terms.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"delta-neutral\"",
+        "evidence": "Used heavily on-site, but AI engines appear to summarize the concept as risk-managed or market-neutral yield rather than repeating the specific term.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"institutional-grade yields\"",
+        "evidence": "This positioning language is strong on the site, but AI responses seem to translate it into plain-language yield/risk language and competitor comparisons.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "Institutional-grade yields, now accessible to everyone.",
+        "site_context": "Brand-forward positioning centered on accessibility and institutional yield.",
+        "ai_uses": "Yield, risk, liquidity, treasury, stable asset, protocol.",
+        "ai_context": "Engines describe the space in operational terms and compare products on risk/yield mechanics."
+      },
+      {
+        "site_says": "Tori brings market-neutral trading strategies on-chain.",
+        "site_context": "Explains the product through strategy and infrastructure language.",
+        "ai_uses": "Market-neutral or delta-neutral yield, but also explicit references to stable asset holders and portfolio managers.",
+        "ai_context": "AI appears to reframe the offer around use cases and outcomes rather than the strategy label alone."
+      },
+      {
+        "site_says": "trUSD is a synthetic dollar backed by trading positions.",
+        "site_context": "Distinctive token design and backing model.",
+        "ai_uses": "Stablecoin-like yield product, treasury asset, liquidity or reserve-related framing.",
+        "ai_context": "Engines appear to generalize the product into familiar stable asset categories."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Yield-seeking stable asset holders",
+          "note": "Explicitly represented in the audit; AI mentions yield, risk, liquidity, and stable asset framing."
+        },
+        {
+          "name": "On-chain portfolio managers",
+          "note": "Strong fit with protocol, treasury, and liquidity language; one of the two tested customer types."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Stablecoin treasury managers",
+          "note": "AI uses treasury language, but the site does not clearly own this segment; opportunity to compete more directly with reserve/ethena-style use cases."
+        },
+        {
+          "name": "DAO / protocol treasury operators",
+          "note": "Could benefit from on-chain yield and treasury positioning for DAO and protocol operators."
+        },
+        {
+          "name": "DeFi yield allocators / risk-managed yield hunters",
+          "note": "High-intent segment implied by yield and risk keywords, but the homepage speaks more to institutional accessibility than allocation workflow."
+        },
+        {
+          "name": "Stable asset comparison shoppers",
+          "note": "Competitor visibility suggests users are comparing options like Ethena, Curve, and Uniswap."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Clear differentiated mechanism: synthetic dollar backed by trading positions, not fiat reserves.",
+        "Credibility signals are prominent: audits, security firms, attestation, and custody partners.",
+        "Strong product narrative for accessible institutional yield, including low minimums and DeFi composability.",
+        "Tori Finance has 0.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Turn the product language into category language that AI engines already use: yield, risk, treasury, liquidity, and stable asset management.",
+        "Create comparison content to outperform Ethena, Curve, and Uniswap in AI answers for alternative yield/stable asset queries.",
+        "Strengthen named-entity association for trUSD and strUSD so AI treats them as canonical assets, not just site-specific terms.",
+        "Expand use-case content for portfolio managers and treasury operators to match how AI currently frames the market."
+      ],
+      "gaps": [
+        "AI does not consistently surface the product through the same synthetic-dollar vocabulary the site uses.",
+        "Competitors remain meaningfully visible, especially Ethena at 66.7%, Curve at 25.0%, and Uniswap at 25.0%.",
+        "The homepage is repetitive and brand-heavy, which may dilute extractable definitions and comparison-ready facts.",
+        "The site lacks obvious AI-friendly pages for direct comparisons, use cases, and FAQ-style questions."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Create a dedicated \"Tori vs Ethena\" page focused on synthetic dollar design, yield source, risk profile, and treasury use cases.",
+        "Publish a plain-language explainer for \"What is trUSD?\" with summary bullets that define backing, redemption, and use cases in AI-friendly terms.",
+        "Add a \"How Tori generates yield\" page that maps market-neutral, delta-neutral, futures arbitrage, and money market strategies to user outcomes.",
+        "Create a \"For treasury managers\" landing page targeting stable asset allocation, reserve management, and on-chain yield deployment.",
+        "Add an FAQ page that answers high-intent queries like \"Is trUSD a stablecoin?\", \"How is yield generated?\", and \"What risks should holders know?\""
+      ],
+      "link_building": [
+        "Earn mentions and backlinks from stablecoin, DeFi yield, and treasury management articles that compare Tori to Ethena and Curve.",
+        "Pitch interview or guest-post placements on crypto research sites that explain synthetic dollars and market-neutral yield.",
+        "Secure citations from security/audit partners and custody providers to reinforce trust and create authoritative entity associations.",
+        "Build comparison-focused references from DeFi directories and data aggregators where users research yield-bearing stable assets.",
+        "Target ecosystem partners and chain communities for contextual links around institutional yield, on-chain treasury tools, and reserve alternatives."
+      ],
+      "quick_wins": [
+        "Rewrite the hero to include plain-language labels: \"stable asset,\" \"yield-bearing,\" and \"treasury-friendly\" alongside \"synthetic dollar.\"",
+        "Add a concise definition block near the top of the homepage: what trUSD is, what backs it, and who it is for.",
+        "Insert one-sentence competitor contrast copy: \"Unlike fiat-backed stablecoins, trUSD is backed by trading positions.\"",
+        "Add structured FAQ content with direct answer formatting to improve AI extraction and citation readiness.",
+        "Reduce repeated homepage copy and consolidate key claims into shorter, more scannable sections.",
+        "Add named subheads for target audiences, such as \"For yield-seeking holders\" and \"For on-chain portfolio managers.\""
+      ]
+    }
+  }
+}
