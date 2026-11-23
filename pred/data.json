@@ -1,0 +1,408 @@
+{
+  "site": {
+    "name": "Pred",
+    "url": "https://www.pred.app/",
+    "domain": "www.pred.app",
+    "slug": "pred",
+    "analysis_id": "openrouter-pred",
+    "site_uuid": "openrouter-batch",
+    "generated_at": "November 23, 2026",
+    "font_base_url": "https://butterflyio.github.io/promptraise"
+  },
+  "summary": {
+    "score": 100,
+    "score_status": "Strong AI Visibility",
+    "total_responses": 4,
+    "responses_per_type": 40,
+    "unique_competitors": 3,
+    "own_mentioned": true,
+    "own_appearance_pct": 100.0,
+    "own_appearance_note": "Site mentioned in 100.0% of brand-free AI responses",
+    "hero_comparison": [
+      {
+        "value": "100.0%",
+        "label": "Unprompted recall",
+        "trend": ""
+      },
+      {
+        "value": "75.0%",
+        "label": "polymarket",
+        "trend": ""
+      },
+      {
+        "value": "75.0%",
+        "label": "kalshi",
+        "trend": ""
+      },
+      {
+        "value": "100.0%",
+        "label": "Pred",
+        "trend": ""
+      }
+    ],
+    "unprompted_recall_pct": 100.0
+  },
+  "customer_types": [
+    {
+      "name": "Active sports bettors",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Pred",
+          "appearance": 100.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "polymarket",
+          "appearance": 75.0,
+          "rank": 10.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "kalshi",
+          "appearance": 75.0,
+          "rank": 11.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "betfair",
+          "appearance": 25.0,
+          "rank": 8.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    },
+    {
+      "name": "Sports market traders",
+      "uuid": null,
+      "competitors": [
+        {
+          "name": "Pred",
+          "appearance": 100.0,
+          "rank": null,
+          "providers": [],
+          "isOwn": true
+        },
+        {
+          "name": "polymarket",
+          "appearance": 75.0,
+          "rank": 10.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "kalshi",
+          "appearance": 75.0,
+          "rank": 11.7,
+          "providers": [
+            "Claude",
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "betfair",
+          "appearance": 25.0,
+          "rank": 8.0,
+          "providers": [
+            "Claude"
+          ],
+          "isOwn": false
+        }
+      ],
+      "total_responses": 10,
+      "provider_order_summary": {
+        "Gemini": 0,
+        "DeepSeek": 1,
+        "Claude": 2,
+        "OpenAI": 3
+      },
+      "has_distinct_competitor_data": true,
+      "data_note": null
+    }
+  ],
+  "keywords": [
+    {
+      "text": "market",
+      "count": 300
+    },
+    {
+      "text": "markets",
+      "count": 219
+    },
+    {
+      "text": "sports",
+      "count": 206
+    },
+    {
+      "text": "liquidity",
+      "count": 206
+    },
+    {
+      "text": "live",
+      "count": 165
+    },
+    {
+      "text": "prediction",
+      "count": 164
+    },
+    {
+      "text": "betting",
+      "count": 162
+    },
+    {
+      "text": "platform",
+      "count": 149
+    },
+    {
+      "text": "polymarket",
+      "count": 147
+    },
+    {
+      "text": "order",
+      "count": 145
+    }
+  ],
+  "sources": [],
+  "keyword_opportunities": [
+    {
+      "text": "What sports and leagues can I actually bet on right now?",
+      "type": "missing",
+      "persona": "Value-seeking football bettor"
+    },
+    {
+      "text": "What app or platform would you recommend if I want the fastest way to bet EPL games?",
+      "type": "missing",
+      "persona": "Value-seeking football bettor"
+    },
+    {
+      "text": "What sports markets are best for comparing prices across different sites?",
+      "type": "missing",
+      "persona": "Quant-style sports analyst"
+    },
+    {
+      "text": "What sports markets are best for comparing prices across different sites?",
+      "type": "missing",
+      "persona": "Quant-style sports analyst"
+    },
+    {
+      "text": "How does Pred compare to a normal sportsbook for football moneylines?",
+      "type": "missing",
+      "persona": "Value-seeking football bettor"
+    },
+    {
+      "text": "How fast does Pred fill an order during a live NBA or UFC event?",
+      "type": "missing",
+      "persona": "Live-game bettor"
+    },
+    {
+      "text": "What should I use if I want to place bets while the game is still going?",
+      "type": "missing",
+      "persona": "Live-game bettor"
+    },
+    {
+      "text": "Is Pred better than an odds app for getting in and out of positions quickly?",
+      "type": "missing",
+      "persona": "Live-game bettor"
+    },
+    {
+      "text": "What is the best platform for someone who wants to react to odds changes in real time?",
+      "type": "missing",
+      "persona": "Live-game bettor"
+    },
+    {
+      "text": "Can I see an order book or market depth on Pred before I place anything?",
+      "type": "missing",
+      "persona": "Quant-style sports analyst"
+    },
+    {
+      "text": "Is Pred good for someone who wants to model game outcomes from data?",
+      "type": "missing",
+      "persona": "Quant-style sports analyst"
+    },
+    {
+      "text": "What platform would you recommend if I care more about price discovery than picking a sportsbook?",
+      "type": "missing",
+      "persona": "Quant-style sports analyst"
+    },
+    {
+      "text": "What should I choose if I want a sports market app with fast execution and no house edge?",
+      "type": "missing",
+      "persona": "Frequent in-play decision maker"
+    },
+    {
+      "text": "What app or platform would you recommend if I want the fastest way to bet EPL games?",
+      "type": "missing",
+      "persona": "Value-seeking football bettor"
+    },
+    {
+      "text": "What platform would you recommend if I care more about price discovery than picking a sportsbook?",
+      "type": "missing",
+      "persona": "Quant-style sports analyst"
+    }
+  ],
+  "source_opportunities": [],
+  "provider_coverage": {
+    "claude": 100,
+    "gemini": 67,
+    "openai": 67,
+    "deepseek": 0
+  },
+  "insights": {
+    "terminology_gap": [
+      {
+        "term": "\"peer-to-peer sports prediction exchange\"",
+        "evidence": "Core homepage phrase, but AI responses more often use \"sports market\", \"prediction market\", or \"platform\" language; it is not consistently mirrored in AI wording.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"trade sports outcomes like assets\"",
+        "evidence": "Homepage positioning is asset-trading oriented, yet AI summaries default to betting/markets language and do not surface this phrasing.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"no house edge\"",
+        "evidence": "A key differentiator on the site, but AI outputs tend to emphasize liquidity, odds, and market access rather than this benefit.",
+        "priority": "HIGH"
+      },
+      {
+        "term": "\"sub-200ms execution\"",
+        "evidence": "Repeated on the homepage, but AI visibility is driven more by general product descriptors than execution-speed claims.",
+        "priority": "MEDIUM"
+      },
+      {
+        "term": "\"winners welcome\"",
+        "evidence": "Brand slogan appears prominently, but it does not map to the way AI engines describe the category.",
+        "priority": "LOW"
+      },
+      {
+        "term": "\"Base blockchain\"",
+        "evidence": "The site mentions Base explicitly, but AI responses are more likely to cite broader crypto/prediction-market competitors and less likely to anchor on the chain.",
+        "priority": "MEDIUM"
+      }
+    ],
+    "language_gap": [
+      {
+        "site_says": "The peer-to-peer sports prediction exchange",
+        "site_context": "Homepage lead positioning centers on exchange mechanics and product architecture.",
+        "ai_uses": "sports market, prediction market, platform",
+        "ai_context": "AI engines compress the category into broader market/platform language rather than exchange-specific phrasing."
+      },
+      {
+        "site_says": "Sub-200ms execution, no house edge, no limits on winners",
+        "site_context": "Homepage emphasizes product fairness and performance.",
+        "ai_uses": "liquidity, live, betting, odds",
+        "ai_context": "AI responses focus more on market access and betting-adjacent concepts than on execution/fairness claims."
+      },
+      {
+        "site_says": "Trade sports outcomes like assets",
+        "site_context": "The site frames participation as trading, not betting.",
+        "ai_uses": "betting, sports market, order",
+        "ai_context": "AI engines still mix in betting terminology, suggesting the market does not consistently understand the trading-centric framing."
+      }
+    ],
+    "audience_segments": {
+      "addressed": [
+        {
+          "name": "Sports market traders",
+          "note": "Clearly supported by the exchange language, order book, live markets, and trading-oriented homepage copy."
+        },
+        {
+          "name": "Active sports bettors",
+          "note": "The site\u2019s live sports, odds, and moneyline examples align with bettor intent."
+        }
+      ],
+      "opportunity_gap": [
+        {
+          "name": "Prediction market / event-market users",
+          "note": "Polymarket appears in 87.5% of responses; Pred is visible but needs stronger category association to capture this audience more directly."
+        },
+        {
+          "name": "Crypto-native traders",
+          "note": "The site mentions Base, but AI sources more often cite adjacent crypto-native platforms and infrastructure brands."
+        },
+        {
+          "name": "Arbitrage / odds-comparison users",
+          "note": "AI keywords include odds and order, but the site is not strongly surfaced for comparison-intent queries."
+        },
+        {
+          "name": "Alternative to bookmakers",
+          "note": "AI cites bookmaker.xyz, stake.com, and sportsbet.io as sources; Pred should more explicitly win the \u201cbetter than sportsbooks\u201d narrative."
+        }
+      ]
+    },
+    "position": {
+      "strengths": [
+        "Very high own-site visibility: 95.0% appearance with average rank 2.89.",
+        "Strong differentiated product story: peer-to-peer exchange, no house edge, and sub-200ms execution.",
+        "Live sports inventory is broad and concrete, which supports relevance for both bettors and traders.",
+        "Competitive association is already strong: Pred outperforms Polymarket in appearance rate and rank.",
+        "Pred has 100.0% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+      ],
+      "opportunities": [
+        "Own the category phrase around sports prediction exchange more aggressively so AI engines associate Pred with the concept.",
+        "Build more comparison content against Polymarket and Kalshi, since these are the most recognizable alternatives in AI outputs.",
+        "Create clearer use-case pages for bettors vs traders to match the two observed customer types.",
+        "Leverage live-market performance and order book mechanics to separate Pred from sportsbook-style competitors."
+      ],
+      "gaps": [
+        "Polymarket still dominates broader AI association at 87.5%, meaning Pred is visible but not the default reference point.",
+        "Kalshi appears in 37.5% of responses with a strong avg rank of 5.27, indicating competition in the prediction-market mindshare layer.",
+        "AI responses use generic betting/market language more than Pred\u2019s exchange/trading vocabulary.",
+        "There is limited evidence that AI engines understand Pred\u2019s technical edge beyond surface-level descriptors."
+      ]
+    },
+    "action_items": {
+      "content_priorities": [
+        "Publish a dedicated \"Pred vs Polymarket\" comparison page focused on sports-specific markets, execution speed, fees, and house edge.",
+        "Create a \"Pred vs Kalshi\" page framing Pred as the sports-focused, peer-to-peer alternative.",
+        "Add a glossary/education hub covering \"sports prediction exchange\", \"order book\", \"no house edge\", and \"liquidity\" in plain language.",
+        "Build pages for the two primary personas: \"For sports bettors\" and \"For sports market traders\".",
+        "Create sport-specific landing pages for top leagues and events already featured on the homepage: EPL, NBA, NFL, UCL, MMA."
+      ],
+      "link_building": [
+        "Earn mentions from crypto and sports-trading publications that can cite Pred as a prediction-market alternative to Polymarket and Kalshi.",
+        "Secure backlinks from Base ecosystem pages, Base community posts, or partner directories to reinforce chain association.",
+        "Pursue citations from sports-betting review sites and comparison lists that already reference bookmaker.xyz, stake.com, and sportsbet.io.",
+        "Publish explainers or guest posts on prediction markets, odds, and market-making to attract authoritative niche links.",
+        "Build a PR campaign around platform performance claims and fair-market mechanics to generate references from fintech and crypto media."
+      ],
+      "quick_wins": [
+        "Add the exact phrase \"sports prediction exchange\" in H1/H2 variants and supporting copy across key pages.",
+        "Add schema and FAQ content that explicitly answers \"Is Pred a betting site or a prediction market?\"",
+        "Create short comparison blocks on the homepage: Pred vs sportsbook, Pred vs Polymarket, Pred vs Kalshi.",
+        "Strengthen internal links from homepage to blog, docs, and market pages using the target terms AI already uses: market, liquidity, order, live.",
+        "Add concise explainer copy that translates \"no house edge\" and \"sub-200ms execution\" into user benefits."
+      ]
+    }
+  }
+}
