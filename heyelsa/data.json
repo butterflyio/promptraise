@@ -6,18 +6,18 @@
     "slug": "heyelsa",
     "analysis_id": "openrouter-heyelsa",
     "site_uuid": "openrouter-batch",
-    "generated_at": "November 13, 2026",
+    "generated_at": "November 25, 2026",
     "font_base_url": "https://butterflyio.github.io/promptraise"
   },
   "summary": {
-    "score": 4,
+    "score": 8,
     "score_status": "Very Low AI Visibility",
     "total_responses": 24,
     "responses_per_type": 40,
-    "unique_competitors": 11,
+    "unique_competitors": 10,
     "own_mentioned": true,
-    "own_appearance_pct": 4.2,
-    "own_appearance_note": "Site mentioned in 4.2% of brand-free AI responses",
+    "own_appearance_pct": 8.3,
+    "own_appearance_note": "Site mentioned in 8.3% of brand-free AI responses",
     "hero_comparison": [
       {
         "value": "25.0%",
@@ -30,7 +30,7 @@
         "trend": ""
       },
       {
-        "value": "4.2%",
+        "value": "8.3%",
         "label": "Elsa",
         "trend": "down"
       }
@@ -43,7 +43,7 @@
       "competitors": [
         {
           "name": "Elsa",
-          "appearance": 4.2,
+          "appearance": 8.3,
           "rank": null,
           "providers": [],
           "isOwn": true
@@ -51,52 +51,31 @@
         {
           "name": "metamask",
           "appearance": 25.0,
-          "rank": 11.7,
+          "rank": 24.5,
           "providers": [
             "Claude",
-            "DeepSeek",
-            "Gemini"
+            "Gemini",
+            "OpenAI"
           ],
           "isOwn": false
         },
         {
           "name": "uniswap",
           "appearance": 16.7,
-          "rank": 19.2,
+          "rank": 23.5,
           "providers": [
             "DeepSeek",
             "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "socket",
-          "appearance": 16.7,
-          "rank": 30.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "zapper",
-          "appearance": 16.7,
-          "rank": 31.5,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
           ],
           "isOwn": false
         },
         {
           "name": "zerion",
           "appearance": 16.7,
-          "rank": 21.7,
+          "rank": 36.8,
           "providers": [
             "Claude",
+            "DeepSeek",
             "OpenAI"
           ],
           "isOwn": false
@@ -104,58 +83,66 @@
         {
           "name": "brian",
           "appearance": 16.7,
-          "rank": 7.8,
+          "rank": 8.0,
           "providers": [
             "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "socket",
+          "appearance": 12.5,
+          "rank": 17.5,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zapper",
+          "appearance": 12.5,
+          "rank": 25.3,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
           ],
           "isOwn": false
         },
         {
           "name": "rabby",
           "appearance": 12.5,
-          "rank": 10.0,
+          "rank": 13.7,
           "providers": [
-            "Claude",
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "across",
-          "appearance": 8.3,
-          "rank": 24.5,
-          "providers": [
-            "Claude",
             "Gemini"
           ],
           "isOwn": false
         },
         {
           "name": "safe",
-          "appearance": 8.3,
-          "rank": 21.0,
+          "appearance": 12.5,
+          "rank": 35.5,
           "providers": [
-            "Claude",
+            "DeepSeek",
             "OpenAI"
           ],
           "isOwn": false
         },
         {
-          "name": "layerzero",
-          "appearance": 8.3,
-          "rank": 18.0,
+          "name": "across",
+          "appearance": 4.2,
+          "rank": 21.0,
           "providers": [
-            "DeepSeek",
             "Gemini"
           ],
           "isOwn": false
         },
         {
-          "name": "stargate",
+          "name": "layerzero",
           "appearance": 4.2,
-          "rank": 31.0,
+          "rank": 22.0,
           "providers": [
-            "Gemini"
+            "DeepSeek"
           ],
           "isOwn": false
         }
@@ -176,7 +163,7 @@
       "competitors": [
         {
           "name": "Elsa",
-          "appearance": 4.2,
+          "appearance": 8.3,
           "rank": null,
           "providers": [],
           "isOwn": true
@@ -184,52 +171,31 @@
         {
           "name": "metamask",
           "appearance": 25.0,
-          "rank": 11.7,
+          "rank": 24.5,
           "providers": [
             "Claude",
-            "DeepSeek",
-            "Gemini"
+            "Gemini",
+            "OpenAI"
           ],
           "isOwn": false
         },
         {
           "name": "uniswap",
           "appearance": 16.7,
-          "rank": 19.2,
+          "rank": 23.5,
           "providers": [
             "DeepSeek",
             "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "socket",
-          "appearance": 16.7,
-          "rank": 30.2,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "zapper",
-          "appearance": 16.7,
-          "rank": 31.5,
-          "providers": [
-            "Claude",
-            "DeepSeek",
-            "OpenAI"
           ],
           "isOwn": false
         },
         {
           "name": "zerion",
           "appearance": 16.7,
-          "rank": 21.7,
+          "rank": 36.8,
           "providers": [
             "Claude",
+            "DeepSeek",
             "OpenAI"
           ],
           "isOwn": false
@@ -237,58 +203,66 @@
         {
           "name": "brian",
           "appearance": 16.7,
-          "rank": 7.8,
+          "rank": 8.0,
           "providers": [
             "Gemini"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "socket",
+          "appearance": 12.5,
+          "rank": 17.5,
+          "providers": [
+            "Gemini",
+            "OpenAI"
+          ],
+          "isOwn": false
+        },
+        {
+          "name": "zapper",
+          "appearance": 12.5,
+          "rank": 25.3,
+          "providers": [
+            "DeepSeek",
+            "OpenAI"
           ],
           "isOwn": false
         },
         {
           "name": "rabby",
           "appearance": 12.5,
-          "rank": 10.0,
+          "rank": 13.7,
           "providers": [
-            "Claude",
-            "Gemini"
-          ],
-          "isOwn": false
-        },
-        {
-          "name": "across",
-          "appearance": 8.3,
-          "rank": 24.5,
-          "providers": [
-            "Claude",
             "Gemini"
           ],
           "isOwn": false
         },
         {
           "name": "safe",
-          "appearance": 8.3,
-          "rank": 21.0,
+          "appearance": 12.5,
+          "rank": 35.5,
           "providers": [
-            "Claude",
+            "DeepSeek",
             "OpenAI"
           ],
           "isOwn": false
         },
         {
-          "name": "layerzero",
-          "appearance": 8.3,
-          "rank": 18.0,
+          "name": "across",
+          "appearance": 4.2,
+          "rank": 21.0,
           "providers": [
-            "DeepSeek",
             "Gemini"
           ],
           "isOwn": false
         },
         {
-          "name": "stargate",
+          "name": "layerzero",
           "appearance": 4.2,
-          "rank": 31.0,
+          "rank": 22.0,
           "providers": [
-            "Gemini"
+            "DeepSeek"
           ],
           "isOwn": false
         }
@@ -346,7 +320,50 @@
       "count": 108
     }
   ],
-  "sources": [],
+  "sources": [
+    {
+      "name": "3commas.io",
+      "domain": "3commas.io",
+      "url": "https://3commas.io",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "bitsgap.com",
+      "domain": "bitsgap.com",
+      "url": "https://bitsgap.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "pionex.com",
+      "domain": "pionex.com",
+      "url": "https://pionex.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "kryll.io",
+      "domain": "kryll.io",
+      "url": "https://kryll.io",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "tradesanta.com",
+      "domain": "tradesanta.com",
+      "url": "https://tradesanta.com",
+      "type": "competitor",
+      "mentions": 1
+    },
+    {
+      "name": "shrimpy.io",
+      "domain": "shrimpy.io",
+      "url": "https://shrimpy.io",
+      "type": "competitor",
+      "mentions": 1
+    }
+  ],
   "keyword_opportunities": [
     {
       "text": "How can I swap and bridge assets in one flow without using multiple apps?",
@@ -424,12 +441,49 @@
       "persona": "Active DeFi operator"
     }
   ],
-  "source_opportunities": [],
+  "source_opportunities": [
+    {
+      "domain": "3commas.io",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "bitsgap.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "pionex.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "kryll.io",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "tradesanta.com",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    },
+    {
+      "domain": "shrimpy.io",
+      "type": "visibility",
+      "note": "Cited in 1 brand-free response(s) by AI engines",
+      "mentions": 1
+    }
+  ],
   "provider_coverage": {
-    "claude": 88,
-    "deepseek": 62,
+    "claude": 33,
     "gemini": 100,
-    "openai": 38
+    "openai": 83,
+    "deepseek": 83
   },
   "insights": {
     "terminology_gap": [
@@ -526,7 +580,9 @@
         "Strong simplicity promise: conversational execution and 'no dashboards' messaging is differentiated and easy to understand.",
         "Safety and education are credible differentiators for cautious users and new entrants.",
         "Elsa has 4.2% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice.",
-        "Elsa has 4.2% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
+        "Elsa has 4.2% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice.",
+        "Elsa has 4.2% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice.",
+        "Elsa has 8.3% unprompted recall in brand-free category queries, while the platforms above own the visible share of voice."
       ],
       "opportunities": [
         "Outrank generic DeFi competitors in 'best crypto assistant' and 'AI trading' style answers by clarifying primary use cases.",
